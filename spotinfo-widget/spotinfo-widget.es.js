@@ -36475,63 +36475,64 @@ const backend_event_endpoint = `${base_url}${user_journey_path}`;
 let isCapturePatched = false;
 let activeCollectionApiKeyForPatch = null;
 let shouldSendEventsToBackend = true;
+const SESSION_UTM_KEY = "spotinfo_session_utm";
+const EMPTY_UTM = {
+  utm_source: null,
+  utm_medium: null,
+  utm_campaign: null,
+  utm_term: null,
+  utm_content: null,
+  gclid: null
+};
+const getUTMParamsFromURL = () => {
+  if (typeof window === "undefined") return EMPTY_UTM;
+  const params = new URLSearchParams(window.location.search);
+  return {
+    utm_source: params.get("utm_source"),
+    utm_medium: params.get("utm_medium"),
+    utm_campaign: params.get("utm_campaign"),
+    utm_term: params.get("utm_term"),
+    utm_content: params.get("utm_content"),
+    gclid: params.get("gclid")
+  };
+};
+const initSessionUTM = () => {
+  if (typeof window === "undefined") return;
+  const existing = sessionStorage.getItem(SESSION_UTM_KEY);
+  if (existing) return;
+  const utmFromURL = getUTMParamsFromURL();
+  const hasAnyUTM = Object.values(utmFromURL).some((v2) => v2 !== null);
+  if (hasAnyUTM) {
+    sessionStorage.setItem(SESSION_UTM_KEY, JSON.stringify(utmFromURL));
+  }
+};
+const getSessionUTM = () => {
+  if (typeof window === "undefined") return EMPTY_UTM;
+  const stored = sessionStorage.getItem(SESSION_UTM_KEY);
+  return stored ? JSON.parse(stored) : EMPTY_UTM;
+};
 const initPostHog = (postHogApiKey, clientId, distinctId, collectionApiKey) => {
   activeCollectionApiKeyForPatch = collectionApiKey;
   if (!postHogApiKey || postHogApiKey.trim() === "") {
-    console.warn(
-      "[PostHog] No API key provided. PostHog will not be initialized."
-    );
+    console.warn("[PostHog] No API key provided.");
     return;
   }
+  initSessionUTM();
   sa.init(postHogApiKey, {
-    // api_host: backend_event_endpoint, // REMOVED: Let PostHog SDK send to its default endpoint.
-    // Your patched fetch will still send to backend_event_endpoint.
-    // This stops the 404s for /e/, /decide/ etc. to your backend.
-    // If you *do* want PostHog SDK to send to your backend, your backend
-    // needs to be a full PostHog ingestion endpoint capable of handling /e/, /decide/, etc.
-    // In that case, you would set api_host to the base URL of your backend,
-    // e.g., `api_host: base_url,`
     loaded: (phInstance) => {
       console.log("[PostHog] Widget initialized:", {
         clientId,
-        collectionApiKey,
-        apiKey: postHogApiKey,
-        configuredApiHost: backend_event_endpoint,
-        // Log what was configured
         distinctId
       });
       phInstance.identify(distinctId);
-      phInstance.register({
-        // widget_id: clientId,
-        // These will be automatically included in all events
-        $browser: phInstance.get_property("$browser"),
-        $browser_version: phInstance.get_property("$browser_version"),
-        $os: phInstance.get_property("$os"),
-        $device_type: phInstance.get_property("$device_type"),
-        $screen_height: phInstance.get_property("$screen_height"),
-        $screen_width: phInstance.get_property("$screen_width"),
-        $viewport_height: phInstance.get_property("$viewport_height"),
-        $viewport_width: phInstance.get_property("$viewport_width")
-        // Custom widget-specific properties
-        // widget_version: '1.0.0', // You can make this dynamic
-        // widget_environment: import.meta.env.DEV ? 'development' : 'production',
-      });
-      console.log("userID in posthog is:", distinctId);
     },
     capture_pageview: true,
-    // Disable automatic pageview capture since this is a widget
     capture_pageleave: false,
-    // Disable automatic pageleave capture
     autocapture: true,
-    // Enable autocapture for better event tracking
     persistence: "localStorage+cookie",
-    // Use localStorage for persistence
     disable_session_recording: true,
-    // Disable session recording for the widget
     advanced_disable_decide: true,
-    // Disable decide endpoint since we're using local instance
     person_profiles: "always",
-    // 'always' will capture events of both logged-in and anonymous users
     ip: true,
     xhr_headers: {
       "X-Api-Key": collectionApiKey,
@@ -36542,9 +36543,10 @@ const initPostHog = (postHogApiKey, clientId, distinctId, collectionApiKey) => {
   if (!isCapturePatched && typeof sa.capture === "function") {
     const originalCapture = sa.capture.bind(sa);
     sa.capture = function(event, properties = {}, options = {}) {
+      const sessionUTM = getSessionUTM();
       const enhancedProperties = {
         ...properties,
-        // PostHog automatically captured properties (access them from the instance)
+        ...sessionUTM,
         $browser: sa.get_property("$browser"),
         $browser_version: sa.get_property("$browser_version"),
         $os: sa.get_property("$os"),
@@ -36560,11 +36562,11 @@ const initPostHog = (postHogApiKey, clientId, distinctId, collectionApiKey) => {
         $viewport_width: sa.get_property("$viewport_width"),
         $lib: "web",
         $lib_version: sa.get_property("$lib_version")
-        // clientIP:''
-        // IP will be automatically captured by PostHog server-side
       };
       if (shouldSendEventsToBackend) {
-        const headers = { "Content-Type": "application/json" };
+        const headers = {
+          "Content-Type": "application/json"
+        };
         if (activeCollectionApiKeyForPatch) {
           headers["X-Api-Key"] = activeCollectionApiKeyForPatch;
         }
@@ -36573,34 +36575,25 @@ const initPostHog = (postHogApiKey, clientId, distinctId, collectionApiKey) => {
           headers,
           body: JSON.stringify({
             event,
-            // properties: { ...properties },
             properties: enhancedProperties,
             client_id: clientId,
-            // Use the latest clientId (widgetInstanceId or resolvedUserId)
             user_id: distinctId,
-            // This is the resolvedUserId
             type: "event"
           })
         }).catch(
-          (err) => console.error("Error sending event to local backend:", err)
+          (err) => console.error("Error sending event to backend:", err)
         );
       }
-      return originalCapture(event, properties, options);
+      return originalCapture(event, enhancedProperties, options);
     };
     isCapturePatched = true;
-  } else {
-    console.log(
-      "[PostHog] Capture method already patched. Active client ID and collection API key for patch are updated if initPostHog is called again."
-    );
   }
 };
 const disableBackendEventSending = () => {
   shouldSendEventsToBackend = false;
-  console.log("[PostHog] Backend event sending disabled.");
 };
 const enableBackendEventSending = () => {
   shouldSendEventsToBackend = true;
-  console.log("[PostHog] Backend event sending enabled.");
 };
 const DEFAULT_POSITION_OFFSET = "20px";
 function getPositionStyles(position2 = DEFAULT_POSITION, offset = DEFAULT_POSITION_OFFSET) {
@@ -36912,6 +36905,7 @@ const deleteCookie = (name2) => {
   const domain = getRootDomain();
   document.cookie = name2 + "=; Max-Age=-99999999; path=/; domain=" + domain + "; SameSite=Lax";
 };
+const widgetLoadSentKeys = /* @__PURE__ */ new Set();
 const useAnalytics = ({
   postHogApiKey,
   collectionApiKey,
@@ -36934,7 +36928,8 @@ const useAnalytics = ({
       postHogApiKey = "dummy-posthog-api-key";
     }
     initPostHog(postHogApiKey, clientId, distinctId, collectionApiKey);
-    if (!initialLoadEventSentRef.current) {
+    const loadKey = `${clientId || "no-client"}::${distinctId}`;
+    if (!initialLoadEventSentRef.current && !widgetLoadSentKeys.has(loadKey)) {
       const enhancedLoadProperties = {
         // ...deviceProps,
         widget_load_timestamp: Date.now(),
@@ -36953,6 +36948,9 @@ const useAnalytics = ({
         }
       };
       trackWidgetLoaded(enhancedLoadProperties);
+      initialLoadEventSentRef.current = true;
+      widgetLoadSentKeys.add(loadKey);
+    } else if (widgetLoadSentKeys.has(loadKey) && !initialLoadEventSentRef.current) {
       initialLoadEventSentRef.current = true;
     }
     const referrer = document.referrer;
@@ -110715,7 +110713,7 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Wed Feb 18 17:24:30 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Thu Feb 26 06:04:57 IST 2026 */
 
 /* Start of file: AiAgentAnimation.css */
 
@@ -130921,6 +130919,14 @@ class StyledChatWidget extends ChatWidgetWebComponent {
     __publicField(this, "_generatedUserId", null);
   }
   connectedCallback() {
+    const existingInstance = document.querySelector("spotinfo-chat");
+    if (existingInstance && existingInstance !== this) {
+      console.warn(
+        "[ChatWidget] Duplicate <spotinfo-chat> instance detected. Removing this duplicate."
+      );
+      this.remove();
+      return;
+    }
     const apiKeyAttr = this.getAttribute("api-key");
     if (apiKeyAttr) {
       this.apiKey = apiKeyAttr;
