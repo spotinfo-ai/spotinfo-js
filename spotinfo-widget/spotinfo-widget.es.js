@@ -31726,7 +31726,7 @@ const BOT_NAME = "AI Assistant";
 const GREETINGS = defaultGreetings;
 const META_HOST_URL = "https://api.spotinfo.ai";
 const META_API_KEY = "";
-const META_VOICE_HOST_URL = "https://voice.spotinfo.ai";
+const META_VOICE_HOST_URL = "https://voice2.spotinfo.ai";
 const META_CLIENT_ID_DEFAULT = "";
 const META_USER_EMAIL = "";
 const META_USER_COMPANY_NAME = "";
@@ -31740,8 +31740,10 @@ const META_TWEAKS = {
 const META_USER_DETAILS = {};
 const META_IS_SOURCE_REQUIRED = true;
 const META_IS_TRACE_ENABLED = false;
-const META_ALLOW_VOICE = ALLOW_VOICE_WIDGET;
-const META_USER_JOURNEY = true;
+const META_USER_JOURNEY = false;
+const META_PROACTIVE_ENGAGEMENT = {
+  enabled: false
+};
 const COOKIE_USER_ID_KEY = "spotinfo-chat-user-id";
 const COOKIE_EXPIRATION_MINUTES = 30;
 const WELCOME_BACK_MESSAGE = "Welcome me back and continue our ongoing conversation.";
@@ -31866,8 +31868,8 @@ const defaultMetaConfig = {
   tweaks: META_TWEAKS,
   isSourceRequired: META_IS_SOURCE_REQUIRED,
   isTraceEnabled: META_IS_TRACE_ENABLED,
-  allowVoice: META_ALLOW_VOICE,
-  userJourney: META_USER_JOURNEY
+  userJourney: META_USER_JOURNEY,
+  proactiveEngagement: META_PROACTIVE_ENGAGEMENT
 };
 const defaultChatContext = {
   ...defaultWidgetConfig,
@@ -36470,11 +36472,11 @@ var sa = (Xo = Bo[Wo] = new Yo$1(), function() {
   null != o$1 && o$1.addEventListener ? "complete" === o$1.readyState ? i2() : st(o$1, "DOMContentLoaded", i2, { capture: false }) : t && j.error("Browser doesn't support `document.addEventListener` so PostHog couldn't be initialized");
 }(), Xo);
 const base_url = "https://api.spotinfo.ai";
-const user_journey_path = "/api/v1/register_user_journey";
+const user_journey_path = void 0;
 const backend_event_endpoint = `${base_url}${user_journey_path}`;
 let isCapturePatched = false;
 let activeCollectionApiKeyForPatch = null;
-let shouldSendEventsToBackend = true;
+let shouldSendEventsToBackend = false;
 const SESSION_UTM_KEY = "spotinfo_session_utm";
 const EMPTY_UTM = {
   utm_source: null,
@@ -36570,6 +36572,7 @@ const initPostHog = (postHogApiKey, clientId, distinctId, collectionApiKey) => {
         if (activeCollectionApiKeyForPatch) {
           headers["X-Api-Key"] = activeCollectionApiKeyForPatch;
         }
+        console.log("Sending event to backend:", shouldSendEventsToBackend);
         fetch(backend_event_endpoint, {
           method: "POST",
           headers,
@@ -36784,6 +36787,228 @@ const trackScrollStoppedWithVisibleContent = (visibleContentSamples, eventSpecif
     visibleSections: visibleContentSamples
   });
 };
+const _ProactiveEngagementEngine = class _ProactiveEngagementEngine {
+  constructor(metaConfig, pushHookService2, isWidgetOpen) {
+    __publicField(this, "config");
+    __publicField(this, "pushHookService");
+    __publicField(this, "isWidgetOpen");
+    __publicField(this, "lastActivityTs", Date.now());
+    __publicField(this, "inactivityTimerId", null);
+    /** Once an inactivity hook has been delivered and resetTimerAfterHookDelivered is false, we never deliver again. */
+    __publicField(this, "inactiveHookDelivered", false);
+    __publicField(this, "stuckTimerId", null);
+    /** Once a stuck hook has been delivered and resetTimerAfterHookDelivered is false, we never deliver again. */
+    __publicField(this, "stuckHookDelivered", false);
+    __publicField(this, "stuckButtons", []);
+    __publicField(this, "stuckDisabledForPage", false);
+    __publicField(this, "searchEvents", []);
+    this.config = metaConfig.proactiveEngagement ?? { enabled: false };
+    this.pushHookService = pushHookService2;
+    this.isWidgetOpen = isWidgetOpen;
+    this.resetAllState();
+  }
+  static init(options) {
+    if (!_ProactiveEngagementEngine.instance) {
+      _ProactiveEngagementEngine.instance = new _ProactiveEngagementEngine(
+        options.metaConfig,
+        options.pushHookService,
+        options.isWidgetOpen
+      );
+    } else {
+      _ProactiveEngagementEngine.instance.updateConfig(options.metaConfig);
+    }
+    return _ProactiveEngagementEngine.instance;
+  }
+  static getInstance() {
+    return _ProactiveEngagementEngine.instance;
+  }
+  static resetForNewPage() {
+    if (_ProactiveEngagementEngine.instance) {
+      _ProactiveEngagementEngine.instance.resetAllState();
+    }
+  }
+  updateConfig(metaConfig) {
+    this.config = metaConfig.proactiveEngagement ?? { enabled: false };
+    this.resetAllState();
+  }
+  resetAllState() {
+    var _a, _b, _c, _d;
+    this.lastActivityTs = Date.now();
+    this.clearInactivityTimer();
+    this.clearStuckTimer();
+    this.searchEvents = [];
+    this.stuckButtons = ((_b = (_a = this.config.stuck) == null ? void 0 : _a.proceedButtons) == null ? void 0 : _b.map((btn) => ({
+      captionContains: btn.captionContains,
+      allowMultipleClicks: btn.allowMultipleClicks ?? false
+    }))) ?? [];
+    if (((_c = this.config.inactive) == null ? void 0 : _c.resetTimerAfterHookDelivered) !== false) {
+      this.inactiveHookDelivered = false;
+    }
+    if (((_d = this.config.stuck) == null ? void 0 : _d.resetTimerAfterHookDelivered) !== false) {
+      this.stuckHookDelivered = false;
+    }
+    this.maybeStartInactivityTimer();
+    this.stuckDisabledForPage = false;
+    this.maybeStartStuckTimerOnPageLoad();
+  }
+  markActivity(kind) {
+    var _a;
+    console.log("[ProactiveEngagement] markActivity:", kind, {
+      enabled: this.config.enabled,
+      inactive: this.config.inactive
+    });
+    if (!this.config.enabled) return;
+    if (!((_a = this.config.inactive) == null ? void 0 : _a.enabled)) return;
+    if (!this.isActivityKindEnabledForInactive(kind)) return;
+    this.lastActivityTs = Date.now();
+    this.maybeStartInactivityTimer();
+  }
+  handleClick(target) {
+    console.log("[ProactiveEngagement] handleClick target:", {
+      tagName: target.tagName,
+      id: target.id,
+      className: target.className,
+      text: (target.textContent || "").trim().slice(0, 80)
+    });
+    if (!this.config.enabled) return;
+    const text2 = (target.textContent || "").trim();
+    this.handleStuckClick(text2);
+  }
+  handleSearch(query) {
+    var _a;
+    console.log("[ProactiveEngagement] handleSearch query:", query);
+    if (!this.config.enabled) return;
+    if (!((_a = this.config.repeatedSearch) == null ? void 0 : _a.enabled)) return;
+    const now2 = Date.now();
+    this.searchEvents.push({ ts: now2, query });
+    this.trimSearchWindow(now2);
+    this.maybeTriggerRepeatedSearchHook();
+  }
+  maybeStartInactivityTimer() {
+    var _a;
+    if (!this.config.enabled || !((_a = this.config.inactive) == null ? void 0 : _a.enabled)) return;
+    if (!this.config.inactive.timeoutSeconds) return;
+    if (this.isWidgetOpen()) return;
+    if (this.inactiveHookDelivered && this.config.inactive.resetTimerAfterHookDelivered === false) return;
+    this.clearInactivityTimer();
+    const delayMs = this.config.inactive.timeoutSeconds * 1e3;
+    this.inactivityTimerId = window.setTimeout(() => {
+      const idleFor = Date.now() - this.lastActivityTs;
+      console.log("[ProactiveEngagement] inactivity timer fired, idleFor(ms):", idleFor, "threshold(ms):", delayMs);
+      if (idleFor >= delayMs && !this.isWidgetOpen()) {
+        this.triggerHook("inactive");
+      }
+    }, delayMs);
+  }
+  maybeStartStuckTimerOnPageLoad() {
+    const cfg = this.config.stuck;
+    if (!this.config.enabled || !(cfg == null ? void 0 : cfg.enabled)) return;
+    if (!cfg.timeoutSeconds || !this.stuckButtons.length) return;
+    if (this.isWidgetOpen()) return;
+    if (this.stuckDisabledForPage) return;
+    if (this.stuckHookDelivered && cfg.resetTimerAfterHookDelivered === false) return;
+    this.startStuckTimer();
+  }
+  clearInactivityTimer() {
+    if (this.inactivityTimerId != null) {
+      clearTimeout(this.inactivityTimerId);
+      this.inactivityTimerId = null;
+    }
+  }
+  isActivityKindEnabledForInactive(kind) {
+    const cfg = this.config.inactive;
+    if (!cfg) return false;
+    switch (kind) {
+      case "scroll":
+        return !!cfg.considerScroll;
+      case "typing":
+        return !!cfg.considerTyping;
+      case "click":
+        return !!cfg.considerClicks;
+      case "navigation":
+        return !!cfg.considerNavigation;
+      default:
+        return false;
+    }
+  }
+  handleStuckClick(buttonText) {
+    const cfg = this.config.stuck;
+    if (!this.config.enabled || !(cfg == null ? void 0 : cfg.enabled)) return;
+    if (!cfg.timeoutSeconds || !this.stuckButtons.length) return;
+    const lower = buttonText.toLowerCase();
+    const matched = this.stuckButtons.find(
+      (btn) => lower.includes(btn.captionContains.toLowerCase())
+    );
+    if (!matched) return;
+    if (matched.allowMultipleClicks) {
+      console.log("[ProactiveEngagement] handleStuckClick resetting stuck timer (allowMultipleClicks=true)");
+      this.startStuckTimer();
+    } else {
+      console.log("[ProactiveEngagement] handleStuckClick disabling stuck for this page (allowMultipleClicks=false)");
+      this.stuckDisabledForPage = true;
+      this.clearStuckTimer();
+    }
+  }
+  startStuckTimer() {
+    const cfg = this.config.stuck;
+    console.log("[ProactiveEngagement] startStuckTimer with cfg:", cfg, "widgetOpen:", this.isWidgetOpen(), "stuckDisabledForPage:", this.stuckDisabledForPage);
+    if (!(cfg == null ? void 0 : cfg.timeoutSeconds)) return;
+    if (this.isWidgetOpen()) return;
+    if (this.stuckDisabledForPage) return;
+    if (this.stuckHookDelivered && cfg.resetTimerAfterHookDelivered === false) return;
+    this.clearStuckTimer();
+    const delayMs = cfg.timeoutSeconds * 1e3;
+    this.stuckTimerId = window.setTimeout(() => {
+      console.log("[ProactiveEngagement] stuck timer fired, widgetOpen:", this.isWidgetOpen());
+      if (!this.isWidgetOpen()) {
+        this.triggerHook("stuck");
+      }
+    }, delayMs);
+  }
+  clearStuckTimer() {
+    if (this.stuckTimerId != null) {
+      clearTimeout(this.stuckTimerId);
+      this.stuckTimerId = null;
+    }
+  }
+  trimSearchWindow(now2) {
+    var _a;
+    const windowSeconds = ((_a = this.config.repeatedSearch) == null ? void 0 : _a.windowSeconds) ?? 30;
+    const windowMs = windowSeconds * 1e3;
+    this.searchEvents = this.searchEvents.filter((e2) => now2 - e2.ts <= windowMs);
+  }
+  maybeTriggerRepeatedSearchHook() {
+    const cfg = this.config.repeatedSearch;
+    console.log("[ProactiveEngagement] maybeTriggerRepeatedSearchHook cfg:", cfg, "eventsInWindow:", this.searchEvents.length);
+    if (!(cfg == null ? void 0 : cfg.enabled)) return;
+    const min = cfg.minQueries ?? 3;
+    if (this.searchEvents.length >= min && !this.isWidgetOpen()) {
+      this.searchEvents = [];
+      this.triggerHook("repeatedSearch");
+    }
+  }
+  triggerHook(reason) {
+    console.log("[ProactiveEngagement] triggerHook called for reason:", reason, "config.enabled:", this.config.enabled, "widgetOpen:", this.isWidgetOpen());
+    if (!this.config.enabled) return;
+    if (this.isWidgetOpen()) return;
+    const reasonConfig = this.config[reason];
+    const message = reasonConfig && "message" in reasonConfig && reasonConfig.message ? reasonConfig.message : "Need help completing this step? I can assist.";
+    console.log("[ProactiveEngagement] triggerHook using message:", message);
+    if (typeof this.pushHookService.showProactiveHook === "function") {
+      this.pushHookService.showProactiveHook(message, reason);
+    }
+    if (reason === "inactive") {
+      this.inactiveHookDelivered = true;
+    }
+    if (reason === "stuck") {
+      this.stuckHookDelivered = true;
+    }
+    this.lastActivityTs = Date.now();
+    this.maybeStartInactivityTimer();
+  }
+};
+__publicField(_ProactiveEngagementEngine, "instance", null);
+let ProactiveEngagementEngine = _ProactiveEngagementEngine;
 let globalListenersInitialized = false;
 let activeHookInstances = 0;
 let textSelectionHandlerRef = null;
@@ -36825,7 +37050,15 @@ const findAndCollectVisibleText = (element2, viewportHeight, collectedTexts, dep
     "HEADER",
     "FOOTER",
     "NAV",
-    "ASIDE"
+    "ASIDE",
+    "SPOTINFO-CHAT"
+    /*
+    if we do not have 'SPOTINFO-CHAT' above, when we copy text after scrolling, 
+    it also copies out widget because widget is always visible
+    it calls clone (which also clones spotinfo widget)
+    as per our only 1 instance of spotinfo widget is allowed
+    when it is cloned, new instance replaces older instance and looks like widget reloaded
+    */
   ].includes(tagName) || [
     "banner",
     "contentinfo",
@@ -36911,12 +37144,13 @@ const useAnalytics = ({
   collectionApiKey,
   clientId,
   distinctId,
-  properties,
-  position: position2
+  properties = {},
+  position: position2,
+  enableAnalytics
 }) => {
-  console.log("userID in useAnalytics is:", distinctId);
   const initialLoadEventSentRef = reactExports.useRef(false);
   reactExports.useEffect(() => {
+    if (!enableAnalytics) return;
     if (!distinctId) {
       console.warn("Analytics Effect 1 triggered with no distinctId.");
       return;
@@ -36986,8 +37220,9 @@ const useAnalytics = ({
         console.error("[Analytics] Error parsing referrer URL:", e2);
       }
     }
-  }, [postHogApiKey, collectionApiKey, clientId, distinctId, position2]);
+  }, [postHogApiKey, collectionApiKey, clientId, distinctId, position2, enableAnalytics]);
   reactExports.useEffect(() => {
+    if (!enableAnalytics) return;
     if (!distinctId) return;
     const deviceProps = getDeviceProperties();
     const enhancedProperties = {
@@ -37012,8 +37247,10 @@ const useAnalytics = ({
         sa.unregister("widget_id");
       }
     }
-  }, [properties, distinctId, clientId]);
+  }, [properties, distinctId, clientId, enableAnalytics]);
   reactExports.useEffect(() => {
+    if (!enableAnalytics) return () => {
+    };
     activeHookInstances++;
     if (!globalListenersInitialized) {
       globalListenersInitialized = true;
@@ -37053,6 +37290,12 @@ const useAnalytics = ({
         var _a, _b;
         const targetElement = e2.target;
         if (!targetElement) return;
+        const clickableTarget = targetElement.closest('button, a, [role="button"]') || targetElement;
+        const engine = ProactiveEngagementEngine.getInstance();
+        if (engine) {
+          engine.markActivity("click");
+          engine.handleClick(clickableTarget);
+        }
         const autocaptureTags = [
           "A",
           "BUTTON",
@@ -37092,6 +37335,7 @@ const useAnalytics = ({
       };
       inputChangeHandlerRef = (e2) => {
         var _a, _b, _c, _d, _e2, _f, _g;
+        console.log("[Analytics] inputChangeHandlerRef called");
         const inputElement = e2.target;
         if (!inputElement) return;
         let labelText = void 0;
@@ -37110,11 +37354,21 @@ const useAnalytics = ({
             inputValue: inputElement.value,
             inputCaption: labelText
           });
+          const engine = ProactiveEngagementEngine.getInstance();
+          if (engine) {
+            engine.markActivity("typing");
+            engine.handleSearch(inputElement.value);
+          }
         } else {
           trackInputChanged(inputElement.value, labelText);
+          const engine = ProactiveEngagementEngine.getInstance();
+          if (engine) {
+            engine.markActivity("typing");
+          }
         }
       };
       const handleScrollStop = () => {
+        console.log("[Analytics] handleScrollStop called");
         const collectedTextSamplesSet = /* @__PURE__ */ new Set();
         const viewportHeight = window.innerHeight;
         if (document.body) {
@@ -37127,6 +37381,10 @@ const useAnalytics = ({
         const uniqueContentSamples = Array.from(collectedTextSamplesSet);
         if (uniqueContentSamples.length > 0) {
           trackScrollStoppedWithVisibleContent(uniqueContentSamples);
+        }
+        const engine = ProactiveEngagementEngine.getInstance();
+        if (engine) {
+          engine.markActivity("scroll");
         }
       };
       scrollHandlerRef = () => {
@@ -37198,7 +37456,7 @@ const useAnalytics = ({
         sa.reset();
       }
     };
-  }, []);
+  }, [enableAnalytics]);
   const identifyUser = (newUserId) => {
     const userIdCookieName = "spotinfo_user_id";
     const cookieExpiryMinutes = 30;
@@ -37486,7 +37744,7 @@ const _PersonalizedHookService = class _PersonalizedHookService {
     this.addMessageCallback = addMessage;
     this.openWidgetInSleekViewCallback = openWidgetInSleekView;
     this.position = position2;
-    const path = "/api/v1/get_user_journey_hook";
+    const path = void 0;
     this.hookEndpoint = `${metaConfig.hostUrl}${path}`;
     if (!metaConfig.hostUrl && metaConfig.clientId) {
       console.warn(
@@ -37527,7 +37785,7 @@ const _PersonalizedHookService = class _PersonalizedHookService {
       if (position2) {
         this.position = position2;
       }
-      this.hookEndpoint = `${metaConfig.hostUrl}${"/api/v1/get_user_journey_hook"}`;
+      this.hookEndpoint = `${metaConfig.hostUrl}${void 0}`;
       if (this.shouldStartPolling()) {
         console.log(
           `[PersonalizedHookService - ${this.metaConfig.userId}] Config changed, conditions met, starting initial delay`
@@ -37605,7 +37863,10 @@ const _PersonalizedHookService = class _PersonalizedHookService {
     }
   }
   isPollingEnabled() {
-    return this.metaConfig.userJourney === true;
+    console.log("[PersonalizedHookService] Checking if polling is enabled:", {
+      userJourney: this.metaConfig.userJourney
+    });
+    return this.metaConfig.userJourney === true && !this.isWidgetOpenRef && !this.pollingStopped;
   }
   isPollingStopped() {
     return this.pollingStopped;
@@ -37649,10 +37910,16 @@ const _PersonalizedHookService = class _PersonalizedHookService {
     removeMessagePopupUtil();
   }
   startPolling() {
+    console.log("[PersonalizedHookService]Checking if we should start polling:", {
+      isPollingEnabled: this.isPollingEnabled(),
+      isWidgetOpenRef: this.isWidgetOpenRef,
+      pollingStopped: this.pollingStopped
+    });
     if (!this.shouldStartPolling()) {
       console.log(
         `[PersonalizedHookService - ${this.metaConfig.userId}] Not starting polling, conditions not met`
       );
+      disableBackendEventSending();
       return;
     }
     console.log(
@@ -37662,6 +37929,11 @@ const _PersonalizedHookService = class _PersonalizedHookService {
     this.poll_counter = 0;
     enableBackendEventSending();
     const doPoll = async () => {
+      console.log("[PersonalizedHookService] Checking if we should continue polling:", {
+        isPollingEnabled: this.isPollingEnabled(),
+        isWidgetOpenRef: this.isWidgetOpenRef,
+        pollingStopped: this.pollingStopped
+      });
       if (!this.isPollingEnabled() || this.isWidgetOpenRef || this.pollingStopped) {
         console.log(
           `[PersonalizedHookService - ${this.metaConfig.userId}] Stopping poll cycle - enabled: ${this.isPollingEnabled()}, widget open: ${this.isWidgetOpenRef}, polling stopped: ${this.pollingStopped}`
@@ -62229,7 +62501,7 @@ function ChatProvider({
   isWidgetOpen,
   onWidgetToggle
 }) {
-  var _a, _b, _c, _d, _e2;
+  var _a, _b, _c, _d, _e2, _f, _g;
   const [messages, setMessages] = reactExports.useState([]);
   const [currentConfig, setCurrentConfig] = reactExports.useState(config);
   const [currentMetaConfig, setCurrentMetaConfig] = reactExports.useState(chatMetaConfig);
@@ -62243,22 +62515,38 @@ function ChatProvider({
   const abortControllerRef = reactExports.useRef(null);
   const roomPreloadAttemptedRef = reactExports.useRef(false);
   const scrollToBottomCallbackRef = reactExports.useRef(null);
-  if (currentMetaConfig.userJourney) {
-    useAnalytics({
-      postHogApiKey: "dummy-posthog-api-key",
-      collectionApiKey: currentMetaConfig.apiKey || "",
-      clientId: currentMetaConfig.clientId || "",
-      distinctId: currentMetaConfig.userId || ((_a = currentMetaConfig.userAttributes) == null ? void 0 : _a.user_id) || "",
-      properties: {
-        user_id: currentMetaConfig.userId || ((_b = currentMetaConfig.userAttributes) == null ? void 0 : _b.user_id) || "",
-        email: ((_c = currentMetaConfig.userAttributes) == null ? void 0 : _c.email) || "",
-        company_name: ((_d = currentMetaConfig.userAttributes) == null ? void 0 : _d.company_name) || "",
-        merchant_id: ((_e2 = currentMetaConfig.userAttributes) == null ? void 0 : _e2.merchant_id) || 0,
-        userJourney: currentMetaConfig.userJourney || false
-      },
-      position: config.position
-    });
+  const initialAllowVoiceRef = reactExports.useRef(config.allowVoice);
+  const proactiveResetForCurrentResponseRef = reactExports.useRef(false);
+  const lastVoiceBotMessageIdWeResetRef = reactExports.useRef(null);
+  const lastVoiceUserMessageIdWeResetRef = reactExports.useRef(null);
+  const enableAnalytics = currentMetaConfig.userJourney || ((_a = currentMetaConfig.proactiveEngagement) == null ? void 0 : _a.enabled) === true;
+  const instanceIdRef = reactExports.useRef(null);
+  if (instanceIdRef.current === null) {
+    instanceIdRef.current = `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
   }
+  reactExports.useEffect(() => {
+    const id2 = instanceIdRef.current;
+    console.log("[ChatProvider] MOUNTED instanceId=", id2);
+    return () => {
+      console.log("[ChatProvider] UNMOUNTED instanceId=", id2);
+    };
+  }, []);
+  useAnalytics({
+    postHogApiKey: "dummy-posthog-api-key",
+    collectionApiKey: currentMetaConfig.apiKey || "",
+    clientId: currentMetaConfig.clientId || "",
+    distinctId: currentMetaConfig.userId || ((_b = currentMetaConfig.userAttributes) == null ? void 0 : _b.user_id) || "",
+    properties: {
+      user_id: currentMetaConfig.userId || ((_c = currentMetaConfig.userAttributes) == null ? void 0 : _c.user_id) || "",
+      email: ((_d = currentMetaConfig.userAttributes) == null ? void 0 : _d.email) || "",
+      company_name: ((_e2 = currentMetaConfig.userAttributes) == null ? void 0 : _e2.company_name) || "",
+      merchant_id: ((_f = currentMetaConfig.userAttributes) == null ? void 0 : _f.merchant_id) || 0,
+      userJourney: currentMetaConfig.userJourney || false,
+      proactiveEngagement: ((_g = currentMetaConfig.proactiveEngagement) == null ? void 0 : _g.enabled) || false
+    },
+    position: config.position,
+    enableAnalytics
+  });
   reactExports.useEffect(() => {
     console.log("userID in ChatContext is:", currentMetaConfig.userId);
   }, [currentMetaConfig.userId]);
@@ -62284,7 +62572,7 @@ function ChatProvider({
   reactExports.useEffect(() => {
     if (currentMetaConfig.apiKey && currentMetaConfig.apiKey.trim() !== "" && currentMetaConfig.apiKey !== "your-api-key-here" && !roomPreloadAttemptedRef.current) {
       roomPreloadAttemptedRef.current = true;
-      if (currentMetaConfig.allowVoice) {
+      if (currentConfig.allowVoice) {
         const voiceService = VoiceChatService.getInstance(currentMetaConfig);
         const existingDetails = voiceService.getCurrentConnectionDetails();
         if (!existingDetails) {
@@ -62305,16 +62593,16 @@ function ChatProvider({
         conversationService.current.ensureRAG();
       }
     }
-  }, [currentMetaConfig.apiKey]);
+  }, [currentMetaConfig.apiKey, currentConfig.allowVoice]);
   reactExports.useEffect(() => {
-    if (currentMetaConfig.allowVoice) {
+    if (currentConfig.allowVoice) {
       const voiceService = VoiceChatService.getInstance(currentMetaConfig);
       const failed = voiceService.isRoomCreationFailed();
       setIsRoomCreationFailed(failed);
     } else {
       setIsRoomCreationFailed(false);
     }
-  }, [currentMetaConfig.allowVoice, currentMetaConfig]);
+  }, [currentConfig.allowVoice, currentMetaConfig]);
   const internalAddMessage = reactExports.useCallback((message) => {
     setMessages((prevMessages) => [...prevMessages, message]);
   }, []);
@@ -62376,10 +62664,21 @@ function ChatProvider({
           openWidgetInSleekView,
           closeWidget: () => onWidgetToggle(false),
           isWidgetOpen: () => isWidgetOpen,
-          position: config.position
+          position: config.position,
+          onHookActedOn: () => ProactiveEngagementEngine.resetForNewPage()
         });
         pushServiceInstance.updateConfig(currentMetaConfig, config.position);
         pushServiceInstance.setWidgetOpenState(isWidgetOpen);
+        try {
+          ProactiveEngagementEngine.init({
+            metaConfig: currentMetaConfig,
+            pushHookService: pushServiceInstance,
+            isWidgetOpen: () => isWidgetOpen
+          });
+          ProactiveEngagementEngine.resetForNewPage();
+        } catch (error) {
+          console.error("ChatContext: Failed to initialize ProactiveEngagementEngine:", error);
+        }
         pushServiceInstance.connect();
         if (typeof window !== "undefined") {
           window.spotinfoEnsureSSEConnection = () => {
@@ -62458,13 +62757,13 @@ function ChatProvider({
   }, []);
   const updateMessageResponse = reactExports.useCallback(
     (response, isError = false) => {
+      if (!isError && response.length > 0 && !proactiveResetForCurrentResponseRef.current) {
+        proactiveResetForCurrentResponseRef.current = true;
+        ProactiveEngagementEngine.resetForNewPage();
+      }
       setMessages((prevMessages) => {
         const updatedMessages = [...prevMessages];
         const lastMessage = updatedMessages[updatedMessages.length - 1];
-        console.log("[ChatContext] 🔄 lastMessage", lastMessage);
-        console.log("[ChatContext] 🔄 updateMessageResponse called", {
-          updatedMessages
-        });
         if (lastMessage && lastMessage.sender === "bot") {
           lastMessage.content = isError ? lastMessage.content : response;
           if (isError) {
@@ -62516,6 +62815,8 @@ function ChatProvider({
         references: []
       };
       setMessages((prev) => [...prev, userMessage]);
+      proactiveResetForCurrentResponseRef.current = false;
+      ProactiveEngagementEngine.resetForNewPage();
       if (currentMetaConfig.isSourceRequired && (!currentMetaConfig.hostUrl || currentMetaConfig.hostUrl.trim() === "")) {
         setErrorMessage(
           "Backend service is not configured. Please check your configuration."
@@ -62576,6 +62877,7 @@ function ChatProvider({
   const startConversation = async () => {
     try {
       setIsLoading(true);
+      proactiveResetForCurrentResponseRef.current = false;
       if (abortControllerRef.current) {
         abortControllerRef.current.abort();
       }
@@ -62600,6 +62902,17 @@ function ChatProvider({
     }
   };
   const setTranscriptionMessages = (updatedMessages) => {
+    var _a2;
+    const lastMsg = updatedMessages.length > 0 ? updatedMessages[updatedMessages.length - 1] : null;
+    if (lastMsg && (((_a2 = lastMsg.content) == null ? void 0 : _a2.trim()) ?? "").length > 0) {
+      if (lastMsg.sender === "bot" && lastMsg.id !== lastVoiceBotMessageIdWeResetRef.current) {
+        lastVoiceBotMessageIdWeResetRef.current = lastMsg.id;
+        ProactiveEngagementEngine.resetForNewPage();
+      } else if (lastMsg.sender === "user" && lastMsg.id !== lastVoiceUserMessageIdWeResetRef.current) {
+        lastVoiceUserMessageIdWeResetRef.current = lastMsg.id;
+        ProactiveEngagementEngine.resetForNewPage();
+      }
+    }
     setMessages(updatedMessages);
   };
   const startNewChat = reactExports.useCallback(() => {
@@ -62655,10 +62968,10 @@ function ChatProvider({
     };
     conversationService.current = new ConversationService(newMetaConfig);
     VoiceChatService.resetInstance();
-    if (currentMetaConfig.allowVoice && !currentConfig.allowVoice) {
+    if (initialAllowVoiceRef.current && !currentConfig.allowVoice) {
       setCurrentConfig((prev) => ({ ...prev, allowVoice: true }));
-      setIsRoomCreationFailed(false);
     }
+    setIsRoomCreationFailed(false);
     console.log("Reset voice chat service instance");
     try {
       const personalizedService = PersonalizedHookService.getInstance();
@@ -110657,7 +110970,6 @@ function buildWidgetConfig(props) {
       }
     }
   };
-  console.log("widgetConfig in buildWidgetConfig is:", widgetConfig);
   return widgetConfig;
 }
 function buildMetaConfig(props) {
@@ -110683,7 +110995,6 @@ function buildMetaConfig(props) {
       email: ((_e2 = meta.userAttributes) == null ? void 0 : _e2.email) || ""
     }
   };
-  console.log("metaConfig in buildMetaConfig is:", metaConfig);
   return metaConfig;
 }
 function applyCSSVariables(width, height, primaryColor) {
@@ -110713,9 +111024,9 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Thu Feb 26 06:04:57 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Mon Mar 16 17:13:35 IST 2026 */
 
-/* Start of file: AiAgentAnimation.css */
+/* Start of file: components/css/AiAgentAnimation.css */
 
 /* src/components/css/AiAgentAnimation.css:1 */
 
@@ -111813,9 +112124,9 @@ const styles = `
   /* src/components/css/AiAgentAnimation.css:474 */
 }
 
-/* End of file: AiAgentAnimation.css */
+/* End of file: components/css/AiAgentAnimation.css */
 
-/* Start of file: ChatBot.css */
+/* Start of file: components/css/ChatBot.css */
 
 /* src/components/css/ChatBot.css:1 */
 
@@ -112325,9 +112636,9 @@ const styles = `
   /* src/components/css/ChatBot.css:221 */
 }
 
-/* End of file: ChatBot.css */
+/* End of file: components/css/ChatBot.css */
 
-/* Start of file: ChatHeader.css */
+/* Start of file: components/css/ChatHeader.css */
 
 /* src/components/css/ChatHeader.css:1 */
 
@@ -112881,9 +113192,9 @@ const styles = `
   /* src/components/css/ChatHeader.css:237 */
 }
 
-/* End of file: ChatHeader.css */
+/* End of file: components/css/ChatHeader.css */
 
-/* Start of file: ChatInput.css */
+/* Start of file: components/css/ChatInput.css */
 
 /* src/components/css/ChatInput.css:1 */
 
@@ -113603,9 +113914,9 @@ This will call child components for text and voice */
   /* src/components/css/ChatInput.css:83 */
 }
 
-/* End of file: ChatInput.css */
+/* End of file: components/css/ChatInput.css */
 
-/* Start of file: ChatMessage.css */
+/* Start of file: components/css/ChatMessage.css */
 
 /* src/components/css/ChatMessage.css:1 */
 
@@ -116035,9 +116346,9 @@ It has 3 components:
   /* src/components/css/ChatMessage.css:390 */
 }
 
-/* End of file: ChatMessage.css */
+/* End of file: components/css/ChatMessage.css */
 
-/* Start of file: GlowingCloudAnimation.css */
+/* Start of file: components/css/GlowingCloudAnimation.css */
 
 /* src/components/css/GlowingCloudAnimation.css:1 */
 
@@ -117810,9 +118121,9 @@ It has 3 components:
   /* src/components/css/GlowingCloudAnimation.css:591 */
 }
 
-/* End of file: GlowingCloudAnimation.css */
+/* End of file: components/css/GlowingCloudAnimation.css */
 
-/* Start of file: MarkdownRenderer.css */
+/* Start of file: components/css/MarkdownRenderer.css */
 
 /* src/components/css/MarkdownRenderer.css:1 */
 
@@ -118027,9 +118338,9 @@ It has 3 components:
   /* src/components/css/MarkdownRenderer.css:62 */
 }
 
-/* End of file: MarkdownRenderer.css */
+/* End of file: components/css/MarkdownRenderer.css */
 
-/* Start of file: MessagePopup.css */
+/* Start of file: components/css/MessagePopup.css */
 
 /* src/components/css/MessagePopup.css:1 */
 
@@ -118922,9 +119233,9 @@ It has 3 components:
   /* src/components/css/MessagePopup.css:172 */
 }
 
-/* End of file: MessagePopup.css */
+/* End of file: components/css/MessagePopup.css */
 
-/* Start of file: SleekView.css */
+/* Start of file: components/css/SleekView.css */
 
 /* src/components/css/SleekView.css:1 */
 
@@ -122852,9 +123163,9 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* src/components/css/SleekView.css:1583 */
 }
 
-/* End of file: SleekView.css */
+/* End of file: components/css/SleekView.css */
 
-/* Start of file: TextChatInput.css */
+/* Start of file: components/css/TextChatInput.css */
 
 /* src/components/css/TextChatInput.css:1 */
 
@@ -123668,9 +123979,9 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* src/components/css/TextChatInput.css:139 */
 }
 
-/* End of file: TextChatInput.css */
+/* End of file: components/css/TextChatInput.css */
 
-/* Start of file: VoiceAlternateAvatar.css */
+/* Start of file: components/css/VoiceAlternateAvatar.css */
 
 /* src/components/css/VoiceAlternateAvatar.css:1 */
 
@@ -124280,9 +124591,9 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* src/components/css/VoiceAlternateAvatar.css:288 */
 }
 
-/* End of file: VoiceAlternateAvatar.css */
+/* End of file: components/css/VoiceAlternateAvatar.css */
 
-/* Start of file: VoiceAlternateView.css */
+/* Start of file: components/css/VoiceAlternateView.css */
 
 /* src/components/css/VoiceAlternateView.css:1 */
 
@@ -125312,9 +125623,9 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* src/components/css/VoiceAlternateView.css:224 */
 }
 
-/* End of file: VoiceAlternateView.css */
+/* End of file: components/css/VoiceAlternateView.css */
 
-/* Start of file: VoiceChatInput.css */
+/* Start of file: components/css/VoiceChatInput.css */
 
 /* src/components/css/VoiceChatInput.css:1 */
 
@@ -126110,7 +126421,728 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* src/components/css/VoiceChatInput.css:102 */
 }
 
-/* End of file: VoiceChatInput.css */
+/* End of file: components/css/VoiceChatInput.css */
+
+/* Start of file: components/css/prose-overrides.css */
+
+/* src/components/css/prose-overrides.css:1 */
+
+/* Custom overrides for prose styles in chat messages */
+
+/* src/components/css/prose-overrides.css:3 */
+
+/* Remove default margins for paragraphs */
+
+/* src/components/css/prose-overrides.css:4 */
+
+.prose p,
+/* src/components/css/prose-overrides.css:5 */
+.prose-override p {
+  /* src/components/css/prose-overrides.css:6 */
+  margin-top: 0 !important;
+  /* src/components/css/prose-overrides.css:7 */
+  margin-bottom: 0.5em !important;
+  /* src/components/css/prose-overrides.css:8 */
+}
+
+/* src/components/css/prose-overrides.css:10 */
+
+.prose p:last-child,
+/* src/components/css/prose-overrides.css:11 */
+.prose-override p:last-child {
+  /* src/components/css/prose-overrides.css:12 */
+  margin-bottom: 0 !important;
+  /* src/components/css/prose-overrides.css:13 */
+}
+
+/* src/components/css/prose-overrides.css:15 */
+
+/* Override list styles */
+
+/* src/components/css/prose-overrides.css:16 */
+
+.prose ul,
+/* src/components/css/prose-overrides.css:17 */
+.prose ol,
+/* src/components/css/prose-overrides.css:18 */
+.prose-override ul,
+/* src/components/css/prose-overrides.css:19 */
+.prose-override ol {
+  /* src/components/css/prose-overrides.css:20 */
+  margin-top: 0 !important;
+  /* src/components/css/prose-overrides.css:21 */
+  margin-bottom: 0.5em !important;
+  /* src/components/css/prose-overrides.css:22 */
+  padding-left: 1.25em !important;
+  /* src/components/css/prose-overrides.css:23 */
+}
+
+/* src/components/css/prose-overrides.css:25 */
+
+.prose ul:last-child,
+/* src/components/css/prose-overrides.css:26 */
+.prose ol:last-child,
+/* src/components/css/prose-overrides.css:27 */
+.prose-override ul:last-child,
+/* src/components/css/prose-overrides.css:28 */
+.prose-override ol:last-child {
+  /* src/components/css/prose-overrides.css:29 */
+  margin-bottom: 0 !important;
+  /* src/components/css/prose-overrides.css:30 */
+}
+
+/* src/components/css/prose-overrides.css:32 */
+
+/* Override list item styles */
+
+/* src/components/css/prose-overrides.css:33 */
+
+.prose li,
+/* src/components/css/prose-overrides.css:34 */
+.prose-override li {
+  /* src/components/css/prose-overrides.css:35 */
+  margin-top: 0 !important;
+  /* src/components/css/prose-overrides.css:36 */
+  margin-bottom: 0.25em !important;
+  /* src/components/css/prose-overrides.css:37 */
+  padding-left: 0 !important;
+  /* src/components/css/prose-overrides.css:38 */
+}
+
+/* src/components/css/prose-overrides.css:40 */
+
+.prose li:last-child,
+/* src/components/css/prose-overrides.css:41 */
+.prose-override li:last-child {
+  /* src/components/css/prose-overrides.css:42 */
+  margin-bottom: 0 !important;
+  /* src/components/css/prose-overrides.css:43 */
+}
+
+/* src/components/css/prose-overrides.css:45 */
+
+/* Override headings */
+
+/* src/components/css/prose-overrides.css:46 */
+
+.prose h1,
+/* src/components/css/prose-overrides.css:47 */
+.prose h2,
+/* src/components/css/prose-overrides.css:48 */
+.prose h3,
+/* src/components/css/prose-overrides.css:49 */
+.prose h4,
+/* src/components/css/prose-overrides.css:50 */
+.prose-override h1,
+/* src/components/css/prose-overrides.css:51 */
+.prose-override h2,
+/* src/components/css/prose-overrides.css:52 */
+.prose-override h3,
+/* src/components/css/prose-overrides.css:53 */
+.prose-override h4 {
+  /* src/components/css/prose-overrides.css:54 */
+  margin-top: 0 !important;
+  /* src/components/css/prose-overrides.css:55 */
+  margin-bottom: 0.5em !important;
+  /* src/components/css/prose-overrides.css:56 */
+}
+
+/* src/components/css/prose-overrides.css:58 */
+
+/* Override blockquotes */
+
+/* src/components/css/prose-overrides.css:59 */
+
+.prose blockquote,
+/* src/components/css/prose-overrides.css:60 */
+.prose-override blockquote {
+  /* src/components/css/prose-overrides.css:61 */
+  margin-top: 0 !important;
+  /* src/components/css/prose-overrides.css:62 */
+  margin-bottom: 0.5em !important;
+  /* src/components/css/prose-overrides.css:63 */
+  padding-left: 1em !important;
+  /* src/components/css/prose-overrides.css:64 */
+  font-style: italic !important;
+  /* src/components/css/prose-overrides.css:65 */
+}
+
+/* src/components/css/prose-overrides.css:67 */
+
+/* Override tables */
+
+/* src/components/css/prose-overrides.css:68 */
+
+.prose table,
+/* src/components/css/prose-overrides.css:69 */
+.prose-override table {
+  /* src/components/css/prose-overrides.css:70 */
+  margin-top: 0 !important;
+  /* src/components/css/prose-overrides.css:71 */
+  margin-bottom: 0.5em !important;
+  /* src/components/css/prose-overrides.css:72 */
+}
+
+/* src/components/css/prose-overrides.css:74 */
+
+/* Make sure code blocks don't have excessive margins */
+
+/* src/components/css/prose-overrides.css:75 */
+
+.prose pre,
+/* src/components/css/prose-overrides.css:76 */
+.prose-override pre {
+  /* src/components/css/prose-overrides.css:77 */
+  margin-top: 0 !important;
+  /* src/components/css/prose-overrides.css:78 */
+  margin-bottom: 0.5em !important;
+  /* src/components/css/prose-overrides.css:79 */
+}
+
+/* src/components/css/prose-overrides.css:81 */
+
+/* Ensure proper spacing for inline code */
+
+/* src/components/css/prose-overrides.css:82 */
+
+.prose code,
+/* src/components/css/prose-overrides.css:83 */
+.prose-override code {
+  /* src/components/css/prose-overrides.css:84 */
+  padding: 0.1em 0.25em !important;
+  /* src/components/css/prose-overrides.css:85 */
+}
+
+/* End of file: components/css/prose-overrides.css */
+
+/* Start of file: components/css/variables.css */
+
+/* ================================================
+   CENTRALIZED CSS VARIABLES
+   ================================================
+   This file contains all shared CSS variables used across components.
+   Import this file in components that need these variables.
+   ================================================ */
+
+/* src/components/css/variables.css:8 */
+
+:root {
+  /* ================================================
+     COLORS - ALL COLORS IN ONE PLACE
+     ================================================ */
+  /* src/components/css/variables.css:12 */
+  /* src/components/css/variables.css:13 */
+  /* Theme Colors (from chat widget config - use these directly) */
+  /* src/components/css/variables.css:14 */
+  /* --chat-widget-primary-color (defined elsewhere) */
+  /* src/components/css/variables.css:15 */
+  /* --chat-widget-secondary-color (defined elsewhere) */
+  /* src/components/css/variables.css:16 */
+  /* --chat-widget-button-content-color (defined elsewhere) */
+  /* src/components/css/variables.css:17 */
+  /* --chat-widget-message-text-color (defined elsewhere) */
+  /* src/components/css/variables.css:18 */
+  /* --chat-widget-message-font-size (defined elsewhere) */
+  /* src/components/css/variables.css:20 */
+  /* Derived Theme Colors */
+  /* src/components/css/variables.css:21 */
+  /* Primary hover: darker version of primary color (85% primary + 15% black) */
+  /* src/components/css/variables.css:22 */
+  --chat-widget-primary-color-hover: color-mix(in srgb, var(--chat-widget-primary-color) 85%, black);
+  /* src/components/css/variables.css:23 */
+  /* src/components/css/variables.css:24 */
+  /* Voice State Colors */
+  /* src/components/css/variables.css:25 */
+  --color-voice-listening: #3b82f6;
+  /* Blue */
+  /* src/components/css/variables.css:26 */
+  --color-voice-speaking: #10b981;
+  /* Green */
+  /* src/components/css/variables.css:27 */
+  --color-voice-thinking: #f59e0b;
+  /* Amber/Orange */
+  /* src/components/css/variables.css:28 */
+  --color-voice-disconnected: #ef4444cb;
+  /* Red */
+  /* src/components/css/variables.css:30 */
+  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
+  /* src/components/css/variables.css:31 */
+  /* --color-voice-speaking-alt: #058158; Darker Green */
+  /* src/components/css/variables.css:32 */
+  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
+  /* src/components/css/variables.css:33 */
+  /* --color-voice-thinking-alt: #fbbf24; Yellow */
+  /* src/components/css/variables.css:34 */
+  /* src/components/css/variables.css:35 */
+  /* Special/Brand Colors */
+  /* src/components/css/variables.css:36 */
+  --color-whatsapp: #1eb655;
+  /* src/components/css/variables.css:37 */
+  /* src/components/css/variables.css:38 */
+  /* src/components/css/variables.css:39 */
+  /* Opacity Values */
+  /* src/components/css/variables.css:40 */
+  --opacity-disabled: 0.7;
+  /* src/components/css/variables.css:41 */
+  --opacity-hover: 0.8;
+  /* src/components/css/variables.css:42 */
+  --opacity-normal: 1.0;
+  /* ================================================
+     INPUT AREA VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:47 */
+  /* src/components/css/variables.css:48 */
+  /* Input Colors */
+  /* src/components/css/variables.css:50 */
+  --color-input-background: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:51 */
+  --color-input-background-avatar-view: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:52 */
+  --color-input-text: var(--chat-widget-message-text-color);
+  /* src/components/css/variables.css:53 */
+  --color-input-placeholder-text: color-mix(in srgb, var(--color-input-text) 70%, white);
+  /* src/components/css/variables.css:54 */
+  --color-input-placeholder-opacity: 70%;
+  /* src/components/css/variables.css:55 */
+  --color-input-placeholder-opacity-focus: 80%;
+  /* src/components/css/variables.css:57 */
+  /* Input Dimensions */
+  /* src/components/css/variables.css:58 */
+  --input-default-height: 40px;
+  /* src/components/css/variables.css:59 */
+  --input-min-height: 40px;
+  /* src/components/css/variables.css:60 */
+  --input-max-height: 120px;
+  /* src/components/css/variables.css:61 */
+  --input-max-height-tablet: 100px;
+  /* src/components/css/variables.css:62 */
+  --input-max-height-mobile: 80px;
+  /* src/components/css/variables.css:63 */
+  /* src/components/css/variables.css:64 */
+  /* Input Line Height */
+  /* src/components/css/variables.css:65 */
+  --input-line-height: 20px;
+  /* src/components/css/variables.css:66 */
+  /* src/components/css/variables.css:67 */
+  /* Input Padding */
+  /* src/components/css/variables.css:68 */
+  --input-text-padding-horizontal: 4px;
+  /* src/components/css/variables.css:69 */
+  --input-text-padding-vertical: 0px;
+  /* src/components/css/variables.css:70 */
+  --input-text-padding: 0 var(--input-text-padding-horizontal);
+  /* src/components/css/variables.css:71 */
+  --input-container-padding: 6px 8px;
+  /* src/components/css/variables.css:72 */
+  --input-container-padding-sleek: 4px 4px;
+  /* src/components/css/variables.css:73 */
+  /* src/components/css/variables.css:74 */
+  /* Input Font */
+  /* src/components/css/variables.css:75 */
+  --input-font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/variables.css:76 */
+  --input-font-weight: 400;
+  /* src/components/css/variables.css:77 */
+  --input-font-weight-focus: 500;
+  /* src/components/css/variables.css:78 */
+  --input-font-weight-bold: 600;
+  /* src/components/css/variables.css:79 */
+  /* ================================================
+     INPUT SCROLLBAR VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:83 */
+  /* src/components/css/variables.css:84 */
+  /* Scrollbar Colors */
+  /* src/components/css/variables.css:85 */
+  --color-scrollbar-input-thumb: color-mix(in srgb, var(--chat-widget-primary-color) 75%, transparent);
+  /* src/components/css/variables.css:86 */
+  --color-scrollbar-input-thumb-hover: color-mix(in srgb, var(--chat-widget-primary-color) 90%, transparent);
+  /* src/components/css/variables.css:87 */
+  /* src/components/css/variables.css:89 */
+  --color-scrollbar-input-thumb-avatar-view: color-mix(in srgb, var(--chat-widget-secondary-color) 75%, transparent);
+  /* src/components/css/variables.css:90 */
+  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(in srgb, var(--chat-widget-secondary-color) 90%, transparent);
+  /* src/components/css/variables.css:92 */
+  --color-scrollbar-input-track: transparent;
+  /* src/components/css/variables.css:94 */
+  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:95 */
+  --input-scrollbar-border-radius: 2.5px;
+  /* src/components/css/variables.css:96 */
+  --input-scrollbar-thumb-hover-opacity: var(--opacity-hover);
+  /* src/components/css/variables.css:97 */
+  /* ================================================
+     BUTTON VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:101 */
+  /* src/components/css/variables.css:102 */
+  /* Button Dimensions */
+  /* src/components/css/variables.css:103 */
+  --button-size-primary: 32px;
+  /* src/components/css/variables.css:104 */
+  --button-padding-primary: 4px;
+  /* src/components/css/variables.css:105 */
+  --button-size-secondary: 24px;
+  /* src/components/css/variables.css:106 */
+  /* src/components/css/variables.css:107 */
+  /* Button Colors */
+  /* src/components/css/variables.css:108 */
+  --color-button-background-primary: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:109 */
+  --color-button-background-primary-avatar-view: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:110 */
+  --color-button-background-hover: var(--chat-widget-primary-color-hover);
+  /* src/components/css/variables.css:111 */
+  --color-button-text: var(--chat-widget-button-content-color);
+  /* src/components/css/variables.css:112 */
+  --color-button-fill: var(--chat-widget-button-content-color);
+  /* src/components/css/variables.css:113 */
+  /* src/components/css/variables.css:114 */
+  /* Button Opacity States */
+  /* src/components/css/variables.css:115 */
+  --button-opacity-normal: var(--opacity-normal);
+  /* src/components/css/variables.css:116 */
+  --button-opacity-hover: var(--opacity-hover);
+  /* src/components/css/variables.css:117 */
+  --button-opacity-disabled: var(--opacity-disabled);
+  /* src/components/css/variables.css:118 */
+  /* ================================================
+     ICON VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:122 */
+  /* src/components/css/variables.css:123 */
+  /* Icon Sizes */
+  /* src/components/css/variables.css:124 */
+  --button-icon-size-secondary: 16px;
+  /* src/components/css/variables.css:125 */
+  --button-icon-size-primary: 20px;
+  /* w-5 h-5 equivalent */
+  /* src/components/css/variables.css:126 */
+  /* ================================================
+     CHAT MESSAGE CONTAINER SCROLLBAR
+     ================================================ */
+  /* src/components/css/variables.css:130 */
+  /* src/components/css/variables.css:131 */
+  --message-scrollbar-width: thin;
+  /* src/components/css/variables.css:132 */
+  --message-scrollbar-width-px: 6px;
+  /* src/components/css/variables.css:133 */
+  --message-scrollbar-border-radius: 3px;
+  /* src/components/css/variables.css:135 */
+  /* Scrollbar Colors */
+  /* src/components/css/variables.css:136 */
+  --color-scrollbar-message-thumb-default: rgb(209 213 219);
+  /* src/components/css/variables.css:137 */
+  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  /* src/components/css/variables.css:138 */
+  --color-scrollbar-message-thumb-theme: var(--chat-widget-button-content-color, var(--chat-widget-secondary-color));
+  /* src/components/css/variables.css:139 */
+  --color-scrollbar-message-thumb-hover-mix: color-mix(in srgb, var(--chat-widget-button-content-color, var(--chat-widget-secondary-color)) 80%, var(--chat-widget-primary-color));
+  /* src/components/css/variables.css:140 */
+  --color-scrollbar-message-track: transparent;
+  /* ================================================
+     CHAT MESSAGE
+     ================================================ */
+  /* src/components/css/variables.css:146 */
+  --message-text-color: var(--chat-widget-message-text-color);
+  /* src/components/css/variables.css:147 */
+  --message-font-size: var(--chat-widget-message-font-size);
+  /* ================================================
+     CHAT MESSAGE BUBBLES
+     ================================================ */
+  /* src/components/css/variables.css:153 */
+  --message-bubble-background-color: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:154 */
+  --message-bubble-icon-color: var(--chat-widget-secondary-color);
+  /* ================================================
+     ENGAGEMENT HOOK IMAGE
+     ================================================ */
+  /* src/components/css/variables.css:160 */
+  /* Engagement Hook Image Variables (defined elsewhere via JavaScript) */
+  /* src/components/css/variables.css:161 */
+  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
+  /* src/components/css/variables.css:162 */
+  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
+  /* src/components/css/variables.css:163 */
+  /* src/components/css/variables.css:164 */
+  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* src/components/css/variables.css:165 */
+  --engagement-hook-image-height: var(--chat-widget-engagement-hook-image-height);
+  /* ================================================
+     TRANSITION VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:170 */
+  /* src/components/css/variables.css:171 */
+  --transition-fast: 0.2s ease;
+  /* src/components/css/variables.css:172 */
+  --transition-normal: all 0.3s ease;
+  /* src/components/css/variables.css:173 */
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* src/components/css/variables.css:174 */
+  --transition-slow-ease: 0.4s ease;
+  /* src/components/css/variables.css:175 */
+  /* ================================================
+     BORDER RADIUS VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:179 */
+  /* src/components/css/variables.css:180 */
+  --border-radius-small: 2.5px;
+  /* src/components/css/variables.css:181 */
+  --border-radius-medium: 3px;
+  /* src/components/css/variables.css:182 */
+  --border-radius-large: 12px;
+  /* src/components/css/variables.css:183 */
+  --border-radius-xl: 16px;
+  /* src/components/css/variables.css:184 */
+  --border-radius-2xl: 20px;
+  /* src/components/css/variables.css:185 */
+  --border-radius-full: 9999px;
+  /* src/components/css/variables.css:186 */
+  /* ================================================
+     SPACING & GAP VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:190 */
+  /* src/components/css/variables.css:191 */
+  --spacing-gap-xs: 0.5px;
+  /* src/components/css/variables.css:192 */
+  --spacing-gap-sm: 4px;
+  /* src/components/css/variables.css:193 */
+  --spacing-gap-md: 8px;
+  /* src/components/css/variables.css:194 */
+  --spacing-gap-lg: 12px;
+  /* src/components/css/variables.css:195 */
+  --spacing-gap-xl: 16px;
+  /* src/components/css/variables.css:196 */
+  /* ================================================
+     Z-INDEX VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:200 */
+  /* src/components/css/variables.css:201 */
+  --z-index-base: 1;
+  /* src/components/css/variables.css:202 */
+  --z-index-elevated: 10;
+  /* src/components/css/variables.css:203 */
+  --z-index-high: 20;
+  /* src/components/css/variables.css:204 */
+  --z-index-maximum: 9999;
+  /* src/components/css/variables.css:205 */
+  /* ================================================
+     BORDER VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:209 */
+  /* src/components/css/variables.css:210 */
+  --border-width-thin: 1px;
+  /* src/components/css/variables.css:211 */
+  --border-width-medium: 2px;
+  /* src/components/css/variables.css:212 */
+  --border-width-thick: 4px;
+  /* src/components/css/variables.css:213 */
+  /* ================================================
+     BOX SHADOW VARIABLES (for consistency)
+     ================================================ */
+  /* src/components/css/variables.css:217 */
+  /* src/components/css/variables.css:218 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* src/components/css/variables.css:219 */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:220 */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:221 */
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:222 */
+  /* ================================================
+     SLEEK VIEW SPECIFIC VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:226 */
+  /* src/components/css/variables.css:227 */
+  /* These are already defined in SleekView.css but should be here for consistency */
+  /* src/components/css/variables.css:228 */
+  --sleek-main-min-height: 0px;
+  /* src/components/css/variables.css:229 */
+  --sleek-border-radius: var(--border-radius-large);
+  /* src/components/css/variables.css:230 */
+  --sleek-main-bg: var(--color-sleek-main-bg);
+  /* src/components/css/variables.css:231 */
+  --sleek-main-border: var(--color-sleek-main-border);
+  /* src/components/css/variables.css:232 */
+  --sleek-main-text-color: var(--color-sleek-main-text);
+  /* src/components/css/variables.css:234 */
+  /* Sleek View Colors */
+  /* src/components/css/variables.css:235 */
+  --color-sleek-main-bg: color-mix(in srgb, var(--chat-widget-primary-color) 10%, white);
+  /* src/components/css/variables.css:236 */
+  --color-sleek-main-border: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:237 */
+  --color-sleek-main-text: var(--chat-widget-message-text-color);
+  /* src/components/css/variables.css:239 */
+  /* Gradient Colors (derived from primary/secondary) */
+  /* src/components/css/variables.css:240 */
+  --color-gradient-1: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:241 */
+  --color-gradient-2: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:242 */
+  --color-gradient-3: color-mix(in srgb, var(--chat-widget-primary-color) 60%, var(--chat-widget-secondary-color));
+  /* src/components/css/variables.css:243 */
+  --color-gradient-4: color-mix(in srgb, var(--chat-widget-primary-color) 40%, var(--chat-widget-secondary-color));
+  /* src/components/css/variables.css:244 */
+  --color-accent: color-mix(in srgb, var(--chat-widget-primary-color) 70%, var(--chat-widget-secondary-color));
+  /* src/components/css/variables.css:245 */
+  --color-glow: color-mix(in srgb, var(--chat-widget-primary-color) 30%, transparent);
+  /* src/components/css/variables.css:248 */
+  /* Legacy Gradient Variables (for backward compatibility) */
+  /* src/components/css/variables.css:249 */
+  --gradient-1: var(--color-gradient-1);
+  /* src/components/css/variables.css:250 */
+  --gradient-2: var(--color-gradient-2);
+  /* src/components/css/variables.css:251 */
+  --gradient-3: var(--color-gradient-3);
+  /* src/components/css/variables.css:252 */
+  --gradient-4: var(--color-gradient-4);
+  /* src/components/css/variables.css:253 */
+  --accent: var(--color-accent);
+  /* src/components/css/variables.css:254 */
+  --glow: var(--color-glow);
+  /* src/components/css/variables.css:255 */
+  /* src/components/css/variables.css:256 */
+  /* Legacy Color Aliases (for backward compatibility) */
+  /* src/components/css/variables.css:257 */
+  --whatsapp-color: var(--color-whatsapp);
+  /* src/components/css/variables.css:258 */
+  --gray-200: var(--color-gray-200);
+  /* src/components/css/variables.css:259 */
+  --gray-300: var(--color-gray-300);
+  /* src/components/css/variables.css:260 */
+  --gray-400: var(--color-gray-400);
+  /* src/components/css/variables.css:261 */
+  --gray-500: var(--color-gray-500);
+  /* src/components/css/variables.css:262 */
+  --gray-600: var(--color-gray-600);
+  /* src/components/css/variables.css:263 */
+  --gray-700: var(--color-gray-700);
+  /* src/components/css/variables.css:264 */
+  --gray-800: var(--color-gray-800);
+  /* src/components/css/variables.css:265 */
+  --blue-500: var(--color-blue-500);
+  /* src/components/css/variables.css:266 */
+  --blue-600: var(--color-blue-600);
+  /* src/components/css/variables.css:267 */
+  --slate-700: var(--color-slate-700);
+  /* src/components/css/variables.css:268 */
+  --slate-800: var(--color-slate-800);
+  /* src/components/css/variables.css:271 */
+  /* Gray Scale Colors */
+  /* --color-gray-200: rgb(229, 231, 235);
+  --color-gray-300: rgb(209, 213, 219);
+  --color-gray-400: rgb(156, 163, 175);
+  --color-gray-500: rgb(107, 114, 128);
+  --color-gray-600: rgb(75, 85, 99);
+  --color-gray-700: rgb(51, 65, 85);
+  --color-gray-800: rgb(30, 41, 59); */
+  /* src/components/css/variables.css:279 */
+  /* src/components/css/variables.css:280 */
+  /* Blue Colors */
+  /* --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb; */
+  /* src/components/css/variables.css:283 */
+  /* src/components/css/variables.css:284 */
+  /* Slate Colors */
+  /* --color-slate-700: rgb(51, 65, 85);
+  --color-slate-800: rgb(30, 41, 59); */
+  /* src/components/css/variables.css:287 */
+  /* src/components/css/variables.css:288 */
+  /* Red Colors (for errors, disconnect, etc.) */
+  /* --color-red-50: rgb(254, 242, 242);
+  --color-red-100: rgb(254, 226, 226);
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626; */
+  /* src/components/css/variables.css:293 */
+  /* src/components/css/variables.css:294 */
+  /* Green Colors (for success, active states) */
+  /* --color-green-50: rgb(240, 253, 244);
+  --color-green-100: rgb(220, 252, 231);
+  --color-green-500: #10b981;
+  --color-green-600: #059669; */
+  /* src/components/css/variables.css:299 */
+}
+
+/* src/components/css/variables.css:301 */
+
+/* Fallback for browsers that don't support color-mix */
+
+/* src/components/css/variables.css:302 */
+
+@supports not (color: color-mix(in srgb, #000 50%, #fff)) {
+  /* src/components/css/variables.css:303 */
+
+  :root {
+    /* src/components/css/variables.css:304 */
+    /* Derived Theme Colors Fallback */
+    /* src/components/css/variables.css:305 */
+    /* Primary hover: darker version of default primary color #000aaa */
+    /* src/components/css/variables.css:306 */
+    --chat-widget-primary-color-hover: #000991;
+    /* ~15% darker than #000aaa */
+    /* src/components/css/variables.css:307 */
+    /* src/components/css/variables.css:308 */
+    /* Gradient Colors Fallback */
+    /* src/components/css/variables.css:309 */
+    --color-gradient-1: #000aaa;
+    /* Default primary color */
+    /* src/components/css/variables.css:310 */
+    --color-gradient-2: #6c757d;
+    /* Default secondary color */
+    /* src/components/css/variables.css:311 */
+    --color-gradient-3: #6c757d;
+    /* src/components/css/variables.css:312 */
+    --color-gradient-4: #6c757d;
+    /* src/components/css/variables.css:313 */
+    --color-accent: #6c757d;
+    /* src/components/css/variables.css:314 */
+    --color-glow: rgba(0, 10, 170, 0.3);
+    /* src/components/css/variables.css:315 */
+    /* src/components/css/variables.css:316 */
+    /* Sleek View Colors Fallback */
+    /* src/components/css/variables.css:317 */
+    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
+    /* src/components/css/variables.css:318 */
+    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
+    /* src/components/css/variables.css:319 */
+    /* src/components/css/variables.css:320 */
+    /* Scrollbar Colors Fallback */
+    /* src/components/css/variables.css:321 */
+    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
+    /* src/components/css/variables.css:322 */
+    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
+    /* src/components/css/variables.css:323 */
+    /* src/components/css/variables.css:324 */
+    /* Legacy aliases */
+    /* src/components/css/variables.css:325 */
+    --gradient-1: var(--color-gradient-1);
+    /* src/components/css/variables.css:326 */
+    --gradient-2: var(--color-gradient-2);
+    /* src/components/css/variables.css:327 */
+    --gradient-3: var(--color-gradient-3);
+    /* src/components/css/variables.css:328 */
+    --gradient-4: var(--color-gradient-4);
+    /* src/components/css/variables.css:329 */
+    --accent: var(--color-accent);
+    /* src/components/css/variables.css:330 */
+    --glow: var(--color-glow);
+    /* src/components/css/variables.css:331 */
+    --sleek-main-bg: var(--color-sleek-main-bg);
+    /* src/components/css/variables.css:332 */
+    --sleek-main-border: var(--color-sleek-main-border);
+    /* src/components/css/variables.css:333 */
+    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    /* src/components/css/variables.css:334 */
+    --input-scrollbar-thumb-hover-color: var(--color-scrollbar-input-thumb-hover);
+    /* src/components/css/variables.css:335 */
+  }
+
+  /* src/components/css/variables.css:336 */
+}
+
+/* End of file: components/css/variables.css */
 
 /* Start of file: index.css */
 
@@ -129512,199 +130544,7 @@ video {
 
 /* End of file: index.css */
 
-/* Start of file: prose-overrides.css */
-
-/* src/components/css/prose-overrides.css:1 */
-
-/* Custom overrides for prose styles in chat messages */
-
-/* src/components/css/prose-overrides.css:3 */
-
-/* Remove default margins for paragraphs */
-
-/* src/components/css/prose-overrides.css:4 */
-
-.prose p,
-/* src/components/css/prose-overrides.css:5 */
-.prose-override p {
-  /* src/components/css/prose-overrides.css:6 */
-  margin-top: 0 !important;
-  /* src/components/css/prose-overrides.css:7 */
-  margin-bottom: 0.5em !important;
-  /* src/components/css/prose-overrides.css:8 */
-}
-
-/* src/components/css/prose-overrides.css:10 */
-
-.prose p:last-child,
-/* src/components/css/prose-overrides.css:11 */
-.prose-override p:last-child {
-  /* src/components/css/prose-overrides.css:12 */
-  margin-bottom: 0 !important;
-  /* src/components/css/prose-overrides.css:13 */
-}
-
-/* src/components/css/prose-overrides.css:15 */
-
-/* Override list styles */
-
-/* src/components/css/prose-overrides.css:16 */
-
-.prose ul,
-/* src/components/css/prose-overrides.css:17 */
-.prose ol,
-/* src/components/css/prose-overrides.css:18 */
-.prose-override ul,
-/* src/components/css/prose-overrides.css:19 */
-.prose-override ol {
-  /* src/components/css/prose-overrides.css:20 */
-  margin-top: 0 !important;
-  /* src/components/css/prose-overrides.css:21 */
-  margin-bottom: 0.5em !important;
-  /* src/components/css/prose-overrides.css:22 */
-  padding-left: 1.25em !important;
-  /* src/components/css/prose-overrides.css:23 */
-}
-
-/* src/components/css/prose-overrides.css:25 */
-
-.prose ul:last-child,
-/* src/components/css/prose-overrides.css:26 */
-.prose ol:last-child,
-/* src/components/css/prose-overrides.css:27 */
-.prose-override ul:last-child,
-/* src/components/css/prose-overrides.css:28 */
-.prose-override ol:last-child {
-  /* src/components/css/prose-overrides.css:29 */
-  margin-bottom: 0 !important;
-  /* src/components/css/prose-overrides.css:30 */
-}
-
-/* src/components/css/prose-overrides.css:32 */
-
-/* Override list item styles */
-
-/* src/components/css/prose-overrides.css:33 */
-
-.prose li,
-/* src/components/css/prose-overrides.css:34 */
-.prose-override li {
-  /* src/components/css/prose-overrides.css:35 */
-  margin-top: 0 !important;
-  /* src/components/css/prose-overrides.css:36 */
-  margin-bottom: 0.25em !important;
-  /* src/components/css/prose-overrides.css:37 */
-  padding-left: 0 !important;
-  /* src/components/css/prose-overrides.css:38 */
-}
-
-/* src/components/css/prose-overrides.css:40 */
-
-.prose li:last-child,
-/* src/components/css/prose-overrides.css:41 */
-.prose-override li:last-child {
-  /* src/components/css/prose-overrides.css:42 */
-  margin-bottom: 0 !important;
-  /* src/components/css/prose-overrides.css:43 */
-}
-
-/* src/components/css/prose-overrides.css:45 */
-
-/* Override headings */
-
-/* src/components/css/prose-overrides.css:46 */
-
-.prose h1,
-/* src/components/css/prose-overrides.css:47 */
-.prose h2,
-/* src/components/css/prose-overrides.css:48 */
-.prose h3,
-/* src/components/css/prose-overrides.css:49 */
-.prose h4,
-/* src/components/css/prose-overrides.css:50 */
-.prose-override h1,
-/* src/components/css/prose-overrides.css:51 */
-.prose-override h2,
-/* src/components/css/prose-overrides.css:52 */
-.prose-override h3,
-/* src/components/css/prose-overrides.css:53 */
-.prose-override h4 {
-  /* src/components/css/prose-overrides.css:54 */
-  margin-top: 0 !important;
-  /* src/components/css/prose-overrides.css:55 */
-  margin-bottom: 0.5em !important;
-  /* src/components/css/prose-overrides.css:56 */
-}
-
-/* src/components/css/prose-overrides.css:58 */
-
-/* Override blockquotes */
-
-/* src/components/css/prose-overrides.css:59 */
-
-.prose blockquote,
-/* src/components/css/prose-overrides.css:60 */
-.prose-override blockquote {
-  /* src/components/css/prose-overrides.css:61 */
-  margin-top: 0 !important;
-  /* src/components/css/prose-overrides.css:62 */
-  margin-bottom: 0.5em !important;
-  /* src/components/css/prose-overrides.css:63 */
-  padding-left: 1em !important;
-  /* src/components/css/prose-overrides.css:64 */
-  font-style: italic !important;
-  /* src/components/css/prose-overrides.css:65 */
-}
-
-/* src/components/css/prose-overrides.css:67 */
-
-/* Override tables */
-
-/* src/components/css/prose-overrides.css:68 */
-
-.prose table,
-/* src/components/css/prose-overrides.css:69 */
-.prose-override table {
-  /* src/components/css/prose-overrides.css:70 */
-  margin-top: 0 !important;
-  /* src/components/css/prose-overrides.css:71 */
-  margin-bottom: 0.5em !important;
-  /* src/components/css/prose-overrides.css:72 */
-}
-
-/* src/components/css/prose-overrides.css:74 */
-
-/* Make sure code blocks don't have excessive margins */
-
-/* src/components/css/prose-overrides.css:75 */
-
-.prose pre,
-/* src/components/css/prose-overrides.css:76 */
-.prose-override pre {
-  /* src/components/css/prose-overrides.css:77 */
-  margin-top: 0 !important;
-  /* src/components/css/prose-overrides.css:78 */
-  margin-bottom: 0.5em !important;
-  /* src/components/css/prose-overrides.css:79 */
-}
-
-/* src/components/css/prose-overrides.css:81 */
-
-/* Ensure proper spacing for inline code */
-
-/* src/components/css/prose-overrides.css:82 */
-
-.prose code,
-/* src/components/css/prose-overrides.css:83 */
-.prose-override code {
-  /* src/components/css/prose-overrides.css:84 */
-  padding: 0.1em 0.25em !important;
-  /* src/components/css/prose-overrides.css:85 */
-}
-
-/* End of file: prose-overrides.css */
-
-/* Start of file: style.css */
+/* Start of file: voice_ai_bot_widget/style.css */
 
 /* src/voice_ai_bot_widget/style.css:1 */
 
@@ -129738,536 +130578,7 @@ video {
   /* src/voice_ai_bot_widget/style.css:14 */
 }
 
-/* End of file: style.css */
-
-/* Start of file: variables.css */
-
-/* ================================================
-   CENTRALIZED CSS VARIABLES
-   ================================================
-   This file contains all shared CSS variables used across components.
-   Import this file in components that need these variables.
-   ================================================ */
-
-/* src/components/css/variables.css:8 */
-
-:root {
-  /* ================================================
-     COLORS - ALL COLORS IN ONE PLACE
-     ================================================ */
-  /* src/components/css/variables.css:12 */
-  /* src/components/css/variables.css:13 */
-  /* Theme Colors (from chat widget config - use these directly) */
-  /* src/components/css/variables.css:14 */
-  /* --chat-widget-primary-color (defined elsewhere) */
-  /* src/components/css/variables.css:15 */
-  /* --chat-widget-secondary-color (defined elsewhere) */
-  /* src/components/css/variables.css:16 */
-  /* --chat-widget-button-content-color (defined elsewhere) */
-  /* src/components/css/variables.css:17 */
-  /* --chat-widget-message-text-color (defined elsewhere) */
-  /* src/components/css/variables.css:18 */
-  /* --chat-widget-message-font-size (defined elsewhere) */
-  /* src/components/css/variables.css:20 */
-  /* Derived Theme Colors */
-  /* src/components/css/variables.css:21 */
-  /* Primary hover: darker version of primary color (85% primary + 15% black) */
-  /* src/components/css/variables.css:22 */
-  --chat-widget-primary-color-hover: color-mix(in srgb, var(--chat-widget-primary-color) 85%, black);
-  /* src/components/css/variables.css:23 */
-  /* src/components/css/variables.css:24 */
-  /* Voice State Colors */
-  /* src/components/css/variables.css:25 */
-  --color-voice-listening: #3b82f6;
-  /* Blue */
-  /* src/components/css/variables.css:26 */
-  --color-voice-speaking: #10b981;
-  /* Green */
-  /* src/components/css/variables.css:27 */
-  --color-voice-thinking: #f59e0b;
-  /* Amber/Orange */
-  /* src/components/css/variables.css:28 */
-  --color-voice-disconnected: #ef4444cb;
-  /* Red */
-  /* src/components/css/variables.css:30 */
-  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
-  /* src/components/css/variables.css:31 */
-  /* --color-voice-speaking-alt: #058158; Darker Green */
-  /* src/components/css/variables.css:32 */
-  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
-  /* src/components/css/variables.css:33 */
-  /* --color-voice-thinking-alt: #fbbf24; Yellow */
-  /* src/components/css/variables.css:34 */
-  /* src/components/css/variables.css:35 */
-  /* Special/Brand Colors */
-  /* src/components/css/variables.css:36 */
-  --color-whatsapp: #1eb655;
-  /* src/components/css/variables.css:37 */
-  /* src/components/css/variables.css:38 */
-  /* src/components/css/variables.css:39 */
-  /* Opacity Values */
-  /* src/components/css/variables.css:40 */
-  --opacity-disabled: 0.7;
-  /* src/components/css/variables.css:41 */
-  --opacity-hover: 0.8;
-  /* src/components/css/variables.css:42 */
-  --opacity-normal: 1.0;
-  /* ================================================
-     INPUT AREA VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:47 */
-  /* src/components/css/variables.css:48 */
-  /* Input Colors */
-  /* src/components/css/variables.css:50 */
-  --color-input-background: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:51 */
-  --color-input-background-avatar-view: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:52 */
-  --color-input-text: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:53 */
-  --color-input-placeholder-text: color-mix(in srgb, var(--color-input-text) 70%, white);
-  /* src/components/css/variables.css:54 */
-  --color-input-placeholder-opacity: 70%;
-  /* src/components/css/variables.css:55 */
-  --color-input-placeholder-opacity-focus: 80%;
-  /* src/components/css/variables.css:57 */
-  /* Input Dimensions */
-  /* src/components/css/variables.css:58 */
-  --input-default-height: 40px;
-  /* src/components/css/variables.css:59 */
-  --input-min-height: 40px;
-  /* src/components/css/variables.css:60 */
-  --input-max-height: 120px;
-  /* src/components/css/variables.css:61 */
-  --input-max-height-tablet: 100px;
-  /* src/components/css/variables.css:62 */
-  --input-max-height-mobile: 80px;
-  /* src/components/css/variables.css:63 */
-  /* src/components/css/variables.css:64 */
-  /* Input Line Height */
-  /* src/components/css/variables.css:65 */
-  --input-line-height: 20px;
-  /* src/components/css/variables.css:66 */
-  /* src/components/css/variables.css:67 */
-  /* Input Padding */
-  /* src/components/css/variables.css:68 */
-  --input-text-padding-horizontal: 4px;
-  /* src/components/css/variables.css:69 */
-  --input-text-padding-vertical: 0px;
-  /* src/components/css/variables.css:70 */
-  --input-text-padding: 0 var(--input-text-padding-horizontal);
-  /* src/components/css/variables.css:71 */
-  --input-container-padding: 6px 8px;
-  /* src/components/css/variables.css:72 */
-  --input-container-padding-sleek: 4px 4px;
-  /* src/components/css/variables.css:73 */
-  /* src/components/css/variables.css:74 */
-  /* Input Font */
-  /* src/components/css/variables.css:75 */
-  --input-font-size: var(--chat-widget-message-font-size);
-  /* src/components/css/variables.css:76 */
-  --input-font-weight: 400;
-  /* src/components/css/variables.css:77 */
-  --input-font-weight-focus: 500;
-  /* src/components/css/variables.css:78 */
-  --input-font-weight-bold: 600;
-  /* src/components/css/variables.css:79 */
-  /* ================================================
-     INPUT SCROLLBAR VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:83 */
-  /* src/components/css/variables.css:84 */
-  /* Scrollbar Colors */
-  /* src/components/css/variables.css:85 */
-  --color-scrollbar-input-thumb: color-mix(in srgb, var(--chat-widget-primary-color) 75%, transparent);
-  /* src/components/css/variables.css:86 */
-  --color-scrollbar-input-thumb-hover: color-mix(in srgb, var(--chat-widget-primary-color) 90%, transparent);
-  /* src/components/css/variables.css:87 */
-  /* src/components/css/variables.css:89 */
-  --color-scrollbar-input-thumb-avatar-view: color-mix(in srgb, var(--chat-widget-secondary-color) 75%, transparent);
-  /* src/components/css/variables.css:90 */
-  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(in srgb, var(--chat-widget-secondary-color) 90%, transparent);
-  /* src/components/css/variables.css:92 */
-  --color-scrollbar-input-track: transparent;
-  /* src/components/css/variables.css:94 */
-  --input-scrollbar-width: thin;
-  /* src/components/css/variables.css:95 */
-  --input-scrollbar-border-radius: 2.5px;
-  /* src/components/css/variables.css:96 */
-  --input-scrollbar-thumb-hover-opacity: var(--opacity-hover);
-  /* src/components/css/variables.css:97 */
-  /* ================================================
-     BUTTON VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:101 */
-  /* src/components/css/variables.css:102 */
-  /* Button Dimensions */
-  /* src/components/css/variables.css:103 */
-  --button-size-primary: 32px;
-  /* src/components/css/variables.css:104 */
-  --button-padding-primary: 4px;
-  /* src/components/css/variables.css:105 */
-  --button-size-secondary: 24px;
-  /* src/components/css/variables.css:106 */
-  /* src/components/css/variables.css:107 */
-  /* Button Colors */
-  /* src/components/css/variables.css:108 */
-  --color-button-background-primary: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:109 */
-  --color-button-background-primary-avatar-view: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:110 */
-  --color-button-background-hover: var(--chat-widget-primary-color-hover);
-  /* src/components/css/variables.css:111 */
-  --color-button-text: var(--chat-widget-button-content-color);
-  /* src/components/css/variables.css:112 */
-  --color-button-fill: var(--chat-widget-button-content-color);
-  /* src/components/css/variables.css:113 */
-  /* src/components/css/variables.css:114 */
-  /* Button Opacity States */
-  /* src/components/css/variables.css:115 */
-  --button-opacity-normal: var(--opacity-normal);
-  /* src/components/css/variables.css:116 */
-  --button-opacity-hover: var(--opacity-hover);
-  /* src/components/css/variables.css:117 */
-  --button-opacity-disabled: var(--opacity-disabled);
-  /* src/components/css/variables.css:118 */
-  /* ================================================
-     ICON VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:122 */
-  /* src/components/css/variables.css:123 */
-  /* Icon Sizes */
-  /* src/components/css/variables.css:124 */
-  --button-icon-size-secondary: 16px;
-  /* src/components/css/variables.css:125 */
-  --button-icon-size-primary: 20px;
-  /* w-5 h-5 equivalent */
-  /* src/components/css/variables.css:126 */
-  /* ================================================
-     CHAT MESSAGE CONTAINER SCROLLBAR
-     ================================================ */
-  /* src/components/css/variables.css:130 */
-  /* src/components/css/variables.css:131 */
-  --message-scrollbar-width: thin;
-  /* src/components/css/variables.css:132 */
-  --message-scrollbar-width-px: 6px;
-  /* src/components/css/variables.css:133 */
-  --message-scrollbar-border-radius: 3px;
-  /* src/components/css/variables.css:135 */
-  /* Scrollbar Colors */
-  /* src/components/css/variables.css:136 */
-  --color-scrollbar-message-thumb-default: rgb(209 213 219);
-  /* src/components/css/variables.css:137 */
-  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
-  /* src/components/css/variables.css:138 */
-  --color-scrollbar-message-thumb-theme: var(--chat-widget-button-content-color, var(--chat-widget-secondary-color));
-  /* src/components/css/variables.css:139 */
-  --color-scrollbar-message-thumb-hover-mix: color-mix(in srgb, var(--chat-widget-button-content-color, var(--chat-widget-secondary-color)) 80%, var(--chat-widget-primary-color));
-  /* src/components/css/variables.css:140 */
-  --color-scrollbar-message-track: transparent;
-  /* ================================================
-     CHAT MESSAGE
-     ================================================ */
-  /* src/components/css/variables.css:146 */
-  --message-text-color: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:147 */
-  --message-font-size: var(--chat-widget-message-font-size);
-  /* ================================================
-     CHAT MESSAGE BUBBLES
-     ================================================ */
-  /* src/components/css/variables.css:153 */
-  --message-bubble-background-color: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:154 */
-  --message-bubble-icon-color: var(--chat-widget-secondary-color);
-  /* ================================================
-     ENGAGEMENT HOOK IMAGE
-     ================================================ */
-  /* src/components/css/variables.css:160 */
-  /* Engagement Hook Image Variables (defined elsewhere via JavaScript) */
-  /* src/components/css/variables.css:161 */
-  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
-  /* src/components/css/variables.css:162 */
-  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
-  /* src/components/css/variables.css:163 */
-  /* src/components/css/variables.css:164 */
-  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
-  /* src/components/css/variables.css:165 */
-  --engagement-hook-image-height: var(--chat-widget-engagement-hook-image-height);
-  /* ================================================
-     TRANSITION VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:170 */
-  /* src/components/css/variables.css:171 */
-  --transition-fast: 0.2s ease;
-  /* src/components/css/variables.css:172 */
-  --transition-normal: all 0.3s ease;
-  /* src/components/css/variables.css:173 */
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  /* src/components/css/variables.css:174 */
-  --transition-slow-ease: 0.4s ease;
-  /* src/components/css/variables.css:175 */
-  /* ================================================
-     BORDER RADIUS VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:179 */
-  /* src/components/css/variables.css:180 */
-  --border-radius-small: 2.5px;
-  /* src/components/css/variables.css:181 */
-  --border-radius-medium: 3px;
-  /* src/components/css/variables.css:182 */
-  --border-radius-large: 12px;
-  /* src/components/css/variables.css:183 */
-  --border-radius-xl: 16px;
-  /* src/components/css/variables.css:184 */
-  --border-radius-2xl: 20px;
-  /* src/components/css/variables.css:185 */
-  --border-radius-full: 9999px;
-  /* src/components/css/variables.css:186 */
-  /* ================================================
-     SPACING & GAP VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:190 */
-  /* src/components/css/variables.css:191 */
-  --spacing-gap-xs: 0.5px;
-  /* src/components/css/variables.css:192 */
-  --spacing-gap-sm: 4px;
-  /* src/components/css/variables.css:193 */
-  --spacing-gap-md: 8px;
-  /* src/components/css/variables.css:194 */
-  --spacing-gap-lg: 12px;
-  /* src/components/css/variables.css:195 */
-  --spacing-gap-xl: 16px;
-  /* src/components/css/variables.css:196 */
-  /* ================================================
-     Z-INDEX VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:200 */
-  /* src/components/css/variables.css:201 */
-  --z-index-base: 1;
-  /* src/components/css/variables.css:202 */
-  --z-index-elevated: 10;
-  /* src/components/css/variables.css:203 */
-  --z-index-high: 20;
-  /* src/components/css/variables.css:204 */
-  --z-index-maximum: 9999;
-  /* src/components/css/variables.css:205 */
-  /* ================================================
-     BORDER VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:209 */
-  /* src/components/css/variables.css:210 */
-  --border-width-thin: 1px;
-  /* src/components/css/variables.css:211 */
-  --border-width-medium: 2px;
-  /* src/components/css/variables.css:212 */
-  --border-width-thick: 4px;
-  /* src/components/css/variables.css:213 */
-  /* ================================================
-     BOX SHADOW VARIABLES (for consistency)
-     ================================================ */
-  /* src/components/css/variables.css:217 */
-  /* src/components/css/variables.css:218 */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  /* src/components/css/variables.css:219 */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:220 */
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:221 */
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:222 */
-  /* ================================================
-     SLEEK VIEW SPECIFIC VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:226 */
-  /* src/components/css/variables.css:227 */
-  /* These are already defined in SleekView.css but should be here for consistency */
-  /* src/components/css/variables.css:228 */
-  --sleek-main-min-height: 0px;
-  /* src/components/css/variables.css:229 */
-  --sleek-border-radius: var(--border-radius-large);
-  /* src/components/css/variables.css:230 */
-  --sleek-main-bg: var(--color-sleek-main-bg);
-  /* src/components/css/variables.css:231 */
-  --sleek-main-border: var(--color-sleek-main-border);
-  /* src/components/css/variables.css:232 */
-  --sleek-main-text-color: var(--color-sleek-main-text);
-  /* src/components/css/variables.css:234 */
-  /* Sleek View Colors */
-  /* src/components/css/variables.css:235 */
-  --color-sleek-main-bg: color-mix(in srgb, var(--chat-widget-primary-color) 10%, white);
-  /* src/components/css/variables.css:236 */
-  --color-sleek-main-border: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:237 */
-  --color-sleek-main-text: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:239 */
-  /* Gradient Colors (derived from primary/secondary) */
-  /* src/components/css/variables.css:240 */
-  --color-gradient-1: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:241 */
-  --color-gradient-2: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:242 */
-  --color-gradient-3: color-mix(in srgb, var(--chat-widget-primary-color) 60%, var(--chat-widget-secondary-color));
-  /* src/components/css/variables.css:243 */
-  --color-gradient-4: color-mix(in srgb, var(--chat-widget-primary-color) 40%, var(--chat-widget-secondary-color));
-  /* src/components/css/variables.css:244 */
-  --color-accent: color-mix(in srgb, var(--chat-widget-primary-color) 70%, var(--chat-widget-secondary-color));
-  /* src/components/css/variables.css:245 */
-  --color-glow: color-mix(in srgb, var(--chat-widget-primary-color) 30%, transparent);
-  /* src/components/css/variables.css:248 */
-  /* Legacy Gradient Variables (for backward compatibility) */
-  /* src/components/css/variables.css:249 */
-  --gradient-1: var(--color-gradient-1);
-  /* src/components/css/variables.css:250 */
-  --gradient-2: var(--color-gradient-2);
-  /* src/components/css/variables.css:251 */
-  --gradient-3: var(--color-gradient-3);
-  /* src/components/css/variables.css:252 */
-  --gradient-4: var(--color-gradient-4);
-  /* src/components/css/variables.css:253 */
-  --accent: var(--color-accent);
-  /* src/components/css/variables.css:254 */
-  --glow: var(--color-glow);
-  /* src/components/css/variables.css:255 */
-  /* src/components/css/variables.css:256 */
-  /* Legacy Color Aliases (for backward compatibility) */
-  /* src/components/css/variables.css:257 */
-  --whatsapp-color: var(--color-whatsapp);
-  /* src/components/css/variables.css:258 */
-  --gray-200: var(--color-gray-200);
-  /* src/components/css/variables.css:259 */
-  --gray-300: var(--color-gray-300);
-  /* src/components/css/variables.css:260 */
-  --gray-400: var(--color-gray-400);
-  /* src/components/css/variables.css:261 */
-  --gray-500: var(--color-gray-500);
-  /* src/components/css/variables.css:262 */
-  --gray-600: var(--color-gray-600);
-  /* src/components/css/variables.css:263 */
-  --gray-700: var(--color-gray-700);
-  /* src/components/css/variables.css:264 */
-  --gray-800: var(--color-gray-800);
-  /* src/components/css/variables.css:265 */
-  --blue-500: var(--color-blue-500);
-  /* src/components/css/variables.css:266 */
-  --blue-600: var(--color-blue-600);
-  /* src/components/css/variables.css:267 */
-  --slate-700: var(--color-slate-700);
-  /* src/components/css/variables.css:268 */
-  --slate-800: var(--color-slate-800);
-  /* src/components/css/variables.css:271 */
-  /* Gray Scale Colors */
-  /* --color-gray-200: rgb(229, 231, 235);
-  --color-gray-300: rgb(209, 213, 219);
-  --color-gray-400: rgb(156, 163, 175);
-  --color-gray-500: rgb(107, 114, 128);
-  --color-gray-600: rgb(75, 85, 99);
-  --color-gray-700: rgb(51, 65, 85);
-  --color-gray-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:279 */
-  /* src/components/css/variables.css:280 */
-  /* Blue Colors */
-  /* --color-blue-500: #3b82f6;
-  --color-blue-600: #2563eb; */
-  /* src/components/css/variables.css:283 */
-  /* src/components/css/variables.css:284 */
-  /* Slate Colors */
-  /* --color-slate-700: rgb(51, 65, 85);
-  --color-slate-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:287 */
-  /* src/components/css/variables.css:288 */
-  /* Red Colors (for errors, disconnect, etc.) */
-  /* --color-red-50: rgb(254, 242, 242);
-  --color-red-100: rgb(254, 226, 226);
-  --color-red-500: #ef4444;
-  --color-red-600: #dc2626; */
-  /* src/components/css/variables.css:293 */
-  /* src/components/css/variables.css:294 */
-  /* Green Colors (for success, active states) */
-  /* --color-green-50: rgb(240, 253, 244);
-  --color-green-100: rgb(220, 252, 231);
-  --color-green-500: #10b981;
-  --color-green-600: #059669; */
-  /* src/components/css/variables.css:299 */
-}
-
-/* src/components/css/variables.css:301 */
-
-/* Fallback for browsers that don't support color-mix */
-
-/* src/components/css/variables.css:302 */
-
-@supports not (color: color-mix(in srgb, #000 50%, #fff)) {
-  /* src/components/css/variables.css:303 */
-
-  :root {
-    /* src/components/css/variables.css:304 */
-    /* Derived Theme Colors Fallback */
-    /* src/components/css/variables.css:305 */
-    /* Primary hover: darker version of default primary color #000aaa */
-    /* src/components/css/variables.css:306 */
-    --chat-widget-primary-color-hover: #000991;
-    /* ~15% darker than #000aaa */
-    /* src/components/css/variables.css:307 */
-    /* src/components/css/variables.css:308 */
-    /* Gradient Colors Fallback */
-    /* src/components/css/variables.css:309 */
-    --color-gradient-1: #000aaa;
-    /* Default primary color */
-    /* src/components/css/variables.css:310 */
-    --color-gradient-2: #6c757d;
-    /* Default secondary color */
-    /* src/components/css/variables.css:311 */
-    --color-gradient-3: #6c757d;
-    /* src/components/css/variables.css:312 */
-    --color-gradient-4: #6c757d;
-    /* src/components/css/variables.css:313 */
-    --color-accent: #6c757d;
-    /* src/components/css/variables.css:314 */
-    --color-glow: rgba(0, 10, 170, 0.3);
-    /* src/components/css/variables.css:315 */
-    /* src/components/css/variables.css:316 */
-    /* Sleek View Colors Fallback */
-    /* src/components/css/variables.css:317 */
-    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
-    /* src/components/css/variables.css:318 */
-    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
-    /* src/components/css/variables.css:319 */
-    /* src/components/css/variables.css:320 */
-    /* Scrollbar Colors Fallback */
-    /* src/components/css/variables.css:321 */
-    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
-    /* src/components/css/variables.css:322 */
-    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
-    /* src/components/css/variables.css:323 */
-    /* src/components/css/variables.css:324 */
-    /* Legacy aliases */
-    /* src/components/css/variables.css:325 */
-    --gradient-1: var(--color-gradient-1);
-    /* src/components/css/variables.css:326 */
-    --gradient-2: var(--color-gradient-2);
-    /* src/components/css/variables.css:327 */
-    --gradient-3: var(--color-gradient-3);
-    /* src/components/css/variables.css:328 */
-    --gradient-4: var(--color-gradient-4);
-    /* src/components/css/variables.css:329 */
-    --accent: var(--color-accent);
-    /* src/components/css/variables.css:330 */
-    --glow: var(--color-glow);
-    /* src/components/css/variables.css:331 */
-    --sleek-main-bg: var(--color-sleek-main-bg);
-    /* src/components/css/variables.css:332 */
-    --sleek-main-border: var(--color-sleek-main-border);
-    /* src/components/css/variables.css:333 */
-    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
-    /* src/components/css/variables.css:334 */
-    --input-scrollbar-thumb-hover-color: var(--color-scrollbar-input-thumb-hover);
-    /* src/components/css/variables.css:335 */
-  }
-
-  /* src/components/css/variables.css:336 */
-}
-
-/* End of file: variables.css */
+/* End of file: voice_ai_bot_widget/style.css */
 `;
 console.log("web-component.tsx: Script start v1.0.41_02_02_2026");
 if (typeof document !== "undefined" && document.documentElement) {
@@ -130417,6 +130728,12 @@ const ChatWidgetWrapper = (props = {}) => {
     return typeof window !== "undefined" ? document.querySelector("spotinfo-chat") : null;
   };
   reactExports.useEffect(() => {
+    console.log("[ChatWidgetWrapper] MOUNTED");
+    return () => {
+      console.log("[ChatWidgetWrapper] UNMOUNTED");
+    };
+  }, []);
+  reactExports.useEffect(() => {
     const hostElement = getHostElement();
     if (!hostElement) return;
     const current = hostElement.getAttribute("data-open");
@@ -130458,7 +130775,19 @@ const ChatWidgetWrapper = (props = {}) => {
   const handleClose = reactExports.useCallback(() => {
     setIsOpen(false);
   }, []);
-  const { widgetConfig, metaConfig } = buildConfigs(props);
+  const { widgetConfig, metaConfig } = reactExports.useMemo(
+    () => buildConfigs(props),
+    [
+      props.apiKey,
+      props.clientId,
+      props.userId,
+      props.userJourney,
+      props.position,
+      props.viewType,
+      props.primaryColor,
+      props.chatMetaConfig != null ? JSON.stringify(props.chatMetaConfig) : ""
+    ]
+  );
   reactExports.useEffect(() => {
     applyCSSVariables(props.width, props.height, props.primaryColor);
   }, [props.width, props.height, props.primaryColor]);
@@ -130919,6 +131248,11 @@ class StyledChatWidget extends ChatWidgetWebComponent {
     __publicField(this, "_generatedUserId", null);
   }
   connectedCallback() {
+    var _a;
+    console.log("[StyledChatWidget] connectedCallback called", {
+      parentTag: (_a = this.parentNode) == null ? void 0 : _a.nodeName,
+      parentIsBody: this.parentNode === document.body
+    });
     const existingInstance = document.querySelector("spotinfo-chat");
     if (existingInstance && existingInstance !== this) {
       console.warn(
@@ -131045,11 +131379,10 @@ class StyledChatWidget extends ChatWidgetWebComponent {
       hostStyle.textContent = generateHostStyles(width, height, position2, rootButtonHeight, rootButtonWidth);
       document.head.appendChild(hostStyle);
     }
-    if (document.body && this.parentNode !== document.body) {
-      document.body.appendChild(this);
-    }
     new MutationObserver(() => {
-      if (!this.isConnected || this.parentNode !== document.body) {
+      const actuallyDetached = !this.isConnected;
+      if (actuallyDetached && document.body) {
+        console.log("[StyledChatWidget] MutationObserver: widget was detached, re-attaching to body");
         document.body.appendChild(this);
       }
     }).observe(document.body, { childList: true });
@@ -131068,6 +131401,11 @@ class StyledChatWidget extends ChatWidgetWebComponent {
       }
     };
     setTimeout(ensureSSEConnectionOnLoad, 1e3);
+  }
+  disconnectedCallback() {
+    const stack = new Error().stack;
+    console.log("[StyledChatWidget] disconnectedCallback called – element removed from DOM. Stack:", stack);
+    if (super.disconnectedCallback) super.disconnectedCallback();
   }
   attributeChangedCallback(name2, oldValue, newValue) {
     if (oldValue === newValue) return;
@@ -131190,16 +131528,20 @@ const _PushHookService = class _PushHookService {
     openWidgetInSleekView,
     closeWidget,
     isWidgetOpen,
-    position: position2 = DEFAULT_POSITION
+    position: position2 = DEFAULT_POSITION,
+    onHookActedOn
   }) {
     __publicField(this, "metaConfig");
     __publicField(this, "addMessageCallback");
     __publicField(this, "openWidgetInSleekViewCallback");
     __publicField(this, "closeWidgetCallback");
     __publicField(this, "isWidgetOpenCallback");
+    __publicField(this, "onHookActedOnCallback");
     // private eventSource: EventSource | null = null;
     __publicField(this, "position");
     __publicField(this, "popupCleanup", null);
+    /** True when a hook popup is visible and user has not yet clicked Open or Dismiss. Blocks showing another hook. */
+    __publicField(this, "hasPendingHookNotActedOn", false);
     __publicField(this, "reconnectTimeout", null);
     __publicField(this, "reconnectAttempts", 0);
     __publicField(this, "maxReconnectAttempts", 5);
@@ -131213,6 +131555,7 @@ const _PushHookService = class _PushHookService {
     this.openWidgetInSleekViewCallback = openWidgetInSleekView;
     this.closeWidgetCallback = closeWidget;
     this.isWidgetOpenCallback = isWidgetOpen;
+    this.onHookActedOnCallback = onHookActedOn;
     this.position = position2;
     if (!metaConfig.hostUrl) {
       console.warn(
@@ -131473,16 +131816,23 @@ const _PushHookService = class _PushHookService {
       );
       this.closeWidgetCallback();
       setTimeout(() => {
-        this.showPopup(messageContent);
+        this.showPopup(messageContent, "sse");
       }, 300);
     } else {
-      this.showPopup(messageContent);
+      this.showPopup(messageContent, "sse");
     }
   }
   /**
-   * Shows the popup with the message
+   * Shows the popup with the message.
+   * Does not show if a hook is already visible and the user has not acted on it (Open or Dismiss).
    */
-  showPopup(messageContent) {
+  showPopup(messageContent, source) {
+    if (this.hasPendingHookNotActedOn) {
+      console.log(
+        "[PushHookService] Not showing new hook – user has not acted on current hook (open or dismiss)."
+      );
+      return;
+    }
     const message = {
       id: crypto.randomUUID(),
       content: messageContent,
@@ -131494,16 +131844,23 @@ const _PushHookService = class _PushHookService {
     if (this.popupCleanup) {
       this.popupCleanup();
       this.popupCleanup = null;
+      this.hasPendingHookNotActedOn = false;
     }
+    this.hasPendingHookNotActedOn = true;
     this.popupCleanup = showMessagePopupUtil(
       message,
       this.position,
       {
         onOpenWidget: () => {
+          var _a;
+          this.hasPendingHookNotActedOn = false;
+          (_a = this.onHookActedOnCallback) == null ? void 0 : _a.call(this);
           console.log(
-            `[PushHookService] Opening widget from popup`
+            `[PushHookService] Opening widget from popup (source=${source})`
           );
-          this.callPushToLlmApi(message.content);
+          if (source === "sse" || source === "proactive_hook") {
+            this.callPushToLlmApi(message.content);
+          }
           this.openWidgetInSleekViewCallback();
           if (this.popupCleanup) {
             this.popupCleanup();
@@ -131511,8 +131868,11 @@ const _PushHookService = class _PushHookService {
           }
         },
         onClose: () => {
+          var _a;
+          this.hasPendingHookNotActedOn = false;
+          (_a = this.onHookActedOnCallback) == null ? void 0 : _a.call(this);
           console.log(
-            `[PushHookService] Popup closed`
+            `[PushHookService] Popup closed (source=${source})`
           );
           if (this.popupCleanup) {
             this.popupCleanup();
@@ -131521,8 +131881,19 @@ const _PushHookService = class _PushHookService {
         }
       },
       this.metaConfig.userId,
-      "sse"
+      source
     );
+  }
+  showProactiveHook(messageContent, reason) {
+    console.log("[PushHookService] Showing proactive hook", { reason });
+    if (this.isWidgetOpenCallback()) {
+      this.closeWidgetCallback();
+      setTimeout(() => {
+        this.showPopup(messageContent, "proactive_hook");
+      }, 300);
+      return;
+    }
+    this.showPopup(messageContent, "proactive_hook");
   }
   /**
    * Schedules a reconnection attempt
@@ -131565,6 +131936,7 @@ const _PushHookService = class _PushHookService {
       this.popupCleanup();
       this.popupCleanup = null;
     }
+    this.hasPendingHookNotActedOn = false;
     removeMessagePopupUtil();
   }
   /**
