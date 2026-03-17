@@ -36472,7 +36472,7 @@ var sa = (Xo = Bo[Wo] = new Yo$1(), function() {
   null != o$1 && o$1.addEventListener ? "complete" === o$1.readyState ? i2() : st(o$1, "DOMContentLoaded", i2, { capture: false }) : t && j.error("Browser doesn't support `document.addEventListener` so PostHog couldn't be initialized");
 }(), Xo);
 const base_url = "https://api.spotinfo.ai";
-const user_journey_path = void 0;
+const user_journey_path = "/api/v1/register_user_journey";
 const backend_event_endpoint = `${base_url}${user_journey_path}`;
 let isCapturePatched = false;
 let activeCollectionApiKeyForPatch = null;
@@ -36573,6 +36573,7 @@ const initPostHog = (postHogApiKey, clientId, distinctId, collectionApiKey) => {
           headers["X-Api-Key"] = activeCollectionApiKeyForPatch;
         }
         console.log("Sending event to backend:", shouldSendEventsToBackend);
+        console.log("backend_event_endpoint = ", backend_event_endpoint);
         fetch(backend_event_endpoint, {
           method: "POST",
           headers,
@@ -37744,7 +37745,7 @@ const _PersonalizedHookService = class _PersonalizedHookService {
     this.addMessageCallback = addMessage;
     this.openWidgetInSleekViewCallback = openWidgetInSleekView;
     this.position = position2;
-    const path = void 0;
+    const path = "/api/v1/get_user_journey_hook";
     this.hookEndpoint = `${metaConfig.hostUrl}${path}`;
     if (!metaConfig.hostUrl && metaConfig.clientId) {
       console.warn(
@@ -37785,7 +37786,7 @@ const _PersonalizedHookService = class _PersonalizedHookService {
       if (position2) {
         this.position = position2;
       }
-      this.hookEndpoint = `${metaConfig.hostUrl}${void 0}`;
+      this.hookEndpoint = `${metaConfig.hostUrl}${"/api/v1/get_user_journey_hook"}`;
       if (this.shouldStartPolling()) {
         console.log(
           `[PersonalizedHookService - ${this.metaConfig.userId}] Config changed, conditions met, starting initial delay`
@@ -111024,7 +111025,7 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Mon Mar 16 17:13:35 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Tue Mar 17 20:18:20 IST 2026 */
 
 /* Start of file: components/css/AiAgentAnimation.css */
 
