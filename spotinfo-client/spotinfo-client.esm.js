@@ -73,7 +73,7 @@ class Kt extends ze {
     super(e, "VOICE_CONNECTION_ERROR", void 0, t), this.name = "VoiceConnectionError", Object.setPrototypeOf(this, Kt.prototype);
   }
 }
-const fc = "https://api.spotinfo.ai", pc = "https://voice2.spotinfo.ai";
+const fc = "https://api.spotinfo.ai", pc = "https://voice.spotinfo.ai";
 function Be() {
   return fc;
 }

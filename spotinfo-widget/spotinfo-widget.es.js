@@ -31726,7 +31726,7 @@ const BOT_NAME = "AI Assistant";
 const GREETINGS = defaultGreetings;
 const META_HOST_URL = "https://api.spotinfo.ai";
 const META_API_KEY = "";
-const META_VOICE_HOST_URL = "https://voice2.spotinfo.ai";
+const META_VOICE_HOST_URL = "https://voice.spotinfo.ai";
 const META_CLIENT_ID_DEFAULT = "";
 const META_USER_EMAIL = "";
 const META_USER_COMPANY_NAME = "";
@@ -111025,7 +111025,7 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Tue Mar 17 20:18:20 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Fri Mar 20 22:25:11 IST 2026 */
 
 /* Start of file: components/css/AiAgentAnimation.css */
 
