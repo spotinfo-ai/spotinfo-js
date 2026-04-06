@@ -1,0 +1,132 @@
+<!-- spotinfo_widget.html (your web asset, NOT in Flutter package) -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Spotinfo Widget</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: transparent;
+        }
+
+        spotinfo-chat {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        window.spotinfoConfigFromFlutter = window.spotinfoConfigFromFlutter || {};
+
+        function applyConfigToWidget(widgetElement, config) {
+            const setAttr = (attrName, value) => {
+                if (value !== undefined && value !== null) {
+                    const finalValue = (typeof value === 'boolean') ? String(value) : value;
+                    widgetElement.setAttribute(attrName, finalValue);
+                }
+            };
+
+            setAttr('api-key', config['api-key']);
+            setAttr('root-button-height', config['root-button-height']);
+            setAttr('root-button-width', config['root-button-width']);
+            setAttr('root-button-shape', config['root-button-shape']);
+            setAttr('root-button-logo', config['root-button-logo']);
+            setAttr('root-logo-height', config['root-logo-height']);
+            setAttr('root-logo-width', config['root-logo-width']);
+            setAttr('view-type', config['view-type']);
+            setAttr('width', config['width']);
+            setAttr('height', config['height']);
+            setAttr('primary-color', config['primary-color']);
+            setAttr('secondary-color', config['secondary-color']);
+            setAttr('message-text-color', config['message-text-color']);
+            setAttr('button-content-color', config['button-content-color']);
+            setAttr('message-font-size', config['message-font-size']);
+            setAttr('placeholder', config['placeholder']);
+            setAttr('user-journey', config['user-journey']);
+            setAttr('allow-voice', config['allow-voice']);
+            setAttr('use-whatsapp', config['use-whatsapp']);
+            setAttr('whatsapp-greeting', config['whatsapp-greeting']);
+
+            if (config['proactive-engagement']) {
+                const paConfig = typeof config['proactive-engagement'] === 'string' ? config['proactive-engagement'] : JSON.stringify(config['proactive-engagement']);
+                widgetElement.setAttribute('proactive-engagement', paConfig);
+            }
+        }
+
+        window.initSpotinfoWidget = function (configFromFlutter) {
+            Object.assign(window.spotinfoConfigFromFlutter, configFromFlutter);
+            var widget = document.querySelector('spotinfo-chat');
+            if (widget) {
+                applyConfigToWidget(widget, window.spotinfoConfigFromFlutter);
+            }
+        };
+
+        function loadScript(src) {
+            return new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = src;
+                script.async = true;
+                script.onload = resolve;
+                script.onerror = reject;
+                document.head.appendChild(script);
+            });
+        }
+
+        // IMPORTANT: Point these to YOUR CLOUDFLARE WORKER DOMAIN!
+        // This ensures your Worker's versioning and caching logic is applied.
+        const umdScriptUrl = 'https://www.spotinfo.ai/js/spotinfo-widget.umd.js';
+        // Example: /spotinfo_widget.html and /spotinfo-widget.umd.js on same worker domain
+        // If you need to load other scripts from your worker, add them here:
+
+        loadScript(umdScriptUrl)
+            .then(() => {
+                console.log('spotinfo-widget.umd.js loaded via Worker.');
+                var widget = document.querySelector('spotinfo-chat');
+                if (widget) {
+                    applyConfigToWidget(widget, window.spotinfoConfigFromFlutter);
+                }
+            })
+            .catch(error => console.error('Failed to load UMD script via Worker:', error));
+
+        function startObserver() {
+            var observer = new MutationObserver(function (mutations) {
+                mutations.forEach(function (m) {
+                    for (var i = 0; i < m.addedNodes.length; i++) {
+                        var node = m.addedNodes[i];
+                        if (node.nodeType === 1) {
+                            if (node.tagName && node.tagName.toLowerCase() === 'spotinfo-chat') {
+                                applyConfigToWidget(node, window.spotinfoConfigFromFlutter);
+                            }
+                            if (node.querySelectorAll) {
+                                var list = node.querySelectorAll('spotinfo-chat');
+                                for (var j = 0; j < list.length; j++) applyConfigToWidget(list[j], window.spotinfoConfigFromFlutter);
+                            }
+                        }
+                    }
+                });
+            });
+            observer.observe(document.body, { childList: true, subtree: true });
+            console.log('MutationObserver started for spotinfo-chat elements.');
+        }
+
+        document.addEventListener('DOMContentLoaded', startObserver);
+
+    </script>
+
+    <spotinfo-chat></spotinfo-chat>
+
+</body>
+
+</html>
