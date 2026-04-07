@@ -34,7 +34,6 @@ class MyApp extends StatelessWidget {
             height: 580, // Example size for the WebView container
             child: SpotinfoWidget(
               // apiKey: 'YOUR_EXAMPLE_API_KEY_HERE', // mandatory
-              apiKey: "siakqq4nkogd3ehyeyxh",
               rootButtonShape: "circular", // Optional
               rootButtonHeight: "72px", // Optional
               rootButtonWidth: "72px", // Optional
