@@ -202,9 +202,11 @@ packages:
   spotinfo_flutter_plugin:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      path: spotinfo_flutter_plugin
+      ref: "v2.0.0"
+      resolved-ref: eb07d48f6f59a27490a9b7ab9928e584aeaddadf
+      url: "https://github.com/spotinfo-ai/spotinfo-js.git"
+    source: git
     version: "0.0.1"
   stack_trace:
     dependency: transitive
@@ -279,7 +281,7 @@ packages:
     source: hosted
     version: "3.1.0"
   webview_flutter:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: webview_flutter
       sha256: a3da219916aba44947d3a5478b1927876a09781174b5a2b67fa5be0555154bf9

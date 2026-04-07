@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart'; // <--- NEW: Import for defaultTargetPlatform
+import 'package:flutter/foundation.dart';
 
-// Import your spotinfo plugin
+// Import spotinfo plugin
 import 'package:spotinfo_flutter_plugin/spotinfo_flutter_plugin.dart';
 
 void main() {
@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
             height: 580, // Example size for the WebView container
             child: SpotinfoWidget(
               // apiKey: 'YOUR_EXAMPLE_API_KEY_HERE', // mandatory
+              apiKey: "siakqq4nkogd3ehyeyxh",
               rootButtonShape: "circular", // Optional
               rootButtonHeight: "72px", // Optional
               rootButtonWidth: "72px", // Optional
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
               buttonContentColor: '#ffffff', // Optional
               messageFontSize: '14px', // Optional
               placeholder: 'Ask me anything ...', // Optional
-              userJourney: false, // keep flase for app
+              userJourney: false, // keep false for app
               allowVoice: false, // set to true if you want to give voice option
               useWhatsapp: false, // set to true if you want to give whatsapp option
             ),
