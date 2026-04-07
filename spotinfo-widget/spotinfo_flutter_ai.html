@@ -56,8 +56,6 @@
             setAttr('placeholder', config['placeholder']);
             setAttr('user-journey', config['user-journey']);
             setAttr('allow-voice', config['allow-voice']);
-            setAttr('use-whatsapp', config['use-whatsapp']);
-            setAttr('whatsapp-greeting', config['whatsapp-greeting']);
 
             if (config['proactive-engagement']) {
                 const paConfig = typeof config['proactive-engagement'] === 'string' ? config['proactive-engagement'] : JSON.stringify(config['proactive-engagement']);
@@ -84,11 +82,8 @@
             });
         }
 
-        // IMPORTANT: Point these to YOUR CLOUDFLARE WORKER DOMAIN!
         // This ensures your Worker's versioning and caching logic is applied.
         const umdScriptUrl = 'https://www.spotinfo.ai/js/spotinfo-widget.umd.js';
-        // Example: /spotinfo_widget.html and /spotinfo-widget.umd.js on same worker domain
-        // If you need to load other scripts from your worker, add them here:
 
         loadScript(umdScriptUrl)
             .then(() => {
