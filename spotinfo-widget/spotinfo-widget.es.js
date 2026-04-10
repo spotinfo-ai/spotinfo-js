@@ -1,4 +1,4 @@
-!function(){"use strict";try{if("undefined"!=typeof document){var e=document.createElement("style");e.appendChild(document.createTextNode(':root{--message-popup-image-width: var(--engagement-hook-image-width);--message-popup-image-height: var(--engagement-hook-image-height);--message-popup-offset: 1rem}.message-popup-figurine{position:fixed;width:var(--message-popup-image-width);height:var(--message-popup-image-height);z-index:2147483646;-o-object-fit:cover;object-fit:cover;-o-object-position:center top;object-position:center top;pointer-events:none}.message-popup-figurine-bottom-left{bottom:var(--message-popup-offset);left:var(--message-popup-offset);top:auto;right:auto}.message-popup-figurine-bottom-right{bottom:var(--message-popup-offset);right:var(--message-popup-offset);top:auto;left:auto}.message-popup-figurine-top-left{top:var(--message-popup-offset);left:var(--message-popup-offset);bottom:auto;right:auto}.message-popup-figurine-top-right{top:var(--message-popup-offset);right:var(--message-popup-offset);bottom:auto;left:auto}.message-popup-container{position:fixed;z-index:2147483647;pointer-events:auto}.message-popup-container-bottom-left{bottom:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);left:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);top:auto;right:auto}.message-popup-container-bottom-right{bottom:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);right:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);top:auto;left:auto}.message-popup-container-top-left{top:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);left:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);bottom:auto;right:auto}.message-popup-container-top-right{top:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);right:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);bottom:auto;left:auto}.message-popup-content{padding:8px;background-color:var(--message-bubble-background-color);border-radius:12px;box-shadow:0 4px 12px #0000001a;min-width:220px;max-width:320px;display:flex;align-items:center;cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;font-size:var(--message-font-size);color:var(--message-text-color);position:relative}.message-popup-text-container{flex:1}.message-popup-text{font-size:var(--message-font-size);color:var(--message-text-color);margin:0;word-break:break-word}.message-popup-close-button{position:absolute;top:-10px;right:-10px;width:var(--button-size-secondary);height:var(--button-size-secondary);border-radius:9999px;border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 50%,white);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white);color:var(--color-button-text);box-shadow:0 4px 14px color-mix(in srgb,var(--glow) 60%,transparent),0 2px 6px color-mix(in srgb,var(--chat-widget-primary-color) 18%,transparent);cursor:pointer;overflow:hidden;z-index:20;padding:0;margin-left:0;pointer-events:auto;display:flex;align-items:center;justify-content:center;transition:all .2s ease}.message-popup-close-button:hover{transform:translateY(-1px) scale(1.05);box-shadow:0 8px 20px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent),0 4px 12px color-mix(in srgb,var(--chat-widget-primary-color) 20%,transparent);background:color-mix(in srgb,var(--chat-widget-primary-color-hover) 80%,white)}.message-popup-close-button:focus{outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--glow) 80%,transparent),0 8px 22px color-mix(in srgb,var(--chat-widget-primary-color) 32%,transparent);transform:translateY(-1px) scale(1.03)}.message-popup-close-button:active{transform:translateY(0) scale(.97);box-shadow:0 3px 10px color-mix(in srgb,var(--chat-widget-primary-color) 24%,transparent)}.message-popup-close-button svg{width:calc(var(--button-size-secondary) * .8);height:calc(var(--button-size-secondary) * .8);display:block;flex-shrink:0}.chat-header-container{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--chat-widget-primary-color) 0%,color-mix(in srgb,var(--chat-widget-primary-color) 90%,var(--chat-widget-primary-color-hover) 10%) 100%);transition:all .3s ease}.chat-header-container:before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--chat-widget-primary-color) 85%,var(--chat-widget-secondary-color) 15%),transparent);transition:left .6s ease}.chat-header-container:hover:before{left:100%}.chat-header-container:hover{box-shadow:0 6px 20px color-mix(in srgb,var(--chat-widget-secondary-color) 60%,transparent);transform:translateY(-1px)}.chat-header-content{position:relative;z-index:10;margin-left:auto;margin-right:auto;display:flex;max-width:32rem;align-items:center;justify-content:space-between}.chat-header-left{display:flex;align-items:center;gap:.5rem;padding-left:.5rem;transition:transform .2s ease}.chat-header-left:hover{transform:scale(1.02)}.chat-header-text-container{display:flex;flex-direction:column}.chat-header-text{font-size:1.125rem;line-height:1.75rem;font-weight:600;color:var(--chat-widget-button-content-color);text-shadow:0 2px 4px rgba(0,0,0,.2);transition:all .2s ease}.chat-header-subtitle{font-size:.875rem;line-height:1.25rem;color:var(--chat-widget-button-content-color);text-shadow:0 1px 2px rgba(0,0,0,.1);transition:all .2s ease}.chat-header-logo{border-radius:.5rem;transition:all .3s ease;filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))}.chat-header-logo:hover{transform:scale(1.1) rotate(5deg);filter:drop-shadow(0 4px 8px rgba(0,0,0,.2))}.chat-header-logo{display:block;flex-shrink:0;-o-object-fit:contain;object-fit:contain;width:36px;height:36px;min-width:32px;min-height:32px;aspect-ratio:1;border-radius:6px}.chat-header-actions{display:flex;align-items:center;gap:.25rem}.chat-header-new-chat-button{color:var(--chat-widget-button-content-color);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;border-radius:.75rem;padding:.375rem}.chat-header-new-chat-button:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000);--tw-ring-color: rgb(255 255 255 / .3)}.chat-header-new-chat-button{min-width:32px;min-height:32px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:.5px solid;border-color:var(--chat-widget-secondary-color);color:var(--chat-widget-button-content-color)}.chat-header-new-chat-button:hover{color:var(--chat-widget-button-content-color)}.chat-header-new-chat-button:before{content:"";position:absolute;top:50%;left:50%;width:0;height:0;background:#ffffff1a;border-radius:50%;transform:translate(-50%,-50%);transition:width .3s ease,height .3s ease}.chat-header-new-chat-button:hover:before{width:80px;height:80px}.chat-header-new-chat-button:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 4px 12px #0003}.chat-header-new-chat-button:active{transform:translateY(0) scale(.98)}.chat-header-new-chat-icon{position:relative;z-index:10;height:1.25rem;width:1.25rem;stroke-width:2.5;transition:transform .2s ease}.chat-header-new-chat-button:hover .chat-header-new-chat-icon{transform:rotate(90deg)}.chat-header-close-button{color:var(--chat-widget-button-content-color);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;border-radius:.75rem;padding:.375rem}.chat-header-close-button:hover{background-color:#ef444433}.chat-header-close-button:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000);--tw-ring-color: rgb(252 165 165 / .5)}.chat-header-close-button{min-width:32px;min-height:32px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:.5px solid;border-color:var(--chat-widget-secondary-color);color:var(--chat-widget-button-content-color)}.chat-header-close-button:hover{color:var(--chat-widget-button-content-color)}.chat-header-close-button:before{content:"";position:absolute;top:50%;left:50%;width:0;height:0;background:#ef444433;border-radius:50%;transform:translate(-50%,-50%);transition:width .3s ease,height .3s ease}.chat-header-close-button:hover:before{width:80px;height:80px}.chat-header-close-button:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 4px 12px #ef44444d}.chat-header-close-button:active{transform:translateY(0) scale(.98)}.chat-header-close-icon{position:relative;z-index:10;height:1.25rem;width:1.25rem;stroke-width:2.5;transition:transform .2s ease}.chat-header-close-button:hover .chat-header-close-icon{transform:rotate(90deg)}@media (max-width: 480px){.chat-header-content{padding-left:.5rem;padding-right:.5rem}.chat-header-new-chat-button,.chat-header-close-button{min-width:32px;min-height:32px}.chat-header-new-chat-icon,.chat-header-close-icon{height:1.25rem;width:1.25rem}}.chat-message-container{position:absolute;top:0;right:0;bottom:0;left:0;overflow-y:auto;overflow-x:hidden;scroll-behavior:smooth;padding:1rem;scrollbar-width:var(--message-scrollbar-width);scrollbar-color:var(--color-scrollbar-message-thumb-theme) var(--color-scrollbar-message-track)}.chat-message-container:hover{scrollbar-color:var(--color-scrollbar-message-thumb-theme) var(--color-scrollbar-message-track)}.chat-messages-scroll-container{scroll-behavior:smooth;scrollbar-width:var(--message-scrollbar-width);scrollbar-color:var(--color-scrollbar-message-thumb-theme) var(--color-scrollbar-message-track);-webkit-overflow-scrolling:touch;background:var(--chat-widget-primary-color)}.chat-messages-scroll-container::-webkit-scrollbar{width:var(--message-scrollbar-width)}.chat-messages-scroll-container::-webkit-scrollbar-track{background:transparent;border-radius:3px}.chat-messages-scroll-container::-webkit-scrollbar-thumb{background:var( --chat-widget-button-content-color, var(--chat-widget-secondary-color) );border-radius:3px;-webkit-transition:background-color .2s ease;transition:background-color .2s ease}.chat-messages-scroll-container::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--chat-widget-button-content-color, var(--chat-widget-secondary-color)) 80%,var(--chat-widget-primary-color))}.chat-message-bubble-container{display:flex;flex-direction:column}.chat-message-bubble-wrapper{margin-bottom:.75rem;display:flex;align-items:flex-start}.chat-message-bubble-wrapper-user{flex-direction:row-reverse}.chat-message-bubble-wrapper-user .chat-message-content-container{align-items:flex-end}.chat-message-bubble-wrapper-bot{flex-direction:row}.chat-message-avatar-container{flex-shrink:0;color:var(--message-bubble-icon-color)}.chat-message-user-icon{display:flex;height:2rem;width:2rem;align-items:center;justify-content:center;border-radius:9999px;color:var(--message-bubble-icon-color)}.chat-message-user-icon-inner{font-size:1.125rem;line-height:1.75rem;color:inherit}.chat-message-bot-icon{height:2rem;width:2rem;-o-object-fit:contain;object-fit:contain;color:var(--message-bubble-icon-color)}.chat-message-user-avatar{height:2rem;width:2rem;border-radius:9999px;-o-object-fit:cover;object-fit:cover}.chat-message-content-container{display:flex;flex-direction:column;min-width:50px}.chat-message-content-with-avatar,.chat-message-content-without-avatar{max-width:90%}.chat-message-bubble{border-radius:.75rem;padding:.5rem 1rem;word-wrap:break-word;overflow-wrap:break-word;width:-moz-fit-content;width:fit-content;max-width:100%;background:var(--message-bubble-background-color);color:var(--message-text-color)}.chat-message-bubble-user{margin-left:auto;margin-right:.25rem;border-bottom-right-radius:.125rem}.chat-message-bubble-bot{border-bottom-left-radius:.125rem}.chat-message-markdown{color:var(--tw-prose-body);max-width:65ch}.chat-message-markdown :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em;margin-bottom:1.25em}.chat-message-markdown :where([class~=lead]):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-lead);font-size:1.25em;line-height:1.6;margin-top:1.2em;margin-bottom:1.2em}.chat-message-markdown :where(a):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-links);text-decoration:underline;font-weight:500}.chat-message-markdown :where(strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-bold);font-weight:600}.chat-message-markdown :where(a strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(blockquote strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(thead th strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(ol):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:decimal;margin-top:1.25em;margin-bottom:1.25em;padding-inline-start:1.625em}.chat-message-markdown :where(ol[type=A]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-alpha}.chat-message-markdown :where(ol[type=a]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-alpha}.chat-message-markdown :where(ol[type=A s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-alpha}.chat-message-markdown :where(ol[type=a s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-alpha}.chat-message-markdown :where(ol[type=I]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-roman}.chat-message-markdown :where(ol[type=i]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-roman}.chat-message-markdown :where(ol[type=I s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-roman}.chat-message-markdown :where(ol[type=i s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-roman}.chat-message-markdown :where(ol[type="1"]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:decimal}.chat-message-markdown :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:disc;margin-top:1.25em;margin-bottom:1.25em;padding-inline-start:1.625em}.chat-message-markdown :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker{font-weight:400;color:var(--tw-prose-counters)}.chat-message-markdown :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker{color:var(--tw-prose-bullets)}.chat-message-markdown :where(dt):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;margin-top:1.25em}.chat-message-markdown :where(hr):not(:where([class~=not-prose],[class~=not-prose] *)){border-color:var(--tw-prose-hr);border-top-width:1px;margin-top:3em;margin-bottom:3em}.chat-message-markdown :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:500;font-style:italic;color:var(--tw-prose-quotes);border-inline-start-width:.25rem;border-inline-start-color:var(--tw-prose-quote-borders);quotes:"“""”""‘""’";margin-top:1.6em;margin-bottom:1.6em;padding-inline-start:1em}.chat-message-markdown :where(blockquote p:first-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:open-quote}.chat-message-markdown :where(blockquote p:last-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:close-quote}.chat-message-markdown :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:800;font-size:2.25em;margin-top:0;margin-bottom:.8888889em;line-height:1.1111111}.chat-message-markdown :where(h1 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:900;color:inherit}.chat-message-markdown :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:700;font-size:1.5em;margin-top:2em;margin-bottom:1em;line-height:1.3333333}.chat-message-markdown :where(h2 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:800;color:inherit}.chat-message-markdown :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;font-size:1.25em;margin-top:1.6em;margin-bottom:.6em;line-height:1.6}.chat-message-markdown :where(h3 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:700;color:inherit}.chat-message-markdown :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;margin-top:1.5em;margin-bottom:.5em;line-height:1.5}.chat-message-markdown :where(h4 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:700;color:inherit}.chat-message-markdown :where(img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(picture):not(:where([class~=not-prose],[class~=not-prose] *)){display:block;margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(video):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(kbd):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:500;font-family:inherit;color:var(--tw-prose-kbd);box-shadow:0 0 0 1px rgb(var(--tw-prose-kbd-shadows) / 10%),0 3px rgb(var(--tw-prose-kbd-shadows) / 10%);font-size:.875em;border-radius:.3125rem;padding-top:.1875em;padding-inline-end:.375em;padding-bottom:.1875em;padding-inline-start:.375em}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-code);font-weight:600;font-size:.875em}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:"`"}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:"`"}.chat-message-markdown :where(a code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(h1 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(h2 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-size:.875em}.chat-message-markdown :where(h3 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-size:.9em}.chat-message-markdown :where(h4 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(blockquote code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(thead th code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(pre):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-pre-code);background-color:var(--tw-prose-pre-bg);overflow-x:auto;font-weight:400;font-size:.875em;line-height:1.7142857;margin-top:1.7142857em;margin-bottom:1.7142857em;border-radius:.375rem;padding-top:.8571429em;padding-inline-end:1.1428571em;padding-bottom:.8571429em;padding-inline-start:1.1428571em}.chat-message-markdown :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)){background-color:transparent;border-width:0;border-radius:0;padding:0;font-weight:inherit;color:inherit;font-size:inherit;font-family:inherit;line-height:inherit}.chat-message-markdown :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:none}.chat-message-markdown :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:none}.chat-message-markdown :where(table):not(:where([class~=not-prose],[class~=not-prose] *)){width:100%;table-layout:auto;margin-top:2em;margin-bottom:2em;font-size:.875em;line-height:1.7142857}.chat-message-markdown :where(thead):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:1px;border-bottom-color:var(--tw-prose-th-borders)}.chat-message-markdown :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;vertical-align:bottom;padding-inline-end:.5714286em;padding-bottom:.5714286em;padding-inline-start:.5714286em}.chat-message-markdown :where(tbody tr):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:1px;border-bottom-color:var(--tw-prose-td-borders)}.chat-message-markdown :where(tbody tr:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:0}.chat-message-markdown :where(tbody td):not(:where([class~=not-prose],[class~=not-prose] *)){vertical-align:baseline}.chat-message-markdown :where(tfoot):not(:where([class~=not-prose],[class~=not-prose] *)){border-top-width:1px;border-top-color:var(--tw-prose-th-borders)}.chat-message-markdown :where(tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){vertical-align:top}.chat-message-markdown :where(th,td):not(:where([class~=not-prose],[class~=not-prose] *)){text-align:start}.chat-message-markdown :where(figcaption):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-captions);font-size:.875em;line-height:1.4285714;margin-top:.8571429em}.chat-message-markdown{--tw-prose-body: #374151;--tw-prose-headings: #111827;--tw-prose-lead: #4b5563;--tw-prose-links: #111827;--tw-prose-bold: #111827;--tw-prose-counters: #6b7280;--tw-prose-bullets: #d1d5db;--tw-prose-hr: #e5e7eb;--tw-prose-quotes: #111827;--tw-prose-quote-borders: #e5e7eb;--tw-prose-captions: #6b7280;--tw-prose-kbd: #111827;--tw-prose-kbd-shadows: 17 24 39;--tw-prose-code: #111827;--tw-prose-pre-code: #e5e7eb;--tw-prose-pre-bg: #1f2937;--tw-prose-th-borders: #d1d5db;--tw-prose-td-borders: #e5e7eb;--tw-prose-invert-body: #d1d5db;--tw-prose-invert-headings: #fff;--tw-prose-invert-lead: #9ca3af;--tw-prose-invert-links: #fff;--tw-prose-invert-bold: #fff;--tw-prose-invert-counters: #9ca3af;--tw-prose-invert-bullets: #4b5563;--tw-prose-invert-hr: #374151;--tw-prose-invert-quotes: #f3f4f6;--tw-prose-invert-quote-borders: #374151;--tw-prose-invert-captions: #9ca3af;--tw-prose-invert-kbd: #fff;--tw-prose-invert-kbd-shadows: 255 255 255;--tw-prose-invert-code: #fff;--tw-prose-invert-pre-code: #d1d5db;--tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);--tw-prose-invert-th-borders: #4b5563;--tw-prose-invert-td-borders: #374151;font-size:1rem;line-height:1.75}.chat-message-markdown :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5em;margin-bottom:.5em}.chat-message-markdown :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.375em}.chat-message-markdown :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.375em}.chat-message-markdown :where(.prose>ul>li p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.75em;margin-bottom:.75em}.chat-message-markdown :where(.prose>ul>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em}.chat-message-markdown :where(.prose>ul>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em}.chat-message-markdown :where(.prose>ol>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em}.chat-message-markdown :where(.prose>ol>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em}.chat-message-markdown :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.75em;margin-bottom:.75em}.chat-message-markdown :where(dl):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em;margin-bottom:1.25em}.chat-message-markdown :where(dd):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5em;padding-inline-start:1.625em}.chat-message-markdown :where(tbody td,tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){padding-top:.5714286em;padding-inline-end:.5714286em;padding-bottom:.5714286em;padding-inline-start:.5714286em}.chat-message-markdown :where(figure):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(.prose>:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(.prose>:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown{font-size:.875rem;line-height:1.7142857}.chat-message-markdown :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em}.chat-message-markdown :where([class~=lead]):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.2857143em;line-height:1.5555556;margin-top:.8888889em;margin-bottom:.8888889em}.chat-message-markdown :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.3333333em;margin-bottom:1.3333333em;padding-inline-start:1.1111111em}.chat-message-markdown :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:2.1428571em;margin-top:0;margin-bottom:.8em;line-height:1.2}.chat-message-markdown :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.4285714em;margin-top:1.6em;margin-bottom:.8em;line-height:1.4}.chat-message-markdown :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.2857143em;margin-top:1.5555556em;margin-bottom:.4444444em;line-height:1.5555556}.chat-message-markdown :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.4285714em;margin-bottom:.5714286em;line-height:1.4285714}.chat-message-markdown :where(img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(picture):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(picture>img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:0}.chat-message-markdown :where(video):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(kbd):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;border-radius:.3125rem;padding-top:.1428571em;padding-inline-end:.3571429em;padding-bottom:.1428571em;padding-inline-start:.3571429em}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em}.chat-message-markdown :where(h2 code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.9em}.chat-message-markdown :where(h3 code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8888889em}.chat-message-markdown :where(pre):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;line-height:1.6666667;margin-top:1.6666667em;margin-bottom:1.6666667em;border-radius:.25rem;padding-top:.6666667em;padding-inline-end:1em;padding-bottom:.6666667em;padding-inline-start:1em}.chat-message-markdown :where(ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em;padding-inline-start:1.5714286em}.chat-message-markdown :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em;padding-inline-start:1.5714286em}.chat-message-markdown :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.2857143em;margin-bottom:.2857143em}.chat-message-markdown :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.4285714em}.chat-message-markdown :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.4285714em}.chat-message-markdown :where(.prose-sm>ul>li p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5714286em;margin-bottom:.5714286em}.chat-message-markdown :where(.prose-sm>ul>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em}.chat-message-markdown :where(.prose-sm>ul>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.1428571em}.chat-message-markdown :where(.prose-sm>ol>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em}.chat-message-markdown :where(.prose-sm>ol>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.1428571em}.chat-message-markdown :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5714286em;margin-bottom:.5714286em}.chat-message-markdown :where(dl):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em}.chat-message-markdown :where(dt):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em}.chat-message-markdown :where(dd):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.2857143em;padding-inline-start:1.5714286em}.chat-message-markdown :where(hr):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2.8571429em;margin-bottom:2.8571429em}.chat-message-markdown :where(hr+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(h2+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(h3+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(h4+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(table):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;line-height:1.5}.chat-message-markdown :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:1em;padding-bottom:.6666667em;padding-inline-start:1em}.chat-message-markdown :where(thead th:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.chat-message-markdown :where(thead th:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.chat-message-markdown :where(tbody td,tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){padding-top:.6666667em;padding-inline-end:1em;padding-bottom:.6666667em;padding-inline-start:1em}.chat-message-markdown :where(tbody td:first-child,tfoot td:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.chat-message-markdown :where(tbody td:last-child,tfoot td:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.chat-message-markdown :where(figure):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(figure>*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:0}.chat-message-markdown :where(figcaption):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;line-height:1.3333333;margin-top:.6666667em}.chat-message-markdown :where(.prose-sm>:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(.prose-sm>:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown{max-width:none;text-align:left;color:var(--message-text-color)}.chat-message-markdown :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:.5em}.chat-message-markdown :where(p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown :where(ul,ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:.5em;padding-left:1rem}.chat-message-markdown :where(ul:last-child,ol:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:.25em}.chat-message-markdown :where(li:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-paragraph{margin-bottom:.5rem;text-align:left}.chat-message-paragraph:last-child{margin-bottom:0}.chat-message-unordered-list{margin-bottom:.5rem;list-style-type:disc;padding-left:1rem;text-align:left}.chat-message-unordered-list:last-child{margin-bottom:0}.chat-message-ordered-list{margin-bottom:.5rem;list-style-type:decimal;padding-left:1rem;text-align:left}.chat-message-ordered-list:last-child{margin-bottom:0}.chat-message-list-item{margin-bottom:.25rem;text-align:left}.chat-message-list-item:last-child{margin-bottom:0}.chat-message-code-block{margin-bottom:.5rem;overflow-x:auto;border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:0;text-align:left}.chat-message-code-block:last-child{margin-bottom:0}@media (prefers-color-scheme: dark){.chat-message-code-block{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-link{text-align:left;--tw-text-opacity: 1;color:rgb(37 99 235 / var(--tw-text-opacity, 1));text-decoration-line:underline}.chat-message-link:hover{--tw-text-opacity: 1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.chat-message-blockquote{margin-bottom:.5rem;border-left-width:4px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding-left:1rem;text-align:left;font-style:italic}.chat-message-blockquote:last-child{margin-bottom:0}.chat-message-heading-1{margin-bottom:.5rem;text-align:left;font-size:1.25rem;line-height:1.75rem;font-weight:700}.chat-message-heading-1:last-child{margin-bottom:0}.chat-message-heading-2{margin-bottom:.5rem;text-align:left;font-size:1.125rem;line-height:1.75rem;font-weight:700}.chat-message-heading-2:last-child{margin-bottom:0}.chat-message-heading-3{margin-bottom:.5rem;text-align:left;font-size:1rem;line-height:1.5rem;font-weight:700}.chat-message-heading-3:last-child{margin-bottom:0}.chat-message-heading-4{margin-bottom:.5rem;text-align:left;font-size:.875rem;line-height:1.25rem;font-weight:700}.chat-message-heading-4:last-child{margin-bottom:0}.chat-message-table-container{margin-bottom:.5rem;overflow-x:auto}.chat-message-table-container:last-child{margin-bottom:0}.chat-message-table{min-width:100%}.chat-message-table>:not([hidden])~:not([hidden]){--tw-divide-y-reverse: 0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse));--tw-divide-opacity: 1;border-color:rgb(229 231 235 / var(--tw-divide-opacity, 1))}.chat-message-table{text-align:left}.chat-message-table-header{--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem 1rem;text-align:left}.chat-message-table-cell{border-top-width:1px;padding:.5rem 1rem;text-align:left}.chat-message-inline-code{border-radius:.25rem;padding:.25rem}.chat-message-markdown-content .markdown-paragraph{text-align:left}.chat-message-markdown-content .markdown-code-block{overflow-x:auto;border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-code-block{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-code-block{font-size:11px;border:1px solid rgba(0,0,0,.1)}.chat-message-markdown-content .markdown-inline-code{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.125rem .25rem;font-size:.75rem;line-height:1rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-inline-code{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-inline-code{font-family:Monaco,Menlo,Ubuntu Mono,monospace}.chat-message-markdown-content .markdown-link{--tw-text-opacity: 1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.chat-message-markdown-content .markdown-link:hover{text-decoration-line:underline}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-link{--tw-text-opacity: 1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}}.chat-message-markdown-content .markdown-link{text-decoration:none}.chat-message-markdown-content .markdown-blockquote{border-left-width:4px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding-left:.75rem;font-style:italic}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-blockquote{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.chat-message-markdown-content .markdown-blockquote{margin:.5em 0;font-size:.9em;color:#374151}.chat-message-markdown-content .markdown-heading-1,.chat-message-markdown-content .markdown-heading-2,.chat-message-markdown-content .markdown-heading-3,.chat-message-markdown-content .markdown-heading-4{text-align:left;color:#111827}.chat-message-markdown-content .markdown-heading-1{font-size:1.2em}.chat-message-markdown-content .markdown-heading-2{font-size:1.1em}.chat-message-markdown-content .markdown-heading-3{font-size:1.05em}.chat-message-markdown-content .markdown-heading-4{font-size:1em}.chat-message-markdown-content .markdown-table-container{overflow-x:auto;margin:.5em 0}.chat-message-markdown-content .markdown-table{min-width:100%;border-collapse:collapse;font-size:.9em;border:1px solid #d1d5db}.chat-message-markdown-content .markdown-table-header{border-width:1px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.25rem .5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-table-header{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1));--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-table-header{font-size:.9em;font-weight:600}.chat-message-markdown-content .markdown-table-cell{border-width:1px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding:.25rem .5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-table-cell{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.chat-message-markdown-content .markdown-table-cell{font-size:.9em}.chat-message-markdown-content .markdown-syntax-highlighter{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-syntax-highlighter{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-syntax-highlighter{font-size:11px;border:1px solid rgba(0,0,0,.1);word-wrap:break-word;overflow-wrap:break-word;white-space:pre-wrap;line-break:anywhere}.chat-message-markdown-content .markdown-syntax-highlighter pre{margin:0;background:transparent}.chat-message-timestamp{margin-top:.25rem;font-size:10px;--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1));background:transparent}.chat-message-timestamp-user{text-align:right}.chat-message-timestamp-bot{text-align:left}.chat-message-audio{margin-top:.5rem;max-width:100%}.chat-message-loading{display:flex;align-items:center;justify-content:center;padding:1rem}.chat-message-loading-spinner{height:1.25rem;width:1.25rem}.chat-message-loading-spinner{animation:spin 1s linear infinite;--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.chat-message-separator{position:relative;margin-top:1rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;padding-top:1.5rem;padding-bottom:1.5rem}.chat-message-separator:before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:linear-gradient(to right,transparent,#e2e8f0,transparent);transform:translateY(-50%)}.chat-message-separator-text{position:relative;z-index:10;border-radius:9999px;border-width:1px;--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1));--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1));padding:.5rem 1rem;font-size:.75rem;line-height:1rem;--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1));--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / .05);--tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);font-style:italic;font-weight:500;letter-spacing:.5px;transition:all .2s ease;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.chat-message-separator-text:hover{--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1));--tw-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);--tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);transform:scale(1.02)}.chat-message-date-separator{background:color-mix(in srgb,var(--chat-widget-secondary-color) 80%,transparent 20%);color:color-mix(in srgb,var(--chat-widget-message-text-color) 80%,transparent 20%);font-weight:500;font-style:italic;letter-spacing:.5px}.chat-message-references-divider{margin-top:.5rem;margin-bottom:.5rem}.chat-message-references-divider-user{border-color:#fff3}.chat-message-references-divider-bot{--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.prose p,.prose-override p{margin-top:0!important;margin-bottom:.5em!important}.prose p:last-child,.prose-override p:last-child{margin-bottom:0!important}.prose ul,.prose ol,.prose-override ul,.prose-override ol{margin-top:0!important;margin-bottom:.5em!important;padding-left:1.25em!important}.prose ul:last-child,.prose ol:last-child,.prose-override ul:last-child,.prose-override ol:last-child{margin-bottom:0!important}.prose li,.prose-override li{margin-top:0!important;margin-bottom:.25em!important;padding-left:0!important}.prose li:last-child,.prose-override li:last-child{margin-bottom:0!important}.prose h1,.prose h2,.prose h3,.prose h4,.prose-override h1,.prose-override h2,.prose-override h3,.prose-override h4{margin-top:0!important;margin-bottom:.5em!important}.prose blockquote,.prose-override blockquote{margin-top:0!important;margin-bottom:.5em!important;padding-left:1em!important;font-style:italic!important}.prose table,.prose-override table,.prose pre,.prose-override pre{margin-top:0!important;margin-bottom:.5em!important}.prose code,.prose-override code{padding:.1em .25em!important}.markdown-renderer{width:100%}.markdown-paragraph{margin-bottom:.5rem}.markdown-paragraph:last-child{margin-bottom:0}.markdown-unordered-list{margin-bottom:.5rem;list-style-type:disc;padding-left:1rem}.markdown-unordered-list:last-child{margin-bottom:0}.markdown-ordered-list{margin-bottom:.5rem;list-style-type:decimal;padding-left:1rem}.markdown-ordered-list:last-child{margin-bottom:0}.markdown-list-item{margin-bottom:.25rem}.markdown-list-item:last-child{margin-bottom:0}.markdown-code-block{margin-bottom:.5rem}.markdown-code-block:last-child{margin-bottom:0}.markdown-inline-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.markdown-link{text-decoration-line:underline}.markdown-blockquote{margin-bottom:.5rem;padding-left:1rem;font-style:italic}.markdown-blockquote:last-child{margin-bottom:0}.markdown-heading-1,.markdown-heading-2,.markdown-heading-3,.markdown-heading-4{margin-bottom:.5rem;font-weight:700}.markdown-heading-1:last-child,.markdown-heading-2:last-child,.markdown-heading-3:last-child,.markdown-heading-4:last-child{margin-bottom:0}.markdown-table-container{margin-bottom:.5rem;overflow-x:auto}.markdown-table-container:last-child{margin-bottom:0}.markdown-table{min-width:100%;border-collapse:collapse}.markdown-table-header,.markdown-table-cell{padding:.25rem .5rem}.markdown-syntax-highlighter{width:100%;overflow-x:auto}.chat-input-container{position:sticky;bottom:0;left:0;right:0;padding:var(--input-container-padding);width:100%}.chat-input-base-container{position:relative;display:flex;align-items:center;height:auto;min-height:var(--input-min-height);width:100%}.chat-input-buttons-container-base{display:flex;flex-shrink:0;align-items:center;gap:.25rem}.chat-input-button-base{display:flex;align-items:center;justify-content:center;border-radius:9999px;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;width:var(--button-size-primary);height:var(--button-size-primary);padding:var(--button-padding-primary);color:var(--color-button-text);opacity:var(--button-opacity-normal)}.chat-input-icon-base{width:var(--button-icon-size-primary);height:var(--button-icon-size-primary);fill:var(--color-button-fill);color:var(--color-button-text);opacity:var(--button-opacity-normal)}.chat-input-wrapper{position:relative;margin-left:auto;margin-right:auto;max-width:56rem}.chat-input-container-standard-view,.chat-input-wrapper-standard-view{background:var(--color-input-background)}.chat-input-container-voice-view,.chat-input-wrapper-voice-view{background:var(--color-input-background-avatar-view)}.chat-input-container-standard-view .chat-input-button-base{background:var(--color-button-background-primary)}.chat-input-container-voice-view .chat-input-button-base{background:var(--color-button-background-primary-avatar-view)}.text-chat-input-wrapper{position:relative;display:flex;flex:1 1 0%;align-items:center;min-height:var(--input-min-height);font-size:var(--chat-widget-message-font-size);line-height:var(--input-line-height);padding-right:8px}.text-chat-input-placeholder{position:absolute;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--color-input-text);padding:var(--input-text-padding);opacity:var(--color-input-placeholder-opacity)}.text-chat-input-field{flex:1 1 0%;resize:none;outline:2px solid transparent;outline-offset:2px;display:flex;align-items:center;height:var(--input-default-height);min-height:inherit;max-height:inherit;font-size:inherit;line-height:inherit;color:var(--color-input-text);border:none;font-family:inherit;padding:var(--input-text-padding);box-sizing:border-box;font-weight:var(--input-font-weight);transition:var(--transition-normal);overflow-y:auto;word-wrap:break-word;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word;scrollbar-width:var(--input-scrollbar-width);-webkit-overflow-scrolling:touch;border-radius:16px}.chat-input-container-standard-view .text-chat-input-field{scrollbar-color:var(--color-scrollbar-input-thumb) var(--color-scrollbar-input-track)}.chat-input-container-voice-view .text-chat-input-field{border:.5px solid;border-color:var(--chat-widget-secondary-color);scrollbar-color:var(--color-scrollbar-input-thumb-avatar-view) var(--color-scrollbar-input-track)}.text-chat-input-field::-webkit-scrollbar{width:5px}.text-chat-input-field::-webkit-scrollbar-track{background:transparent;border-radius:2.5px}.text-chat-input-field::-webkit-scrollbar-thumb{border-radius:2.5px;-webkit-transition:background-color .2s ease;transition:background-color .2s ease}.chat-input-container-standard-view .text-chat-input-field::-webkit-scrollbar-thumb{background:var(--color-scrollbar-input-thumb)}.chat-input-container-standard-view .text-chat-input-field::-webkit-scrollbar-thumb:hover{background:var(--color-scrollbar-input-thumb-hover)}.chat-input-container-voice-view .text-chat-input-field::-webkit-scrollbar-thumb{background:var(--color-scrollbar-input-thumb-avatar-view)}.chat-input-container-voice-view .text-chat-input-field::-webkit-scrollbar-thumb:hover{background:var(--color-scrollbar-input-thumb-hover-avatar-view)}.text-chat-input-field:focus{outline:none;border:none;box-shadow:none}.text-chat-input-mic-button svg{fill:var(--color-button-fill);color:var(--color-button-text)}.text-chat-input-mic-button:hover{opacity:var(--button-opacity-hover)}.text-chat-input-send-button:hover:not(:disabled){opacity:var(--button-opacity-hover)}.text-chat-input-send-button:disabled{cursor:not-allowed;opacity:var(--button-opacity-disabled)}:root{--sleek-main-min-height: 0px;--sleek-border-radius: 12px;--chat-widget-primary-color: var(--chat-widget-primary-color);--chat-widget-primary-color-hover: var(--chat-widget-primary-color-hover);--chat-widget-secondary-color: var(--chat-widget-secondary-color);--sleek-main-text-color: var(--chat-widget-message-text-color);--sleek-main-bg: color-mix( in srgb, var(--chat-widget-primary-color) 10%, white );--sleek-main-border: var(--chat-widget-secondary-color);--gradient-1: var(--chat-widget-primary-color);--gradient-2: var(--chat-widget-secondary-color);--gradient-3: color-mix( in srgb, var(--chat-widget-primary-color) 60%, var(--chat-widget-secondary-color) );--gradient-4: color-mix( in srgb, var(--chat-widget-primary-color) 40%, var(--chat-widget-secondary-color) );--accent: color-mix( in srgb, var(--chat-widget-primary-color) 70%, var(--chat-widget-secondary-color) );--glow: color-mix(in srgb, var(--chat-widget-primary-color) 30%, transparent);--whatsapp-color: #25d366;--fallback-1: #000aaa;--fallback-2: #6c757d;--fallback-3: #6c757d;--fallback-4: #6c757d;--fallback-accent: #6c757d;--fallback-glow: rgba(0, 10, 170, .3);--sleek-main-bg-fallback: rgba(0, 10, 170, .1);--sleek-main-border-fallback: rgba(108, 117, 125, .8)}@supports not (color: color-mix(in srgb,#000 50%,#fff)){:root{--gradient-1: var(--fallback-1);--gradient-2: var(--fallback-2);--gradient-3: var(--fallback-3);--gradient-4: var(--fallback-4);--accent: var(--fallback-accent);--glow: var(--fallback-glow);--sleek-main-bg: var(--sleek-main-bg-fallback);--sleek-main-border: var(--sleek-main-border-fallback)}.sleek-chat-input-voice-button{background:#000aaabf;box-shadow:0 4px 16px #000aaa36,0 2px 8px #000aaa26}.sleek-chat-input-voice-button:hover{background:var(--fallback-1);opacity:.9;box-shadow:0 8px 24px #000aaa59,0 4px 16px #000aaa40}.sleek-chat-input-voice-button:focus{box-shadow:0 0 0 4px #000aaa3d,0 8px 24px #000aaa59}.sleek-chat-input-voice-button.voice-loading{background:var(--fallback-1);box-shadow:0 4px 16px #000aaa36,0 2px 8px #000aaa40}.thinking-dot{background:var(--chat-widget-primary-color);box-shadow:0 0 4px var(--chat-widget-primary-color)}.sleek-chat-input-field::-moz-placeholder{color:var(--fallback-2);opacity:.6}.sleek-chat-input-field::placeholder{color:var(--fallback-2);opacity:.6}.sleek-chat-input-field:focus::-moz-placeholder{color:var(--fallback-2);opacity:.8}.sleek-chat-input-field:focus::placeholder{color:var(--fallback-2);opacity:.8}.sleek-main.agent-speaking{background:var(--sleek-main-bg-fallback);border:2px solid var(--fallback-1);box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 20px #667eea33,inset 0 1px #ffffffb3;animation:speakingBorderPulseFallback 1.5s ease-in-out infinite}}.sleek-view-wrapper-container{width:100%;height:100%;position:relative;display:flex;flex-direction:column}.sleek-view{display:flex;flex-direction:column;min-height:calc(var(--sleek-main-min-height) + var(--input-min-height));max-height:100%;position:relative;width:100%;flex:1}.sleek-close-button{display:flex;align-items:center;justify-content:center;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.2s;position:absolute;top:-10px;width:var(--button-size-secondary);height:var(--button-size-secondary);border-radius:9999px;border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 50%,white);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white);color:var(--color-button-text);box-shadow:0 4px 14px color-mix(in srgb,var(--glow) 60%,transparent),0 2px 6px color-mix(in srgb,var(--chat-widget-primary-color) 18%,transparent);cursor:pointer;overflow:hidden;z-index:20}.sleek-close-button.position-bottom-right,.sleek-close-button.position-top-right{right:-10px;left:auto}.sleek-close-button.position-bottom-left,.sleek-close-button.position-top-left{left:-10px;right:auto}.sleek-close-button:hover{transform:translateY(-1px) scale(1.05);box-shadow:0 8px 20px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent),0 4px 12px color-mix(in srgb,var(--chat-widget-primary-color) 20%,transparent);background:color-mix(in srgb,var(--chat-widget-primary-color-hover) 80%,white)}.sleek-close-button:focus{outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--glow) 80%,transparent),0 8px 22px color-mix(in srgb,var(--chat-widget-primary-color) 32%,transparent);transform:translateY(-1px) scale(1.03)}.sleek-close-button:active{transform:translateY(0) scale(.97);box-shadow:0 3px 10px color-mix(in srgb,var(--chat-widget-primary-color) 24%,transparent)}.sleek-close-button svg{width:calc(var(--button-size-secondary) * .8);height:calc(var(--button-size-secondary) * .8);display:block;flex-shrink:0;filter:drop-shadow(0 0 1px rgba(255,255,255,.7)) drop-shadow(0 0 2px color-mix(in srgb,var(--glow) 60%,transparent))}:host([data-open="false"]) .sleek-view,spotinfo-chat[data-open=false] .sleek-view{display:none!important;height:0!important;width:0!important;overflow:hidden!important;pointer-events:none!important}.sleek-main{display:flex;flex-direction:column;align-items:center;overflow:hidden;position:relative;min-height:var(--sleek-main-min-height);max-height:none;transition:border .4s cubic-bezier(.4,0,.2,1);opacity:1;transform:translateY(0);flex:1;line-height:var(--input-line-height);background:var(--sleek-main-bg);border-radius:var(--sleek-border-radius);color:var(--color-input-text);border:2px solid var(--sleek-main-border);box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,inset 0 1px #ffffffb3;overflow:visible;animation:slideInUpEnhanced .8s cubic-bezier(.4,0,.2,1);will-change:transform,box-shadow,filter;z-index:2}.sleek-main:focus-within{transform:translateY(-2px) scale(1.01);box-shadow:0 16px 48px #0000001f,0 8px 24px #0000000f,0 0 0 4px var(--glow),inset 0 1px #ffffffe6;border-color:var(--accent)}.sleek-main[style*=height]{animation:contentAppear .6s cubic-bezier(.4,0,.2,1)}.sleek-main.agent-speaking{position:relative;background:var(--sleek-main-bg);border:2px solid var(--chat-widget-primary-color);transition:none;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 20px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent),inset 0 1px #ffffffb3;animation:speakingBorderPulse 1.5s ease-in-out infinite}.sleek-new-chat-button{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;background:#ffffffe6;color:var(--gradient-2);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px #0000001a,0 1px 4px #0000000f;position:absolute;overflow:hidden;z-index:10;opacity:.9;transform:scale(.95);font-size:11px;font-weight:500;letter-spacing:.025em;white-space:nowrap;min-width:60px;height:28px;border-radius:16px;border:1px solid rgba(226,232,240,.6)}.sleek-new-chat-button.position-bottom-right,.sleek-new-chat-button.position-top-right{bottom:0;right:0;top:auto;left:auto}.sleek-new-chat-button.position-bottom-left,.sleek-new-chat-button.position-top-left{bottom:0;left:0;top:auto;right:auto}.sleek-new-chat-button:hover{transform:scale(1.02);opacity:1;background:#fffffff2;box-shadow:0 4px 12px #00000026,0 2px 6px #0000001a;border-color:#e2e8f0cc}.sleek-new-chat-button:focus{outline:none;box-shadow:0 0 0 2px var(--glow),0 4px 12px #00000026;transform:scale(1.01);opacity:1;background:#fff}.sleek-new-chat-button:active{transform:scale(.98);transition:transform .1s ease;background:#f8fafcf2}.sleek-message-container{width:100%;font-size:.875rem;line-height:1.25rem;font-style:normal;line-height:1.625;flex:0 0 auto;display:flex;flex-direction:column;justify-content:center;text-align:left;min-height:inherit;font-size:var(--message-font-size);line-height:var(--input-line-height);transition:all .3s ease-in-out;background:transparent;color:var(--color-input-text);font-weight:500;position:relative;z-index:1;padding:8px}.sleek-message-container:empty{opacity:0;height:0;padding:0;min-height:0}.sleek-message-container:not(:empty){opacity:1;height:auto;padding:8px;animation:fadeInUpEnhanced .5s ease-out}.sleek-message-container:focus{font-weight:500;text-shadow:0 0 15px var(--glow)}.sleek-message-markdown{width:100%;font-size:var(--message-font-size);line-height:var(--input-line-height);color:var(--color-input-text)}.sleek-message-markdown .markdown-paragraph{margin-bottom:.5rem}.sleek-message-markdown .markdown-paragraph:last-child{margin-bottom:0}.sleek-message-markdown .markdown-paragraph{font-size:inherit;line-height:inherit;color:inherit}.sleek-message-markdown .markdown-code-block{overflow-x:auto;border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-code-block{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.sleek-message-markdown .markdown-code-block{font-size:11px;border:1px solid rgba(0,0,0,.1)}.sleek-message-markdown .markdown-inline-code{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.125rem .25rem;font-size:.75rem;line-height:1rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-inline-code{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.sleek-message-markdown .markdown-inline-code{font-family:Monaco,Menlo,Ubuntu Mono,monospace}.sleek-message-markdown .markdown-link{--tw-text-opacity: 1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.sleek-message-markdown .markdown-link:hover{text-decoration-line:underline}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-link{--tw-text-opacity: 1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}}.sleek-message-markdown .markdown-link{text-decoration:none}.sleek-message-markdown .markdown-blockquote{border-left-width:4px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding-left:.75rem;font-style:italic}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-blockquote{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.sleek-message-markdown .markdown-blockquote{margin:.5em 0;font-size:.9em}.sleek-message-markdown .markdown-heading-1,.sleek-message-markdown .markdown-heading-2,.sleek-message-markdown .markdown-heading-3,.sleek-message-markdown .markdown-heading-4{margin-bottom:.5rem;font-weight:700}.sleek-message-markdown .markdown-heading-1:last-child,.sleek-message-markdown .markdown-heading-2:last-child,.sleek-message-markdown .markdown-heading-3:last-child,.sleek-message-markdown .markdown-heading-4:last-child{margin-bottom:0}.sleek-message-markdown .markdown-heading-1,.sleek-message-markdown .markdown-heading-2,.sleek-message-markdown .markdown-heading-3,.sleek-message-markdown .markdown-heading-4{color:inherit}.sleek-message-markdown .markdown-heading-1{font-size:1.2em}.sleek-message-markdown .markdown-heading-2{font-size:1.1em}.sleek-message-markdown .markdown-heading-3{font-size:1.05em}.sleek-message-markdown .markdown-heading-4{font-size:1em}.sleek-message-markdown .markdown-table-container{overflow-x:auto;margin:.5em 0}.sleek-message-markdown .markdown-table{min-width:100%;border-collapse:collapse;font-size:.9em;border:1px solid rgba(0,0,0,.1)}.sleek-message-markdown .markdown-table-header,.sleek-message-markdown .markdown-table-cell{border-width:1px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding:.25rem .5rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-table-header,.sleek-message-markdown .markdown-table-cell{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.sleek-message-markdown .markdown-table-header,.sleek-message-markdown .markdown-table-cell{font-size:.9em}.sleek-message-markdown .markdown-syntax-highlighter{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-syntax-highlighter{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.sleek-message-markdown .markdown-syntax-highlighter{font-size:11px;border:1px solid rgba(0,0,0,.1);word-wrap:break-word;overflow-wrap:break-word;white-space:pre-wrap;line-break:anywhere}.sleek-message-markdown .markdown-syntax-highlighter pre{margin:0;background:transparent}.sleek-spacer{flex:none;height:16px;background:transparent;transition:all .4s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:center;margin:0;padding:0}.sleek-spacer-loading{height:16px;background:transparent;border-radius:8px;display:flex;align-items:center;justify-content:center}.thinking-dots{display:flex;align-items:center;gap:4px}.thinking-dot{width:4px;height:4px;border-radius:50%;background:var(--chat-widget-primary-color);animation:thinkingDotCompact 1.4s ease-in-out infinite;box-shadow:0 0 4px var(--chat-widget-primary-color)}.thinking-dot:nth-child(1){animation-delay:0s}.thinking-dot:nth-child(2){animation-delay:.2s}.thinking-dot:nth-child(3){animation-delay:.4s}.sleek-chat-input-container{width:100%;flex:none;background-color:transparent;margin-top:auto;height:auto;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#f8fafcf2,#f1f5f9d9);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-radius:var(--sleek-border-radius);transition:all .4s cubic-bezier(.4,0,.2,1);padding:4px;box-sizing:border-box;border:1px solid rgba(226,232,240,.4);box-shadow:0 8px 32px #0000001f,0 4px 16px #00000014,inset 0 1px #ffffff80;position:relative;overflow:visible;flex-shrink:0;align-self:flex-end;will-change:transform,box-shadow,filter,background;z-index:10}.sleek-chat-input-container:before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,var(--gradient-1) 0%,var(--gradient-2) 25%,var(--gradient-3) 50%,var(--gradient-4) 75%,var(--accent) 100%);opacity:0;transition:opacity .4s ease;border-radius:inherit;z-index:-1}.sleek-chat-input-container:hover:before{opacity:.1}.sleek-chat-input-container:focus-within{transform:translateY(-2px);box-shadow:0 12px 40px #00000026,0 8px 24px #0000001a,0 0 0 4px var(--glow),inset 0 1px #fff9;border-color:var(--accent);background:linear-gradient(135deg,#fffffffa,#f8fafceb)}.sleek-chat-input-container:focus-within .sleek-chat-input-field{font-weight:500}.sleek-main:focus-within~.sleek-chat-input-container{transform:none;box-shadow:0 8px 32px #0000001f,0 4px 16px #00000014,inset 0 1px #ffffff80;border-color:#e2e8f066;background:linear-gradient(135deg,#f8fafcf2,#f1f5f9d9)}.sleek-chat-input-container.agent-listening{position:relative;overflow:visible;transition:all .4s cubic-bezier(.4,0,.2,1)}.sleek-chat-input-container.agent-listening:before{content:"";position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:linear-gradient(90deg,var(--gradient-2) 0%,var(--gradient-3) 50%,var(--gradient-2) 100%);background-size:200% 100%;border-radius:calc(var(--sleek-border-radius) + 2px);animation:listeningEdgePulse 2s ease-in-out infinite;animation-delay:0s;z-index:-1;opacity:.7}.sleek-chat-input-container.agent-listening:after{content:"";position:absolute;top:1px;left:1px;right:1px;bottom:1px;background:linear-gradient(135deg,#fff6,#ffffff1a);border-radius:calc(var(--sleek-border-radius) - 1px);animation:listeningInnerHighlight 2s ease-in-out infinite;animation-delay:0s;z-index:-1;pointer-events:none}.sleek-chat-input-container.agent-speaking{background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 8%,white),color-mix(in srgb,var(--chat-widget-primary-color) 5%,white));border-color:color-mix(in srgb,var(--chat-widget-primary-color) 30%,white)}.sleek-chat-input-container.agent-speaking:focus-within{transform:translateY(-2px);box-shadow:0 12px 40px #00000026,0 8px 24px #0000001a,0 0 0 4px var(--glow),inset 0 1px #ffffff8c;border-color:var(--accent);background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 10%,white),color-mix(in srgb,var(--chat-widget-primary-color) 6%,white))}.sleek-chat-input-container.agent-speaking .sleek-menu-button{border-color:color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white)}.sleek-chat-input-container.agent-speaking .sleek-menu-button:hover{border-color:color-mix(in srgb,var(--chat-widget-primary-color) 55%,white);box-shadow:0 10px 24px color-mix(in srgb,var(--chat-widget-primary-color) 24%,transparent),0 6px 16px color-mix(in srgb,var(--chat-widget-primary-color) 16%,transparent)}.sleek-chat-input-container.agent-speaking .sleek-menu-button:focus{box-shadow:0 10px 24px color-mix(in srgb,var(--chat-widget-primary-color) 26%,transparent),0 0 0 3px var(--glow)}.sleek-chat-input-wrapper{display:flex;align-items:center;flex:1;min-height:var(--input-min-height);font-size:var(--input-font-size);line-height:var(--input-line-height);position:relative}.sleek-chat-input-field-placeholder{line-height:var(--input-line-height);position:absolute;top:50%;transform:translateY(-50%);font-size:var(--input-font-size);line-height:inherit;font-family:inherit;pointer-events:none;color:var(--color-input-placeholder-text);font-weight:400;transition:all .3s ease}.sleek-chat-input-field-placeholder-listening{font-size:calc(var(--input-font-size) * 1.15);font-weight:600}.sleek-voice-activity-bars{pointer-events:none;flex-shrink:0}.sleek-chat-input-field{flex:1 1 0%;resize:none;outline:2px solid transparent;outline-offset:2px;height:auto;min-height:inherit;max-height:120px;font-size:inherit;line-height:inherit;color:var(--color-input-text);background:transparent;border:none;font-family:inherit;padding:0;margin:0;box-sizing:border-box;font-weight:500;transition:all .3s ease;overflow-y:auto;word-wrap:break-word;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word;display:flex;align-items:center;scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--chat-widget-primary-color) 60%,transparent) transparent;-webkit-overflow-scrolling:touch}.sleek-chat-input-field::-webkit-scrollbar{width:5px}.sleek-chat-input-field::-webkit-scrollbar-track{background:transparent;border-radius:2.5px}.sleek-chat-input-field::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--chat-widget-primary-color) 60%,transparent);border-radius:2.5px;-webkit-transition:background-color .2s ease;transition:background-color .2s ease}.sleek-chat-input-field::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--chat-widget-primary-color) 85%,transparent)}.sleek-chat-input-field:focus{background:transparent;outline:none;border:none;box-shadow:none;font-weight:600}.sleek-chat-input-field:focus::-moz-placeholder{color:var(--color-input-placeholder-text);transform:translate(4px)}.sleek-chat-input-field:focus::placeholder{color:var(--color-input-placeholder-text);transform:translate(4px)}.sleek-chat-input-buttons{flex-shrink:0;gap:.125rem;align-self:center;margin:0;padding:0;height:auto;display:flex;align-items:center}svg.sleek-chat-input-whatsapp-icon{cursor:pointer;border-radius:9999px;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;width:var(--button-size-primary);height:var(--button-size-primary);fill:var(--whatsapp-color);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.6)) drop-shadow(0 0 2px color-mix(in srgb,var(--glow) 60%,transparent));overflow:visible;display:block;flex-shrink:0;will-change:transform,box-shadow,filter}path.sleek-chat-input-whatsapp-path{fill:inherit;transform-origin:center;transform-box:fill-box}svg.sleek-chat-input-whatsapp-icon:hover{transform:translateY(-2px) scale(1.1)}svg.sleek-chat-input-whatsapp-icon:focus{outline:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--glow) 60%,transparent);transform:translateY(-2px) scale(1.1)}.sleek-chat-input-voice-button{border-radius:9999px;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;background:var(--color-button-background-primary);color:var(--color-button-text);width:var(--button-size-primary);height:var(--button-size-primary);display:flex;padding:var(--button-padding-primary);align-items:center;justify-content:center;box-shadow:0 4px 16px color-mix(in srgb,var(--glow) 70%,transparent),0 2px 8px color-mix(in srgb,var(--color-button-background-primary) 15%,transparent);position:relative;overflow:hidden;border:2px solid transparent;opacity:var(--button-opacity-normal);will-change:transform,box-shadow,filter,background}.sleek-chat-input-voice-button:hover{transform:translateY(-2px) scale(1.1);box-shadow:0 8px 24px color-mix(in srgb,var(--color-button-background-primary) 35%,transparent),0 4px 16px color-mix(in srgb,var(--color-button-background-primary) 25%,transparent);opacity:var(--button-opacity-hover)}.sleek-chat-input-voice-button:hover svg{transform:scale(1.1)}.sleek-chat-input-voice-button:focus{outline:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--glow) 80%,transparent),0 8px 24px color-mix(in srgb,var(--color-button-background-primary) 35%,transparent);transform:translateY(-2px) scale(1.05)}.sleek-chat-input-voice-button.voice-active{box-shadow:0 4px 16px #a7f3d04d,0 2px 8px #d1fae540;animation:pulse 2s ease-in-out infinite}.sleek-chat-input-voice-button.voice-loading{background:var(--color-button-background-primary);box-shadow:0 4px 16px color-mix(in srgb,var(--glow) 70%,transparent),0 2px 8px color-mix(in srgb,var(--color-button-background-primary) 25%,transparent);cursor:not-allowed;animation:shimmer 2s infinite}@keyframes slideInUpEnhanced{0%{opacity:0;filter:blur(10px)}50%{opacity:.7;transform:translateY(15px) scale(.98);filter:blur(5px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0px)}}@keyframes floatMain{0%,to{transform:translateY(0) rotate(0)}25%{transform:translateY(-3px) rotate(.5deg)}50%{transform:translateY(-6px) rotate(0)}75%{transform:translateY(-3px) rotate(-.5deg)}}@keyframes contentAppear{0%{opacity:.7;transform:scale(.98)}to{opacity:1;transform:scale(1)}}@keyframes fadeInUpEnhanced{0%{opacity:0;transform:translateY(15px) scale(.95);filter:blur(5px)}50%{opacity:.7;transform:translateY(7px) scale(.98);filter:blur(2px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0px)}}@keyframes gradientShift{0%,to{background-position:0% 50%}50%{background-position:100% 50%}}@keyframes speakingBorderFlow{0%{background-position:0% 50%}to{background-position:300% 50%}}@keyframes speakingBorderPulseFallback{0%{border-color:#667eea;border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px #667eea33,inset 0 1px #ffffffb3}25%{border-color:#00d4ff;border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px #00d4ff66,inset 0 1px #fffc}50%{border-color:#f093fb;border-width:2px;box-shadow:0 16px 48px #0000001f,0 8px 24px #0000000f,0 0 30px #f093fb80,inset 0 1px #ffffffe6}75%{border-color:#f5576c;border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px #f5576c66,inset 0 1px #fffc}to{border-color:#667eea;border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px #667eea33,inset 0 1px #ffffffb3}}@keyframes speakingBorderPulse{0%{border-color:var(--chat-widget-primary-color);border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px color-mix(in srgb,var(--chat-widget-primary-color) 15%,transparent),inset 0 1px #ffffffb3}25%{border-color:var(--accent);border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px color-mix(in srgb,var(--accent) 40%,transparent),inset 0 1px #fffc}50%{border-color:var(--gradient-3);border-width:2px;box-shadow:0 16px 48px #0000001f,0 8px 24px #0000000f,0 0 30px color-mix(in srgb,var(--gradient-3) 50%,transparent),inset 0 1px #ffffffe6}75%{border-color:var(--gradient-4);border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px color-mix(in srgb,var(--gradient-4) 40%,transparent),inset 0 1px #fffc}to{border-color:var(--chat-widget-primary-color);border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px color-mix(in srgb,var(--chat-widget-primary-color) 15%,transparent),inset 0 1px #ffffffb3}}@keyframes listeningEdgePulse{0%{background-position:0% 50%;opacity:.5}50%{background-position:100% 50%;opacity:.8}to{background-position:0% 50%;opacity:.5}}@keyframes listeningInnerHighlight{0%,to{opacity:.3}50%{opacity:.6}}@keyframes float{0%,to{transform:translateY(0)}50%{transform:translateY(-4px)}}@keyframes thinkingDotCompact{0%,60%,to{opacity:.4;transform:scale(.8);box-shadow:0 0 4px var(--chat-widget-primary-color)}30%{opacity:1;transform:scale(1.2);box-shadow:0 0 8px var(--chat-widget-primary-color)}}@keyframes pulse{0%,to{box-shadow:0 4px 16px color-mix(in srgb,var(--gradient-4) 40%,transparent),0 2px 8px color-mix(in srgb,var(--gradient-3) 30%,transparent)}50%{box-shadow:0 6px 20px color-mix(in srgb,var(--gradient-4) 60%,transparent),0 4px 16px color-mix(in srgb,var(--gradient-3) 50%,transparent)}}@keyframes shimmer{0%{background-position:-200% 0}to{background-position:200% 0}}@media (max-width: 768px){.sleek-new-chat-button{bottom:0;right:0;font-size:10px;min-width:55px;height:26px;border-radius:13px}.sleek-spacer-loading{border-radius:6px}.thinking-dot{width:3px;height:3px}.thinking-dots{gap:3px}.sleek-main{display:flex;flex-direction:column;align-items:center;overflow:hidden;padding:0;position:relative;min-height:var(--sleek-main-min-height);max-height:none;border-radius:20px;box-shadow:0 8px 24px #0000000f,0 4px 12px #00000008,inset 0 1px #fff9}.sleek-message-container{min-height:0;font-size:13px}.sleek-chat-input-container{height:auto;max-width:100%;padding:0 14px;gap:12px;align-items:center;justify-content:space-between}.sleek-chat-input-container.agent-listening:before{opacity:.6}.sleek-chat-input-container.agent-listening:after{opacity:.5}.sleek-chat-input-field{font-size:12px;min-height:24px;max-height:100px;line-height:1.3;align-self:center}.sleek-chat-input-buttons{gap:4px;align-self:center;height:auto;align-items:center}}@media (max-width: 480px){.sleek-new-chat-button{font-size:9px;min-width:50px;height:24px;border-radius:12px}.sleek-new-chat-button.position-bottom-right,.sleek-new-chat-button.position-top-right{bottom:0;right:0}.sleek-new-chat-button.position-bottom-left,.sleek-new-chat-button.position-top-left{bottom:0;left:0}.sleek-spacer-loading{border-radius:4px}.thinking-dot{width:2px;height:2px}.thinking-dots{gap:2px}.sleek-main{border-radius:16px;min-height:var(--sleek-main-min-height);box-shadow:0 6px 20px #0000000d,0 3px 10px #00000005,inset 0 1px #ffffff80}.sleek-message-container{min-height:0;font-size:12px}.sleek-chat-input-container{height:auto;padding:0 12px;gap:10px;align-items:center;justify-content:space-between}.sleek-chat-input-container.agent-listening:before{opacity:.5;top:-1px;left:-1px;right:-1px;bottom:-1px}.sleek-chat-input-container.agent-listening:after{opacity:.4}.sleek-chat-input-field{min-height:24px;max-height:80px;line-height:1.2;align-self:center}.sleek-chat-input-buttons{gap:4px;align-self:center;height:auto;align-items:center}.sleek-chat-input-voice-button{min-width:var(--button-size-primary);min-height:var(--button-size-primary)}}.sleek-menu-wrapper{position:relative;flex-shrink:0}.sleek-menu-button{display:flex;align-items:center;justify-content:center;border-radius:9999px;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;width:var(--button-size-secondary);height:var(--button-size-secondary);border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 55%,white);color:var(--color-button-text);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white)}.sleek-menu-button:hover{color:#fff;border-color:color-mix(in srgb,var(--chat-widget-primary-color) 65%,white);transform:translateY(-1px);box-shadow:0 12px 28px color-mix(in srgb,var(--chat-widget-primary-color) 28%,transparent),0 8px 18px color-mix(in srgb,var(--chat-widget-primary-color) 18%,transparent)}.sleek-menu-button:focus{outline:none;box-shadow:0 10px 24px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent)}.sleek-menu-icon{width:100%;height:100%;display:block}.sleek-menu-icon-outline{stroke:currentColor;stroke-width:1.5;fill:none}.sleek-menu-icon-dot{fill:currentColor}.sleek-menu-dropdown{position:absolute;left:0;bottom:calc(100% + 8px);width:160px;border-radius:8px;border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 10%,white),color-mix(in srgb,var(--chat-widget-primary-color) 6%,white));-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 12px 32px #0000001f,0 6px 18px #00000014;z-index:9999;opacity:0;transform:translateY(6px) scale(.98);animation:sleekMenuEnter .16s cubic-bezier(.2,.7,.3,1) forwards;will-change:opacity,transform,box-shadow}.sleek-menu-dropdown:after{content:"";position:absolute;bottom:-6px;left:18px;width:10px;height:10px;background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 10%,white),color-mix(in srgb,var(--chat-widget-primary-color) 6%,white));border-left:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);border-bottom:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);transform:rotate(45deg);box-shadow:0 2px 6px #0000000f}.sleek-menu-item{width:100%;text-align:left;padding:10px 12px;font-size:13px;color:#334155;background:transparent}.sleek-menu-item+.sleek-menu-item{border-top:1px solid rgba(226,232,240,.7)}.sleek-menu-item:hover,.sleek-menu-item:focus{background:color-mix(in srgb,var(--chat-widget-primary-color) 8%,white);color:#1e293b;outline:none}@keyframes sleekMenuEnter{0%{opacity:0;transform:translateY(6px) scale(.98);box-shadow:0 6px 18px #00000014,0 3px 10px #0000000d}to{opacity:1;transform:translateY(0) scale(1);box-shadow:0 12px 32px #0000001f,0 6px 18px #00000014}}.voice-chat-input-status-container{display:flex;flex:1 1 0%;flex-direction:column;gap:.5rem}.voice-chat-input-status-text{font-size:.875rem;line-height:1.25rem;--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.voice-chat-input-activity{display:flex;height:1.5rem;align-items:center}.voice-chat-input-button:focus{outline:2px solid transparent;outline-offset:2px}.voice-chat-input-button-muted{color:var(--color-button-text);background:var(--color-voice-disconnected)}.voice-chat-input-button-unmuted{color:var(--color-button-text);background:var(--color-voice-speaking)}.voice-chat-input-button-disconnect{color:var(--color-button-text);background:var(--color-voice-disconnected)}.voice-chat-input-spinner{height:2rem;width:2rem}.voice-chat-input-spinner{animation:spin 1s linear infinite;border-radius:9999px;border-bottom-width:2px;--tw-border-opacity: 1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.voice-chat-input-spinner-small{height:1.25rem;width:1.25rem}@keyframes spin{to{transform:rotate(360deg)}}.voice-chat-input-spinner-small{animation:spin 1s linear infinite;border-radius:9999px;border-width:2px;--tw-border-opacity: 1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1));border-top-color:transparent}.voice-chat-input-loading-text{margin-left:.5rem;font-size:.875rem;line-height:1.25rem;--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.voice-chat-input-livekit-container{pointer-events:none;position:absolute;right:0;top:0;opacity:0}@keyframes pulse{0%{transform:scaleY(.3)}50%{transform:scaleY(1)}to{transform:scaleY(.3)}}.voice-chat-input-activity-bar{width:.25rem;border-radius:9999px;animation:pulse 1.5s infinite;animation-delay:var(--delay)}.voice-chat-input-agent-state-listening .voice-chat-input-activity-bar{background-color:var(--color-voice-listening)}.voice-chat-input-agent-state-speaking .voice-chat-input-activity-bar{background-color:var(--color-voice-speaking)}.voice-chat-input-agent-state-thinking .voice-chat-input-activity-bar{background-color:var(--color-voice-thinking)}:root{--chat-widget-primary-color-hover: color-mix( in srgb, var(--chat-widget-primary-color) 85%, black );--color-voice-listening: #3b82f6;--color-voice-speaking: #10b981;--color-voice-thinking: #f59e0b;--color-voice-disconnected: #ef4444cb;--color-whatsapp: #1eb655;--opacity-disabled: .7;--opacity-hover: .8;--opacity-normal: 1;--color-input-background: var(--chat-widget-secondary-color);--color-input-background-avatar-view: var(--chat-widget-primary-color);--color-input-text: var(--chat-widget-message-text-color);--color-input-placeholder-text: color-mix( in srgb, var(--color-input-text) 70%, white );--color-input-placeholder-opacity: 70%;--color-input-placeholder-opacity-focus: 80%;--input-default-height: 40px;--input-min-height: 40px;--input-max-height: 120px;--input-max-height-tablet: 100px;--input-max-height-mobile: 80px;--input-line-height: 20px;--input-text-padding-horizontal: 4px;--input-text-padding-vertical: 0px;--input-text-padding: 0 var(--input-text-padding-horizontal);--input-container-padding: 6px 8px;--input-container-padding-sleek: 4px 4px;--input-font-size: var(--chat-widget-message-font-size);--input-font-weight: 400;--input-font-weight-focus: 500;--input-font-weight-bold: 600;--color-scrollbar-input-thumb: color-mix( in srgb, var(--chat-widget-primary-color) 75%, transparent );--color-scrollbar-input-thumb-hover: color-mix( in srgb, var(--chat-widget-primary-color) 90%, transparent );--color-scrollbar-input-thumb-avatar-view: color-mix( in srgb, var(--chat-widget-secondary-color) 75%, transparent );--color-scrollbar-input-thumb-hover-avatar-view: color-mix( in srgb, var(--chat-widget-secondary-color) 90%, transparent );--color-scrollbar-input-track: transparent;--input-scrollbar-width: thin;--input-scrollbar-border-radius: 2.5px;--input-scrollbar-thumb-hover-opacity: var(--opacity-hover);--button-size-primary: 32px;--button-padding-primary: 4px;--button-size-secondary: 24px;--color-button-background-primary: var(--chat-widget-primary-color);--color-button-background-primary-avatar-view: var( --chat-widget-secondary-color );--color-button-background-hover: var(--chat-widget-primary-color-hover);--color-button-text: var(--chat-widget-button-content-color);--color-button-fill: var(--chat-widget-button-content-color);--button-opacity-normal: var(--opacity-normal);--button-opacity-hover: var(--opacity-hover);--button-opacity-disabled: var(--opacity-disabled);--button-icon-size-secondary: 16px;--button-icon-size-primary: 20px;--message-scrollbar-width: thin;--message-scrollbar-width-px: 6px;--message-scrollbar-border-radius: 3px;--color-scrollbar-message-thumb-default: rgb(209 213 219);--color-scrollbar-message-thumb-hover: rgb(156 163 175);--color-scrollbar-message-thumb-theme: var( --chat-widget-button-content-color, var(--chat-widget-secondary-color) );--color-scrollbar-message-thumb-hover-mix: color-mix( in srgb, var(--chat-widget-button-content-color, var(--chat-widget-secondary-color)) 80%, var(--chat-widget-primary-color) );--color-scrollbar-message-track: transparent;--message-text-color: var(--chat-widget-message-text-color);--message-font-size: var(--chat-widget-message-font-size);--message-bubble-background-color: var(--chat-widget-secondary-color);--message-bubble-icon-color: var(--chat-widget-secondary-color);--engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);--engagement-hook-image-height: var( --chat-widget-engagement-hook-image-height );--transition-fast: .2s ease;--transition-normal: all .3s ease;--transition-slow: .4s cubic-bezier(.4, 0, .2, 1);--transition-slow-ease: .4s ease;--border-radius-small: 2.5px;--border-radius-medium: 3px;--border-radius-large: 12px;--border-radius-xl: 16px;--border-radius-2xl: 20px;--border-radius-full: 9999px;--spacing-gap-xs: .5px;--spacing-gap-sm: 4px;--spacing-gap-md: 8px;--spacing-gap-lg: 12px;--spacing-gap-xl: 16px;--z-index-base: 1;--z-index-elevated: 10;--z-index-high: 20;--z-index-maximum: 9999;--border-width-thin: 1px;--border-width-medium: 2px;--border-width-thick: 4px;--shadow-sm: 0 1px 2px rgba(0, 0, 0, .05);--shadow-md: 0 4px 6px rgba(0, 0, 0, .1);--shadow-lg: 0 10px 15px rgba(0, 0, 0, .1);--shadow-xl: 0 20px 25px rgba(0, 0, 0, .1);--sleek-main-min-height: 0px;--sleek-border-radius: var(--border-radius-large);--sleek-main-bg: var(--color-sleek-main-bg);--sleek-main-border: var(--color-sleek-main-border);--sleek-main-text-color: var(--color-sleek-main-text);--color-sleek-main-bg: color-mix( in srgb, var(--chat-widget-primary-color) 10%, white );--color-sleek-main-border: var(--chat-widget-secondary-color);--color-sleek-main-text: var(--chat-widget-message-text-color);--color-gradient-1: var(--chat-widget-primary-color);--color-gradient-2: var(--chat-widget-secondary-color);--color-gradient-3: color-mix( in srgb, var(--chat-widget-primary-color) 60%, var(--chat-widget-secondary-color) );--color-gradient-4: color-mix( in srgb, var(--chat-widget-primary-color) 40%, var(--chat-widget-secondary-color) );--color-accent: color-mix( in srgb, var(--chat-widget-primary-color) 70%, var(--chat-widget-secondary-color) );--color-glow: color-mix( in srgb, var(--chat-widget-primary-color) 30%, transparent );--gradient-1: var(--color-gradient-1);--gradient-2: var(--color-gradient-2);--gradient-3: var(--color-gradient-3);--gradient-4: var(--color-gradient-4);--accent: var(--color-accent);--glow: var(--color-glow);--whatsapp-color: var(--color-whatsapp);--gray-200: var(--color-gray-200);--gray-300: var(--color-gray-300);--gray-400: var(--color-gray-400);--gray-500: var(--color-gray-500);--gray-600: var(--color-gray-600);--gray-700: var(--color-gray-700);--gray-800: var(--color-gray-800);--blue-500: var(--color-blue-500);--blue-600: var(--color-blue-600);--slate-700: var(--color-slate-700);--slate-800: var(--color-slate-800)}@supports not (color: color-mix(in srgb,#000 50%,#fff)){:root{--chat-widget-primary-color-hover: #000991;--color-gradient-1: #000aaa;--color-gradient-2: #6c757d;--color-gradient-3: #6c757d;--color-gradient-4: #6c757d;--color-accent: #6c757d;--color-glow: rgba(0, 10, 170, .3);--color-sleek-main-bg: rgba(0, 10, 170, .1);--color-sleek-main-border: rgba(108, 117, 125, .8);--color-scrollbar-input-thumb: rgba(0, 10, 170, .6);--color-scrollbar-input-thumb-hover: rgba(0, 10, 170, .85);--gradient-1: var(--color-gradient-1);--gradient-2: var(--color-gradient-2);--gradient-3: var(--color-gradient-3);--gradient-4: var(--color-gradient-4);--accent: var(--color-accent);--glow: var(--color-glow);--sleek-main-bg: var(--color-sleek-main-bg);--sleek-main-border: var(--color-sleek-main-border);--input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);--input-scrollbar-thumb-hover-color: var( --color-scrollbar-input-thumb-hover )}}.voice-alternate-view{display:flex;height:100%;flex-direction:column}.voice-alternate-header{position:relative;flex:none;display:flex;flex-direction:column}.voice-alternate-header .chat-header-content{position:relative;z-index:10;margin-left:auto;margin-right:auto;display:flex;max-width:32rem;align-items:center;justify-content:space-between}.voice-alternate-header .chat-header-text{font-size:1.125rem;line-height:1.75rem;font-weight:600;text-shadow:none}.voice-alternate-header .chat-header-subtitle{font-size:.875rem;line-height:1.25rem;text-shadow:none}.voice-alternate-main{display:flex;flex:1 1 0%;flex-direction:column;align-items:center;overflow:hidden;position:relative}.voice-alternate-content-wrapper{display:flex;flex-direction:column;align-items:center;flex:1;width:100%;position:relative}.voice-alternate-message-container{margin-left:auto;margin-right:auto;width:95%;padding:.5rem;flex:1;display:flex;flex-direction:column;position:relative;z-index:1}.voice-alternate-message-box{border-radius:1rem;background-color:transparent;flex:1;display:flex;align-items:flex-start;justify-content:space-between;min-height:100px}.voice-alternate-message-speaker{position:relative;z-index:10;overflow:hidden;border-radius:9999px;width:12px;height:12px;display:flex;align-self:center;margin-top:0;flex-shrink:0;background:#e5e7eb}.voice-alternate-message-speaker.listening{background:#8b5cf6}.voice-alternate-message-speaker.speaking{background:#058158}.voice-alternate-message-text{text-align:left;font-size:.875rem;line-height:1.25rem;font-style:normal;color:#374151cc;font-size:14px;line-height:1.25;flex-grow:1;margin-left:12px;display:flex;align-items:center;min-height:100%}.voice-alternate-message-text.listening,.voice-alternate-message-text.speaking{text-align:left;font-size:.875rem;line-height:1.25rem;font-style:normal;line-height:1.625;--tw-text-opacity: 1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.avatar{position:relative;width:350px;height:350px;overflow:hidden}.face{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;will-change:transform}.eye-blink{position:absolute;top:36%;left:14%;width:72%;height:14%;background:#f2f2f2;opacity:0;pointer-events:none;transition:opacity .05s linear}.blink .eye-blink{opacity:1}.mouth{position:absolute;bottom:24%;left:50%;width:26%;height:6%;background:#00000038;border-radius:0 0 999px 999px;transform-origin:top;transform:translate(-50%) scaleY(var(--mouth));transition:transform .04s linear;pointer-events:none}.avatar{animation:breathe 5.2s ease-in-out infinite}@keyframes breathe{0%{transform:translateY(0) scale(1)}50%{transform:translateY(-1px) scale(1.008)}to{transform:translateY(0) scale(1)}}@keyframes sway{0%{rotate:0deg}50%{rotate:.3deg}to{rotate:0deg}}.avatar.listening{filter:brightness(.96)}.avatar.speaking{filter:brightness(1.04)}@media (max-width: 768px){.voice-alternate-main{display:flex;flex:1 1 0%;flex-direction:column;align-items:center;overflow:hidden;position:relative}.voice-alternate-content-wrapper{padding-bottom:100px}.voice-alternate-message-box{min-height:60px}}:root{--chat-widget-width: 600px;--chat-widget-height: 650px;--chat-widget-primary-color: #6366f1;--chat-widget-primary-color-hover: #4f46e5;--chat-widget-border-radius: 24px}@media (max-width: 768px){:root{--chat-widget-width: 95vw;--chat-widget-height: 85vh;--chat-widget-border-radius: 12px}}.chat-widget-open-button{position:fixed;border-radius:9999px;--tw-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);--tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;background-color:var(--chat-widget-primary-color);color:var(--chat-widget-button-content-color);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);z-index:9999}.chat-widget-open-button.position-bottom-right{bottom:1rem;right:1rem}.chat-widget-open-button.position-bottom-left{bottom:1rem;left:1rem}.chat-widget-open-button.position-top-right{top:1rem;right:1rem}.chat-widget-open-button.position-top-left{top:1rem;left:1rem}.chat-widget-open-button:hover{background-color:var(--chat-widget-primary-color-hover);transform:scale(1.1) rotate(5deg);box-shadow:0 8px 25px #6366f166}.chat-widget-open-icon{height:1.5rem;width:1.5rem}.chat-widget-container{overflow:hidden;--tw-shadow: 0 25px 50px -12px rgb(0 0 0 / .25);--tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);transition-property:all;transition-duration:.3s;transition-timing-function:cubic-bezier(.4,0,.2,1);width:var(--chat-widget-width);height:var(--chat-widget-height);border-radius:var(--chat-widget-border-radius);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:none!important;background:var(--chat-widget-primary-color);transform:none!important;will-change:height,width;z-index:9999;position:fixed!important}.chat-widget-container.position-bottom-right{bottom:1rem;right:1rem;top:auto!important;left:auto!important}.chat-widget-container.position-bottom-left{bottom:1rem;left:1rem;top:auto!important;right:auto!important}.chat-widget-container.position-top-right{top:1rem;right:1rem;bottom:auto!important;left:auto!important}.chat-widget-container.position-top-left{top:1rem;left:1rem;bottom:auto!important;right:auto!important}.chat-widget-container.sleek-view-mode{height:auto;min-height:60px;max-height:var(--chat-widget-height);transition:height .4s cubic-bezier(.4,0,.2,1);border-radius:0;background:transparent!important;border:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:none!important;overflow:visible;position:fixed!important;transform:none!important;will-change:height;z-index:9999;display:flex;flex-direction:column;justify-content:flex-end}.chat-widget-container.sleek-view-mode.position-bottom-right{bottom:1rem!important;right:1rem!important;top:auto!important;left:auto!important}.chat-widget-container.sleek-view-mode.position-bottom-left{bottom:1rem!important;left:1rem!important;top:auto!important;right:auto!important}.chat-widget-container.sleek-view-mode.position-top-right{top:1rem!important;right:1rem!important;bottom:auto!important;left:auto!important}.chat-widget-container.sleek-view-mode.position-top-left{top:1rem!important;left:1rem!important;bottom:auto!important;right:auto!important}@media (max-width: 768px){.chat-widget-container{width:auto;max-width:none}.chat-widget-container.position-bottom-right,.chat-widget-container.position-bottom-left{bottom:.5rem;left:.5rem;right:.5rem}.chat-widget-container.position-top-right,.chat-widget-container.position-top-left{top:.5rem;left:.5rem;right:.5rem}.chat-widget-container.sleek-view-mode{min-height:100px;max-height:85vh;display:flex;flex-direction:column;justify-content:flex-end;background:transparent!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;border:none!important;box-shadow:none!important;z-index:9999}.chat-widget-container.sleek-view-mode.position-bottom-right,.chat-widget-container.sleek-view-mode.position-bottom-left{bottom:.5rem!important;left:.5rem!important;right:.5rem!important;top:auto!important}.chat-widget-container.sleek-view-mode.position-top-right,.chat-widget-container.sleek-view-mode.position-top-left{top:.5rem!important;left:.5rem!important;right:.5rem!important;bottom:auto!important}}.chat-widget-container-closed{display:none!important;height:0!important;width:0!important;overflow:hidden!important;pointer-events:none!important}.chat-widget-inner-layout{display:flex;height:100%;flex-direction:column}.chat-widget-header-section{flex:none}.chat-widget-messages-section{position:relative;flex:1 1 0%;overflow:hidden}.chat-widget-input-section{flex:none}')),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}}();
+!function(){"use strict";try{if("undefined"!=typeof document){var e=document.createElement("style");e.appendChild(document.createTextNode(':root{--message-popup-image-width: var(--engagement-hook-image-width);--message-popup-image-height: var(--engagement-hook-image-height);--message-popup-offset: 1rem}.message-popup-figurine{position:fixed;width:var(--message-popup-image-width);height:var(--message-popup-image-height);z-index:2147483646;-o-object-fit:cover;object-fit:cover;-o-object-position:center top;object-position:center top;pointer-events:none}.message-popup-figurine-bottom-left{bottom:var(--message-popup-offset);left:var(--message-popup-offset);top:auto;right:auto}.message-popup-figurine-bottom-right{bottom:var(--message-popup-offset);right:var(--message-popup-offset);top:auto;left:auto}.message-popup-figurine-top-left{top:var(--message-popup-offset);left:var(--message-popup-offset);bottom:auto;right:auto}.message-popup-figurine-top-right{top:var(--message-popup-offset);right:var(--message-popup-offset);bottom:auto;left:auto}.message-popup-container{position:fixed;z-index:2147483647;pointer-events:auto}.message-popup-container-bottom-left{bottom:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);left:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);top:auto;right:auto}.message-popup-container-bottom-right{bottom:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);right:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);top:auto;left:auto}.message-popup-container-top-left{top:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);left:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);bottom:auto;right:auto}.message-popup-container-top-right{top:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);right:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);bottom:auto;left:auto}.message-popup-content{padding:8px;background-color:var(--message-bubble-background-color);border-radius:12px;box-shadow:0 4px 12px #0000001a;min-width:220px;max-width:320px;display:flex;align-items:center;cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;font-size:var(--message-font-size);color:var(--message-text-color);position:relative}.message-popup-text-container{flex:1}.message-popup-text{font-size:var(--message-font-size);color:var(--message-text-color);margin:0;word-break:break-word}.message-popup-close-button{position:absolute;top:-10px;right:-10px;width:var(--button-size-secondary);height:var(--button-size-secondary);border-radius:9999px;border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 50%,white);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white);color:var(--color-button-text);box-shadow:0 4px 14px color-mix(in srgb,var(--glow) 60%,transparent),0 2px 6px color-mix(in srgb,var(--chat-widget-primary-color) 18%,transparent);cursor:pointer;overflow:hidden;z-index:20;padding:0;margin-left:0;pointer-events:auto;display:flex;align-items:center;justify-content:center;transition:all .2s ease}.message-popup-close-button:hover{transform:translateY(-1px) scale(1.05);box-shadow:0 8px 20px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent),0 4px 12px color-mix(in srgb,var(--chat-widget-primary-color) 20%,transparent);background:color-mix(in srgb,var(--chat-widget-primary-color-hover) 80%,white)}.message-popup-close-button:focus{outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--glow) 80%,transparent),0 8px 22px color-mix(in srgb,var(--chat-widget-primary-color) 32%,transparent);transform:translateY(-1px) scale(1.03)}.message-popup-close-button:active{transform:translateY(0) scale(.97);box-shadow:0 3px 10px color-mix(in srgb,var(--chat-widget-primary-color) 24%,transparent)}.message-popup-close-button svg{width:calc(var(--button-size-secondary) * .8);height:calc(var(--button-size-secondary) * .8);display:block;flex-shrink:0}.chat-header-container{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--chat-widget-primary-color) 0%,color-mix(in srgb,var(--chat-widget-primary-color) 90%,var(--chat-widget-primary-color-hover) 10%) 100%);transition:all .3s ease}.chat-header-container:before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--chat-widget-primary-color) 85%,var(--chat-widget-secondary-color) 15%),transparent);transition:left .6s ease}.chat-header-container:hover:before{left:100%}.chat-header-container:hover{box-shadow:0 6px 20px color-mix(in srgb,var(--chat-widget-secondary-color) 60%,transparent);transform:translateY(-1px)}.chat-header-content{position:relative;z-index:10;margin-left:auto;margin-right:auto;display:flex;max-width:32rem;align-items:center;justify-content:space-between}.chat-header-left{display:flex;align-items:center;gap:.5rem;padding-left:.5rem;transition:transform .2s ease}.chat-header-left:hover{transform:scale(1.02)}.chat-header-text-container{display:flex;flex-direction:column}.chat-header-text{font-size:1.125rem;line-height:1.75rem;font-weight:600;color:var(--chat-widget-button-content-color);text-shadow:0 2px 4px rgba(0,0,0,.2);transition:all .2s ease}.chat-header-subtitle{font-size:.875rem;line-height:1.25rem;color:var(--chat-widget-button-content-color);text-shadow:0 1px 2px rgba(0,0,0,.1);transition:all .2s ease}.chat-header-logo{border-radius:.5rem;transition:all .3s ease;filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))}.chat-header-logo:hover{transform:scale(1.1) rotate(5deg);filter:drop-shadow(0 4px 8px rgba(0,0,0,.2))}.chat-header-logo{display:block;flex-shrink:0;-o-object-fit:contain;object-fit:contain;width:36px;height:36px;min-width:32px;min-height:32px;aspect-ratio:1;border-radius:6px}.chat-header-actions{display:flex;align-items:center;gap:.25rem}.chat-header-new-chat-button{color:var(--chat-widget-button-content-color);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;border-radius:.75rem;padding:.375rem}.chat-header-new-chat-button:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000);--tw-ring-color: rgb(255 255 255 / .3)}.chat-header-new-chat-button{min-width:32px;min-height:32px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:.5px solid;border-color:var(--chat-widget-secondary-color);color:var(--chat-widget-button-content-color)}.chat-header-new-chat-button:hover{color:var(--chat-widget-button-content-color)}.chat-header-new-chat-button:before{content:"";position:absolute;top:50%;left:50%;width:0;height:0;background:#ffffff1a;border-radius:50%;transform:translate(-50%,-50%);transition:width .3s ease,height .3s ease}.chat-header-new-chat-button:hover:before{width:80px;height:80px}.chat-header-new-chat-button:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 4px 12px #0003}.chat-header-new-chat-button:active{transform:translateY(0) scale(.98)}.chat-header-new-chat-icon{position:relative;z-index:10;height:1.25rem;width:1.25rem;stroke-width:2.5;transition:transform .2s ease}.chat-header-new-chat-button:hover .chat-header-new-chat-icon{transform:rotate(90deg)}.chat-header-close-button{color:var(--chat-widget-button-content-color);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;border-radius:.75rem;padding:.375rem}.chat-header-close-button:hover{background-color:#ef444433}.chat-header-close-button:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000);--tw-ring-color: rgb(252 165 165 / .5)}.chat-header-close-button{min-width:32px;min-height:32px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:.5px solid;border-color:var(--chat-widget-secondary-color);color:var(--chat-widget-button-content-color)}.chat-header-close-button:hover{color:var(--chat-widget-button-content-color)}.chat-header-close-button:before{content:"";position:absolute;top:50%;left:50%;width:0;height:0;background:#ef444433;border-radius:50%;transform:translate(-50%,-50%);transition:width .3s ease,height .3s ease}.chat-header-close-button:hover:before{width:80px;height:80px}.chat-header-close-button:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 4px 12px #ef44444d}.chat-header-close-button:active{transform:translateY(0) scale(.98)}.chat-header-close-icon{position:relative;z-index:10;height:1.25rem;width:1.25rem;stroke-width:2.5;transition:transform .2s ease}.chat-header-close-button:hover .chat-header-close-icon{transform:rotate(90deg)}@media (max-width: 480px){.chat-header-content{padding-left:.5rem;padding-right:.5rem}.chat-header-new-chat-button,.chat-header-close-button{min-width:32px;min-height:32px}.chat-header-new-chat-icon,.chat-header-close-icon{height:1.25rem;width:1.25rem}}.chat-message-container{position:absolute;top:0;right:0;bottom:0;left:0;overflow-y:auto;overflow-x:hidden;scroll-behavior:smooth;padding:1rem;scrollbar-width:var(--message-scrollbar-width);scrollbar-color:var(--color-scrollbar-message-thumb-theme) var(--color-scrollbar-message-track)}.chat-message-container:hover{scrollbar-color:var(--color-scrollbar-message-thumb-theme) var(--color-scrollbar-message-track)}.chat-messages-scroll-container{scroll-behavior:smooth;scrollbar-width:var(--message-scrollbar-width);scrollbar-color:var(--color-scrollbar-message-thumb-theme) var(--color-scrollbar-message-track);-webkit-overflow-scrolling:touch;background:var(--chat-widget-primary-color)}.chat-messages-scroll-container::-webkit-scrollbar{width:var(--message-scrollbar-width)}.chat-messages-scroll-container::-webkit-scrollbar-track{background:transparent;border-radius:3px}.chat-messages-scroll-container::-webkit-scrollbar-thumb{background:var( --chat-widget-button-content-color, var(--chat-widget-secondary-color) );border-radius:3px;-webkit-transition:background-color .2s ease;transition:background-color .2s ease}.chat-messages-scroll-container::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--chat-widget-button-content-color, var(--chat-widget-secondary-color)) 80%,var(--chat-widget-primary-color))}.chat-message-bubble-container{display:flex;flex-direction:column}.chat-message-bubble-wrapper{margin-bottom:.75rem;display:flex;align-items:flex-start}.chat-message-bubble-wrapper-user{flex-direction:row-reverse}.chat-message-bubble-wrapper-user .chat-message-content-container{align-items:flex-end}.chat-message-bubble-wrapper-bot{flex-direction:row}.chat-message-avatar-container{flex-shrink:0;color:var(--message-bubble-icon-color)}.chat-message-user-icon{display:flex;height:2rem;width:2rem;align-items:center;justify-content:center;border-radius:9999px;color:var(--message-bubble-icon-color)}.chat-message-user-icon-inner{font-size:1.125rem;line-height:1.75rem;color:inherit}.chat-message-bot-icon{height:2rem;width:2rem;-o-object-fit:contain;object-fit:contain;color:var(--message-bubble-icon-color)}.chat-message-user-avatar{height:2rem;width:2rem;border-radius:9999px;-o-object-fit:cover;object-fit:cover}.chat-message-content-container{display:flex;flex-direction:column;min-width:50px}.chat-message-content-with-avatar,.chat-message-content-without-avatar{max-width:90%}.chat-message-bubble{border-radius:.75rem;padding:.5rem 1rem;word-wrap:break-word;overflow-wrap:break-word;width:-moz-fit-content;width:fit-content;max-width:100%;background:var(--message-bubble-background-color);color:var(--message-text-color)}.chat-message-bubble-user{margin-left:auto;margin-right:.25rem;border-bottom-right-radius:.125rem}.chat-message-bubble-bot{border-bottom-left-radius:.125rem}.chat-message-markdown{color:var(--tw-prose-body);max-width:65ch}.chat-message-markdown :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em;margin-bottom:1.25em}.chat-message-markdown :where([class~=lead]):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-lead);font-size:1.25em;line-height:1.6;margin-top:1.2em;margin-bottom:1.2em}.chat-message-markdown :where(a):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-links);text-decoration:underline;font-weight:500}.chat-message-markdown :where(strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-bold);font-weight:600}.chat-message-markdown :where(a strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(blockquote strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(thead th strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(ol):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:decimal;margin-top:1.25em;margin-bottom:1.25em;padding-inline-start:1.625em}.chat-message-markdown :where(ol[type=A]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-alpha}.chat-message-markdown :where(ol[type=a]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-alpha}.chat-message-markdown :where(ol[type=A s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-alpha}.chat-message-markdown :where(ol[type=a s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-alpha}.chat-message-markdown :where(ol[type=I]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-roman}.chat-message-markdown :where(ol[type=i]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-roman}.chat-message-markdown :where(ol[type=I s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-roman}.chat-message-markdown :where(ol[type=i s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-roman}.chat-message-markdown :where(ol[type="1"]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:decimal}.chat-message-markdown :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:disc;margin-top:1.25em;margin-bottom:1.25em;padding-inline-start:1.625em}.chat-message-markdown :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker{font-weight:400;color:var(--tw-prose-counters)}.chat-message-markdown :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker{color:var(--tw-prose-bullets)}.chat-message-markdown :where(dt):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;margin-top:1.25em}.chat-message-markdown :where(hr):not(:where([class~=not-prose],[class~=not-prose] *)){border-color:var(--tw-prose-hr);border-top-width:1px;margin-top:3em;margin-bottom:3em}.chat-message-markdown :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:500;font-style:italic;color:var(--tw-prose-quotes);border-inline-start-width:.25rem;border-inline-start-color:var(--tw-prose-quote-borders);quotes:"“""”""‘""’";margin-top:1.6em;margin-bottom:1.6em;padding-inline-start:1em}.chat-message-markdown :where(blockquote p:first-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:open-quote}.chat-message-markdown :where(blockquote p:last-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:close-quote}.chat-message-markdown :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:800;font-size:2.25em;margin-top:0;margin-bottom:.8888889em;line-height:1.1111111}.chat-message-markdown :where(h1 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:900;color:inherit}.chat-message-markdown :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:700;font-size:1.5em;margin-top:2em;margin-bottom:1em;line-height:1.3333333}.chat-message-markdown :where(h2 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:800;color:inherit}.chat-message-markdown :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;font-size:1.25em;margin-top:1.6em;margin-bottom:.6em;line-height:1.6}.chat-message-markdown :where(h3 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:700;color:inherit}.chat-message-markdown :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;margin-top:1.5em;margin-bottom:.5em;line-height:1.5}.chat-message-markdown :where(h4 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:700;color:inherit}.chat-message-markdown :where(img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(picture):not(:where([class~=not-prose],[class~=not-prose] *)){display:block;margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(video):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(kbd):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:500;font-family:inherit;color:var(--tw-prose-kbd);box-shadow:0 0 0 1px rgb(var(--tw-prose-kbd-shadows) / 10%),0 3px rgb(var(--tw-prose-kbd-shadows) / 10%);font-size:.875em;border-radius:.3125rem;padding-top:.1875em;padding-inline-end:.375em;padding-bottom:.1875em;padding-inline-start:.375em}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-code);font-weight:600;font-size:.875em}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:"`"}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:"`"}.chat-message-markdown :where(a code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(h1 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(h2 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-size:.875em}.chat-message-markdown :where(h3 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-size:.9em}.chat-message-markdown :where(h4 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(blockquote code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(thead th code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(pre):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-pre-code);background-color:var(--tw-prose-pre-bg);overflow-x:auto;font-weight:400;font-size:.875em;line-height:1.7142857;margin-top:1.7142857em;margin-bottom:1.7142857em;border-radius:.375rem;padding-top:.8571429em;padding-inline-end:1.1428571em;padding-bottom:.8571429em;padding-inline-start:1.1428571em}.chat-message-markdown :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)){background-color:transparent;border-width:0;border-radius:0;padding:0;font-weight:inherit;color:inherit;font-size:inherit;font-family:inherit;line-height:inherit}.chat-message-markdown :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:none}.chat-message-markdown :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:none}.chat-message-markdown :where(table):not(:where([class~=not-prose],[class~=not-prose] *)){width:100%;table-layout:auto;margin-top:2em;margin-bottom:2em;font-size:.875em;line-height:1.7142857}.chat-message-markdown :where(thead):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:1px;border-bottom-color:var(--tw-prose-th-borders)}.chat-message-markdown :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;vertical-align:bottom;padding-inline-end:.5714286em;padding-bottom:.5714286em;padding-inline-start:.5714286em}.chat-message-markdown :where(tbody tr):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:1px;border-bottom-color:var(--tw-prose-td-borders)}.chat-message-markdown :where(tbody tr:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:0}.chat-message-markdown :where(tbody td):not(:where([class~=not-prose],[class~=not-prose] *)){vertical-align:baseline}.chat-message-markdown :where(tfoot):not(:where([class~=not-prose],[class~=not-prose] *)){border-top-width:1px;border-top-color:var(--tw-prose-th-borders)}.chat-message-markdown :where(tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){vertical-align:top}.chat-message-markdown :where(th,td):not(:where([class~=not-prose],[class~=not-prose] *)){text-align:start}.chat-message-markdown :where(figcaption):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-captions);font-size:.875em;line-height:1.4285714;margin-top:.8571429em}.chat-message-markdown{--tw-prose-body: #374151;--tw-prose-headings: #111827;--tw-prose-lead: #4b5563;--tw-prose-links: #111827;--tw-prose-bold: #111827;--tw-prose-counters: #6b7280;--tw-prose-bullets: #d1d5db;--tw-prose-hr: #e5e7eb;--tw-prose-quotes: #111827;--tw-prose-quote-borders: #e5e7eb;--tw-prose-captions: #6b7280;--tw-prose-kbd: #111827;--tw-prose-kbd-shadows: 17 24 39;--tw-prose-code: #111827;--tw-prose-pre-code: #e5e7eb;--tw-prose-pre-bg: #1f2937;--tw-prose-th-borders: #d1d5db;--tw-prose-td-borders: #e5e7eb;--tw-prose-invert-body: #d1d5db;--tw-prose-invert-headings: #fff;--tw-prose-invert-lead: #9ca3af;--tw-prose-invert-links: #fff;--tw-prose-invert-bold: #fff;--tw-prose-invert-counters: #9ca3af;--tw-prose-invert-bullets: #4b5563;--tw-prose-invert-hr: #374151;--tw-prose-invert-quotes: #f3f4f6;--tw-prose-invert-quote-borders: #374151;--tw-prose-invert-captions: #9ca3af;--tw-prose-invert-kbd: #fff;--tw-prose-invert-kbd-shadows: 255 255 255;--tw-prose-invert-code: #fff;--tw-prose-invert-pre-code: #d1d5db;--tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);--tw-prose-invert-th-borders: #4b5563;--tw-prose-invert-td-borders: #374151;font-size:1rem;line-height:1.75}.chat-message-markdown :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5em;margin-bottom:.5em}.chat-message-markdown :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.375em}.chat-message-markdown :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.375em}.chat-message-markdown :where(.prose>ul>li p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.75em;margin-bottom:.75em}.chat-message-markdown :where(.prose>ul>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em}.chat-message-markdown :where(.prose>ul>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em}.chat-message-markdown :where(.prose>ol>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em}.chat-message-markdown :where(.prose>ol>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em}.chat-message-markdown :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.75em;margin-bottom:.75em}.chat-message-markdown :where(dl):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em;margin-bottom:1.25em}.chat-message-markdown :where(dd):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5em;padding-inline-start:1.625em}.chat-message-markdown :where(tbody td,tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){padding-top:.5714286em;padding-inline-end:.5714286em;padding-bottom:.5714286em;padding-inline-start:.5714286em}.chat-message-markdown :where(figure):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(.prose>:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(.prose>:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown{font-size:.875rem;line-height:1.7142857}.chat-message-markdown :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em}.chat-message-markdown :where([class~=lead]):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.2857143em;line-height:1.5555556;margin-top:.8888889em;margin-bottom:.8888889em}.chat-message-markdown :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.3333333em;margin-bottom:1.3333333em;padding-inline-start:1.1111111em}.chat-message-markdown :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:2.1428571em;margin-top:0;margin-bottom:.8em;line-height:1.2}.chat-message-markdown :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.4285714em;margin-top:1.6em;margin-bottom:.8em;line-height:1.4}.chat-message-markdown :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.2857143em;margin-top:1.5555556em;margin-bottom:.4444444em;line-height:1.5555556}.chat-message-markdown :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.4285714em;margin-bottom:.5714286em;line-height:1.4285714}.chat-message-markdown :where(img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(picture):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(picture>img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:0}.chat-message-markdown :where(video):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(kbd):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;border-radius:.3125rem;padding-top:.1428571em;padding-inline-end:.3571429em;padding-bottom:.1428571em;padding-inline-start:.3571429em}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em}.chat-message-markdown :where(h2 code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.9em}.chat-message-markdown :where(h3 code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8888889em}.chat-message-markdown :where(pre):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;line-height:1.6666667;margin-top:1.6666667em;margin-bottom:1.6666667em;border-radius:.25rem;padding-top:.6666667em;padding-inline-end:1em;padding-bottom:.6666667em;padding-inline-start:1em}.chat-message-markdown :where(ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em;padding-inline-start:1.5714286em}.chat-message-markdown :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em;padding-inline-start:1.5714286em}.chat-message-markdown :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.2857143em;margin-bottom:.2857143em}.chat-message-markdown :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.4285714em}.chat-message-markdown :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.4285714em}.chat-message-markdown :where(.prose-sm>ul>li p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5714286em;margin-bottom:.5714286em}.chat-message-markdown :where(.prose-sm>ul>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em}.chat-message-markdown :where(.prose-sm>ul>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.1428571em}.chat-message-markdown :where(.prose-sm>ol>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em}.chat-message-markdown :where(.prose-sm>ol>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.1428571em}.chat-message-markdown :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5714286em;margin-bottom:.5714286em}.chat-message-markdown :where(dl):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em}.chat-message-markdown :where(dt):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em}.chat-message-markdown :where(dd):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.2857143em;padding-inline-start:1.5714286em}.chat-message-markdown :where(hr):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2.8571429em;margin-bottom:2.8571429em}.chat-message-markdown :where(hr+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(h2+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(h3+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(h4+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(table):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;line-height:1.5}.chat-message-markdown :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:1em;padding-bottom:.6666667em;padding-inline-start:1em}.chat-message-markdown :where(thead th:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.chat-message-markdown :where(thead th:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.chat-message-markdown :where(tbody td,tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){padding-top:.6666667em;padding-inline-end:1em;padding-bottom:.6666667em;padding-inline-start:1em}.chat-message-markdown :where(tbody td:first-child,tfoot td:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.chat-message-markdown :where(tbody td:last-child,tfoot td:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.chat-message-markdown :where(figure):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(figure>*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:0}.chat-message-markdown :where(figcaption):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;line-height:1.3333333;margin-top:.6666667em}.chat-message-markdown :where(.prose-sm>:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(.prose-sm>:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown{max-width:none;text-align:left;color:var(--message-text-color)}.chat-message-markdown :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:.5em}.chat-message-markdown :where(p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown :where(ul,ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:.5em;padding-left:1rem}.chat-message-markdown :where(ul:last-child,ol:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:.25em}.chat-message-markdown :where(li:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-paragraph{margin-bottom:.5rem;text-align:left}.chat-message-paragraph:last-child{margin-bottom:0}.chat-message-unordered-list{margin-bottom:.5rem;list-style-type:disc;padding-left:1rem;text-align:left}.chat-message-unordered-list:last-child{margin-bottom:0}.chat-message-ordered-list{margin-bottom:.5rem;list-style-type:decimal;padding-left:1rem;text-align:left}.chat-message-ordered-list:last-child{margin-bottom:0}.chat-message-list-item{margin-bottom:.25rem;text-align:left}.chat-message-list-item:last-child{margin-bottom:0}.chat-message-code-block{margin-bottom:.5rem;overflow-x:auto;border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:0;text-align:left}.chat-message-code-block:last-child{margin-bottom:0}@media (prefers-color-scheme: dark){.chat-message-code-block{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-link{text-align:left;--tw-text-opacity: 1;color:rgb(37 99 235 / var(--tw-text-opacity, 1));text-decoration-line:underline}.chat-message-link:hover{--tw-text-opacity: 1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.chat-message-blockquote{margin-bottom:.5rem;border-left-width:4px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding-left:1rem;text-align:left;font-style:italic}.chat-message-blockquote:last-child{margin-bottom:0}.chat-message-heading-1{margin-bottom:.5rem;text-align:left;font-size:1.25rem;line-height:1.75rem;font-weight:700}.chat-message-heading-1:last-child{margin-bottom:0}.chat-message-heading-2{margin-bottom:.5rem;text-align:left;font-size:1.125rem;line-height:1.75rem;font-weight:700}.chat-message-heading-2:last-child{margin-bottom:0}.chat-message-heading-3{margin-bottom:.5rem;text-align:left;font-size:1rem;line-height:1.5rem;font-weight:700}.chat-message-heading-3:last-child{margin-bottom:0}.chat-message-heading-4{margin-bottom:.5rem;text-align:left;font-size:.875rem;line-height:1.25rem;font-weight:700}.chat-message-heading-4:last-child{margin-bottom:0}.chat-message-table-container{margin-bottom:.5rem;overflow-x:auto}.chat-message-table-container:last-child{margin-bottom:0}.chat-message-table{min-width:100%}.chat-message-table>:not([hidden])~:not([hidden]){--tw-divide-y-reverse: 0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse));--tw-divide-opacity: 1;border-color:rgb(229 231 235 / var(--tw-divide-opacity, 1))}.chat-message-table{text-align:left}.chat-message-table-header{--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem 1rem;text-align:left}.chat-message-table-cell{border-top-width:1px;padding:.5rem 1rem;text-align:left}.chat-message-inline-code{border-radius:.25rem;padding:.25rem}.chat-message-markdown-content .markdown-paragraph{text-align:left}.chat-message-markdown-content .markdown-code-block{overflow-x:auto;border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-code-block{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-code-block{font-size:11px;border:1px solid rgba(0,0,0,.1)}.chat-message-markdown-content .markdown-inline-code{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.125rem .25rem;font-size:.75rem;line-height:1rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-inline-code{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-inline-code{font-family:Monaco,Menlo,Ubuntu Mono,monospace}.chat-message-markdown-content .markdown-link{--tw-text-opacity: 1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.chat-message-markdown-content .markdown-link:hover{text-decoration-line:underline}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-link{--tw-text-opacity: 1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}}.chat-message-markdown-content .markdown-link{text-decoration:none}.chat-message-markdown-content .markdown-blockquote{border-left-width:4px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding-left:.75rem;font-style:italic}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-blockquote{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.chat-message-markdown-content .markdown-blockquote{margin:.5em 0;font-size:.9em;color:#374151}.chat-message-markdown-content .markdown-heading-1,.chat-message-markdown-content .markdown-heading-2,.chat-message-markdown-content .markdown-heading-3,.chat-message-markdown-content .markdown-heading-4{text-align:left;color:#111827}.chat-message-markdown-content .markdown-heading-1{font-size:1.2em}.chat-message-markdown-content .markdown-heading-2{font-size:1.1em}.chat-message-markdown-content .markdown-heading-3{font-size:1.05em}.chat-message-markdown-content .markdown-heading-4{font-size:1em}.chat-message-markdown-content .markdown-table-container{overflow-x:auto;margin:.5em 0}.chat-message-markdown-content .markdown-table{min-width:100%;border-collapse:collapse;font-size:.9em;border:1px solid #d1d5db}.chat-message-markdown-content .markdown-table-header{border-width:1px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.25rem .5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-table-header{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1));--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-table-header{font-size:.9em;font-weight:600}.chat-message-markdown-content .markdown-table-cell{border-width:1px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding:.25rem .5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-table-cell{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.chat-message-markdown-content .markdown-table-cell{font-size:.9em}.chat-message-markdown-content .markdown-syntax-highlighter{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-syntax-highlighter{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-syntax-highlighter{font-size:11px;border:1px solid rgba(0,0,0,.1);word-wrap:break-word;overflow-wrap:break-word;white-space:pre-wrap;line-break:anywhere}.chat-message-markdown-content .markdown-syntax-highlighter pre{margin:0;background:transparent}.chat-message-timestamp{margin-top:.25rem;font-size:10px;--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1));background:transparent}.chat-message-timestamp-user{text-align:right}.chat-message-timestamp-bot{text-align:left}.chat-message-audio{margin-top:.5rem;max-width:100%}.chat-message-loading{display:flex;align-items:center;justify-content:center;padding:1rem}.chat-message-loading-spinner{height:1.25rem;width:1.25rem}.chat-message-loading-spinner{animation:spin 1s linear infinite;--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.chat-message-separator{position:relative;margin-top:1rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;padding-top:1.5rem;padding-bottom:1.5rem}.chat-message-separator:before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:linear-gradient(to right,transparent,#e2e8f0,transparent);transform:translateY(-50%)}.chat-message-separator-text{position:relative;z-index:10;border-radius:9999px;border-width:1px;--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1));--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1));padding:.5rem 1rem;font-size:.75rem;line-height:1rem;--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1));--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / .05);--tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);font-style:italic;font-weight:500;letter-spacing:.5px;transition:all .2s ease;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.chat-message-separator-text:hover{--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1));--tw-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);--tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);transform:scale(1.02)}.chat-message-date-separator{background:color-mix(in srgb,var(--chat-widget-secondary-color) 80%,transparent 20%);color:color-mix(in srgb,var(--chat-widget-message-text-color) 80%,transparent 20%);font-weight:500;font-style:italic;letter-spacing:.5px}.chat-message-references-divider{margin-top:.5rem;margin-bottom:.5rem}.chat-message-references-divider-user{border-color:#fff3}.chat-message-references-divider-bot{--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.prose p,.prose-override p{margin-top:0!important;margin-bottom:.5em!important}.prose p:last-child,.prose-override p:last-child{margin-bottom:0!important}.prose ul,.prose ol,.prose-override ul,.prose-override ol{margin-top:0!important;margin-bottom:.5em!important;padding-left:1.25em!important}.prose ul:last-child,.prose ol:last-child,.prose-override ul:last-child,.prose-override ol:last-child{margin-bottom:0!important}.prose li,.prose-override li{margin-top:0!important;margin-bottom:.25em!important;padding-left:0!important}.prose li:last-child,.prose-override li:last-child{margin-bottom:0!important}.prose h1,.prose h2,.prose h3,.prose h4,.prose-override h1,.prose-override h2,.prose-override h3,.prose-override h4{margin-top:0!important;margin-bottom:.5em!important}.prose blockquote,.prose-override blockquote{margin-top:0!important;margin-bottom:.5em!important;padding-left:1em!important;font-style:italic!important}.prose table,.prose-override table,.prose pre,.prose-override pre{margin-top:0!important;margin-bottom:.5em!important}.prose code,.prose-override code{padding:.1em .25em!important}.markdown-renderer{width:100%}.markdown-paragraph{margin-bottom:.5rem}.markdown-paragraph:last-child{margin-bottom:0}.markdown-unordered-list{margin-bottom:.5rem;list-style-type:disc;padding-left:1rem}.markdown-unordered-list:last-child{margin-bottom:0}.markdown-ordered-list{margin-bottom:.5rem;list-style-type:decimal;padding-left:1rem}.markdown-ordered-list:last-child{margin-bottom:0}.markdown-list-item{margin-bottom:.25rem}.markdown-list-item:last-child{margin-bottom:0}.markdown-code-block{margin-bottom:.5rem}.markdown-code-block:last-child{margin-bottom:0}.markdown-inline-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.markdown-link{text-decoration-line:underline}.markdown-blockquote{margin-bottom:.5rem;padding-left:1rem;font-style:italic}.markdown-blockquote:last-child{margin-bottom:0}.markdown-heading-1,.markdown-heading-2,.markdown-heading-3,.markdown-heading-4{margin-bottom:.5rem;font-weight:700}.markdown-heading-1:last-child,.markdown-heading-2:last-child,.markdown-heading-3:last-child,.markdown-heading-4:last-child{margin-bottom:0}.markdown-table-container{margin-bottom:.5rem;overflow-x:auto}.markdown-table-container:last-child{margin-bottom:0}.markdown-table{min-width:100%;border-collapse:collapse}.markdown-table-header,.markdown-table-cell{padding:.25rem .5rem}.markdown-syntax-highlighter{width:100%;overflow-x:auto}.chat-input-container{position:sticky;bottom:0;left:0;right:0;padding:var(--input-container-padding);width:100%}.chat-input-base-container{position:relative;display:flex;align-items:center;height:auto;min-height:var(--input-min-height);width:100%}.chat-input-buttons-container-base{display:flex;flex-shrink:0;align-items:center;gap:.25rem}.chat-input-button-base{display:flex;align-items:center;justify-content:center;border-radius:9999px;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;width:var(--button-size-primary);height:var(--button-size-primary);padding:var(--button-padding-primary);color:var(--color-button-text);opacity:var(--button-opacity-normal)}.chat-input-icon-base{width:var(--button-icon-size-primary);height:var(--button-icon-size-primary);fill:var(--color-button-fill);color:var(--color-button-text);opacity:var(--button-opacity-normal)}.chat-input-wrapper{position:relative;margin-left:auto;margin-right:auto;max-width:56rem}.chat-input-container-standard-view,.chat-input-wrapper-standard-view{background:var(--color-input-background)}.chat-input-container-voice-view,.chat-input-wrapper-voice-view{background:var(--chat-widget-primary-color)}.chat-input-container-standard-view .chat-input-button-base{background:var(--color-button-background-primary)}.chat-input-container-voice-view .chat-input-button-base{background:var(--chat-widget-secondary-color)}.text-chat-input-wrapper{position:relative;display:flex;flex:1 1 0%;align-items:center;min-height:var(--input-min-height);font-size:var(--chat-widget-message-font-size);line-height:var(--input-line-height);padding-right:8px}.text-chat-input-placeholder{position:absolute;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--color-input-text);padding:var(--input-text-padding);opacity:var(--color-input-placeholder-opacity)}.text-chat-input-field{flex:1 1 0%;resize:none;outline:2px solid transparent;outline-offset:2px;display:flex;align-items:center;height:var(--input-default-height);min-height:inherit;max-height:inherit;font-size:inherit;line-height:inherit;color:var(--color-input-text);border:none;font-family:inherit;padding:var(--input-text-padding);box-sizing:border-box;font-weight:var(--input-font-weight);transition:var(--transition-normal);overflow-y:auto;word-wrap:break-word;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word;scrollbar-width:var(--input-scrollbar-width);-webkit-overflow-scrolling:touch;border-radius:16px}.chat-input-container-standard-view .text-chat-input-field{scrollbar-color:var(--color-scrollbar-input-thumb) var(--color-scrollbar-input-track)}.chat-input-container-voice-view .text-chat-input-field{border:.5px solid;border-color:var(--chat-widget-secondary-color);scrollbar-color:var(--color-scrollbar-input-thumb-avatar-view) var(--color-scrollbar-input-track)}.text-chat-input-field::-webkit-scrollbar{width:5px}.text-chat-input-field::-webkit-scrollbar-track{background:transparent;border-radius:2.5px}.text-chat-input-field::-webkit-scrollbar-thumb{border-radius:2.5px;-webkit-transition:background-color .2s ease;transition:background-color .2s ease}.chat-input-container-standard-view .text-chat-input-field::-webkit-scrollbar-thumb{background:var(--color-scrollbar-input-thumb)}.chat-input-container-standard-view .text-chat-input-field::-webkit-scrollbar-thumb:hover{background:var(--color-scrollbar-input-thumb-hover)}.chat-input-container-voice-view .text-chat-input-field::-webkit-scrollbar-thumb{background:var(--color-scrollbar-input-thumb-avatar-view)}.chat-input-container-voice-view .text-chat-input-field::-webkit-scrollbar-thumb:hover{background:var(--color-scrollbar-input-thumb-hover-avatar-view)}.text-chat-input-field:focus{outline:none;border:none;box-shadow:none}.text-chat-input-mic-button svg{fill:var(--color-button-fill);color:var(--color-button-text)}.text-chat-input-mic-button:hover{opacity:var(--button-opacity-hover)}.text-chat-input-send-button:hover:not(:disabled){opacity:var(--button-opacity-hover)}.text-chat-input-send-button:disabled{cursor:not-allowed;opacity:var(--button-opacity-disabled)}:root{--sleek-main-min-height: 0px;--sleek-border-radius: 12px;--chat-widget-primary-color: var(--chat-widget-primary-color);--chat-widget-primary-color-hover: var(--chat-widget-primary-color-hover);--chat-widget-secondary-color: var(--chat-widget-secondary-color);--sleek-main-text-color: var(--chat-widget-message-text-color);--sleek-main-bg: color-mix( in srgb, var(--chat-widget-primary-color) 10%, white );--sleek-main-border: var(--chat-widget-secondary-color);--gradient-1: var(--chat-widget-primary-color);--gradient-2: var(--chat-widget-secondary-color);--gradient-3: color-mix( in srgb, var(--chat-widget-primary-color) 60%, var(--chat-widget-secondary-color) );--gradient-4: color-mix( in srgb, var(--chat-widget-primary-color) 40%, var(--chat-widget-secondary-color) );--accent: color-mix( in srgb, var(--chat-widget-primary-color) 70%, var(--chat-widget-secondary-color) );--glow: color-mix(in srgb, var(--chat-widget-primary-color) 30%, transparent);--whatsapp-color: #25d366;--fallback-1: #000aaa;--fallback-2: #6c757d;--fallback-3: #6c757d;--fallback-4: #6c757d;--fallback-accent: #6c757d;--fallback-glow: rgba(0, 10, 170, .3);--sleek-main-bg-fallback: rgba(0, 10, 170, .1);--sleek-main-border-fallback: rgba(108, 117, 125, .8)}@supports not (color: color-mix(in srgb,#000 50%,#fff)){:root{--gradient-1: var(--fallback-1);--gradient-2: var(--fallback-2);--gradient-3: var(--fallback-3);--gradient-4: var(--fallback-4);--accent: var(--fallback-accent);--glow: var(--fallback-glow);--sleek-main-bg: var(--sleek-main-bg-fallback);--sleek-main-border: var(--sleek-main-border-fallback)}.sleek-chat-input-voice-button{background:#000aaabf;box-shadow:0 4px 16px #000aaa36,0 2px 8px #000aaa26}.sleek-chat-input-voice-button:hover{background:var(--fallback-1);opacity:.9;box-shadow:0 8px 24px #000aaa59,0 4px 16px #000aaa40}.sleek-chat-input-voice-button:focus{box-shadow:0 0 0 4px #000aaa3d,0 8px 24px #000aaa59}.sleek-chat-input-voice-button.voice-loading{background:var(--fallback-1);box-shadow:0 4px 16px #000aaa36,0 2px 8px #000aaa40}.thinking-dot{background:var(--chat-widget-primary-color);box-shadow:0 0 4px var(--chat-widget-primary-color)}.sleek-chat-input-field::-moz-placeholder{color:var(--fallback-2);opacity:.6}.sleek-chat-input-field::placeholder{color:var(--fallback-2);opacity:.6}.sleek-chat-input-field:focus::-moz-placeholder{color:var(--fallback-2);opacity:.8}.sleek-chat-input-field:focus::placeholder{color:var(--fallback-2);opacity:.8}.sleek-main.agent-speaking{background:var(--sleek-main-bg-fallback);border:2px solid var(--fallback-1);box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 20px #667eea33,inset 0 1px #ffffffb3;animation:speakingBorderPulseFallback 1.5s ease-in-out infinite}}.sleek-view-wrapper-container{width:100%;height:100%;position:relative;display:flex;flex-direction:column}.sleek-view{display:flex;flex-direction:column;min-height:calc(var(--sleek-main-min-height) + var(--input-min-height));max-height:100%;position:relative;width:100%;flex:1}.sleek-close-button{display:flex;align-items:center;justify-content:center;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.2s;position:absolute;top:-10px;width:var(--button-size-secondary);height:var(--button-size-secondary);border-radius:9999px;border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 50%,white);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white);color:var(--color-button-text);box-shadow:0 4px 14px color-mix(in srgb,var(--glow) 60%,transparent),0 2px 6px color-mix(in srgb,var(--chat-widget-primary-color) 18%,transparent);cursor:pointer;overflow:hidden;z-index:20}.sleek-close-button.position-bottom-right,.sleek-close-button.position-top-right{right:-10px;left:auto}.sleek-close-button.position-bottom-left,.sleek-close-button.position-top-left{left:-10px;right:auto}.sleek-close-button:hover{transform:translateY(-1px) scale(1.05);box-shadow:0 8px 20px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent),0 4px 12px color-mix(in srgb,var(--chat-widget-primary-color) 20%,transparent);background:color-mix(in srgb,var(--chat-widget-primary-color-hover) 80%,white)}.sleek-close-button:focus{outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--glow) 80%,transparent),0 8px 22px color-mix(in srgb,var(--chat-widget-primary-color) 32%,transparent);transform:translateY(-1px) scale(1.03)}.sleek-close-button:active{transform:translateY(0) scale(.97);box-shadow:0 3px 10px color-mix(in srgb,var(--chat-widget-primary-color) 24%,transparent)}.sleek-close-button svg{width:calc(var(--button-size-secondary) * .8);height:calc(var(--button-size-secondary) * .8);display:block;flex-shrink:0;filter:drop-shadow(0 0 1px rgba(255,255,255,.7)) drop-shadow(0 0 2px color-mix(in srgb,var(--glow) 60%,transparent))}:host([data-open="false"]) .sleek-view,spotinfo-chat[data-open=false] .sleek-view{display:none!important;height:0!important;width:0!important;overflow:hidden!important;pointer-events:none!important}.sleek-main{display:flex;flex-direction:column;align-items:center;overflow:hidden;position:relative;min-height:var(--sleek-main-min-height);max-height:none;transition:border .4s cubic-bezier(.4,0,.2,1);opacity:1;transform:translateY(0);flex:1;line-height:var(--input-line-height);background:var(--sleek-main-bg);border-radius:var(--sleek-border-radius);color:var(--color-input-text);border:2px solid var(--sleek-main-border);box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,inset 0 1px #ffffffb3;overflow:visible;animation:slideInUpEnhanced .8s cubic-bezier(.4,0,.2,1);will-change:transform,box-shadow,filter;z-index:2}.sleek-main:focus-within{transform:translateY(-2px) scale(1.01);box-shadow:0 16px 48px #0000001f,0 8px 24px #0000000f,0 0 0 4px var(--glow),inset 0 1px #ffffffe6;border-color:var(--accent)}.sleek-main[style*=height]{animation:contentAppear .6s cubic-bezier(.4,0,.2,1)}.sleek-main.agent-speaking{position:relative;background:var(--sleek-main-bg);border:2px solid var(--chat-widget-primary-color);transition:none;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 20px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent),inset 0 1px #ffffffb3;animation:speakingBorderPulse 1.5s ease-in-out infinite}.sleek-new-chat-button{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;background:#ffffffe6;color:var(--gradient-2);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px #0000001a,0 1px 4px #0000000f;position:absolute;overflow:hidden;z-index:10;opacity:.9;transform:scale(.95);font-size:11px;font-weight:500;letter-spacing:.025em;white-space:nowrap;min-width:60px;height:28px;border-radius:16px;border:1px solid rgba(226,232,240,.6)}.sleek-new-chat-button.position-bottom-right,.sleek-new-chat-button.position-top-right{bottom:0;right:0;top:auto;left:auto}.sleek-new-chat-button.position-bottom-left,.sleek-new-chat-button.position-top-left{bottom:0;left:0;top:auto;right:auto}.sleek-new-chat-button:hover{transform:scale(1.02);opacity:1;background:#fffffff2;box-shadow:0 4px 12px #00000026,0 2px 6px #0000001a;border-color:#e2e8f0cc}.sleek-new-chat-button:focus{outline:none;box-shadow:0 0 0 2px var(--glow),0 4px 12px #00000026;transform:scale(1.01);opacity:1;background:#fff}.sleek-new-chat-button:active{transform:scale(.98);transition:transform .1s ease;background:#f8fafcf2}.sleek-message-container{width:100%;font-size:.875rem;line-height:1.25rem;font-style:normal;line-height:1.625;flex:0 0 auto;display:flex;flex-direction:column;justify-content:center;text-align:left;min-height:inherit;font-size:var(--message-font-size);line-height:var(--input-line-height);transition:all .3s ease-in-out;background:transparent;color:var(--color-input-text);font-weight:500;position:relative;z-index:1;padding:8px}.sleek-message-container:empty{opacity:0;height:0;padding:0;min-height:0}.sleek-message-container:not(:empty){opacity:1;height:auto;padding:8px;animation:fadeInUpEnhanced .5s ease-out}.sleek-message-container:focus{font-weight:500;text-shadow:0 0 15px var(--glow)}.sleek-message-markdown{width:100%;font-size:var(--message-font-size);line-height:var(--input-line-height);color:var(--color-input-text)}.sleek-message-markdown .markdown-paragraph{margin-bottom:.5rem}.sleek-message-markdown .markdown-paragraph:last-child{margin-bottom:0}.sleek-message-markdown .markdown-paragraph{font-size:inherit;line-height:inherit;color:inherit}.sleek-message-markdown .markdown-code-block{overflow-x:auto;border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-code-block{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.sleek-message-markdown .markdown-code-block{font-size:11px;border:1px solid rgba(0,0,0,.1)}.sleek-message-markdown .markdown-inline-code{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.125rem .25rem;font-size:.75rem;line-height:1rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-inline-code{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.sleek-message-markdown .markdown-inline-code{font-family:Monaco,Menlo,Ubuntu Mono,monospace}.sleek-message-markdown .markdown-link{--tw-text-opacity: 1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.sleek-message-markdown .markdown-link:hover{text-decoration-line:underline}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-link{--tw-text-opacity: 1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}}.sleek-message-markdown .markdown-link{text-decoration:none}.sleek-message-markdown .markdown-blockquote{border-left-width:4px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding-left:.75rem;font-style:italic}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-blockquote{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.sleek-message-markdown .markdown-blockquote{margin:.5em 0;font-size:.9em}.sleek-message-markdown .markdown-heading-1,.sleek-message-markdown .markdown-heading-2,.sleek-message-markdown .markdown-heading-3,.sleek-message-markdown .markdown-heading-4{margin-bottom:.5rem;font-weight:700}.sleek-message-markdown .markdown-heading-1:last-child,.sleek-message-markdown .markdown-heading-2:last-child,.sleek-message-markdown .markdown-heading-3:last-child,.sleek-message-markdown .markdown-heading-4:last-child{margin-bottom:0}.sleek-message-markdown .markdown-heading-1,.sleek-message-markdown .markdown-heading-2,.sleek-message-markdown .markdown-heading-3,.sleek-message-markdown .markdown-heading-4{color:inherit}.sleek-message-markdown .markdown-heading-1{font-size:1.2em}.sleek-message-markdown .markdown-heading-2{font-size:1.1em}.sleek-message-markdown .markdown-heading-3{font-size:1.05em}.sleek-message-markdown .markdown-heading-4{font-size:1em}.sleek-message-markdown .markdown-table-container{overflow-x:auto;margin:.5em 0}.sleek-message-markdown .markdown-table{min-width:100%;border-collapse:collapse;font-size:.9em;border:1px solid rgba(0,0,0,.1)}.sleek-message-markdown .markdown-table-header,.sleek-message-markdown .markdown-table-cell{border-width:1px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding:.25rem .5rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-table-header,.sleek-message-markdown .markdown-table-cell{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.sleek-message-markdown .markdown-table-header,.sleek-message-markdown .markdown-table-cell{font-size:.9em}.sleek-message-markdown .markdown-syntax-highlighter{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-syntax-highlighter{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.sleek-message-markdown .markdown-syntax-highlighter{font-size:11px;border:1px solid rgba(0,0,0,.1);word-wrap:break-word;overflow-wrap:break-word;white-space:pre-wrap;line-break:anywhere}.sleek-message-markdown .markdown-syntax-highlighter pre{margin:0;background:transparent}.sleek-spacer{flex:none;height:16px;background:transparent;transition:all .4s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:center;margin:0;padding:0}.sleek-spacer-loading{height:16px;background:transparent;border-radius:8px;display:flex;align-items:center;justify-content:center}.thinking-dots{display:flex;align-items:center;gap:4px}.thinking-dot{width:4px;height:4px;border-radius:50%;background:var(--chat-widget-primary-color);animation:thinkingDotCompact 1.4s ease-in-out infinite;box-shadow:0 0 4px var(--chat-widget-primary-color)}.thinking-dot:nth-child(1){animation-delay:0s}.thinking-dot:nth-child(2){animation-delay:.2s}.thinking-dot:nth-child(3){animation-delay:.4s}.sleek-chat-input-container{width:100%;flex:none;background-color:transparent;margin-top:auto;height:auto;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#f8fafcf2,#f1f5f9d9);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-radius:var(--sleek-border-radius);transition:all .4s cubic-bezier(.4,0,.2,1);padding:4px;box-sizing:border-box;border:1px solid rgba(226,232,240,.4);box-shadow:0 8px 32px #0000001f,0 4px 16px #00000014,inset 0 1px #ffffff80;position:relative;overflow:visible;flex-shrink:0;align-self:flex-end;will-change:transform,box-shadow,filter,background;z-index:10}.sleek-chat-input-container:before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,var(--gradient-1) 0%,var(--gradient-2) 25%,var(--gradient-3) 50%,var(--gradient-4) 75%,var(--accent) 100%);opacity:0;transition:opacity .4s ease;border-radius:inherit;z-index:-1}.sleek-chat-input-container:hover:before{opacity:.1}.sleek-chat-input-container:focus-within{transform:translateY(-2px);box-shadow:0 12px 40px #00000026,0 8px 24px #0000001a,0 0 0 4px var(--glow),inset 0 1px #fff9;border-color:var(--accent);background:linear-gradient(135deg,#fffffffa,#f8fafceb)}.sleek-chat-input-container:focus-within .sleek-chat-input-field{font-weight:500}.sleek-main:focus-within~.sleek-chat-input-container{transform:none;box-shadow:0 8px 32px #0000001f,0 4px 16px #00000014,inset 0 1px #ffffff80;border-color:#e2e8f066;background:linear-gradient(135deg,#f8fafcf2,#f1f5f9d9)}.sleek-chat-input-container.agent-listening{position:relative;overflow:visible;transition:all .4s cubic-bezier(.4,0,.2,1)}.sleek-chat-input-container.agent-listening:before{content:"";position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:linear-gradient(90deg,var(--gradient-2) 0%,var(--gradient-3) 50%,var(--gradient-2) 100%);background-size:200% 100%;border-radius:calc(var(--sleek-border-radius) + 2px);animation:listeningEdgePulse 2s ease-in-out infinite;animation-delay:0s;z-index:-1;opacity:.7}.sleek-chat-input-container.agent-listening:after{content:"";position:absolute;top:1px;left:1px;right:1px;bottom:1px;background:linear-gradient(135deg,#fff6,#ffffff1a);border-radius:calc(var(--sleek-border-radius) - 1px);animation:listeningInnerHighlight 2s ease-in-out infinite;animation-delay:0s;z-index:-1;pointer-events:none}.sleek-chat-input-container.agent-speaking{background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 8%,white),color-mix(in srgb,var(--chat-widget-primary-color) 5%,white));border-color:color-mix(in srgb,var(--chat-widget-primary-color) 30%,white)}.sleek-chat-input-container.agent-speaking:focus-within{transform:translateY(-2px);box-shadow:0 12px 40px #00000026,0 8px 24px #0000001a,0 0 0 4px var(--glow),inset 0 1px #ffffff8c;border-color:var(--accent);background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 10%,white),color-mix(in srgb,var(--chat-widget-primary-color) 6%,white))}.sleek-chat-input-container.agent-speaking .sleek-menu-button{border-color:color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white)}.sleek-chat-input-container.agent-speaking .sleek-menu-button:hover{border-color:color-mix(in srgb,var(--chat-widget-primary-color) 55%,white);box-shadow:0 10px 24px color-mix(in srgb,var(--chat-widget-primary-color) 24%,transparent),0 6px 16px color-mix(in srgb,var(--chat-widget-primary-color) 16%,transparent)}.sleek-chat-input-container.agent-speaking .sleek-menu-button:focus{box-shadow:0 10px 24px color-mix(in srgb,var(--chat-widget-primary-color) 26%,transparent),0 0 0 3px var(--glow)}.sleek-chat-input-wrapper{display:flex;align-items:center;flex:1;min-height:var(--input-min-height);font-size:var(--input-font-size);line-height:var(--input-line-height);position:relative}.sleek-chat-input-field-placeholder{line-height:var(--input-line-height);position:absolute;top:50%;transform:translateY(-50%);font-size:var(--input-font-size);line-height:inherit;font-family:inherit;pointer-events:none;color:var(--color-input-placeholder-text);font-weight:400;transition:all .3s ease}.sleek-chat-input-field-placeholder-listening{font-size:calc(var(--input-font-size) * 1.15);font-weight:600}.sleek-voice-activity-bars{pointer-events:none;flex-shrink:0}.sleek-chat-input-field{flex:1 1 0%;resize:none;outline:2px solid transparent;outline-offset:2px;height:auto;min-height:inherit;max-height:120px;font-size:inherit;line-height:inherit;color:var(--color-input-text);background:transparent;border:none;font-family:inherit;padding:0;margin:0;box-sizing:border-box;font-weight:500;transition:all .3s ease;overflow-y:auto;word-wrap:break-word;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word;display:flex;align-items:center;scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--chat-widget-primary-color) 60%,transparent) transparent;-webkit-overflow-scrolling:touch}.sleek-chat-input-field::-webkit-scrollbar{width:5px}.sleek-chat-input-field::-webkit-scrollbar-track{background:transparent;border-radius:2.5px}.sleek-chat-input-field::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--chat-widget-primary-color) 60%,transparent);border-radius:2.5px;-webkit-transition:background-color .2s ease;transition:background-color .2s ease}.sleek-chat-input-field::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--chat-widget-primary-color) 85%,transparent)}.sleek-chat-input-field:focus{background:transparent;outline:none;border:none;box-shadow:none;font-weight:600}.sleek-chat-input-field:focus::-moz-placeholder{color:var(--color-input-placeholder-text);transform:translate(4px)}.sleek-chat-input-field:focus::placeholder{color:var(--color-input-placeholder-text);transform:translate(4px)}.sleek-chat-input-buttons{flex-shrink:0;gap:.125rem;align-self:center;margin:0;padding:0;height:auto;display:flex;align-items:center}svg.sleek-chat-input-whatsapp-icon{cursor:pointer;border-radius:9999px;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;width:var(--button-size-primary);height:var(--button-size-primary);fill:var(--whatsapp-color);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.6)) drop-shadow(0 0 2px color-mix(in srgb,var(--glow) 60%,transparent));overflow:visible;display:block;flex-shrink:0;will-change:transform,box-shadow,filter}path.sleek-chat-input-whatsapp-path{fill:inherit;transform-origin:center;transform-box:fill-box}svg.sleek-chat-input-whatsapp-icon:hover{transform:translateY(-2px) scale(1.1)}svg.sleek-chat-input-whatsapp-icon:focus{outline:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--glow) 60%,transparent);transform:translateY(-2px) scale(1.1)}.sleek-chat-input-voice-button{border-radius:9999px;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;background:var(--color-button-background-primary);color:var(--color-button-text);width:var(--button-size-primary);height:var(--button-size-primary);display:flex;padding:var(--button-padding-primary);align-items:center;justify-content:center;box-shadow:0 4px 16px color-mix(in srgb,var(--glow) 70%,transparent),0 2px 8px color-mix(in srgb,var(--color-button-background-primary) 15%,transparent);position:relative;overflow:hidden;border:2px solid transparent;opacity:var(--button-opacity-normal);will-change:transform,box-shadow,filter,background}.sleek-chat-input-voice-button:hover{transform:translateY(-2px) scale(1.1);box-shadow:0 8px 24px color-mix(in srgb,var(--color-button-background-primary) 35%,transparent),0 4px 16px color-mix(in srgb,var(--color-button-background-primary) 25%,transparent);opacity:var(--button-opacity-hover)}.sleek-chat-input-voice-button:hover svg{transform:scale(1.1)}.sleek-chat-input-voice-button:focus{outline:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--glow) 80%,transparent),0 8px 24px color-mix(in srgb,var(--color-button-background-primary) 35%,transparent);transform:translateY(-2px) scale(1.05)}.sleek-chat-input-voice-button.voice-active{box-shadow:0 4px 16px #a7f3d04d,0 2px 8px #d1fae540;animation:pulse 2s ease-in-out infinite}.sleek-chat-input-voice-button.voice-loading{background:var(--color-button-background-primary);box-shadow:0 4px 16px color-mix(in srgb,var(--glow) 70%,transparent),0 2px 8px color-mix(in srgb,var(--color-button-background-primary) 25%,transparent);cursor:not-allowed;animation:shimmer 2s infinite}@keyframes slideInUpEnhanced{0%{opacity:0;filter:blur(10px)}50%{opacity:.7;transform:translateY(15px) scale(.98);filter:blur(5px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0px)}}@keyframes floatMain{0%,to{transform:translateY(0) rotate(0)}25%{transform:translateY(-3px) rotate(.5deg)}50%{transform:translateY(-6px) rotate(0)}75%{transform:translateY(-3px) rotate(-.5deg)}}@keyframes contentAppear{0%{opacity:.7;transform:scale(.98)}to{opacity:1;transform:scale(1)}}@keyframes fadeInUpEnhanced{0%{opacity:0;transform:translateY(15px) scale(.95);filter:blur(5px)}50%{opacity:.7;transform:translateY(7px) scale(.98);filter:blur(2px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0px)}}@keyframes gradientShift{0%,to{background-position:0% 50%}50%{background-position:100% 50%}}@keyframes speakingBorderFlow{0%{background-position:0% 50%}to{background-position:300% 50%}}@keyframes speakingBorderPulseFallback{0%{border-color:#667eea;border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px #667eea33,inset 0 1px #ffffffb3}25%{border-color:#00d4ff;border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px #00d4ff66,inset 0 1px #fffc}50%{border-color:#f093fb;border-width:2px;box-shadow:0 16px 48px #0000001f,0 8px 24px #0000000f,0 0 30px #f093fb80,inset 0 1px #ffffffe6}75%{border-color:#f5576c;border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px #f5576c66,inset 0 1px #fffc}to{border-color:#667eea;border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px #667eea33,inset 0 1px #ffffffb3}}@keyframes speakingBorderPulse{0%{border-color:var(--chat-widget-primary-color);border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px color-mix(in srgb,var(--chat-widget-primary-color) 15%,transparent),inset 0 1px #ffffffb3}25%{border-color:var(--accent);border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px color-mix(in srgb,var(--accent) 40%,transparent),inset 0 1px #fffc}50%{border-color:var(--gradient-3);border-width:2px;box-shadow:0 16px 48px #0000001f,0 8px 24px #0000000f,0 0 30px color-mix(in srgb,var(--gradient-3) 50%,transparent),inset 0 1px #ffffffe6}75%{border-color:var(--gradient-4);border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px color-mix(in srgb,var(--gradient-4) 40%,transparent),inset 0 1px #fffc}to{border-color:var(--chat-widget-primary-color);border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px color-mix(in srgb,var(--chat-widget-primary-color) 15%,transparent),inset 0 1px #ffffffb3}}@keyframes listeningEdgePulse{0%{background-position:0% 50%;opacity:.5}50%{background-position:100% 50%;opacity:.8}to{background-position:0% 50%;opacity:.5}}@keyframes listeningInnerHighlight{0%,to{opacity:.3}50%{opacity:.6}}@keyframes float{0%,to{transform:translateY(0)}50%{transform:translateY(-4px)}}@keyframes thinkingDotCompact{0%,60%,to{opacity:.4;transform:scale(.8);box-shadow:0 0 4px var(--chat-widget-primary-color)}30%{opacity:1;transform:scale(1.2);box-shadow:0 0 8px var(--chat-widget-primary-color)}}@keyframes pulse{0%,to{box-shadow:0 4px 16px color-mix(in srgb,var(--gradient-4) 40%,transparent),0 2px 8px color-mix(in srgb,var(--gradient-3) 30%,transparent)}50%{box-shadow:0 6px 20px color-mix(in srgb,var(--gradient-4) 60%,transparent),0 4px 16px color-mix(in srgb,var(--gradient-3) 50%,transparent)}}@keyframes shimmer{0%{background-position:-200% 0}to{background-position:200% 0}}@media (max-width: 768px){.sleek-new-chat-button{bottom:0;right:0;font-size:10px;min-width:55px;height:26px;border-radius:13px}.sleek-spacer-loading{border-radius:6px}.thinking-dot{width:3px;height:3px}.thinking-dots{gap:3px}.sleek-main{display:flex;flex-direction:column;align-items:center;overflow:hidden;padding:0;position:relative;min-height:var(--sleek-main-min-height);max-height:none;border-radius:20px;box-shadow:0 8px 24px #0000000f,0 4px 12px #00000008,inset 0 1px #fff9}.sleek-message-container{min-height:0;font-size:13px}.sleek-chat-input-container{height:auto;max-width:100%;padding:0 14px;gap:12px;align-items:center;justify-content:space-between}.sleek-chat-input-container.agent-listening:before{opacity:.6}.sleek-chat-input-container.agent-listening:after{opacity:.5}.sleek-chat-input-field{font-size:12px;min-height:24px;max-height:100px;line-height:1.3;align-self:center}.sleek-chat-input-buttons{gap:4px;align-self:center;height:auto;align-items:center}}@media (max-width: 480px){.sleek-new-chat-button{font-size:9px;min-width:50px;height:24px;border-radius:12px}.sleek-new-chat-button.position-bottom-right,.sleek-new-chat-button.position-top-right{bottom:0;right:0}.sleek-new-chat-button.position-bottom-left,.sleek-new-chat-button.position-top-left{bottom:0;left:0}.sleek-spacer-loading{border-radius:4px}.thinking-dot{width:2px;height:2px}.thinking-dots{gap:2px}.sleek-main{border-radius:16px;min-height:var(--sleek-main-min-height);box-shadow:0 6px 20px #0000000d,0 3px 10px #00000005,inset 0 1px #ffffff80}.sleek-message-container{min-height:0;font-size:12px}.sleek-chat-input-container{height:auto;padding:0 12px;gap:10px;align-items:center;justify-content:space-between}.sleek-chat-input-container.agent-listening:before{opacity:.5;top:-1px;left:-1px;right:-1px;bottom:-1px}.sleek-chat-input-container.agent-listening:after{opacity:.4}.sleek-chat-input-field{min-height:24px;max-height:80px;line-height:1.2;align-self:center}.sleek-chat-input-buttons{gap:4px;align-self:center;height:auto;align-items:center}.sleek-chat-input-voice-button{min-width:var(--button-size-primary);min-height:var(--button-size-primary)}}.sleek-menu-wrapper{position:relative;flex-shrink:0}.sleek-menu-button{display:flex;align-items:center;justify-content:center;border-radius:9999px;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;width:var(--button-size-secondary);height:var(--button-size-secondary);border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 55%,white);color:var(--color-button-text);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white)}.sleek-menu-button:hover{color:#fff;border-color:color-mix(in srgb,var(--chat-widget-primary-color) 65%,white);transform:translateY(-1px);box-shadow:0 12px 28px color-mix(in srgb,var(--chat-widget-primary-color) 28%,transparent),0 8px 18px color-mix(in srgb,var(--chat-widget-primary-color) 18%,transparent)}.sleek-menu-button:focus{outline:none;box-shadow:0 10px 24px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent)}.sleek-menu-icon{width:100%;height:100%;display:block}.sleek-menu-icon-outline{stroke:currentColor;stroke-width:1.5;fill:none}.sleek-menu-icon-dot{fill:currentColor}.sleek-menu-dropdown{position:absolute;left:0;bottom:calc(100% + 8px);width:160px;border-radius:8px;border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 10%,white),color-mix(in srgb,var(--chat-widget-primary-color) 6%,white));-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 12px 32px #0000001f,0 6px 18px #00000014;z-index:9999;opacity:0;transform:translateY(6px) scale(.98);animation:sleekMenuEnter .16s cubic-bezier(.2,.7,.3,1) forwards;will-change:opacity,transform,box-shadow}.sleek-menu-dropdown:after{content:"";position:absolute;bottom:-6px;left:18px;width:10px;height:10px;background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 10%,white),color-mix(in srgb,var(--chat-widget-primary-color) 6%,white));border-left:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);border-bottom:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);transform:rotate(45deg);box-shadow:0 2px 6px #0000000f}.sleek-menu-item{width:100%;text-align:left;padding:10px 12px;font-size:13px;color:#334155;background:transparent}.sleek-menu-item+.sleek-menu-item{border-top:1px solid rgba(226,232,240,.7)}.sleek-menu-item:hover,.sleek-menu-item:focus{background:color-mix(in srgb,var(--chat-widget-primary-color) 8%,white);color:#1e293b;outline:none}@keyframes sleekMenuEnter{0%{opacity:0;transform:translateY(6px) scale(.98);box-shadow:0 6px 18px #00000014,0 3px 10px #0000000d}to{opacity:1;transform:translateY(0) scale(1);box-shadow:0 12px 32px #0000001f,0 6px 18px #00000014}}.voice-chat-input-status-container{display:flex;flex:1 1 0%;flex-direction:column;gap:.5rem}.voice-chat-input-status-text{font-size:.875rem;line-height:1.25rem;--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.voice-chat-input-activity{display:flex;height:1.5rem;align-items:center}.voice-chat-input-button:focus{outline:2px solid transparent;outline-offset:2px}.voice-chat-input-button-muted{color:var(--color-button-text);background:var(--color-voice-disconnected)}.voice-chat-input-button-unmuted{color:var(--color-button-text);background:var(--color-voice-speaking)}.voice-chat-input-button-disconnect{color:var(--color-button-text);background:var(--color-voice-disconnected)}.voice-chat-input-spinner{height:2rem;width:2rem}.voice-chat-input-spinner{animation:spin 1s linear infinite;border-radius:9999px;border-bottom-width:2px;--tw-border-opacity: 1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.voice-chat-input-spinner-small{height:1.25rem;width:1.25rem}@keyframes spin{to{transform:rotate(360deg)}}.voice-chat-input-spinner-small{animation:spin 1s linear infinite;border-radius:9999px;border-width:2px;--tw-border-opacity: 1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1));border-top-color:transparent}.voice-chat-input-loading-text{margin-left:.5rem;font-size:.875rem;line-height:1.25rem;--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.voice-chat-input-livekit-container{pointer-events:none;position:absolute;right:0;top:0;opacity:0}@keyframes pulse{0%{transform:scaleY(.3)}50%{transform:scaleY(1)}to{transform:scaleY(.3)}}.voice-chat-input-activity-bar{width:.25rem;border-radius:9999px;animation:pulse 1.5s infinite;animation-delay:var(--delay)}.voice-chat-input-agent-state-listening .voice-chat-input-activity-bar{background-color:var(--color-voice-listening)}.voice-chat-input-agent-state-speaking .voice-chat-input-activity-bar{background-color:var(--color-voice-speaking)}.voice-chat-input-agent-state-thinking .voice-chat-input-activity-bar{background-color:var(--color-voice-thinking)}:root{--chat-widget-primary-color-hover: color-mix( in srgb, var(--chat-widget-primary-color) 85%, black );--color-voice-listening: #3b82f6;--color-voice-speaking: #10b981;--color-voice-thinking: #f59e0b;--color-voice-disconnected: #ef4444cb;--color-whatsapp: #1eb655;--opacity-disabled: .7;--opacity-hover: .8;--opacity-normal: 1;--color-input-background: var(--chat-widget-secondary-color);--color-input-text: var(--chat-widget-message-text-color);--color-input-placeholder-text: color-mix( in srgb, var(--color-input-text) 70%, white );--color-input-placeholder-opacity: 70%;--color-input-placeholder-opacity-focus: 80%;--input-default-height: 40px;--input-min-height: 40px;--input-max-height: 120px;--input-max-height-tablet: 100px;--input-max-height-mobile: 80px;--input-line-height: 20px;--input-text-padding-horizontal: 4px;--input-text-padding-vertical: 0px;--input-text-padding: 0 var(--input-text-padding-horizontal);--input-container-padding: 6px 8px;--input-container-padding-sleek: 4px 4px;--input-font-size: var(--chat-widget-message-font-size);--input-font-weight: 400;--input-font-weight-focus: 500;--input-font-weight-bold: 600;--color-scrollbar-input-thumb: color-mix( in srgb, var(--chat-widget-primary-color) 75%, transparent );--color-scrollbar-input-thumb-hover: color-mix( in srgb, var(--chat-widget-primary-color) 90%, transparent );--color-scrollbar-input-thumb-avatar-view: color-mix( in srgb, var(--chat-widget-secondary-color) 75%, transparent );--color-scrollbar-input-thumb-hover-avatar-view: color-mix( in srgb, var(--chat-widget-secondary-color) 90%, transparent );--color-scrollbar-input-track: transparent;--input-scrollbar-width: thin;--input-scrollbar-border-radius: 2.5px;--input-scrollbar-thumb-hover-opacity: var(--opacity-hover);--button-size-primary: 32px;--button-padding-primary: 4px;--button-size-secondary: 24px;--color-button-background-primary: var(--chat-widget-primary-color);--color-button-background-hover: var(--chat-widget-primary-color-hover);--color-button-text: var(--chat-widget-button-content-color);--color-button-fill: var(--chat-widget-button-content-color);--color-button-disconnect: #ef4444;--button-opacity-normal: var(--opacity-normal);--button-opacity-hover: var(--opacity-hover);--button-opacity-disabled: var(--opacity-disabled);--button-icon-size-secondary: 16px;--button-icon-size-primary: 20px;--message-scrollbar-width: thin;--message-scrollbar-width-px: 6px;--message-scrollbar-border-radius: 3px;--color-scrollbar-message-thumb-default: rgb(209 213 219);--color-scrollbar-message-thumb-hover: rgb(156 163 175);--color-scrollbar-message-thumb-theme: var( --chat-widget-button-content-color, var(--chat-widget-secondary-color) );--color-scrollbar-message-thumb-hover-mix: color-mix( in srgb, var(--chat-widget-button-content-color, var(--chat-widget-secondary-color)) 80%, var(--chat-widget-primary-color) );--color-scrollbar-message-track: transparent;--message-text-color: var(--chat-widget-message-text-color);--message-font-size: var(--chat-widget-message-font-size);--message-bubble-background-color: var(--chat-widget-secondary-color);--message-bubble-icon-color: var(--chat-widget-secondary-color);--engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);--engagement-hook-image-height: var( --chat-widget-engagement-hook-image-height );--transition-fast: .2s ease;--transition-normal: all .3s ease;--transition-slow: .4s cubic-bezier(.4, 0, .2, 1);--transition-slow-ease: .4s ease;--border-radius-small: 2.5px;--border-radius-medium: 3px;--border-radius-large: 12px;--border-radius-xl: 16px;--border-radius-2xl: 20px;--border-radius-full: 9999px;--spacing-gap-xs: .5px;--spacing-gap-sm: 4px;--spacing-gap-md: 8px;--spacing-gap-lg: 12px;--spacing-gap-xl: 16px;--z-index-base: 1;--z-index-elevated: 10;--z-index-high: 20;--z-index-maximum: 9999;--border-width-thin: 1px;--border-width-medium: 2px;--border-width-thick: 4px;--shadow-sm: 0 1px 2px rgba(0, 0, 0, .05);--shadow-md: 0 4px 6px rgba(0, 0, 0, .1);--shadow-lg: 0 10px 15px rgba(0, 0, 0, .1);--shadow-xl: 0 20px 25px rgba(0, 0, 0, .1);--sleek-main-min-height: 0px;--sleek-border-radius: var(--border-radius-large);--sleek-main-bg: var(--color-sleek-main-bg);--sleek-main-border: var(--color-sleek-main-border);--sleek-main-text-color: var(--color-sleek-main-text);--color-sleek-main-bg: color-mix( in srgb, var(--chat-widget-primary-color) 10%, white );--color-sleek-main-border: var(--chat-widget-secondary-color);--color-sleek-main-text: var(--chat-widget-message-text-color);--color-gradient-1: var(--chat-widget-primary-color);--color-gradient-2: var(--chat-widget-secondary-color);--color-gradient-3: color-mix( in srgb, var(--chat-widget-primary-color) 60%, var(--chat-widget-secondary-color) );--color-gradient-4: color-mix( in srgb, var(--chat-widget-primary-color) 40%, var(--chat-widget-secondary-color) );--color-accent: color-mix( in srgb, var(--chat-widget-primary-color) 70%, var(--chat-widget-secondary-color) );--color-glow: color-mix( in srgb, var(--chat-widget-primary-color) 30%, transparent );--gradient-1: var(--color-gradient-1);--gradient-2: var(--color-gradient-2);--gradient-3: var(--color-gradient-3);--gradient-4: var(--color-gradient-4);--accent: var(--color-accent);--glow: var(--color-glow);--whatsapp-color: var(--color-whatsapp);--gray-200: var(--color-gray-200);--gray-300: var(--color-gray-300);--gray-400: var(--color-gray-400);--gray-500: var(--color-gray-500);--gray-600: var(--color-gray-600);--gray-700: var(--color-gray-700);--gray-800: var(--color-gray-800);--blue-500: var(--color-blue-500);--blue-600: var(--color-blue-600);--slate-700: var(--color-slate-700);--slate-800: var(--color-slate-800)}@supports not (color: color-mix(in srgb,#000 50%,#fff)){:root{--chat-widget-primary-color-hover: #000991;--color-gradient-1: #000aaa;--color-gradient-2: #6c757d;--color-gradient-3: #6c757d;--color-gradient-4: #6c757d;--color-accent: #6c757d;--color-glow: rgba(0, 10, 170, .3);--color-sleek-main-bg: rgba(0, 10, 170, .1);--color-sleek-main-border: rgba(108, 117, 125, .8);--color-scrollbar-input-thumb: rgba(0, 10, 170, .6);--color-scrollbar-input-thumb-hover: rgba(0, 10, 170, .85);--gradient-1: var(--color-gradient-1);--gradient-2: var(--color-gradient-2);--gradient-3: var(--color-gradient-3);--gradient-4: var(--color-gradient-4);--accent: var(--color-accent);--glow: var(--color-glow);--sleek-main-bg: var(--color-sleek-main-bg);--sleek-main-border: var(--color-sleek-main-border);--input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);--input-scrollbar-thumb-hover-color: var( --color-scrollbar-input-thumb-hover )}}.voice-alternate-view{display:flex;height:100%;flex-direction:column}.voice-alternate-header{position:relative;flex:none;display:flex;flex-direction:column}.voice-alternate-header .chat-header-content{position:relative;z-index:10;margin-left:auto;margin-right:auto;display:flex;max-width:32rem;align-items:center;justify-content:space-between}.voice-alternate-header .chat-header-text{font-size:1.125rem;line-height:1.75rem;font-weight:600;text-shadow:none}.voice-alternate-header .chat-header-subtitle{font-size:.875rem;line-height:1.25rem;text-shadow:none}.voice-alternate-main{display:flex;flex:1 1 0%;flex-direction:column;align-items:center;overflow:hidden;position:relative}.voice-alternate-content-wrapper{display:flex;flex-direction:column;align-items:center;flex:1;width:90%;height:90%;position:relative;overflow:visible;border-radius:16px;margin-top:16px;margin-bottom:12px;background:linear-gradient(to bottom,var(--chat-widget-secondary-color) 0%,var(--chat-widget-secondary-color) 60%,var(--chat-widget-primary-color) 100%)}.talking-head-wrapper{width:120%;height:120%;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:2}.voice-alternate-avatar-bars{position:absolute;bottom:16px;left:50%;transform:translate(-50%);display:flex;align-items:center;justify-content:center;border-radius:9999px;border:1px solid rgba(255,255,255,.35);padding:4px 12px;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);z-index:3}.voice-alternate-chat-input-container{display:flex;align-items:center;justify-content:center;margin-bottom:12px;margin-left:16px;margin-right:16px;padding:8px;border-radius:12px;background:transparent}.voice-alternate-input-buttons{display:flex;align-items:center;justify-content:center;width:100%;gap:16px}.voice-alternate-voice-button{transition-property:all;transition-duration:.15s;transition-timing-function:ease-in-out;display:flex;align-items:center;justify-content:center;border-radius:12px;height:50px;width:180px;color:var(--chat-widget-button-content-color);background:color-mix(in srgb,var(--chat-widget-primary-color) 50%,var(--chat-widget-secondary-color) 50%)}.voice-alternate-voice-button:hover{transform:scale(1.05);opacity:var(--button-opacity-hover)}.voice-alternate-voice-button:focus{outline:none;box-shadow:0 0 0 2px #9ca3af}.voice-alternate-voice-button:disabled{cursor:not-allowed;opacity:var(--button-opacity-disabled)}.voice-alternate-disconnect-button{transition-property:all;transition-duration:.15s;transition-timing-function:ease-in-out;display:flex;align-items:center;justify-content:center;border-radius:12px;height:50px;width:180px;color:var(--chat-widget-button-content-color);background:var(--color-button-disconnect)}.voice-alternate-disconnect-button:hover{transform:scale(1.05);opacity:var(--button-opacity-hover)}.voice-alternate-disconnect-button:focus{outline:none;box-shadow:0 0 0 2px #9ca3af}.voice-alternate-disconnect-button:disabled{cursor:not-allowed;opacity:var(--button-opacity-disabled)}@media (max-width: 768px){.voice-alternate-main{display:flex;flex:1 1 0%;flex-direction:column;align-items:center;overflow:hidden;position:relative}.voice-alternate-content-wrapper{padding-bottom:100px}.voice-alternate-message-box{min-height:60px}.voice-alternate-chat-input-container{margin-left:.5rem;margin-right:.5rem;margin-bottom:.5rem}}.human-avatar{display:block;width:100%;height:100%;position:absolute;top:0;right:0;bottom:0;left:0;min-height:200px}.human-avatar canvas{display:block!important;width:100%!important;height:100%!important;position:absolute!important;top:0!important;left:0!important;-o-object-fit:contain;object-fit:contain;visibility:visible!important;opacity:1!important}.human-avatar-loading,.human-avatar-error{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);padding:.5rem 1rem;font-size:.875rem;text-align:center;z-index:2}.human-avatar-loading{color:var(--chat-widget-primary-color, #6366f1)}.human-avatar-error{color:#dc2626;max-width:90%}.human-avatar:has(canvas) .human-avatar-loading,.human-avatar:has(canvas) .human-avatar-error{display:none}:root{--chat-widget-width: 600px;--chat-widget-height: 650px;--chat-widget-primary-color: #6366f1;--chat-widget-primary-color-hover: #4f46e5;--chat-widget-border-radius: 24px}@media (max-width: 768px){:root{--chat-widget-width: 95vw;--chat-widget-height: 85vh;--chat-widget-border-radius: 12px}}.chat-widget-open-button{position:fixed;border-radius:9999px;--tw-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);--tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;background-color:var(--chat-widget-primary-color);color:var(--chat-widget-button-content-color);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);z-index:9999}.chat-widget-open-button.position-bottom-right{bottom:1rem;right:1rem}.chat-widget-open-button.position-bottom-left{bottom:1rem;left:1rem}.chat-widget-open-button.position-top-right{top:1rem;right:1rem}.chat-widget-open-button.position-top-left{top:1rem;left:1rem}.chat-widget-open-button:hover{background-color:var(--chat-widget-primary-color-hover);transform:scale(1.1) rotate(5deg);box-shadow:0 8px 25px #6366f166}.chat-widget-open-icon{height:1.5rem;width:1.5rem}.chat-widget-container{overflow:hidden;--tw-shadow: 0 25px 50px -12px rgb(0 0 0 / .25);--tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);transition-property:all;transition-duration:.3s;transition-timing-function:cubic-bezier(.4,0,.2,1);width:var(--chat-widget-width);height:var(--chat-widget-height);border-radius:var(--chat-widget-border-radius);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:none!important;background:var(--chat-widget-primary-color);transform:none!important;will-change:height,width;z-index:9999;position:fixed!important}.chat-widget-container.position-bottom-right{bottom:1rem;right:1rem;top:auto!important;left:auto!important}.chat-widget-container.position-bottom-left{bottom:1rem;left:1rem;top:auto!important;right:auto!important}.chat-widget-container.position-top-right{top:1rem;right:1rem;bottom:auto!important;left:auto!important}.chat-widget-container.position-top-left{top:1rem;left:1rem;bottom:auto!important;right:auto!important}.chat-widget-container.sleek-view-mode{height:auto;min-height:60px;max-height:var(--chat-widget-height);transition:height .4s cubic-bezier(.4,0,.2,1);border-radius:0;background:transparent!important;border:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:none!important;overflow:visible;position:fixed!important;transform:none!important;will-change:height;z-index:9999;display:flex;flex-direction:column;justify-content:flex-end}.chat-widget-container.sleek-view-mode.position-bottom-right{bottom:1rem!important;right:1rem!important;top:auto!important;left:auto!important}.chat-widget-container.sleek-view-mode.position-bottom-left{bottom:1rem!important;left:1rem!important;top:auto!important;right:auto!important}.chat-widget-container.sleek-view-mode.position-top-right{top:1rem!important;right:1rem!important;bottom:auto!important;left:auto!important}.chat-widget-container.sleek-view-mode.position-top-left{top:1rem!important;left:1rem!important;bottom:auto!important;right:auto!important}@media (max-width: 768px){.chat-widget-container{width:auto;max-width:none}.chat-widget-container.position-bottom-right,.chat-widget-container.position-bottom-left{bottom:.5rem;left:.5rem;right:.5rem}.chat-widget-container.position-top-right,.chat-widget-container.position-top-left{top:.5rem;left:.5rem;right:.5rem}.chat-widget-container.sleek-view-mode{min-height:100px;max-height:85vh;display:flex;flex-direction:column;justify-content:flex-end;background:transparent!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;border:none!important;box-shadow:none!important;z-index:9999}.chat-widget-container.sleek-view-mode.position-bottom-right,.chat-widget-container.sleek-view-mode.position-bottom-left{bottom:.5rem!important;left:.5rem!important;right:.5rem!important;top:auto!important}.chat-widget-container.sleek-view-mode.position-top-right,.chat-widget-container.sleek-view-mode.position-top-left{top:.5rem!important;left:.5rem!important;right:.5rem!important;bottom:auto!important}}.chat-widget-container-closed{display:none!important;height:0!important;width:0!important;overflow:hidden!important;pointer-events:none!important}.chat-widget-inner-layout{display:flex;height:100%;flex-direction:column}.chat-widget-header-section{flex:none}.chat-widget-messages-section{position:relative;flex:1 1 0%;overflow:hidden}.chat-widget-input-section{flex:none}')),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}}();
 var __defProp = Object.defineProperty;
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
@@ -37746,7 +37746,6 @@ const showMessagePopupUtil = (message, position2, callbacks, userId, messageSour
   }
 };
 const removeMessagePopupUtil = () => {
-  console.log("[PopupUtils] Removing popup");
   closeAnyExistingPopup();
   const container = document.getElementById("spotinfo-message-popup");
   if (container) {
@@ -37943,7 +37942,6 @@ const _PersonalizedHookService = class _PersonalizedHookService {
     );
   }
   removeMessagePopup() {
-    console.log("[PersonalizedHookService] Removing popup");
     if (this.popupCleanup) {
       this.popupCleanup();
       this.popupCleanup = null;
@@ -38105,9 +38103,6 @@ const _PersonalizedHookService = class _PersonalizedHookService {
     disableBackendEventSending();
   }
   removePopup() {
-    console.log(
-      `[PersonalizedHookService - ${this.metaConfig.userId}] Removing popup...`
-    );
     this.removeMessagePopup();
   }
   getMetaConfig() {
@@ -62318,7 +62313,6 @@ function useVoiceChat(chatMetaConfig, onSwitchToText) {
   ]);
   reactExports.useEffect(() => {
     return () => {
-      console.log("[useVoiceChat] cleanup on unmount");
       connectingRef.current = false;
     };
   }, [chatMetaConfig]);
@@ -62784,8 +62778,6 @@ function ChatProvider({
             } else {
               setTimeout(checkAndEnsureSSE, checkInterval);
             }
-          } else if (isConnected) {
-            console.log("[ChatContext] SSE hook is connected");
           }
         };
         setTimeout(checkAndEnsureSSE, 2e3);
@@ -109689,7 +109681,7 @@ function VoiceChatInput({
               localAudioLevel
             }
           )
-        ] }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-gray-600 truncate", children: getVoiceStateMessage(agentState, isMuted) }) }),
+        ] }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm truncate", children: getVoiceStateMessage(agentState, isMuted) }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "chat-input-buttons-container-base voice-chat-input-buttons-container", children: [
           allowVoice && /* @__PURE__ */ jsxRuntimeExports.jsx(
             "button",
@@ -109908,6 +109900,961 @@ const AudioLevelUpdater = ({
   ]);
   return null;
 };
+function distributeWordsAcrossDuration(text2, durationMs) {
+  const words = text2.split(/\s+/).filter((w2) => w2.length > 0).map((w2) => w2.replace(/[.,!?;:]/g, ""));
+  if (words.length === 0 || durationMs <= 0) {
+    return { words: [], wtimes: [], wdurations: [] };
+  }
+  const wtimes = [];
+  const wdurations = [];
+  const msPerWord = durationMs / words.length;
+  for (let i2 = 0; i2 < words.length; i2++) {
+    wtimes.push(i2 * msPerWord);
+    wdurations.push(msPerWord);
+  }
+  return { words, wtimes, wdurations };
+}
+const TARGET_SAMPLE_RATE = 48e3;
+const TranscriptionToAvatar = ({
+  onWordData,
+  enabled = true
+}) => {
+  const room = Oo();
+  const connectionState = O();
+  const participants = Lt();
+  const segmentsRef = reactExports.useRef([]);
+  const segmentStartTimesRef = reactExports.useRef(/* @__PURE__ */ new Map());
+  const audioChunksRef = reactExports.useRef(/* @__PURE__ */ new Map());
+  const audioContextRef = reactExports.useRef(null);
+  const audioWorkletNodeRef = reactExports.useRef(null);
+  const activeSegmentIdsRef = reactExports.useRef(/* @__PURE__ */ new Set());
+  const segmentTextRef = reactExports.useRef(/* @__PURE__ */ new Map());
+  const currentSegmentIdRef = reactExports.useRef(null);
+  const lastSentChunkCountRef = reactExports.useRef(/* @__PURE__ */ new Map());
+  const lastLogTimeRef = reactExports.useRef(0);
+  const onWordDataRef = reactExports.useRef(onWordData);
+  const workletLoadedRef = reactExports.useRef(false);
+  const currentTrackSidRef = reactExports.useRef(null);
+  onWordDataRef.current = onWordData;
+  reactExports.useEffect(() => {
+    if (!enabled || !room || connectionState !== ConnectionState.Connected) {
+      return;
+    }
+    if (!audioContextRef.current) {
+      audioContextRef.current = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: TARGET_SAMPLE_RATE });
+      console.log("[TranscriptionToAvatar] 🎵 AudioContext created:", {
+        timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+        state: audioContextRef.current.state,
+        sampleRate: audioContextRef.current.sampleRate
+      });
+      if (audioContextRef.current.state === "suspended") {
+        console.log(
+          "[TranscriptionToAvatar] 🔄 AudioContext is suspended, attempting to resume..."
+        );
+        audioContextRef.current.resume().then(() => {
+          var _a;
+          console.log(
+            "[TranscriptionToAvatar] ✅ AudioContext resumed:",
+            (_a = audioContextRef.current) == null ? void 0 : _a.state
+          );
+        }).catch((err) => {
+          console.error(
+            "[TranscriptionToAvatar] ❌ Failed to resume AudioContext:",
+            err
+          );
+        });
+      }
+    }
+    const audioContext = audioContextRef.current;
+    let currentSource = null;
+    let currentWorkletNode = null;
+    const audioWorkletProcessorCode = `
+      class AudioChunkProcessor extends AudioWorkletProcessor {
+        constructor() {
+          super();
+          this.bufferSize = 4096;
+          this.buffer = new Float32Array(this.bufferSize);
+          this.bufferIndex = 0;
+        }
+
+        process(inputs, outputs) {
+          const input = inputs[0];
+          if (input.length > 0) {
+            const inputChannel = input[0];
+
+            for (let i = 0; i < inputChannel.length; i++) {
+              this.buffer[this.bufferIndex++] = inputChannel[i];
+
+              if (this.bufferIndex >= this.bufferSize) {
+                // Send chunk to main thread
+                this.port.postMessage({
+                  type: 'audioChunk',
+                  data: new Float32Array(this.buffer),
+                });
+                this.bufferIndex = 0;
+              }
+            }
+          }
+
+          return true;
+        }
+      }
+
+      registerProcessor('audio-chunk-processor', AudioChunkProcessor);
+    `;
+    const loadAudioWorklet = async () => {
+      if (workletLoadedRef.current) return true;
+      try {
+        const blob = new Blob([audioWorkletProcessorCode], {
+          type: "application/javascript"
+        });
+        const workletUrl = URL.createObjectURL(blob);
+        await audioContext.audioWorklet.addModule(workletUrl);
+        URL.revokeObjectURL(workletUrl);
+        workletLoadedRef.current = true;
+        console.log(
+          "[TranscriptionToAvatar] ✅ AudioWorklet processor loaded:",
+          {
+            timestamp: (/* @__PURE__ */ new Date()).toISOString()
+          }
+        );
+        return true;
+      } catch (error) {
+        console.error(
+          "[TranscriptionToAvatar] ❌ Failed to load AudioWorklet:",
+          error
+        );
+        return false;
+      }
+    };
+    const handleTrackSubscribed = async (track, _publication, participant) => {
+      if (!participant || !participant.isAgent || track.kind !== Track.Kind.Audio) {
+        return;
+      }
+      if (track.sid && currentTrackSidRef.current === track.sid) {
+        return;
+      }
+      if (currentWorkletNode) {
+        currentWorkletNode.disconnect();
+        currentWorkletNode.port.close();
+        currentWorkletNode = null;
+      }
+      if (currentSource) {
+        currentSource.disconnect();
+        currentSource = null;
+      }
+      currentTrackSidRef.current = null;
+      const audioPublication = participant.getTrackPublication(
+        Track.Source.Microphone
+      );
+      const audioTrack = audioPublication == null ? void 0 : audioPublication.track;
+      console.log("[TranscriptionToAvatar] 📡 Getting audio track:", {
+        timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+        participantSid: participant.sid,
+        trackSid: track.sid,
+        trackKind: track.kind,
+        usingParticipantSid: true
+      });
+      if (!audioTrack) {
+        console.warn(
+          "[TranscriptionToAvatar] Audio track not found via getTrackPublication:",
+          {
+            participantSid: participant.sid,
+            trackSid: track.sid,
+            trackKind: track.kind,
+            availablePublications: Array.from(
+              participant.trackPublications.values()
+            ).map((pub) => ({
+              sid: pub.trackSid,
+              kind: pub.kind,
+              trackName: pub.trackName
+            }))
+          }
+        );
+        return;
+      }
+      const mediaStreamTrack = audioTrack.mediaStreamTrack;
+      if (!mediaStreamTrack) {
+        console.warn(
+          "[TranscriptionToAvatar] MediaStreamTrack not available from audio track"
+        );
+        return;
+      }
+      console.log("[TranscriptionToAvatar] 🎧 MEDIA STREAM TRACK INFO:", {
+        timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+        id: mediaStreamTrack.id,
+        kind: mediaStreamTrack.kind,
+        enabled: mediaStreamTrack.enabled,
+        muted: mediaStreamTrack.muted,
+        readyState: mediaStreamTrack.readyState,
+        label: mediaStreamTrack.label,
+        settings: mediaStreamTrack.getSettings ? mediaStreamTrack.getSettings() : "N/A",
+        constraints: mediaStreamTrack.getConstraints ? mediaStreamTrack.getConstraints() : "N/A"
+      });
+      const workletReady = await loadAudioWorklet();
+      if (!workletReady) {
+        console.error(
+          "[TranscriptionToAvatar] Cannot proceed without AudioWorklet"
+        );
+        return;
+      }
+      const mediaStream = new MediaStream([mediaStreamTrack]);
+      currentSource = audioContext.createMediaStreamSource(mediaStream);
+      console.log("[TranscriptionToAvatar] 📡 MEDIA STREAM SOURCE CREATED:", {
+        timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+        numberOfInputs: currentSource.numberOfInputs,
+        numberOfOutputs: currentSource.numberOfOutputs,
+        channelCount: currentSource.channelCount,
+        channelCountMode: currentSource.channelCountMode,
+        mediaStreamActive: mediaStream.active,
+        mediaStreamTracks: mediaStream.getTracks().map((t2) => ({
+          id: t2.id,
+          kind: t2.kind,
+          enabled: t2.enabled,
+          muted: t2.muted,
+          readyState: t2.readyState
+        }))
+      });
+      if (audioContext.state === "suspended") {
+        console.log(
+          "[TranscriptionToAvatar] 🔄 Resuming suspended audio context:",
+          {
+            timestamp: (/* @__PURE__ */ new Date()).toISOString()
+          }
+        );
+        audioContext.resume().then(() => {
+          console.log("[TranscriptionToAvatar] ✅ Audio context resumed:", {
+            timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+            state: audioContext.state
+          });
+        }).catch((err) => {
+          console.error(
+            "[TranscriptionToAvatar] ❌ Failed to resume audio context:",
+            {
+              timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+              error: err
+            }
+          );
+        });
+      }
+      try {
+        currentWorkletNode = new AudioWorkletNode(
+          audioContext,
+          "audio-chunk-processor"
+        );
+        let audioChunkCount = 0;
+        let lastAudioLogTime = 0;
+        let firstChunkReceived = false;
+        console.log("[TranscriptionToAvatar] 🎤 AUDIOWORKLET SETUP:", {
+          timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+          sampleRate: audioContext.sampleRate,
+          participant: participant.identity,
+          trackId: track.sid,
+          audioContextState: audioContext.state
+        });
+        currentWorkletNode.port.onmessage = (event) => {
+          if (event.data.type === "audioChunk") {
+            if (!firstChunkReceived) {
+              firstChunkReceived = true;
+              console.log(
+                "[TranscriptionToAvatar] 🎉 FIRST AUDIO CHUNK RECEIVED!",
+                {
+                  timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+                  sampleCount: event.data.data.length,
+                  sampleRate: audioContext.sampleRate
+                }
+              );
+            }
+            audioChunkCount++;
+            const now2 = Date.now();
+            const floatData = event.data.data;
+            const buffer = new ArrayBuffer(floatData.length * 2);
+            const view = new DataView(buffer);
+            for (let i2 = 0; i2 < floatData.length; i2++) {
+              const sample = Math.max(-1, Math.min(1, floatData[i2]));
+              view.setInt16(
+                i2 * 2,
+                sample < 0 ? sample * 32768 : sample * 32767,
+                true
+              );
+            }
+            const hasAudio = floatData.some(
+              (sample) => Math.abs(sample) > 1e-3
+            );
+            const rms = Math.sqrt(
+              floatData.reduce(
+                (sum, val) => sum + val * val,
+                0
+              ) / floatData.length
+            );
+            const hasAudioSignal = rms > 1e-3;
+            if (!hasAudio && audioChunkCount % 100 === 0) {
+            }
+            if (!hasAudioSignal) {
+              return;
+            }
+            const activeSegmentIds = Array.from(activeSegmentIdsRef.current);
+            if (now2 - lastAudioLogTime > 2e3) {
+              const audioStats = {
+                chunkSize: buffer.byteLength,
+                sampleCount: floatData.length,
+                sampleRate: audioContext.sampleRate,
+                duration: floatData.length / audioContext.sampleRate,
+                firstSample: floatData[0],
+                lastSample: floatData[floatData.length - 1],
+                minSample: Math.min(...Array.from(floatData)),
+                maxSample: Math.max(...Array.from(floatData)),
+                rms
+              };
+              console.log(
+                "[TranscriptionToAvatar] 🎵 AUDIOWORKLET CHUNK RECEIVED:",
+                {
+                  timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+                  totalChunksProcessed: audioChunkCount,
+                  bufferSize: buffer.byteLength,
+                  activeSegmentsCount: activeSegmentIds.length,
+                  activeSegmentIds,
+                  audioStats,
+                  bufferPreview: Array.from(
+                    new Uint8Array(buffer).slice(0, 20)
+                  ),
+                  hasAudioSignal: rms > 1e-3
+                }
+              );
+              lastAudioLogTime = now2;
+            }
+            if (activeSegmentIds.length > 0) {
+              for (const segmentId of activeSegmentIds) {
+                const existingChunks = audioChunksRef.current.get(segmentId) || [];
+                audioChunksRef.current.set(segmentId, [
+                  ...existingChunks,
+                  buffer
+                ]);
+              }
+              const currentSegmentId = currentSegmentIdRef.current;
+              const text2 = currentSegmentId ? segmentTextRef.current.get(currentSegmentId) : void 0;
+              if (onWordDataRef.current && currentSegmentId && text2 && text2.trim().length > 0) {
+                const audioChunks = audioChunksRef.current.get(currentSegmentId) || [];
+                const lastSentCount = lastSentChunkCountRef.current.get(currentSegmentId) || 0;
+                if (audioChunks.length > lastSentCount) {
+                  const newChunks = audioChunks.slice(lastSentCount);
+                  const totalLength = newChunks.reduce(
+                    (sum, c2) => sum + c2.byteLength,
+                    0
+                  );
+                  const incrementalAudio = new ArrayBuffer(totalLength);
+                  const view2 = new Uint8Array(incrementalAudio);
+                  let offset = 0;
+                  for (const c2 of newChunks) {
+                    view2.set(new Uint8Array(c2), offset);
+                    offset += c2.byteLength;
+                  }
+                  const chunkDurationMs = 4096 / TARGET_SAMPLE_RATE * 1e3;
+                  const chunkStartMs = lastSentCount * chunkDurationMs;
+                  const chunkEndMs = audioChunks.length * chunkDurationMs;
+                  const totalAudioDurationMs = audioChunks.length * 4096 / TARGET_SAMPLE_RATE * 1e3;
+                  const {
+                    words: allWords,
+                    wtimes: allWtimes,
+                    wdurations: allWdurations
+                  } = distributeWordsAcrossDuration(text2, totalAudioDurationMs);
+                  const chunkWords = [];
+                  const chunkWtimes = [];
+                  const chunkWdurations = [];
+                  for (let i2 = 0; i2 < allWords.length; i2++) {
+                    const wt2 = allWtimes[i2];
+                    if (wt2 >= chunkEndMs) break;
+                    if (wt2 + allWdurations[i2] <= chunkStartMs) continue;
+                    chunkWords.push(allWords[i2]);
+                    chunkWtimes.push(wt2);
+                    chunkWdurations.push(allWdurations[i2]);
+                  }
+                  if (incrementalAudio.byteLength > 0) {
+                    onWordDataRef.current({
+                      audio: incrementalAudio,
+                      words: chunkWords,
+                      wtimes: chunkWtimes,
+                      wdurations: chunkWdurations
+                    });
+                  }
+                  lastSentChunkCountRef.current.set(
+                    currentSegmentId,
+                    audioChunks.length
+                  );
+                }
+              }
+            } else {
+              if (audioChunkCount % 100 === 0) {
+              }
+            }
+          }
+        };
+        currentSource.connect(currentWorkletNode);
+        currentWorkletNode.connect(audioContext.destination);
+        audioWorkletNodeRef.current = currentWorkletNode;
+      } catch (error) {
+        console.error(
+          "[TranscriptionToAvatar] ❌ Failed to create AudioWorklet node:",
+          error
+        );
+        if (currentSource) {
+          currentSource.disconnect();
+          currentSource = null;
+        }
+        return;
+      }
+      currentTrackSidRef.current = track.sid || null;
+      console.log("[TranscriptionToAvatar] ✅ AUDIOWORKLET CONNECTED:", {
+        timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+        sourceConnected: !!currentSource,
+        workletConnected: !!currentWorkletNode,
+        destinationConnected: true,
+        sampleRate: TARGET_SAMPLE_RATE,
+        audioContextState: audioContext.state
+      });
+    };
+    const handleTrackUnsubscribed = (track, _publication, participant) => {
+      if (participant && participant.isAgent && track.kind === Track.Kind.Audio) {
+        if (currentWorkletNode) {
+          currentWorkletNode.disconnect();
+          currentWorkletNode.port.close();
+          currentWorkletNode = null;
+        }
+        if (currentSource) {
+          currentSource.disconnect();
+          currentSource = null;
+        }
+        currentTrackSidRef.current = null;
+      }
+    };
+    room.on(RoomEvent.TrackSubscribed, handleTrackSubscribed);
+    room.on(RoomEvent.TrackUnsubscribed, handleTrackUnsubscribed);
+    const agent = participants.find(
+      (p2) => p2.identity === "agent" || p2.kind === ParticipantInfo_Kind.AGENT
+    );
+    if (agent && "audioTrackPublications" in agent) {
+      const publications = Array.from(
+        agent.audioTrackPublications.values()
+      );
+      for (const publication of publications) {
+        if (publication.kind === Track.Kind.Audio && publication.track && (publication.isSubscribed ?? false)) {
+          if (publication.track.sid !== currentTrackSidRef.current) {
+            handleTrackSubscribed(publication.track, publication, agent);
+          }
+          break;
+        }
+      }
+    }
+    return () => {
+      room.off(RoomEvent.TrackSubscribed, handleTrackSubscribed);
+      room.off(RoomEvent.TrackUnsubscribed, handleTrackUnsubscribed);
+      if (currentWorkletNode) {
+        currentWorkletNode.disconnect();
+        currentWorkletNode.port.close();
+        currentWorkletNode = null;
+      }
+      if (currentSource) {
+        currentSource.disconnect();
+        currentSource = null;
+      }
+      audioWorkletNodeRef.current = null;
+      currentTrackSidRef.current = null;
+    };
+  }, [room, connectionState, enabled]);
+  reactExports.useEffect(() => {
+    if (!enabled || !room || connectionState !== ConnectionState.Connected) {
+      segmentsRef.current = [];
+      return;
+    }
+    const handleTranscription = (segments, participant) => {
+      var _a;
+      if (!participant || !segments || segments.length === 0) return;
+      const isAgent = participant.isAgent || false;
+      if (!isAgent) return;
+      const currentTime = Date.now();
+      console.log(
+        "[TranscriptionToAvatar] 🔵 LIVEKIT TRANSCRIPTION SEGMENT (RAW):",
+        {
+          timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+          participant: {
+            identity: participant.identity,
+            sid: participant.sid,
+            isAgent: participant.isAgent
+          },
+          segmentCount: segments.length,
+          segments: segments.map((s2) => ({
+            // Log ALL properties from LiveKit TranscriptionSegment
+            id: s2.id,
+            text: s2.text,
+            // Full text, not truncated
+            final: s2.final,
+            startTime: s2.startTime,
+            endTime: s2.endTime,
+            language: s2.language,
+            // Log entire segment object to see all properties
+            fullSegment: JSON.parse(
+              JSON.stringify(s2, (_key, value) => {
+                if (typeof value === "function") return "[Function]";
+                if (value instanceof Error) return value.toString();
+                return value;
+              })
+            )
+          }))
+        }
+      );
+      for (const segment of segments) {
+        if (!segment || typeof segment.text !== "string") continue;
+        const segmentId = segment.id || `segment_${crypto.randomUUID()}`;
+        const isNewSegment = !segmentStartTimesRef.current.has(segmentId);
+        if (isNewSegment) {
+          console.log("[TranscriptionToAvatar] 🆕 NEW SEGMENT STARTED:", {
+            segmentId,
+            text: segment.text,
+            final: segment.final,
+            timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+            liveKitSegment: JSON.parse(
+              JSON.stringify(segment, (_key, value) => {
+                if (typeof value === "function") return "[Function]";
+                if (value instanceof Error) return value.toString();
+                return value;
+              })
+            )
+          });
+          segmentStartTimesRef.current.set(segmentId, currentTime);
+          activeSegmentIdsRef.current.add(segmentId);
+          currentSegmentIdRef.current = segmentId;
+          audioChunksRef.current.set(segmentId, []);
+          console.log("[TranscriptionToAvatar] 📝 ACTIVE SEGMENTS UPDATED:", {
+            timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+            segmentId,
+            activeSegmentIds: Array.from(activeSegmentIdsRef.current),
+            totalActiveSegments: activeSegmentIdsRef.current.size,
+            audioProcessorReady: !!audioWorkletNodeRef.current,
+            audioContextState: (_a = audioContextRef.current) == null ? void 0 : _a.state,
+            message: "Audio chunks will now be captured for this segment if processor is receiving data"
+          });
+        }
+        segmentTextRef.current.set(segmentId, segment.text);
+        const segmentData = {
+          id: segmentId,
+          lastReceivedTime: currentTime
+        };
+        const existingIndex = segmentsRef.current.findIndex(
+          (s2) => s2.id === segmentId
+        );
+        if (existingIndex >= 0) {
+          segmentsRef.current[existingIndex] = segmentData;
+        } else {
+          segmentsRef.current.push(segmentData);
+        }
+      }
+      const tenSecondsAgo = currentTime - 1e4;
+      segmentsRef.current = segmentsRef.current.filter(
+        (s2) => s2.lastReceivedTime > tenSecondsAgo
+      );
+      for (const [segmentId] of audioChunksRef.current) {
+        const segment = segmentsRef.current.find((s2) => s2.id === segmentId);
+        if (!segment || segment.lastReceivedTime < tenSecondsAgo) {
+          audioChunksRef.current.delete(segmentId);
+          segmentTextRef.current.delete(segmentId);
+          lastSentChunkCountRef.current.delete(segmentId);
+          activeSegmentIdsRef.current.delete(segmentId);
+          if (currentSegmentIdRef.current === segmentId) {
+            currentSegmentIdRef.current = null;
+          }
+        }
+      }
+    };
+    room.on(RoomEvent.TranscriptionReceived, handleTranscription);
+    return () => {
+      room.off(RoomEvent.TranscriptionReceived, handleTranscription);
+      segmentsRef.current = [];
+      segmentStartTimesRef.current.clear();
+      audioChunksRef.current.clear();
+      activeSegmentIdsRef.current.clear();
+      segmentTextRef.current.clear();
+      lastSentChunkCountRef.current.clear();
+      currentSegmentIdRef.current = null;
+      lastLogTimeRef.current = 0;
+    };
+  }, [room, connectionState, enabled]);
+  return null;
+};
+const SAMPLE_RATE = 22050;
+const getAudioContext = /* @__PURE__ */ (() => {
+  let audioContext = null;
+  return () => {
+    if (!audioContext) {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      audioContext = new AudioContextClass({ sampleRate: SAMPLE_RATE });
+    }
+    return audioContext;
+  };
+})();
+const createMockTtsOutput = async (wordsInput, durationMsInput) => {
+  const words = wordsInput.filter((w2) => w2.length > 0);
+  if (words.length === 0) return null;
+  const wtimes = [0];
+  const wdurations = [durationMsInput];
+  const numSamples = Math.ceil(durationMsInput / 1e3 * SAMPLE_RATE);
+  const audioContext = getAudioContext();
+  const audioBuffer = audioContext.createBuffer(1, numSamples, SAMPLE_RATE);
+  const channel = audioBuffer.getChannelData(0);
+  for (let i2 = 0; i2 < numSamples; i2++) channel[i2] = 0;
+  console.log(`Mock TTS output:`, {
+    words,
+    wtimes,
+    wdurations
+  });
+  return { audio: audioBuffer, words, wtimes, wdurations };
+};
+const TranscriptionTextOnly = ({
+  onTranscriptionText,
+  agentState = "disconnected",
+  enabled = true,
+  onShouldStopAvatar
+}) => {
+  const room = Oo();
+  const connectionState = O();
+  reactExports.useEffect(() => {
+    console.log(`[TranscriptionTextOnly] MOUNTED`, {
+      enabled,
+      hasRoom: !!room,
+      connectionState
+    });
+    return () => console.log(`[TranscriptionTextOnly] UNMOUNTED`);
+  }, []);
+  const onTranscriptionTextRef = reactExports.useRef(onTranscriptionText);
+  const onShouldStopAvatarRef = reactExports.useRef(onShouldStopAvatar);
+  const lastTranscriptionTimeRef = reactExports.useRef(0);
+  const agentStartedSpeakingTimeRef = reactExports.useRef(0);
+  const agentStatePropRef = reactExports.useRef(agentState);
+  const previousSegmentTextsRef = reactExports.useRef(/* @__PURE__ */ new Map());
+  const previousSegmentLastReceivedRef = reactExports.useRef(/* @__PURE__ */ new Map());
+  const transcriptionQueueRef = reactExports.useRef([]);
+  const queueProcessingTimeoutRef = reactExports.useRef(null);
+  const stopAvatarTimeoutRef = reactExports.useRef(
+    null
+  );
+  const preMadeTheTheMockTtsRef = reactExports.useRef(null);
+  const isProcessingQueueRef = reactExports.useRef(false);
+  const inFlightWordsRef = reactExports.useRef(0);
+  reactExports.useEffect(() => {
+    agentStatePropRef.current = agentState;
+    if (agentState !== "speaking") {
+      transcriptionQueueRef.current = [];
+      previousSegmentLastReceivedRef.current.clear();
+      inFlightWordsRef.current = 0;
+      stopQueueProcessing();
+    } else {
+      if (shouldProcessRef()) {
+        if (!queueProcessingTimeoutRef.current && !isProcessingQueueRef.current) {
+          agentStartedSpeakingTimeRef.current = Date.now();
+          startQueueProcessing();
+        }
+      }
+    }
+  }, [agentState]);
+  reactExports.useEffect(() => {
+    onTranscriptionTextRef.current = onTranscriptionText;
+  }, [onTranscriptionText]);
+  reactExports.useEffect(() => {
+    onShouldStopAvatarRef.current = onShouldStopAvatar;
+  }, [onShouldStopAvatar]);
+  const shouldProcessRef = () => {
+    const queueLength = transcriptionQueueRef.current.length;
+    const inFlightWords = inFlightWordsRef.current;
+    return queueLength >= 1 || inFlightWords > 0;
+  };
+  const shouldEmitRef = () => {
+    if (!shouldProcessRef()) return false;
+    return true;
+  };
+  const addSegmentToQueue = (segment) => {
+    if (!segment.words || segment.words.length === 0) return;
+    transcriptionQueueRef.current.push(segment);
+    if (shouldProcessRef()) {
+      if (!queueProcessingTimeoutRef.current && !isProcessingQueueRef.current) {
+        startQueueProcessing();
+      } else {
+        if (!isProcessingQueueRef.current) {
+          if (queueProcessingTimeoutRef.current) {
+            clearTimeout(queueProcessingTimeoutRef.current);
+            queueProcessingTimeoutRef.current = null;
+          }
+          processQueue();
+        }
+      }
+    }
+  };
+  const scheduleNextQueueRead = (durationMs) => {
+    if (queueProcessingTimeoutRef.current) {
+      clearTimeout(queueProcessingTimeoutRef.current);
+    }
+    queueProcessingTimeoutRef.current = setTimeout(() => {
+      queueProcessingTimeoutRef.current = null;
+      processQueue();
+    }, durationMs);
+  };
+  const stopQueueProcessing = () => {
+    if (queueProcessingTimeoutRef.current) {
+      clearTimeout(queueProcessingTimeoutRef.current);
+      queueProcessingTimeoutRef.current = null;
+    }
+    isProcessingQueueRef.current = false;
+  };
+  const scheduleStopAvatar = () => {
+    if (stopAvatarTimeoutRef.current) {
+      clearTimeout(stopAvatarTimeoutRef.current);
+      stopAvatarTimeoutRef.current = null;
+    }
+    stopAvatarTimeoutRef.current = setTimeout(() => {
+      stopAvatarTimeoutRef.current = null;
+      if (onShouldStopAvatarRef.current) {
+        onShouldStopAvatarRef.current();
+      }
+    }, 100);
+  };
+  const processQueue = () => {
+    if (isProcessingQueueRef.current) {
+      console.log(
+        `[TranscriptionTextOnly] processQueue already running, skipping`
+      );
+      return;
+    }
+    isProcessingQueueRef.current = true;
+    if (!shouldProcessRef()) {
+      console.log(
+        `[TranscriptionTextOnly] Agent stopped speaking, stopping queue processing`
+      );
+      stopQueueProcessing();
+      return;
+    }
+    if (!shouldEmitRef()) {
+      scheduleNextQueueRead(100);
+      isProcessingQueueRef.current = false;
+      return;
+    }
+    const queue = transcriptionQueueRef.current;
+    const segmentToProcess = queue.shift();
+    if (!segmentToProcess) {
+      inFlightWordsRef.current = 0;
+      if (!shouldEmitRef()) {
+        console.log(
+          `[TranscriptionTextOnly] Agent stopped speaking, stopping queue processing`
+        );
+        stopQueueProcessing();
+        isProcessingQueueRef.current = false;
+        return;
+      }
+      if (preMadeTheTheMockTtsRef.current && onTranscriptionTextRef.current) ;
+      else {
+        scheduleNextQueueRead(100);
+        isProcessingQueueRef.current = false;
+      }
+      return;
+    }
+    inFlightWordsRef.current = segmentToProcess.words.length;
+    createMockTtsOutput(
+      segmentToProcess.words,
+      segmentToProcess.durationMs
+    ).then((mockTts) => {
+      if (mockTts && shouldEmitRef() && onTranscriptionTextRef.current) {
+        onTranscriptionTextRef.current(mockTts);
+        inFlightWordsRef.current = 0;
+        const totalDurationMs = segmentToProcess.durationMs;
+        scheduleNextQueueRead(totalDurationMs);
+        isProcessingQueueRef.current = false;
+      } else {
+        const state = agentStatePropRef.current;
+        if (state !== "speaking" && segmentToProcess.words.length === 0) {
+          inFlightWordsRef.current = 0;
+          stopQueueProcessing();
+          return;
+        }
+        transcriptionQueueRef.current.unshift(segmentToProcess);
+        inFlightWordsRef.current = 0;
+        scheduleNextQueueRead(100);
+        isProcessingQueueRef.current = false;
+      }
+    });
+  };
+  const startQueueProcessing = () => {
+    if (queueProcessingTimeoutRef.current || isProcessingQueueRef.current) {
+      return;
+    }
+    processQueue();
+  };
+  reactExports.useEffect(() => {
+    const checkInterval = setInterval(() => {
+      if (shouldProcessRef()) {
+        if (!queueProcessingTimeoutRef.current) {
+          agentStartedSpeakingTimeRef.current = Date.now();
+          startQueueProcessing();
+        }
+      } else {
+        if (queueProcessingTimeoutRef.current) {
+          stopQueueProcessing();
+        }
+      }
+    }, 50);
+    return () => {
+      clearInterval(checkInterval);
+      stopQueueProcessing();
+    };
+  }, []);
+  reactExports.useEffect(() => {
+    if (!enabled || !room || connectionState !== ConnectionState.Connected) {
+      stopQueueProcessing();
+      return;
+    }
+    const handleTranscription = (segments, participant) => {
+      if (!participant || !segments || segments.length === 0) return;
+      const isAgent = participant.isAgent || false;
+      if (!isAgent) {
+        transcriptionQueueRef.current = [];
+        previousSegmentLastReceivedRef.current.clear();
+        return;
+      }
+      for (const segment of segments) {
+        if (!segment || typeof segment.text !== "string") continue;
+        const segmentId = segment.id;
+        const fullText = segment.text.trim();
+        if (fullText.length === 0) continue;
+        const previousText = previousSegmentTextsRef.current.get(segmentId) || "";
+        let differentialText = "";
+        if (!previousText) {
+          differentialText = fullText;
+        } else {
+          if (fullText.startsWith(previousText)) {
+            differentialText = fullText.slice(previousText.length).trim();
+          } else if (fullText.length > previousText.length) {
+            let commonPrefixLength = 0;
+            const minLength = Math.min(previousText.length, fullText.length);
+            for (let i2 = 0; i2 < minLength; i2++) {
+              if (previousText[i2] === fullText[i2]) {
+                commonPrefixLength++;
+              } else {
+                break;
+              }
+            }
+            differentialText = fullText.slice(commonPrefixLength).trim();
+          } else {
+            differentialText = fullText;
+          }
+        }
+        if (segment.final) {
+          previousSegmentTextsRef.current.delete(segmentId);
+          previousSegmentLastReceivedRef.current.delete(segmentId);
+          transcriptionQueueRef.current = [];
+          inFlightWordsRef.current = 0;
+          stopQueueProcessing();
+          scheduleStopAvatar();
+          continue;
+        }
+        if (differentialText.length === 0) {
+          console.log(
+            `[TranscriptionTextOnly] No differential text, skipping segment:`
+          );
+          continue;
+        }
+        const words = differentialText.split(/\s+/).filter((w2) => w2.length > 0);
+        const newWords = [];
+        for (let i2 = 0; i2 < words.length; i2++) {
+          const word = words[i2];
+          const isEnglishOnly = /^[A-Za-z]+$/.test(word);
+          if (isEnglishOnly) {
+            newWords.push(word);
+            continue;
+          }
+          const word_len = words[i2].length;
+          switch (word_len) {
+            case 1:
+              newWords.push("a");
+              break;
+            case 2:
+              newWords.push("go");
+              break;
+            case 3:
+              newWords.push("cat");
+              break;
+            case 4:
+              newWords.push("play");
+              break;
+            case 5:
+              newWords.push("smile");
+              break;
+            case 6:
+              newWords.push("little");
+              break;
+            case 7:
+              newWords.push("happyly");
+              break;
+            case 8:
+              newWords.push("sunshine");
+              break;
+            case 9:
+              newWords.push("beautiful");
+              break;
+            case 10:
+              newWords.push("wonderful");
+              break;
+            case 11:
+              newWords.push("friendship");
+              break;
+            case 12:
+              newWords.push("understanding");
+              break;
+            default:
+              newWords.push("smile");
+              break;
+          }
+        }
+        const currentLastReceivedTime = segment.lastReceivedTime || Date.now();
+        const previousLastReceivedTime = previousSegmentLastReceivedRef.current.get(segmentId) ?? segment.firstReceivedTime ?? currentLastReceivedTime;
+        const wordTimeDelta = currentLastReceivedTime - previousLastReceivedTime;
+        const timestampDeltaMs = Math.max(0, wordTimeDelta);
+        const MS_PER_WORD = 72;
+        const fallbackMockDurationMs = newWords.reduce((sum, word) => {
+          return sum + Math.max(200, Math.min(600, word.length * MS_PER_WORD));
+        }, 0);
+        const durationMs = timestampDeltaMs > 0 ? timestampDeltaMs : fallbackMockDurationMs;
+        previousSegmentTextsRef.current.set(segmentId, fullText);
+        previousSegmentLastReceivedRef.current.set(
+          segmentId,
+          currentLastReceivedTime
+        );
+        lastTranscriptionTimeRef.current = Date.now();
+        addSegmentToQueue({
+          words: newWords,
+          durationMs
+        });
+        if (shouldProcessRef() && !queueProcessingTimeoutRef.current) {
+          startQueueProcessing();
+        }
+      }
+    };
+    room.on(RoomEvent.TranscriptionReceived, handleTranscription);
+    return () => {
+      room.off(RoomEvent.TranscriptionReceived, handleTranscription);
+      stopQueueProcessing();
+      if (stopAvatarTimeoutRef.current) {
+        clearTimeout(stopAvatarTimeoutRef.current);
+        stopAvatarTimeoutRef.current = null;
+      }
+    };
+  }, [room, connectionState, enabled]);
+  reactExports.useEffect(() => {
+    return () => {
+      stopQueueProcessing();
+      if (stopAvatarTimeoutRef.current) {
+        clearTimeout(stopAvatarTimeoutRef.current);
+        stopAvatarTimeoutRef.current = null;
+      }
+    };
+  }, []);
+  return null;
+};
 function LivekitConnection({
   isMicActiveAndListening,
   connectionDetails,
@@ -109916,7 +110863,11 @@ function LivekitConnection({
   handleDisconnect,
   componentName = "LivekitConnection",
   setAgentAudioLevel,
-  setLocalAudioLevel
+  setLocalAudioLevel,
+  onWordData,
+  onTranscriptionText,
+  onStopAvatar,
+  agentState
 }) {
   if (!connectionDetails) {
     console.log(
@@ -109963,7 +110914,23 @@ function LivekitConnection({
             setAgentAudioLevel,
             setLocalAudioLevel
           }
-        )
+        ),
+        onWordData && /* @__PURE__ */ jsxRuntimeExports.jsx(
+          TranscriptionToAvatar,
+          {
+            onWordData,
+            enabled: isMicActiveAndListening
+          }
+        ),
+        onTranscriptionText && !onWordData && /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          TranscriptionTextOnly,
+          {
+            onTranscriptionText,
+            agentState,
+            enabled: isMicActiveAndListening,
+            onShouldStopAvatar: onStopAvatar
+          }
+        ) })
       ]
     },
     connectionDetails.roomName
@@ -110012,7 +110979,10 @@ function ChatInput({
   setAgentAudioLevel,
   setLocalAudioLevel,
   agentAudioLevel = 0,
-  localAudioLevel = 0
+  localAudioLevel = 0,
+  onWordData,
+  onTranscriptionText,
+  onStopAvatar
 }) {
   const [inputText, setInputText] = reactExports.useState("");
   const { allowVoice, viewType } = useChatContext();
@@ -110088,7 +111058,11 @@ function ChatInput({
                 }),
                 componentName: "ChatInput",
                 setAgentAudioLevel,
-                setLocalAudioLevel
+                setLocalAudioLevel,
+                onWordData,
+                onTranscriptionText,
+                onStopAvatar,
+                agentState
               }
             )
           ]
@@ -110609,19 +111583,198 @@ const SleekView = ({
     )
   ] });
 };
-function extractRecentMessageWords(messages, maxWords) {
-  if (!messages || messages.length === 0 || maxWords <= 0) {
-    return "";
-  }
-  const allText = messages.filter((m2) => m2.content && m2.content.trim() !== "").map((m2) => removeMarkdownFormatting(m2.content)).join(" ");
-  const words = allText.trim().split(/\s+/);
-  if (words.length === 0) return "";
-  const recentWords = words.slice(-100);
-  return recentWords.join(" ");
-}
-function removeMarkdownFormatting(text2) {
-  return text2.replace(/^#{1,6}\s+/gm, "").replace(/\*\*([^*]+)\*\*/g, "$1").replace(/\*([^*]+)\*/g, "$1").replace(/__([^_]+)__/g, "$1").replace(/_([^_]+)_/g, "$1").replace(/```[\s\S]*?```/g, "").replace(/`([^`]+)`/g, "$1").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/^[\s]*[-*+]\s+/gm, "").replace(/^[\s]*\d+\.\s+/gm, "").replace(/\s+/g, " ").trim();
-}
+const HumanAvatar = ({
+  className,
+  avatarUrl,
+  onReady
+}) => {
+  const containerRef = reactExports.useRef(null);
+  const headRef = reactExports.useRef(null);
+  const [libLoaded, setLibLoaded] = reactExports.useState(false);
+  const [initDone, setInitDone] = reactExports.useState(false);
+  const [error, setError] = reactExports.useState(null);
+  const [loading, setLoading] = reactExports.useState(true);
+  const onReadyRef = reactExports.useRef(onReady);
+  const visibilityCleanupRef = reactExports.useRef(null);
+  reactExports.useEffect(() => {
+    onReadyRef.current = onReady;
+  }, [onReady]);
+  reactExports.useEffect(() => {
+    if (libLoaded || typeof window === "undefined") return;
+    const loadTalkingHead = async () => {
+      try {
+        let importMapEl = document.querySelector('script[type="importmap"]');
+        if (!importMapEl) {
+          importMapEl = document.createElement("script");
+          importMapEl.setAttribute("type", "importmap");
+          importMapEl.textContent = JSON.stringify({
+            imports: {
+              three: "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js/+esm",
+              "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
+              talkinghead: "https://cdn.jsdelivr.net/gh/met4citizen/TalkingHead@1.7/modules/talkinghead.mjs"
+            }
+          });
+          document.head.appendChild(importMapEl);
+          await new Promise((r2) => setTimeout(r2, 200));
+        }
+        const script = document.createElement("script");
+        script.type = "module";
+        script.textContent = `
+          import { TalkingHead } from 'https://cdn.jsdelivr.net/gh/met4citizen/TalkingHead@1.7/modules/talkinghead.mjs';
+          window.TalkingHead = TalkingHead;
+          window.dispatchEvent(new CustomEvent('talkinghead-loaded'));
+        `;
+        document.head.appendChild(script);
+        await new Promise((resolve) => {
+          const handler = () => {
+            window.removeEventListener("talkinghead-loaded", handler);
+            resolve();
+          };
+          window.addEventListener("talkinghead-loaded", handler);
+          setTimeout(() => {
+            if (window.TalkingHead)
+              resolve();
+          }, 5e3);
+        });
+        if (!window.TalkingHead)
+          throw new Error("TalkingHead library not available");
+        setLibLoaded(true);
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.error("[HumanAvatar] Failed to load TalkingHead:", err);
+        setError(`Failed to load avatar: ${msg}`);
+        setLoading(false);
+      }
+    };
+    loadTalkingHead();
+  }, [libLoaded]);
+  reactExports.useEffect(() => {
+    if (!libLoaded || !containerRef.current || initDone) return;
+    let mounted = true;
+    let timeoutId;
+    const init = async () => {
+      var _a;
+      const TalkingHeadCtor = window.TalkingHead;
+      if (!TalkingHeadCtor || !containerRef.current || !mounted) return;
+      const nodeAvatar = containerRef.current;
+      if (!nodeAvatar.offsetWidth || !nodeAvatar.offsetHeight) {
+        timeoutId = setTimeout(init, 100);
+        return;
+      }
+      const head = new TalkingHeadCtor(nodeAvatar, {
+        ttsEndpoint: "/gtts/",
+        cameraView: "upper",
+        lipsyncLang: "en",
+        // keep idle animation as false, otherwise it avatar around randomly
+        idleAnimation: false,
+        modelRotation: [0.5, 0, 0],
+        // tilt head UP slightly
+        blinkInterval: 4e3,
+        headMovement: false,
+        backgroundColor: null,
+        pixelRatio: window.devicePixelRatio,
+        avatarSpeakingEyeContact: 1,
+        avatarSpeakingHeadMove: 0,
+        avatarIdleHeadMove: 0,
+        avatarIdleEyeContact: 1,
+        avatarIgnoreCamera: false
+      });
+      headRef.current = head;
+      const url = avatarUrl ?? "/avatars/avatarsdk.glb";
+      try {
+        await head.showAvatar(
+          { url, body: "F" },
+          (ev) => {
+            if (!ev.lengthComputable) return;
+            void ev;
+          }
+        );
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.error("[HumanAvatar] Error loading avatar:", err);
+        if (mounted) {
+          setError(`Avatar load failed: ${msg}`);
+          setLoading(false);
+          headRef.current = null;
+        }
+        return;
+      }
+      if (!mounted) return;
+      head.lookTarget = null;
+      head.autoLook = false;
+      head.enableLookAt = false;
+      if (!head.animMoods) {
+        head.animMoods = {};
+      }
+      head.animMoods["still"] = {
+        //  use headRotateX as -0.4 with face and -0.2 with upper camera
+        baseline: { eyesRotateX: -0.85, headRotateX: -0.2 },
+        speech: { deltaRate: 0, deltaPitch: 0, deltaVolume: 0 },
+        anims: [
+          {
+            name: "breathing",
+            delay: 1500,
+            dt: [1200, 500, 1e3],
+            vs: { chestInhale: [0.5, 0.5, 0] }
+          },
+          { name: "pose", delay: 1e4, vs: { pose: ["straight"] } },
+          { name: "head", delay: 10100, vs: {} },
+          { name: "eyes", delay: 10200, vs: {} },
+          head.animTemplateBlink,
+          { name: "mouth", delay: [1e3, 5e3], vs: {} }
+          // { name: 'misc', delay: [100,5000], vs: {} }
+        ]
+      };
+      head.setMood("still");
+      if (head.renderer) {
+        const w2 = nodeAvatar.offsetWidth || 400;
+        const h2 = nodeAvatar.offsetHeight || 400;
+        head.renderer.setSize(w2, h2);
+        const canvas = head.renderer.domElement;
+        if (canvas && !nodeAvatar.contains(canvas)) {
+          nodeAvatar.appendChild(canvas);
+        }
+      }
+      const handleVisibilityChange = () => {
+        const h2 = headRef.current;
+        if (!h2) return;
+        if (document.visibilityState === "visible") h2.start();
+        else h2.stop();
+      };
+      document.addEventListener("visibilitychange", handleVisibilityChange);
+      visibilityCleanupRef.current = () => document.removeEventListener(
+        "visibilitychange",
+        handleVisibilityChange
+      );
+      if (document.visibilityState === "visible") head.start();
+      setInitDone(true);
+      setLoading(false);
+      (_a = onReadyRef.current) == null ? void 0 : _a.call(onReadyRef, head);
+    };
+    init();
+    return () => {
+      var _a;
+      mounted = false;
+      if (timeoutId !== void 0) clearTimeout(timeoutId);
+      (_a = visibilityCleanupRef.current) == null ? void 0 : _a.call(visibilityCleanupRef);
+      visibilityCleanupRef.current = null;
+      headRef.current = null;
+    };
+  }, [libLoaded, initDone, avatarUrl]);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "div",
+    {
+      ref: containerRef,
+      className: [className, "human-avatar"].filter(Boolean).join(" "),
+      role: "img",
+      "aria-label": "3D talking head avatar",
+      children: [
+        loading && !error && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "human-avatar-loading", "aria-live": "polite", children: "Loading avatar…" }),
+        error && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "human-avatar-error", role: "alert", children: error })
+      ]
+    }
+  );
+};
 function VoiceAlternateView({
   onNewChat,
   onClose,
@@ -110640,28 +111793,116 @@ function VoiceAlternateView({
   setAgentAudioLevel,
   setLocalAudioLevel
 }) {
-  const { messages } = useChatContext();
-  const lastMessage = messages.length > 0 ? messages[messages.length - 1] : null;
-  const recentMessageText = lastMessage ? extractRecentMessageWords([lastMessage], 100) : "";
-  const getDisplayMessage = () => {
-    return recentMessageText;
-  };
+  const { allowVoice = true } = useChatContext();
+  const headRef = reactExports.useRef(null);
+  const agentAudioLevelRef = reactExports.useRef(agentAudioLevel);
+  agentAudioLevelRef.current = agentAudioLevel;
+  const transcriptionDebounceRef = reactExports.useRef(
+    null
+  );
+  const lastMockTtsRef = reactExports.useRef(null);
+  const lastSpeakAudioAtRef = reactExports.useRef(0);
+  const isHeadStoppedRef = reactExports.useRef(false);
+  const isConnected = Boolean(
+    connectionDetails && agentState !== "disconnected"
+  );
+  reactExports.useEffect(
+    () => () => {
+      if (transcriptionDebounceRef.current)
+        clearTimeout(transcriptionDebounceRef.current);
+    },
+    []
+  );
+  const agentStateRef = reactExports.useRef(agentState);
+  agentStateRef.current = agentState;
   reactExports.useEffect(() => {
-    let t2;
-    const blink = () => {
-      document.body.classList.add("blink");
-      setTimeout(() => {
-        document.body.classList.remove("blink");
-      }, 90);
-      t2 = setTimeout(blink, 2800 + Math.random() * 4200);
-    };
-    blink();
-    return () => clearTimeout(t2);
+    var _a, _b, _c, _d;
+    const head = headRef.current;
+    if (!head) return;
+    if (agentState === "speaking") {
+      head.lipsyncEnabled = true;
+    } else if (agentState === "listening") {
+      head.lipsyncEnabled = false;
+      (_a = head.setMouthOpen) == null ? void 0 : _a.call(head, 0);
+      (_b = head.setViseme) == null ? void 0 : _b.call(head, null);
+      lastMockTtsRef.current = null;
+    } else {
+      head.lipsyncEnabled = false;
+      (_c = head.setMouthOpen) == null ? void 0 : _c.call(head, 0);
+      (_d = head.setViseme) == null ? void 0 : _d.call(head, null);
+      lastMockTtsRef.current = null;
+    }
+  }, [agentState]);
+  const handleTranscriptionText = reactExports.useCallback(
+    async (mockTts) => {
+      var _a, _b, _c, _d;
+      if (agentStateRef.current !== "speaking") return;
+      const head = headRef.current;
+      if (!(head == null ? void 0 : head.speakAudio)) return;
+      if (!mockTts || mockTts.words.length === 0) return;
+      const currentWords = mockTts.words.join(" ");
+      const lastWords = ((_a = lastMockTtsRef.current) == null ? void 0 : _a.words.join(" ")) || "";
+      const isSameContent = currentWords === lastWords;
+      if (isSameContent) return;
+      if (transcriptionDebounceRef.current) {
+        clearTimeout(transcriptionDebounceRef.current);
+        transcriptionDebounceRef.current = null;
+      }
+      lastMockTtsRef.current = mockTts;
+      if (((_b = headRef.current) == null ? void 0 : _b.speakAudio) && lastMockTtsRef.current) {
+        if (isHeadStoppedRef.current) {
+          (_d = (_c = headRef.current).start) == null ? void 0 : _d.call(_c);
+          headRef.current.lipsyncEnabled = true;
+          isHeadStoppedRef.current = false;
+        }
+        const nowMs = Date.now();
+        lastSpeakAudioAtRef.current = nowMs;
+        headRef.current.speakAudio(lastMockTtsRef.current);
+      }
+    },
+    []
+  );
+  const handleStopAvatar = reactExports.useCallback(() => {
+    var _a, _b, _c, _d, _e2, _f;
+    const head = headRef.current;
+    if (head) {
+      (_a = head.stopSpeaking) == null ? void 0 : _a.call(head);
+      (_b = head.streamInterrupt) == null ? void 0 : _b.call(head);
+      (_c = head.streamStop) == null ? void 0 : _c.call(head);
+      isHeadStoppedRef.current = true;
+      head.lipsyncEnabled = false;
+      (_d = head.setMouthOpen) == null ? void 0 : _d.call(head, 0);
+      (_e2 = head.setViseme) == null ? void 0 : _e2.call(head, null);
+      (_f = head.resetPose) == null ? void 0 : _f.call(head);
+    }
   }, []);
-  const mouthOpen = Math.min(0.2 * 1.1, 0.55);
-  reactExports.useEffect(() => {
-    document.documentElement.style.setProperty("--mouth", String(mouthOpen));
-  }, [mouthOpen]);
+  const handlePrimaryMicAction = () => {
+    if (isConnected) {
+      handleMicButton();
+      onVoiceToggle();
+      return;
+    }
+    setIsVoiceMode(true);
+    handleMicButton();
+    onVoiceToggle();
+  };
+  const handlePrimaryMicKeyDown = (e2) => {
+    if (e2.key === "Enter" || e2.key === " ") {
+      e2.preventDefault();
+      handlePrimaryMicAction();
+    }
+  };
+  const handleDisconnectAction = () => {
+    if (!isConnected) return;
+    setIsVoiceMode(false);
+    handleFullDisconnect();
+  };
+  const handleDisconnectKeyDown = (e2) => {
+    if (e2.key === "Enter" || e2.key === " ") {
+      e2.preventDefault();
+      handleDisconnectAction();
+    }
+  };
   const content2 = /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "voice-alternate-view", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "voice-alternate-header", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       ChatHeader,
@@ -110671,70 +111912,99 @@ function VoiceAlternateView({
         isVoiceView: false
       }
     ) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "voice-alternate-main", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "voice-alternate-content-wrapper", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "avatar speaking", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/public/face.png", className: "face" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "eye-blink" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mouth" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "voice-alternate-message-container", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "voice-alternate-message-box", children: getDisplayMessage() }) })
-      ] }),
-      isMicActiveAndListening && (agentState === "listening" || agentState === "speaking") && /* @__PURE__ */ jsxRuntimeExports.jsxs(
-        "div",
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "voice-alternate-main", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "voice-alternate-content-wrapper", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "talking-head-wrapper", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        HumanAvatar,
         {
-          className: cn(
-            "flex-none pb-4 flex items-center justify-center",
-            isMuted ? "opacity-50" : ""
-          ),
-          children: [
-            agentState === "listening" && /* @__PURE__ */ jsxRuntimeExports.jsx(
-              VoiceActivityBars,
-              {
-                mode: "listening",
-                agentState,
-                isMuted,
-                showText: false,
-                className: "px-1 py-1 rounded-2xl bg-[var(--chat-widget-primary-color)]",
-                agentAudioLevel,
-                localAudioLevel
-              }
-            ),
-            agentState === "speaking" && /* @__PURE__ */ jsxRuntimeExports.jsx(
-              VoiceActivityBars,
-              {
-                mode: "speaking",
-                agentState,
-                isMuted,
-                showText: false,
-                className: "px-1 py-1 rounded-2xl bg-[var(--chat-widget-primary-color)]",
-                agentAudioLevel,
-                localAudioLevel
-              }
-            )
-          ]
+          avatarUrl: "../../../public/avatars/VK_tpose.glb",
+          onReady: (head) => {
+            headRef.current = head;
+            if (document.visibilityState === "visible") {
+              head.start();
+            }
+          }
         }
-      )
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "chat-widget-input-section", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-      ChatInput,
+      ) }),
+      agentState === "listening" && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "voice-alternate-avatar-bars", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        VoiceActivityBars,
+        {
+          mode: "listening",
+          agentState,
+          showText: false,
+          isMuted,
+          agentAudioLevel,
+          localAudioLevel
+        }
+      ) }),
+      agentState === "speaking" && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "voice-alternate-avatar-bars", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        VoiceActivityBars,
+        {
+          mode: "speaking",
+          agentState,
+          showText: false,
+          isMuted,
+          agentAudioLevel,
+          localAudioLevel
+        }
+      ) })
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "div",
       {
-        isVoiceMode,
-        setIsVoiceMode,
-        onMicButtonClick: handleMicButton,
-        onVoiceToggle,
-        agentState,
-        isMuted,
-        connectionDetails,
-        isMicActiveAndListening,
-        handleDisconnect: handleFullDisconnect,
-        handleStateChange,
-        handleMicButton,
-        hideActivityBars: true,
-        setAgentAudioLevel,
-        setLocalAudioLevel
+        className: cn(
+          "voice-alternate-chat-input-container",
+          isVoiceMode && agentState === "listening" ? "agent-listening" : "",
+          isVoiceMode && agentState === "speaking" && "agent-speaking"
+        ),
+        children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "voice-alternate-input-buttons", children: [
+          allowVoice && /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "button",
+            {
+              onClick: handlePrimaryMicAction,
+              className: cn(
+                "voice-alternate-voice-button",
+                agentState === "connecting" && "voice-loading",
+                isConnected && isMuted && "voice-muted"
+              ),
+              "aria-label": agentState === "connecting" ? "Connecting..." : isConnected ? isMuted ? "Unmute" : "Mute" : "Connect voice",
+              tabIndex: 0,
+              onKeyDown: handlePrimaryMicKeyDown,
+              disabled: agentState === "connecting",
+              children: agentState === "connecting" ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-5 w-5 border-2 border-current border-t-transparent rounded-full animate-spin" }) : isConnected ? isMuted ? /* @__PURE__ */ jsxRuntimeExports.jsx(MicOff, { className: "h-5 w-5" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(ForwardRef$4, { className: "h-5 w-5" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(ForwardRef$4, { className: "h-5 w-5" })
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "button",
+            {
+              onClick: handleDisconnectAction,
+              className: "voice-alternate-disconnect-button",
+              "aria-label": "Disconnect voice",
+              tabIndex: 0,
+              onKeyDown: handleDisconnectKeyDown,
+              disabled: !isConnected,
+              children: /* @__PURE__ */ jsxRuntimeExports.jsx(ForwardRef$2, { className: "h-5 w-5" })
+            }
+          )
+        ] })
       }
-    ) })
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      LivekitConnection,
+      {
+        isMicActiveAndListening: Boolean(isMicActiveAndListening),
+        connectionDetails,
+        isMuted,
+        handleStateChange: handleStateChange || (() => {
+        }),
+        handleDisconnect: handleFullDisconnect,
+        componentName: "VoiceAlternateView",
+        setAgentAudioLevel,
+        setLocalAudioLevel,
+        onTranscriptionText: handleTranscriptionText,
+        onStopAvatar: handleStopAvatar,
+        agentState
+      }
+    )
   ] });
   return content2;
 }
@@ -111152,1107 +112422,110 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Sat Apr  4 14:27:42 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Fri Apr 10 18:01:01 IST 2026 */
 
-/* Start of file: components/css/AiAgentAnimation.css */
+/* Start of file: components/avatar/HumanAvatar.css */
 
-/* src/components/css/AiAgentAnimation.css:1 */
+/* src/components/avatar/HumanAvatar.css:1 */
 
-/* Reset and base styles */
+/* The main 3D avatar container - integrable in any parent */
 
-/* src/components/css/AiAgentAnimation.css:2 */
+/* src/components/avatar/HumanAvatar.css:2 */
 
-* {
-  /* src/components/css/AiAgentAnimation.css:3 */
-  margin: 0;
-  /* src/components/css/AiAgentAnimation.css:4 */
-  padding: 0;
-  /* src/components/css/AiAgentAnimation.css:5 */
-  box-sizing: border-box;
-  /* src/components/css/AiAgentAnimation.css:6 */
-}
-
-/* src/components/css/AiAgentAnimation.css:8 */
-
-/* Animated Background */
-
-/* src/components/css/AiAgentAnimation.css:9 */
-
-.bg-particles {
-  /* src/components/css/AiAgentAnimation.css:10 */
-  position: absolute;
-  /* src/components/css/AiAgentAnimation.css:11 */
+.human-avatar {
+  /* src/components/avatar/HumanAvatar.css:3 */
+  display: block;
+  /* src/components/avatar/HumanAvatar.css:4 */
   width: 100%;
-  /* src/components/css/AiAgentAnimation.css:12 */
+  /* src/components/avatar/HumanAvatar.css:5 */
   height: 100%;
-  /* src/components/css/AiAgentAnimation.css:13 */
-  overflow: hidden;
-  /* src/components/css/AiAgentAnimation.css:14 */
-  z-index: -1;
-  /* src/components/css/AiAgentAnimation.css:15 */
-}
-
-/* src/components/css/AiAgentAnimation.css:16 */
-
-.particle {
-  /* src/components/css/AiAgentAnimation.css:17 */
+  /* src/components/avatar/HumanAvatar.css:6 */
   position: absolute;
-  /* src/components/css/AiAgentAnimation.css:18 */
-  width: 1vw;
-  /* src/components/css/AiAgentAnimation.css:19 */
-  height: 1vw;
-  /* src/components/css/AiAgentAnimation.css:20 */
-  min-width: 3px;
-  /* src/components/css/AiAgentAnimation.css:21 */
-  min-height: 3px;
-  /* src/components/css/AiAgentAnimation.css:22 */
-  max-width: 8px;
-  /* src/components/css/AiAgentAnimation.css:23 */
-  max-height: 8px;
-  /* src/components/css/AiAgentAnimation.css:24 */
-  background: rgba(0, 255, 255, 0.5);
-  /* src/components/css/AiAgentAnimation.css:25 */
-  border-radius: 50%;
-  /* src/components/css/AiAgentAnimation.css:26 */
-  animation: float-up 10s infinite linear;
-  /* src/components/css/AiAgentAnimation.css:27 */
+  /* src/components/avatar/HumanAvatar.css:7 */
+  inset: 0;
+  /* src/components/avatar/HumanAvatar.css:8 */
+  min-height: 200px;
+  /* src/components/avatar/HumanAvatar.css:9 */
 }
 
-/* src/components/css/AiAgentAnimation.css:28 */
+/* src/components/avatar/HumanAvatar.css:11 */
 
-@keyframes float-up {
-  /* src/components/css/AiAgentAnimation.css:29 */
-
-  from {
-    /* src/components/css/AiAgentAnimation.css:30 */
-    transform: translateY(100vh) translateX(0);
-    /* src/components/css/AiAgentAnimation.css:31 */
-    opacity: 0;
-    /* src/components/css/AiAgentAnimation.css:32 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:33 */
-
-  10% {
-    /* src/components/css/AiAgentAnimation.css:34 */
-    opacity: 1;
-    /* src/components/css/AiAgentAnimation.css:35 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:36 */
-
-  90% {
-    /* src/components/css/AiAgentAnimation.css:37 */
-    opacity: 1;
-    /* src/components/css/AiAgentAnimation.css:38 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:39 */
-
-  to {
-    /* src/components/css/AiAgentAnimation.css:40 */
-    transform: translateY(-100vh) translateX(10vw);
-    /* src/components/css/AiAgentAnimation.css:41 */
-    opacity: 0;
-    /* src/components/css/AiAgentAnimation.css:42 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:43 */
+.human-avatar canvas {
+  /* src/components/avatar/HumanAvatar.css:12 */
+  display: block !important;
+  /* src/components/avatar/HumanAvatar.css:13 */
+  width: 100% !important;
+  /* src/components/avatar/HumanAvatar.css:14 */
+  height: 100% !important;
+  /* src/components/avatar/HumanAvatar.css:15 */
+  position: absolute !important;
+  /* src/components/avatar/HumanAvatar.css:16 */
+  top: 0 !important;
+  /* src/components/avatar/HumanAvatar.css:17 */
+  left: 0 !important;
+  /* src/components/avatar/HumanAvatar.css:18 */
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* src/components/avatar/HumanAvatar.css:19 */
+  visibility: visible !important;
+  /* src/components/avatar/HumanAvatar.css:20 */
+  opacity: 1 !important;
+  /* src/components/avatar/HumanAvatar.css:21 */
 }
 
-/* src/components/css/AiAgentAnimation.css:45 */
+/* src/components/avatar/HumanAvatar.css:23 */
 
-.ai-container {
-  /* src/components/css/AiAgentAnimation.css:46 */
-  position: relative;
-  /* src/components/css/AiAgentAnimation.css:47 */
-  width: 100%;
-  /* src/components/css/AiAgentAnimation.css:48 */
-  height: 100%;
-  /* src/components/css/AiAgentAnimation.css:49 */
-  display: flex;
-  /* src/components/css/AiAgentAnimation.css:50 */
-  justify-content: center;
-  /* src/components/css/AiAgentAnimation.css:51 */
-  align-items: center;
-  /* src/components/css/AiAgentAnimation.css:52 */
-  overflow: hidden;
-  /* src/components/css/AiAgentAnimation.css:53 */
-}
-
-/* src/components/css/AiAgentAnimation.css:55 */
-
-.face-wrapper {
-  /* src/components/css/AiAgentAnimation.css:56 */
-  position: relative;
-  /* src/components/css/AiAgentAnimation.css:57 */
-  width: 90%;
-  /* src/components/css/AiAgentAnimation.css:58 */
-  height: 90%;
-  /* src/components/css/AiAgentAnimation.css:59 */
-  max-width: 100%;
-  /* src/components/css/AiAgentAnimation.css:60 */
-  max-height: 100%;
-  /* src/components/css/AiAgentAnimation.css:61 */
-  aspect-ratio: 1/1;
-  /* src/components/css/AiAgentAnimation.css:62 */
-  animation: gentle-float 4s ease-in-out infinite;
-  /* src/components/css/AiAgentAnimation.css:63 */
-  display: flex;
-  /* src/components/css/AiAgentAnimation.css:64 */
-  flex-direction: column;
-  /* src/components/css/AiAgentAnimation.css:65 */
-  justify-content: center;
-  /* src/components/css/AiAgentAnimation.css:66 */
-  align-items: center;
-  /* src/components/css/AiAgentAnimation.css:67 */
-  overflow: visible;
-  /* src/components/css/AiAgentAnimation.css:68 */
-}
-
-/* src/components/css/AiAgentAnimation.css:70 */
-
-@keyframes gentle-float {
-  /* src/components/css/AiAgentAnimation.css:71 */
-
-  0%,
-/* src/components/css/AiAgentAnimation.css:72 */
-  100% {
-    /* src/components/css/AiAgentAnimation.css:73 */
-    transform: translateY(0) rotate(0deg);
-    /* src/components/css/AiAgentAnimation.css:74 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:75 */
-
-  50% {
-    /* src/components/css/AiAgentAnimation.css:76 */
-    transform: translateY(-2%) rotate(1deg);
-    /* src/components/css/AiAgentAnimation.css:77 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:78 */
-}
-
-/* src/components/css/AiAgentAnimation.css:80 */
-
-.face-bg {
-  /* src/components/css/AiAgentAnimation.css:81 */
+.human-avatar-loading,
+/* src/components/avatar/HumanAvatar.css:24 */
+.human-avatar-error {
+  /* src/components/avatar/HumanAvatar.css:25 */
   position: absolute;
-  /* src/components/css/AiAgentAnimation.css:82 */
-  width: 100%;
-  /* src/components/css/AiAgentAnimation.css:83 */
-  height: 100%;
-  /* src/components/css/AiAgentAnimation.css:84 */
-  background: linear-gradient(145deg, #2a2a3e, #1a1a2e);
-  /* src/components/css/AiAgentAnimation.css:85 */
-  border-radius: 50%;
-  /* src/components/css/AiAgentAnimation.css:86 */
-  box-shadow:
-/* src/components/css/AiAgentAnimation.css:87 */
-    0 0 8vw rgba(0, 255, 255, 0.3),
-/* src/components/css/AiAgentAnimation.css:88 */
-    inset 0 0 4vw rgba(0, 0, 0, 0.5);
-  /* src/components/css/AiAgentAnimation.css:89 */
-}
-
-/* src/components/css/AiAgentAnimation.css:91 */
-
-.eyes-section {
-  /* src/components/css/AiAgentAnimation.css:92 */
-  position: absolute;
-  /* src/components/css/AiAgentAnimation.css:93 */
-  top: 38%;
-  /* src/components/css/AiAgentAnimation.css:94 */
-  left: 50%;
-  /* src/components/css/AiAgentAnimation.css:95 */
-  transform: translate(-50%, -50%);
-  /* src/components/css/AiAgentAnimation.css:96 */
-  width: 80%;
-  /* src/components/css/AiAgentAnimation.css:97 */
-  height: 32%;
-  /* src/components/css/AiAgentAnimation.css:98 */
-  display: flex;
-  /* src/components/css/AiAgentAnimation.css:99 */
-  justify-content: space-between;
-  /* src/components/css/AiAgentAnimation.css:100 */
-  align-items: center;
-  /* src/components/css/AiAgentAnimation.css:101 */
-}
-
-/* src/components/css/AiAgentAnimation.css:103 */
-
-.eye-wrapper {
-  /* src/components/css/AiAgentAnimation.css:104 */
-  position: relative;
-  /* src/components/css/AiAgentAnimation.css:105 */
-  width: 42%;
-  /* src/components/css/AiAgentAnimation.css:106 */
-  height: 100%;
-  /* src/components/css/AiAgentAnimation.css:107 */
-}
-
-/* src/components/css/AiAgentAnimation.css:109 */
-
-.eye {
-  /* src/components/css/AiAgentAnimation.css:110 */
-  position: relative;
-  /* src/components/css/AiAgentAnimation.css:111 */
-  width: 100%;
-  /* src/components/css/AiAgentAnimation.css:112 */
-  height: 100%;
-  /* src/components/css/AiAgentAnimation.css:113 */
-  background: #000;
-  /* src/components/css/AiAgentAnimation.css:114 */
-  border-radius: 50%;
-  /* src/components/css/AiAgentAnimation.css:115 */
-  overflow: hidden;
-  /* src/components/css/AiAgentAnimation.css:116 */
-  box-shadow:
-/* src/components/css/AiAgentAnimation.css:117 */
-    0 0 2vw rgba(0, 255, 255, 0.5),
-/* src/components/css/AiAgentAnimation.css:118 */
-    inset 0 0 1.2vw rgba(0, 0, 0, 0.8);
-  /* src/components/css/AiAgentAnimation.css:119 */
-}
-
-/* src/components/css/AiAgentAnimation.css:121 */
-
-.iris {
-  /* src/components/css/AiAgentAnimation.css:122 */
-  position: absolute;
-  /* src/components/css/AiAgentAnimation.css:123 */
+  /* src/components/avatar/HumanAvatar.css:26 */
   top: 50%;
-  /* src/components/css/AiAgentAnimation.css:124 */
+  /* src/components/avatar/HumanAvatar.css:27 */
   left: 50%;
-  /* src/components/css/AiAgentAnimation.css:125 */
+  /* src/components/avatar/HumanAvatar.css:28 */
   transform: translate(-50%, -50%);
-  /* src/components/css/AiAgentAnimation.css:126 */
-  width: 65%;
-  /* src/components/css/AiAgentAnimation.css:127 */
-  height: 65%;
-  /* src/components/css/AiAgentAnimation.css:128 */
-  background: radial-gradient(
-/* src/components/css/AiAgentAnimation.css:129 */
-    circle at 35% 35%,
-/* src/components/css/AiAgentAnimation.css:130 */
-    #00ffff 0%,
-/* src/components/css/AiAgentAnimation.css:131 */
-    #0099cc 30%,
-/* src/components/css/AiAgentAnimation.css:132 */
-    #006699 60%,
-/* src/components/css/AiAgentAnimation.css:133 */
-    #003366 100%
-/* src/components/css/AiAgentAnimation.css:134 */
-  );
-  /* src/components/css/AiAgentAnimation.css:135 */
-  border-radius: 50%;
-  /* src/components/css/AiAgentAnimation.css:136 */
-  transition: all 0.2s ease;
-  /* src/components/css/AiAgentAnimation.css:137 */
+  /* src/components/avatar/HumanAvatar.css:29 */
+  padding: 0.5rem 1rem;
+  /* src/components/avatar/HumanAvatar.css:30 */
+  font-size: 0.875rem;
+  /* src/components/avatar/HumanAvatar.css:31 */
+  text-align: center;
+  /* src/components/avatar/HumanAvatar.css:32 */
+  z-index: 2;
+  /* src/components/avatar/HumanAvatar.css:33 */
 }
 
-/* src/components/css/AiAgentAnimation.css:139 */
+/* src/components/avatar/HumanAvatar.css:35 */
 
-.pupil {
-  /* src/components/css/AiAgentAnimation.css:140 */
-  position: absolute;
-  /* src/components/css/AiAgentAnimation.css:141 */
-  top: 50%;
-  /* src/components/css/AiAgentAnimation.css:142 */
-  left: 50%;
-  /* src/components/css/AiAgentAnimation.css:143 */
-  transform: translate(-50%, -50%);
-  /* src/components/css/AiAgentAnimation.css:144 */
-  width: 38%;
-  /* src/components/css/AiAgentAnimation.css:145 */
-  height: 38%;
-  /* src/components/css/AiAgentAnimation.css:146 */
-  background: #000;
-  /* src/components/css/AiAgentAnimation.css:147 */
-  border-radius: 50%;
-  /* src/components/css/AiAgentAnimation.css:148 */
+.human-avatar-loading {
+  /* src/components/avatar/HumanAvatar.css:36 */
+  color: var(--chat-widget-primary-color, #6366f1);
+  /* src/components/avatar/HumanAvatar.css:37 */
 }
 
-/* src/components/css/AiAgentAnimation.css:150 */
+/* src/components/avatar/HumanAvatar.css:39 */
 
-.highlight {
-  /* src/components/css/AiAgentAnimation.css:151 */
-  position: absolute;
-  /* src/components/css/AiAgentAnimation.css:152 */
-  top: 25%;
-  /* src/components/css/AiAgentAnimation.css:153 */
-  left: 30%;
-  /* src/components/css/AiAgentAnimation.css:154 */
-  width: 18%;
-  /* src/components/css/AiAgentAnimation.css:155 */
-  height: 18%;
-  /* src/components/css/AiAgentAnimation.css:156 */
-  background: radial-gradient(
-/* src/components/css/AiAgentAnimation.css:157 */
-    circle,
-/* src/components/css/AiAgentAnimation.css:158 */
-    rgba(255, 255, 255, 0.9),
-/* src/components/css/AiAgentAnimation.css:159 */
-    rgba(255, 255, 255, 0)
-/* src/components/css/AiAgentAnimation.css:160 */
-  );
-  /* src/components/css/AiAgentAnimation.css:161 */
-  border-radius: 50%;
-  /* src/components/css/AiAgentAnimation.css:162 */
+.human-avatar-error {
+  /* src/components/avatar/HumanAvatar.css:40 */
+  color: #dc2626;
+  /* src/components/avatar/HumanAvatar.css:41 */
+  max-width: 90%;
+  /* src/components/avatar/HumanAvatar.css:42 */
 }
 
-/* src/components/css/AiAgentAnimation.css:164 */
+/* src/components/avatar/HumanAvatar.css:44 */
 
-.highlight-small {
-  /* src/components/css/AiAgentAnimation.css:165 */
-  position: absolute;
-  /* src/components/css/AiAgentAnimation.css:166 */
-  bottom: 20%;
-  /* src/components/css/AiAgentAnimation.css:167 */
-  right: 25%;
-  /* src/components/css/AiAgentAnimation.css:168 */
-  width: 8%;
-  /* src/components/css/AiAgentAnimation.css:169 */
-  height: 8%;
-  /* src/components/css/AiAgentAnimation.css:170 */
-  background: radial-gradient(
-/* src/components/css/AiAgentAnimation.css:171 */
-    circle,
-/* src/components/css/AiAgentAnimation.css:172 */
-    rgba(255, 255, 255, 0.7),
-/* src/components/css/AiAgentAnimation.css:173 */
-    rgba(255, 255, 255, 0)
-/* src/components/css/AiAgentAnimation.css:174 */
-  );
-  /* src/components/css/AiAgentAnimation.css:175 */
-  border-radius: 50%;
-  /* src/components/css/AiAgentAnimation.css:176 */
+.human-avatar:has(canvas) .human-avatar-loading,
+/* src/components/avatar/HumanAvatar.css:45 */
+.human-avatar:has(canvas) .human-avatar-error {
+  /* src/components/avatar/HumanAvatar.css:46 */
+  display: none;
+  /* src/components/avatar/HumanAvatar.css:47 */
 }
 
-/* src/components/css/AiAgentAnimation.css:178 */
-
-.eyelid-top {
-  /* src/components/css/AiAgentAnimation.css:179 */
-  position: absolute;
-  /* src/components/css/AiAgentAnimation.css:180 */
-  top: -60%;
-  /* src/components/css/AiAgentAnimation.css:181 */
-  left: 0;
-  /* src/components/css/AiAgentAnimation.css:182 */
-  width: 100%;
-  /* src/components/css/AiAgentAnimation.css:183 */
-  height: 60%;
-  /* src/components/css/AiAgentAnimation.css:184 */
-  background: #2a2a3e;
-  /* src/components/css/AiAgentAnimation.css:185 */
-  border-radius: 50%;
-  /* src/components/css/AiAgentAnimation.css:186 */
-  transition: all 0.3s ease;
-  /* src/components/css/AiAgentAnimation.css:187 */
-}
-
-/* src/components/css/AiAgentAnimation.css:189 */
-
-.eyelid-bottom {
-  /* src/components/css/AiAgentAnimation.css:190 */
-  position: absolute;
-  /* src/components/css/AiAgentAnimation.css:191 */
-  bottom: -60%;
-  /* src/components/css/AiAgentAnimation.css:192 */
-  left: 0;
-  /* src/components/css/AiAgentAnimation.css:193 */
-  width: 100%;
-  /* src/components/css/AiAgentAnimation.css:194 */
-  height: 60%;
-  /* src/components/css/AiAgentAnimation.css:195 */
-  background: #2a2a3e;
-  /* src/components/css/AiAgentAnimation.css:196 */
-  border-radius: 50%;
-  /* src/components/css/AiAgentAnimation.css:197 */
-  transition: all 0.3s ease;
-  /* src/components/css/AiAgentAnimation.css:198 */
-}
-
-/* src/components/css/AiAgentAnimation.css:200 */
-
-.eyebrows {
-  /* src/components/css/AiAgentAnimation.css:201 */
-  position: absolute;
-  /* src/components/css/AiAgentAnimation.css:202 */
-  top: 22%;
-  /* src/components/css/AiAgentAnimation.css:203 */
-  left: 50%;
-  /* src/components/css/AiAgentAnimation.css:204 */
-  transform: translate(-50%, -50%);
-  /* src/components/css/AiAgentAnimation.css:205 */
-  width: 80%;
-  /* src/components/css/AiAgentAnimation.css:206 */
-  height: 16%;
-  /* src/components/css/AiAgentAnimation.css:207 */
-  display: flex;
-  /* src/components/css/AiAgentAnimation.css:208 */
-  justify-content: space-between;
-  /* src/components/css/AiAgentAnimation.css:209 */
-}
-
-/* src/components/css/AiAgentAnimation.css:211 */
-
-.eyebrow {
-  /* src/components/css/AiAgentAnimation.css:212 */
-  width: 32%;
-  /* src/components/css/AiAgentAnimation.css:213 */
-  height: 40%;
-  /* src/components/css/AiAgentAnimation.css:214 */
-  background: linear-gradient(90deg, transparent, #00ffff, transparent);
-  /* src/components/css/AiAgentAnimation.css:215 */
-  border-radius: 50%;
-  /* src/components/css/AiAgentAnimation.css:216 */
-  transition: all 0.3s ease;
-  /* src/components/css/AiAgentAnimation.css:217 */
-  opacity: 0.8;
-  /* src/components/css/AiAgentAnimation.css:218 */
-}
-
-/* src/components/css/AiAgentAnimation.css:220 */
-
-.mouth-section {
-  /* src/components/css/AiAgentAnimation.css:221 */
-  position: absolute;
-  /* src/components/css/AiAgentAnimation.css:222 */
-  bottom: 10%;
-  /* src/components/css/AiAgentAnimation.css:223 */
-  left: 50%;
-  /* src/components/css/AiAgentAnimation.css:224 */
-  transform: translate(-50%, 0);
-  /* src/components/css/AiAgentAnimation.css:225 */
-  width: 60%;
-  /* src/components/css/AiAgentAnimation.css:226 */
-  height: 22%;
-  /* src/components/css/AiAgentAnimation.css:227 */
-  display: flex;
-  /* src/components/css/AiAgentAnimation.css:228 */
-  justify-content: center;
-  /* src/components/css/AiAgentAnimation.css:229 */
-  align-items: center;
-  /* src/components/css/AiAgentAnimation.css:230 */
-}
-
-/* src/components/css/AiAgentAnimation.css:232 */
-
-.mouth {
-  /* src/components/css/AiAgentAnimation.css:233 */
-  width: 80%;
-  /* src/components/css/AiAgentAnimation.css:234 */
-  height: 80%;
-  /* src/components/css/AiAgentAnimation.css:235 */
-  display: flex;
-  /* src/components/css/AiAgentAnimation.css:236 */
-  justify-content: center;
-  /* src/components/css/AiAgentAnimation.css:237 */
-  align-items: center;
-  /* src/components/css/AiAgentAnimation.css:238 */
-  gap: 3%;
-  /* src/components/css/AiAgentAnimation.css:239 */
-}
-
-/* src/components/css/AiAgentAnimation.css:241 */
-
-.voice-line {
-  /* src/components/css/AiAgentAnimation.css:242 */
-  width: 6%;
-  /* src/components/css/AiAgentAnimation.css:243 */
-  min-width: 2px;
-  /* src/components/css/AiAgentAnimation.css:244 */
-  max-width: 8px;
-  /* src/components/css/AiAgentAnimation.css:245 */
-  border-radius: 2px;
-  /* src/components/css/AiAgentAnimation.css:246 */
-  transition: all 0.2s ease;
-  /* src/components/css/AiAgentAnimation.css:247 */
-  opacity: 0.3;
-  /* src/components/css/AiAgentAnimation.css:248 */
-}
-
-/* src/components/css/AiAgentAnimation.css:250 */
-
-.voice-line:nth-child(1) {
-  /* src/components/css/AiAgentAnimation.css:251 */
-  height: 33%;
-  /* src/components/css/AiAgentAnimation.css:252 */
-}
-
-/* src/components/css/AiAgentAnimation.css:253 */
-
-.voice-line:nth-child(2) {
-  /* src/components/css/AiAgentAnimation.css:254 */
-  height: 50%;
-  /* src/components/css/AiAgentAnimation.css:255 */
-}
-
-/* src/components/css/AiAgentAnimation.css:256 */
-
-.voice-line:nth-child(3) {
-  /* src/components/css/AiAgentAnimation.css:257 */
-  height: 66%;
-  /* src/components/css/AiAgentAnimation.css:258 */
-}
-
-/* src/components/css/AiAgentAnimation.css:259 */
-
-.voice-line:nth-child(4) {
-  /* src/components/css/AiAgentAnimation.css:260 */
-  height: 83%;
-  /* src/components/css/AiAgentAnimation.css:261 */
-}
-
-/* src/components/css/AiAgentAnimation.css:262 */
-
-.voice-line:nth-child(5) {
-  /* src/components/css/AiAgentAnimation.css:263 */
-  height: 75%;
-  /* src/components/css/AiAgentAnimation.css:264 */
-}
-
-/* src/components/css/AiAgentAnimation.css:265 */
-
-.voice-line:nth-child(6) {
-  /* src/components/css/AiAgentAnimation.css:266 */
-  height: 58%;
-  /* src/components/css/AiAgentAnimation.css:267 */
-}
-
-/* src/components/css/AiAgentAnimation.css:268 */
-
-.voice-line:nth-child(7) {
-  /* src/components/css/AiAgentAnimation.css:269 */
-  height: 41%;
-  /* src/components/css/AiAgentAnimation.css:270 */
-}
-
-/* src/components/css/AiAgentAnimation.css:271 */
-
-.voice-line:nth-child(8) {
-  /* src/components/css/AiAgentAnimation.css:272 */
-  height: 66%;
-  /* src/components/css/AiAgentAnimation.css:273 */
-}
-
-/* src/components/css/AiAgentAnimation.css:274 */
-
-.voice-line:nth-child(9) {
-  /* src/components/css/AiAgentAnimation.css:275 */
-  height: 50%;
-  /* src/components/css/AiAgentAnimation.css:276 */
-}
-
-/* src/components/css/AiAgentAnimation.css:277 */
-
-.voice-line:nth-child(10) {
-  /* src/components/css/AiAgentAnimation.css:278 */
-  height: 33%;
-  /* src/components/css/AiAgentAnimation.css:279 */
-}
-
-/* src/components/css/AiAgentAnimation.css:281 */
-
-@keyframes rotate {
-  /* src/components/css/AiAgentAnimation.css:282 */
-
-  from {
-    /* src/components/css/AiAgentAnimation.css:283 */
-    transform: rotate(0deg);
-    /* src/components/css/AiAgentAnimation.css:284 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:285 */
-
-  to {
-    /* src/components/css/AiAgentAnimation.css:286 */
-    transform: rotate(360deg);
-    /* src/components/css/AiAgentAnimation.css:287 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:288 */
-}
-
-/* src/components/css/AiAgentAnimation.css:290 */
-
-/* Emotion States */
-
-/* src/components/css/AiAgentAnimation.css:292 */
-
-/* Happy */
-
-/* src/components/css/AiAgentAnimation.css:293 */
-
-.happy .eye {
-  /* src/components/css/AiAgentAnimation.css:294 */
-  height: 60px;
-  /* src/components/css/AiAgentAnimation.css:295 */
-  border-radius: 50% 50% 40% 40%;
-  /* src/components/css/AiAgentAnimation.css:296 */
-}
-
-/* src/components/css/AiAgentAnimation.css:297 */
-
-.happy .eyebrow {
-  /* src/components/css/AiAgentAnimation.css:298 */
-  transform: rotate(-10deg);
-  /* src/components/css/AiAgentAnimation.css:299 */
-}
-
-/* src/components/css/AiAgentAnimation.css:300 */
-
-.happy .eyebrow:last-child {
-  /* src/components/css/AiAgentAnimation.css:301 */
-  transform: rotate(10deg);
-  /* src/components/css/AiAgentAnimation.css:302 */
-}
-
-/* src/components/css/AiAgentAnimation.css:303 */
-
-.happy .voice-line {
-  /* src/components/css/AiAgentAnimation.css:304 */
-  background: linear-gradient(to top, transparent, #00ff00, transparent);
-  /* src/components/css/AiAgentAnimation.css:305 */
-  opacity: 0.8;
-  /* src/components/css/AiAgentAnimation.css:306 */
-}
-
-/* src/components/css/AiAgentAnimation.css:308 */
-
-/* Listening */
-
-/* src/components/css/AiAgentAnimation.css:309 */
-
-.listening .iris {
-  /* src/components/css/AiAgentAnimation.css:310 */
-  width: 90px;
-  /* src/components/css/AiAgentAnimation.css:311 */
-  height: 90px;
-  /* src/components/css/AiAgentAnimation.css:312 */
-}
-
-/* src/components/css/AiAgentAnimation.css:313 */
-
-.listening .pupil {
-  /* src/components/css/AiAgentAnimation.css:314 */
-  width: 40px;
-  /* src/components/css/AiAgentAnimation.css:315 */
-  height: 40px;
-  /* src/components/css/AiAgentAnimation.css:316 */
-}
-
-/* src/components/css/AiAgentAnimation.css:317 */
-
-.listening .face-wrapper {
-  /* src/components/css/AiAgentAnimation.css:318 */
-  animation: listening-bounce 0.5s ease-in-out infinite;
-  /* src/components/css/AiAgentAnimation.css:319 */
-}
-
-/* src/components/css/AiAgentAnimation.css:320 */
-
-@keyframes listening-bounce {
-  /* src/components/css/AiAgentAnimation.css:321 */
-
-  0%,
-/* src/components/css/AiAgentAnimation.css:322 */
-  100% {
-    /* src/components/css/AiAgentAnimation.css:323 */
-    transform: scale(1) rotate(0deg);
-    /* src/components/css/AiAgentAnimation.css:324 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:325 */
-
-  50% {
-    /* src/components/css/AiAgentAnimation.css:326 */
-    transform: scale(1.05) rotate(2deg);
-    /* src/components/css/AiAgentAnimation.css:327 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:328 */
-}
-
-/* src/components/css/AiAgentAnimation.css:330 */
-
-/* Thinking */
-
-/* src/components/css/AiAgentAnimation.css:331 */
-
-.thinking .eye-wrapper:first-child .iris {
-  /* src/components/css/AiAgentAnimation.css:332 */
-  transform: translate(-50%, -60%);
-  /* src/components/css/AiAgentAnimation.css:333 */
-}
-
-/* src/components/css/AiAgentAnimation.css:334 */
-
-.thinking .eyebrow:first-child {
-  /* src/components/css/AiAgentAnimation.css:335 */
-  transform: translateY(-10px) rotate(10deg);
-  /* src/components/css/AiAgentAnimation.css:336 */
-}
-
-/* src/components/css/AiAgentAnimation.css:337 */
-
-.thinking .voice-line {
-  /* src/components/css/AiAgentAnimation.css:338 */
-  animation: thinking-wave 1s ease-in-out infinite;
-  /* src/components/css/AiAgentAnimation.css:339 */
-}
-
-/* src/components/css/AiAgentAnimation.css:340 */
-
-@keyframes thinking-wave {
-  /* src/components/css/AiAgentAnimation.css:341 */
-
-  0%,
-/* src/components/css/AiAgentAnimation.css:342 */
-  100% {
-    /* src/components/css/AiAgentAnimation.css:343 */
-    opacity: 0.2;
-    /* src/components/css/AiAgentAnimation.css:344 */
-    height: 20px;
-    /* src/components/css/AiAgentAnimation.css:345 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:346 */
-
-  50% {
-    /* src/components/css/AiAgentAnimation.css:347 */
-    opacity: 0.6;
-    /* src/components/css/AiAgentAnimation.css:348 */
-    height: 40px;
-    /* src/components/css/AiAgentAnimation.css:349 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:350 */
-}
-
-/* src/components/css/AiAgentAnimation.css:352 */
-
-/* Surprised */
-
-/* src/components/css/AiAgentAnimation.css:353 */
-
-.surprised .eye {
-  /* src/components/css/AiAgentAnimation.css:354 */
-  transform: scale(1.3);
-  /* src/components/css/AiAgentAnimation.css:355 */
-}
-
-/* src/components/css/AiAgentAnimation.css:356 */
-
-.surprised .iris {
-  /* src/components/css/AiAgentAnimation.css:357 */
-  width: 70px;
-  /* src/components/css/AiAgentAnimation.css:358 */
-  height: 70px;
-  /* src/components/css/AiAgentAnimation.css:359 */
-}
-
-/* src/components/css/AiAgentAnimation.css:360 */
-
-.surprised .eyebrow {
-  /* src/components/css/AiAgentAnimation.css:361 */
-  transform: translateY(-20px);
-  /* src/components/css/AiAgentAnimation.css:362 */
-  height: 15px;
-  /* src/components/css/AiAgentAnimation.css:363 */
-}
-
-/* src/components/css/AiAgentAnimation.css:364 */
-
-.surprised .voice-line {
-  /* src/components/css/AiAgentAnimation.css:365 */
-  background: linear-gradient(to top, transparent, #ff00ff, transparent);
-  /* src/components/css/AiAgentAnimation.css:366 */
-}
-
-/* src/components/css/AiAgentAnimation.css:368 */
-
-/* Confused */
-
-/* src/components/css/AiAgentAnimation.css:369 */
-
-.confused .eyebrow:first-child {
-  /* src/components/css/AiAgentAnimation.css:370 */
-  transform: rotate(20deg) translateY(10px);
-  /* src/components/css/AiAgentAnimation.css:371 */
-}
-
-/* src/components/css/AiAgentAnimation.css:372 */
-
-.confused .eyebrow:last-child {
-  /* src/components/css/AiAgentAnimation.css:373 */
-  transform: rotate(-20deg) translateY(-10px);
-  /* src/components/css/AiAgentAnimation.css:374 */
-}
-
-/* src/components/css/AiAgentAnimation.css:375 */
-
-.confused .eye-wrapper:first-child {
-  /* src/components/css/AiAgentAnimation.css:376 */
-  transform: translateY(-10px);
-  /* src/components/css/AiAgentAnimation.css:377 */
-}
-
-/* src/components/css/AiAgentAnimation.css:378 */
-
-.confused .eye-wrapper:last-child {
-  /* src/components/css/AiAgentAnimation.css:379 */
-  transform: translateY(10px);
-  /* src/components/css/AiAgentAnimation.css:380 */
-}
-
-/* src/components/css/AiAgentAnimation.css:382 */
-
-/* Sleepy */
-
-/* src/components/css/AiAgentAnimation.css:383 */
-
-.sleepy .eyelid-top {
-  /* src/components/css/AiAgentAnimation.css:384 */
-  transform: translateY(40px);
-  /* src/components/css/AiAgentAnimation.css:385 */
-}
-
-/* src/components/css/AiAgentAnimation.css:386 */
-
-.sleepy .eyelid-bottom {
-  /* src/components/css/AiAgentAnimation.css:387 */
-  transform: translateY(-20px);
-  /* src/components/css/AiAgentAnimation.css:388 */
-}
-
-/* src/components/css/AiAgentAnimation.css:389 */
-
-.sleepy .voice-line {
-  /* src/components/css/AiAgentAnimation.css:390 */
-  opacity: 0.1;
-  /* src/components/css/AiAgentAnimation.css:391 */
-  animation: sleepy-breathe 3s ease-in-out infinite;
-  /* src/components/css/AiAgentAnimation.css:392 */
-}
-
-/* src/components/css/AiAgentAnimation.css:393 */
-
-@keyframes sleepy-breathe {
-  /* src/components/css/AiAgentAnimation.css:394 */
-
-  0%,
-/* src/components/css/AiAgentAnimation.css:395 */
-  100% {
-    /* src/components/css/AiAgentAnimation.css:396 */
-    height: 10px;
-    /* src/components/css/AiAgentAnimation.css:397 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:398 */
-
-  50% {
-    /* src/components/css/AiAgentAnimation.css:399 */
-    height: 20px;
-    /* src/components/css/AiAgentAnimation.css:400 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:401 */
-}
-
-/* src/components/css/AiAgentAnimation.css:403 */
-
-/* Speaking Animation */
-
-/* src/components/css/AiAgentAnimation.css:404 */
-
-.speaking .voice-line {
-  /* src/components/css/AiAgentAnimation.css:405 */
-  opacity: 1;
-  /* src/components/css/AiAgentAnimation.css:406 */
-  animation: speak-wave 0.2s ease-in-out infinite;
-  /* src/components/css/AiAgentAnimation.css:407 */
-}
-
-/* src/components/css/AiAgentAnimation.css:408 */
-
-.speaking .voice-line:nth-child(1) {
-  /* src/components/css/AiAgentAnimation.css:409 */
-  animation-delay: 0s;
-  /* src/components/css/AiAgentAnimation.css:410 */
-}
-
-/* src/components/css/AiAgentAnimation.css:411 */
-
-.speaking .voice-line:nth-child(2) {
-  /* src/components/css/AiAgentAnimation.css:412 */
-  animation-delay: 0.05s;
-  /* src/components/css/AiAgentAnimation.css:413 */
-}
-
-/* src/components/css/AiAgentAnimation.css:414 */
-
-.speaking .voice-line:nth-child(3) {
-  /* src/components/css/AiAgentAnimation.css:415 */
-  animation-delay: 0.1s;
-  /* src/components/css/AiAgentAnimation.css:416 */
-}
-
-/* src/components/css/AiAgentAnimation.css:417 */
-
-.speaking .voice-line:nth-child(4) {
-  /* src/components/css/AiAgentAnimation.css:418 */
-  animation-delay: 0.15s;
-  /* src/components/css/AiAgentAnimation.css:419 */
-}
-
-/* src/components/css/AiAgentAnimation.css:420 */
-
-.speaking .voice-line:nth-child(5) {
-  /* src/components/css/AiAgentAnimation.css:421 */
-  animation-delay: 0.2s;
-  /* src/components/css/AiAgentAnimation.css:422 */
-}
-
-/* src/components/css/AiAgentAnimation.css:423 */
-
-.speaking .voice-line:nth-child(6) {
-  /* src/components/css/AiAgentAnimation.css:424 */
-  animation-delay: 0.25s;
-  /* src/components/css/AiAgentAnimation.css:425 */
-}
-
-/* src/components/css/AiAgentAnimation.css:426 */
-
-.speaking .voice-line:nth-child(7) {
-  /* src/components/css/AiAgentAnimation.css:427 */
-  animation-delay: 0.3s;
-  /* src/components/css/AiAgentAnimation.css:428 */
-}
-
-/* src/components/css/AiAgentAnimation.css:429 */
-
-.speaking .voice-line:nth-child(8) {
-  /* src/components/css/AiAgentAnimation.css:430 */
-  animation-delay: 0.35s;
-  /* src/components/css/AiAgentAnimation.css:431 */
-}
-
-/* src/components/css/AiAgentAnimation.css:432 */
-
-.speaking .voice-line:nth-child(9) {
-  /* src/components/css/AiAgentAnimation.css:433 */
-  animation-delay: 0.4s;
-  /* src/components/css/AiAgentAnimation.css:434 */
-}
-
-/* src/components/css/AiAgentAnimation.css:435 */
-
-.speaking .voice-line:nth-child(10) {
-  /* src/components/css/AiAgentAnimation.css:436 */
-  animation-delay: 0.45s;
-  /* src/components/css/AiAgentAnimation.css:437 */
-}
-
-/* src/components/css/AiAgentAnimation.css:438 */
-
-@keyframes speak-wave {
-  /* src/components/css/AiAgentAnimation.css:439 */
-
-  0%,
-/* src/components/css/AiAgentAnimation.css:440 */
-  100% {
-    /* src/components/css/AiAgentAnimation.css:441 */
-    transform: scaleY(1);
-    /* src/components/css/AiAgentAnimation.css:442 */
-    background: linear-gradient(to top, transparent, #00ffff, transparent);
-    /* src/components/css/AiAgentAnimation.css:443 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:444 */
-
-  50% {
-    /* src/components/css/AiAgentAnimation.css:445 */
-    transform: scaleY(1.5);
-    /* src/components/css/AiAgentAnimation.css:446 */
-    background: linear-gradient(to top, transparent, #00ff00, transparent);
-    /* src/components/css/AiAgentAnimation.css:447 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:448 */
-}
-
-/* src/components/css/AiAgentAnimation.css:450 */
-
-/* Blinking */
-
-/* src/components/css/AiAgentAnimation.css:451 */
-
-.blinking .eyelid-top {
-  /* src/components/css/AiAgentAnimation.css:452 */
-  animation: blink-top 0.3s ease-in-out;
-  /* src/components/css/AiAgentAnimation.css:453 */
-}
-
-/* src/components/css/AiAgentAnimation.css:454 */
-
-.blinking .eyelid-bottom {
-  /* src/components/css/AiAgentAnimation.css:455 */
-  animation: blink-bottom 0.3s ease-in-out;
-  /* src/components/css/AiAgentAnimation.css:456 */
-}
-
-/* src/components/css/AiAgentAnimation.css:457 */
-
-@keyframes blink-top {
-  /* src/components/css/AiAgentAnimation.css:458 */
-
-  0%,
-/* src/components/css/AiAgentAnimation.css:459 */
-  100% {
-    /* src/components/css/AiAgentAnimation.css:460 */
-    transform: translateY(0);
-    /* src/components/css/AiAgentAnimation.css:461 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:462 */
-
-  50% {
-    /* src/components/css/AiAgentAnimation.css:463 */
-    transform: translateY(60px);
-    /* src/components/css/AiAgentAnimation.css:464 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:465 */
-}
-
-/* src/components/css/AiAgentAnimation.css:466 */
-
-@keyframes blink-bottom {
-  /* src/components/css/AiAgentAnimation.css:467 */
-
-  0%,
-/* src/components/css/AiAgentAnimation.css:468 */
-  100% {
-    /* src/components/css/AiAgentAnimation.css:469 */
-    transform: translateY(0);
-    /* src/components/css/AiAgentAnimation.css:470 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:471 */
-
-  50% {
-    /* src/components/css/AiAgentAnimation.css:472 */
-    transform: translateY(-60px);
-    /* src/components/css/AiAgentAnimation.css:473 */
-  }
-
-  /* src/components/css/AiAgentAnimation.css:474 */
-}
-
-/* End of file: components/css/AiAgentAnimation.css */
+/* End of file: components/avatar/HumanAvatar.css */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -113387,173 +113660,169 @@ const styles = `
   /* Voice State Colors */
   /* src/components/css/variables.css:29 */
   --color-voice-listening: #3b82f6;
-  /* Blue */
   /* src/components/css/variables.css:30 */
-  --color-voice-speaking: #10b981;
-  /* Green */
+  /* Blue */
   /* src/components/css/variables.css:31 */
-  --color-voice-thinking: #f59e0b;
-  /* Amber/Orange */
+  --color-voice-speaking: #10b981;
   /* src/components/css/variables.css:32 */
-  --color-voice-disconnected: #ef4444cb;
-  /* Red */
+  /* Green */
+  /* src/components/css/variables.css:33 */
+  --color-voice-thinking: #f59e0b;
   /* src/components/css/variables.css:34 */
-  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
+  /* Amber/Orange */
   /* src/components/css/variables.css:35 */
-  /* --color-voice-speaking-alt: #058158; Darker Green */
+  --color-voice-disconnected: #ef4444cb;
   /* src/components/css/variables.css:36 */
-  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
-  /* src/components/css/variables.css:37 */
-  /* --color-voice-thinking-alt: #fbbf24; Yellow */
+  /* Red */
+  /* src/components/css/variables.css:38 */
+  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
   /* src/components/css/variables.css:39 */
-  /* Special/Brand Colors */
+  /* --color-voice-speaking-alt: #058158; Darker Green */
   /* src/components/css/variables.css:40 */
-  --color-whatsapp: #1eb655;
-  /* src/components/css/variables.css:42 */
-  /* Opacity Values */
+  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
+  /* src/components/css/variables.css:41 */
+  /* --color-voice-thinking-alt: #fbbf24; Yellow */
   /* src/components/css/variables.css:43 */
-  --opacity-disabled: 0.7;
+  /* Special/Brand Colors */
   /* src/components/css/variables.css:44 */
+  --color-whatsapp: #1eb655;
+  /* src/components/css/variables.css:46 */
+  /* Opacity Values */
+  /* src/components/css/variables.css:47 */
+  --opacity-disabled: 0.7;
+  /* src/components/css/variables.css:48 */
   --opacity-hover: 0.8;
-  /* src/components/css/variables.css:45 */
+  /* src/components/css/variables.css:49 */
   --opacity-normal: 1;
   /* ================================================
      INPUT AREA VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:51 */
-  /* Input Colors */
-  /* src/components/css/variables.css:53 */
-  --color-input-background: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:54 */
-  --color-input-background-avatar-view: var(--chat-widget-primary-color);
   /* src/components/css/variables.css:55 */
+  /* Input Colors */
+  /* src/components/css/variables.css:57 */
+  --color-input-background: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:58 */
   --color-input-text: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:56 */
+  /* src/components/css/variables.css:59 */
   --color-input-placeholder-text: color-mix(
-/* src/components/css/variables.css:57 */
-    in srgb,
-/* src/components/css/variables.css:58 */
-    var(--color-input-text) 70%,
-/* src/components/css/variables.css:59 */
-    white
 /* src/components/css/variables.css:60 */
+    in srgb,
+/* src/components/css/variables.css:61 */
+    var(--color-input-text) 70%,
+/* src/components/css/variables.css:62 */
+    white
+/* src/components/css/variables.css:63 */
   );
-  /* src/components/css/variables.css:61 */
-  --color-input-placeholder-opacity: 70%;
-  /* src/components/css/variables.css:62 */
-  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:64 */
-  /* Input Dimensions */
+  --color-input-placeholder-opacity: 70%;
   /* src/components/css/variables.css:65 */
-  --input-default-height: 40px;
-  /* src/components/css/variables.css:66 */
-  --input-min-height: 40px;
+  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:67 */
-  --input-max-height: 120px;
+  /* Input Dimensions */
   /* src/components/css/variables.css:68 */
-  --input-max-height-tablet: 100px;
+  --input-default-height: 40px;
   /* src/components/css/variables.css:69 */
-  --input-max-height-mobile: 80px;
+  --input-min-height: 40px;
+  /* src/components/css/variables.css:70 */
+  --input-max-height: 120px;
   /* src/components/css/variables.css:71 */
-  /* Input Line Height */
+  --input-max-height-tablet: 100px;
   /* src/components/css/variables.css:72 */
-  --input-line-height: 20px;
+  --input-max-height-mobile: 80px;
   /* src/components/css/variables.css:74 */
-  /* Input Padding */
+  /* Input Line Height */
   /* src/components/css/variables.css:75 */
-  --input-text-padding-horizontal: 4px;
-  /* src/components/css/variables.css:76 */
-  --input-text-padding-vertical: 0px;
+  --input-line-height: 20px;
   /* src/components/css/variables.css:77 */
-  --input-text-padding: 0 var(--input-text-padding-horizontal);
+  /* Input Padding */
   /* src/components/css/variables.css:78 */
-  --input-container-padding: 6px 8px;
+  --input-text-padding-horizontal: 4px;
   /* src/components/css/variables.css:79 */
-  --input-container-padding-sleek: 4px 4px;
+  --input-text-padding-vertical: 0px;
+  /* src/components/css/variables.css:80 */
+  --input-text-padding: 0 var(--input-text-padding-horizontal);
   /* src/components/css/variables.css:81 */
-  /* Input Font */
+  --input-container-padding: 6px 8px;
   /* src/components/css/variables.css:82 */
-  --input-font-size: var(--chat-widget-message-font-size);
-  /* src/components/css/variables.css:83 */
-  --input-font-weight: 400;
+  --input-container-padding-sleek: 4px 4px;
   /* src/components/css/variables.css:84 */
-  --input-font-weight-focus: 500;
+  /* Input Font */
   /* src/components/css/variables.css:85 */
+  --input-font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/variables.css:86 */
+  --input-font-weight: 400;
+  /* src/components/css/variables.css:87 */
+  --input-font-weight-focus: 500;
+  /* src/components/css/variables.css:88 */
   --input-font-weight-bold: 600;
   /* ================================================
      INPUT SCROLLBAR VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:91 */
+  /* src/components/css/variables.css:94 */
   /* Scrollbar Colors */
-  /* src/components/css/variables.css:92 */
+  /* src/components/css/variables.css:95 */
   --color-scrollbar-input-thumb: color-mix(
-/* src/components/css/variables.css:93 */
-    in srgb,
-/* src/components/css/variables.css:94 */
-    var(--chat-widget-primary-color) 75%,
-/* src/components/css/variables.css:95 */
-    transparent
 /* src/components/css/variables.css:96 */
-  );
-  /* src/components/css/variables.css:97 */
-  --color-scrollbar-input-thumb-hover: color-mix(
+    in srgb,
+/* src/components/css/variables.css:97 */
+    var(--chat-widget-primary-color) 75%,
 /* src/components/css/variables.css:98 */
-    in srgb,
+    transparent
 /* src/components/css/variables.css:99 */
-    var(--chat-widget-primary-color) 90%,
-/* src/components/css/variables.css:100 */
-    transparent
+  );
+  /* src/components/css/variables.css:100 */
+  --color-scrollbar-input-thumb-hover: color-mix(
 /* src/components/css/variables.css:101 */
-  );
-  /* src/components/css/variables.css:103 */
-  --color-scrollbar-input-thumb-avatar-view: color-mix(
+    in srgb,
+/* src/components/css/variables.css:102 */
+    var(--chat-widget-primary-color) 90%,
+/* src/components/css/variables.css:103 */
+    transparent
 /* src/components/css/variables.css:104 */
-    in srgb,
-/* src/components/css/variables.css:105 */
-    var(--chat-widget-secondary-color) 75%,
-/* src/components/css/variables.css:106 */
-    transparent
+  );
+  /* src/components/css/variables.css:106 */
+  --color-scrollbar-input-thumb-avatar-view: color-mix(
 /* src/components/css/variables.css:107 */
-  );
-  /* src/components/css/variables.css:108 */
-  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
-/* src/components/css/variables.css:109 */
     in srgb,
-/* src/components/css/variables.css:110 */
-    var(--chat-widget-secondary-color) 90%,
-/* src/components/css/variables.css:111 */
+/* src/components/css/variables.css:108 */
+    var(--chat-widget-secondary-color) 75%,
+/* src/components/css/variables.css:109 */
     transparent
-/* src/components/css/variables.css:112 */
+/* src/components/css/variables.css:110 */
   );
-  /* src/components/css/variables.css:114 */
-  --color-scrollbar-input-track: transparent;
-  /* src/components/css/variables.css:116 */
-  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:111 */
+  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
+/* src/components/css/variables.css:112 */
+    in srgb,
+/* src/components/css/variables.css:113 */
+    var(--chat-widget-secondary-color) 90%,
+/* src/components/css/variables.css:114 */
+    transparent
+/* src/components/css/variables.css:115 */
+  );
   /* src/components/css/variables.css:117 */
+  --color-scrollbar-input-track: transparent;
+  /* src/components/css/variables.css:119 */
+  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:120 */
   --input-scrollbar-border-radius: 2.5px;
-  /* src/components/css/variables.css:118 */
+  /* src/components/css/variables.css:121 */
   --input-scrollbar-thumb-hover-opacity: var(--opacity-hover);
   /* ================================================
      BUTTON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:124 */
-  /* Button Dimensions */
-  /* src/components/css/variables.css:125 */
-  --button-size-primary: 32px;
-  /* src/components/css/variables.css:126 */
-  --button-padding-primary: 4px;
   /* src/components/css/variables.css:127 */
-  --button-size-secondary: 24px;
+  /* Button Dimensions */
+  /* src/components/css/variables.css:128 */
+  --button-size-primary: 32px;
   /* src/components/css/variables.css:129 */
-  /* Button Colors */
+  --button-padding-primary: 4px;
   /* src/components/css/variables.css:130 */
+  --button-size-secondary: 24px;
+  /* src/components/css/variables.css:132 */
+  /* Button Colors */
+  /* src/components/css/variables.css:133 */
   --color-button-background-primary: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:131 */
-  --color-button-background-primary-avatar-view: var(
-/* src/components/css/variables.css:132 */
-    --chat-widget-secondary-color
-/* src/components/css/variables.css:133 */
-  );
   /* src/components/css/variables.css:134 */
   --color-button-background-hover: var(--chat-widget-primary-color-hover);
   /* src/components/css/variables.css:135 */
@@ -113561,279 +113830,282 @@ const styles = `
   /* src/components/css/variables.css:136 */
   --color-button-fill: var(--chat-widget-button-content-color);
   /* src/components/css/variables.css:138 */
-  /* Button Opacity States */
-  /* src/components/css/variables.css:139 */
-  --button-opacity-normal: var(--opacity-normal);
+  --color-button-disconnect: #ef4444;
   /* src/components/css/variables.css:140 */
-  --button-opacity-hover: var(--opacity-hover);
+  /* Button Opacity States */
   /* src/components/css/variables.css:141 */
+  --button-opacity-normal: var(--opacity-normal);
+  /* src/components/css/variables.css:142 */
+  --button-opacity-hover: var(--opacity-hover);
+  /* src/components/css/variables.css:143 */
   --button-opacity-disabled: var(--opacity-disabled);
   /* ================================================
      ICON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:147 */
-  /* Icon Sizes */
-  /* src/components/css/variables.css:148 */
-  --button-icon-size-secondary: 16px;
   /* src/components/css/variables.css:149 */
+  /* Icon Sizes */
+  /* src/components/css/variables.css:150 */
+  --button-icon-size-secondary: 16px;
+  /* src/components/css/variables.css:151 */
   --button-icon-size-primary: 20px;
+  /* src/components/css/variables.css:152 */
   /* w-5 h-5 equivalent */
   /* ================================================
      CHAT MESSAGE CONTAINER SCROLLBAR
      ================================================ */
-  /* src/components/css/variables.css:155 */
+  /* src/components/css/variables.css:158 */
   --message-scrollbar-width: thin;
-  /* src/components/css/variables.css:156 */
-  --message-scrollbar-width-px: 6px;
-  /* src/components/css/variables.css:157 */
-  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:159 */
-  /* Scrollbar Colors */
+  --message-scrollbar-width-px: 6px;
   /* src/components/css/variables.css:160 */
-  --color-scrollbar-message-thumb-default: rgb(209 213 219);
-  /* src/components/css/variables.css:161 */
-  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:162 */
+  /* Scrollbar Colors */
+  /* src/components/css/variables.css:163 */
+  --color-scrollbar-message-thumb-default: rgb(209 213 219);
+  /* src/components/css/variables.css:164 */
+  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  /* src/components/css/variables.css:165 */
   --color-scrollbar-message-thumb-theme: var(
-/* src/components/css/variables.css:163 */
+/* src/components/css/variables.css:166 */
     --chat-widget-button-content-color,
-/* src/components/css/variables.css:164 */
-    var(--chat-widget-secondary-color)
-/* src/components/css/variables.css:165 */
-  );
-  /* src/components/css/variables.css:166 */
-  --color-scrollbar-message-thumb-hover-mix: color-mix(
 /* src/components/css/variables.css:167 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:168 */
-    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
-/* src/components/css/variables.css:169 */
-      80%,
-/* src/components/css/variables.css:170 */
-    var(--chat-widget-primary-color)
-/* src/components/css/variables.css:171 */
   );
-  /* src/components/css/variables.css:172 */
+  /* src/components/css/variables.css:169 */
+  --color-scrollbar-message-thumb-hover-mix: color-mix(
+/* src/components/css/variables.css:170 */
+    in srgb,
+/* src/components/css/variables.css:171 */
+    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
+/* src/components/css/variables.css:172 */
+      80%,
+/* src/components/css/variables.css:173 */
+    var(--chat-widget-primary-color)
+/* src/components/css/variables.css:174 */
+  );
+  /* src/components/css/variables.css:175 */
   --color-scrollbar-message-track: transparent;
   /* ================================================
      CHAT MESSAGE
      ================================================ */
-  /* src/components/css/variables.css:178 */
+  /* src/components/css/variables.css:181 */
   --message-text-color: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:179 */
+  /* src/components/css/variables.css:182 */
   --message-font-size: var(--chat-widget-message-font-size);
   /* ================================================
      CHAT MESSAGE BUBBLES
      ================================================ */
-  /* src/components/css/variables.css:185 */
+  /* src/components/css/variables.css:188 */
   --message-bubble-background-color: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:186 */
+  /* src/components/css/variables.css:189 */
   --message-bubble-icon-color: var(--chat-widget-secondary-color);
   /* ================================================
      ENGAGEMENT HOOK IMAGE
      ================================================ */
-  /* src/components/css/variables.css:192 */
+  /* src/components/css/variables.css:195 */
   /* Engagement Hook Image Variables (defined elsewhere via JavaScript) */
-  /* src/components/css/variables.css:193 */
-  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
-  /* src/components/css/variables.css:194 */
-  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
   /* src/components/css/variables.css:196 */
-  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
   /* src/components/css/variables.css:197 */
+  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
+  /* src/components/css/variables.css:199 */
+  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* src/components/css/variables.css:200 */
   --engagement-hook-image-height: var(
-/* src/components/css/variables.css:198 */
+/* src/components/css/variables.css:201 */
     --chat-widget-engagement-hook-image-height
-/* src/components/css/variables.css:199 */
+/* src/components/css/variables.css:202 */
   );
   /* ================================================
      TRANSITION VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:205 */
-  --transition-fast: 0.2s ease;
-  /* src/components/css/variables.css:206 */
-  --transition-normal: all 0.3s ease;
-  /* src/components/css/variables.css:207 */
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   /* src/components/css/variables.css:208 */
+  --transition-fast: 0.2s ease;
+  /* src/components/css/variables.css:209 */
+  --transition-normal: all 0.3s ease;
+  /* src/components/css/variables.css:210 */
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* src/components/css/variables.css:211 */
   --transition-slow-ease: 0.4s ease;
   /* ================================================
      BORDER RADIUS VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:214 */
-  --border-radius-small: 2.5px;
-  /* src/components/css/variables.css:215 */
-  --border-radius-medium: 3px;
-  /* src/components/css/variables.css:216 */
-  --border-radius-large: 12px;
   /* src/components/css/variables.css:217 */
-  --border-radius-xl: 16px;
+  --border-radius-small: 2.5px;
   /* src/components/css/variables.css:218 */
-  --border-radius-2xl: 20px;
+  --border-radius-medium: 3px;
   /* src/components/css/variables.css:219 */
+  --border-radius-large: 12px;
+  /* src/components/css/variables.css:220 */
+  --border-radius-xl: 16px;
+  /* src/components/css/variables.css:221 */
+  --border-radius-2xl: 20px;
+  /* src/components/css/variables.css:222 */
   --border-radius-full: 9999px;
   /* ================================================
      SPACING & GAP VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:225 */
-  --spacing-gap-xs: 0.5px;
-  /* src/components/css/variables.css:226 */
-  --spacing-gap-sm: 4px;
-  /* src/components/css/variables.css:227 */
-  --spacing-gap-md: 8px;
   /* src/components/css/variables.css:228 */
-  --spacing-gap-lg: 12px;
+  --spacing-gap-xs: 0.5px;
   /* src/components/css/variables.css:229 */
+  --spacing-gap-sm: 4px;
+  /* src/components/css/variables.css:230 */
+  --spacing-gap-md: 8px;
+  /* src/components/css/variables.css:231 */
+  --spacing-gap-lg: 12px;
+  /* src/components/css/variables.css:232 */
   --spacing-gap-xl: 16px;
   /* ================================================
      Z-INDEX VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:235 */
-  --z-index-base: 1;
-  /* src/components/css/variables.css:236 */
-  --z-index-elevated: 10;
-  /* src/components/css/variables.css:237 */
-  --z-index-high: 20;
   /* src/components/css/variables.css:238 */
+  --z-index-base: 1;
+  /* src/components/css/variables.css:239 */
+  --z-index-elevated: 10;
+  /* src/components/css/variables.css:240 */
+  --z-index-high: 20;
+  /* src/components/css/variables.css:241 */
   --z-index-maximum: 9999;
   /* ================================================
      BORDER VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:244 */
+  /* src/components/css/variables.css:247 */
   --border-width-thin: 1px;
-  /* src/components/css/variables.css:245 */
+  /* src/components/css/variables.css:248 */
   --border-width-medium: 2px;
-  /* src/components/css/variables.css:246 */
+  /* src/components/css/variables.css:249 */
   --border-width-thick: 4px;
   /* ================================================
      BOX SHADOW VARIABLES (for consistency)
      ================================================ */
-  /* src/components/css/variables.css:252 */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  /* src/components/css/variables.css:253 */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:254 */
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   /* src/components/css/variables.css:255 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* src/components/css/variables.css:256 */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:257 */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:258 */
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
   /* ================================================
      SLEEK VIEW SPECIFIC VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:261 */
-  /* These are already defined in SleekView.css but should be here for consistency */
-  /* src/components/css/variables.css:262 */
-  --sleek-main-min-height: 0px;
-  /* src/components/css/variables.css:263 */
-  --sleek-border-radius: var(--border-radius-large);
   /* src/components/css/variables.css:264 */
-  --sleek-main-bg: var(--color-sleek-main-bg);
+  /* These are already defined in SleekView.css but should be here for consistency */
   /* src/components/css/variables.css:265 */
-  --sleek-main-border: var(--color-sleek-main-border);
+  --sleek-main-min-height: 0px;
   /* src/components/css/variables.css:266 */
-  --sleek-main-text-color: var(--color-sleek-main-text);
+  --sleek-border-radius: var(--border-radius-large);
+  /* src/components/css/variables.css:267 */
+  --sleek-main-bg: var(--color-sleek-main-bg);
   /* src/components/css/variables.css:268 */
-  /* Sleek View Colors */
+  --sleek-main-border: var(--color-sleek-main-border);
   /* src/components/css/variables.css:269 */
+  --sleek-main-text-color: var(--color-sleek-main-text);
+  /* src/components/css/variables.css:271 */
+  /* Sleek View Colors */
+  /* src/components/css/variables.css:272 */
   --color-sleek-main-bg: color-mix(
-/* src/components/css/variables.css:270 */
-    in srgb,
-/* src/components/css/variables.css:271 */
-    var(--chat-widget-primary-color) 10%,
-/* src/components/css/variables.css:272 */
-    white
 /* src/components/css/variables.css:273 */
+    in srgb,
+/* src/components/css/variables.css:274 */
+    var(--chat-widget-primary-color) 10%,
+/* src/components/css/variables.css:275 */
+    white
+/* src/components/css/variables.css:276 */
   );
-  /* src/components/css/variables.css:274 */
-  --color-sleek-main-border: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:275 */
-  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:277 */
-  /* Gradient Colors (derived from primary/secondary) */
+  --color-sleek-main-border: var(--chat-widget-secondary-color);
   /* src/components/css/variables.css:278 */
-  --color-gradient-1: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:279 */
-  --color-gradient-2: var(--chat-widget-secondary-color);
+  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:280 */
+  /* Gradient Colors (derived from primary/secondary) */
+  /* src/components/css/variables.css:281 */
+  --color-gradient-1: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:282 */
+  --color-gradient-2: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:283 */
   --color-gradient-3: color-mix(
-/* src/components/css/variables.css:281 */
-    in srgb,
-/* src/components/css/variables.css:282 */
-    var(--chat-widget-primary-color) 60%,
-/* src/components/css/variables.css:283 */
-    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:284 */
-  );
-  /* src/components/css/variables.css:285 */
-  --color-gradient-4: color-mix(
+    in srgb,
+/* src/components/css/variables.css:285 */
+    var(--chat-widget-primary-color) 60%,
 /* src/components/css/variables.css:286 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:287 */
-    var(--chat-widget-primary-color) 40%,
-/* src/components/css/variables.css:288 */
-    var(--chat-widget-secondary-color)
+  );
+  /* src/components/css/variables.css:288 */
+  --color-gradient-4: color-mix(
 /* src/components/css/variables.css:289 */
-  );
-  /* src/components/css/variables.css:290 */
-  --color-accent: color-mix(
+    in srgb,
+/* src/components/css/variables.css:290 */
+    var(--chat-widget-primary-color) 40%,
 /* src/components/css/variables.css:291 */
-    in srgb,
-/* src/components/css/variables.css:292 */
-    var(--chat-widget-primary-color) 70%,
-/* src/components/css/variables.css:293 */
     var(--chat-widget-secondary-color)
+/* src/components/css/variables.css:292 */
+  );
+  /* src/components/css/variables.css:293 */
+  --color-accent: color-mix(
 /* src/components/css/variables.css:294 */
-  );
-  /* src/components/css/variables.css:295 */
-  --color-glow: color-mix(
-/* src/components/css/variables.css:296 */
     in srgb,
+/* src/components/css/variables.css:295 */
+    var(--chat-widget-primary-color) 70%,
+/* src/components/css/variables.css:296 */
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:297 */
-    var(--chat-widget-primary-color) 30%,
-/* src/components/css/variables.css:298 */
-    transparent
-/* src/components/css/variables.css:299 */
   );
-  /* src/components/css/variables.css:301 */
-  /* Legacy Gradient Variables (for backward compatibility) */
-  /* src/components/css/variables.css:302 */
-  --gradient-1: var(--color-gradient-1);
-  /* src/components/css/variables.css:303 */
-  --gradient-2: var(--color-gradient-2);
+  /* src/components/css/variables.css:298 */
+  --color-glow: color-mix(
+/* src/components/css/variables.css:299 */
+    in srgb,
+/* src/components/css/variables.css:300 */
+    var(--chat-widget-primary-color) 30%,
+/* src/components/css/variables.css:301 */
+    transparent
+/* src/components/css/variables.css:302 */
+  );
   /* src/components/css/variables.css:304 */
-  --gradient-3: var(--color-gradient-3);
+  /* Legacy Gradient Variables (for backward compatibility) */
   /* src/components/css/variables.css:305 */
-  --gradient-4: var(--color-gradient-4);
+  --gradient-1: var(--color-gradient-1);
   /* src/components/css/variables.css:306 */
-  --accent: var(--color-accent);
+  --gradient-2: var(--color-gradient-2);
   /* src/components/css/variables.css:307 */
-  --glow: var(--color-glow);
+  --gradient-3: var(--color-gradient-3);
+  /* src/components/css/variables.css:308 */
+  --gradient-4: var(--color-gradient-4);
   /* src/components/css/variables.css:309 */
-  /* Legacy Color Aliases (for backward compatibility) */
+  --accent: var(--color-accent);
   /* src/components/css/variables.css:310 */
-  --whatsapp-color: var(--color-whatsapp);
-  /* src/components/css/variables.css:311 */
-  --gray-200: var(--color-gray-200);
+  --glow: var(--color-glow);
   /* src/components/css/variables.css:312 */
-  --gray-300: var(--color-gray-300);
+  /* Legacy Color Aliases (for backward compatibility) */
   /* src/components/css/variables.css:313 */
-  --gray-400: var(--color-gray-400);
+  --whatsapp-color: var(--color-whatsapp);
   /* src/components/css/variables.css:314 */
-  --gray-500: var(--color-gray-500);
+  --gray-200: var(--color-gray-200);
   /* src/components/css/variables.css:315 */
-  --gray-600: var(--color-gray-600);
+  --gray-300: var(--color-gray-300);
   /* src/components/css/variables.css:316 */
-  --gray-700: var(--color-gray-700);
+  --gray-400: var(--color-gray-400);
   /* src/components/css/variables.css:317 */
-  --gray-800: var(--color-gray-800);
+  --gray-500: var(--color-gray-500);
   /* src/components/css/variables.css:318 */
-  --blue-500: var(--color-blue-500);
+  --gray-600: var(--color-gray-600);
   /* src/components/css/variables.css:319 */
-  --blue-600: var(--color-blue-600);
+  --gray-700: var(--color-gray-700);
   /* src/components/css/variables.css:320 */
-  --slate-700: var(--color-slate-700);
+  --gray-800: var(--color-gray-800);
   /* src/components/css/variables.css:321 */
-  --slate-800: var(--color-slate-800);
+  --blue-500: var(--color-blue-500);
+  /* src/components/css/variables.css:322 */
+  --blue-600: var(--color-blue-600);
   /* src/components/css/variables.css:323 */
+  --slate-700: var(--color-slate-700);
+  /* src/components/css/variables.css:324 */
+  --slate-800: var(--color-slate-800);
+  /* src/components/css/variables.css:326 */
   /* Gray Scale Colors */
   /* --color-gray-200: rgb(229, 231, 235);
   --color-gray-300: rgb(209, 213, 219);
@@ -113842,104 +114114,107 @@ const styles = `
   --color-gray-600: rgb(75, 85, 99);
   --color-gray-700: rgb(51, 65, 85);
   --color-gray-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:332 */
+  /* src/components/css/variables.css:335 */
   /* Blue Colors */
   /* --color-blue-500: #3b82f6;
   --color-blue-600: #2563eb; */
-  /* src/components/css/variables.css:336 */
+  /* src/components/css/variables.css:339 */
   /* Slate Colors */
   /* --color-slate-700: rgb(51, 65, 85);
   --color-slate-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:340 */
+  /* src/components/css/variables.css:343 */
   /* Red Colors (for errors, disconnect, etc.) */
   /* --color-red-50: rgb(254, 242, 242);
   --color-red-100: rgb(254, 226, 226);
   --color-red-500: #ef4444;
   --color-red-600: #dc2626; */
-  /* src/components/css/variables.css:346 */
+  /* src/components/css/variables.css:349 */
   /* Green Colors (for success, active states) */
   /* --color-green-50: rgb(240, 253, 244);
   --color-green-100: rgb(220, 252, 231);
   --color-green-500: #10b981;
   --color-green-600: #059669; */
-  /* src/components/css/variables.css:351 */
+  /* src/components/css/variables.css:354 */
 }
 
-/* src/components/css/variables.css:353 */
+/* src/components/css/variables.css:356 */
 
 /* Fallback for browsers that don't support color-mix */
 
-/* src/components/css/variables.css:354 */
+/* src/components/css/variables.css:357 */
 
 @supports not (color: color-mix(in srgb, #000 50%, #fff)) {
-  /* src/components/css/variables.css:355 */
+  /* src/components/css/variables.css:358 */
 
   :root {
-    /* src/components/css/variables.css:356 */
+    /* src/components/css/variables.css:359 */
     /* Derived Theme Colors Fallback */
-    /* src/components/css/variables.css:357 */
-    /* Primary hover: darker version of default primary color #000aaa */
-    /* src/components/css/variables.css:358 */
-    --chat-widget-primary-color-hover: #000991;
-    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:360 */
-    /* Gradient Colors Fallback */
+    /* Primary hover: darker version of default primary color #000aaa */
     /* src/components/css/variables.css:361 */
-    --color-gradient-1: #000aaa;
-    /* Default primary color */
+    --chat-widget-primary-color-hover: #000991;
     /* src/components/css/variables.css:362 */
-    --color-gradient-2: #6c757d;
-    /* Default secondary color */
-    /* src/components/css/variables.css:363 */
-    --color-gradient-3: #6c757d;
+    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:364 */
-    --color-gradient-4: #6c757d;
+    /* Gradient Colors Fallback */
     /* src/components/css/variables.css:365 */
-    --color-accent: #6c757d;
+    --color-gradient-1: #000aaa;
     /* src/components/css/variables.css:366 */
-    --color-glow: rgba(0, 10, 170, 0.3);
+    /* Default primary color */
+    /* src/components/css/variables.css:367 */
+    --color-gradient-2: #6c757d;
     /* src/components/css/variables.css:368 */
-    /* Sleek View Colors Fallback */
+    /* Default secondary color */
     /* src/components/css/variables.css:369 */
-    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
+    --color-gradient-3: #6c757d;
     /* src/components/css/variables.css:370 */
-    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
+    --color-gradient-4: #6c757d;
+    /* src/components/css/variables.css:371 */
+    --color-accent: #6c757d;
     /* src/components/css/variables.css:372 */
-    /* Scrollbar Colors Fallback */
-    /* src/components/css/variables.css:373 */
-    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
+    --color-glow: rgba(0, 10, 170, 0.3);
     /* src/components/css/variables.css:374 */
-    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
+    /* Sleek View Colors Fallback */
+    /* src/components/css/variables.css:375 */
+    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
     /* src/components/css/variables.css:376 */
-    /* Legacy aliases */
-    /* src/components/css/variables.css:377 */
-    --gradient-1: var(--color-gradient-1);
+    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
     /* src/components/css/variables.css:378 */
-    --gradient-2: var(--color-gradient-2);
+    /* Scrollbar Colors Fallback */
     /* src/components/css/variables.css:379 */
-    --gradient-3: var(--color-gradient-3);
+    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
     /* src/components/css/variables.css:380 */
-    --gradient-4: var(--color-gradient-4);
-    /* src/components/css/variables.css:381 */
-    --accent: var(--color-accent);
+    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
     /* src/components/css/variables.css:382 */
-    --glow: var(--color-glow);
+    /* Legacy aliases */
     /* src/components/css/variables.css:383 */
-    --sleek-main-bg: var(--color-sleek-main-bg);
+    --gradient-1: var(--color-gradient-1);
     /* src/components/css/variables.css:384 */
-    --sleek-main-border: var(--color-sleek-main-border);
+    --gradient-2: var(--color-gradient-2);
     /* src/components/css/variables.css:385 */
-    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    --gradient-3: var(--color-gradient-3);
     /* src/components/css/variables.css:386 */
-    --input-scrollbar-thumb-hover-color: var(
-/* src/components/css/variables.css:387 */
-      --color-scrollbar-input-thumb-hover
-/* src/components/css/variables.css:388 */
-    );
+    --gradient-4: var(--color-gradient-4);
+    /* src/components/css/variables.css:387 */
+    --accent: var(--color-accent);
+    /* src/components/css/variables.css:388 */
+    --glow: var(--color-glow);
     /* src/components/css/variables.css:389 */
+    --sleek-main-bg: var(--color-sleek-main-bg);
+    /* src/components/css/variables.css:390 */
+    --sleek-main-border: var(--color-sleek-main-border);
+    /* src/components/css/variables.css:391 */
+    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    /* src/components/css/variables.css:392 */
+    --input-scrollbar-thumb-hover-color: var(
+/* src/components/css/variables.css:393 */
+      --color-scrollbar-input-thumb-hover
+/* src/components/css/variables.css:394 */
+    );
+    /* src/components/css/variables.css:395 */
   }
 
-  /* src/components/css/variables.css:390 */
+  /* src/components/css/variables.css:396 */
 }
 
 /* This is a container for TextChatInput and VoiceChatInput
@@ -114095,7 +114370,7 @@ This will call child components for text and voice */
   /* src/components/css/ChatInput.css:65 */
   /* Voice view container styles */
   /* src/components/css/ChatInput.css:66 */
-  background: var(--color-input-background-avatar-view);
+  background: var(--chat-widget-primary-color);
   /* src/components/css/ChatInput.css:67 */
 }
 
@@ -114105,7 +114380,7 @@ This will call child components for text and voice */
   /* src/components/css/ChatInput.css:70 */
   /* Voice view wrapper styles */
   /* src/components/css/ChatInput.css:71 */
-  background: var(--color-input-background-avatar-view);
+  background: var(--chat-widget-primary-color);
   /* src/components/css/ChatInput.css:72 */
 }
 
@@ -114129,7 +114404,7 @@ This will call child components for text and voice */
   /* src/components/css/ChatInput.css:81 */
   /* Voice view button styles */
   /* src/components/css/ChatInput.css:82 */
-  background: var(--color-button-background-primary-avatar-view);
+  background: var(--chat-widget-secondary-color);
   /* src/components/css/ChatInput.css:83 */
 }
 
@@ -114182,173 +114457,169 @@ This will call child components for text and voice */
   /* Voice State Colors */
   /* src/components/css/variables.css:29 */
   --color-voice-listening: #3b82f6;
-  /* Blue */
   /* src/components/css/variables.css:30 */
-  --color-voice-speaking: #10b981;
-  /* Green */
+  /* Blue */
   /* src/components/css/variables.css:31 */
-  --color-voice-thinking: #f59e0b;
-  /* Amber/Orange */
+  --color-voice-speaking: #10b981;
   /* src/components/css/variables.css:32 */
-  --color-voice-disconnected: #ef4444cb;
-  /* Red */
+  /* Green */
+  /* src/components/css/variables.css:33 */
+  --color-voice-thinking: #f59e0b;
   /* src/components/css/variables.css:34 */
-  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
+  /* Amber/Orange */
   /* src/components/css/variables.css:35 */
-  /* --color-voice-speaking-alt: #058158; Darker Green */
+  --color-voice-disconnected: #ef4444cb;
   /* src/components/css/variables.css:36 */
-  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
-  /* src/components/css/variables.css:37 */
-  /* --color-voice-thinking-alt: #fbbf24; Yellow */
+  /* Red */
+  /* src/components/css/variables.css:38 */
+  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
   /* src/components/css/variables.css:39 */
-  /* Special/Brand Colors */
+  /* --color-voice-speaking-alt: #058158; Darker Green */
   /* src/components/css/variables.css:40 */
-  --color-whatsapp: #1eb655;
-  /* src/components/css/variables.css:42 */
-  /* Opacity Values */
+  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
+  /* src/components/css/variables.css:41 */
+  /* --color-voice-thinking-alt: #fbbf24; Yellow */
   /* src/components/css/variables.css:43 */
-  --opacity-disabled: 0.7;
+  /* Special/Brand Colors */
   /* src/components/css/variables.css:44 */
+  --color-whatsapp: #1eb655;
+  /* src/components/css/variables.css:46 */
+  /* Opacity Values */
+  /* src/components/css/variables.css:47 */
+  --opacity-disabled: 0.7;
+  /* src/components/css/variables.css:48 */
   --opacity-hover: 0.8;
-  /* src/components/css/variables.css:45 */
+  /* src/components/css/variables.css:49 */
   --opacity-normal: 1;
   /* ================================================
      INPUT AREA VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:51 */
-  /* Input Colors */
-  /* src/components/css/variables.css:53 */
-  --color-input-background: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:54 */
-  --color-input-background-avatar-view: var(--chat-widget-primary-color);
   /* src/components/css/variables.css:55 */
+  /* Input Colors */
+  /* src/components/css/variables.css:57 */
+  --color-input-background: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:58 */
   --color-input-text: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:56 */
+  /* src/components/css/variables.css:59 */
   --color-input-placeholder-text: color-mix(
-/* src/components/css/variables.css:57 */
-    in srgb,
-/* src/components/css/variables.css:58 */
-    var(--color-input-text) 70%,
-/* src/components/css/variables.css:59 */
-    white
 /* src/components/css/variables.css:60 */
+    in srgb,
+/* src/components/css/variables.css:61 */
+    var(--color-input-text) 70%,
+/* src/components/css/variables.css:62 */
+    white
+/* src/components/css/variables.css:63 */
   );
-  /* src/components/css/variables.css:61 */
-  --color-input-placeholder-opacity: 70%;
-  /* src/components/css/variables.css:62 */
-  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:64 */
-  /* Input Dimensions */
+  --color-input-placeholder-opacity: 70%;
   /* src/components/css/variables.css:65 */
-  --input-default-height: 40px;
-  /* src/components/css/variables.css:66 */
-  --input-min-height: 40px;
+  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:67 */
-  --input-max-height: 120px;
+  /* Input Dimensions */
   /* src/components/css/variables.css:68 */
-  --input-max-height-tablet: 100px;
+  --input-default-height: 40px;
   /* src/components/css/variables.css:69 */
-  --input-max-height-mobile: 80px;
+  --input-min-height: 40px;
+  /* src/components/css/variables.css:70 */
+  --input-max-height: 120px;
   /* src/components/css/variables.css:71 */
-  /* Input Line Height */
+  --input-max-height-tablet: 100px;
   /* src/components/css/variables.css:72 */
-  --input-line-height: 20px;
+  --input-max-height-mobile: 80px;
   /* src/components/css/variables.css:74 */
-  /* Input Padding */
+  /* Input Line Height */
   /* src/components/css/variables.css:75 */
-  --input-text-padding-horizontal: 4px;
-  /* src/components/css/variables.css:76 */
-  --input-text-padding-vertical: 0px;
+  --input-line-height: 20px;
   /* src/components/css/variables.css:77 */
-  --input-text-padding: 0 var(--input-text-padding-horizontal);
+  /* Input Padding */
   /* src/components/css/variables.css:78 */
-  --input-container-padding: 6px 8px;
+  --input-text-padding-horizontal: 4px;
   /* src/components/css/variables.css:79 */
-  --input-container-padding-sleek: 4px 4px;
+  --input-text-padding-vertical: 0px;
+  /* src/components/css/variables.css:80 */
+  --input-text-padding: 0 var(--input-text-padding-horizontal);
   /* src/components/css/variables.css:81 */
-  /* Input Font */
+  --input-container-padding: 6px 8px;
   /* src/components/css/variables.css:82 */
-  --input-font-size: var(--chat-widget-message-font-size);
-  /* src/components/css/variables.css:83 */
-  --input-font-weight: 400;
+  --input-container-padding-sleek: 4px 4px;
   /* src/components/css/variables.css:84 */
-  --input-font-weight-focus: 500;
+  /* Input Font */
   /* src/components/css/variables.css:85 */
+  --input-font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/variables.css:86 */
+  --input-font-weight: 400;
+  /* src/components/css/variables.css:87 */
+  --input-font-weight-focus: 500;
+  /* src/components/css/variables.css:88 */
   --input-font-weight-bold: 600;
   /* ================================================
      INPUT SCROLLBAR VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:91 */
+  /* src/components/css/variables.css:94 */
   /* Scrollbar Colors */
-  /* src/components/css/variables.css:92 */
+  /* src/components/css/variables.css:95 */
   --color-scrollbar-input-thumb: color-mix(
-/* src/components/css/variables.css:93 */
-    in srgb,
-/* src/components/css/variables.css:94 */
-    var(--chat-widget-primary-color) 75%,
-/* src/components/css/variables.css:95 */
-    transparent
 /* src/components/css/variables.css:96 */
-  );
-  /* src/components/css/variables.css:97 */
-  --color-scrollbar-input-thumb-hover: color-mix(
+    in srgb,
+/* src/components/css/variables.css:97 */
+    var(--chat-widget-primary-color) 75%,
 /* src/components/css/variables.css:98 */
-    in srgb,
+    transparent
 /* src/components/css/variables.css:99 */
-    var(--chat-widget-primary-color) 90%,
-/* src/components/css/variables.css:100 */
-    transparent
+  );
+  /* src/components/css/variables.css:100 */
+  --color-scrollbar-input-thumb-hover: color-mix(
 /* src/components/css/variables.css:101 */
-  );
-  /* src/components/css/variables.css:103 */
-  --color-scrollbar-input-thumb-avatar-view: color-mix(
+    in srgb,
+/* src/components/css/variables.css:102 */
+    var(--chat-widget-primary-color) 90%,
+/* src/components/css/variables.css:103 */
+    transparent
 /* src/components/css/variables.css:104 */
-    in srgb,
-/* src/components/css/variables.css:105 */
-    var(--chat-widget-secondary-color) 75%,
-/* src/components/css/variables.css:106 */
-    transparent
+  );
+  /* src/components/css/variables.css:106 */
+  --color-scrollbar-input-thumb-avatar-view: color-mix(
 /* src/components/css/variables.css:107 */
-  );
-  /* src/components/css/variables.css:108 */
-  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
-/* src/components/css/variables.css:109 */
     in srgb,
-/* src/components/css/variables.css:110 */
-    var(--chat-widget-secondary-color) 90%,
-/* src/components/css/variables.css:111 */
+/* src/components/css/variables.css:108 */
+    var(--chat-widget-secondary-color) 75%,
+/* src/components/css/variables.css:109 */
     transparent
-/* src/components/css/variables.css:112 */
+/* src/components/css/variables.css:110 */
   );
-  /* src/components/css/variables.css:114 */
-  --color-scrollbar-input-track: transparent;
-  /* src/components/css/variables.css:116 */
-  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:111 */
+  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
+/* src/components/css/variables.css:112 */
+    in srgb,
+/* src/components/css/variables.css:113 */
+    var(--chat-widget-secondary-color) 90%,
+/* src/components/css/variables.css:114 */
+    transparent
+/* src/components/css/variables.css:115 */
+  );
   /* src/components/css/variables.css:117 */
+  --color-scrollbar-input-track: transparent;
+  /* src/components/css/variables.css:119 */
+  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:120 */
   --input-scrollbar-border-radius: 2.5px;
-  /* src/components/css/variables.css:118 */
+  /* src/components/css/variables.css:121 */
   --input-scrollbar-thumb-hover-opacity: var(--opacity-hover);
   /* ================================================
      BUTTON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:124 */
-  /* Button Dimensions */
-  /* src/components/css/variables.css:125 */
-  --button-size-primary: 32px;
-  /* src/components/css/variables.css:126 */
-  --button-padding-primary: 4px;
   /* src/components/css/variables.css:127 */
-  --button-size-secondary: 24px;
+  /* Button Dimensions */
+  /* src/components/css/variables.css:128 */
+  --button-size-primary: 32px;
   /* src/components/css/variables.css:129 */
-  /* Button Colors */
+  --button-padding-primary: 4px;
   /* src/components/css/variables.css:130 */
+  --button-size-secondary: 24px;
+  /* src/components/css/variables.css:132 */
+  /* Button Colors */
+  /* src/components/css/variables.css:133 */
   --color-button-background-primary: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:131 */
-  --color-button-background-primary-avatar-view: var(
-/* src/components/css/variables.css:132 */
-    --chat-widget-secondary-color
-/* src/components/css/variables.css:133 */
-  );
   /* src/components/css/variables.css:134 */
   --color-button-background-hover: var(--chat-widget-primary-color-hover);
   /* src/components/css/variables.css:135 */
@@ -114356,279 +114627,282 @@ This will call child components for text and voice */
   /* src/components/css/variables.css:136 */
   --color-button-fill: var(--chat-widget-button-content-color);
   /* src/components/css/variables.css:138 */
-  /* Button Opacity States */
-  /* src/components/css/variables.css:139 */
-  --button-opacity-normal: var(--opacity-normal);
+  --color-button-disconnect: #ef4444;
   /* src/components/css/variables.css:140 */
-  --button-opacity-hover: var(--opacity-hover);
+  /* Button Opacity States */
   /* src/components/css/variables.css:141 */
+  --button-opacity-normal: var(--opacity-normal);
+  /* src/components/css/variables.css:142 */
+  --button-opacity-hover: var(--opacity-hover);
+  /* src/components/css/variables.css:143 */
   --button-opacity-disabled: var(--opacity-disabled);
   /* ================================================
      ICON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:147 */
-  /* Icon Sizes */
-  /* src/components/css/variables.css:148 */
-  --button-icon-size-secondary: 16px;
   /* src/components/css/variables.css:149 */
+  /* Icon Sizes */
+  /* src/components/css/variables.css:150 */
+  --button-icon-size-secondary: 16px;
+  /* src/components/css/variables.css:151 */
   --button-icon-size-primary: 20px;
+  /* src/components/css/variables.css:152 */
   /* w-5 h-5 equivalent */
   /* ================================================
      CHAT MESSAGE CONTAINER SCROLLBAR
      ================================================ */
-  /* src/components/css/variables.css:155 */
+  /* src/components/css/variables.css:158 */
   --message-scrollbar-width: thin;
-  /* src/components/css/variables.css:156 */
-  --message-scrollbar-width-px: 6px;
-  /* src/components/css/variables.css:157 */
-  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:159 */
-  /* Scrollbar Colors */
+  --message-scrollbar-width-px: 6px;
   /* src/components/css/variables.css:160 */
-  --color-scrollbar-message-thumb-default: rgb(209 213 219);
-  /* src/components/css/variables.css:161 */
-  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:162 */
+  /* Scrollbar Colors */
+  /* src/components/css/variables.css:163 */
+  --color-scrollbar-message-thumb-default: rgb(209 213 219);
+  /* src/components/css/variables.css:164 */
+  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  /* src/components/css/variables.css:165 */
   --color-scrollbar-message-thumb-theme: var(
-/* src/components/css/variables.css:163 */
+/* src/components/css/variables.css:166 */
     --chat-widget-button-content-color,
-/* src/components/css/variables.css:164 */
-    var(--chat-widget-secondary-color)
-/* src/components/css/variables.css:165 */
-  );
-  /* src/components/css/variables.css:166 */
-  --color-scrollbar-message-thumb-hover-mix: color-mix(
 /* src/components/css/variables.css:167 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:168 */
-    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
-/* src/components/css/variables.css:169 */
-      80%,
-/* src/components/css/variables.css:170 */
-    var(--chat-widget-primary-color)
-/* src/components/css/variables.css:171 */
   );
-  /* src/components/css/variables.css:172 */
+  /* src/components/css/variables.css:169 */
+  --color-scrollbar-message-thumb-hover-mix: color-mix(
+/* src/components/css/variables.css:170 */
+    in srgb,
+/* src/components/css/variables.css:171 */
+    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
+/* src/components/css/variables.css:172 */
+      80%,
+/* src/components/css/variables.css:173 */
+    var(--chat-widget-primary-color)
+/* src/components/css/variables.css:174 */
+  );
+  /* src/components/css/variables.css:175 */
   --color-scrollbar-message-track: transparent;
   /* ================================================
      CHAT MESSAGE
      ================================================ */
-  /* src/components/css/variables.css:178 */
+  /* src/components/css/variables.css:181 */
   --message-text-color: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:179 */
+  /* src/components/css/variables.css:182 */
   --message-font-size: var(--chat-widget-message-font-size);
   /* ================================================
      CHAT MESSAGE BUBBLES
      ================================================ */
-  /* src/components/css/variables.css:185 */
+  /* src/components/css/variables.css:188 */
   --message-bubble-background-color: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:186 */
+  /* src/components/css/variables.css:189 */
   --message-bubble-icon-color: var(--chat-widget-secondary-color);
   /* ================================================
      ENGAGEMENT HOOK IMAGE
      ================================================ */
-  /* src/components/css/variables.css:192 */
+  /* src/components/css/variables.css:195 */
   /* Engagement Hook Image Variables (defined elsewhere via JavaScript) */
-  /* src/components/css/variables.css:193 */
-  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
-  /* src/components/css/variables.css:194 */
-  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
   /* src/components/css/variables.css:196 */
-  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
   /* src/components/css/variables.css:197 */
+  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
+  /* src/components/css/variables.css:199 */
+  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* src/components/css/variables.css:200 */
   --engagement-hook-image-height: var(
-/* src/components/css/variables.css:198 */
+/* src/components/css/variables.css:201 */
     --chat-widget-engagement-hook-image-height
-/* src/components/css/variables.css:199 */
+/* src/components/css/variables.css:202 */
   );
   /* ================================================
      TRANSITION VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:205 */
-  --transition-fast: 0.2s ease;
-  /* src/components/css/variables.css:206 */
-  --transition-normal: all 0.3s ease;
-  /* src/components/css/variables.css:207 */
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   /* src/components/css/variables.css:208 */
+  --transition-fast: 0.2s ease;
+  /* src/components/css/variables.css:209 */
+  --transition-normal: all 0.3s ease;
+  /* src/components/css/variables.css:210 */
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* src/components/css/variables.css:211 */
   --transition-slow-ease: 0.4s ease;
   /* ================================================
      BORDER RADIUS VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:214 */
-  --border-radius-small: 2.5px;
-  /* src/components/css/variables.css:215 */
-  --border-radius-medium: 3px;
-  /* src/components/css/variables.css:216 */
-  --border-radius-large: 12px;
   /* src/components/css/variables.css:217 */
-  --border-radius-xl: 16px;
+  --border-radius-small: 2.5px;
   /* src/components/css/variables.css:218 */
-  --border-radius-2xl: 20px;
+  --border-radius-medium: 3px;
   /* src/components/css/variables.css:219 */
+  --border-radius-large: 12px;
+  /* src/components/css/variables.css:220 */
+  --border-radius-xl: 16px;
+  /* src/components/css/variables.css:221 */
+  --border-radius-2xl: 20px;
+  /* src/components/css/variables.css:222 */
   --border-radius-full: 9999px;
   /* ================================================
      SPACING & GAP VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:225 */
-  --spacing-gap-xs: 0.5px;
-  /* src/components/css/variables.css:226 */
-  --spacing-gap-sm: 4px;
-  /* src/components/css/variables.css:227 */
-  --spacing-gap-md: 8px;
   /* src/components/css/variables.css:228 */
-  --spacing-gap-lg: 12px;
+  --spacing-gap-xs: 0.5px;
   /* src/components/css/variables.css:229 */
+  --spacing-gap-sm: 4px;
+  /* src/components/css/variables.css:230 */
+  --spacing-gap-md: 8px;
+  /* src/components/css/variables.css:231 */
+  --spacing-gap-lg: 12px;
+  /* src/components/css/variables.css:232 */
   --spacing-gap-xl: 16px;
   /* ================================================
      Z-INDEX VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:235 */
-  --z-index-base: 1;
-  /* src/components/css/variables.css:236 */
-  --z-index-elevated: 10;
-  /* src/components/css/variables.css:237 */
-  --z-index-high: 20;
   /* src/components/css/variables.css:238 */
+  --z-index-base: 1;
+  /* src/components/css/variables.css:239 */
+  --z-index-elevated: 10;
+  /* src/components/css/variables.css:240 */
+  --z-index-high: 20;
+  /* src/components/css/variables.css:241 */
   --z-index-maximum: 9999;
   /* ================================================
      BORDER VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:244 */
+  /* src/components/css/variables.css:247 */
   --border-width-thin: 1px;
-  /* src/components/css/variables.css:245 */
+  /* src/components/css/variables.css:248 */
   --border-width-medium: 2px;
-  /* src/components/css/variables.css:246 */
+  /* src/components/css/variables.css:249 */
   --border-width-thick: 4px;
   /* ================================================
      BOX SHADOW VARIABLES (for consistency)
      ================================================ */
-  /* src/components/css/variables.css:252 */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  /* src/components/css/variables.css:253 */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:254 */
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   /* src/components/css/variables.css:255 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* src/components/css/variables.css:256 */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:257 */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:258 */
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
   /* ================================================
      SLEEK VIEW SPECIFIC VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:261 */
-  /* These are already defined in SleekView.css but should be here for consistency */
-  /* src/components/css/variables.css:262 */
-  --sleek-main-min-height: 0px;
-  /* src/components/css/variables.css:263 */
-  --sleek-border-radius: var(--border-radius-large);
   /* src/components/css/variables.css:264 */
-  --sleek-main-bg: var(--color-sleek-main-bg);
+  /* These are already defined in SleekView.css but should be here for consistency */
   /* src/components/css/variables.css:265 */
-  --sleek-main-border: var(--color-sleek-main-border);
+  --sleek-main-min-height: 0px;
   /* src/components/css/variables.css:266 */
-  --sleek-main-text-color: var(--color-sleek-main-text);
+  --sleek-border-radius: var(--border-radius-large);
+  /* src/components/css/variables.css:267 */
+  --sleek-main-bg: var(--color-sleek-main-bg);
   /* src/components/css/variables.css:268 */
-  /* Sleek View Colors */
+  --sleek-main-border: var(--color-sleek-main-border);
   /* src/components/css/variables.css:269 */
+  --sleek-main-text-color: var(--color-sleek-main-text);
+  /* src/components/css/variables.css:271 */
+  /* Sleek View Colors */
+  /* src/components/css/variables.css:272 */
   --color-sleek-main-bg: color-mix(
-/* src/components/css/variables.css:270 */
-    in srgb,
-/* src/components/css/variables.css:271 */
-    var(--chat-widget-primary-color) 10%,
-/* src/components/css/variables.css:272 */
-    white
 /* src/components/css/variables.css:273 */
+    in srgb,
+/* src/components/css/variables.css:274 */
+    var(--chat-widget-primary-color) 10%,
+/* src/components/css/variables.css:275 */
+    white
+/* src/components/css/variables.css:276 */
   );
-  /* src/components/css/variables.css:274 */
-  --color-sleek-main-border: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:275 */
-  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:277 */
-  /* Gradient Colors (derived from primary/secondary) */
+  --color-sleek-main-border: var(--chat-widget-secondary-color);
   /* src/components/css/variables.css:278 */
-  --color-gradient-1: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:279 */
-  --color-gradient-2: var(--chat-widget-secondary-color);
+  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:280 */
+  /* Gradient Colors (derived from primary/secondary) */
+  /* src/components/css/variables.css:281 */
+  --color-gradient-1: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:282 */
+  --color-gradient-2: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:283 */
   --color-gradient-3: color-mix(
-/* src/components/css/variables.css:281 */
-    in srgb,
-/* src/components/css/variables.css:282 */
-    var(--chat-widget-primary-color) 60%,
-/* src/components/css/variables.css:283 */
-    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:284 */
-  );
-  /* src/components/css/variables.css:285 */
-  --color-gradient-4: color-mix(
+    in srgb,
+/* src/components/css/variables.css:285 */
+    var(--chat-widget-primary-color) 60%,
 /* src/components/css/variables.css:286 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:287 */
-    var(--chat-widget-primary-color) 40%,
-/* src/components/css/variables.css:288 */
-    var(--chat-widget-secondary-color)
+  );
+  /* src/components/css/variables.css:288 */
+  --color-gradient-4: color-mix(
 /* src/components/css/variables.css:289 */
-  );
-  /* src/components/css/variables.css:290 */
-  --color-accent: color-mix(
+    in srgb,
+/* src/components/css/variables.css:290 */
+    var(--chat-widget-primary-color) 40%,
 /* src/components/css/variables.css:291 */
-    in srgb,
-/* src/components/css/variables.css:292 */
-    var(--chat-widget-primary-color) 70%,
-/* src/components/css/variables.css:293 */
     var(--chat-widget-secondary-color)
+/* src/components/css/variables.css:292 */
+  );
+  /* src/components/css/variables.css:293 */
+  --color-accent: color-mix(
 /* src/components/css/variables.css:294 */
-  );
-  /* src/components/css/variables.css:295 */
-  --color-glow: color-mix(
-/* src/components/css/variables.css:296 */
     in srgb,
+/* src/components/css/variables.css:295 */
+    var(--chat-widget-primary-color) 70%,
+/* src/components/css/variables.css:296 */
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:297 */
-    var(--chat-widget-primary-color) 30%,
-/* src/components/css/variables.css:298 */
-    transparent
-/* src/components/css/variables.css:299 */
   );
-  /* src/components/css/variables.css:301 */
-  /* Legacy Gradient Variables (for backward compatibility) */
-  /* src/components/css/variables.css:302 */
-  --gradient-1: var(--color-gradient-1);
-  /* src/components/css/variables.css:303 */
-  --gradient-2: var(--color-gradient-2);
+  /* src/components/css/variables.css:298 */
+  --color-glow: color-mix(
+/* src/components/css/variables.css:299 */
+    in srgb,
+/* src/components/css/variables.css:300 */
+    var(--chat-widget-primary-color) 30%,
+/* src/components/css/variables.css:301 */
+    transparent
+/* src/components/css/variables.css:302 */
+  );
   /* src/components/css/variables.css:304 */
-  --gradient-3: var(--color-gradient-3);
+  /* Legacy Gradient Variables (for backward compatibility) */
   /* src/components/css/variables.css:305 */
-  --gradient-4: var(--color-gradient-4);
+  --gradient-1: var(--color-gradient-1);
   /* src/components/css/variables.css:306 */
-  --accent: var(--color-accent);
+  --gradient-2: var(--color-gradient-2);
   /* src/components/css/variables.css:307 */
-  --glow: var(--color-glow);
+  --gradient-3: var(--color-gradient-3);
+  /* src/components/css/variables.css:308 */
+  --gradient-4: var(--color-gradient-4);
   /* src/components/css/variables.css:309 */
-  /* Legacy Color Aliases (for backward compatibility) */
+  --accent: var(--color-accent);
   /* src/components/css/variables.css:310 */
-  --whatsapp-color: var(--color-whatsapp);
-  /* src/components/css/variables.css:311 */
-  --gray-200: var(--color-gray-200);
+  --glow: var(--color-glow);
   /* src/components/css/variables.css:312 */
-  --gray-300: var(--color-gray-300);
+  /* Legacy Color Aliases (for backward compatibility) */
   /* src/components/css/variables.css:313 */
-  --gray-400: var(--color-gray-400);
+  --whatsapp-color: var(--color-whatsapp);
   /* src/components/css/variables.css:314 */
-  --gray-500: var(--color-gray-500);
+  --gray-200: var(--color-gray-200);
   /* src/components/css/variables.css:315 */
-  --gray-600: var(--color-gray-600);
+  --gray-300: var(--color-gray-300);
   /* src/components/css/variables.css:316 */
-  --gray-700: var(--color-gray-700);
+  --gray-400: var(--color-gray-400);
   /* src/components/css/variables.css:317 */
-  --gray-800: var(--color-gray-800);
+  --gray-500: var(--color-gray-500);
   /* src/components/css/variables.css:318 */
-  --blue-500: var(--color-blue-500);
+  --gray-600: var(--color-gray-600);
   /* src/components/css/variables.css:319 */
-  --blue-600: var(--color-blue-600);
+  --gray-700: var(--color-gray-700);
   /* src/components/css/variables.css:320 */
-  --slate-700: var(--color-slate-700);
+  --gray-800: var(--color-gray-800);
   /* src/components/css/variables.css:321 */
-  --slate-800: var(--color-slate-800);
+  --blue-500: var(--color-blue-500);
+  /* src/components/css/variables.css:322 */
+  --blue-600: var(--color-blue-600);
   /* src/components/css/variables.css:323 */
+  --slate-700: var(--color-slate-700);
+  /* src/components/css/variables.css:324 */
+  --slate-800: var(--color-slate-800);
+  /* src/components/css/variables.css:326 */
   /* Gray Scale Colors */
   /* --color-gray-200: rgb(229, 231, 235);
   --color-gray-300: rgb(209, 213, 219);
@@ -114637,104 +114911,107 @@ This will call child components for text and voice */
   --color-gray-600: rgb(75, 85, 99);
   --color-gray-700: rgb(51, 65, 85);
   --color-gray-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:332 */
+  /* src/components/css/variables.css:335 */
   /* Blue Colors */
   /* --color-blue-500: #3b82f6;
   --color-blue-600: #2563eb; */
-  /* src/components/css/variables.css:336 */
+  /* src/components/css/variables.css:339 */
   /* Slate Colors */
   /* --color-slate-700: rgb(51, 65, 85);
   --color-slate-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:340 */
+  /* src/components/css/variables.css:343 */
   /* Red Colors (for errors, disconnect, etc.) */
   /* --color-red-50: rgb(254, 242, 242);
   --color-red-100: rgb(254, 226, 226);
   --color-red-500: #ef4444;
   --color-red-600: #dc2626; */
-  /* src/components/css/variables.css:346 */
+  /* src/components/css/variables.css:349 */
   /* Green Colors (for success, active states) */
   /* --color-green-50: rgb(240, 253, 244);
   --color-green-100: rgb(220, 252, 231);
   --color-green-500: #10b981;
   --color-green-600: #059669; */
-  /* src/components/css/variables.css:351 */
+  /* src/components/css/variables.css:354 */
 }
 
-/* src/components/css/variables.css:353 */
+/* src/components/css/variables.css:356 */
 
 /* Fallback for browsers that don't support color-mix */
 
-/* src/components/css/variables.css:354 */
+/* src/components/css/variables.css:357 */
 
 @supports not (color: color-mix(in srgb, #000 50%, #fff)) {
-  /* src/components/css/variables.css:355 */
+  /* src/components/css/variables.css:358 */
 
   :root {
-    /* src/components/css/variables.css:356 */
+    /* src/components/css/variables.css:359 */
     /* Derived Theme Colors Fallback */
-    /* src/components/css/variables.css:357 */
-    /* Primary hover: darker version of default primary color #000aaa */
-    /* src/components/css/variables.css:358 */
-    --chat-widget-primary-color-hover: #000991;
-    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:360 */
-    /* Gradient Colors Fallback */
+    /* Primary hover: darker version of default primary color #000aaa */
     /* src/components/css/variables.css:361 */
-    --color-gradient-1: #000aaa;
-    /* Default primary color */
+    --chat-widget-primary-color-hover: #000991;
     /* src/components/css/variables.css:362 */
-    --color-gradient-2: #6c757d;
-    /* Default secondary color */
-    /* src/components/css/variables.css:363 */
-    --color-gradient-3: #6c757d;
+    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:364 */
-    --color-gradient-4: #6c757d;
+    /* Gradient Colors Fallback */
     /* src/components/css/variables.css:365 */
-    --color-accent: #6c757d;
+    --color-gradient-1: #000aaa;
     /* src/components/css/variables.css:366 */
-    --color-glow: rgba(0, 10, 170, 0.3);
+    /* Default primary color */
+    /* src/components/css/variables.css:367 */
+    --color-gradient-2: #6c757d;
     /* src/components/css/variables.css:368 */
-    /* Sleek View Colors Fallback */
+    /* Default secondary color */
     /* src/components/css/variables.css:369 */
-    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
+    --color-gradient-3: #6c757d;
     /* src/components/css/variables.css:370 */
-    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
+    --color-gradient-4: #6c757d;
+    /* src/components/css/variables.css:371 */
+    --color-accent: #6c757d;
     /* src/components/css/variables.css:372 */
-    /* Scrollbar Colors Fallback */
-    /* src/components/css/variables.css:373 */
-    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
+    --color-glow: rgba(0, 10, 170, 0.3);
     /* src/components/css/variables.css:374 */
-    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
+    /* Sleek View Colors Fallback */
+    /* src/components/css/variables.css:375 */
+    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
     /* src/components/css/variables.css:376 */
-    /* Legacy aliases */
-    /* src/components/css/variables.css:377 */
-    --gradient-1: var(--color-gradient-1);
+    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
     /* src/components/css/variables.css:378 */
-    --gradient-2: var(--color-gradient-2);
+    /* Scrollbar Colors Fallback */
     /* src/components/css/variables.css:379 */
-    --gradient-3: var(--color-gradient-3);
+    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
     /* src/components/css/variables.css:380 */
-    --gradient-4: var(--color-gradient-4);
-    /* src/components/css/variables.css:381 */
-    --accent: var(--color-accent);
+    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
     /* src/components/css/variables.css:382 */
-    --glow: var(--color-glow);
+    /* Legacy aliases */
     /* src/components/css/variables.css:383 */
-    --sleek-main-bg: var(--color-sleek-main-bg);
+    --gradient-1: var(--color-gradient-1);
     /* src/components/css/variables.css:384 */
-    --sleek-main-border: var(--color-sleek-main-border);
+    --gradient-2: var(--color-gradient-2);
     /* src/components/css/variables.css:385 */
-    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    --gradient-3: var(--color-gradient-3);
     /* src/components/css/variables.css:386 */
-    --input-scrollbar-thumb-hover-color: var(
-/* src/components/css/variables.css:387 */
-      --color-scrollbar-input-thumb-hover
-/* src/components/css/variables.css:388 */
-    );
+    --gradient-4: var(--color-gradient-4);
+    /* src/components/css/variables.css:387 */
+    --accent: var(--color-accent);
+    /* src/components/css/variables.css:388 */
+    --glow: var(--color-glow);
     /* src/components/css/variables.css:389 */
+    --sleek-main-bg: var(--color-sleek-main-bg);
+    /* src/components/css/variables.css:390 */
+    --sleek-main-border: var(--color-sleek-main-border);
+    /* src/components/css/variables.css:391 */
+    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    /* src/components/css/variables.css:392 */
+    --input-scrollbar-thumb-hover-color: var(
+/* src/components/css/variables.css:393 */
+      --color-scrollbar-input-thumb-hover
+/* src/components/css/variables.css:394 */
+    );
+    /* src/components/css/variables.css:395 */
   }
 
-  /* src/components/css/variables.css:390 */
+  /* src/components/css/variables.css:396 */
 }
 
 /* This file is for area where messages from user and agent are rendered
@@ -116733,173 +117010,169 @@ It has 3 components:
   /* Voice State Colors */
   /* src/components/css/variables.css:29 */
   --color-voice-listening: #3b82f6;
-  /* Blue */
   /* src/components/css/variables.css:30 */
-  --color-voice-speaking: #10b981;
-  /* Green */
+  /* Blue */
   /* src/components/css/variables.css:31 */
-  --color-voice-thinking: #f59e0b;
-  /* Amber/Orange */
+  --color-voice-speaking: #10b981;
   /* src/components/css/variables.css:32 */
-  --color-voice-disconnected: #ef4444cb;
-  /* Red */
+  /* Green */
+  /* src/components/css/variables.css:33 */
+  --color-voice-thinking: #f59e0b;
   /* src/components/css/variables.css:34 */
-  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
+  /* Amber/Orange */
   /* src/components/css/variables.css:35 */
-  /* --color-voice-speaking-alt: #058158; Darker Green */
+  --color-voice-disconnected: #ef4444cb;
   /* src/components/css/variables.css:36 */
-  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
-  /* src/components/css/variables.css:37 */
-  /* --color-voice-thinking-alt: #fbbf24; Yellow */
+  /* Red */
+  /* src/components/css/variables.css:38 */
+  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
   /* src/components/css/variables.css:39 */
-  /* Special/Brand Colors */
+  /* --color-voice-speaking-alt: #058158; Darker Green */
   /* src/components/css/variables.css:40 */
-  --color-whatsapp: #1eb655;
-  /* src/components/css/variables.css:42 */
-  /* Opacity Values */
+  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
+  /* src/components/css/variables.css:41 */
+  /* --color-voice-thinking-alt: #fbbf24; Yellow */
   /* src/components/css/variables.css:43 */
-  --opacity-disabled: 0.7;
+  /* Special/Brand Colors */
   /* src/components/css/variables.css:44 */
+  --color-whatsapp: #1eb655;
+  /* src/components/css/variables.css:46 */
+  /* Opacity Values */
+  /* src/components/css/variables.css:47 */
+  --opacity-disabled: 0.7;
+  /* src/components/css/variables.css:48 */
   --opacity-hover: 0.8;
-  /* src/components/css/variables.css:45 */
+  /* src/components/css/variables.css:49 */
   --opacity-normal: 1;
   /* ================================================
      INPUT AREA VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:51 */
-  /* Input Colors */
-  /* src/components/css/variables.css:53 */
-  --color-input-background: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:54 */
-  --color-input-background-avatar-view: var(--chat-widget-primary-color);
   /* src/components/css/variables.css:55 */
+  /* Input Colors */
+  /* src/components/css/variables.css:57 */
+  --color-input-background: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:58 */
   --color-input-text: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:56 */
+  /* src/components/css/variables.css:59 */
   --color-input-placeholder-text: color-mix(
-/* src/components/css/variables.css:57 */
-    in srgb,
-/* src/components/css/variables.css:58 */
-    var(--color-input-text) 70%,
-/* src/components/css/variables.css:59 */
-    white
 /* src/components/css/variables.css:60 */
+    in srgb,
+/* src/components/css/variables.css:61 */
+    var(--color-input-text) 70%,
+/* src/components/css/variables.css:62 */
+    white
+/* src/components/css/variables.css:63 */
   );
-  /* src/components/css/variables.css:61 */
-  --color-input-placeholder-opacity: 70%;
-  /* src/components/css/variables.css:62 */
-  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:64 */
-  /* Input Dimensions */
+  --color-input-placeholder-opacity: 70%;
   /* src/components/css/variables.css:65 */
-  --input-default-height: 40px;
-  /* src/components/css/variables.css:66 */
-  --input-min-height: 40px;
+  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:67 */
-  --input-max-height: 120px;
+  /* Input Dimensions */
   /* src/components/css/variables.css:68 */
-  --input-max-height-tablet: 100px;
+  --input-default-height: 40px;
   /* src/components/css/variables.css:69 */
-  --input-max-height-mobile: 80px;
+  --input-min-height: 40px;
+  /* src/components/css/variables.css:70 */
+  --input-max-height: 120px;
   /* src/components/css/variables.css:71 */
-  /* Input Line Height */
+  --input-max-height-tablet: 100px;
   /* src/components/css/variables.css:72 */
-  --input-line-height: 20px;
+  --input-max-height-mobile: 80px;
   /* src/components/css/variables.css:74 */
-  /* Input Padding */
+  /* Input Line Height */
   /* src/components/css/variables.css:75 */
-  --input-text-padding-horizontal: 4px;
-  /* src/components/css/variables.css:76 */
-  --input-text-padding-vertical: 0px;
+  --input-line-height: 20px;
   /* src/components/css/variables.css:77 */
-  --input-text-padding: 0 var(--input-text-padding-horizontal);
+  /* Input Padding */
   /* src/components/css/variables.css:78 */
-  --input-container-padding: 6px 8px;
+  --input-text-padding-horizontal: 4px;
   /* src/components/css/variables.css:79 */
-  --input-container-padding-sleek: 4px 4px;
+  --input-text-padding-vertical: 0px;
+  /* src/components/css/variables.css:80 */
+  --input-text-padding: 0 var(--input-text-padding-horizontal);
   /* src/components/css/variables.css:81 */
-  /* Input Font */
+  --input-container-padding: 6px 8px;
   /* src/components/css/variables.css:82 */
-  --input-font-size: var(--chat-widget-message-font-size);
-  /* src/components/css/variables.css:83 */
-  --input-font-weight: 400;
+  --input-container-padding-sleek: 4px 4px;
   /* src/components/css/variables.css:84 */
-  --input-font-weight-focus: 500;
+  /* Input Font */
   /* src/components/css/variables.css:85 */
+  --input-font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/variables.css:86 */
+  --input-font-weight: 400;
+  /* src/components/css/variables.css:87 */
+  --input-font-weight-focus: 500;
+  /* src/components/css/variables.css:88 */
   --input-font-weight-bold: 600;
   /* ================================================
      INPUT SCROLLBAR VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:91 */
+  /* src/components/css/variables.css:94 */
   /* Scrollbar Colors */
-  /* src/components/css/variables.css:92 */
+  /* src/components/css/variables.css:95 */
   --color-scrollbar-input-thumb: color-mix(
-/* src/components/css/variables.css:93 */
-    in srgb,
-/* src/components/css/variables.css:94 */
-    var(--chat-widget-primary-color) 75%,
-/* src/components/css/variables.css:95 */
-    transparent
 /* src/components/css/variables.css:96 */
-  );
-  /* src/components/css/variables.css:97 */
-  --color-scrollbar-input-thumb-hover: color-mix(
+    in srgb,
+/* src/components/css/variables.css:97 */
+    var(--chat-widget-primary-color) 75%,
 /* src/components/css/variables.css:98 */
-    in srgb,
+    transparent
 /* src/components/css/variables.css:99 */
-    var(--chat-widget-primary-color) 90%,
-/* src/components/css/variables.css:100 */
-    transparent
+  );
+  /* src/components/css/variables.css:100 */
+  --color-scrollbar-input-thumb-hover: color-mix(
 /* src/components/css/variables.css:101 */
-  );
-  /* src/components/css/variables.css:103 */
-  --color-scrollbar-input-thumb-avatar-view: color-mix(
+    in srgb,
+/* src/components/css/variables.css:102 */
+    var(--chat-widget-primary-color) 90%,
+/* src/components/css/variables.css:103 */
+    transparent
 /* src/components/css/variables.css:104 */
-    in srgb,
-/* src/components/css/variables.css:105 */
-    var(--chat-widget-secondary-color) 75%,
-/* src/components/css/variables.css:106 */
-    transparent
+  );
+  /* src/components/css/variables.css:106 */
+  --color-scrollbar-input-thumb-avatar-view: color-mix(
 /* src/components/css/variables.css:107 */
-  );
-  /* src/components/css/variables.css:108 */
-  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
-/* src/components/css/variables.css:109 */
     in srgb,
-/* src/components/css/variables.css:110 */
-    var(--chat-widget-secondary-color) 90%,
-/* src/components/css/variables.css:111 */
+/* src/components/css/variables.css:108 */
+    var(--chat-widget-secondary-color) 75%,
+/* src/components/css/variables.css:109 */
     transparent
-/* src/components/css/variables.css:112 */
+/* src/components/css/variables.css:110 */
   );
-  /* src/components/css/variables.css:114 */
-  --color-scrollbar-input-track: transparent;
-  /* src/components/css/variables.css:116 */
-  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:111 */
+  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
+/* src/components/css/variables.css:112 */
+    in srgb,
+/* src/components/css/variables.css:113 */
+    var(--chat-widget-secondary-color) 90%,
+/* src/components/css/variables.css:114 */
+    transparent
+/* src/components/css/variables.css:115 */
+  );
   /* src/components/css/variables.css:117 */
+  --color-scrollbar-input-track: transparent;
+  /* src/components/css/variables.css:119 */
+  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:120 */
   --input-scrollbar-border-radius: 2.5px;
-  /* src/components/css/variables.css:118 */
+  /* src/components/css/variables.css:121 */
   --input-scrollbar-thumb-hover-opacity: var(--opacity-hover);
   /* ================================================
      BUTTON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:124 */
-  /* Button Dimensions */
-  /* src/components/css/variables.css:125 */
-  --button-size-primary: 32px;
-  /* src/components/css/variables.css:126 */
-  --button-padding-primary: 4px;
   /* src/components/css/variables.css:127 */
-  --button-size-secondary: 24px;
+  /* Button Dimensions */
+  /* src/components/css/variables.css:128 */
+  --button-size-primary: 32px;
   /* src/components/css/variables.css:129 */
-  /* Button Colors */
+  --button-padding-primary: 4px;
   /* src/components/css/variables.css:130 */
+  --button-size-secondary: 24px;
+  /* src/components/css/variables.css:132 */
+  /* Button Colors */
+  /* src/components/css/variables.css:133 */
   --color-button-background-primary: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:131 */
-  --color-button-background-primary-avatar-view: var(
-/* src/components/css/variables.css:132 */
-    --chat-widget-secondary-color
-/* src/components/css/variables.css:133 */
-  );
   /* src/components/css/variables.css:134 */
   --color-button-background-hover: var(--chat-widget-primary-color-hover);
   /* src/components/css/variables.css:135 */
@@ -116907,279 +117180,282 @@ It has 3 components:
   /* src/components/css/variables.css:136 */
   --color-button-fill: var(--chat-widget-button-content-color);
   /* src/components/css/variables.css:138 */
-  /* Button Opacity States */
-  /* src/components/css/variables.css:139 */
-  --button-opacity-normal: var(--opacity-normal);
+  --color-button-disconnect: #ef4444;
   /* src/components/css/variables.css:140 */
-  --button-opacity-hover: var(--opacity-hover);
+  /* Button Opacity States */
   /* src/components/css/variables.css:141 */
+  --button-opacity-normal: var(--opacity-normal);
+  /* src/components/css/variables.css:142 */
+  --button-opacity-hover: var(--opacity-hover);
+  /* src/components/css/variables.css:143 */
   --button-opacity-disabled: var(--opacity-disabled);
   /* ================================================
      ICON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:147 */
-  /* Icon Sizes */
-  /* src/components/css/variables.css:148 */
-  --button-icon-size-secondary: 16px;
   /* src/components/css/variables.css:149 */
+  /* Icon Sizes */
+  /* src/components/css/variables.css:150 */
+  --button-icon-size-secondary: 16px;
+  /* src/components/css/variables.css:151 */
   --button-icon-size-primary: 20px;
+  /* src/components/css/variables.css:152 */
   /* w-5 h-5 equivalent */
   /* ================================================
      CHAT MESSAGE CONTAINER SCROLLBAR
      ================================================ */
-  /* src/components/css/variables.css:155 */
+  /* src/components/css/variables.css:158 */
   --message-scrollbar-width: thin;
-  /* src/components/css/variables.css:156 */
-  --message-scrollbar-width-px: 6px;
-  /* src/components/css/variables.css:157 */
-  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:159 */
-  /* Scrollbar Colors */
+  --message-scrollbar-width-px: 6px;
   /* src/components/css/variables.css:160 */
-  --color-scrollbar-message-thumb-default: rgb(209 213 219);
-  /* src/components/css/variables.css:161 */
-  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:162 */
+  /* Scrollbar Colors */
+  /* src/components/css/variables.css:163 */
+  --color-scrollbar-message-thumb-default: rgb(209 213 219);
+  /* src/components/css/variables.css:164 */
+  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  /* src/components/css/variables.css:165 */
   --color-scrollbar-message-thumb-theme: var(
-/* src/components/css/variables.css:163 */
+/* src/components/css/variables.css:166 */
     --chat-widget-button-content-color,
-/* src/components/css/variables.css:164 */
-    var(--chat-widget-secondary-color)
-/* src/components/css/variables.css:165 */
-  );
-  /* src/components/css/variables.css:166 */
-  --color-scrollbar-message-thumb-hover-mix: color-mix(
 /* src/components/css/variables.css:167 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:168 */
-    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
-/* src/components/css/variables.css:169 */
-      80%,
-/* src/components/css/variables.css:170 */
-    var(--chat-widget-primary-color)
-/* src/components/css/variables.css:171 */
   );
-  /* src/components/css/variables.css:172 */
+  /* src/components/css/variables.css:169 */
+  --color-scrollbar-message-thumb-hover-mix: color-mix(
+/* src/components/css/variables.css:170 */
+    in srgb,
+/* src/components/css/variables.css:171 */
+    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
+/* src/components/css/variables.css:172 */
+      80%,
+/* src/components/css/variables.css:173 */
+    var(--chat-widget-primary-color)
+/* src/components/css/variables.css:174 */
+  );
+  /* src/components/css/variables.css:175 */
   --color-scrollbar-message-track: transparent;
   /* ================================================
      CHAT MESSAGE
      ================================================ */
-  /* src/components/css/variables.css:178 */
+  /* src/components/css/variables.css:181 */
   --message-text-color: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:179 */
+  /* src/components/css/variables.css:182 */
   --message-font-size: var(--chat-widget-message-font-size);
   /* ================================================
      CHAT MESSAGE BUBBLES
      ================================================ */
-  /* src/components/css/variables.css:185 */
+  /* src/components/css/variables.css:188 */
   --message-bubble-background-color: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:186 */
+  /* src/components/css/variables.css:189 */
   --message-bubble-icon-color: var(--chat-widget-secondary-color);
   /* ================================================
      ENGAGEMENT HOOK IMAGE
      ================================================ */
-  /* src/components/css/variables.css:192 */
+  /* src/components/css/variables.css:195 */
   /* Engagement Hook Image Variables (defined elsewhere via JavaScript) */
-  /* src/components/css/variables.css:193 */
-  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
-  /* src/components/css/variables.css:194 */
-  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
   /* src/components/css/variables.css:196 */
-  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
   /* src/components/css/variables.css:197 */
+  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
+  /* src/components/css/variables.css:199 */
+  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* src/components/css/variables.css:200 */
   --engagement-hook-image-height: var(
-/* src/components/css/variables.css:198 */
+/* src/components/css/variables.css:201 */
     --chat-widget-engagement-hook-image-height
-/* src/components/css/variables.css:199 */
+/* src/components/css/variables.css:202 */
   );
   /* ================================================
      TRANSITION VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:205 */
-  --transition-fast: 0.2s ease;
-  /* src/components/css/variables.css:206 */
-  --transition-normal: all 0.3s ease;
-  /* src/components/css/variables.css:207 */
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   /* src/components/css/variables.css:208 */
+  --transition-fast: 0.2s ease;
+  /* src/components/css/variables.css:209 */
+  --transition-normal: all 0.3s ease;
+  /* src/components/css/variables.css:210 */
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* src/components/css/variables.css:211 */
   --transition-slow-ease: 0.4s ease;
   /* ================================================
      BORDER RADIUS VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:214 */
-  --border-radius-small: 2.5px;
-  /* src/components/css/variables.css:215 */
-  --border-radius-medium: 3px;
-  /* src/components/css/variables.css:216 */
-  --border-radius-large: 12px;
   /* src/components/css/variables.css:217 */
-  --border-radius-xl: 16px;
+  --border-radius-small: 2.5px;
   /* src/components/css/variables.css:218 */
-  --border-radius-2xl: 20px;
+  --border-radius-medium: 3px;
   /* src/components/css/variables.css:219 */
+  --border-radius-large: 12px;
+  /* src/components/css/variables.css:220 */
+  --border-radius-xl: 16px;
+  /* src/components/css/variables.css:221 */
+  --border-radius-2xl: 20px;
+  /* src/components/css/variables.css:222 */
   --border-radius-full: 9999px;
   /* ================================================
      SPACING & GAP VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:225 */
-  --spacing-gap-xs: 0.5px;
-  /* src/components/css/variables.css:226 */
-  --spacing-gap-sm: 4px;
-  /* src/components/css/variables.css:227 */
-  --spacing-gap-md: 8px;
   /* src/components/css/variables.css:228 */
-  --spacing-gap-lg: 12px;
+  --spacing-gap-xs: 0.5px;
   /* src/components/css/variables.css:229 */
+  --spacing-gap-sm: 4px;
+  /* src/components/css/variables.css:230 */
+  --spacing-gap-md: 8px;
+  /* src/components/css/variables.css:231 */
+  --spacing-gap-lg: 12px;
+  /* src/components/css/variables.css:232 */
   --spacing-gap-xl: 16px;
   /* ================================================
      Z-INDEX VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:235 */
-  --z-index-base: 1;
-  /* src/components/css/variables.css:236 */
-  --z-index-elevated: 10;
-  /* src/components/css/variables.css:237 */
-  --z-index-high: 20;
   /* src/components/css/variables.css:238 */
+  --z-index-base: 1;
+  /* src/components/css/variables.css:239 */
+  --z-index-elevated: 10;
+  /* src/components/css/variables.css:240 */
+  --z-index-high: 20;
+  /* src/components/css/variables.css:241 */
   --z-index-maximum: 9999;
   /* ================================================
      BORDER VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:244 */
+  /* src/components/css/variables.css:247 */
   --border-width-thin: 1px;
-  /* src/components/css/variables.css:245 */
+  /* src/components/css/variables.css:248 */
   --border-width-medium: 2px;
-  /* src/components/css/variables.css:246 */
+  /* src/components/css/variables.css:249 */
   --border-width-thick: 4px;
   /* ================================================
      BOX SHADOW VARIABLES (for consistency)
      ================================================ */
-  /* src/components/css/variables.css:252 */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  /* src/components/css/variables.css:253 */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:254 */
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   /* src/components/css/variables.css:255 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* src/components/css/variables.css:256 */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:257 */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:258 */
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
   /* ================================================
      SLEEK VIEW SPECIFIC VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:261 */
-  /* These are already defined in SleekView.css but should be here for consistency */
-  /* src/components/css/variables.css:262 */
-  --sleek-main-min-height: 0px;
-  /* src/components/css/variables.css:263 */
-  --sleek-border-radius: var(--border-radius-large);
   /* src/components/css/variables.css:264 */
-  --sleek-main-bg: var(--color-sleek-main-bg);
+  /* These are already defined in SleekView.css but should be here for consistency */
   /* src/components/css/variables.css:265 */
-  --sleek-main-border: var(--color-sleek-main-border);
+  --sleek-main-min-height: 0px;
   /* src/components/css/variables.css:266 */
-  --sleek-main-text-color: var(--color-sleek-main-text);
+  --sleek-border-radius: var(--border-radius-large);
+  /* src/components/css/variables.css:267 */
+  --sleek-main-bg: var(--color-sleek-main-bg);
   /* src/components/css/variables.css:268 */
-  /* Sleek View Colors */
+  --sleek-main-border: var(--color-sleek-main-border);
   /* src/components/css/variables.css:269 */
+  --sleek-main-text-color: var(--color-sleek-main-text);
+  /* src/components/css/variables.css:271 */
+  /* Sleek View Colors */
+  /* src/components/css/variables.css:272 */
   --color-sleek-main-bg: color-mix(
-/* src/components/css/variables.css:270 */
-    in srgb,
-/* src/components/css/variables.css:271 */
-    var(--chat-widget-primary-color) 10%,
-/* src/components/css/variables.css:272 */
-    white
 /* src/components/css/variables.css:273 */
+    in srgb,
+/* src/components/css/variables.css:274 */
+    var(--chat-widget-primary-color) 10%,
+/* src/components/css/variables.css:275 */
+    white
+/* src/components/css/variables.css:276 */
   );
-  /* src/components/css/variables.css:274 */
-  --color-sleek-main-border: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:275 */
-  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:277 */
-  /* Gradient Colors (derived from primary/secondary) */
+  --color-sleek-main-border: var(--chat-widget-secondary-color);
   /* src/components/css/variables.css:278 */
-  --color-gradient-1: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:279 */
-  --color-gradient-2: var(--chat-widget-secondary-color);
+  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:280 */
+  /* Gradient Colors (derived from primary/secondary) */
+  /* src/components/css/variables.css:281 */
+  --color-gradient-1: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:282 */
+  --color-gradient-2: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:283 */
   --color-gradient-3: color-mix(
-/* src/components/css/variables.css:281 */
-    in srgb,
-/* src/components/css/variables.css:282 */
-    var(--chat-widget-primary-color) 60%,
-/* src/components/css/variables.css:283 */
-    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:284 */
-  );
-  /* src/components/css/variables.css:285 */
-  --color-gradient-4: color-mix(
+    in srgb,
+/* src/components/css/variables.css:285 */
+    var(--chat-widget-primary-color) 60%,
 /* src/components/css/variables.css:286 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:287 */
-    var(--chat-widget-primary-color) 40%,
-/* src/components/css/variables.css:288 */
-    var(--chat-widget-secondary-color)
+  );
+  /* src/components/css/variables.css:288 */
+  --color-gradient-4: color-mix(
 /* src/components/css/variables.css:289 */
-  );
-  /* src/components/css/variables.css:290 */
-  --color-accent: color-mix(
+    in srgb,
+/* src/components/css/variables.css:290 */
+    var(--chat-widget-primary-color) 40%,
 /* src/components/css/variables.css:291 */
-    in srgb,
-/* src/components/css/variables.css:292 */
-    var(--chat-widget-primary-color) 70%,
-/* src/components/css/variables.css:293 */
     var(--chat-widget-secondary-color)
+/* src/components/css/variables.css:292 */
+  );
+  /* src/components/css/variables.css:293 */
+  --color-accent: color-mix(
 /* src/components/css/variables.css:294 */
-  );
-  /* src/components/css/variables.css:295 */
-  --color-glow: color-mix(
-/* src/components/css/variables.css:296 */
     in srgb,
+/* src/components/css/variables.css:295 */
+    var(--chat-widget-primary-color) 70%,
+/* src/components/css/variables.css:296 */
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:297 */
-    var(--chat-widget-primary-color) 30%,
-/* src/components/css/variables.css:298 */
-    transparent
-/* src/components/css/variables.css:299 */
   );
-  /* src/components/css/variables.css:301 */
-  /* Legacy Gradient Variables (for backward compatibility) */
-  /* src/components/css/variables.css:302 */
-  --gradient-1: var(--color-gradient-1);
-  /* src/components/css/variables.css:303 */
-  --gradient-2: var(--color-gradient-2);
+  /* src/components/css/variables.css:298 */
+  --color-glow: color-mix(
+/* src/components/css/variables.css:299 */
+    in srgb,
+/* src/components/css/variables.css:300 */
+    var(--chat-widget-primary-color) 30%,
+/* src/components/css/variables.css:301 */
+    transparent
+/* src/components/css/variables.css:302 */
+  );
   /* src/components/css/variables.css:304 */
-  --gradient-3: var(--color-gradient-3);
+  /* Legacy Gradient Variables (for backward compatibility) */
   /* src/components/css/variables.css:305 */
-  --gradient-4: var(--color-gradient-4);
+  --gradient-1: var(--color-gradient-1);
   /* src/components/css/variables.css:306 */
-  --accent: var(--color-accent);
+  --gradient-2: var(--color-gradient-2);
   /* src/components/css/variables.css:307 */
-  --glow: var(--color-glow);
+  --gradient-3: var(--color-gradient-3);
+  /* src/components/css/variables.css:308 */
+  --gradient-4: var(--color-gradient-4);
   /* src/components/css/variables.css:309 */
-  /* Legacy Color Aliases (for backward compatibility) */
+  --accent: var(--color-accent);
   /* src/components/css/variables.css:310 */
-  --whatsapp-color: var(--color-whatsapp);
-  /* src/components/css/variables.css:311 */
-  --gray-200: var(--color-gray-200);
+  --glow: var(--color-glow);
   /* src/components/css/variables.css:312 */
-  --gray-300: var(--color-gray-300);
+  /* Legacy Color Aliases (for backward compatibility) */
   /* src/components/css/variables.css:313 */
-  --gray-400: var(--color-gray-400);
+  --whatsapp-color: var(--color-whatsapp);
   /* src/components/css/variables.css:314 */
-  --gray-500: var(--color-gray-500);
+  --gray-200: var(--color-gray-200);
   /* src/components/css/variables.css:315 */
-  --gray-600: var(--color-gray-600);
+  --gray-300: var(--color-gray-300);
   /* src/components/css/variables.css:316 */
-  --gray-700: var(--color-gray-700);
+  --gray-400: var(--color-gray-400);
   /* src/components/css/variables.css:317 */
-  --gray-800: var(--color-gray-800);
+  --gray-500: var(--color-gray-500);
   /* src/components/css/variables.css:318 */
-  --blue-500: var(--color-blue-500);
+  --gray-600: var(--color-gray-600);
   /* src/components/css/variables.css:319 */
-  --blue-600: var(--color-blue-600);
+  --gray-700: var(--color-gray-700);
   /* src/components/css/variables.css:320 */
-  --slate-700: var(--color-slate-700);
+  --gray-800: var(--color-gray-800);
   /* src/components/css/variables.css:321 */
-  --slate-800: var(--color-slate-800);
+  --blue-500: var(--color-blue-500);
+  /* src/components/css/variables.css:322 */
+  --blue-600: var(--color-blue-600);
   /* src/components/css/variables.css:323 */
+  --slate-700: var(--color-slate-700);
+  /* src/components/css/variables.css:324 */
+  --slate-800: var(--color-slate-800);
+  /* src/components/css/variables.css:326 */
   /* Gray Scale Colors */
   /* --color-gray-200: rgb(229, 231, 235);
   --color-gray-300: rgb(209, 213, 219);
@@ -117188,104 +117464,107 @@ It has 3 components:
   --color-gray-600: rgb(75, 85, 99);
   --color-gray-700: rgb(51, 65, 85);
   --color-gray-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:332 */
+  /* src/components/css/variables.css:335 */
   /* Blue Colors */
   /* --color-blue-500: #3b82f6;
   --color-blue-600: #2563eb; */
-  /* src/components/css/variables.css:336 */
+  /* src/components/css/variables.css:339 */
   /* Slate Colors */
   /* --color-slate-700: rgb(51, 65, 85);
   --color-slate-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:340 */
+  /* src/components/css/variables.css:343 */
   /* Red Colors (for errors, disconnect, etc.) */
   /* --color-red-50: rgb(254, 242, 242);
   --color-red-100: rgb(254, 226, 226);
   --color-red-500: #ef4444;
   --color-red-600: #dc2626; */
-  /* src/components/css/variables.css:346 */
+  /* src/components/css/variables.css:349 */
   /* Green Colors (for success, active states) */
   /* --color-green-50: rgb(240, 253, 244);
   --color-green-100: rgb(220, 252, 231);
   --color-green-500: #10b981;
   --color-green-600: #059669; */
-  /* src/components/css/variables.css:351 */
+  /* src/components/css/variables.css:354 */
 }
 
-/* src/components/css/variables.css:353 */
+/* src/components/css/variables.css:356 */
 
 /* Fallback for browsers that don't support color-mix */
 
-/* src/components/css/variables.css:354 */
+/* src/components/css/variables.css:357 */
 
 @supports not (color: color-mix(in srgb, #000 50%, #fff)) {
-  /* src/components/css/variables.css:355 */
+  /* src/components/css/variables.css:358 */
 
   :root {
-    /* src/components/css/variables.css:356 */
+    /* src/components/css/variables.css:359 */
     /* Derived Theme Colors Fallback */
-    /* src/components/css/variables.css:357 */
-    /* Primary hover: darker version of default primary color #000aaa */
-    /* src/components/css/variables.css:358 */
-    --chat-widget-primary-color-hover: #000991;
-    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:360 */
-    /* Gradient Colors Fallback */
+    /* Primary hover: darker version of default primary color #000aaa */
     /* src/components/css/variables.css:361 */
-    --color-gradient-1: #000aaa;
-    /* Default primary color */
+    --chat-widget-primary-color-hover: #000991;
     /* src/components/css/variables.css:362 */
-    --color-gradient-2: #6c757d;
-    /* Default secondary color */
-    /* src/components/css/variables.css:363 */
-    --color-gradient-3: #6c757d;
+    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:364 */
-    --color-gradient-4: #6c757d;
+    /* Gradient Colors Fallback */
     /* src/components/css/variables.css:365 */
-    --color-accent: #6c757d;
+    --color-gradient-1: #000aaa;
     /* src/components/css/variables.css:366 */
-    --color-glow: rgba(0, 10, 170, 0.3);
+    /* Default primary color */
+    /* src/components/css/variables.css:367 */
+    --color-gradient-2: #6c757d;
     /* src/components/css/variables.css:368 */
-    /* Sleek View Colors Fallback */
+    /* Default secondary color */
     /* src/components/css/variables.css:369 */
-    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
+    --color-gradient-3: #6c757d;
     /* src/components/css/variables.css:370 */
-    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
+    --color-gradient-4: #6c757d;
+    /* src/components/css/variables.css:371 */
+    --color-accent: #6c757d;
     /* src/components/css/variables.css:372 */
-    /* Scrollbar Colors Fallback */
-    /* src/components/css/variables.css:373 */
-    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
+    --color-glow: rgba(0, 10, 170, 0.3);
     /* src/components/css/variables.css:374 */
-    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
+    /* Sleek View Colors Fallback */
+    /* src/components/css/variables.css:375 */
+    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
     /* src/components/css/variables.css:376 */
-    /* Legacy aliases */
-    /* src/components/css/variables.css:377 */
-    --gradient-1: var(--color-gradient-1);
+    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
     /* src/components/css/variables.css:378 */
-    --gradient-2: var(--color-gradient-2);
+    /* Scrollbar Colors Fallback */
     /* src/components/css/variables.css:379 */
-    --gradient-3: var(--color-gradient-3);
+    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
     /* src/components/css/variables.css:380 */
-    --gradient-4: var(--color-gradient-4);
-    /* src/components/css/variables.css:381 */
-    --accent: var(--color-accent);
+    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
     /* src/components/css/variables.css:382 */
-    --glow: var(--color-glow);
+    /* Legacy aliases */
     /* src/components/css/variables.css:383 */
-    --sleek-main-bg: var(--color-sleek-main-bg);
+    --gradient-1: var(--color-gradient-1);
     /* src/components/css/variables.css:384 */
-    --sleek-main-border: var(--color-sleek-main-border);
+    --gradient-2: var(--color-gradient-2);
     /* src/components/css/variables.css:385 */
-    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    --gradient-3: var(--color-gradient-3);
     /* src/components/css/variables.css:386 */
-    --input-scrollbar-thumb-hover-color: var(
-/* src/components/css/variables.css:387 */
-      --color-scrollbar-input-thumb-hover
-/* src/components/css/variables.css:388 */
-    );
+    --gradient-4: var(--color-gradient-4);
+    /* src/components/css/variables.css:387 */
+    --accent: var(--color-accent);
+    /* src/components/css/variables.css:388 */
+    --glow: var(--color-glow);
     /* src/components/css/variables.css:389 */
+    --sleek-main-bg: var(--color-sleek-main-bg);
+    /* src/components/css/variables.css:390 */
+    --sleek-main-border: var(--color-sleek-main-border);
+    /* src/components/css/variables.css:391 */
+    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    /* src/components/css/variables.css:392 */
+    --input-scrollbar-thumb-hover-color: var(
+/* src/components/css/variables.css:393 */
+      --color-scrollbar-input-thumb-hover
+/* src/components/css/variables.css:394 */
+    );
+    /* src/components/css/variables.css:395 */
   }
 
-  /* src/components/css/variables.css:390 */
+  /* src/components/css/variables.css:396 */
 }
 
 /* src/components/css/GlowingCloudAnimation.css:3 */
@@ -118798,173 +119077,169 @@ It has 3 components:
   /* Voice State Colors */
   /* src/components/css/variables.css:29 */
   --color-voice-listening: #3b82f6;
-  /* Blue */
   /* src/components/css/variables.css:30 */
-  --color-voice-speaking: #10b981;
-  /* Green */
+  /* Blue */
   /* src/components/css/variables.css:31 */
-  --color-voice-thinking: #f59e0b;
-  /* Amber/Orange */
+  --color-voice-speaking: #10b981;
   /* src/components/css/variables.css:32 */
-  --color-voice-disconnected: #ef4444cb;
-  /* Red */
+  /* Green */
+  /* src/components/css/variables.css:33 */
+  --color-voice-thinking: #f59e0b;
   /* src/components/css/variables.css:34 */
-  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
+  /* Amber/Orange */
   /* src/components/css/variables.css:35 */
-  /* --color-voice-speaking-alt: #058158; Darker Green */
+  --color-voice-disconnected: #ef4444cb;
   /* src/components/css/variables.css:36 */
-  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
-  /* src/components/css/variables.css:37 */
-  /* --color-voice-thinking-alt: #fbbf24; Yellow */
+  /* Red */
+  /* src/components/css/variables.css:38 */
+  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
   /* src/components/css/variables.css:39 */
-  /* Special/Brand Colors */
+  /* --color-voice-speaking-alt: #058158; Darker Green */
   /* src/components/css/variables.css:40 */
-  --color-whatsapp: #1eb655;
-  /* src/components/css/variables.css:42 */
-  /* Opacity Values */
+  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
+  /* src/components/css/variables.css:41 */
+  /* --color-voice-thinking-alt: #fbbf24; Yellow */
   /* src/components/css/variables.css:43 */
-  --opacity-disabled: 0.7;
+  /* Special/Brand Colors */
   /* src/components/css/variables.css:44 */
+  --color-whatsapp: #1eb655;
+  /* src/components/css/variables.css:46 */
+  /* Opacity Values */
+  /* src/components/css/variables.css:47 */
+  --opacity-disabled: 0.7;
+  /* src/components/css/variables.css:48 */
   --opacity-hover: 0.8;
-  /* src/components/css/variables.css:45 */
+  /* src/components/css/variables.css:49 */
   --opacity-normal: 1;
   /* ================================================
      INPUT AREA VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:51 */
-  /* Input Colors */
-  /* src/components/css/variables.css:53 */
-  --color-input-background: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:54 */
-  --color-input-background-avatar-view: var(--chat-widget-primary-color);
   /* src/components/css/variables.css:55 */
+  /* Input Colors */
+  /* src/components/css/variables.css:57 */
+  --color-input-background: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:58 */
   --color-input-text: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:56 */
+  /* src/components/css/variables.css:59 */
   --color-input-placeholder-text: color-mix(
-/* src/components/css/variables.css:57 */
-    in srgb,
-/* src/components/css/variables.css:58 */
-    var(--color-input-text) 70%,
-/* src/components/css/variables.css:59 */
-    white
 /* src/components/css/variables.css:60 */
+    in srgb,
+/* src/components/css/variables.css:61 */
+    var(--color-input-text) 70%,
+/* src/components/css/variables.css:62 */
+    white
+/* src/components/css/variables.css:63 */
   );
-  /* src/components/css/variables.css:61 */
-  --color-input-placeholder-opacity: 70%;
-  /* src/components/css/variables.css:62 */
-  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:64 */
-  /* Input Dimensions */
+  --color-input-placeholder-opacity: 70%;
   /* src/components/css/variables.css:65 */
-  --input-default-height: 40px;
-  /* src/components/css/variables.css:66 */
-  --input-min-height: 40px;
+  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:67 */
-  --input-max-height: 120px;
+  /* Input Dimensions */
   /* src/components/css/variables.css:68 */
-  --input-max-height-tablet: 100px;
+  --input-default-height: 40px;
   /* src/components/css/variables.css:69 */
-  --input-max-height-mobile: 80px;
+  --input-min-height: 40px;
+  /* src/components/css/variables.css:70 */
+  --input-max-height: 120px;
   /* src/components/css/variables.css:71 */
-  /* Input Line Height */
+  --input-max-height-tablet: 100px;
   /* src/components/css/variables.css:72 */
-  --input-line-height: 20px;
+  --input-max-height-mobile: 80px;
   /* src/components/css/variables.css:74 */
-  /* Input Padding */
+  /* Input Line Height */
   /* src/components/css/variables.css:75 */
-  --input-text-padding-horizontal: 4px;
-  /* src/components/css/variables.css:76 */
-  --input-text-padding-vertical: 0px;
+  --input-line-height: 20px;
   /* src/components/css/variables.css:77 */
-  --input-text-padding: 0 var(--input-text-padding-horizontal);
+  /* Input Padding */
   /* src/components/css/variables.css:78 */
-  --input-container-padding: 6px 8px;
+  --input-text-padding-horizontal: 4px;
   /* src/components/css/variables.css:79 */
-  --input-container-padding-sleek: 4px 4px;
+  --input-text-padding-vertical: 0px;
+  /* src/components/css/variables.css:80 */
+  --input-text-padding: 0 var(--input-text-padding-horizontal);
   /* src/components/css/variables.css:81 */
-  /* Input Font */
+  --input-container-padding: 6px 8px;
   /* src/components/css/variables.css:82 */
-  --input-font-size: var(--chat-widget-message-font-size);
-  /* src/components/css/variables.css:83 */
-  --input-font-weight: 400;
+  --input-container-padding-sleek: 4px 4px;
   /* src/components/css/variables.css:84 */
-  --input-font-weight-focus: 500;
+  /* Input Font */
   /* src/components/css/variables.css:85 */
+  --input-font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/variables.css:86 */
+  --input-font-weight: 400;
+  /* src/components/css/variables.css:87 */
+  --input-font-weight-focus: 500;
+  /* src/components/css/variables.css:88 */
   --input-font-weight-bold: 600;
   /* ================================================
      INPUT SCROLLBAR VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:91 */
+  /* src/components/css/variables.css:94 */
   /* Scrollbar Colors */
-  /* src/components/css/variables.css:92 */
+  /* src/components/css/variables.css:95 */
   --color-scrollbar-input-thumb: color-mix(
-/* src/components/css/variables.css:93 */
-    in srgb,
-/* src/components/css/variables.css:94 */
-    var(--chat-widget-primary-color) 75%,
-/* src/components/css/variables.css:95 */
-    transparent
 /* src/components/css/variables.css:96 */
-  );
-  /* src/components/css/variables.css:97 */
-  --color-scrollbar-input-thumb-hover: color-mix(
+    in srgb,
+/* src/components/css/variables.css:97 */
+    var(--chat-widget-primary-color) 75%,
 /* src/components/css/variables.css:98 */
-    in srgb,
+    transparent
 /* src/components/css/variables.css:99 */
-    var(--chat-widget-primary-color) 90%,
-/* src/components/css/variables.css:100 */
-    transparent
+  );
+  /* src/components/css/variables.css:100 */
+  --color-scrollbar-input-thumb-hover: color-mix(
 /* src/components/css/variables.css:101 */
-  );
-  /* src/components/css/variables.css:103 */
-  --color-scrollbar-input-thumb-avatar-view: color-mix(
+    in srgb,
+/* src/components/css/variables.css:102 */
+    var(--chat-widget-primary-color) 90%,
+/* src/components/css/variables.css:103 */
+    transparent
 /* src/components/css/variables.css:104 */
-    in srgb,
-/* src/components/css/variables.css:105 */
-    var(--chat-widget-secondary-color) 75%,
-/* src/components/css/variables.css:106 */
-    transparent
+  );
+  /* src/components/css/variables.css:106 */
+  --color-scrollbar-input-thumb-avatar-view: color-mix(
 /* src/components/css/variables.css:107 */
-  );
-  /* src/components/css/variables.css:108 */
-  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
-/* src/components/css/variables.css:109 */
     in srgb,
-/* src/components/css/variables.css:110 */
-    var(--chat-widget-secondary-color) 90%,
-/* src/components/css/variables.css:111 */
+/* src/components/css/variables.css:108 */
+    var(--chat-widget-secondary-color) 75%,
+/* src/components/css/variables.css:109 */
     transparent
-/* src/components/css/variables.css:112 */
+/* src/components/css/variables.css:110 */
   );
-  /* src/components/css/variables.css:114 */
-  --color-scrollbar-input-track: transparent;
-  /* src/components/css/variables.css:116 */
-  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:111 */
+  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
+/* src/components/css/variables.css:112 */
+    in srgb,
+/* src/components/css/variables.css:113 */
+    var(--chat-widget-secondary-color) 90%,
+/* src/components/css/variables.css:114 */
+    transparent
+/* src/components/css/variables.css:115 */
+  );
   /* src/components/css/variables.css:117 */
+  --color-scrollbar-input-track: transparent;
+  /* src/components/css/variables.css:119 */
+  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:120 */
   --input-scrollbar-border-radius: 2.5px;
-  /* src/components/css/variables.css:118 */
+  /* src/components/css/variables.css:121 */
   --input-scrollbar-thumb-hover-opacity: var(--opacity-hover);
   /* ================================================
      BUTTON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:124 */
-  /* Button Dimensions */
-  /* src/components/css/variables.css:125 */
-  --button-size-primary: 32px;
-  /* src/components/css/variables.css:126 */
-  --button-padding-primary: 4px;
   /* src/components/css/variables.css:127 */
-  --button-size-secondary: 24px;
+  /* Button Dimensions */
+  /* src/components/css/variables.css:128 */
+  --button-size-primary: 32px;
   /* src/components/css/variables.css:129 */
-  /* Button Colors */
+  --button-padding-primary: 4px;
   /* src/components/css/variables.css:130 */
+  --button-size-secondary: 24px;
+  /* src/components/css/variables.css:132 */
+  /* Button Colors */
+  /* src/components/css/variables.css:133 */
   --color-button-background-primary: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:131 */
-  --color-button-background-primary-avatar-view: var(
-/* src/components/css/variables.css:132 */
-    --chat-widget-secondary-color
-/* src/components/css/variables.css:133 */
-  );
   /* src/components/css/variables.css:134 */
   --color-button-background-hover: var(--chat-widget-primary-color-hover);
   /* src/components/css/variables.css:135 */
@@ -118972,279 +119247,282 @@ It has 3 components:
   /* src/components/css/variables.css:136 */
   --color-button-fill: var(--chat-widget-button-content-color);
   /* src/components/css/variables.css:138 */
-  /* Button Opacity States */
-  /* src/components/css/variables.css:139 */
-  --button-opacity-normal: var(--opacity-normal);
+  --color-button-disconnect: #ef4444;
   /* src/components/css/variables.css:140 */
-  --button-opacity-hover: var(--opacity-hover);
+  /* Button Opacity States */
   /* src/components/css/variables.css:141 */
+  --button-opacity-normal: var(--opacity-normal);
+  /* src/components/css/variables.css:142 */
+  --button-opacity-hover: var(--opacity-hover);
+  /* src/components/css/variables.css:143 */
   --button-opacity-disabled: var(--opacity-disabled);
   /* ================================================
      ICON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:147 */
-  /* Icon Sizes */
-  /* src/components/css/variables.css:148 */
-  --button-icon-size-secondary: 16px;
   /* src/components/css/variables.css:149 */
+  /* Icon Sizes */
+  /* src/components/css/variables.css:150 */
+  --button-icon-size-secondary: 16px;
+  /* src/components/css/variables.css:151 */
   --button-icon-size-primary: 20px;
+  /* src/components/css/variables.css:152 */
   /* w-5 h-5 equivalent */
   /* ================================================
      CHAT MESSAGE CONTAINER SCROLLBAR
      ================================================ */
-  /* src/components/css/variables.css:155 */
+  /* src/components/css/variables.css:158 */
   --message-scrollbar-width: thin;
-  /* src/components/css/variables.css:156 */
-  --message-scrollbar-width-px: 6px;
-  /* src/components/css/variables.css:157 */
-  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:159 */
-  /* Scrollbar Colors */
+  --message-scrollbar-width-px: 6px;
   /* src/components/css/variables.css:160 */
-  --color-scrollbar-message-thumb-default: rgb(209 213 219);
-  /* src/components/css/variables.css:161 */
-  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:162 */
+  /* Scrollbar Colors */
+  /* src/components/css/variables.css:163 */
+  --color-scrollbar-message-thumb-default: rgb(209 213 219);
+  /* src/components/css/variables.css:164 */
+  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  /* src/components/css/variables.css:165 */
   --color-scrollbar-message-thumb-theme: var(
-/* src/components/css/variables.css:163 */
+/* src/components/css/variables.css:166 */
     --chat-widget-button-content-color,
-/* src/components/css/variables.css:164 */
-    var(--chat-widget-secondary-color)
-/* src/components/css/variables.css:165 */
-  );
-  /* src/components/css/variables.css:166 */
-  --color-scrollbar-message-thumb-hover-mix: color-mix(
 /* src/components/css/variables.css:167 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:168 */
-    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
-/* src/components/css/variables.css:169 */
-      80%,
-/* src/components/css/variables.css:170 */
-    var(--chat-widget-primary-color)
-/* src/components/css/variables.css:171 */
   );
-  /* src/components/css/variables.css:172 */
+  /* src/components/css/variables.css:169 */
+  --color-scrollbar-message-thumb-hover-mix: color-mix(
+/* src/components/css/variables.css:170 */
+    in srgb,
+/* src/components/css/variables.css:171 */
+    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
+/* src/components/css/variables.css:172 */
+      80%,
+/* src/components/css/variables.css:173 */
+    var(--chat-widget-primary-color)
+/* src/components/css/variables.css:174 */
+  );
+  /* src/components/css/variables.css:175 */
   --color-scrollbar-message-track: transparent;
   /* ================================================
      CHAT MESSAGE
      ================================================ */
-  /* src/components/css/variables.css:178 */
+  /* src/components/css/variables.css:181 */
   --message-text-color: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:179 */
+  /* src/components/css/variables.css:182 */
   --message-font-size: var(--chat-widget-message-font-size);
   /* ================================================
      CHAT MESSAGE BUBBLES
      ================================================ */
-  /* src/components/css/variables.css:185 */
+  /* src/components/css/variables.css:188 */
   --message-bubble-background-color: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:186 */
+  /* src/components/css/variables.css:189 */
   --message-bubble-icon-color: var(--chat-widget-secondary-color);
   /* ================================================
      ENGAGEMENT HOOK IMAGE
      ================================================ */
-  /* src/components/css/variables.css:192 */
+  /* src/components/css/variables.css:195 */
   /* Engagement Hook Image Variables (defined elsewhere via JavaScript) */
-  /* src/components/css/variables.css:193 */
-  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
-  /* src/components/css/variables.css:194 */
-  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
   /* src/components/css/variables.css:196 */
-  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
   /* src/components/css/variables.css:197 */
+  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
+  /* src/components/css/variables.css:199 */
+  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* src/components/css/variables.css:200 */
   --engagement-hook-image-height: var(
-/* src/components/css/variables.css:198 */
+/* src/components/css/variables.css:201 */
     --chat-widget-engagement-hook-image-height
-/* src/components/css/variables.css:199 */
+/* src/components/css/variables.css:202 */
   );
   /* ================================================
      TRANSITION VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:205 */
-  --transition-fast: 0.2s ease;
-  /* src/components/css/variables.css:206 */
-  --transition-normal: all 0.3s ease;
-  /* src/components/css/variables.css:207 */
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   /* src/components/css/variables.css:208 */
+  --transition-fast: 0.2s ease;
+  /* src/components/css/variables.css:209 */
+  --transition-normal: all 0.3s ease;
+  /* src/components/css/variables.css:210 */
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* src/components/css/variables.css:211 */
   --transition-slow-ease: 0.4s ease;
   /* ================================================
      BORDER RADIUS VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:214 */
-  --border-radius-small: 2.5px;
-  /* src/components/css/variables.css:215 */
-  --border-radius-medium: 3px;
-  /* src/components/css/variables.css:216 */
-  --border-radius-large: 12px;
   /* src/components/css/variables.css:217 */
-  --border-radius-xl: 16px;
+  --border-radius-small: 2.5px;
   /* src/components/css/variables.css:218 */
-  --border-radius-2xl: 20px;
+  --border-radius-medium: 3px;
   /* src/components/css/variables.css:219 */
+  --border-radius-large: 12px;
+  /* src/components/css/variables.css:220 */
+  --border-radius-xl: 16px;
+  /* src/components/css/variables.css:221 */
+  --border-radius-2xl: 20px;
+  /* src/components/css/variables.css:222 */
   --border-radius-full: 9999px;
   /* ================================================
      SPACING & GAP VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:225 */
-  --spacing-gap-xs: 0.5px;
-  /* src/components/css/variables.css:226 */
-  --spacing-gap-sm: 4px;
-  /* src/components/css/variables.css:227 */
-  --spacing-gap-md: 8px;
   /* src/components/css/variables.css:228 */
-  --spacing-gap-lg: 12px;
+  --spacing-gap-xs: 0.5px;
   /* src/components/css/variables.css:229 */
+  --spacing-gap-sm: 4px;
+  /* src/components/css/variables.css:230 */
+  --spacing-gap-md: 8px;
+  /* src/components/css/variables.css:231 */
+  --spacing-gap-lg: 12px;
+  /* src/components/css/variables.css:232 */
   --spacing-gap-xl: 16px;
   /* ================================================
      Z-INDEX VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:235 */
-  --z-index-base: 1;
-  /* src/components/css/variables.css:236 */
-  --z-index-elevated: 10;
-  /* src/components/css/variables.css:237 */
-  --z-index-high: 20;
   /* src/components/css/variables.css:238 */
+  --z-index-base: 1;
+  /* src/components/css/variables.css:239 */
+  --z-index-elevated: 10;
+  /* src/components/css/variables.css:240 */
+  --z-index-high: 20;
+  /* src/components/css/variables.css:241 */
   --z-index-maximum: 9999;
   /* ================================================
      BORDER VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:244 */
+  /* src/components/css/variables.css:247 */
   --border-width-thin: 1px;
-  /* src/components/css/variables.css:245 */
+  /* src/components/css/variables.css:248 */
   --border-width-medium: 2px;
-  /* src/components/css/variables.css:246 */
+  /* src/components/css/variables.css:249 */
   --border-width-thick: 4px;
   /* ================================================
      BOX SHADOW VARIABLES (for consistency)
      ================================================ */
-  /* src/components/css/variables.css:252 */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  /* src/components/css/variables.css:253 */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:254 */
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   /* src/components/css/variables.css:255 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* src/components/css/variables.css:256 */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:257 */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:258 */
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
   /* ================================================
      SLEEK VIEW SPECIFIC VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:261 */
-  /* These are already defined in SleekView.css but should be here for consistency */
-  /* src/components/css/variables.css:262 */
-  --sleek-main-min-height: 0px;
-  /* src/components/css/variables.css:263 */
-  --sleek-border-radius: var(--border-radius-large);
   /* src/components/css/variables.css:264 */
-  --sleek-main-bg: var(--color-sleek-main-bg);
+  /* These are already defined in SleekView.css but should be here for consistency */
   /* src/components/css/variables.css:265 */
-  --sleek-main-border: var(--color-sleek-main-border);
+  --sleek-main-min-height: 0px;
   /* src/components/css/variables.css:266 */
-  --sleek-main-text-color: var(--color-sleek-main-text);
+  --sleek-border-radius: var(--border-radius-large);
+  /* src/components/css/variables.css:267 */
+  --sleek-main-bg: var(--color-sleek-main-bg);
   /* src/components/css/variables.css:268 */
-  /* Sleek View Colors */
+  --sleek-main-border: var(--color-sleek-main-border);
   /* src/components/css/variables.css:269 */
+  --sleek-main-text-color: var(--color-sleek-main-text);
+  /* src/components/css/variables.css:271 */
+  /* Sleek View Colors */
+  /* src/components/css/variables.css:272 */
   --color-sleek-main-bg: color-mix(
-/* src/components/css/variables.css:270 */
-    in srgb,
-/* src/components/css/variables.css:271 */
-    var(--chat-widget-primary-color) 10%,
-/* src/components/css/variables.css:272 */
-    white
 /* src/components/css/variables.css:273 */
+    in srgb,
+/* src/components/css/variables.css:274 */
+    var(--chat-widget-primary-color) 10%,
+/* src/components/css/variables.css:275 */
+    white
+/* src/components/css/variables.css:276 */
   );
-  /* src/components/css/variables.css:274 */
-  --color-sleek-main-border: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:275 */
-  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:277 */
-  /* Gradient Colors (derived from primary/secondary) */
+  --color-sleek-main-border: var(--chat-widget-secondary-color);
   /* src/components/css/variables.css:278 */
-  --color-gradient-1: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:279 */
-  --color-gradient-2: var(--chat-widget-secondary-color);
+  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:280 */
+  /* Gradient Colors (derived from primary/secondary) */
+  /* src/components/css/variables.css:281 */
+  --color-gradient-1: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:282 */
+  --color-gradient-2: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:283 */
   --color-gradient-3: color-mix(
-/* src/components/css/variables.css:281 */
-    in srgb,
-/* src/components/css/variables.css:282 */
-    var(--chat-widget-primary-color) 60%,
-/* src/components/css/variables.css:283 */
-    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:284 */
-  );
-  /* src/components/css/variables.css:285 */
-  --color-gradient-4: color-mix(
+    in srgb,
+/* src/components/css/variables.css:285 */
+    var(--chat-widget-primary-color) 60%,
 /* src/components/css/variables.css:286 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:287 */
-    var(--chat-widget-primary-color) 40%,
-/* src/components/css/variables.css:288 */
-    var(--chat-widget-secondary-color)
+  );
+  /* src/components/css/variables.css:288 */
+  --color-gradient-4: color-mix(
 /* src/components/css/variables.css:289 */
-  );
-  /* src/components/css/variables.css:290 */
-  --color-accent: color-mix(
+    in srgb,
+/* src/components/css/variables.css:290 */
+    var(--chat-widget-primary-color) 40%,
 /* src/components/css/variables.css:291 */
-    in srgb,
-/* src/components/css/variables.css:292 */
-    var(--chat-widget-primary-color) 70%,
-/* src/components/css/variables.css:293 */
     var(--chat-widget-secondary-color)
+/* src/components/css/variables.css:292 */
+  );
+  /* src/components/css/variables.css:293 */
+  --color-accent: color-mix(
 /* src/components/css/variables.css:294 */
-  );
-  /* src/components/css/variables.css:295 */
-  --color-glow: color-mix(
-/* src/components/css/variables.css:296 */
     in srgb,
+/* src/components/css/variables.css:295 */
+    var(--chat-widget-primary-color) 70%,
+/* src/components/css/variables.css:296 */
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:297 */
-    var(--chat-widget-primary-color) 30%,
-/* src/components/css/variables.css:298 */
-    transparent
-/* src/components/css/variables.css:299 */
   );
-  /* src/components/css/variables.css:301 */
-  /* Legacy Gradient Variables (for backward compatibility) */
-  /* src/components/css/variables.css:302 */
-  --gradient-1: var(--color-gradient-1);
-  /* src/components/css/variables.css:303 */
-  --gradient-2: var(--color-gradient-2);
+  /* src/components/css/variables.css:298 */
+  --color-glow: color-mix(
+/* src/components/css/variables.css:299 */
+    in srgb,
+/* src/components/css/variables.css:300 */
+    var(--chat-widget-primary-color) 30%,
+/* src/components/css/variables.css:301 */
+    transparent
+/* src/components/css/variables.css:302 */
+  );
   /* src/components/css/variables.css:304 */
-  --gradient-3: var(--color-gradient-3);
+  /* Legacy Gradient Variables (for backward compatibility) */
   /* src/components/css/variables.css:305 */
-  --gradient-4: var(--color-gradient-4);
+  --gradient-1: var(--color-gradient-1);
   /* src/components/css/variables.css:306 */
-  --accent: var(--color-accent);
+  --gradient-2: var(--color-gradient-2);
   /* src/components/css/variables.css:307 */
-  --glow: var(--color-glow);
+  --gradient-3: var(--color-gradient-3);
+  /* src/components/css/variables.css:308 */
+  --gradient-4: var(--color-gradient-4);
   /* src/components/css/variables.css:309 */
-  /* Legacy Color Aliases (for backward compatibility) */
+  --accent: var(--color-accent);
   /* src/components/css/variables.css:310 */
-  --whatsapp-color: var(--color-whatsapp);
-  /* src/components/css/variables.css:311 */
-  --gray-200: var(--color-gray-200);
+  --glow: var(--color-glow);
   /* src/components/css/variables.css:312 */
-  --gray-300: var(--color-gray-300);
+  /* Legacy Color Aliases (for backward compatibility) */
   /* src/components/css/variables.css:313 */
-  --gray-400: var(--color-gray-400);
+  --whatsapp-color: var(--color-whatsapp);
   /* src/components/css/variables.css:314 */
-  --gray-500: var(--color-gray-500);
+  --gray-200: var(--color-gray-200);
   /* src/components/css/variables.css:315 */
-  --gray-600: var(--color-gray-600);
+  --gray-300: var(--color-gray-300);
   /* src/components/css/variables.css:316 */
-  --gray-700: var(--color-gray-700);
+  --gray-400: var(--color-gray-400);
   /* src/components/css/variables.css:317 */
-  --gray-800: var(--color-gray-800);
+  --gray-500: var(--color-gray-500);
   /* src/components/css/variables.css:318 */
-  --blue-500: var(--color-blue-500);
+  --gray-600: var(--color-gray-600);
   /* src/components/css/variables.css:319 */
-  --blue-600: var(--color-blue-600);
+  --gray-700: var(--color-gray-700);
   /* src/components/css/variables.css:320 */
-  --slate-700: var(--color-slate-700);
+  --gray-800: var(--color-gray-800);
   /* src/components/css/variables.css:321 */
-  --slate-800: var(--color-slate-800);
+  --blue-500: var(--color-blue-500);
+  /* src/components/css/variables.css:322 */
+  --blue-600: var(--color-blue-600);
   /* src/components/css/variables.css:323 */
+  --slate-700: var(--color-slate-700);
+  /* src/components/css/variables.css:324 */
+  --slate-800: var(--color-slate-800);
+  /* src/components/css/variables.css:326 */
   /* Gray Scale Colors */
   /* --color-gray-200: rgb(229, 231, 235);
   --color-gray-300: rgb(209, 213, 219);
@@ -119253,104 +119531,107 @@ It has 3 components:
   --color-gray-600: rgb(75, 85, 99);
   --color-gray-700: rgb(51, 65, 85);
   --color-gray-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:332 */
+  /* src/components/css/variables.css:335 */
   /* Blue Colors */
   /* --color-blue-500: #3b82f6;
   --color-blue-600: #2563eb; */
-  /* src/components/css/variables.css:336 */
+  /* src/components/css/variables.css:339 */
   /* Slate Colors */
   /* --color-slate-700: rgb(51, 65, 85);
   --color-slate-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:340 */
+  /* src/components/css/variables.css:343 */
   /* Red Colors (for errors, disconnect, etc.) */
   /* --color-red-50: rgb(254, 242, 242);
   --color-red-100: rgb(254, 226, 226);
   --color-red-500: #ef4444;
   --color-red-600: #dc2626; */
-  /* src/components/css/variables.css:346 */
+  /* src/components/css/variables.css:349 */
   /* Green Colors (for success, active states) */
   /* --color-green-50: rgb(240, 253, 244);
   --color-green-100: rgb(220, 252, 231);
   --color-green-500: #10b981;
   --color-green-600: #059669; */
-  /* src/components/css/variables.css:351 */
+  /* src/components/css/variables.css:354 */
 }
 
-/* src/components/css/variables.css:353 */
+/* src/components/css/variables.css:356 */
 
 /* Fallback for browsers that don't support color-mix */
 
-/* src/components/css/variables.css:354 */
+/* src/components/css/variables.css:357 */
 
 @supports not (color: color-mix(in srgb, #000 50%, #fff)) {
-  /* src/components/css/variables.css:355 */
+  /* src/components/css/variables.css:358 */
 
   :root {
-    /* src/components/css/variables.css:356 */
+    /* src/components/css/variables.css:359 */
     /* Derived Theme Colors Fallback */
-    /* src/components/css/variables.css:357 */
-    /* Primary hover: darker version of default primary color #000aaa */
-    /* src/components/css/variables.css:358 */
-    --chat-widget-primary-color-hover: #000991;
-    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:360 */
-    /* Gradient Colors Fallback */
+    /* Primary hover: darker version of default primary color #000aaa */
     /* src/components/css/variables.css:361 */
-    --color-gradient-1: #000aaa;
-    /* Default primary color */
+    --chat-widget-primary-color-hover: #000991;
     /* src/components/css/variables.css:362 */
-    --color-gradient-2: #6c757d;
-    /* Default secondary color */
-    /* src/components/css/variables.css:363 */
-    --color-gradient-3: #6c757d;
+    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:364 */
-    --color-gradient-4: #6c757d;
+    /* Gradient Colors Fallback */
     /* src/components/css/variables.css:365 */
-    --color-accent: #6c757d;
+    --color-gradient-1: #000aaa;
     /* src/components/css/variables.css:366 */
-    --color-glow: rgba(0, 10, 170, 0.3);
+    /* Default primary color */
+    /* src/components/css/variables.css:367 */
+    --color-gradient-2: #6c757d;
     /* src/components/css/variables.css:368 */
-    /* Sleek View Colors Fallback */
+    /* Default secondary color */
     /* src/components/css/variables.css:369 */
-    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
+    --color-gradient-3: #6c757d;
     /* src/components/css/variables.css:370 */
-    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
+    --color-gradient-4: #6c757d;
+    /* src/components/css/variables.css:371 */
+    --color-accent: #6c757d;
     /* src/components/css/variables.css:372 */
-    /* Scrollbar Colors Fallback */
-    /* src/components/css/variables.css:373 */
-    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
+    --color-glow: rgba(0, 10, 170, 0.3);
     /* src/components/css/variables.css:374 */
-    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
+    /* Sleek View Colors Fallback */
+    /* src/components/css/variables.css:375 */
+    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
     /* src/components/css/variables.css:376 */
-    /* Legacy aliases */
-    /* src/components/css/variables.css:377 */
-    --gradient-1: var(--color-gradient-1);
+    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
     /* src/components/css/variables.css:378 */
-    --gradient-2: var(--color-gradient-2);
+    /* Scrollbar Colors Fallback */
     /* src/components/css/variables.css:379 */
-    --gradient-3: var(--color-gradient-3);
+    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
     /* src/components/css/variables.css:380 */
-    --gradient-4: var(--color-gradient-4);
-    /* src/components/css/variables.css:381 */
-    --accent: var(--color-accent);
+    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
     /* src/components/css/variables.css:382 */
-    --glow: var(--color-glow);
+    /* Legacy aliases */
     /* src/components/css/variables.css:383 */
-    --sleek-main-bg: var(--color-sleek-main-bg);
+    --gradient-1: var(--color-gradient-1);
     /* src/components/css/variables.css:384 */
-    --sleek-main-border: var(--color-sleek-main-border);
+    --gradient-2: var(--color-gradient-2);
     /* src/components/css/variables.css:385 */
-    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    --gradient-3: var(--color-gradient-3);
     /* src/components/css/variables.css:386 */
-    --input-scrollbar-thumb-hover-color: var(
-/* src/components/css/variables.css:387 */
-      --color-scrollbar-input-thumb-hover
-/* src/components/css/variables.css:388 */
-    );
+    --gradient-4: var(--color-gradient-4);
+    /* src/components/css/variables.css:387 */
+    --accent: var(--color-accent);
+    /* src/components/css/variables.css:388 */
+    --glow: var(--color-glow);
     /* src/components/css/variables.css:389 */
+    --sleek-main-bg: var(--color-sleek-main-bg);
+    /* src/components/css/variables.css:390 */
+    --sleek-main-border: var(--color-sleek-main-border);
+    /* src/components/css/variables.css:391 */
+    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    /* src/components/css/variables.css:392 */
+    --input-scrollbar-thumb-hover-color: var(
+/* src/components/css/variables.css:393 */
+      --color-scrollbar-input-thumb-hover
+/* src/components/css/variables.css:394 */
+    );
+    /* src/components/css/variables.css:395 */
   }
 
-  /* src/components/css/variables.css:390 */
+  /* src/components/css/variables.css:396 */
 }
 
 /* src/components/css/MessagePopup.css:3 */
@@ -119820,173 +120101,169 @@ It has 3 components:
   /* Voice State Colors */
   /* src/components/css/variables.css:29 */
   --color-voice-listening: #3b82f6;
-  /* Blue */
   /* src/components/css/variables.css:30 */
-  --color-voice-speaking: #10b981;
-  /* Green */
+  /* Blue */
   /* src/components/css/variables.css:31 */
-  --color-voice-thinking: #f59e0b;
-  /* Amber/Orange */
+  --color-voice-speaking: #10b981;
   /* src/components/css/variables.css:32 */
-  --color-voice-disconnected: #ef4444cb;
-  /* Red */
+  /* Green */
+  /* src/components/css/variables.css:33 */
+  --color-voice-thinking: #f59e0b;
   /* src/components/css/variables.css:34 */
-  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
+  /* Amber/Orange */
   /* src/components/css/variables.css:35 */
-  /* --color-voice-speaking-alt: #058158; Darker Green */
+  --color-voice-disconnected: #ef4444cb;
   /* src/components/css/variables.css:36 */
-  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
-  /* src/components/css/variables.css:37 */
-  /* --color-voice-thinking-alt: #fbbf24; Yellow */
+  /* Red */
+  /* src/components/css/variables.css:38 */
+  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
   /* src/components/css/variables.css:39 */
-  /* Special/Brand Colors */
+  /* --color-voice-speaking-alt: #058158; Darker Green */
   /* src/components/css/variables.css:40 */
-  --color-whatsapp: #1eb655;
-  /* src/components/css/variables.css:42 */
-  /* Opacity Values */
+  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
+  /* src/components/css/variables.css:41 */
+  /* --color-voice-thinking-alt: #fbbf24; Yellow */
   /* src/components/css/variables.css:43 */
-  --opacity-disabled: 0.7;
+  /* Special/Brand Colors */
   /* src/components/css/variables.css:44 */
+  --color-whatsapp: #1eb655;
+  /* src/components/css/variables.css:46 */
+  /* Opacity Values */
+  /* src/components/css/variables.css:47 */
+  --opacity-disabled: 0.7;
+  /* src/components/css/variables.css:48 */
   --opacity-hover: 0.8;
-  /* src/components/css/variables.css:45 */
+  /* src/components/css/variables.css:49 */
   --opacity-normal: 1;
   /* ================================================
      INPUT AREA VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:51 */
-  /* Input Colors */
-  /* src/components/css/variables.css:53 */
-  --color-input-background: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:54 */
-  --color-input-background-avatar-view: var(--chat-widget-primary-color);
   /* src/components/css/variables.css:55 */
+  /* Input Colors */
+  /* src/components/css/variables.css:57 */
+  --color-input-background: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:58 */
   --color-input-text: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:56 */
+  /* src/components/css/variables.css:59 */
   --color-input-placeholder-text: color-mix(
-/* src/components/css/variables.css:57 */
-    in srgb,
-/* src/components/css/variables.css:58 */
-    var(--color-input-text) 70%,
-/* src/components/css/variables.css:59 */
-    white
 /* src/components/css/variables.css:60 */
+    in srgb,
+/* src/components/css/variables.css:61 */
+    var(--color-input-text) 70%,
+/* src/components/css/variables.css:62 */
+    white
+/* src/components/css/variables.css:63 */
   );
-  /* src/components/css/variables.css:61 */
-  --color-input-placeholder-opacity: 70%;
-  /* src/components/css/variables.css:62 */
-  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:64 */
-  /* Input Dimensions */
+  --color-input-placeholder-opacity: 70%;
   /* src/components/css/variables.css:65 */
-  --input-default-height: 40px;
-  /* src/components/css/variables.css:66 */
-  --input-min-height: 40px;
+  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:67 */
-  --input-max-height: 120px;
+  /* Input Dimensions */
   /* src/components/css/variables.css:68 */
-  --input-max-height-tablet: 100px;
+  --input-default-height: 40px;
   /* src/components/css/variables.css:69 */
-  --input-max-height-mobile: 80px;
+  --input-min-height: 40px;
+  /* src/components/css/variables.css:70 */
+  --input-max-height: 120px;
   /* src/components/css/variables.css:71 */
-  /* Input Line Height */
+  --input-max-height-tablet: 100px;
   /* src/components/css/variables.css:72 */
-  --input-line-height: 20px;
+  --input-max-height-mobile: 80px;
   /* src/components/css/variables.css:74 */
-  /* Input Padding */
+  /* Input Line Height */
   /* src/components/css/variables.css:75 */
-  --input-text-padding-horizontal: 4px;
-  /* src/components/css/variables.css:76 */
-  --input-text-padding-vertical: 0px;
+  --input-line-height: 20px;
   /* src/components/css/variables.css:77 */
-  --input-text-padding: 0 var(--input-text-padding-horizontal);
+  /* Input Padding */
   /* src/components/css/variables.css:78 */
-  --input-container-padding: 6px 8px;
+  --input-text-padding-horizontal: 4px;
   /* src/components/css/variables.css:79 */
-  --input-container-padding-sleek: 4px 4px;
+  --input-text-padding-vertical: 0px;
+  /* src/components/css/variables.css:80 */
+  --input-text-padding: 0 var(--input-text-padding-horizontal);
   /* src/components/css/variables.css:81 */
-  /* Input Font */
+  --input-container-padding: 6px 8px;
   /* src/components/css/variables.css:82 */
-  --input-font-size: var(--chat-widget-message-font-size);
-  /* src/components/css/variables.css:83 */
-  --input-font-weight: 400;
+  --input-container-padding-sleek: 4px 4px;
   /* src/components/css/variables.css:84 */
-  --input-font-weight-focus: 500;
+  /* Input Font */
   /* src/components/css/variables.css:85 */
+  --input-font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/variables.css:86 */
+  --input-font-weight: 400;
+  /* src/components/css/variables.css:87 */
+  --input-font-weight-focus: 500;
+  /* src/components/css/variables.css:88 */
   --input-font-weight-bold: 600;
   /* ================================================
      INPUT SCROLLBAR VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:91 */
+  /* src/components/css/variables.css:94 */
   /* Scrollbar Colors */
-  /* src/components/css/variables.css:92 */
+  /* src/components/css/variables.css:95 */
   --color-scrollbar-input-thumb: color-mix(
-/* src/components/css/variables.css:93 */
-    in srgb,
-/* src/components/css/variables.css:94 */
-    var(--chat-widget-primary-color) 75%,
-/* src/components/css/variables.css:95 */
-    transparent
 /* src/components/css/variables.css:96 */
-  );
-  /* src/components/css/variables.css:97 */
-  --color-scrollbar-input-thumb-hover: color-mix(
+    in srgb,
+/* src/components/css/variables.css:97 */
+    var(--chat-widget-primary-color) 75%,
 /* src/components/css/variables.css:98 */
-    in srgb,
+    transparent
 /* src/components/css/variables.css:99 */
-    var(--chat-widget-primary-color) 90%,
-/* src/components/css/variables.css:100 */
-    transparent
+  );
+  /* src/components/css/variables.css:100 */
+  --color-scrollbar-input-thumb-hover: color-mix(
 /* src/components/css/variables.css:101 */
-  );
-  /* src/components/css/variables.css:103 */
-  --color-scrollbar-input-thumb-avatar-view: color-mix(
+    in srgb,
+/* src/components/css/variables.css:102 */
+    var(--chat-widget-primary-color) 90%,
+/* src/components/css/variables.css:103 */
+    transparent
 /* src/components/css/variables.css:104 */
-    in srgb,
-/* src/components/css/variables.css:105 */
-    var(--chat-widget-secondary-color) 75%,
-/* src/components/css/variables.css:106 */
-    transparent
+  );
+  /* src/components/css/variables.css:106 */
+  --color-scrollbar-input-thumb-avatar-view: color-mix(
 /* src/components/css/variables.css:107 */
-  );
-  /* src/components/css/variables.css:108 */
-  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
-/* src/components/css/variables.css:109 */
     in srgb,
-/* src/components/css/variables.css:110 */
-    var(--chat-widget-secondary-color) 90%,
-/* src/components/css/variables.css:111 */
+/* src/components/css/variables.css:108 */
+    var(--chat-widget-secondary-color) 75%,
+/* src/components/css/variables.css:109 */
     transparent
-/* src/components/css/variables.css:112 */
+/* src/components/css/variables.css:110 */
   );
-  /* src/components/css/variables.css:114 */
-  --color-scrollbar-input-track: transparent;
-  /* src/components/css/variables.css:116 */
-  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:111 */
+  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
+/* src/components/css/variables.css:112 */
+    in srgb,
+/* src/components/css/variables.css:113 */
+    var(--chat-widget-secondary-color) 90%,
+/* src/components/css/variables.css:114 */
+    transparent
+/* src/components/css/variables.css:115 */
+  );
   /* src/components/css/variables.css:117 */
+  --color-scrollbar-input-track: transparent;
+  /* src/components/css/variables.css:119 */
+  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:120 */
   --input-scrollbar-border-radius: 2.5px;
-  /* src/components/css/variables.css:118 */
+  /* src/components/css/variables.css:121 */
   --input-scrollbar-thumb-hover-opacity: var(--opacity-hover);
   /* ================================================
      BUTTON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:124 */
-  /* Button Dimensions */
-  /* src/components/css/variables.css:125 */
-  --button-size-primary: 32px;
-  /* src/components/css/variables.css:126 */
-  --button-padding-primary: 4px;
   /* src/components/css/variables.css:127 */
-  --button-size-secondary: 24px;
+  /* Button Dimensions */
+  /* src/components/css/variables.css:128 */
+  --button-size-primary: 32px;
   /* src/components/css/variables.css:129 */
-  /* Button Colors */
+  --button-padding-primary: 4px;
   /* src/components/css/variables.css:130 */
+  --button-size-secondary: 24px;
+  /* src/components/css/variables.css:132 */
+  /* Button Colors */
+  /* src/components/css/variables.css:133 */
   --color-button-background-primary: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:131 */
-  --color-button-background-primary-avatar-view: var(
-/* src/components/css/variables.css:132 */
-    --chat-widget-secondary-color
-/* src/components/css/variables.css:133 */
-  );
   /* src/components/css/variables.css:134 */
   --color-button-background-hover: var(--chat-widget-primary-color-hover);
   /* src/components/css/variables.css:135 */
@@ -119994,279 +120271,282 @@ It has 3 components:
   /* src/components/css/variables.css:136 */
   --color-button-fill: var(--chat-widget-button-content-color);
   /* src/components/css/variables.css:138 */
-  /* Button Opacity States */
-  /* src/components/css/variables.css:139 */
-  --button-opacity-normal: var(--opacity-normal);
+  --color-button-disconnect: #ef4444;
   /* src/components/css/variables.css:140 */
-  --button-opacity-hover: var(--opacity-hover);
+  /* Button Opacity States */
   /* src/components/css/variables.css:141 */
+  --button-opacity-normal: var(--opacity-normal);
+  /* src/components/css/variables.css:142 */
+  --button-opacity-hover: var(--opacity-hover);
+  /* src/components/css/variables.css:143 */
   --button-opacity-disabled: var(--opacity-disabled);
   /* ================================================
      ICON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:147 */
-  /* Icon Sizes */
-  /* src/components/css/variables.css:148 */
-  --button-icon-size-secondary: 16px;
   /* src/components/css/variables.css:149 */
+  /* Icon Sizes */
+  /* src/components/css/variables.css:150 */
+  --button-icon-size-secondary: 16px;
+  /* src/components/css/variables.css:151 */
   --button-icon-size-primary: 20px;
+  /* src/components/css/variables.css:152 */
   /* w-5 h-5 equivalent */
   /* ================================================
      CHAT MESSAGE CONTAINER SCROLLBAR
      ================================================ */
-  /* src/components/css/variables.css:155 */
+  /* src/components/css/variables.css:158 */
   --message-scrollbar-width: thin;
-  /* src/components/css/variables.css:156 */
-  --message-scrollbar-width-px: 6px;
-  /* src/components/css/variables.css:157 */
-  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:159 */
-  /* Scrollbar Colors */
+  --message-scrollbar-width-px: 6px;
   /* src/components/css/variables.css:160 */
-  --color-scrollbar-message-thumb-default: rgb(209 213 219);
-  /* src/components/css/variables.css:161 */
-  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:162 */
+  /* Scrollbar Colors */
+  /* src/components/css/variables.css:163 */
+  --color-scrollbar-message-thumb-default: rgb(209 213 219);
+  /* src/components/css/variables.css:164 */
+  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  /* src/components/css/variables.css:165 */
   --color-scrollbar-message-thumb-theme: var(
-/* src/components/css/variables.css:163 */
+/* src/components/css/variables.css:166 */
     --chat-widget-button-content-color,
-/* src/components/css/variables.css:164 */
-    var(--chat-widget-secondary-color)
-/* src/components/css/variables.css:165 */
-  );
-  /* src/components/css/variables.css:166 */
-  --color-scrollbar-message-thumb-hover-mix: color-mix(
 /* src/components/css/variables.css:167 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:168 */
-    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
-/* src/components/css/variables.css:169 */
-      80%,
-/* src/components/css/variables.css:170 */
-    var(--chat-widget-primary-color)
-/* src/components/css/variables.css:171 */
   );
-  /* src/components/css/variables.css:172 */
+  /* src/components/css/variables.css:169 */
+  --color-scrollbar-message-thumb-hover-mix: color-mix(
+/* src/components/css/variables.css:170 */
+    in srgb,
+/* src/components/css/variables.css:171 */
+    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
+/* src/components/css/variables.css:172 */
+      80%,
+/* src/components/css/variables.css:173 */
+    var(--chat-widget-primary-color)
+/* src/components/css/variables.css:174 */
+  );
+  /* src/components/css/variables.css:175 */
   --color-scrollbar-message-track: transparent;
   /* ================================================
      CHAT MESSAGE
      ================================================ */
-  /* src/components/css/variables.css:178 */
+  /* src/components/css/variables.css:181 */
   --message-text-color: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:179 */
+  /* src/components/css/variables.css:182 */
   --message-font-size: var(--chat-widget-message-font-size);
   /* ================================================
      CHAT MESSAGE BUBBLES
      ================================================ */
-  /* src/components/css/variables.css:185 */
+  /* src/components/css/variables.css:188 */
   --message-bubble-background-color: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:186 */
+  /* src/components/css/variables.css:189 */
   --message-bubble-icon-color: var(--chat-widget-secondary-color);
   /* ================================================
      ENGAGEMENT HOOK IMAGE
      ================================================ */
-  /* src/components/css/variables.css:192 */
+  /* src/components/css/variables.css:195 */
   /* Engagement Hook Image Variables (defined elsewhere via JavaScript) */
-  /* src/components/css/variables.css:193 */
-  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
-  /* src/components/css/variables.css:194 */
-  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
   /* src/components/css/variables.css:196 */
-  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
   /* src/components/css/variables.css:197 */
+  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
+  /* src/components/css/variables.css:199 */
+  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* src/components/css/variables.css:200 */
   --engagement-hook-image-height: var(
-/* src/components/css/variables.css:198 */
+/* src/components/css/variables.css:201 */
     --chat-widget-engagement-hook-image-height
-/* src/components/css/variables.css:199 */
+/* src/components/css/variables.css:202 */
   );
   /* ================================================
      TRANSITION VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:205 */
-  --transition-fast: 0.2s ease;
-  /* src/components/css/variables.css:206 */
-  --transition-normal: all 0.3s ease;
-  /* src/components/css/variables.css:207 */
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   /* src/components/css/variables.css:208 */
+  --transition-fast: 0.2s ease;
+  /* src/components/css/variables.css:209 */
+  --transition-normal: all 0.3s ease;
+  /* src/components/css/variables.css:210 */
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* src/components/css/variables.css:211 */
   --transition-slow-ease: 0.4s ease;
   /* ================================================
      BORDER RADIUS VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:214 */
-  --border-radius-small: 2.5px;
-  /* src/components/css/variables.css:215 */
-  --border-radius-medium: 3px;
-  /* src/components/css/variables.css:216 */
-  --border-radius-large: 12px;
   /* src/components/css/variables.css:217 */
-  --border-radius-xl: 16px;
+  --border-radius-small: 2.5px;
   /* src/components/css/variables.css:218 */
-  --border-radius-2xl: 20px;
+  --border-radius-medium: 3px;
   /* src/components/css/variables.css:219 */
+  --border-radius-large: 12px;
+  /* src/components/css/variables.css:220 */
+  --border-radius-xl: 16px;
+  /* src/components/css/variables.css:221 */
+  --border-radius-2xl: 20px;
+  /* src/components/css/variables.css:222 */
   --border-radius-full: 9999px;
   /* ================================================
      SPACING & GAP VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:225 */
-  --spacing-gap-xs: 0.5px;
-  /* src/components/css/variables.css:226 */
-  --spacing-gap-sm: 4px;
-  /* src/components/css/variables.css:227 */
-  --spacing-gap-md: 8px;
   /* src/components/css/variables.css:228 */
-  --spacing-gap-lg: 12px;
+  --spacing-gap-xs: 0.5px;
   /* src/components/css/variables.css:229 */
+  --spacing-gap-sm: 4px;
+  /* src/components/css/variables.css:230 */
+  --spacing-gap-md: 8px;
+  /* src/components/css/variables.css:231 */
+  --spacing-gap-lg: 12px;
+  /* src/components/css/variables.css:232 */
   --spacing-gap-xl: 16px;
   /* ================================================
      Z-INDEX VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:235 */
-  --z-index-base: 1;
-  /* src/components/css/variables.css:236 */
-  --z-index-elevated: 10;
-  /* src/components/css/variables.css:237 */
-  --z-index-high: 20;
   /* src/components/css/variables.css:238 */
+  --z-index-base: 1;
+  /* src/components/css/variables.css:239 */
+  --z-index-elevated: 10;
+  /* src/components/css/variables.css:240 */
+  --z-index-high: 20;
+  /* src/components/css/variables.css:241 */
   --z-index-maximum: 9999;
   /* ================================================
      BORDER VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:244 */
+  /* src/components/css/variables.css:247 */
   --border-width-thin: 1px;
-  /* src/components/css/variables.css:245 */
+  /* src/components/css/variables.css:248 */
   --border-width-medium: 2px;
-  /* src/components/css/variables.css:246 */
+  /* src/components/css/variables.css:249 */
   --border-width-thick: 4px;
   /* ================================================
      BOX SHADOW VARIABLES (for consistency)
      ================================================ */
-  /* src/components/css/variables.css:252 */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  /* src/components/css/variables.css:253 */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:254 */
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   /* src/components/css/variables.css:255 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* src/components/css/variables.css:256 */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:257 */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:258 */
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
   /* ================================================
      SLEEK VIEW SPECIFIC VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:261 */
-  /* These are already defined in SleekView.css but should be here for consistency */
-  /* src/components/css/variables.css:262 */
-  --sleek-main-min-height: 0px;
-  /* src/components/css/variables.css:263 */
-  --sleek-border-radius: var(--border-radius-large);
   /* src/components/css/variables.css:264 */
-  --sleek-main-bg: var(--color-sleek-main-bg);
+  /* These are already defined in SleekView.css but should be here for consistency */
   /* src/components/css/variables.css:265 */
-  --sleek-main-border: var(--color-sleek-main-border);
+  --sleek-main-min-height: 0px;
   /* src/components/css/variables.css:266 */
-  --sleek-main-text-color: var(--color-sleek-main-text);
+  --sleek-border-radius: var(--border-radius-large);
+  /* src/components/css/variables.css:267 */
+  --sleek-main-bg: var(--color-sleek-main-bg);
   /* src/components/css/variables.css:268 */
-  /* Sleek View Colors */
+  --sleek-main-border: var(--color-sleek-main-border);
   /* src/components/css/variables.css:269 */
+  --sleek-main-text-color: var(--color-sleek-main-text);
+  /* src/components/css/variables.css:271 */
+  /* Sleek View Colors */
+  /* src/components/css/variables.css:272 */
   --color-sleek-main-bg: color-mix(
-/* src/components/css/variables.css:270 */
-    in srgb,
-/* src/components/css/variables.css:271 */
-    var(--chat-widget-primary-color) 10%,
-/* src/components/css/variables.css:272 */
-    white
 /* src/components/css/variables.css:273 */
+    in srgb,
+/* src/components/css/variables.css:274 */
+    var(--chat-widget-primary-color) 10%,
+/* src/components/css/variables.css:275 */
+    white
+/* src/components/css/variables.css:276 */
   );
-  /* src/components/css/variables.css:274 */
-  --color-sleek-main-border: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:275 */
-  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:277 */
-  /* Gradient Colors (derived from primary/secondary) */
+  --color-sleek-main-border: var(--chat-widget-secondary-color);
   /* src/components/css/variables.css:278 */
-  --color-gradient-1: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:279 */
-  --color-gradient-2: var(--chat-widget-secondary-color);
+  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:280 */
+  /* Gradient Colors (derived from primary/secondary) */
+  /* src/components/css/variables.css:281 */
+  --color-gradient-1: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:282 */
+  --color-gradient-2: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:283 */
   --color-gradient-3: color-mix(
-/* src/components/css/variables.css:281 */
-    in srgb,
-/* src/components/css/variables.css:282 */
-    var(--chat-widget-primary-color) 60%,
-/* src/components/css/variables.css:283 */
-    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:284 */
-  );
-  /* src/components/css/variables.css:285 */
-  --color-gradient-4: color-mix(
+    in srgb,
+/* src/components/css/variables.css:285 */
+    var(--chat-widget-primary-color) 60%,
 /* src/components/css/variables.css:286 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:287 */
-    var(--chat-widget-primary-color) 40%,
-/* src/components/css/variables.css:288 */
-    var(--chat-widget-secondary-color)
+  );
+  /* src/components/css/variables.css:288 */
+  --color-gradient-4: color-mix(
 /* src/components/css/variables.css:289 */
-  );
-  /* src/components/css/variables.css:290 */
-  --color-accent: color-mix(
+    in srgb,
+/* src/components/css/variables.css:290 */
+    var(--chat-widget-primary-color) 40%,
 /* src/components/css/variables.css:291 */
-    in srgb,
-/* src/components/css/variables.css:292 */
-    var(--chat-widget-primary-color) 70%,
-/* src/components/css/variables.css:293 */
     var(--chat-widget-secondary-color)
+/* src/components/css/variables.css:292 */
+  );
+  /* src/components/css/variables.css:293 */
+  --color-accent: color-mix(
 /* src/components/css/variables.css:294 */
-  );
-  /* src/components/css/variables.css:295 */
-  --color-glow: color-mix(
-/* src/components/css/variables.css:296 */
     in srgb,
+/* src/components/css/variables.css:295 */
+    var(--chat-widget-primary-color) 70%,
+/* src/components/css/variables.css:296 */
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:297 */
-    var(--chat-widget-primary-color) 30%,
-/* src/components/css/variables.css:298 */
-    transparent
-/* src/components/css/variables.css:299 */
   );
-  /* src/components/css/variables.css:301 */
-  /* Legacy Gradient Variables (for backward compatibility) */
-  /* src/components/css/variables.css:302 */
-  --gradient-1: var(--color-gradient-1);
-  /* src/components/css/variables.css:303 */
-  --gradient-2: var(--color-gradient-2);
+  /* src/components/css/variables.css:298 */
+  --color-glow: color-mix(
+/* src/components/css/variables.css:299 */
+    in srgb,
+/* src/components/css/variables.css:300 */
+    var(--chat-widget-primary-color) 30%,
+/* src/components/css/variables.css:301 */
+    transparent
+/* src/components/css/variables.css:302 */
+  );
   /* src/components/css/variables.css:304 */
-  --gradient-3: var(--color-gradient-3);
+  /* Legacy Gradient Variables (for backward compatibility) */
   /* src/components/css/variables.css:305 */
-  --gradient-4: var(--color-gradient-4);
+  --gradient-1: var(--color-gradient-1);
   /* src/components/css/variables.css:306 */
-  --accent: var(--color-accent);
+  --gradient-2: var(--color-gradient-2);
   /* src/components/css/variables.css:307 */
-  --glow: var(--color-glow);
+  --gradient-3: var(--color-gradient-3);
+  /* src/components/css/variables.css:308 */
+  --gradient-4: var(--color-gradient-4);
   /* src/components/css/variables.css:309 */
-  /* Legacy Color Aliases (for backward compatibility) */
+  --accent: var(--color-accent);
   /* src/components/css/variables.css:310 */
-  --whatsapp-color: var(--color-whatsapp);
-  /* src/components/css/variables.css:311 */
-  --gray-200: var(--color-gray-200);
+  --glow: var(--color-glow);
   /* src/components/css/variables.css:312 */
-  --gray-300: var(--color-gray-300);
+  /* Legacy Color Aliases (for backward compatibility) */
   /* src/components/css/variables.css:313 */
-  --gray-400: var(--color-gray-400);
+  --whatsapp-color: var(--color-whatsapp);
   /* src/components/css/variables.css:314 */
-  --gray-500: var(--color-gray-500);
+  --gray-200: var(--color-gray-200);
   /* src/components/css/variables.css:315 */
-  --gray-600: var(--color-gray-600);
+  --gray-300: var(--color-gray-300);
   /* src/components/css/variables.css:316 */
-  --gray-700: var(--color-gray-700);
+  --gray-400: var(--color-gray-400);
   /* src/components/css/variables.css:317 */
-  --gray-800: var(--color-gray-800);
+  --gray-500: var(--color-gray-500);
   /* src/components/css/variables.css:318 */
-  --blue-500: var(--color-blue-500);
+  --gray-600: var(--color-gray-600);
   /* src/components/css/variables.css:319 */
-  --blue-600: var(--color-blue-600);
+  --gray-700: var(--color-gray-700);
   /* src/components/css/variables.css:320 */
-  --slate-700: var(--color-slate-700);
+  --gray-800: var(--color-gray-800);
   /* src/components/css/variables.css:321 */
-  --slate-800: var(--color-slate-800);
+  --blue-500: var(--color-blue-500);
+  /* src/components/css/variables.css:322 */
+  --blue-600: var(--color-blue-600);
   /* src/components/css/variables.css:323 */
+  --slate-700: var(--color-slate-700);
+  /* src/components/css/variables.css:324 */
+  --slate-800: var(--color-slate-800);
+  /* src/components/css/variables.css:326 */
   /* Gray Scale Colors */
   /* --color-gray-200: rgb(229, 231, 235);
   --color-gray-300: rgb(209, 213, 219);
@@ -120275,104 +120555,107 @@ It has 3 components:
   --color-gray-600: rgb(75, 85, 99);
   --color-gray-700: rgb(51, 65, 85);
   --color-gray-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:332 */
+  /* src/components/css/variables.css:335 */
   /* Blue Colors */
   /* --color-blue-500: #3b82f6;
   --color-blue-600: #2563eb; */
-  /* src/components/css/variables.css:336 */
+  /* src/components/css/variables.css:339 */
   /* Slate Colors */
   /* --color-slate-700: rgb(51, 65, 85);
   --color-slate-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:340 */
+  /* src/components/css/variables.css:343 */
   /* Red Colors (for errors, disconnect, etc.) */
   /* --color-red-50: rgb(254, 242, 242);
   --color-red-100: rgb(254, 226, 226);
   --color-red-500: #ef4444;
   --color-red-600: #dc2626; */
-  /* src/components/css/variables.css:346 */
+  /* src/components/css/variables.css:349 */
   /* Green Colors (for success, active states) */
   /* --color-green-50: rgb(240, 253, 244);
   --color-green-100: rgb(220, 252, 231);
   --color-green-500: #10b981;
   --color-green-600: #059669; */
-  /* src/components/css/variables.css:351 */
+  /* src/components/css/variables.css:354 */
 }
 
-/* src/components/css/variables.css:353 */
+/* src/components/css/variables.css:356 */
 
 /* Fallback for browsers that don't support color-mix */
 
-/* src/components/css/variables.css:354 */
+/* src/components/css/variables.css:357 */
 
 @supports not (color: color-mix(in srgb, #000 50%, #fff)) {
-  /* src/components/css/variables.css:355 */
+  /* src/components/css/variables.css:358 */
 
   :root {
-    /* src/components/css/variables.css:356 */
+    /* src/components/css/variables.css:359 */
     /* Derived Theme Colors Fallback */
-    /* src/components/css/variables.css:357 */
-    /* Primary hover: darker version of default primary color #000aaa */
-    /* src/components/css/variables.css:358 */
-    --chat-widget-primary-color-hover: #000991;
-    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:360 */
-    /* Gradient Colors Fallback */
+    /* Primary hover: darker version of default primary color #000aaa */
     /* src/components/css/variables.css:361 */
-    --color-gradient-1: #000aaa;
-    /* Default primary color */
+    --chat-widget-primary-color-hover: #000991;
     /* src/components/css/variables.css:362 */
-    --color-gradient-2: #6c757d;
-    /* Default secondary color */
-    /* src/components/css/variables.css:363 */
-    --color-gradient-3: #6c757d;
+    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:364 */
-    --color-gradient-4: #6c757d;
+    /* Gradient Colors Fallback */
     /* src/components/css/variables.css:365 */
-    --color-accent: #6c757d;
+    --color-gradient-1: #000aaa;
     /* src/components/css/variables.css:366 */
-    --color-glow: rgba(0, 10, 170, 0.3);
+    /* Default primary color */
+    /* src/components/css/variables.css:367 */
+    --color-gradient-2: #6c757d;
     /* src/components/css/variables.css:368 */
-    /* Sleek View Colors Fallback */
+    /* Default secondary color */
     /* src/components/css/variables.css:369 */
-    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
+    --color-gradient-3: #6c757d;
     /* src/components/css/variables.css:370 */
-    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
+    --color-gradient-4: #6c757d;
+    /* src/components/css/variables.css:371 */
+    --color-accent: #6c757d;
     /* src/components/css/variables.css:372 */
-    /* Scrollbar Colors Fallback */
-    /* src/components/css/variables.css:373 */
-    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
+    --color-glow: rgba(0, 10, 170, 0.3);
     /* src/components/css/variables.css:374 */
-    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
+    /* Sleek View Colors Fallback */
+    /* src/components/css/variables.css:375 */
+    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
     /* src/components/css/variables.css:376 */
-    /* Legacy aliases */
-    /* src/components/css/variables.css:377 */
-    --gradient-1: var(--color-gradient-1);
+    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
     /* src/components/css/variables.css:378 */
-    --gradient-2: var(--color-gradient-2);
+    /* Scrollbar Colors Fallback */
     /* src/components/css/variables.css:379 */
-    --gradient-3: var(--color-gradient-3);
+    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
     /* src/components/css/variables.css:380 */
-    --gradient-4: var(--color-gradient-4);
-    /* src/components/css/variables.css:381 */
-    --accent: var(--color-accent);
+    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
     /* src/components/css/variables.css:382 */
-    --glow: var(--color-glow);
+    /* Legacy aliases */
     /* src/components/css/variables.css:383 */
-    --sleek-main-bg: var(--color-sleek-main-bg);
+    --gradient-1: var(--color-gradient-1);
     /* src/components/css/variables.css:384 */
-    --sleek-main-border: var(--color-sleek-main-border);
+    --gradient-2: var(--color-gradient-2);
     /* src/components/css/variables.css:385 */
-    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    --gradient-3: var(--color-gradient-3);
     /* src/components/css/variables.css:386 */
-    --input-scrollbar-thumb-hover-color: var(
-/* src/components/css/variables.css:387 */
-      --color-scrollbar-input-thumb-hover
-/* src/components/css/variables.css:388 */
-    );
+    --gradient-4: var(--color-gradient-4);
+    /* src/components/css/variables.css:387 */
+    --accent: var(--color-accent);
+    /* src/components/css/variables.css:388 */
+    --glow: var(--color-glow);
     /* src/components/css/variables.css:389 */
+    --sleek-main-bg: var(--color-sleek-main-bg);
+    /* src/components/css/variables.css:390 */
+    --sleek-main-border: var(--color-sleek-main-border);
+    /* src/components/css/variables.css:391 */
+    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    /* src/components/css/variables.css:392 */
+    --input-scrollbar-thumb-hover-color: var(
+/* src/components/css/variables.css:393 */
+      --color-scrollbar-input-thumb-hover
+/* src/components/css/variables.css:394 */
+    );
+    /* src/components/css/variables.css:395 */
   }
 
-  /* src/components/css/variables.css:390 */
+  /* src/components/css/variables.css:396 */
 }
 
 /* src/components/css/SleekView.css:3 */
@@ -123964,6 +124247,259 @@ svg.sleek-chat-input-whatsapp-icon:focus {
 
 /* End of file: components/css/SleekView.css */
 
+/* Start of file: components/css/TalkingHeadAvatar.css */
+
+/* src/components/css/TalkingHeadAvatar.css:1 */
+
+.talking-head-container {
+  /* src/components/css/TalkingHeadAvatar.css:2 */
+  width: 100%;
+  /* src/components/css/TalkingHeadAvatar.css:3 */
+  height: 100%;
+  /* src/components/css/TalkingHeadAvatar.css:4 */
+  min-height: 350px;
+  /* src/components/css/TalkingHeadAvatar.css:5 */
+  max-height: 450px;
+  /* src/components/css/TalkingHeadAvatar.css:6 */
+  position: relative;
+  /* src/components/css/TalkingHeadAvatar.css:7 */
+  display: block;
+  /* src/components/css/TalkingHeadAvatar.css:8 */
+  overflow: visible;
+  /* src/components/css/TalkingHeadAvatar.css:9 */
+  z-index: 2;
+  /* src/components/css/TalkingHeadAvatar.css:10 */
+  pointer-events: none;
+  /* src/components/css/TalkingHeadAvatar.css:11 */
+  flex-shrink: 0;
+  /* src/components/css/TalkingHeadAvatar.css:12 */
+  /* Ensure container is visible and can contain canvas */
+  /* src/components/css/TalkingHeadAvatar.css:13 */
+  visibility: visible;
+  /* src/components/css/TalkingHeadAvatar.css:14 */
+  opacity: 1;
+  /* src/components/css/TalkingHeadAvatar.css:15 */
+}
+
+/* src/components/css/TalkingHeadAvatar.css:17 */
+
+.talking-head-container > * {
+  /* src/components/css/TalkingHeadAvatar.css:18 */
+  width: 100% !important;
+  /* src/components/css/TalkingHeadAvatar.css:19 */
+  height: 100% !important;
+  /* src/components/css/TalkingHeadAvatar.css:20 */
+}
+
+/* src/components/css/TalkingHeadAvatar.css:22 */
+
+.talking-head-container canvas {
+  /* src/components/css/TalkingHeadAvatar.css:23 */
+  pointer-events: none;
+  /* src/components/css/TalkingHeadAvatar.css:24 */
+  width: 100% !important;
+  /* src/components/css/TalkingHeadAvatar.css:25 */
+  height: 100% !important;
+  /* src/components/css/TalkingHeadAvatar.css:26 */
+  max-width: 100%;
+  /* src/components/css/TalkingHeadAvatar.css:27 */
+  max-height: 100%;
+  /* src/components/css/TalkingHeadAvatar.css:28 */
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* src/components/css/TalkingHeadAvatar.css:29 */
+  display: block !important;
+  /* src/components/css/TalkingHeadAvatar.css:30 */
+  position: absolute !important;
+  /* src/components/css/TalkingHeadAvatar.css:31 */
+  top: 0 !important;
+  /* src/components/css/TalkingHeadAvatar.css:32 */
+  left: 0 !important;
+  /* src/components/css/TalkingHeadAvatar.css:33 */
+  z-index: 1 !important;
+  /* src/components/css/TalkingHeadAvatar.css:34 */
+  /* Ensure canvas is visible and renders */
+  /* src/components/css/TalkingHeadAvatar.css:35 */
+  visibility: visible !important;
+  /* src/components/css/TalkingHeadAvatar.css:36 */
+  opacity: 1 !important;
+  /* src/components/css/TalkingHeadAvatar.css:37 */
+  background: transparent !important;
+  /* src/components/css/TalkingHeadAvatar.css:38 */
+  /* Prevent any transforms or filters that might hide it */
+  /* src/components/css/TalkingHeadAvatar.css:39 */
+  transform: none !important;
+  /* src/components/css/TalkingHeadAvatar.css:40 */
+  filter: none !important;
+  /* src/components/css/TalkingHeadAvatar.css:41 */
+  /* Ensure canvas is above other content */
+  /* src/components/css/TalkingHeadAvatar.css:42 */
+  isolation: isolate;
+  /* src/components/css/TalkingHeadAvatar.css:43 */
+}
+
+/* src/components/css/TalkingHeadAvatar.css:45 */
+
+.talking-head-loading {
+  /* src/components/css/TalkingHeadAvatar.css:46 */
+  display: flex;
+  /* src/components/css/TalkingHeadAvatar.css:47 */
+  align-items: center;
+  /* src/components/css/TalkingHeadAvatar.css:48 */
+  justify-content: center;
+  /* src/components/css/TalkingHeadAvatar.css:49 */
+}
+
+/* src/components/css/TalkingHeadAvatar.css:51 */
+
+.talking-head-loading-spinner {
+  /* src/components/css/TalkingHeadAvatar.css:52 */
+  width: 40px;
+  /* src/components/css/TalkingHeadAvatar.css:53 */
+  height: 40px;
+  /* src/components/css/TalkingHeadAvatar.css:54 */
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  /* src/components/css/TalkingHeadAvatar.css:55 */
+  border-top-color: var(--chat-widget-primary-color, #6366f1);
+  /* src/components/css/TalkingHeadAvatar.css:56 */
+  border-radius: 50%;
+  /* src/components/css/TalkingHeadAvatar.css:57 */
+  animation: spin 1s linear infinite;
+  /* src/components/css/TalkingHeadAvatar.css:58 */
+  position: absolute;
+  /* src/components/css/TalkingHeadAvatar.css:59 */
+  z-index: 10;
+  /* src/components/css/TalkingHeadAvatar.css:60 */
+  pointer-events: none;
+  /* src/components/css/TalkingHeadAvatar.css:61 */
+}
+
+/* src/components/css/TalkingHeadAvatar.css:63 */
+
+.talking-head-container:not(.talking-head-loading)
+/* src/components/css/TalkingHeadAvatar.css:64 */
+  .talking-head-loading-spinner {
+  /* src/components/css/TalkingHeadAvatar.css:65 */
+  display: none;
+  /* src/components/css/TalkingHeadAvatar.css:66 */
+}
+
+/* src/components/css/TalkingHeadAvatar.css:68 */
+
+@keyframes spin {
+  /* src/components/css/TalkingHeadAvatar.css:69 */
+
+  to {
+    /* src/components/css/TalkingHeadAvatar.css:70 */
+    transform: rotate(360deg);
+    /* src/components/css/TalkingHeadAvatar.css:71 */
+  }
+
+  /* src/components/css/TalkingHeadAvatar.css:72 */
+}
+
+/* src/components/css/TalkingHeadAvatar.css:74 */
+
+.talking-head-speaking {
+  /* src/components/css/TalkingHeadAvatar.css:75 */
+  filter: brightness(1.05);
+  /* src/components/css/TalkingHeadAvatar.css:76 */
+}
+
+/* src/components/css/TalkingHeadAvatar.css:78 */
+
+.talking-head-listening {
+  /* src/components/css/TalkingHeadAvatar.css:79 */
+  filter: brightness(0.98);
+  /* src/components/css/TalkingHeadAvatar.css:80 */
+}
+
+/* src/components/css/TalkingHeadAvatar.css:82 */
+
+.talking-head-thinking {
+  /* src/components/css/TalkingHeadAvatar.css:83 */
+  filter: brightness(1);
+  /* src/components/css/TalkingHeadAvatar.css:84 */
+}
+
+/* src/components/css/TalkingHeadAvatar.css:86 */
+
+.talking-head-disconnected {
+  /* src/components/css/TalkingHeadAvatar.css:87 */
+  /* Ensure avatar is visible and can animate even when disconnected */
+  /* src/components/css/TalkingHeadAvatar.css:88 */
+  filter: brightness(0.95);
+  /* src/components/css/TalkingHeadAvatar.css:89 */
+  opacity: 1;
+  /* src/components/css/TalkingHeadAvatar.css:90 */
+  visibility: visible;
+  /* src/components/css/TalkingHeadAvatar.css:91 */
+}
+
+/* src/components/css/TalkingHeadAvatar.css:93 */
+
+.talking-head-connecting {
+  /* src/components/css/TalkingHeadAvatar.css:94 */
+  /* Connecting state - ensure avatar is visible */
+  /* src/components/css/TalkingHeadAvatar.css:95 */
+  filter: brightness(0.97);
+  /* src/components/css/TalkingHeadAvatar.css:96 */
+  opacity: 1;
+  /* src/components/css/TalkingHeadAvatar.css:97 */
+  visibility: visible;
+  /* src/components/css/TalkingHeadAvatar.css:98 */
+}
+
+/* src/components/css/TalkingHeadAvatar.css:100 */
+
+.talking-head-wrapper {
+  /* src/components/css/TalkingHeadAvatar.css:101 */
+  width: 100%;
+  /* src/components/css/TalkingHeadAvatar.css:102 */
+  height: 400px;
+  /* src/components/css/TalkingHeadAvatar.css:103 */
+  min-height: 350px;
+  /* src/components/css/TalkingHeadAvatar.css:104 */
+  max-height: 450px;
+  /* src/components/css/TalkingHeadAvatar.css:105 */
+  display: flex;
+  /* src/components/css/TalkingHeadAvatar.css:106 */
+  align-items: center;
+  /* src/components/css/TalkingHeadAvatar.css:107 */
+  justify-content: center;
+  /* src/components/css/TalkingHeadAvatar.css:108 */
+  flex-shrink: 0;
+  /* src/components/css/TalkingHeadAvatar.css:109 */
+  position: relative;
+  /* src/components/css/TalkingHeadAvatar.css:110 */
+}
+
+/* src/components/css/TalkingHeadAvatar.css:112 */
+
+/* Responsive design */
+
+/* src/components/css/TalkingHeadAvatar.css:113 */
+
+@media (max-width: 768px) {
+  /* src/components/css/TalkingHeadAvatar.css:114 */
+
+  .talking-head-container,
+/* src/components/css/TalkingHeadAvatar.css:115 */
+  .talking-head-wrapper {
+    /* src/components/css/TalkingHeadAvatar.css:116 */
+    height: 300px;
+    /* src/components/css/TalkingHeadAvatar.css:117 */
+    min-height: 250px;
+    /* src/components/css/TalkingHeadAvatar.css:118 */
+    max-height: 350px;
+    /* src/components/css/TalkingHeadAvatar.css:119 */
+  }
+
+  /* src/components/css/TalkingHeadAvatar.css:120 */
+}
+
+/* End of file: components/css/TalkingHeadAvatar.css */
+
 /* Start of file: components/css/TextChatInput.css */
 
 /* src/components/css/TextChatInput.css:1 */
@@ -124011,173 +124547,169 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* Voice State Colors */
   /* src/components/css/variables.css:29 */
   --color-voice-listening: #3b82f6;
-  /* Blue */
   /* src/components/css/variables.css:30 */
-  --color-voice-speaking: #10b981;
-  /* Green */
+  /* Blue */
   /* src/components/css/variables.css:31 */
-  --color-voice-thinking: #f59e0b;
-  /* Amber/Orange */
+  --color-voice-speaking: #10b981;
   /* src/components/css/variables.css:32 */
-  --color-voice-disconnected: #ef4444cb;
-  /* Red */
+  /* Green */
+  /* src/components/css/variables.css:33 */
+  --color-voice-thinking: #f59e0b;
   /* src/components/css/variables.css:34 */
-  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
+  /* Amber/Orange */
   /* src/components/css/variables.css:35 */
-  /* --color-voice-speaking-alt: #058158; Darker Green */
+  --color-voice-disconnected: #ef4444cb;
   /* src/components/css/variables.css:36 */
-  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
-  /* src/components/css/variables.css:37 */
-  /* --color-voice-thinking-alt: #fbbf24; Yellow */
+  /* Red */
+  /* src/components/css/variables.css:38 */
+  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
   /* src/components/css/variables.css:39 */
-  /* Special/Brand Colors */
+  /* --color-voice-speaking-alt: #058158; Darker Green */
   /* src/components/css/variables.css:40 */
-  --color-whatsapp: #1eb655;
-  /* src/components/css/variables.css:42 */
-  /* Opacity Values */
+  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
+  /* src/components/css/variables.css:41 */
+  /* --color-voice-thinking-alt: #fbbf24; Yellow */
   /* src/components/css/variables.css:43 */
-  --opacity-disabled: 0.7;
+  /* Special/Brand Colors */
   /* src/components/css/variables.css:44 */
+  --color-whatsapp: #1eb655;
+  /* src/components/css/variables.css:46 */
+  /* Opacity Values */
+  /* src/components/css/variables.css:47 */
+  --opacity-disabled: 0.7;
+  /* src/components/css/variables.css:48 */
   --opacity-hover: 0.8;
-  /* src/components/css/variables.css:45 */
+  /* src/components/css/variables.css:49 */
   --opacity-normal: 1;
   /* ================================================
      INPUT AREA VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:51 */
-  /* Input Colors */
-  /* src/components/css/variables.css:53 */
-  --color-input-background: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:54 */
-  --color-input-background-avatar-view: var(--chat-widget-primary-color);
   /* src/components/css/variables.css:55 */
+  /* Input Colors */
+  /* src/components/css/variables.css:57 */
+  --color-input-background: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:58 */
   --color-input-text: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:56 */
+  /* src/components/css/variables.css:59 */
   --color-input-placeholder-text: color-mix(
-/* src/components/css/variables.css:57 */
-    in srgb,
-/* src/components/css/variables.css:58 */
-    var(--color-input-text) 70%,
-/* src/components/css/variables.css:59 */
-    white
 /* src/components/css/variables.css:60 */
+    in srgb,
+/* src/components/css/variables.css:61 */
+    var(--color-input-text) 70%,
+/* src/components/css/variables.css:62 */
+    white
+/* src/components/css/variables.css:63 */
   );
-  /* src/components/css/variables.css:61 */
-  --color-input-placeholder-opacity: 70%;
-  /* src/components/css/variables.css:62 */
-  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:64 */
-  /* Input Dimensions */
+  --color-input-placeholder-opacity: 70%;
   /* src/components/css/variables.css:65 */
-  --input-default-height: 40px;
-  /* src/components/css/variables.css:66 */
-  --input-min-height: 40px;
+  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:67 */
-  --input-max-height: 120px;
+  /* Input Dimensions */
   /* src/components/css/variables.css:68 */
-  --input-max-height-tablet: 100px;
+  --input-default-height: 40px;
   /* src/components/css/variables.css:69 */
-  --input-max-height-mobile: 80px;
+  --input-min-height: 40px;
+  /* src/components/css/variables.css:70 */
+  --input-max-height: 120px;
   /* src/components/css/variables.css:71 */
-  /* Input Line Height */
+  --input-max-height-tablet: 100px;
   /* src/components/css/variables.css:72 */
-  --input-line-height: 20px;
+  --input-max-height-mobile: 80px;
   /* src/components/css/variables.css:74 */
-  /* Input Padding */
+  /* Input Line Height */
   /* src/components/css/variables.css:75 */
-  --input-text-padding-horizontal: 4px;
-  /* src/components/css/variables.css:76 */
-  --input-text-padding-vertical: 0px;
+  --input-line-height: 20px;
   /* src/components/css/variables.css:77 */
-  --input-text-padding: 0 var(--input-text-padding-horizontal);
+  /* Input Padding */
   /* src/components/css/variables.css:78 */
-  --input-container-padding: 6px 8px;
+  --input-text-padding-horizontal: 4px;
   /* src/components/css/variables.css:79 */
-  --input-container-padding-sleek: 4px 4px;
+  --input-text-padding-vertical: 0px;
+  /* src/components/css/variables.css:80 */
+  --input-text-padding: 0 var(--input-text-padding-horizontal);
   /* src/components/css/variables.css:81 */
-  /* Input Font */
+  --input-container-padding: 6px 8px;
   /* src/components/css/variables.css:82 */
-  --input-font-size: var(--chat-widget-message-font-size);
-  /* src/components/css/variables.css:83 */
-  --input-font-weight: 400;
+  --input-container-padding-sleek: 4px 4px;
   /* src/components/css/variables.css:84 */
-  --input-font-weight-focus: 500;
+  /* Input Font */
   /* src/components/css/variables.css:85 */
+  --input-font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/variables.css:86 */
+  --input-font-weight: 400;
+  /* src/components/css/variables.css:87 */
+  --input-font-weight-focus: 500;
+  /* src/components/css/variables.css:88 */
   --input-font-weight-bold: 600;
   /* ================================================
      INPUT SCROLLBAR VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:91 */
+  /* src/components/css/variables.css:94 */
   /* Scrollbar Colors */
-  /* src/components/css/variables.css:92 */
+  /* src/components/css/variables.css:95 */
   --color-scrollbar-input-thumb: color-mix(
-/* src/components/css/variables.css:93 */
-    in srgb,
-/* src/components/css/variables.css:94 */
-    var(--chat-widget-primary-color) 75%,
-/* src/components/css/variables.css:95 */
-    transparent
 /* src/components/css/variables.css:96 */
-  );
-  /* src/components/css/variables.css:97 */
-  --color-scrollbar-input-thumb-hover: color-mix(
+    in srgb,
+/* src/components/css/variables.css:97 */
+    var(--chat-widget-primary-color) 75%,
 /* src/components/css/variables.css:98 */
-    in srgb,
+    transparent
 /* src/components/css/variables.css:99 */
-    var(--chat-widget-primary-color) 90%,
-/* src/components/css/variables.css:100 */
-    transparent
+  );
+  /* src/components/css/variables.css:100 */
+  --color-scrollbar-input-thumb-hover: color-mix(
 /* src/components/css/variables.css:101 */
-  );
-  /* src/components/css/variables.css:103 */
-  --color-scrollbar-input-thumb-avatar-view: color-mix(
+    in srgb,
+/* src/components/css/variables.css:102 */
+    var(--chat-widget-primary-color) 90%,
+/* src/components/css/variables.css:103 */
+    transparent
 /* src/components/css/variables.css:104 */
-    in srgb,
-/* src/components/css/variables.css:105 */
-    var(--chat-widget-secondary-color) 75%,
-/* src/components/css/variables.css:106 */
-    transparent
+  );
+  /* src/components/css/variables.css:106 */
+  --color-scrollbar-input-thumb-avatar-view: color-mix(
 /* src/components/css/variables.css:107 */
-  );
-  /* src/components/css/variables.css:108 */
-  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
-/* src/components/css/variables.css:109 */
     in srgb,
-/* src/components/css/variables.css:110 */
-    var(--chat-widget-secondary-color) 90%,
-/* src/components/css/variables.css:111 */
+/* src/components/css/variables.css:108 */
+    var(--chat-widget-secondary-color) 75%,
+/* src/components/css/variables.css:109 */
     transparent
-/* src/components/css/variables.css:112 */
+/* src/components/css/variables.css:110 */
   );
-  /* src/components/css/variables.css:114 */
-  --color-scrollbar-input-track: transparent;
-  /* src/components/css/variables.css:116 */
-  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:111 */
+  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
+/* src/components/css/variables.css:112 */
+    in srgb,
+/* src/components/css/variables.css:113 */
+    var(--chat-widget-secondary-color) 90%,
+/* src/components/css/variables.css:114 */
+    transparent
+/* src/components/css/variables.css:115 */
+  );
   /* src/components/css/variables.css:117 */
+  --color-scrollbar-input-track: transparent;
+  /* src/components/css/variables.css:119 */
+  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:120 */
   --input-scrollbar-border-radius: 2.5px;
-  /* src/components/css/variables.css:118 */
+  /* src/components/css/variables.css:121 */
   --input-scrollbar-thumb-hover-opacity: var(--opacity-hover);
   /* ================================================
      BUTTON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:124 */
-  /* Button Dimensions */
-  /* src/components/css/variables.css:125 */
-  --button-size-primary: 32px;
-  /* src/components/css/variables.css:126 */
-  --button-padding-primary: 4px;
   /* src/components/css/variables.css:127 */
-  --button-size-secondary: 24px;
+  /* Button Dimensions */
+  /* src/components/css/variables.css:128 */
+  --button-size-primary: 32px;
   /* src/components/css/variables.css:129 */
-  /* Button Colors */
+  --button-padding-primary: 4px;
   /* src/components/css/variables.css:130 */
+  --button-size-secondary: 24px;
+  /* src/components/css/variables.css:132 */
+  /* Button Colors */
+  /* src/components/css/variables.css:133 */
   --color-button-background-primary: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:131 */
-  --color-button-background-primary-avatar-view: var(
-/* src/components/css/variables.css:132 */
-    --chat-widget-secondary-color
-/* src/components/css/variables.css:133 */
-  );
   /* src/components/css/variables.css:134 */
   --color-button-background-hover: var(--chat-widget-primary-color-hover);
   /* src/components/css/variables.css:135 */
@@ -124185,279 +124717,282 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* src/components/css/variables.css:136 */
   --color-button-fill: var(--chat-widget-button-content-color);
   /* src/components/css/variables.css:138 */
-  /* Button Opacity States */
-  /* src/components/css/variables.css:139 */
-  --button-opacity-normal: var(--opacity-normal);
+  --color-button-disconnect: #ef4444;
   /* src/components/css/variables.css:140 */
-  --button-opacity-hover: var(--opacity-hover);
+  /* Button Opacity States */
   /* src/components/css/variables.css:141 */
+  --button-opacity-normal: var(--opacity-normal);
+  /* src/components/css/variables.css:142 */
+  --button-opacity-hover: var(--opacity-hover);
+  /* src/components/css/variables.css:143 */
   --button-opacity-disabled: var(--opacity-disabled);
   /* ================================================
      ICON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:147 */
-  /* Icon Sizes */
-  /* src/components/css/variables.css:148 */
-  --button-icon-size-secondary: 16px;
   /* src/components/css/variables.css:149 */
+  /* Icon Sizes */
+  /* src/components/css/variables.css:150 */
+  --button-icon-size-secondary: 16px;
+  /* src/components/css/variables.css:151 */
   --button-icon-size-primary: 20px;
+  /* src/components/css/variables.css:152 */
   /* w-5 h-5 equivalent */
   /* ================================================
      CHAT MESSAGE CONTAINER SCROLLBAR
      ================================================ */
-  /* src/components/css/variables.css:155 */
+  /* src/components/css/variables.css:158 */
   --message-scrollbar-width: thin;
-  /* src/components/css/variables.css:156 */
-  --message-scrollbar-width-px: 6px;
-  /* src/components/css/variables.css:157 */
-  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:159 */
-  /* Scrollbar Colors */
+  --message-scrollbar-width-px: 6px;
   /* src/components/css/variables.css:160 */
-  --color-scrollbar-message-thumb-default: rgb(209 213 219);
-  /* src/components/css/variables.css:161 */
-  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:162 */
+  /* Scrollbar Colors */
+  /* src/components/css/variables.css:163 */
+  --color-scrollbar-message-thumb-default: rgb(209 213 219);
+  /* src/components/css/variables.css:164 */
+  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  /* src/components/css/variables.css:165 */
   --color-scrollbar-message-thumb-theme: var(
-/* src/components/css/variables.css:163 */
+/* src/components/css/variables.css:166 */
     --chat-widget-button-content-color,
-/* src/components/css/variables.css:164 */
-    var(--chat-widget-secondary-color)
-/* src/components/css/variables.css:165 */
-  );
-  /* src/components/css/variables.css:166 */
-  --color-scrollbar-message-thumb-hover-mix: color-mix(
 /* src/components/css/variables.css:167 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:168 */
-    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
-/* src/components/css/variables.css:169 */
-      80%,
-/* src/components/css/variables.css:170 */
-    var(--chat-widget-primary-color)
-/* src/components/css/variables.css:171 */
   );
-  /* src/components/css/variables.css:172 */
+  /* src/components/css/variables.css:169 */
+  --color-scrollbar-message-thumb-hover-mix: color-mix(
+/* src/components/css/variables.css:170 */
+    in srgb,
+/* src/components/css/variables.css:171 */
+    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
+/* src/components/css/variables.css:172 */
+      80%,
+/* src/components/css/variables.css:173 */
+    var(--chat-widget-primary-color)
+/* src/components/css/variables.css:174 */
+  );
+  /* src/components/css/variables.css:175 */
   --color-scrollbar-message-track: transparent;
   /* ================================================
      CHAT MESSAGE
      ================================================ */
-  /* src/components/css/variables.css:178 */
+  /* src/components/css/variables.css:181 */
   --message-text-color: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:179 */
+  /* src/components/css/variables.css:182 */
   --message-font-size: var(--chat-widget-message-font-size);
   /* ================================================
      CHAT MESSAGE BUBBLES
      ================================================ */
-  /* src/components/css/variables.css:185 */
+  /* src/components/css/variables.css:188 */
   --message-bubble-background-color: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:186 */
+  /* src/components/css/variables.css:189 */
   --message-bubble-icon-color: var(--chat-widget-secondary-color);
   /* ================================================
      ENGAGEMENT HOOK IMAGE
      ================================================ */
-  /* src/components/css/variables.css:192 */
+  /* src/components/css/variables.css:195 */
   /* Engagement Hook Image Variables (defined elsewhere via JavaScript) */
-  /* src/components/css/variables.css:193 */
-  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
-  /* src/components/css/variables.css:194 */
-  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
   /* src/components/css/variables.css:196 */
-  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
   /* src/components/css/variables.css:197 */
+  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
+  /* src/components/css/variables.css:199 */
+  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* src/components/css/variables.css:200 */
   --engagement-hook-image-height: var(
-/* src/components/css/variables.css:198 */
+/* src/components/css/variables.css:201 */
     --chat-widget-engagement-hook-image-height
-/* src/components/css/variables.css:199 */
+/* src/components/css/variables.css:202 */
   );
   /* ================================================
      TRANSITION VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:205 */
-  --transition-fast: 0.2s ease;
-  /* src/components/css/variables.css:206 */
-  --transition-normal: all 0.3s ease;
-  /* src/components/css/variables.css:207 */
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   /* src/components/css/variables.css:208 */
+  --transition-fast: 0.2s ease;
+  /* src/components/css/variables.css:209 */
+  --transition-normal: all 0.3s ease;
+  /* src/components/css/variables.css:210 */
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* src/components/css/variables.css:211 */
   --transition-slow-ease: 0.4s ease;
   /* ================================================
      BORDER RADIUS VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:214 */
-  --border-radius-small: 2.5px;
-  /* src/components/css/variables.css:215 */
-  --border-radius-medium: 3px;
-  /* src/components/css/variables.css:216 */
-  --border-radius-large: 12px;
   /* src/components/css/variables.css:217 */
-  --border-radius-xl: 16px;
+  --border-radius-small: 2.5px;
   /* src/components/css/variables.css:218 */
-  --border-radius-2xl: 20px;
+  --border-radius-medium: 3px;
   /* src/components/css/variables.css:219 */
+  --border-radius-large: 12px;
+  /* src/components/css/variables.css:220 */
+  --border-radius-xl: 16px;
+  /* src/components/css/variables.css:221 */
+  --border-radius-2xl: 20px;
+  /* src/components/css/variables.css:222 */
   --border-radius-full: 9999px;
   /* ================================================
      SPACING & GAP VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:225 */
-  --spacing-gap-xs: 0.5px;
-  /* src/components/css/variables.css:226 */
-  --spacing-gap-sm: 4px;
-  /* src/components/css/variables.css:227 */
-  --spacing-gap-md: 8px;
   /* src/components/css/variables.css:228 */
-  --spacing-gap-lg: 12px;
+  --spacing-gap-xs: 0.5px;
   /* src/components/css/variables.css:229 */
+  --spacing-gap-sm: 4px;
+  /* src/components/css/variables.css:230 */
+  --spacing-gap-md: 8px;
+  /* src/components/css/variables.css:231 */
+  --spacing-gap-lg: 12px;
+  /* src/components/css/variables.css:232 */
   --spacing-gap-xl: 16px;
   /* ================================================
      Z-INDEX VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:235 */
-  --z-index-base: 1;
-  /* src/components/css/variables.css:236 */
-  --z-index-elevated: 10;
-  /* src/components/css/variables.css:237 */
-  --z-index-high: 20;
   /* src/components/css/variables.css:238 */
+  --z-index-base: 1;
+  /* src/components/css/variables.css:239 */
+  --z-index-elevated: 10;
+  /* src/components/css/variables.css:240 */
+  --z-index-high: 20;
+  /* src/components/css/variables.css:241 */
   --z-index-maximum: 9999;
   /* ================================================
      BORDER VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:244 */
+  /* src/components/css/variables.css:247 */
   --border-width-thin: 1px;
-  /* src/components/css/variables.css:245 */
+  /* src/components/css/variables.css:248 */
   --border-width-medium: 2px;
-  /* src/components/css/variables.css:246 */
+  /* src/components/css/variables.css:249 */
   --border-width-thick: 4px;
   /* ================================================
      BOX SHADOW VARIABLES (for consistency)
      ================================================ */
-  /* src/components/css/variables.css:252 */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  /* src/components/css/variables.css:253 */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:254 */
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   /* src/components/css/variables.css:255 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* src/components/css/variables.css:256 */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:257 */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:258 */
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
   /* ================================================
      SLEEK VIEW SPECIFIC VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:261 */
-  /* These are already defined in SleekView.css but should be here for consistency */
-  /* src/components/css/variables.css:262 */
-  --sleek-main-min-height: 0px;
-  /* src/components/css/variables.css:263 */
-  --sleek-border-radius: var(--border-radius-large);
   /* src/components/css/variables.css:264 */
-  --sleek-main-bg: var(--color-sleek-main-bg);
+  /* These are already defined in SleekView.css but should be here for consistency */
   /* src/components/css/variables.css:265 */
-  --sleek-main-border: var(--color-sleek-main-border);
+  --sleek-main-min-height: 0px;
   /* src/components/css/variables.css:266 */
-  --sleek-main-text-color: var(--color-sleek-main-text);
+  --sleek-border-radius: var(--border-radius-large);
+  /* src/components/css/variables.css:267 */
+  --sleek-main-bg: var(--color-sleek-main-bg);
   /* src/components/css/variables.css:268 */
-  /* Sleek View Colors */
+  --sleek-main-border: var(--color-sleek-main-border);
   /* src/components/css/variables.css:269 */
+  --sleek-main-text-color: var(--color-sleek-main-text);
+  /* src/components/css/variables.css:271 */
+  /* Sleek View Colors */
+  /* src/components/css/variables.css:272 */
   --color-sleek-main-bg: color-mix(
-/* src/components/css/variables.css:270 */
-    in srgb,
-/* src/components/css/variables.css:271 */
-    var(--chat-widget-primary-color) 10%,
-/* src/components/css/variables.css:272 */
-    white
 /* src/components/css/variables.css:273 */
+    in srgb,
+/* src/components/css/variables.css:274 */
+    var(--chat-widget-primary-color) 10%,
+/* src/components/css/variables.css:275 */
+    white
+/* src/components/css/variables.css:276 */
   );
-  /* src/components/css/variables.css:274 */
-  --color-sleek-main-border: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:275 */
-  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:277 */
-  /* Gradient Colors (derived from primary/secondary) */
+  --color-sleek-main-border: var(--chat-widget-secondary-color);
   /* src/components/css/variables.css:278 */
-  --color-gradient-1: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:279 */
-  --color-gradient-2: var(--chat-widget-secondary-color);
+  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:280 */
+  /* Gradient Colors (derived from primary/secondary) */
+  /* src/components/css/variables.css:281 */
+  --color-gradient-1: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:282 */
+  --color-gradient-2: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:283 */
   --color-gradient-3: color-mix(
-/* src/components/css/variables.css:281 */
-    in srgb,
-/* src/components/css/variables.css:282 */
-    var(--chat-widget-primary-color) 60%,
-/* src/components/css/variables.css:283 */
-    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:284 */
-  );
-  /* src/components/css/variables.css:285 */
-  --color-gradient-4: color-mix(
+    in srgb,
+/* src/components/css/variables.css:285 */
+    var(--chat-widget-primary-color) 60%,
 /* src/components/css/variables.css:286 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:287 */
-    var(--chat-widget-primary-color) 40%,
-/* src/components/css/variables.css:288 */
-    var(--chat-widget-secondary-color)
+  );
+  /* src/components/css/variables.css:288 */
+  --color-gradient-4: color-mix(
 /* src/components/css/variables.css:289 */
-  );
-  /* src/components/css/variables.css:290 */
-  --color-accent: color-mix(
+    in srgb,
+/* src/components/css/variables.css:290 */
+    var(--chat-widget-primary-color) 40%,
 /* src/components/css/variables.css:291 */
-    in srgb,
-/* src/components/css/variables.css:292 */
-    var(--chat-widget-primary-color) 70%,
-/* src/components/css/variables.css:293 */
     var(--chat-widget-secondary-color)
+/* src/components/css/variables.css:292 */
+  );
+  /* src/components/css/variables.css:293 */
+  --color-accent: color-mix(
 /* src/components/css/variables.css:294 */
-  );
-  /* src/components/css/variables.css:295 */
-  --color-glow: color-mix(
-/* src/components/css/variables.css:296 */
     in srgb,
+/* src/components/css/variables.css:295 */
+    var(--chat-widget-primary-color) 70%,
+/* src/components/css/variables.css:296 */
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:297 */
-    var(--chat-widget-primary-color) 30%,
-/* src/components/css/variables.css:298 */
-    transparent
-/* src/components/css/variables.css:299 */
   );
-  /* src/components/css/variables.css:301 */
-  /* Legacy Gradient Variables (for backward compatibility) */
-  /* src/components/css/variables.css:302 */
-  --gradient-1: var(--color-gradient-1);
-  /* src/components/css/variables.css:303 */
-  --gradient-2: var(--color-gradient-2);
+  /* src/components/css/variables.css:298 */
+  --color-glow: color-mix(
+/* src/components/css/variables.css:299 */
+    in srgb,
+/* src/components/css/variables.css:300 */
+    var(--chat-widget-primary-color) 30%,
+/* src/components/css/variables.css:301 */
+    transparent
+/* src/components/css/variables.css:302 */
+  );
   /* src/components/css/variables.css:304 */
-  --gradient-3: var(--color-gradient-3);
+  /* Legacy Gradient Variables (for backward compatibility) */
   /* src/components/css/variables.css:305 */
-  --gradient-4: var(--color-gradient-4);
+  --gradient-1: var(--color-gradient-1);
   /* src/components/css/variables.css:306 */
-  --accent: var(--color-accent);
+  --gradient-2: var(--color-gradient-2);
   /* src/components/css/variables.css:307 */
-  --glow: var(--color-glow);
+  --gradient-3: var(--color-gradient-3);
+  /* src/components/css/variables.css:308 */
+  --gradient-4: var(--color-gradient-4);
   /* src/components/css/variables.css:309 */
-  /* Legacy Color Aliases (for backward compatibility) */
+  --accent: var(--color-accent);
   /* src/components/css/variables.css:310 */
-  --whatsapp-color: var(--color-whatsapp);
-  /* src/components/css/variables.css:311 */
-  --gray-200: var(--color-gray-200);
+  --glow: var(--color-glow);
   /* src/components/css/variables.css:312 */
-  --gray-300: var(--color-gray-300);
+  /* Legacy Color Aliases (for backward compatibility) */
   /* src/components/css/variables.css:313 */
-  --gray-400: var(--color-gray-400);
+  --whatsapp-color: var(--color-whatsapp);
   /* src/components/css/variables.css:314 */
-  --gray-500: var(--color-gray-500);
+  --gray-200: var(--color-gray-200);
   /* src/components/css/variables.css:315 */
-  --gray-600: var(--color-gray-600);
+  --gray-300: var(--color-gray-300);
   /* src/components/css/variables.css:316 */
-  --gray-700: var(--color-gray-700);
+  --gray-400: var(--color-gray-400);
   /* src/components/css/variables.css:317 */
-  --gray-800: var(--color-gray-800);
+  --gray-500: var(--color-gray-500);
   /* src/components/css/variables.css:318 */
-  --blue-500: var(--color-blue-500);
+  --gray-600: var(--color-gray-600);
   /* src/components/css/variables.css:319 */
-  --blue-600: var(--color-blue-600);
+  --gray-700: var(--color-gray-700);
   /* src/components/css/variables.css:320 */
-  --slate-700: var(--color-slate-700);
+  --gray-800: var(--color-gray-800);
   /* src/components/css/variables.css:321 */
-  --slate-800: var(--color-slate-800);
+  --blue-500: var(--color-blue-500);
+  /* src/components/css/variables.css:322 */
+  --blue-600: var(--color-blue-600);
   /* src/components/css/variables.css:323 */
+  --slate-700: var(--color-slate-700);
+  /* src/components/css/variables.css:324 */
+  --slate-800: var(--color-slate-800);
+  /* src/components/css/variables.css:326 */
   /* Gray Scale Colors */
   /* --color-gray-200: rgb(229, 231, 235);
   --color-gray-300: rgb(209, 213, 219);
@@ -124466,104 +125001,107 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   --color-gray-600: rgb(75, 85, 99);
   --color-gray-700: rgb(51, 65, 85);
   --color-gray-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:332 */
+  /* src/components/css/variables.css:335 */
   /* Blue Colors */
   /* --color-blue-500: #3b82f6;
   --color-blue-600: #2563eb; */
-  /* src/components/css/variables.css:336 */
+  /* src/components/css/variables.css:339 */
   /* Slate Colors */
   /* --color-slate-700: rgb(51, 65, 85);
   --color-slate-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:340 */
+  /* src/components/css/variables.css:343 */
   /* Red Colors (for errors, disconnect, etc.) */
   /* --color-red-50: rgb(254, 242, 242);
   --color-red-100: rgb(254, 226, 226);
   --color-red-500: #ef4444;
   --color-red-600: #dc2626; */
-  /* src/components/css/variables.css:346 */
+  /* src/components/css/variables.css:349 */
   /* Green Colors (for success, active states) */
   /* --color-green-50: rgb(240, 253, 244);
   --color-green-100: rgb(220, 252, 231);
   --color-green-500: #10b981;
   --color-green-600: #059669; */
-  /* src/components/css/variables.css:351 */
+  /* src/components/css/variables.css:354 */
 }
 
-/* src/components/css/variables.css:353 */
+/* src/components/css/variables.css:356 */
 
 /* Fallback for browsers that don't support color-mix */
 
-/* src/components/css/variables.css:354 */
+/* src/components/css/variables.css:357 */
 
 @supports not (color: color-mix(in srgb, #000 50%, #fff)) {
-  /* src/components/css/variables.css:355 */
+  /* src/components/css/variables.css:358 */
 
   :root {
-    /* src/components/css/variables.css:356 */
+    /* src/components/css/variables.css:359 */
     /* Derived Theme Colors Fallback */
-    /* src/components/css/variables.css:357 */
-    /* Primary hover: darker version of default primary color #000aaa */
-    /* src/components/css/variables.css:358 */
-    --chat-widget-primary-color-hover: #000991;
-    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:360 */
-    /* Gradient Colors Fallback */
+    /* Primary hover: darker version of default primary color #000aaa */
     /* src/components/css/variables.css:361 */
-    --color-gradient-1: #000aaa;
-    /* Default primary color */
+    --chat-widget-primary-color-hover: #000991;
     /* src/components/css/variables.css:362 */
-    --color-gradient-2: #6c757d;
-    /* Default secondary color */
-    /* src/components/css/variables.css:363 */
-    --color-gradient-3: #6c757d;
+    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:364 */
-    --color-gradient-4: #6c757d;
+    /* Gradient Colors Fallback */
     /* src/components/css/variables.css:365 */
-    --color-accent: #6c757d;
+    --color-gradient-1: #000aaa;
     /* src/components/css/variables.css:366 */
-    --color-glow: rgba(0, 10, 170, 0.3);
+    /* Default primary color */
+    /* src/components/css/variables.css:367 */
+    --color-gradient-2: #6c757d;
     /* src/components/css/variables.css:368 */
-    /* Sleek View Colors Fallback */
+    /* Default secondary color */
     /* src/components/css/variables.css:369 */
-    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
+    --color-gradient-3: #6c757d;
     /* src/components/css/variables.css:370 */
-    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
+    --color-gradient-4: #6c757d;
+    /* src/components/css/variables.css:371 */
+    --color-accent: #6c757d;
     /* src/components/css/variables.css:372 */
-    /* Scrollbar Colors Fallback */
-    /* src/components/css/variables.css:373 */
-    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
+    --color-glow: rgba(0, 10, 170, 0.3);
     /* src/components/css/variables.css:374 */
-    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
+    /* Sleek View Colors Fallback */
+    /* src/components/css/variables.css:375 */
+    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
     /* src/components/css/variables.css:376 */
-    /* Legacy aliases */
-    /* src/components/css/variables.css:377 */
-    --gradient-1: var(--color-gradient-1);
+    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
     /* src/components/css/variables.css:378 */
-    --gradient-2: var(--color-gradient-2);
+    /* Scrollbar Colors Fallback */
     /* src/components/css/variables.css:379 */
-    --gradient-3: var(--color-gradient-3);
+    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
     /* src/components/css/variables.css:380 */
-    --gradient-4: var(--color-gradient-4);
-    /* src/components/css/variables.css:381 */
-    --accent: var(--color-accent);
+    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
     /* src/components/css/variables.css:382 */
-    --glow: var(--color-glow);
+    /* Legacy aliases */
     /* src/components/css/variables.css:383 */
-    --sleek-main-bg: var(--color-sleek-main-bg);
+    --gradient-1: var(--color-gradient-1);
     /* src/components/css/variables.css:384 */
-    --sleek-main-border: var(--color-sleek-main-border);
+    --gradient-2: var(--color-gradient-2);
     /* src/components/css/variables.css:385 */
-    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    --gradient-3: var(--color-gradient-3);
     /* src/components/css/variables.css:386 */
-    --input-scrollbar-thumb-hover-color: var(
-/* src/components/css/variables.css:387 */
-      --color-scrollbar-input-thumb-hover
-/* src/components/css/variables.css:388 */
-    );
+    --gradient-4: var(--color-gradient-4);
+    /* src/components/css/variables.css:387 */
+    --accent: var(--color-accent);
+    /* src/components/css/variables.css:388 */
+    --glow: var(--color-glow);
     /* src/components/css/variables.css:389 */
+    --sleek-main-bg: var(--color-sleek-main-bg);
+    /* src/components/css/variables.css:390 */
+    --sleek-main-border: var(--color-sleek-main-border);
+    /* src/components/css/variables.css:391 */
+    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    /* src/components/css/variables.css:392 */
+    --input-scrollbar-thumb-hover-color: var(
+/* src/components/css/variables.css:393 */
+      --color-scrollbar-input-thumb-hover
+/* src/components/css/variables.css:394 */
+    );
+    /* src/components/css/variables.css:395 */
   }
 
-  /* src/components/css/variables.css:390 */
+  /* src/components/css/variables.css:396 */
 }
 
 /* src/components/css/TextChatInput.css:3 */
@@ -124865,618 +125403,6 @@ svg.sleek-chat-input-whatsapp-icon:focus {
 
 /* End of file: components/css/TextChatInput.css */
 
-/* Start of file: components/css/VoiceAlternateAvatar.css */
-
-/* src/components/css/VoiceAlternateAvatar.css:1 */
-
-/* MG Astor AI Assistant Avatar Styling */
-
-/* src/components/css/VoiceAlternateAvatar.css:3 */
-
-.astor-container {
-  /* src/components/css/VoiceAlternateAvatar.css:4 */
-  position: relative;
-  /* src/components/css/VoiceAlternateAvatar.css:5 */
-  display: flex;
-  /* src/components/css/VoiceAlternateAvatar.css:6 */
-  flex-direction: column;
-  /* src/components/css/VoiceAlternateAvatar.css:7 */
-  align-items: center;
-  /* src/components/css/VoiceAlternateAvatar.css:8 */
-  justify-content: center;
-  /* src/components/css/VoiceAlternateAvatar.css:9 */
-  width: 100%;
-  /* src/components/css/VoiceAlternateAvatar.css:10 */
-  height: 100%;
-  /* src/components/css/VoiceAlternateAvatar.css:11 */
-  gap: 0;
-  /* src/components/css/VoiceAlternateAvatar.css:12 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:14 */
-
-.astor-device {
-  /* src/components/css/VoiceAlternateAvatar.css:15 */
-  width: 100%;
-  /* src/components/css/VoiceAlternateAvatar.css:16 */
-  height: 100%;
-  /* src/components/css/VoiceAlternateAvatar.css:17 */
-  background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
-  /* src/components/css/VoiceAlternateAvatar.css:18 */
-  border-radius: 45px;
-  /* src/components/css/VoiceAlternateAvatar.css:19 */
-  position: relative;
-  /* src/components/css/VoiceAlternateAvatar.css:20 */
-  cursor: pointer;
-  /* src/components/css/VoiceAlternateAvatar.css:21 */
-  transition: all 0.3s ease;
-  /* src/components/css/VoiceAlternateAvatar.css:22 */
-  box-shadow:
-/* src/components/css/VoiceAlternateAvatar.css:23 */
-    0 20px 40px rgba(0, 0, 0, 0.6),
-/* src/components/css/VoiceAlternateAvatar.css:24 */
-    inset 0 2px 10px rgba(255, 255, 255, 0.05),
-/* src/components/css/VoiceAlternateAvatar.css:25 */
-    0 0 0 1px rgba(255, 255, 255, 0.1);
-  /* src/components/css/VoiceAlternateAvatar.css:26 */
-  animation: gentleFloat 6s ease-in-out infinite;
-  /* src/components/css/VoiceAlternateAvatar.css:27 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:29 */
-
-.astor-device:hover {
-  /* src/components/css/VoiceAlternateAvatar.css:30 */
-  transform: scale(1.02);
-  /* src/components/css/VoiceAlternateAvatar.css:31 */
-  box-shadow:
-/* src/components/css/VoiceAlternateAvatar.css:32 */
-    0 25px 50px rgba(0, 0, 0, 0.7),
-/* src/components/css/VoiceAlternateAvatar.css:33 */
-    inset 0 2px 15px rgba(255, 255, 255, 0.08),
-/* src/components/css/VoiceAlternateAvatar.css:34 */
-    0 0 0 1px rgba(255, 255, 255, 0.15);
-  /* src/components/css/VoiceAlternateAvatar.css:35 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:37 */
-
-.screen-area {
-  /* src/components/css/VoiceAlternateAvatar.css:38 */
-  position: absolute;
-  /* src/components/css/VoiceAlternateAvatar.css:39 */
-  top: 50%;
-  /* src/components/css/VoiceAlternateAvatar.css:40 */
-  left: 50%;
-  /* src/components/css/VoiceAlternateAvatar.css:41 */
-  transform: translate(-50%, -50%);
-  /* src/components/css/VoiceAlternateAvatar.css:42 */
-  width: 85%;
-  /* src/components/css/VoiceAlternateAvatar.css:43 */
-  height: 70%;
-  /* src/components/css/VoiceAlternateAvatar.css:44 */
-  background: #000000;
-  /* src/components/css/VoiceAlternateAvatar.css:45 */
-  border-radius: 35px;
-  /* src/components/css/VoiceAlternateAvatar.css:46 */
-  display: flex;
-  /* src/components/css/VoiceAlternateAvatar.css:47 */
-  justify-content: center;
-  /* src/components/css/VoiceAlternateAvatar.css:48 */
-  align-items: center;
-  /* src/components/css/VoiceAlternateAvatar.css:49 */
-  overflow: hidden;
-  /* src/components/css/VoiceAlternateAvatar.css:50 */
-  border: 2px solid #333;
-  /* src/components/css/VoiceAlternateAvatar.css:51 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:53 */
-
-.face-container {
-  /* src/components/css/VoiceAlternateAvatar.css:54 */
-  display: flex;
-  /* src/components/css/VoiceAlternateAvatar.css:55 */
-  align-items: center;
-  /* src/components/css/VoiceAlternateAvatar.css:56 */
-  justify-content: center;
-  /* src/components/css/VoiceAlternateAvatar.css:57 */
-  gap: 20%;
-  /* src/components/css/VoiceAlternateAvatar.css:58 */
-  transition: all 0.5s ease;
-  /* src/components/css/VoiceAlternateAvatar.css:59 */
-  width: 100%;
-  /* src/components/css/VoiceAlternateAvatar.css:60 */
-  height: 100%;
-  /* src/components/css/VoiceAlternateAvatar.css:61 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:63 */
-
-.eye {
-  /* src/components/css/VoiceAlternateAvatar.css:64 */
-  width: 25%;
-  /* src/components/css/VoiceAlternateAvatar.css:65 */
-  height: 35%;
-  /* src/components/css/VoiceAlternateAvatar.css:66 */
-  max-width: 35px;
-  /* src/components/css/VoiceAlternateAvatar.css:67 */
-  max-height: 45px;
-  /* src/components/css/VoiceAlternateAvatar.css:68 */
-  background: #ffffff;
-  /* src/components/css/VoiceAlternateAvatar.css:69 */
-  border-radius: 50%;
-  /* src/components/css/VoiceAlternateAvatar.css:70 */
-  position: relative;
-  /* src/components/css/VoiceAlternateAvatar.css:71 */
-  animation: eyeBlink 4s infinite;
-  /* src/components/css/VoiceAlternateAvatar.css:72 */
-  transition: all 0.3s ease;
-  /* src/components/css/VoiceAlternateAvatar.css:73 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:75 */
-
-.eye.sleepy {
-  /* src/components/css/VoiceAlternateAvatar.css:76 */
-  height: 25px;
-  /* src/components/css/VoiceAlternateAvatar.css:77 */
-  transform: scaleY(0.6);
-  /* src/components/css/VoiceAlternateAvatar.css:78 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:80 */
-
-.eye.happy {
-  /* src/components/css/VoiceAlternateAvatar.css:81 */
-  transform: scaleY(0.8);
-  /* src/components/css/VoiceAlternateAvatar.css:82 */
-  border-radius: 50% 50% 80% 80%;
-  /* src/components/css/VoiceAlternateAvatar.css:83 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:85 */
-
-.eye.surprised {
-  /* src/components/css/VoiceAlternateAvatar.css:86 */
-  width: 40px;
-  /* src/components/css/VoiceAlternateAvatar.css:87 */
-  height: 50px;
-  /* src/components/css/VoiceAlternateAvatar.css:88 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:90 */
-
-.nose {
-  /* src/components/css/VoiceAlternateAvatar.css:91 */
-  width: 6%;
-  /* src/components/css/VoiceAlternateAvatar.css:92 */
-  height: 6%;
-  /* src/components/css/VoiceAlternateAvatar.css:93 */
-  max-width: 8px;
-  /* src/components/css/VoiceAlternateAvatar.css:94 */
-  max-height: 8px;
-  /* src/components/css/VoiceAlternateAvatar.css:95 */
-  background: #ffffff;
-  /* src/components/css/VoiceAlternateAvatar.css:96 */
-  border-radius: 2px;
-  /* src/components/css/VoiceAlternateAvatar.css:97 */
-  transform: rotate(45deg);
-  /* src/components/css/VoiceAlternateAvatar.css:98 */
-  position: relative;
-  /* src/components/css/VoiceAlternateAvatar.css:99 */
-  margin-top: 8px;
-  /* src/components/css/VoiceAlternateAvatar.css:100 */
-  transition: all 0.3s ease;
-  /* src/components/css/VoiceAlternateAvatar.css:101 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:103 */
-
-.nose.happy {
-  /* src/components/css/VoiceAlternateAvatar.css:104 */
-  transform: rotate(45deg) scale(1.1);
-  /* src/components/css/VoiceAlternateAvatar.css:105 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:107 */
-
-.mouth {
-  /* src/components/css/VoiceAlternateAvatar.css:108 */
-  position: absolute;
-  /* src/components/css/VoiceAlternateAvatar.css:109 */
-  bottom: 25px;
-  /* src/components/css/VoiceAlternateAvatar.css:110 */
-  left: 50%;
-  /* src/components/css/VoiceAlternateAvatar.css:111 */
-  transform: translateX(-50%);
-  /* src/components/css/VoiceAlternateAvatar.css:112 */
-  width: 20px;
-  /* src/components/css/VoiceAlternateAvatar.css:113 */
-  height: 8px;
-  /* src/components/css/VoiceAlternateAvatar.css:114 */
-  background: #ffffff;
-  /* src/components/css/VoiceAlternateAvatar.css:115 */
-  border-radius: 0 0 20px 20px;
-  /* src/components/css/VoiceAlternateAvatar.css:116 */
-  opacity: 0;
-  /* src/components/css/VoiceAlternateAvatar.css:117 */
-  transition: all 0.3s ease;
-  /* src/components/css/VoiceAlternateAvatar.css:118 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:120 */
-
-.mouth.visible {
-  /* src/components/css/VoiceAlternateAvatar.css:121 */
-  opacity: 1;
-  /* src/components/css/VoiceAlternateAvatar.css:122 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:124 */
-
-.mouth.happy {
-  /* src/components/css/VoiceAlternateAvatar.css:125 */
-  width: 30px;
-  /* src/components/css/VoiceAlternateAvatar.css:126 */
-  height: 12px;
-  /* src/components/css/VoiceAlternateAvatar.css:127 */
-  border-radius: 0 0 30px 30px;
-  /* src/components/css/VoiceAlternateAvatar.css:128 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:130 */
-
-.mouth.talking {
-  /* src/components/css/VoiceAlternateAvatar.css:131 */
-  animation: mouthTalk 0.3s ease-in-out infinite alternate;
-  /* src/components/css/VoiceAlternateAvatar.css:132 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:134 */
-
-.status-indicators {
-  /* src/components/css/VoiceAlternateAvatar.css:135 */
-  position: absolute;
-  /* src/components/css/VoiceAlternateAvatar.css:136 */
-  top: 5%;
-  /* src/components/css/VoiceAlternateAvatar.css:137 */
-  left: 50%;
-  /* src/components/css/VoiceAlternateAvatar.css:138 */
-  transform: translateX(-50%);
-  /* src/components/css/VoiceAlternateAvatar.css:139 */
-  display: flex;
-  /* src/components/css/VoiceAlternateAvatar.css:140 */
-  gap: 8px;
-  /* src/components/css/VoiceAlternateAvatar.css:141 */
-  z-index: 10;
-  /* src/components/css/VoiceAlternateAvatar.css:142 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:144 */
-
-.status-dot {
-  /* src/components/css/VoiceAlternateAvatar.css:145 */
-  width: 6px;
-  /* src/components/css/VoiceAlternateAvatar.css:146 */
-  height: 6px;
-  /* src/components/css/VoiceAlternateAvatar.css:147 */
-  border-radius: 50%;
-  /* src/components/css/VoiceAlternateAvatar.css:148 */
-  background: #333;
-  /* src/components/css/VoiceAlternateAvatar.css:149 */
-  transition: all 0.3s ease;
-  /* src/components/css/VoiceAlternateAvatar.css:150 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:152 */
-
-.status-dot.active {
-  /* src/components/css/VoiceAlternateAvatar.css:153 */
-  background: #00ff88;
-  /* src/components/css/VoiceAlternateAvatar.css:154 */
-  box-shadow: 0 0 10px #00ff88;
-  /* src/components/css/VoiceAlternateAvatar.css:155 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:157 */
-
-.listening-pulse {
-  /* src/components/css/VoiceAlternateAvatar.css:158 */
-  position: absolute;
-  /* src/components/css/VoiceAlternateAvatar.css:159 */
-  top: 0;
-  /* src/components/css/VoiceAlternateAvatar.css:160 */
-  left: 0;
-  /* src/components/css/VoiceAlternateAvatar.css:161 */
-  right: 0;
-  /* src/components/css/VoiceAlternateAvatar.css:162 */
-  bottom: 0;
-  /* src/components/css/VoiceAlternateAvatar.css:163 */
-  border-radius: 45px;
-  /* src/components/css/VoiceAlternateAvatar.css:164 */
-  border: 2px solid rgba(0, 255, 136, 0.3);
-  /* src/components/css/VoiceAlternateAvatar.css:165 */
-  opacity: 0;
-  /* src/components/css/VoiceAlternateAvatar.css:166 */
-  animation: listeningPulse 2s ease-in-out infinite;
-  /* src/components/css/VoiceAlternateAvatar.css:167 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:169 */
-
-.listening-pulse.active {
-  /* src/components/css/VoiceAlternateAvatar.css:170 */
-  opacity: 1;
-  /* src/components/css/VoiceAlternateAvatar.css:171 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:173 */
-
-/* Animations */
-
-/* src/components/css/VoiceAlternateAvatar.css:174 */
-
-@keyframes gentleFloat {
-  /* src/components/css/VoiceAlternateAvatar.css:175 */
-
-  0%,
-/* src/components/css/VoiceAlternateAvatar.css:176 */
-  100% {
-    /* src/components/css/VoiceAlternateAvatar.css:177 */
-    transform: translateY(0px);
-    /* src/components/css/VoiceAlternateAvatar.css:178 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:179 */
-
-  50% {
-    /* src/components/css/VoiceAlternateAvatar.css:180 */
-    transform: translateY(-8px);
-    /* src/components/css/VoiceAlternateAvatar.css:181 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:182 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:184 */
-
-@keyframes eyeBlink {
-  /* src/components/css/VoiceAlternateAvatar.css:185 */
-
-  0%,
-/* src/components/css/VoiceAlternateAvatar.css:186 */
-  90%,
-/* src/components/css/VoiceAlternateAvatar.css:187 */
-  100% {
-    /* src/components/css/VoiceAlternateAvatar.css:188 */
-    transform: scaleY(1);
-    /* src/components/css/VoiceAlternateAvatar.css:189 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:190 */
-
-  92%,
-/* src/components/css/VoiceAlternateAvatar.css:191 */
-  98% {
-    /* src/components/css/VoiceAlternateAvatar.css:192 */
-    transform: scaleY(0.1);
-    /* src/components/css/VoiceAlternateAvatar.css:193 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:194 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:196 */
-
-@keyframes mouthTalk {
-  /* src/components/css/VoiceAlternateAvatar.css:197 */
-
-  0% {
-    /* src/components/css/VoiceAlternateAvatar.css:198 */
-    height: 8px;
-    /* src/components/css/VoiceAlternateAvatar.css:199 */
-    width: 20px;
-    /* src/components/css/VoiceAlternateAvatar.css:200 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:201 */
-
-  100% {
-    /* src/components/css/VoiceAlternateAvatar.css:202 */
-    height: 12px;
-    /* src/components/css/VoiceAlternateAvatar.css:203 */
-    width: 25px;
-    /* src/components/css/VoiceAlternateAvatar.css:204 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:205 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:207 */
-
-@keyframes listeningPulse {
-  /* src/components/css/VoiceAlternateAvatar.css:208 */
-
-  0% {
-    /* src/components/css/VoiceAlternateAvatar.css:209 */
-    transform: scale(1);
-    /* src/components/css/VoiceAlternateAvatar.css:210 */
-    opacity: 0.3;
-    /* src/components/css/VoiceAlternateAvatar.css:211 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:212 */
-
-  50% {
-    /* src/components/css/VoiceAlternateAvatar.css:213 */
-    transform: scale(1.1);
-    /* src/components/css/VoiceAlternateAvatar.css:214 */
-    opacity: 0.6;
-    /* src/components/css/VoiceAlternateAvatar.css:215 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:216 */
-
-  100% {
-    /* src/components/css/VoiceAlternateAvatar.css:217 */
-    transform: scale(1);
-    /* src/components/css/VoiceAlternateAvatar.css:218 */
-    opacity: 0.3;
-    /* src/components/css/VoiceAlternateAvatar.css:219 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:220 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:222 */
-
-/* Different emotional states */
-
-/* src/components/css/VoiceAlternateAvatar.css:223 */
-
-.face-container.thinking .eye {
-  /* src/components/css/VoiceAlternateAvatar.css:224 */
-  animation: none;
-  /* src/components/css/VoiceAlternateAvatar.css:225 */
-  transform: translateX(-5px);
-  /* src/components/css/VoiceAlternateAvatar.css:226 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:228 */
-
-.face-container.thinking .eye:nth-child(2) {
-  /* src/components/css/VoiceAlternateAvatar.css:229 */
-  transform: translateX(5px);
-  /* src/components/css/VoiceAlternateAvatar.css:230 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:232 */
-
-.face-container.alert .eye {
-  /* src/components/css/VoiceAlternateAvatar.css:233 */
-  animation: none;
-  /* src/components/css/VoiceAlternateAvatar.css:234 */
-  width: 40px;
-  /* src/components/css/VoiceAlternateAvatar.css:235 */
-  height: 50px;
-  /* src/components/css/VoiceAlternateAvatar.css:236 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:238 */
-
-/* Responsive design for smaller screens */
-
-/* src/components/css/VoiceAlternateAvatar.css:239 */
-
-@media (max-width: 768px) {
-  /* src/components/css/VoiceAlternateAvatar.css:240 */
-
-  .astor-container {
-    /* src/components/css/VoiceAlternateAvatar.css:241 */
-    gap: 0;
-    /* src/components/css/VoiceAlternateAvatar.css:242 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:244 */
-
-  .astor-device {
-    /* src/components/css/VoiceAlternateAvatar.css:245 */
-    width: 100%;
-    /* src/components/css/VoiceAlternateAvatar.css:246 */
-    height: 100%;
-    /* src/components/css/VoiceAlternateAvatar.css:247 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:249 */
-
-  .face-container {
-    /* src/components/css/VoiceAlternateAvatar.css:250 */
-    gap: 15%;
-    /* src/components/css/VoiceAlternateAvatar.css:251 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:253 */
-
-  .eye {
-    /* src/components/css/VoiceAlternateAvatar.css:254 */
-    width: 20%;
-    /* src/components/css/VoiceAlternateAvatar.css:255 */
-    height: 30%;
-    /* src/components/css/VoiceAlternateAvatar.css:256 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:258 */
-
-  .nose {
-    /* src/components/css/VoiceAlternateAvatar.css:259 */
-    width: 5%;
-    /* src/components/css/VoiceAlternateAvatar.css:260 */
-    height: 5%;
-    /* src/components/css/VoiceAlternateAvatar.css:261 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:262 */
-}
-
-/* src/components/css/VoiceAlternateAvatar.css:264 */
-
-/* Extra small screens */
-
-/* src/components/css/VoiceAlternateAvatar.css:265 */
-
-@media (max-width: 480px) {
-  /* src/components/css/VoiceAlternateAvatar.css:266 */
-
-  .astor-container {
-    /* src/components/css/VoiceAlternateAvatar.css:267 */
-    gap: 0;
-    /* src/components/css/VoiceAlternateAvatar.css:268 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:270 */
-
-  .astor-device {
-    /* src/components/css/VoiceAlternateAvatar.css:271 */
-    width: 100%;
-    /* src/components/css/VoiceAlternateAvatar.css:272 */
-    height: 100%;
-    /* src/components/css/VoiceAlternateAvatar.css:273 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:275 */
-
-  .face-container {
-    /* src/components/css/VoiceAlternateAvatar.css:276 */
-    gap: 10%;
-    /* src/components/css/VoiceAlternateAvatar.css:277 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:279 */
-
-  .eye {
-    /* src/components/css/VoiceAlternateAvatar.css:280 */
-    width: 18%;
-    /* src/components/css/VoiceAlternateAvatar.css:281 */
-    height: 25%;
-    /* src/components/css/VoiceAlternateAvatar.css:282 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:284 */
-
-  .nose {
-    /* src/components/css/VoiceAlternateAvatar.css:285 */
-    width: 4%;
-    /* src/components/css/VoiceAlternateAvatar.css:286 */
-    height: 4%;
-    /* src/components/css/VoiceAlternateAvatar.css:287 */
-  }
-
-  /* src/components/css/VoiceAlternateAvatar.css:288 */
-}
-
-/* End of file: components/css/VoiceAlternateAvatar.css */
-
 /* Start of file: components/css/VoiceAlternateView.css */
 
 /* src/components/css/VoiceAlternateView.css:1 */
@@ -125524,173 +125450,169 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* Voice State Colors */
   /* src/components/css/variables.css:29 */
   --color-voice-listening: #3b82f6;
-  /* Blue */
   /* src/components/css/variables.css:30 */
-  --color-voice-speaking: #10b981;
-  /* Green */
+  /* Blue */
   /* src/components/css/variables.css:31 */
-  --color-voice-thinking: #f59e0b;
-  /* Amber/Orange */
+  --color-voice-speaking: #10b981;
   /* src/components/css/variables.css:32 */
-  --color-voice-disconnected: #ef4444cb;
-  /* Red */
+  /* Green */
+  /* src/components/css/variables.css:33 */
+  --color-voice-thinking: #f59e0b;
   /* src/components/css/variables.css:34 */
-  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
+  /* Amber/Orange */
   /* src/components/css/variables.css:35 */
-  /* --color-voice-speaking-alt: #058158; Darker Green */
+  --color-voice-disconnected: #ef4444cb;
   /* src/components/css/variables.css:36 */
-  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
-  /* src/components/css/variables.css:37 */
-  /* --color-voice-thinking-alt: #fbbf24; Yellow */
+  /* Red */
+  /* src/components/css/variables.css:38 */
+  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
   /* src/components/css/variables.css:39 */
-  /* Special/Brand Colors */
+  /* --color-voice-speaking-alt: #058158; Darker Green */
   /* src/components/css/variables.css:40 */
-  --color-whatsapp: #1eb655;
-  /* src/components/css/variables.css:42 */
-  /* Opacity Values */
+  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
+  /* src/components/css/variables.css:41 */
+  /* --color-voice-thinking-alt: #fbbf24; Yellow */
   /* src/components/css/variables.css:43 */
-  --opacity-disabled: 0.7;
+  /* Special/Brand Colors */
   /* src/components/css/variables.css:44 */
+  --color-whatsapp: #1eb655;
+  /* src/components/css/variables.css:46 */
+  /* Opacity Values */
+  /* src/components/css/variables.css:47 */
+  --opacity-disabled: 0.7;
+  /* src/components/css/variables.css:48 */
   --opacity-hover: 0.8;
-  /* src/components/css/variables.css:45 */
+  /* src/components/css/variables.css:49 */
   --opacity-normal: 1;
   /* ================================================
      INPUT AREA VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:51 */
-  /* Input Colors */
-  /* src/components/css/variables.css:53 */
-  --color-input-background: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:54 */
-  --color-input-background-avatar-view: var(--chat-widget-primary-color);
   /* src/components/css/variables.css:55 */
+  /* Input Colors */
+  /* src/components/css/variables.css:57 */
+  --color-input-background: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:58 */
   --color-input-text: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:56 */
+  /* src/components/css/variables.css:59 */
   --color-input-placeholder-text: color-mix(
-/* src/components/css/variables.css:57 */
-    in srgb,
-/* src/components/css/variables.css:58 */
-    var(--color-input-text) 70%,
-/* src/components/css/variables.css:59 */
-    white
 /* src/components/css/variables.css:60 */
+    in srgb,
+/* src/components/css/variables.css:61 */
+    var(--color-input-text) 70%,
+/* src/components/css/variables.css:62 */
+    white
+/* src/components/css/variables.css:63 */
   );
-  /* src/components/css/variables.css:61 */
-  --color-input-placeholder-opacity: 70%;
-  /* src/components/css/variables.css:62 */
-  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:64 */
-  /* Input Dimensions */
+  --color-input-placeholder-opacity: 70%;
   /* src/components/css/variables.css:65 */
-  --input-default-height: 40px;
-  /* src/components/css/variables.css:66 */
-  --input-min-height: 40px;
+  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:67 */
-  --input-max-height: 120px;
+  /* Input Dimensions */
   /* src/components/css/variables.css:68 */
-  --input-max-height-tablet: 100px;
+  --input-default-height: 40px;
   /* src/components/css/variables.css:69 */
-  --input-max-height-mobile: 80px;
+  --input-min-height: 40px;
+  /* src/components/css/variables.css:70 */
+  --input-max-height: 120px;
   /* src/components/css/variables.css:71 */
-  /* Input Line Height */
+  --input-max-height-tablet: 100px;
   /* src/components/css/variables.css:72 */
-  --input-line-height: 20px;
+  --input-max-height-mobile: 80px;
   /* src/components/css/variables.css:74 */
-  /* Input Padding */
+  /* Input Line Height */
   /* src/components/css/variables.css:75 */
-  --input-text-padding-horizontal: 4px;
-  /* src/components/css/variables.css:76 */
-  --input-text-padding-vertical: 0px;
+  --input-line-height: 20px;
   /* src/components/css/variables.css:77 */
-  --input-text-padding: 0 var(--input-text-padding-horizontal);
+  /* Input Padding */
   /* src/components/css/variables.css:78 */
-  --input-container-padding: 6px 8px;
+  --input-text-padding-horizontal: 4px;
   /* src/components/css/variables.css:79 */
-  --input-container-padding-sleek: 4px 4px;
+  --input-text-padding-vertical: 0px;
+  /* src/components/css/variables.css:80 */
+  --input-text-padding: 0 var(--input-text-padding-horizontal);
   /* src/components/css/variables.css:81 */
-  /* Input Font */
+  --input-container-padding: 6px 8px;
   /* src/components/css/variables.css:82 */
-  --input-font-size: var(--chat-widget-message-font-size);
-  /* src/components/css/variables.css:83 */
-  --input-font-weight: 400;
+  --input-container-padding-sleek: 4px 4px;
   /* src/components/css/variables.css:84 */
-  --input-font-weight-focus: 500;
+  /* Input Font */
   /* src/components/css/variables.css:85 */
+  --input-font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/variables.css:86 */
+  --input-font-weight: 400;
+  /* src/components/css/variables.css:87 */
+  --input-font-weight-focus: 500;
+  /* src/components/css/variables.css:88 */
   --input-font-weight-bold: 600;
   /* ================================================
      INPUT SCROLLBAR VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:91 */
+  /* src/components/css/variables.css:94 */
   /* Scrollbar Colors */
-  /* src/components/css/variables.css:92 */
+  /* src/components/css/variables.css:95 */
   --color-scrollbar-input-thumb: color-mix(
-/* src/components/css/variables.css:93 */
-    in srgb,
-/* src/components/css/variables.css:94 */
-    var(--chat-widget-primary-color) 75%,
-/* src/components/css/variables.css:95 */
-    transparent
 /* src/components/css/variables.css:96 */
-  );
-  /* src/components/css/variables.css:97 */
-  --color-scrollbar-input-thumb-hover: color-mix(
+    in srgb,
+/* src/components/css/variables.css:97 */
+    var(--chat-widget-primary-color) 75%,
 /* src/components/css/variables.css:98 */
-    in srgb,
+    transparent
 /* src/components/css/variables.css:99 */
-    var(--chat-widget-primary-color) 90%,
-/* src/components/css/variables.css:100 */
-    transparent
+  );
+  /* src/components/css/variables.css:100 */
+  --color-scrollbar-input-thumb-hover: color-mix(
 /* src/components/css/variables.css:101 */
-  );
-  /* src/components/css/variables.css:103 */
-  --color-scrollbar-input-thumb-avatar-view: color-mix(
+    in srgb,
+/* src/components/css/variables.css:102 */
+    var(--chat-widget-primary-color) 90%,
+/* src/components/css/variables.css:103 */
+    transparent
 /* src/components/css/variables.css:104 */
-    in srgb,
-/* src/components/css/variables.css:105 */
-    var(--chat-widget-secondary-color) 75%,
-/* src/components/css/variables.css:106 */
-    transparent
+  );
+  /* src/components/css/variables.css:106 */
+  --color-scrollbar-input-thumb-avatar-view: color-mix(
 /* src/components/css/variables.css:107 */
-  );
-  /* src/components/css/variables.css:108 */
-  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
-/* src/components/css/variables.css:109 */
     in srgb,
-/* src/components/css/variables.css:110 */
-    var(--chat-widget-secondary-color) 90%,
-/* src/components/css/variables.css:111 */
+/* src/components/css/variables.css:108 */
+    var(--chat-widget-secondary-color) 75%,
+/* src/components/css/variables.css:109 */
     transparent
-/* src/components/css/variables.css:112 */
+/* src/components/css/variables.css:110 */
   );
-  /* src/components/css/variables.css:114 */
-  --color-scrollbar-input-track: transparent;
-  /* src/components/css/variables.css:116 */
-  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:111 */
+  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
+/* src/components/css/variables.css:112 */
+    in srgb,
+/* src/components/css/variables.css:113 */
+    var(--chat-widget-secondary-color) 90%,
+/* src/components/css/variables.css:114 */
+    transparent
+/* src/components/css/variables.css:115 */
+  );
   /* src/components/css/variables.css:117 */
+  --color-scrollbar-input-track: transparent;
+  /* src/components/css/variables.css:119 */
+  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:120 */
   --input-scrollbar-border-radius: 2.5px;
-  /* src/components/css/variables.css:118 */
+  /* src/components/css/variables.css:121 */
   --input-scrollbar-thumb-hover-opacity: var(--opacity-hover);
   /* ================================================
      BUTTON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:124 */
-  /* Button Dimensions */
-  /* src/components/css/variables.css:125 */
-  --button-size-primary: 32px;
-  /* src/components/css/variables.css:126 */
-  --button-padding-primary: 4px;
   /* src/components/css/variables.css:127 */
-  --button-size-secondary: 24px;
+  /* Button Dimensions */
+  /* src/components/css/variables.css:128 */
+  --button-size-primary: 32px;
   /* src/components/css/variables.css:129 */
-  /* Button Colors */
+  --button-padding-primary: 4px;
   /* src/components/css/variables.css:130 */
+  --button-size-secondary: 24px;
+  /* src/components/css/variables.css:132 */
+  /* Button Colors */
+  /* src/components/css/variables.css:133 */
   --color-button-background-primary: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:131 */
-  --color-button-background-primary-avatar-view: var(
-/* src/components/css/variables.css:132 */
-    --chat-widget-secondary-color
-/* src/components/css/variables.css:133 */
-  );
   /* src/components/css/variables.css:134 */
   --color-button-background-hover: var(--chat-widget-primary-color-hover);
   /* src/components/css/variables.css:135 */
@@ -125698,279 +125620,282 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* src/components/css/variables.css:136 */
   --color-button-fill: var(--chat-widget-button-content-color);
   /* src/components/css/variables.css:138 */
-  /* Button Opacity States */
-  /* src/components/css/variables.css:139 */
-  --button-opacity-normal: var(--opacity-normal);
+  --color-button-disconnect: #ef4444;
   /* src/components/css/variables.css:140 */
-  --button-opacity-hover: var(--opacity-hover);
+  /* Button Opacity States */
   /* src/components/css/variables.css:141 */
+  --button-opacity-normal: var(--opacity-normal);
+  /* src/components/css/variables.css:142 */
+  --button-opacity-hover: var(--opacity-hover);
+  /* src/components/css/variables.css:143 */
   --button-opacity-disabled: var(--opacity-disabled);
   /* ================================================
      ICON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:147 */
-  /* Icon Sizes */
-  /* src/components/css/variables.css:148 */
-  --button-icon-size-secondary: 16px;
   /* src/components/css/variables.css:149 */
+  /* Icon Sizes */
+  /* src/components/css/variables.css:150 */
+  --button-icon-size-secondary: 16px;
+  /* src/components/css/variables.css:151 */
   --button-icon-size-primary: 20px;
+  /* src/components/css/variables.css:152 */
   /* w-5 h-5 equivalent */
   /* ================================================
      CHAT MESSAGE CONTAINER SCROLLBAR
      ================================================ */
-  /* src/components/css/variables.css:155 */
+  /* src/components/css/variables.css:158 */
   --message-scrollbar-width: thin;
-  /* src/components/css/variables.css:156 */
-  --message-scrollbar-width-px: 6px;
-  /* src/components/css/variables.css:157 */
-  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:159 */
-  /* Scrollbar Colors */
+  --message-scrollbar-width-px: 6px;
   /* src/components/css/variables.css:160 */
-  --color-scrollbar-message-thumb-default: rgb(209 213 219);
-  /* src/components/css/variables.css:161 */
-  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:162 */
+  /* Scrollbar Colors */
+  /* src/components/css/variables.css:163 */
+  --color-scrollbar-message-thumb-default: rgb(209 213 219);
+  /* src/components/css/variables.css:164 */
+  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  /* src/components/css/variables.css:165 */
   --color-scrollbar-message-thumb-theme: var(
-/* src/components/css/variables.css:163 */
+/* src/components/css/variables.css:166 */
     --chat-widget-button-content-color,
-/* src/components/css/variables.css:164 */
-    var(--chat-widget-secondary-color)
-/* src/components/css/variables.css:165 */
-  );
-  /* src/components/css/variables.css:166 */
-  --color-scrollbar-message-thumb-hover-mix: color-mix(
 /* src/components/css/variables.css:167 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:168 */
-    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
-/* src/components/css/variables.css:169 */
-      80%,
-/* src/components/css/variables.css:170 */
-    var(--chat-widget-primary-color)
-/* src/components/css/variables.css:171 */
   );
-  /* src/components/css/variables.css:172 */
+  /* src/components/css/variables.css:169 */
+  --color-scrollbar-message-thumb-hover-mix: color-mix(
+/* src/components/css/variables.css:170 */
+    in srgb,
+/* src/components/css/variables.css:171 */
+    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
+/* src/components/css/variables.css:172 */
+      80%,
+/* src/components/css/variables.css:173 */
+    var(--chat-widget-primary-color)
+/* src/components/css/variables.css:174 */
+  );
+  /* src/components/css/variables.css:175 */
   --color-scrollbar-message-track: transparent;
   /* ================================================
      CHAT MESSAGE
      ================================================ */
-  /* src/components/css/variables.css:178 */
+  /* src/components/css/variables.css:181 */
   --message-text-color: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:179 */
+  /* src/components/css/variables.css:182 */
   --message-font-size: var(--chat-widget-message-font-size);
   /* ================================================
      CHAT MESSAGE BUBBLES
      ================================================ */
-  /* src/components/css/variables.css:185 */
+  /* src/components/css/variables.css:188 */
   --message-bubble-background-color: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:186 */
+  /* src/components/css/variables.css:189 */
   --message-bubble-icon-color: var(--chat-widget-secondary-color);
   /* ================================================
      ENGAGEMENT HOOK IMAGE
      ================================================ */
-  /* src/components/css/variables.css:192 */
+  /* src/components/css/variables.css:195 */
   /* Engagement Hook Image Variables (defined elsewhere via JavaScript) */
-  /* src/components/css/variables.css:193 */
-  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
-  /* src/components/css/variables.css:194 */
-  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
   /* src/components/css/variables.css:196 */
-  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
   /* src/components/css/variables.css:197 */
+  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
+  /* src/components/css/variables.css:199 */
+  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* src/components/css/variables.css:200 */
   --engagement-hook-image-height: var(
-/* src/components/css/variables.css:198 */
+/* src/components/css/variables.css:201 */
     --chat-widget-engagement-hook-image-height
-/* src/components/css/variables.css:199 */
+/* src/components/css/variables.css:202 */
   );
   /* ================================================
      TRANSITION VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:205 */
-  --transition-fast: 0.2s ease;
-  /* src/components/css/variables.css:206 */
-  --transition-normal: all 0.3s ease;
-  /* src/components/css/variables.css:207 */
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   /* src/components/css/variables.css:208 */
+  --transition-fast: 0.2s ease;
+  /* src/components/css/variables.css:209 */
+  --transition-normal: all 0.3s ease;
+  /* src/components/css/variables.css:210 */
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* src/components/css/variables.css:211 */
   --transition-slow-ease: 0.4s ease;
   /* ================================================
      BORDER RADIUS VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:214 */
-  --border-radius-small: 2.5px;
-  /* src/components/css/variables.css:215 */
-  --border-radius-medium: 3px;
-  /* src/components/css/variables.css:216 */
-  --border-radius-large: 12px;
   /* src/components/css/variables.css:217 */
-  --border-radius-xl: 16px;
+  --border-radius-small: 2.5px;
   /* src/components/css/variables.css:218 */
-  --border-radius-2xl: 20px;
+  --border-radius-medium: 3px;
   /* src/components/css/variables.css:219 */
+  --border-radius-large: 12px;
+  /* src/components/css/variables.css:220 */
+  --border-radius-xl: 16px;
+  /* src/components/css/variables.css:221 */
+  --border-radius-2xl: 20px;
+  /* src/components/css/variables.css:222 */
   --border-radius-full: 9999px;
   /* ================================================
      SPACING & GAP VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:225 */
-  --spacing-gap-xs: 0.5px;
-  /* src/components/css/variables.css:226 */
-  --spacing-gap-sm: 4px;
-  /* src/components/css/variables.css:227 */
-  --spacing-gap-md: 8px;
   /* src/components/css/variables.css:228 */
-  --spacing-gap-lg: 12px;
+  --spacing-gap-xs: 0.5px;
   /* src/components/css/variables.css:229 */
+  --spacing-gap-sm: 4px;
+  /* src/components/css/variables.css:230 */
+  --spacing-gap-md: 8px;
+  /* src/components/css/variables.css:231 */
+  --spacing-gap-lg: 12px;
+  /* src/components/css/variables.css:232 */
   --spacing-gap-xl: 16px;
   /* ================================================
      Z-INDEX VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:235 */
-  --z-index-base: 1;
-  /* src/components/css/variables.css:236 */
-  --z-index-elevated: 10;
-  /* src/components/css/variables.css:237 */
-  --z-index-high: 20;
   /* src/components/css/variables.css:238 */
+  --z-index-base: 1;
+  /* src/components/css/variables.css:239 */
+  --z-index-elevated: 10;
+  /* src/components/css/variables.css:240 */
+  --z-index-high: 20;
+  /* src/components/css/variables.css:241 */
   --z-index-maximum: 9999;
   /* ================================================
      BORDER VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:244 */
+  /* src/components/css/variables.css:247 */
   --border-width-thin: 1px;
-  /* src/components/css/variables.css:245 */
+  /* src/components/css/variables.css:248 */
   --border-width-medium: 2px;
-  /* src/components/css/variables.css:246 */
+  /* src/components/css/variables.css:249 */
   --border-width-thick: 4px;
   /* ================================================
      BOX SHADOW VARIABLES (for consistency)
      ================================================ */
-  /* src/components/css/variables.css:252 */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  /* src/components/css/variables.css:253 */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:254 */
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   /* src/components/css/variables.css:255 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* src/components/css/variables.css:256 */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:257 */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:258 */
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
   /* ================================================
      SLEEK VIEW SPECIFIC VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:261 */
-  /* These are already defined in SleekView.css but should be here for consistency */
-  /* src/components/css/variables.css:262 */
-  --sleek-main-min-height: 0px;
-  /* src/components/css/variables.css:263 */
-  --sleek-border-radius: var(--border-radius-large);
   /* src/components/css/variables.css:264 */
-  --sleek-main-bg: var(--color-sleek-main-bg);
+  /* These are already defined in SleekView.css but should be here for consistency */
   /* src/components/css/variables.css:265 */
-  --sleek-main-border: var(--color-sleek-main-border);
+  --sleek-main-min-height: 0px;
   /* src/components/css/variables.css:266 */
-  --sleek-main-text-color: var(--color-sleek-main-text);
+  --sleek-border-radius: var(--border-radius-large);
+  /* src/components/css/variables.css:267 */
+  --sleek-main-bg: var(--color-sleek-main-bg);
   /* src/components/css/variables.css:268 */
-  /* Sleek View Colors */
+  --sleek-main-border: var(--color-sleek-main-border);
   /* src/components/css/variables.css:269 */
+  --sleek-main-text-color: var(--color-sleek-main-text);
+  /* src/components/css/variables.css:271 */
+  /* Sleek View Colors */
+  /* src/components/css/variables.css:272 */
   --color-sleek-main-bg: color-mix(
-/* src/components/css/variables.css:270 */
-    in srgb,
-/* src/components/css/variables.css:271 */
-    var(--chat-widget-primary-color) 10%,
-/* src/components/css/variables.css:272 */
-    white
 /* src/components/css/variables.css:273 */
+    in srgb,
+/* src/components/css/variables.css:274 */
+    var(--chat-widget-primary-color) 10%,
+/* src/components/css/variables.css:275 */
+    white
+/* src/components/css/variables.css:276 */
   );
-  /* src/components/css/variables.css:274 */
-  --color-sleek-main-border: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:275 */
-  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:277 */
-  /* Gradient Colors (derived from primary/secondary) */
+  --color-sleek-main-border: var(--chat-widget-secondary-color);
   /* src/components/css/variables.css:278 */
-  --color-gradient-1: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:279 */
-  --color-gradient-2: var(--chat-widget-secondary-color);
+  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:280 */
+  /* Gradient Colors (derived from primary/secondary) */
+  /* src/components/css/variables.css:281 */
+  --color-gradient-1: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:282 */
+  --color-gradient-2: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:283 */
   --color-gradient-3: color-mix(
-/* src/components/css/variables.css:281 */
-    in srgb,
-/* src/components/css/variables.css:282 */
-    var(--chat-widget-primary-color) 60%,
-/* src/components/css/variables.css:283 */
-    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:284 */
-  );
-  /* src/components/css/variables.css:285 */
-  --color-gradient-4: color-mix(
+    in srgb,
+/* src/components/css/variables.css:285 */
+    var(--chat-widget-primary-color) 60%,
 /* src/components/css/variables.css:286 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:287 */
-    var(--chat-widget-primary-color) 40%,
-/* src/components/css/variables.css:288 */
-    var(--chat-widget-secondary-color)
+  );
+  /* src/components/css/variables.css:288 */
+  --color-gradient-4: color-mix(
 /* src/components/css/variables.css:289 */
-  );
-  /* src/components/css/variables.css:290 */
-  --color-accent: color-mix(
+    in srgb,
+/* src/components/css/variables.css:290 */
+    var(--chat-widget-primary-color) 40%,
 /* src/components/css/variables.css:291 */
-    in srgb,
-/* src/components/css/variables.css:292 */
-    var(--chat-widget-primary-color) 70%,
-/* src/components/css/variables.css:293 */
     var(--chat-widget-secondary-color)
+/* src/components/css/variables.css:292 */
+  );
+  /* src/components/css/variables.css:293 */
+  --color-accent: color-mix(
 /* src/components/css/variables.css:294 */
-  );
-  /* src/components/css/variables.css:295 */
-  --color-glow: color-mix(
-/* src/components/css/variables.css:296 */
     in srgb,
+/* src/components/css/variables.css:295 */
+    var(--chat-widget-primary-color) 70%,
+/* src/components/css/variables.css:296 */
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:297 */
-    var(--chat-widget-primary-color) 30%,
-/* src/components/css/variables.css:298 */
-    transparent
-/* src/components/css/variables.css:299 */
   );
-  /* src/components/css/variables.css:301 */
-  /* Legacy Gradient Variables (for backward compatibility) */
-  /* src/components/css/variables.css:302 */
-  --gradient-1: var(--color-gradient-1);
-  /* src/components/css/variables.css:303 */
-  --gradient-2: var(--color-gradient-2);
+  /* src/components/css/variables.css:298 */
+  --color-glow: color-mix(
+/* src/components/css/variables.css:299 */
+    in srgb,
+/* src/components/css/variables.css:300 */
+    var(--chat-widget-primary-color) 30%,
+/* src/components/css/variables.css:301 */
+    transparent
+/* src/components/css/variables.css:302 */
+  );
   /* src/components/css/variables.css:304 */
-  --gradient-3: var(--color-gradient-3);
+  /* Legacy Gradient Variables (for backward compatibility) */
   /* src/components/css/variables.css:305 */
-  --gradient-4: var(--color-gradient-4);
+  --gradient-1: var(--color-gradient-1);
   /* src/components/css/variables.css:306 */
-  --accent: var(--color-accent);
+  --gradient-2: var(--color-gradient-2);
   /* src/components/css/variables.css:307 */
-  --glow: var(--color-glow);
+  --gradient-3: var(--color-gradient-3);
+  /* src/components/css/variables.css:308 */
+  --gradient-4: var(--color-gradient-4);
   /* src/components/css/variables.css:309 */
-  /* Legacy Color Aliases (for backward compatibility) */
+  --accent: var(--color-accent);
   /* src/components/css/variables.css:310 */
-  --whatsapp-color: var(--color-whatsapp);
-  /* src/components/css/variables.css:311 */
-  --gray-200: var(--color-gray-200);
+  --glow: var(--color-glow);
   /* src/components/css/variables.css:312 */
-  --gray-300: var(--color-gray-300);
+  /* Legacy Color Aliases (for backward compatibility) */
   /* src/components/css/variables.css:313 */
-  --gray-400: var(--color-gray-400);
+  --whatsapp-color: var(--color-whatsapp);
   /* src/components/css/variables.css:314 */
-  --gray-500: var(--color-gray-500);
+  --gray-200: var(--color-gray-200);
   /* src/components/css/variables.css:315 */
-  --gray-600: var(--color-gray-600);
+  --gray-300: var(--color-gray-300);
   /* src/components/css/variables.css:316 */
-  --gray-700: var(--color-gray-700);
+  --gray-400: var(--color-gray-400);
   /* src/components/css/variables.css:317 */
-  --gray-800: var(--color-gray-800);
+  --gray-500: var(--color-gray-500);
   /* src/components/css/variables.css:318 */
-  --blue-500: var(--color-blue-500);
+  --gray-600: var(--color-gray-600);
   /* src/components/css/variables.css:319 */
-  --blue-600: var(--color-blue-600);
+  --gray-700: var(--color-gray-700);
   /* src/components/css/variables.css:320 */
-  --slate-700: var(--color-slate-700);
+  --gray-800: var(--color-gray-800);
   /* src/components/css/variables.css:321 */
-  --slate-800: var(--color-slate-800);
+  --blue-500: var(--color-blue-500);
+  /* src/components/css/variables.css:322 */
+  --blue-600: var(--color-blue-600);
   /* src/components/css/variables.css:323 */
+  --slate-700: var(--color-slate-700);
+  /* src/components/css/variables.css:324 */
+  --slate-800: var(--color-slate-800);
+  /* src/components/css/variables.css:326 */
   /* Gray Scale Colors */
   /* --color-gray-200: rgb(229, 231, 235);
   --color-gray-300: rgb(209, 213, 219);
@@ -125979,104 +125904,107 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   --color-gray-600: rgb(75, 85, 99);
   --color-gray-700: rgb(51, 65, 85);
   --color-gray-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:332 */
+  /* src/components/css/variables.css:335 */
   /* Blue Colors */
   /* --color-blue-500: #3b82f6;
   --color-blue-600: #2563eb; */
-  /* src/components/css/variables.css:336 */
+  /* src/components/css/variables.css:339 */
   /* Slate Colors */
   /* --color-slate-700: rgb(51, 65, 85);
   --color-slate-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:340 */
+  /* src/components/css/variables.css:343 */
   /* Red Colors (for errors, disconnect, etc.) */
   /* --color-red-50: rgb(254, 242, 242);
   --color-red-100: rgb(254, 226, 226);
   --color-red-500: #ef4444;
   --color-red-600: #dc2626; */
-  /* src/components/css/variables.css:346 */
+  /* src/components/css/variables.css:349 */
   /* Green Colors (for success, active states) */
   /* --color-green-50: rgb(240, 253, 244);
   --color-green-100: rgb(220, 252, 231);
   --color-green-500: #10b981;
   --color-green-600: #059669; */
-  /* src/components/css/variables.css:351 */
+  /* src/components/css/variables.css:354 */
 }
 
-/* src/components/css/variables.css:353 */
+/* src/components/css/variables.css:356 */
 
 /* Fallback for browsers that don't support color-mix */
 
-/* src/components/css/variables.css:354 */
+/* src/components/css/variables.css:357 */
 
 @supports not (color: color-mix(in srgb, #000 50%, #fff)) {
-  /* src/components/css/variables.css:355 */
+  /* src/components/css/variables.css:358 */
 
   :root {
-    /* src/components/css/variables.css:356 */
+    /* src/components/css/variables.css:359 */
     /* Derived Theme Colors Fallback */
-    /* src/components/css/variables.css:357 */
-    /* Primary hover: darker version of default primary color #000aaa */
-    /* src/components/css/variables.css:358 */
-    --chat-widget-primary-color-hover: #000991;
-    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:360 */
-    /* Gradient Colors Fallback */
+    /* Primary hover: darker version of default primary color #000aaa */
     /* src/components/css/variables.css:361 */
-    --color-gradient-1: #000aaa;
-    /* Default primary color */
+    --chat-widget-primary-color-hover: #000991;
     /* src/components/css/variables.css:362 */
-    --color-gradient-2: #6c757d;
-    /* Default secondary color */
-    /* src/components/css/variables.css:363 */
-    --color-gradient-3: #6c757d;
+    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:364 */
-    --color-gradient-4: #6c757d;
+    /* Gradient Colors Fallback */
     /* src/components/css/variables.css:365 */
-    --color-accent: #6c757d;
+    --color-gradient-1: #000aaa;
     /* src/components/css/variables.css:366 */
-    --color-glow: rgba(0, 10, 170, 0.3);
+    /* Default primary color */
+    /* src/components/css/variables.css:367 */
+    --color-gradient-2: #6c757d;
     /* src/components/css/variables.css:368 */
-    /* Sleek View Colors Fallback */
+    /* Default secondary color */
     /* src/components/css/variables.css:369 */
-    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
+    --color-gradient-3: #6c757d;
     /* src/components/css/variables.css:370 */
-    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
+    --color-gradient-4: #6c757d;
+    /* src/components/css/variables.css:371 */
+    --color-accent: #6c757d;
     /* src/components/css/variables.css:372 */
-    /* Scrollbar Colors Fallback */
-    /* src/components/css/variables.css:373 */
-    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
+    --color-glow: rgba(0, 10, 170, 0.3);
     /* src/components/css/variables.css:374 */
-    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
+    /* Sleek View Colors Fallback */
+    /* src/components/css/variables.css:375 */
+    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
     /* src/components/css/variables.css:376 */
-    /* Legacy aliases */
-    /* src/components/css/variables.css:377 */
-    --gradient-1: var(--color-gradient-1);
+    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
     /* src/components/css/variables.css:378 */
-    --gradient-2: var(--color-gradient-2);
+    /* Scrollbar Colors Fallback */
     /* src/components/css/variables.css:379 */
-    --gradient-3: var(--color-gradient-3);
+    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
     /* src/components/css/variables.css:380 */
-    --gradient-4: var(--color-gradient-4);
-    /* src/components/css/variables.css:381 */
-    --accent: var(--color-accent);
+    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
     /* src/components/css/variables.css:382 */
-    --glow: var(--color-glow);
+    /* Legacy aliases */
     /* src/components/css/variables.css:383 */
-    --sleek-main-bg: var(--color-sleek-main-bg);
+    --gradient-1: var(--color-gradient-1);
     /* src/components/css/variables.css:384 */
-    --sleek-main-border: var(--color-sleek-main-border);
+    --gradient-2: var(--color-gradient-2);
     /* src/components/css/variables.css:385 */
-    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    --gradient-3: var(--color-gradient-3);
     /* src/components/css/variables.css:386 */
-    --input-scrollbar-thumb-hover-color: var(
-/* src/components/css/variables.css:387 */
-      --color-scrollbar-input-thumb-hover
-/* src/components/css/variables.css:388 */
-    );
+    --gradient-4: var(--color-gradient-4);
+    /* src/components/css/variables.css:387 */
+    --accent: var(--color-accent);
+    /* src/components/css/variables.css:388 */
+    --glow: var(--color-glow);
     /* src/components/css/variables.css:389 */
+    --sleek-main-bg: var(--color-sleek-main-bg);
+    /* src/components/css/variables.css:390 */
+    --sleek-main-border: var(--color-sleek-main-border);
+    /* src/components/css/variables.css:391 */
+    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    /* src/components/css/variables.css:392 */
+    --input-scrollbar-thumb-hover-color: var(
+/* src/components/css/variables.css:393 */
+      --color-scrollbar-input-thumb-hover
+/* src/components/css/variables.css:394 */
+    );
+    /* src/components/css/variables.css:395 */
   }
 
-  /* src/components/css/variables.css:390 */
+  /* src/components/css/variables.css:396 */
 }
 
 /* src/components/css/VoiceAlternateView.css:3 */
@@ -126150,436 +126078,361 @@ svg.sleek-chat-input-whatsapp-icon:focus {
 
 /* src/components/css/VoiceAlternateView.css:31 */
 
-.voice-alternate-header .chat-header-new-chat-button,
-/* src/components/css/VoiceAlternateView.css:32 */
-.voice-alternate-header .chat-header-close-button {
-  /* src/components/css/VoiceAlternateView.css:33 */
-}
-
-/* src/components/css/VoiceAlternateView.css:35 */
-
-.voice-alternate-header .chat-header-new-chat-button:hover,
-/* src/components/css/VoiceAlternateView.css:36 */
-.voice-alternate-header .chat-header-close-button:hover {
-  /* src/components/css/VoiceAlternateView.css:37 */
-}
-
-/* src/components/css/VoiceAlternateView.css:39 */
-
 /* Main content area */
 
-/* src/components/css/VoiceAlternateView.css:40 */
+/* src/components/css/VoiceAlternateView.css:32 */
 
 .voice-alternate-main {
-  /* src/components/css/VoiceAlternateView.css:41 */
+  /* src/components/css/VoiceAlternateView.css:33 */
   display: flex;
   flex: 1 1 0%;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  /* src/components/css/VoiceAlternateView.css:42 */
-  /* background: var(--chat-widget-secondary-color); */
-  /* src/components/css/VoiceAlternateView.css:43 */
+  /* src/components/css/VoiceAlternateView.css:34 */
   position: relative;
-  /* src/components/css/VoiceAlternateView.css:44 */
+  /* src/components/css/VoiceAlternateView.css:35 */
 }
 
-/* src/components/css/VoiceAlternateView.css:46 */
+/* src/components/css/VoiceAlternateView.css:37 */
 
 /* Centered content wrapper */
 
-/* src/components/css/VoiceAlternateView.css:47 */
+/* src/components/css/VoiceAlternateView.css:38 */
 
 .voice-alternate-content-wrapper {
-  /* src/components/css/VoiceAlternateView.css:48 */
+  /* src/components/css/VoiceAlternateView.css:39 */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* src/components/css/VoiceAlternateView.css:49 */
+  /* src/components/css/VoiceAlternateView.css:40 */
   flex: 1;
-  /* src/components/css/VoiceAlternateView.css:50 */
-  width: 100%;
-  /* src/components/css/VoiceAlternateView.css:51 */
+  /* src/components/css/VoiceAlternateView.css:41 */
+  width: 90%;
+  /* src/components/css/VoiceAlternateView.css:42 */
+  height: 90%;
+  /* src/components/css/VoiceAlternateView.css:43 */
   position: relative;
-  /* src/components/css/VoiceAlternateView.css:52 */
+  /* src/components/css/VoiceAlternateView.css:44 */
+  overflow: visible;
+  /* src/components/css/VoiceAlternateView.css:45 */
+  border-radius: 16px;
+  /* src/components/css/VoiceAlternateView.css:46 */
+  margin-top: 16px;
+  /* src/components/css/VoiceAlternateView.css:47 */
+  margin-bottom: 12px;
+  /* src/components/css/VoiceAlternateView.css:48 */
+  background: linear-gradient(
+/* src/components/css/VoiceAlternateView.css:49 */
+    to bottom,
+/* src/components/css/VoiceAlternateView.css:50 */
+    var(--chat-widget-secondary-color) 0%,
+/* src/components/css/VoiceAlternateView.css:51 */
+    var(--chat-widget-secondary-color) 60%,
+/* src/components/css/VoiceAlternateView.css:52 */
+    var(--chat-widget-primary-color) 100%
+/* src/components/css/VoiceAlternateView.css:53 */
+  );
+  /* src/components/css/VoiceAlternateView.css:54 */
 }
 
-/* src/components/css/VoiceAlternateView.css:54 */
+/* src/components/css/VoiceAlternateView.css:56 */
 
-/* Recent message display */
-
-/* src/components/css/VoiceAlternateView.css:55 */
-
-.voice-alternate-message-container {
-  /* src/components/css/VoiceAlternateView.css:56 */
-  margin-left: auto;
-  margin-right: auto;
-  width: 95%;
-  padding: 0.5rem;
+.talking-head-wrapper {
   /* src/components/css/VoiceAlternateView.css:57 */
-  flex: 1;
+  width: 120%;
   /* src/components/css/VoiceAlternateView.css:58 */
-  display: flex;
+  height: 120%;
   /* src/components/css/VoiceAlternateView.css:59 */
-  flex-direction: column;
+  display: flex;
   /* src/components/css/VoiceAlternateView.css:60 */
-  position: relative;
+  align-items: center;
   /* src/components/css/VoiceAlternateView.css:61 */
-  z-index: 1;
+  justify-content: center;
   /* src/components/css/VoiceAlternateView.css:62 */
-}
-
-/* src/components/css/VoiceAlternateView.css:64 */
-
-.voice-alternate-message-box {
-  /* src/components/css/VoiceAlternateView.css:65 */
-  border-radius: 1rem;
-  background-color: transparent;
-  /* src/components/css/VoiceAlternateView.css:66 */
-  flex: 1;
-  /* src/components/css/VoiceAlternateView.css:67 */
-  display: flex;
-  /* src/components/css/VoiceAlternateView.css:68 */
-  align-items: flex-start;
-  /* src/components/css/VoiceAlternateView.css:69 */
-  justify-content: space-between;
-  /* src/components/css/VoiceAlternateView.css:70 */
-  min-height: 100px;
-  /* src/components/css/VoiceAlternateView.css:71 */
-  /* padding: 1rem; */
-  /* src/components/css/VoiceAlternateView.css:72 */
-}
-
-/* src/components/css/VoiceAlternateView.css:74 */
-
-.voice-alternate-message-speaker {
-  /* src/components/css/VoiceAlternateView.css:75 */
-  position: relative;
-  z-index: 10;
-  overflow: hidden;
-  border-radius: 9999px;
-  /* src/components/css/VoiceAlternateView.css:76 */
-  width: 12px;
-  /* src/components/css/VoiceAlternateView.css:77 */
-  height: 12px;
-  /* src/components/css/VoiceAlternateView.css:78 */
-  display: flex;
-  /* src/components/css/VoiceAlternateView.css:79 */
-  align-self: center;
-  /* src/components/css/VoiceAlternateView.css:80 */
-  /* Align with centered text */
-  /* src/components/css/VoiceAlternateView.css:81 */
-  margin-top: 0;
-  /* src/components/css/VoiceAlternateView.css:82 */
-  /* No additional margin needed */
-  /* src/components/css/VoiceAlternateView.css:83 */
   flex-shrink: 0;
+  /* src/components/css/VoiceAlternateView.css:63 */
+  position: relative;
+  /* src/components/css/VoiceAlternateView.css:64 */
+  z-index: 2;
+  /* src/components/css/VoiceAlternateView.css:65 */
+}
+
+/* src/components/css/VoiceAlternateView.css:67 */
+
+.voice-alternate-avatar-bars {
+  /* src/components/css/VoiceAlternateView.css:68 */
+  position: absolute;
+  /* src/components/css/VoiceAlternateView.css:69 */
+  bottom: 16px;
+  /* src/components/css/VoiceAlternateView.css:70 */
+  left: 50%;
+  /* src/components/css/VoiceAlternateView.css:71 */
+  transform: translateX(-50%);
+  /* src/components/css/VoiceAlternateView.css:73 */
+  display: flex;
+  /* src/components/css/VoiceAlternateView.css:74 */
+  align-items: center;
+  /* src/components/css/VoiceAlternateView.css:75 */
+  justify-content: center;
+  /* src/components/css/VoiceAlternateView.css:77 */
+  /* rounded-full */
+  /* src/components/css/VoiceAlternateView.css:78 */
+  border-radius: 9999px;
+  /* src/components/css/VoiceAlternateView.css:79 */
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  /* src/components/css/VoiceAlternateView.css:81 */
+  padding: 4px 12px;
+  /* src/components/css/VoiceAlternateView.css:83 */
+  /* backdrop-blur*/
   /* src/components/css/VoiceAlternateView.css:84 */
-  /* Prevent shrinking */
-  /* src/components/css/VoiceAlternateView.css:85 */
-  background: #e5e7eb;
+  backdrop-filter: blur(16px);
   /* src/components/css/VoiceAlternateView.css:86 */
-  /* Default inactive state */
+  z-index: 3;
   /* src/components/css/VoiceAlternateView.css:87 */
 }
 
 /* src/components/css/VoiceAlternateView.css:89 */
 
-.voice-alternate-message-speaker.listening {
-  /* src/components/css/VoiceAlternateView.css:90 */
-  background: #8b5cf6;
-  /* src/components/css/VoiceAlternateView.css:91 */
-}
+/* Recent message display */
 
-/* src/components/css/VoiceAlternateView.css:93 */
-
-.voice-alternate-message-speaker.speaking {
-  /* src/components/css/VoiceAlternateView.css:94 */
-  background: #058158;
-  /* src/components/css/VoiceAlternateView.css:95 */
-}
-
-/* src/components/css/VoiceAlternateView.css:97 */
-
-/* We want to show last message from AI Agent in all other agent states */
-
-/* src/components/css/VoiceAlternateView.css:98 */
-
-.voice-alternate-message-text {
-  /* src/components/css/VoiceAlternateView.css:99 */
-  text-align: left;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-style: normal;
-  color: rgb(55 65 81 / 0.8);
-  /* src/components/css/VoiceAlternateView.css:100 */
-  font-size: 14px;
-  /* src/components/css/VoiceAlternateView.css:101 */
-  line-height: 1.25;
-  /* src/components/css/VoiceAlternateView.css:102 */
-  flex-grow: 1;
-  /* src/components/css/VoiceAlternateView.css:103 */
-  /* Added to allow text to take available space/ */
-  /* src/components/css/VoiceAlternateView.css:104 */
-  margin-left: 12px;
-  /* src/components/css/VoiceAlternateView.css:105 */
-  /* Added some spacing between text and speaker */
-  /* src/components/css/VoiceAlternateView.css:106 */
+/* .voice-alternate-message-container {
+  @apply w-[95%];
+  flex: 1;
   display: flex;
-  /* src/components/css/VoiceAlternateView.css:107 */
-  align-items: center;
-  /* src/components/css/VoiceAlternateView.css:108 */
-  min-height: 100%;
-  /* src/components/css/VoiceAlternateView.css:109 */
-}
-
-/* src/components/css/VoiceAlternateView.css:111 */
-
-.voice-alternate-message-text.listening {
-  /* src/components/css/VoiceAlternateView.css:112 */
-  text-align: left;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-style: normal;
-  line-height: 1.625;
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
-  /* src/components/css/VoiceAlternateView.css:113 */
-}
-
-/* src/components/css/VoiceAlternateView.css:115 */
-
-.voice-alternate-message-text.speaking {
-  /* src/components/css/VoiceAlternateView.css:116 */
-  text-align: left;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-style: normal;
-  line-height: 1.625;
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
-  /* src/components/css/VoiceAlternateView.css:117 */
-}
-
-/* src/components/css/VoiceAlternateView.css:119 */
-
-.avatar {
-  /* src/components/css/VoiceAlternateView.css:120 */
+  flex-direction: column;
   position: relative;
+  z-index: 1;
+} */
+
+/* src/components/css/VoiceAlternateView.css:99 */
+
+.voice-alternate-chat-input-container {
+  /* src/components/css/VoiceAlternateView.css:100 */
+  display: flex;
+  /* src/components/css/VoiceAlternateView.css:101 */
+  align-items: center;
+  /* src/components/css/VoiceAlternateView.css:102 */
+  justify-content: center;
+  /* src/components/css/VoiceAlternateView.css:104 */
+  margin-bottom: 12px;
+  /* src/components/css/VoiceAlternateView.css:105 */
+  margin-left: 16px;
+  /* src/components/css/VoiceAlternateView.css:106 */
+  margin-right: 16px;
+  /* src/components/css/VoiceAlternateView.css:108 */
+  padding-top: 8px;
+  /* src/components/css/VoiceAlternateView.css:109 */
+  padding-bottom: 8px;
+  /* src/components/css/VoiceAlternateView.css:110 */
+  padding-left: 8px;
+  /* src/components/css/VoiceAlternateView.css:111 */
+  padding-right: 8px;
+  /* src/components/css/VoiceAlternateView.css:113 */
+  border-radius: 12px;
+  /* src/components/css/VoiceAlternateView.css:115 */
+  background: transparent;
+  /* src/components/css/VoiceAlternateView.css:116 */
+}
+
+/* src/components/css/VoiceAlternateView.css:118 */
+
+.voice-alternate-input-buttons {
+  /* src/components/css/VoiceAlternateView.css:119 */
+  display: flex;
+  /* src/components/css/VoiceAlternateView.css:120 */
+  /* vertical alignment */
   /* src/components/css/VoiceAlternateView.css:121 */
-  width: 350px;
+  align-items: center;
   /* src/components/css/VoiceAlternateView.css:122 */
-  height: 350px;
+  /* horizontal alignment */
   /* src/components/css/VoiceAlternateView.css:123 */
-  overflow: hidden;
+  justify-content: center;
   /* src/components/css/VoiceAlternateView.css:124 */
-}
-
-/* src/components/css/VoiceAlternateView.css:126 */
-
-.face {
-  /* src/components/css/VoiceAlternateView.css:127 */
   width: 100%;
-  /* src/components/css/VoiceAlternateView.css:128 */
-  height: 100%;
+  /* src/components/css/VoiceAlternateView.css:125 */
+  gap: 16px;
+  /* src/components/css/VoiceAlternateView.css:126 */
+}
+
+/* src/components/css/VoiceAlternateView.css:128 */
+
+.voice-alternate-voice-button {
   /* src/components/css/VoiceAlternateView.css:129 */
-  -o-object-fit: cover;
-     object-fit: cover;
+  transition-property: all;
   /* src/components/css/VoiceAlternateView.css:130 */
-  will-change: transform;
+  transition-duration: 150ms;
   /* src/components/css/VoiceAlternateView.css:131 */
-}
-
-/* src/components/css/VoiceAlternateView.css:133 */
-
-/* Eye blink overlay */
-
-/* src/components/css/VoiceAlternateView.css:134 */
-
-.eye-blink {
+  transition-timing-function: ease-in-out;
+  /* src/components/css/VoiceAlternateView.css:133 */
+  display: flex;
+  /* src/components/css/VoiceAlternateView.css:134 */
+  align-items: center;
   /* src/components/css/VoiceAlternateView.css:135 */
-  position: absolute;
-  /* src/components/css/VoiceAlternateView.css:136 */
-  top: 36%;
+  justify-content: center;
   /* src/components/css/VoiceAlternateView.css:137 */
-  left: 14%;
-  /* src/components/css/VoiceAlternateView.css:138 */
-  width: 72%;
+  border-radius: 12px;
   /* src/components/css/VoiceAlternateView.css:139 */
-  height: 14%;
+  height: 50px;
   /* src/components/css/VoiceAlternateView.css:140 */
-  background: #f2f2f2;
-  /* src/components/css/VoiceAlternateView.css:141 */
-  /* match wall color */
+  width: 180px;
   /* src/components/css/VoiceAlternateView.css:142 */
-  opacity: 0;
+  color: var(--chat-widget-button-content-color);
   /* src/components/css/VoiceAlternateView.css:143 */
-  pointer-events: none;
-  /* src/components/css/VoiceAlternateView.css:144 */
-  transition: opacity 0.05s linear;
-  /* src/components/css/VoiceAlternateView.css:145 */
-}
-
+  background: color-mix(
+/* src/components/css/VoiceAlternateView.css:144 */
+    in srgb,
+/* src/components/css/VoiceAlternateView.css:145 */
+    var(--chat-widget-primary-color) 50%,
+/* src/components/css/VoiceAlternateView.css:146 */
+    var(--chat-widget-secondary-color) 50%
 /* src/components/css/VoiceAlternateView.css:147 */
-
-.blink .eye-blink {
+  );
   /* src/components/css/VoiceAlternateView.css:148 */
-  opacity: 1;
-  /* src/components/css/VoiceAlternateView.css:149 */
 }
 
-/* src/components/css/VoiceAlternateView.css:151 */
+/* src/components/css/VoiceAlternateView.css:150 */
 
-.mouth {
+.voice-alternate-voice-button:hover {
+  /* src/components/css/VoiceAlternateView.css:151 */
+  transform: scale(1.05);
   /* src/components/css/VoiceAlternateView.css:152 */
-  position: absolute;
+  opacity: var(--button-opacity-hover);
   /* src/components/css/VoiceAlternateView.css:153 */
-  bottom: 24%;
+  /* background-color: #1f2937; */
   /* src/components/css/VoiceAlternateView.css:154 */
-  left: 50%;
-  /* src/components/css/VoiceAlternateView.css:155 */
-  width: 26%;
-  /* src/components/css/VoiceAlternateView.css:156 */
-  height: 6%;
+}
+
+/* src/components/css/VoiceAlternateView.css:156 */
+
+.voice-alternate-voice-button:focus {
   /* src/components/css/VoiceAlternateView.css:157 */
-  background: rgba(0, 0, 0, 0.22);
+  outline: none;
   /* src/components/css/VoiceAlternateView.css:158 */
-  border-radius: 0 0 999px 999px;
+  /* focus:ring-2 focus:ring-gray-400 */
   /* src/components/css/VoiceAlternateView.css:159 */
-  transform-origin: top;
+  box-shadow: 0 0 0 2px #9ca3af;
   /* src/components/css/VoiceAlternateView.css:160 */
-  transform: translateX(-50%) scaleY(var(--mouth));
-  /* src/components/css/VoiceAlternateView.css:161 */
-  transition: transform 0.04s linear;
-  /* src/components/css/VoiceAlternateView.css:162 */
-  pointer-events: none;
+}
+
+/* src/components/css/VoiceAlternateView.css:162 */
+
+.voice-alternate-voice-button:disabled {
   /* src/components/css/VoiceAlternateView.css:163 */
+  cursor: not-allowed;
+  /* src/components/css/VoiceAlternateView.css:164 */
+  opacity: var(--button-opacity-disabled);
+  /* src/components/css/VoiceAlternateView.css:165 */
 }
 
-/* src/components/css/VoiceAlternateView.css:165 */
+/* src/components/css/VoiceAlternateView.css:167 */
 
-.avatar {
-  /* src/components/css/VoiceAlternateView.css:166 */
-  animation: breathe 5.2s ease-in-out infinite;
-  /* src/components/css/VoiceAlternateView.css:167 */
-}
-
-/* src/components/css/VoiceAlternateView.css:169 */
-
-@keyframes breathe {
+.voice-alternate-disconnect-button {
+  /* src/components/css/VoiceAlternateView.css:168 */
+  transition-property: all;
+  /* src/components/css/VoiceAlternateView.css:169 */
+  transition-duration: 150ms;
   /* src/components/css/VoiceAlternateView.css:170 */
-
-  0% {
-    /* src/components/css/VoiceAlternateView.css:171 */
-    transform: translateY(0) scale(1);
-    /* src/components/css/VoiceAlternateView.css:172 */
-  }
-
+  transition-timing-function: ease-in-out;
+  /* src/components/css/VoiceAlternateView.css:172 */
+  display: flex;
+  /* src/components/css/VoiceAlternateView.css:173 */
+  align-items: center;
   /* src/components/css/VoiceAlternateView.css:174 */
-
-  50% {
-    /* src/components/css/VoiceAlternateView.css:175 */
-    transform: translateY(-1px) scale(1.008);
-    /* src/components/css/VoiceAlternateView.css:176 */
-  }
-
+  justify-content: center;
+  /* src/components/css/VoiceAlternateView.css:176 */
+  border-radius: 12px;
   /* src/components/css/VoiceAlternateView.css:178 */
-
-  100% {
-    /* src/components/css/VoiceAlternateView.css:179 */
-    transform: translateY(0) scale(1);
-    /* src/components/css/VoiceAlternateView.css:180 */
-  }
-
+  height: 50px;
+  /* src/components/css/VoiceAlternateView.css:179 */
+  width: 180px;
   /* src/components/css/VoiceAlternateView.css:181 */
+  color: var(--chat-widget-button-content-color);
+  /* src/components/css/VoiceAlternateView.css:182 */
+  background: var(--color-button-disconnect);
+  /* src/components/css/VoiceAlternateView.css:183 */
 }
 
-/* src/components/css/VoiceAlternateView.css:183 */
+/* src/components/css/VoiceAlternateView.css:185 */
 
-@keyframes sway {
-  /* src/components/css/VoiceAlternateView.css:184 */
-
-  0% {
-    /* src/components/css/VoiceAlternateView.css:185 */
-    rotate: 0deg;
-    /* src/components/css/VoiceAlternateView.css:186 */
-  }
-
+.voice-alternate-disconnect-button:hover {
+  /* src/components/css/VoiceAlternateView.css:186 */
+  transform: scale(1.05);
+  /* src/components/css/VoiceAlternateView.css:187 */
+  opacity: var(--button-opacity-hover);
   /* src/components/css/VoiceAlternateView.css:188 */
+}
 
-  50% {
-    /* src/components/css/VoiceAlternateView.css:189 */
-    rotate: 0.3deg;
-    /* src/components/css/VoiceAlternateView.css:190 */
-  }
+/* src/components/css/VoiceAlternateView.css:190 */
 
+.voice-alternate-disconnect-button:focus {
+  /* src/components/css/VoiceAlternateView.css:191 */
+  outline: none;
   /* src/components/css/VoiceAlternateView.css:192 */
-
-  100% {
-    /* src/components/css/VoiceAlternateView.css:193 */
-    rotate: 0deg;
-    /* src/components/css/VoiceAlternateView.css:194 */
-  }
-
-  /* src/components/css/VoiceAlternateView.css:195 */
+  box-shadow: 0 0 0 2px #9ca3af;
+  /* src/components/css/VoiceAlternateView.css:193 */
 }
 
-/* src/components/css/VoiceAlternateView.css:197 */
+/* src/components/css/VoiceAlternateView.css:195 */
 
-.avatar.listening {
+.voice-alternate-disconnect-button:disabled {
+  /* src/components/css/VoiceAlternateView.css:196 */
+  cursor: not-allowed;
+  /* src/components/css/VoiceAlternateView.css:197 */
+  opacity: var(--button-opacity-disabled);
   /* src/components/css/VoiceAlternateView.css:198 */
-  filter: brightness(0.96);
-  /* src/components/css/VoiceAlternateView.css:199 */
 }
 
-/* src/components/css/VoiceAlternateView.css:201 */
-
-.avatar.speaking {
-  /* src/components/css/VoiceAlternateView.css:202 */
-  filter: brightness(1.04);
-  /* src/components/css/VoiceAlternateView.css:203 */
-}
-
-/* src/components/css/VoiceAlternateView.css:205 */
+/* src/components/css/VoiceAlternateView.css:200 */
 
 /* Responsive design */
 
-/* src/components/css/VoiceAlternateView.css:206 */
+/* src/components/css/VoiceAlternateView.css:201 */
 
 @media (max-width: 768px) {
-  /* src/components/css/VoiceAlternateView.css:207 */
+  /* src/components/css/VoiceAlternateView.css:202 */
 
   .voice-alternate-main {
-    /* src/components/css/VoiceAlternateView.css:208 */
+    /* src/components/css/VoiceAlternateView.css:203 */
     display: flex;
     flex: 1 1 0%;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    /* src/components/css/VoiceAlternateView.css:209 */
+    /* src/components/css/VoiceAlternateView.css:204 */
     position: relative;
+    /* src/components/css/VoiceAlternateView.css:205 */
+  }
+
+  /* src/components/css/VoiceAlternateView.css:207 */
+
+  .voice-alternate-content-wrapper {
+    /* src/components/css/VoiceAlternateView.css:208 */
+    padding-bottom: 100px;
+    /* src/components/css/VoiceAlternateView.css:209 */
+    /* Less space on mobile */
     /* src/components/css/VoiceAlternateView.css:210 */
   }
 
   /* src/components/css/VoiceAlternateView.css:212 */
 
-  .voice-alternate-content-wrapper {
-    /* src/components/css/VoiceAlternateView.css:213 */
-    padding-bottom: 100px;
-    /* src/components/css/VoiceAlternateView.css:214 */
-    /* Less space on mobile */
-    /* src/components/css/VoiceAlternateView.css:215 */
-  }
-
-  /* src/components/css/VoiceAlternateView.css:217 */
-
   .voice-alternate-message-box {
-    /* src/components/css/VoiceAlternateView.css:218 */
+    /* src/components/css/VoiceAlternateView.css:213 */
     min-height: 60px;
-    /* src/components/css/VoiceAlternateView.css:219 */
+    /* src/components/css/VoiceAlternateView.css:214 */
   }
 
-  /* src/components/css/VoiceAlternateView.css:220 */
+  /* src/components/css/VoiceAlternateView.css:216 */
+
+  .voice-alternate-chat-input-container {
+    /* src/components/css/VoiceAlternateView.css:217 */
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    /* src/components/css/VoiceAlternateView.css:218 */
+  }
+
+  /* src/components/css/VoiceAlternateView.css:219 */
 }
 
 /* End of file: components/css/VoiceAlternateView.css */
@@ -126631,173 +126484,169 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* Voice State Colors */
   /* src/components/css/variables.css:29 */
   --color-voice-listening: #3b82f6;
-  /* Blue */
   /* src/components/css/variables.css:30 */
-  --color-voice-speaking: #10b981;
-  /* Green */
+  /* Blue */
   /* src/components/css/variables.css:31 */
-  --color-voice-thinking: #f59e0b;
-  /* Amber/Orange */
+  --color-voice-speaking: #10b981;
   /* src/components/css/variables.css:32 */
-  --color-voice-disconnected: #ef4444cb;
-  /* Red */
+  /* Green */
+  /* src/components/css/variables.css:33 */
+  --color-voice-thinking: #f59e0b;
   /* src/components/css/variables.css:34 */
-  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
+  /* Amber/Orange */
   /* src/components/css/variables.css:35 */
-  /* --color-voice-speaking-alt: #058158; Darker Green */
+  --color-voice-disconnected: #ef4444cb;
   /* src/components/css/variables.css:36 */
-  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
-  /* src/components/css/variables.css:37 */
-  /* --color-voice-thinking-alt: #fbbf24; Yellow */
+  /* Red */
+  /* src/components/css/variables.css:38 */
+  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
   /* src/components/css/variables.css:39 */
-  /* Special/Brand Colors */
+  /* --color-voice-speaking-alt: #058158; Darker Green */
   /* src/components/css/variables.css:40 */
-  --color-whatsapp: #1eb655;
-  /* src/components/css/variables.css:42 */
-  /* Opacity Values */
+  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
+  /* src/components/css/variables.css:41 */
+  /* --color-voice-thinking-alt: #fbbf24; Yellow */
   /* src/components/css/variables.css:43 */
-  --opacity-disabled: 0.7;
+  /* Special/Brand Colors */
   /* src/components/css/variables.css:44 */
+  --color-whatsapp: #1eb655;
+  /* src/components/css/variables.css:46 */
+  /* Opacity Values */
+  /* src/components/css/variables.css:47 */
+  --opacity-disabled: 0.7;
+  /* src/components/css/variables.css:48 */
   --opacity-hover: 0.8;
-  /* src/components/css/variables.css:45 */
+  /* src/components/css/variables.css:49 */
   --opacity-normal: 1;
   /* ================================================
      INPUT AREA VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:51 */
-  /* Input Colors */
-  /* src/components/css/variables.css:53 */
-  --color-input-background: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:54 */
-  --color-input-background-avatar-view: var(--chat-widget-primary-color);
   /* src/components/css/variables.css:55 */
+  /* Input Colors */
+  /* src/components/css/variables.css:57 */
+  --color-input-background: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:58 */
   --color-input-text: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:56 */
+  /* src/components/css/variables.css:59 */
   --color-input-placeholder-text: color-mix(
-/* src/components/css/variables.css:57 */
-    in srgb,
-/* src/components/css/variables.css:58 */
-    var(--color-input-text) 70%,
-/* src/components/css/variables.css:59 */
-    white
 /* src/components/css/variables.css:60 */
+    in srgb,
+/* src/components/css/variables.css:61 */
+    var(--color-input-text) 70%,
+/* src/components/css/variables.css:62 */
+    white
+/* src/components/css/variables.css:63 */
   );
-  /* src/components/css/variables.css:61 */
-  --color-input-placeholder-opacity: 70%;
-  /* src/components/css/variables.css:62 */
-  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:64 */
-  /* Input Dimensions */
+  --color-input-placeholder-opacity: 70%;
   /* src/components/css/variables.css:65 */
-  --input-default-height: 40px;
-  /* src/components/css/variables.css:66 */
-  --input-min-height: 40px;
+  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:67 */
-  --input-max-height: 120px;
+  /* Input Dimensions */
   /* src/components/css/variables.css:68 */
-  --input-max-height-tablet: 100px;
+  --input-default-height: 40px;
   /* src/components/css/variables.css:69 */
-  --input-max-height-mobile: 80px;
+  --input-min-height: 40px;
+  /* src/components/css/variables.css:70 */
+  --input-max-height: 120px;
   /* src/components/css/variables.css:71 */
-  /* Input Line Height */
+  --input-max-height-tablet: 100px;
   /* src/components/css/variables.css:72 */
-  --input-line-height: 20px;
+  --input-max-height-mobile: 80px;
   /* src/components/css/variables.css:74 */
-  /* Input Padding */
+  /* Input Line Height */
   /* src/components/css/variables.css:75 */
-  --input-text-padding-horizontal: 4px;
-  /* src/components/css/variables.css:76 */
-  --input-text-padding-vertical: 0px;
+  --input-line-height: 20px;
   /* src/components/css/variables.css:77 */
-  --input-text-padding: 0 var(--input-text-padding-horizontal);
+  /* Input Padding */
   /* src/components/css/variables.css:78 */
-  --input-container-padding: 6px 8px;
+  --input-text-padding-horizontal: 4px;
   /* src/components/css/variables.css:79 */
-  --input-container-padding-sleek: 4px 4px;
+  --input-text-padding-vertical: 0px;
+  /* src/components/css/variables.css:80 */
+  --input-text-padding: 0 var(--input-text-padding-horizontal);
   /* src/components/css/variables.css:81 */
-  /* Input Font */
+  --input-container-padding: 6px 8px;
   /* src/components/css/variables.css:82 */
-  --input-font-size: var(--chat-widget-message-font-size);
-  /* src/components/css/variables.css:83 */
-  --input-font-weight: 400;
+  --input-container-padding-sleek: 4px 4px;
   /* src/components/css/variables.css:84 */
-  --input-font-weight-focus: 500;
+  /* Input Font */
   /* src/components/css/variables.css:85 */
+  --input-font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/variables.css:86 */
+  --input-font-weight: 400;
+  /* src/components/css/variables.css:87 */
+  --input-font-weight-focus: 500;
+  /* src/components/css/variables.css:88 */
   --input-font-weight-bold: 600;
   /* ================================================
      INPUT SCROLLBAR VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:91 */
+  /* src/components/css/variables.css:94 */
   /* Scrollbar Colors */
-  /* src/components/css/variables.css:92 */
+  /* src/components/css/variables.css:95 */
   --color-scrollbar-input-thumb: color-mix(
-/* src/components/css/variables.css:93 */
-    in srgb,
-/* src/components/css/variables.css:94 */
-    var(--chat-widget-primary-color) 75%,
-/* src/components/css/variables.css:95 */
-    transparent
 /* src/components/css/variables.css:96 */
-  );
-  /* src/components/css/variables.css:97 */
-  --color-scrollbar-input-thumb-hover: color-mix(
+    in srgb,
+/* src/components/css/variables.css:97 */
+    var(--chat-widget-primary-color) 75%,
 /* src/components/css/variables.css:98 */
-    in srgb,
+    transparent
 /* src/components/css/variables.css:99 */
-    var(--chat-widget-primary-color) 90%,
-/* src/components/css/variables.css:100 */
-    transparent
+  );
+  /* src/components/css/variables.css:100 */
+  --color-scrollbar-input-thumb-hover: color-mix(
 /* src/components/css/variables.css:101 */
-  );
-  /* src/components/css/variables.css:103 */
-  --color-scrollbar-input-thumb-avatar-view: color-mix(
+    in srgb,
+/* src/components/css/variables.css:102 */
+    var(--chat-widget-primary-color) 90%,
+/* src/components/css/variables.css:103 */
+    transparent
 /* src/components/css/variables.css:104 */
-    in srgb,
-/* src/components/css/variables.css:105 */
-    var(--chat-widget-secondary-color) 75%,
-/* src/components/css/variables.css:106 */
-    transparent
+  );
+  /* src/components/css/variables.css:106 */
+  --color-scrollbar-input-thumb-avatar-view: color-mix(
 /* src/components/css/variables.css:107 */
-  );
-  /* src/components/css/variables.css:108 */
-  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
-/* src/components/css/variables.css:109 */
     in srgb,
-/* src/components/css/variables.css:110 */
-    var(--chat-widget-secondary-color) 90%,
-/* src/components/css/variables.css:111 */
+/* src/components/css/variables.css:108 */
+    var(--chat-widget-secondary-color) 75%,
+/* src/components/css/variables.css:109 */
     transparent
-/* src/components/css/variables.css:112 */
+/* src/components/css/variables.css:110 */
   );
-  /* src/components/css/variables.css:114 */
-  --color-scrollbar-input-track: transparent;
-  /* src/components/css/variables.css:116 */
-  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:111 */
+  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
+/* src/components/css/variables.css:112 */
+    in srgb,
+/* src/components/css/variables.css:113 */
+    var(--chat-widget-secondary-color) 90%,
+/* src/components/css/variables.css:114 */
+    transparent
+/* src/components/css/variables.css:115 */
+  );
   /* src/components/css/variables.css:117 */
+  --color-scrollbar-input-track: transparent;
+  /* src/components/css/variables.css:119 */
+  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:120 */
   --input-scrollbar-border-radius: 2.5px;
-  /* src/components/css/variables.css:118 */
+  /* src/components/css/variables.css:121 */
   --input-scrollbar-thumb-hover-opacity: var(--opacity-hover);
   /* ================================================
      BUTTON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:124 */
-  /* Button Dimensions */
-  /* src/components/css/variables.css:125 */
-  --button-size-primary: 32px;
-  /* src/components/css/variables.css:126 */
-  --button-padding-primary: 4px;
   /* src/components/css/variables.css:127 */
-  --button-size-secondary: 24px;
+  /* Button Dimensions */
+  /* src/components/css/variables.css:128 */
+  --button-size-primary: 32px;
   /* src/components/css/variables.css:129 */
-  /* Button Colors */
+  --button-padding-primary: 4px;
   /* src/components/css/variables.css:130 */
+  --button-size-secondary: 24px;
+  /* src/components/css/variables.css:132 */
+  /* Button Colors */
+  /* src/components/css/variables.css:133 */
   --color-button-background-primary: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:131 */
-  --color-button-background-primary-avatar-view: var(
-/* src/components/css/variables.css:132 */
-    --chat-widget-secondary-color
-/* src/components/css/variables.css:133 */
-  );
   /* src/components/css/variables.css:134 */
   --color-button-background-hover: var(--chat-widget-primary-color-hover);
   /* src/components/css/variables.css:135 */
@@ -126805,279 +126654,282 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* src/components/css/variables.css:136 */
   --color-button-fill: var(--chat-widget-button-content-color);
   /* src/components/css/variables.css:138 */
-  /* Button Opacity States */
-  /* src/components/css/variables.css:139 */
-  --button-opacity-normal: var(--opacity-normal);
+  --color-button-disconnect: #ef4444;
   /* src/components/css/variables.css:140 */
-  --button-opacity-hover: var(--opacity-hover);
+  /* Button Opacity States */
   /* src/components/css/variables.css:141 */
+  --button-opacity-normal: var(--opacity-normal);
+  /* src/components/css/variables.css:142 */
+  --button-opacity-hover: var(--opacity-hover);
+  /* src/components/css/variables.css:143 */
   --button-opacity-disabled: var(--opacity-disabled);
   /* ================================================
      ICON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:147 */
-  /* Icon Sizes */
-  /* src/components/css/variables.css:148 */
-  --button-icon-size-secondary: 16px;
   /* src/components/css/variables.css:149 */
+  /* Icon Sizes */
+  /* src/components/css/variables.css:150 */
+  --button-icon-size-secondary: 16px;
+  /* src/components/css/variables.css:151 */
   --button-icon-size-primary: 20px;
+  /* src/components/css/variables.css:152 */
   /* w-5 h-5 equivalent */
   /* ================================================
      CHAT MESSAGE CONTAINER SCROLLBAR
      ================================================ */
-  /* src/components/css/variables.css:155 */
+  /* src/components/css/variables.css:158 */
   --message-scrollbar-width: thin;
-  /* src/components/css/variables.css:156 */
-  --message-scrollbar-width-px: 6px;
-  /* src/components/css/variables.css:157 */
-  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:159 */
-  /* Scrollbar Colors */
+  --message-scrollbar-width-px: 6px;
   /* src/components/css/variables.css:160 */
-  --color-scrollbar-message-thumb-default: rgb(209 213 219);
-  /* src/components/css/variables.css:161 */
-  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:162 */
+  /* Scrollbar Colors */
+  /* src/components/css/variables.css:163 */
+  --color-scrollbar-message-thumb-default: rgb(209 213 219);
+  /* src/components/css/variables.css:164 */
+  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  /* src/components/css/variables.css:165 */
   --color-scrollbar-message-thumb-theme: var(
-/* src/components/css/variables.css:163 */
+/* src/components/css/variables.css:166 */
     --chat-widget-button-content-color,
-/* src/components/css/variables.css:164 */
-    var(--chat-widget-secondary-color)
-/* src/components/css/variables.css:165 */
-  );
-  /* src/components/css/variables.css:166 */
-  --color-scrollbar-message-thumb-hover-mix: color-mix(
 /* src/components/css/variables.css:167 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:168 */
-    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
-/* src/components/css/variables.css:169 */
-      80%,
-/* src/components/css/variables.css:170 */
-    var(--chat-widget-primary-color)
-/* src/components/css/variables.css:171 */
   );
-  /* src/components/css/variables.css:172 */
+  /* src/components/css/variables.css:169 */
+  --color-scrollbar-message-thumb-hover-mix: color-mix(
+/* src/components/css/variables.css:170 */
+    in srgb,
+/* src/components/css/variables.css:171 */
+    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
+/* src/components/css/variables.css:172 */
+      80%,
+/* src/components/css/variables.css:173 */
+    var(--chat-widget-primary-color)
+/* src/components/css/variables.css:174 */
+  );
+  /* src/components/css/variables.css:175 */
   --color-scrollbar-message-track: transparent;
   /* ================================================
      CHAT MESSAGE
      ================================================ */
-  /* src/components/css/variables.css:178 */
+  /* src/components/css/variables.css:181 */
   --message-text-color: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:179 */
+  /* src/components/css/variables.css:182 */
   --message-font-size: var(--chat-widget-message-font-size);
   /* ================================================
      CHAT MESSAGE BUBBLES
      ================================================ */
-  /* src/components/css/variables.css:185 */
+  /* src/components/css/variables.css:188 */
   --message-bubble-background-color: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:186 */
+  /* src/components/css/variables.css:189 */
   --message-bubble-icon-color: var(--chat-widget-secondary-color);
   /* ================================================
      ENGAGEMENT HOOK IMAGE
      ================================================ */
-  /* src/components/css/variables.css:192 */
+  /* src/components/css/variables.css:195 */
   /* Engagement Hook Image Variables (defined elsewhere via JavaScript) */
-  /* src/components/css/variables.css:193 */
-  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
-  /* src/components/css/variables.css:194 */
-  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
   /* src/components/css/variables.css:196 */
-  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
   /* src/components/css/variables.css:197 */
+  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
+  /* src/components/css/variables.css:199 */
+  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* src/components/css/variables.css:200 */
   --engagement-hook-image-height: var(
-/* src/components/css/variables.css:198 */
+/* src/components/css/variables.css:201 */
     --chat-widget-engagement-hook-image-height
-/* src/components/css/variables.css:199 */
+/* src/components/css/variables.css:202 */
   );
   /* ================================================
      TRANSITION VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:205 */
-  --transition-fast: 0.2s ease;
-  /* src/components/css/variables.css:206 */
-  --transition-normal: all 0.3s ease;
-  /* src/components/css/variables.css:207 */
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   /* src/components/css/variables.css:208 */
+  --transition-fast: 0.2s ease;
+  /* src/components/css/variables.css:209 */
+  --transition-normal: all 0.3s ease;
+  /* src/components/css/variables.css:210 */
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* src/components/css/variables.css:211 */
   --transition-slow-ease: 0.4s ease;
   /* ================================================
      BORDER RADIUS VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:214 */
-  --border-radius-small: 2.5px;
-  /* src/components/css/variables.css:215 */
-  --border-radius-medium: 3px;
-  /* src/components/css/variables.css:216 */
-  --border-radius-large: 12px;
   /* src/components/css/variables.css:217 */
-  --border-radius-xl: 16px;
+  --border-radius-small: 2.5px;
   /* src/components/css/variables.css:218 */
-  --border-radius-2xl: 20px;
+  --border-radius-medium: 3px;
   /* src/components/css/variables.css:219 */
+  --border-radius-large: 12px;
+  /* src/components/css/variables.css:220 */
+  --border-radius-xl: 16px;
+  /* src/components/css/variables.css:221 */
+  --border-radius-2xl: 20px;
+  /* src/components/css/variables.css:222 */
   --border-radius-full: 9999px;
   /* ================================================
      SPACING & GAP VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:225 */
-  --spacing-gap-xs: 0.5px;
-  /* src/components/css/variables.css:226 */
-  --spacing-gap-sm: 4px;
-  /* src/components/css/variables.css:227 */
-  --spacing-gap-md: 8px;
   /* src/components/css/variables.css:228 */
-  --spacing-gap-lg: 12px;
+  --spacing-gap-xs: 0.5px;
   /* src/components/css/variables.css:229 */
+  --spacing-gap-sm: 4px;
+  /* src/components/css/variables.css:230 */
+  --spacing-gap-md: 8px;
+  /* src/components/css/variables.css:231 */
+  --spacing-gap-lg: 12px;
+  /* src/components/css/variables.css:232 */
   --spacing-gap-xl: 16px;
   /* ================================================
      Z-INDEX VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:235 */
-  --z-index-base: 1;
-  /* src/components/css/variables.css:236 */
-  --z-index-elevated: 10;
-  /* src/components/css/variables.css:237 */
-  --z-index-high: 20;
   /* src/components/css/variables.css:238 */
+  --z-index-base: 1;
+  /* src/components/css/variables.css:239 */
+  --z-index-elevated: 10;
+  /* src/components/css/variables.css:240 */
+  --z-index-high: 20;
+  /* src/components/css/variables.css:241 */
   --z-index-maximum: 9999;
   /* ================================================
      BORDER VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:244 */
+  /* src/components/css/variables.css:247 */
   --border-width-thin: 1px;
-  /* src/components/css/variables.css:245 */
+  /* src/components/css/variables.css:248 */
   --border-width-medium: 2px;
-  /* src/components/css/variables.css:246 */
+  /* src/components/css/variables.css:249 */
   --border-width-thick: 4px;
   /* ================================================
      BOX SHADOW VARIABLES (for consistency)
      ================================================ */
-  /* src/components/css/variables.css:252 */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  /* src/components/css/variables.css:253 */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:254 */
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   /* src/components/css/variables.css:255 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* src/components/css/variables.css:256 */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:257 */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:258 */
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
   /* ================================================
      SLEEK VIEW SPECIFIC VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:261 */
-  /* These are already defined in SleekView.css but should be here for consistency */
-  /* src/components/css/variables.css:262 */
-  --sleek-main-min-height: 0px;
-  /* src/components/css/variables.css:263 */
-  --sleek-border-radius: var(--border-radius-large);
   /* src/components/css/variables.css:264 */
-  --sleek-main-bg: var(--color-sleek-main-bg);
+  /* These are already defined in SleekView.css but should be here for consistency */
   /* src/components/css/variables.css:265 */
-  --sleek-main-border: var(--color-sleek-main-border);
+  --sleek-main-min-height: 0px;
   /* src/components/css/variables.css:266 */
-  --sleek-main-text-color: var(--color-sleek-main-text);
+  --sleek-border-radius: var(--border-radius-large);
+  /* src/components/css/variables.css:267 */
+  --sleek-main-bg: var(--color-sleek-main-bg);
   /* src/components/css/variables.css:268 */
-  /* Sleek View Colors */
+  --sleek-main-border: var(--color-sleek-main-border);
   /* src/components/css/variables.css:269 */
+  --sleek-main-text-color: var(--color-sleek-main-text);
+  /* src/components/css/variables.css:271 */
+  /* Sleek View Colors */
+  /* src/components/css/variables.css:272 */
   --color-sleek-main-bg: color-mix(
-/* src/components/css/variables.css:270 */
-    in srgb,
-/* src/components/css/variables.css:271 */
-    var(--chat-widget-primary-color) 10%,
-/* src/components/css/variables.css:272 */
-    white
 /* src/components/css/variables.css:273 */
+    in srgb,
+/* src/components/css/variables.css:274 */
+    var(--chat-widget-primary-color) 10%,
+/* src/components/css/variables.css:275 */
+    white
+/* src/components/css/variables.css:276 */
   );
-  /* src/components/css/variables.css:274 */
-  --color-sleek-main-border: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:275 */
-  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:277 */
-  /* Gradient Colors (derived from primary/secondary) */
+  --color-sleek-main-border: var(--chat-widget-secondary-color);
   /* src/components/css/variables.css:278 */
-  --color-gradient-1: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:279 */
-  --color-gradient-2: var(--chat-widget-secondary-color);
+  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:280 */
+  /* Gradient Colors (derived from primary/secondary) */
+  /* src/components/css/variables.css:281 */
+  --color-gradient-1: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:282 */
+  --color-gradient-2: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:283 */
   --color-gradient-3: color-mix(
-/* src/components/css/variables.css:281 */
-    in srgb,
-/* src/components/css/variables.css:282 */
-    var(--chat-widget-primary-color) 60%,
-/* src/components/css/variables.css:283 */
-    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:284 */
-  );
-  /* src/components/css/variables.css:285 */
-  --color-gradient-4: color-mix(
+    in srgb,
+/* src/components/css/variables.css:285 */
+    var(--chat-widget-primary-color) 60%,
 /* src/components/css/variables.css:286 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:287 */
-    var(--chat-widget-primary-color) 40%,
-/* src/components/css/variables.css:288 */
-    var(--chat-widget-secondary-color)
+  );
+  /* src/components/css/variables.css:288 */
+  --color-gradient-4: color-mix(
 /* src/components/css/variables.css:289 */
-  );
-  /* src/components/css/variables.css:290 */
-  --color-accent: color-mix(
+    in srgb,
+/* src/components/css/variables.css:290 */
+    var(--chat-widget-primary-color) 40%,
 /* src/components/css/variables.css:291 */
-    in srgb,
-/* src/components/css/variables.css:292 */
-    var(--chat-widget-primary-color) 70%,
-/* src/components/css/variables.css:293 */
     var(--chat-widget-secondary-color)
+/* src/components/css/variables.css:292 */
+  );
+  /* src/components/css/variables.css:293 */
+  --color-accent: color-mix(
 /* src/components/css/variables.css:294 */
-  );
-  /* src/components/css/variables.css:295 */
-  --color-glow: color-mix(
-/* src/components/css/variables.css:296 */
     in srgb,
+/* src/components/css/variables.css:295 */
+    var(--chat-widget-primary-color) 70%,
+/* src/components/css/variables.css:296 */
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:297 */
-    var(--chat-widget-primary-color) 30%,
-/* src/components/css/variables.css:298 */
-    transparent
-/* src/components/css/variables.css:299 */
   );
-  /* src/components/css/variables.css:301 */
-  /* Legacy Gradient Variables (for backward compatibility) */
-  /* src/components/css/variables.css:302 */
-  --gradient-1: var(--color-gradient-1);
-  /* src/components/css/variables.css:303 */
-  --gradient-2: var(--color-gradient-2);
+  /* src/components/css/variables.css:298 */
+  --color-glow: color-mix(
+/* src/components/css/variables.css:299 */
+    in srgb,
+/* src/components/css/variables.css:300 */
+    var(--chat-widget-primary-color) 30%,
+/* src/components/css/variables.css:301 */
+    transparent
+/* src/components/css/variables.css:302 */
+  );
   /* src/components/css/variables.css:304 */
-  --gradient-3: var(--color-gradient-3);
+  /* Legacy Gradient Variables (for backward compatibility) */
   /* src/components/css/variables.css:305 */
-  --gradient-4: var(--color-gradient-4);
+  --gradient-1: var(--color-gradient-1);
   /* src/components/css/variables.css:306 */
-  --accent: var(--color-accent);
+  --gradient-2: var(--color-gradient-2);
   /* src/components/css/variables.css:307 */
-  --glow: var(--color-glow);
+  --gradient-3: var(--color-gradient-3);
+  /* src/components/css/variables.css:308 */
+  --gradient-4: var(--color-gradient-4);
   /* src/components/css/variables.css:309 */
-  /* Legacy Color Aliases (for backward compatibility) */
+  --accent: var(--color-accent);
   /* src/components/css/variables.css:310 */
-  --whatsapp-color: var(--color-whatsapp);
-  /* src/components/css/variables.css:311 */
-  --gray-200: var(--color-gray-200);
+  --glow: var(--color-glow);
   /* src/components/css/variables.css:312 */
-  --gray-300: var(--color-gray-300);
+  /* Legacy Color Aliases (for backward compatibility) */
   /* src/components/css/variables.css:313 */
-  --gray-400: var(--color-gray-400);
+  --whatsapp-color: var(--color-whatsapp);
   /* src/components/css/variables.css:314 */
-  --gray-500: var(--color-gray-500);
+  --gray-200: var(--color-gray-200);
   /* src/components/css/variables.css:315 */
-  --gray-600: var(--color-gray-600);
+  --gray-300: var(--color-gray-300);
   /* src/components/css/variables.css:316 */
-  --gray-700: var(--color-gray-700);
+  --gray-400: var(--color-gray-400);
   /* src/components/css/variables.css:317 */
-  --gray-800: var(--color-gray-800);
+  --gray-500: var(--color-gray-500);
   /* src/components/css/variables.css:318 */
-  --blue-500: var(--color-blue-500);
+  --gray-600: var(--color-gray-600);
   /* src/components/css/variables.css:319 */
-  --blue-600: var(--color-blue-600);
+  --gray-700: var(--color-gray-700);
   /* src/components/css/variables.css:320 */
-  --slate-700: var(--color-slate-700);
+  --gray-800: var(--color-gray-800);
   /* src/components/css/variables.css:321 */
-  --slate-800: var(--color-slate-800);
+  --blue-500: var(--color-blue-500);
+  /* src/components/css/variables.css:322 */
+  --blue-600: var(--color-blue-600);
   /* src/components/css/variables.css:323 */
+  --slate-700: var(--color-slate-700);
+  /* src/components/css/variables.css:324 */
+  --slate-800: var(--color-slate-800);
+  /* src/components/css/variables.css:326 */
   /* Gray Scale Colors */
   /* --color-gray-200: rgb(229, 231, 235);
   --color-gray-300: rgb(209, 213, 219);
@@ -127086,104 +126938,107 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   --color-gray-600: rgb(75, 85, 99);
   --color-gray-700: rgb(51, 65, 85);
   --color-gray-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:332 */
+  /* src/components/css/variables.css:335 */
   /* Blue Colors */
   /* --color-blue-500: #3b82f6;
   --color-blue-600: #2563eb; */
-  /* src/components/css/variables.css:336 */
+  /* src/components/css/variables.css:339 */
   /* Slate Colors */
   /* --color-slate-700: rgb(51, 65, 85);
   --color-slate-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:340 */
+  /* src/components/css/variables.css:343 */
   /* Red Colors (for errors, disconnect, etc.) */
   /* --color-red-50: rgb(254, 242, 242);
   --color-red-100: rgb(254, 226, 226);
   --color-red-500: #ef4444;
   --color-red-600: #dc2626; */
-  /* src/components/css/variables.css:346 */
+  /* src/components/css/variables.css:349 */
   /* Green Colors (for success, active states) */
   /* --color-green-50: rgb(240, 253, 244);
   --color-green-100: rgb(220, 252, 231);
   --color-green-500: #10b981;
   --color-green-600: #059669; */
-  /* src/components/css/variables.css:351 */
+  /* src/components/css/variables.css:354 */
 }
 
-/* src/components/css/variables.css:353 */
+/* src/components/css/variables.css:356 */
 
 /* Fallback for browsers that don't support color-mix */
 
-/* src/components/css/variables.css:354 */
+/* src/components/css/variables.css:357 */
 
 @supports not (color: color-mix(in srgb, #000 50%, #fff)) {
-  /* src/components/css/variables.css:355 */
+  /* src/components/css/variables.css:358 */
 
   :root {
-    /* src/components/css/variables.css:356 */
+    /* src/components/css/variables.css:359 */
     /* Derived Theme Colors Fallback */
-    /* src/components/css/variables.css:357 */
-    /* Primary hover: darker version of default primary color #000aaa */
-    /* src/components/css/variables.css:358 */
-    --chat-widget-primary-color-hover: #000991;
-    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:360 */
-    /* Gradient Colors Fallback */
+    /* Primary hover: darker version of default primary color #000aaa */
     /* src/components/css/variables.css:361 */
-    --color-gradient-1: #000aaa;
-    /* Default primary color */
+    --chat-widget-primary-color-hover: #000991;
     /* src/components/css/variables.css:362 */
-    --color-gradient-2: #6c757d;
-    /* Default secondary color */
-    /* src/components/css/variables.css:363 */
-    --color-gradient-3: #6c757d;
+    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:364 */
-    --color-gradient-4: #6c757d;
+    /* Gradient Colors Fallback */
     /* src/components/css/variables.css:365 */
-    --color-accent: #6c757d;
+    --color-gradient-1: #000aaa;
     /* src/components/css/variables.css:366 */
-    --color-glow: rgba(0, 10, 170, 0.3);
+    /* Default primary color */
+    /* src/components/css/variables.css:367 */
+    --color-gradient-2: #6c757d;
     /* src/components/css/variables.css:368 */
-    /* Sleek View Colors Fallback */
+    /* Default secondary color */
     /* src/components/css/variables.css:369 */
-    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
+    --color-gradient-3: #6c757d;
     /* src/components/css/variables.css:370 */
-    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
+    --color-gradient-4: #6c757d;
+    /* src/components/css/variables.css:371 */
+    --color-accent: #6c757d;
     /* src/components/css/variables.css:372 */
-    /* Scrollbar Colors Fallback */
-    /* src/components/css/variables.css:373 */
-    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
+    --color-glow: rgba(0, 10, 170, 0.3);
     /* src/components/css/variables.css:374 */
-    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
+    /* Sleek View Colors Fallback */
+    /* src/components/css/variables.css:375 */
+    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
     /* src/components/css/variables.css:376 */
-    /* Legacy aliases */
-    /* src/components/css/variables.css:377 */
-    --gradient-1: var(--color-gradient-1);
+    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
     /* src/components/css/variables.css:378 */
-    --gradient-2: var(--color-gradient-2);
+    /* Scrollbar Colors Fallback */
     /* src/components/css/variables.css:379 */
-    --gradient-3: var(--color-gradient-3);
+    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
     /* src/components/css/variables.css:380 */
-    --gradient-4: var(--color-gradient-4);
-    /* src/components/css/variables.css:381 */
-    --accent: var(--color-accent);
+    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
     /* src/components/css/variables.css:382 */
-    --glow: var(--color-glow);
+    /* Legacy aliases */
     /* src/components/css/variables.css:383 */
-    --sleek-main-bg: var(--color-sleek-main-bg);
+    --gradient-1: var(--color-gradient-1);
     /* src/components/css/variables.css:384 */
-    --sleek-main-border: var(--color-sleek-main-border);
+    --gradient-2: var(--color-gradient-2);
     /* src/components/css/variables.css:385 */
-    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    --gradient-3: var(--color-gradient-3);
     /* src/components/css/variables.css:386 */
-    --input-scrollbar-thumb-hover-color: var(
-/* src/components/css/variables.css:387 */
-      --color-scrollbar-input-thumb-hover
-/* src/components/css/variables.css:388 */
-    );
+    --gradient-4: var(--color-gradient-4);
+    /* src/components/css/variables.css:387 */
+    --accent: var(--color-accent);
+    /* src/components/css/variables.css:388 */
+    --glow: var(--color-glow);
     /* src/components/css/variables.css:389 */
+    --sleek-main-bg: var(--color-sleek-main-bg);
+    /* src/components/css/variables.css:390 */
+    --sleek-main-border: var(--color-sleek-main-border);
+    /* src/components/css/variables.css:391 */
+    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    /* src/components/css/variables.css:392 */
+    --input-scrollbar-thumb-hover-color: var(
+/* src/components/css/variables.css:393 */
+      --color-scrollbar-input-thumb-hover
+/* src/components/css/variables.css:394 */
+    );
+    /* src/components/css/variables.css:395 */
   }
 
-  /* src/components/css/variables.css:390 */
+  /* src/components/css/variables.css:396 */
 }
 
 /* src/components/css/VoiceChatInput.css:3 */
@@ -127692,173 +127547,169 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* Voice State Colors */
   /* src/components/css/variables.css:29 */
   --color-voice-listening: #3b82f6;
-  /* Blue */
   /* src/components/css/variables.css:30 */
-  --color-voice-speaking: #10b981;
-  /* Green */
+  /* Blue */
   /* src/components/css/variables.css:31 */
-  --color-voice-thinking: #f59e0b;
-  /* Amber/Orange */
+  --color-voice-speaking: #10b981;
   /* src/components/css/variables.css:32 */
-  --color-voice-disconnected: #ef4444cb;
-  /* Red */
+  /* Green */
+  /* src/components/css/variables.css:33 */
+  --color-voice-thinking: #f59e0b;
   /* src/components/css/variables.css:34 */
-  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
+  /* Amber/Orange */
   /* src/components/css/variables.css:35 */
-  /* --color-voice-speaking-alt: #058158; Darker Green */
+  --color-voice-disconnected: #ef4444cb;
   /* src/components/css/variables.css:36 */
-  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
-  /* src/components/css/variables.css:37 */
-  /* --color-voice-thinking-alt: #fbbf24; Yellow */
+  /* Red */
+  /* src/components/css/variables.css:38 */
+  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
   /* src/components/css/variables.css:39 */
-  /* Special/Brand Colors */
+  /* --color-voice-speaking-alt: #058158; Darker Green */
   /* src/components/css/variables.css:40 */
-  --color-whatsapp: #1eb655;
-  /* src/components/css/variables.css:42 */
-  /* Opacity Values */
+  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
+  /* src/components/css/variables.css:41 */
+  /* --color-voice-thinking-alt: #fbbf24; Yellow */
   /* src/components/css/variables.css:43 */
-  --opacity-disabled: 0.7;
+  /* Special/Brand Colors */
   /* src/components/css/variables.css:44 */
+  --color-whatsapp: #1eb655;
+  /* src/components/css/variables.css:46 */
+  /* Opacity Values */
+  /* src/components/css/variables.css:47 */
+  --opacity-disabled: 0.7;
+  /* src/components/css/variables.css:48 */
   --opacity-hover: 0.8;
-  /* src/components/css/variables.css:45 */
+  /* src/components/css/variables.css:49 */
   --opacity-normal: 1;
   /* ================================================
      INPUT AREA VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:51 */
-  /* Input Colors */
-  /* src/components/css/variables.css:53 */
-  --color-input-background: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:54 */
-  --color-input-background-avatar-view: var(--chat-widget-primary-color);
   /* src/components/css/variables.css:55 */
+  /* Input Colors */
+  /* src/components/css/variables.css:57 */
+  --color-input-background: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:58 */
   --color-input-text: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:56 */
+  /* src/components/css/variables.css:59 */
   --color-input-placeholder-text: color-mix(
-/* src/components/css/variables.css:57 */
-    in srgb,
-/* src/components/css/variables.css:58 */
-    var(--color-input-text) 70%,
-/* src/components/css/variables.css:59 */
-    white
 /* src/components/css/variables.css:60 */
+    in srgb,
+/* src/components/css/variables.css:61 */
+    var(--color-input-text) 70%,
+/* src/components/css/variables.css:62 */
+    white
+/* src/components/css/variables.css:63 */
   );
-  /* src/components/css/variables.css:61 */
-  --color-input-placeholder-opacity: 70%;
-  /* src/components/css/variables.css:62 */
-  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:64 */
-  /* Input Dimensions */
+  --color-input-placeholder-opacity: 70%;
   /* src/components/css/variables.css:65 */
-  --input-default-height: 40px;
-  /* src/components/css/variables.css:66 */
-  --input-min-height: 40px;
+  --color-input-placeholder-opacity-focus: 80%;
   /* src/components/css/variables.css:67 */
-  --input-max-height: 120px;
+  /* Input Dimensions */
   /* src/components/css/variables.css:68 */
-  --input-max-height-tablet: 100px;
+  --input-default-height: 40px;
   /* src/components/css/variables.css:69 */
-  --input-max-height-mobile: 80px;
+  --input-min-height: 40px;
+  /* src/components/css/variables.css:70 */
+  --input-max-height: 120px;
   /* src/components/css/variables.css:71 */
-  /* Input Line Height */
+  --input-max-height-tablet: 100px;
   /* src/components/css/variables.css:72 */
-  --input-line-height: 20px;
+  --input-max-height-mobile: 80px;
   /* src/components/css/variables.css:74 */
-  /* Input Padding */
+  /* Input Line Height */
   /* src/components/css/variables.css:75 */
-  --input-text-padding-horizontal: 4px;
-  /* src/components/css/variables.css:76 */
-  --input-text-padding-vertical: 0px;
+  --input-line-height: 20px;
   /* src/components/css/variables.css:77 */
-  --input-text-padding: 0 var(--input-text-padding-horizontal);
+  /* Input Padding */
   /* src/components/css/variables.css:78 */
-  --input-container-padding: 6px 8px;
+  --input-text-padding-horizontal: 4px;
   /* src/components/css/variables.css:79 */
-  --input-container-padding-sleek: 4px 4px;
+  --input-text-padding-vertical: 0px;
+  /* src/components/css/variables.css:80 */
+  --input-text-padding: 0 var(--input-text-padding-horizontal);
   /* src/components/css/variables.css:81 */
-  /* Input Font */
+  --input-container-padding: 6px 8px;
   /* src/components/css/variables.css:82 */
-  --input-font-size: var(--chat-widget-message-font-size);
-  /* src/components/css/variables.css:83 */
-  --input-font-weight: 400;
+  --input-container-padding-sleek: 4px 4px;
   /* src/components/css/variables.css:84 */
-  --input-font-weight-focus: 500;
+  /* Input Font */
   /* src/components/css/variables.css:85 */
+  --input-font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/variables.css:86 */
+  --input-font-weight: 400;
+  /* src/components/css/variables.css:87 */
+  --input-font-weight-focus: 500;
+  /* src/components/css/variables.css:88 */
   --input-font-weight-bold: 600;
   /* ================================================
      INPUT SCROLLBAR VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:91 */
+  /* src/components/css/variables.css:94 */
   /* Scrollbar Colors */
-  /* src/components/css/variables.css:92 */
+  /* src/components/css/variables.css:95 */
   --color-scrollbar-input-thumb: color-mix(
-/* src/components/css/variables.css:93 */
-    in srgb,
-/* src/components/css/variables.css:94 */
-    var(--chat-widget-primary-color) 75%,
-/* src/components/css/variables.css:95 */
-    transparent
 /* src/components/css/variables.css:96 */
-  );
-  /* src/components/css/variables.css:97 */
-  --color-scrollbar-input-thumb-hover: color-mix(
+    in srgb,
+/* src/components/css/variables.css:97 */
+    var(--chat-widget-primary-color) 75%,
 /* src/components/css/variables.css:98 */
-    in srgb,
+    transparent
 /* src/components/css/variables.css:99 */
-    var(--chat-widget-primary-color) 90%,
-/* src/components/css/variables.css:100 */
-    transparent
+  );
+  /* src/components/css/variables.css:100 */
+  --color-scrollbar-input-thumb-hover: color-mix(
 /* src/components/css/variables.css:101 */
-  );
-  /* src/components/css/variables.css:103 */
-  --color-scrollbar-input-thumb-avatar-view: color-mix(
+    in srgb,
+/* src/components/css/variables.css:102 */
+    var(--chat-widget-primary-color) 90%,
+/* src/components/css/variables.css:103 */
+    transparent
 /* src/components/css/variables.css:104 */
-    in srgb,
-/* src/components/css/variables.css:105 */
-    var(--chat-widget-secondary-color) 75%,
-/* src/components/css/variables.css:106 */
-    transparent
+  );
+  /* src/components/css/variables.css:106 */
+  --color-scrollbar-input-thumb-avatar-view: color-mix(
 /* src/components/css/variables.css:107 */
-  );
-  /* src/components/css/variables.css:108 */
-  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
-/* src/components/css/variables.css:109 */
     in srgb,
-/* src/components/css/variables.css:110 */
-    var(--chat-widget-secondary-color) 90%,
-/* src/components/css/variables.css:111 */
+/* src/components/css/variables.css:108 */
+    var(--chat-widget-secondary-color) 75%,
+/* src/components/css/variables.css:109 */
     transparent
-/* src/components/css/variables.css:112 */
+/* src/components/css/variables.css:110 */
   );
-  /* src/components/css/variables.css:114 */
-  --color-scrollbar-input-track: transparent;
-  /* src/components/css/variables.css:116 */
-  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:111 */
+  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
+/* src/components/css/variables.css:112 */
+    in srgb,
+/* src/components/css/variables.css:113 */
+    var(--chat-widget-secondary-color) 90%,
+/* src/components/css/variables.css:114 */
+    transparent
+/* src/components/css/variables.css:115 */
+  );
   /* src/components/css/variables.css:117 */
+  --color-scrollbar-input-track: transparent;
+  /* src/components/css/variables.css:119 */
+  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:120 */
   --input-scrollbar-border-radius: 2.5px;
-  /* src/components/css/variables.css:118 */
+  /* src/components/css/variables.css:121 */
   --input-scrollbar-thumb-hover-opacity: var(--opacity-hover);
   /* ================================================
      BUTTON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:124 */
-  /* Button Dimensions */
-  /* src/components/css/variables.css:125 */
-  --button-size-primary: 32px;
-  /* src/components/css/variables.css:126 */
-  --button-padding-primary: 4px;
   /* src/components/css/variables.css:127 */
-  --button-size-secondary: 24px;
+  /* Button Dimensions */
+  /* src/components/css/variables.css:128 */
+  --button-size-primary: 32px;
   /* src/components/css/variables.css:129 */
-  /* Button Colors */
+  --button-padding-primary: 4px;
   /* src/components/css/variables.css:130 */
+  --button-size-secondary: 24px;
+  /* src/components/css/variables.css:132 */
+  /* Button Colors */
+  /* src/components/css/variables.css:133 */
   --color-button-background-primary: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:131 */
-  --color-button-background-primary-avatar-view: var(
-/* src/components/css/variables.css:132 */
-    --chat-widget-secondary-color
-/* src/components/css/variables.css:133 */
-  );
   /* src/components/css/variables.css:134 */
   --color-button-background-hover: var(--chat-widget-primary-color-hover);
   /* src/components/css/variables.css:135 */
@@ -127866,279 +127717,282 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* src/components/css/variables.css:136 */
   --color-button-fill: var(--chat-widget-button-content-color);
   /* src/components/css/variables.css:138 */
-  /* Button Opacity States */
-  /* src/components/css/variables.css:139 */
-  --button-opacity-normal: var(--opacity-normal);
+  --color-button-disconnect: #ef4444;
   /* src/components/css/variables.css:140 */
-  --button-opacity-hover: var(--opacity-hover);
+  /* Button Opacity States */
   /* src/components/css/variables.css:141 */
+  --button-opacity-normal: var(--opacity-normal);
+  /* src/components/css/variables.css:142 */
+  --button-opacity-hover: var(--opacity-hover);
+  /* src/components/css/variables.css:143 */
   --button-opacity-disabled: var(--opacity-disabled);
   /* ================================================
      ICON VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:147 */
-  /* Icon Sizes */
-  /* src/components/css/variables.css:148 */
-  --button-icon-size-secondary: 16px;
   /* src/components/css/variables.css:149 */
+  /* Icon Sizes */
+  /* src/components/css/variables.css:150 */
+  --button-icon-size-secondary: 16px;
+  /* src/components/css/variables.css:151 */
   --button-icon-size-primary: 20px;
+  /* src/components/css/variables.css:152 */
   /* w-5 h-5 equivalent */
   /* ================================================
      CHAT MESSAGE CONTAINER SCROLLBAR
      ================================================ */
-  /* src/components/css/variables.css:155 */
+  /* src/components/css/variables.css:158 */
   --message-scrollbar-width: thin;
-  /* src/components/css/variables.css:156 */
-  --message-scrollbar-width-px: 6px;
-  /* src/components/css/variables.css:157 */
-  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:159 */
-  /* Scrollbar Colors */
+  --message-scrollbar-width-px: 6px;
   /* src/components/css/variables.css:160 */
-  --color-scrollbar-message-thumb-default: rgb(209 213 219);
-  /* src/components/css/variables.css:161 */
-  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  --message-scrollbar-border-radius: 3px;
   /* src/components/css/variables.css:162 */
+  /* Scrollbar Colors */
+  /* src/components/css/variables.css:163 */
+  --color-scrollbar-message-thumb-default: rgb(209 213 219);
+  /* src/components/css/variables.css:164 */
+  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  /* src/components/css/variables.css:165 */
   --color-scrollbar-message-thumb-theme: var(
-/* src/components/css/variables.css:163 */
+/* src/components/css/variables.css:166 */
     --chat-widget-button-content-color,
-/* src/components/css/variables.css:164 */
-    var(--chat-widget-secondary-color)
-/* src/components/css/variables.css:165 */
-  );
-  /* src/components/css/variables.css:166 */
-  --color-scrollbar-message-thumb-hover-mix: color-mix(
 /* src/components/css/variables.css:167 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:168 */
-    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
-/* src/components/css/variables.css:169 */
-      80%,
-/* src/components/css/variables.css:170 */
-    var(--chat-widget-primary-color)
-/* src/components/css/variables.css:171 */
   );
-  /* src/components/css/variables.css:172 */
+  /* src/components/css/variables.css:169 */
+  --color-scrollbar-message-thumb-hover-mix: color-mix(
+/* src/components/css/variables.css:170 */
+    in srgb,
+/* src/components/css/variables.css:171 */
+    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
+/* src/components/css/variables.css:172 */
+      80%,
+/* src/components/css/variables.css:173 */
+    var(--chat-widget-primary-color)
+/* src/components/css/variables.css:174 */
+  );
+  /* src/components/css/variables.css:175 */
   --color-scrollbar-message-track: transparent;
   /* ================================================
      CHAT MESSAGE
      ================================================ */
-  /* src/components/css/variables.css:178 */
+  /* src/components/css/variables.css:181 */
   --message-text-color: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:179 */
+  /* src/components/css/variables.css:182 */
   --message-font-size: var(--chat-widget-message-font-size);
   /* ================================================
      CHAT MESSAGE BUBBLES
      ================================================ */
-  /* src/components/css/variables.css:185 */
+  /* src/components/css/variables.css:188 */
   --message-bubble-background-color: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:186 */
+  /* src/components/css/variables.css:189 */
   --message-bubble-icon-color: var(--chat-widget-secondary-color);
   /* ================================================
      ENGAGEMENT HOOK IMAGE
      ================================================ */
-  /* src/components/css/variables.css:192 */
+  /* src/components/css/variables.css:195 */
   /* Engagement Hook Image Variables (defined elsewhere via JavaScript) */
-  /* src/components/css/variables.css:193 */
-  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
-  /* src/components/css/variables.css:194 */
-  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
   /* src/components/css/variables.css:196 */
-  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
   /* src/components/css/variables.css:197 */
+  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
+  /* src/components/css/variables.css:199 */
+  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* src/components/css/variables.css:200 */
   --engagement-hook-image-height: var(
-/* src/components/css/variables.css:198 */
+/* src/components/css/variables.css:201 */
     --chat-widget-engagement-hook-image-height
-/* src/components/css/variables.css:199 */
+/* src/components/css/variables.css:202 */
   );
   /* ================================================
      TRANSITION VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:205 */
-  --transition-fast: 0.2s ease;
-  /* src/components/css/variables.css:206 */
-  --transition-normal: all 0.3s ease;
-  /* src/components/css/variables.css:207 */
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   /* src/components/css/variables.css:208 */
+  --transition-fast: 0.2s ease;
+  /* src/components/css/variables.css:209 */
+  --transition-normal: all 0.3s ease;
+  /* src/components/css/variables.css:210 */
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* src/components/css/variables.css:211 */
   --transition-slow-ease: 0.4s ease;
   /* ================================================
      BORDER RADIUS VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:214 */
-  --border-radius-small: 2.5px;
-  /* src/components/css/variables.css:215 */
-  --border-radius-medium: 3px;
-  /* src/components/css/variables.css:216 */
-  --border-radius-large: 12px;
   /* src/components/css/variables.css:217 */
-  --border-radius-xl: 16px;
+  --border-radius-small: 2.5px;
   /* src/components/css/variables.css:218 */
-  --border-radius-2xl: 20px;
+  --border-radius-medium: 3px;
   /* src/components/css/variables.css:219 */
+  --border-radius-large: 12px;
+  /* src/components/css/variables.css:220 */
+  --border-radius-xl: 16px;
+  /* src/components/css/variables.css:221 */
+  --border-radius-2xl: 20px;
+  /* src/components/css/variables.css:222 */
   --border-radius-full: 9999px;
   /* ================================================
      SPACING & GAP VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:225 */
-  --spacing-gap-xs: 0.5px;
-  /* src/components/css/variables.css:226 */
-  --spacing-gap-sm: 4px;
-  /* src/components/css/variables.css:227 */
-  --spacing-gap-md: 8px;
   /* src/components/css/variables.css:228 */
-  --spacing-gap-lg: 12px;
+  --spacing-gap-xs: 0.5px;
   /* src/components/css/variables.css:229 */
+  --spacing-gap-sm: 4px;
+  /* src/components/css/variables.css:230 */
+  --spacing-gap-md: 8px;
+  /* src/components/css/variables.css:231 */
+  --spacing-gap-lg: 12px;
+  /* src/components/css/variables.css:232 */
   --spacing-gap-xl: 16px;
   /* ================================================
      Z-INDEX VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:235 */
-  --z-index-base: 1;
-  /* src/components/css/variables.css:236 */
-  --z-index-elevated: 10;
-  /* src/components/css/variables.css:237 */
-  --z-index-high: 20;
   /* src/components/css/variables.css:238 */
+  --z-index-base: 1;
+  /* src/components/css/variables.css:239 */
+  --z-index-elevated: 10;
+  /* src/components/css/variables.css:240 */
+  --z-index-high: 20;
+  /* src/components/css/variables.css:241 */
   --z-index-maximum: 9999;
   /* ================================================
      BORDER VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:244 */
+  /* src/components/css/variables.css:247 */
   --border-width-thin: 1px;
-  /* src/components/css/variables.css:245 */
+  /* src/components/css/variables.css:248 */
   --border-width-medium: 2px;
-  /* src/components/css/variables.css:246 */
+  /* src/components/css/variables.css:249 */
   --border-width-thick: 4px;
   /* ================================================
      BOX SHADOW VARIABLES (for consistency)
      ================================================ */
-  /* src/components/css/variables.css:252 */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  /* src/components/css/variables.css:253 */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:254 */
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   /* src/components/css/variables.css:255 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* src/components/css/variables.css:256 */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:257 */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:258 */
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
   /* ================================================
      SLEEK VIEW SPECIFIC VARIABLES
      ================================================ */
-  /* src/components/css/variables.css:261 */
-  /* These are already defined in SleekView.css but should be here for consistency */
-  /* src/components/css/variables.css:262 */
-  --sleek-main-min-height: 0px;
-  /* src/components/css/variables.css:263 */
-  --sleek-border-radius: var(--border-radius-large);
   /* src/components/css/variables.css:264 */
-  --sleek-main-bg: var(--color-sleek-main-bg);
+  /* These are already defined in SleekView.css but should be here for consistency */
   /* src/components/css/variables.css:265 */
-  --sleek-main-border: var(--color-sleek-main-border);
+  --sleek-main-min-height: 0px;
   /* src/components/css/variables.css:266 */
-  --sleek-main-text-color: var(--color-sleek-main-text);
+  --sleek-border-radius: var(--border-radius-large);
+  /* src/components/css/variables.css:267 */
+  --sleek-main-bg: var(--color-sleek-main-bg);
   /* src/components/css/variables.css:268 */
-  /* Sleek View Colors */
+  --sleek-main-border: var(--color-sleek-main-border);
   /* src/components/css/variables.css:269 */
+  --sleek-main-text-color: var(--color-sleek-main-text);
+  /* src/components/css/variables.css:271 */
+  /* Sleek View Colors */
+  /* src/components/css/variables.css:272 */
   --color-sleek-main-bg: color-mix(
-/* src/components/css/variables.css:270 */
-    in srgb,
-/* src/components/css/variables.css:271 */
-    var(--chat-widget-primary-color) 10%,
-/* src/components/css/variables.css:272 */
-    white
 /* src/components/css/variables.css:273 */
+    in srgb,
+/* src/components/css/variables.css:274 */
+    var(--chat-widget-primary-color) 10%,
+/* src/components/css/variables.css:275 */
+    white
+/* src/components/css/variables.css:276 */
   );
-  /* src/components/css/variables.css:274 */
-  --color-sleek-main-border: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:275 */
-  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:277 */
-  /* Gradient Colors (derived from primary/secondary) */
+  --color-sleek-main-border: var(--chat-widget-secondary-color);
   /* src/components/css/variables.css:278 */
-  --color-gradient-1: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:279 */
-  --color-gradient-2: var(--chat-widget-secondary-color);
+  --color-sleek-main-text: var(--chat-widget-message-text-color);
   /* src/components/css/variables.css:280 */
+  /* Gradient Colors (derived from primary/secondary) */
+  /* src/components/css/variables.css:281 */
+  --color-gradient-1: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:282 */
+  --color-gradient-2: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:283 */
   --color-gradient-3: color-mix(
-/* src/components/css/variables.css:281 */
-    in srgb,
-/* src/components/css/variables.css:282 */
-    var(--chat-widget-primary-color) 60%,
-/* src/components/css/variables.css:283 */
-    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:284 */
-  );
-  /* src/components/css/variables.css:285 */
-  --color-gradient-4: color-mix(
+    in srgb,
+/* src/components/css/variables.css:285 */
+    var(--chat-widget-primary-color) 60%,
 /* src/components/css/variables.css:286 */
-    in srgb,
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:287 */
-    var(--chat-widget-primary-color) 40%,
-/* src/components/css/variables.css:288 */
-    var(--chat-widget-secondary-color)
+  );
+  /* src/components/css/variables.css:288 */
+  --color-gradient-4: color-mix(
 /* src/components/css/variables.css:289 */
-  );
-  /* src/components/css/variables.css:290 */
-  --color-accent: color-mix(
+    in srgb,
+/* src/components/css/variables.css:290 */
+    var(--chat-widget-primary-color) 40%,
 /* src/components/css/variables.css:291 */
-    in srgb,
-/* src/components/css/variables.css:292 */
-    var(--chat-widget-primary-color) 70%,
-/* src/components/css/variables.css:293 */
     var(--chat-widget-secondary-color)
+/* src/components/css/variables.css:292 */
+  );
+  /* src/components/css/variables.css:293 */
+  --color-accent: color-mix(
 /* src/components/css/variables.css:294 */
-  );
-  /* src/components/css/variables.css:295 */
-  --color-glow: color-mix(
-/* src/components/css/variables.css:296 */
     in srgb,
+/* src/components/css/variables.css:295 */
+    var(--chat-widget-primary-color) 70%,
+/* src/components/css/variables.css:296 */
+    var(--chat-widget-secondary-color)
 /* src/components/css/variables.css:297 */
-    var(--chat-widget-primary-color) 30%,
-/* src/components/css/variables.css:298 */
-    transparent
-/* src/components/css/variables.css:299 */
   );
-  /* src/components/css/variables.css:301 */
-  /* Legacy Gradient Variables (for backward compatibility) */
-  /* src/components/css/variables.css:302 */
-  --gradient-1: var(--color-gradient-1);
-  /* src/components/css/variables.css:303 */
-  --gradient-2: var(--color-gradient-2);
+  /* src/components/css/variables.css:298 */
+  --color-glow: color-mix(
+/* src/components/css/variables.css:299 */
+    in srgb,
+/* src/components/css/variables.css:300 */
+    var(--chat-widget-primary-color) 30%,
+/* src/components/css/variables.css:301 */
+    transparent
+/* src/components/css/variables.css:302 */
+  );
   /* src/components/css/variables.css:304 */
-  --gradient-3: var(--color-gradient-3);
+  /* Legacy Gradient Variables (for backward compatibility) */
   /* src/components/css/variables.css:305 */
-  --gradient-4: var(--color-gradient-4);
+  --gradient-1: var(--color-gradient-1);
   /* src/components/css/variables.css:306 */
-  --accent: var(--color-accent);
+  --gradient-2: var(--color-gradient-2);
   /* src/components/css/variables.css:307 */
-  --glow: var(--color-glow);
+  --gradient-3: var(--color-gradient-3);
+  /* src/components/css/variables.css:308 */
+  --gradient-4: var(--color-gradient-4);
   /* src/components/css/variables.css:309 */
-  /* Legacy Color Aliases (for backward compatibility) */
+  --accent: var(--color-accent);
   /* src/components/css/variables.css:310 */
-  --whatsapp-color: var(--color-whatsapp);
-  /* src/components/css/variables.css:311 */
-  --gray-200: var(--color-gray-200);
+  --glow: var(--color-glow);
   /* src/components/css/variables.css:312 */
-  --gray-300: var(--color-gray-300);
+  /* Legacy Color Aliases (for backward compatibility) */
   /* src/components/css/variables.css:313 */
-  --gray-400: var(--color-gray-400);
+  --whatsapp-color: var(--color-whatsapp);
   /* src/components/css/variables.css:314 */
-  --gray-500: var(--color-gray-500);
+  --gray-200: var(--color-gray-200);
   /* src/components/css/variables.css:315 */
-  --gray-600: var(--color-gray-600);
+  --gray-300: var(--color-gray-300);
   /* src/components/css/variables.css:316 */
-  --gray-700: var(--color-gray-700);
+  --gray-400: var(--color-gray-400);
   /* src/components/css/variables.css:317 */
-  --gray-800: var(--color-gray-800);
+  --gray-500: var(--color-gray-500);
   /* src/components/css/variables.css:318 */
-  --blue-500: var(--color-blue-500);
+  --gray-600: var(--color-gray-600);
   /* src/components/css/variables.css:319 */
-  --blue-600: var(--color-blue-600);
+  --gray-700: var(--color-gray-700);
   /* src/components/css/variables.css:320 */
-  --slate-700: var(--color-slate-700);
+  --gray-800: var(--color-gray-800);
   /* src/components/css/variables.css:321 */
-  --slate-800: var(--color-slate-800);
+  --blue-500: var(--color-blue-500);
+  /* src/components/css/variables.css:322 */
+  --blue-600: var(--color-blue-600);
   /* src/components/css/variables.css:323 */
+  --slate-700: var(--color-slate-700);
+  /* src/components/css/variables.css:324 */
+  --slate-800: var(--color-slate-800);
+  /* src/components/css/variables.css:326 */
   /* Gray Scale Colors */
   /* --color-gray-200: rgb(229, 231, 235);
   --color-gray-300: rgb(209, 213, 219);
@@ -128147,104 +128001,107 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   --color-gray-600: rgb(75, 85, 99);
   --color-gray-700: rgb(51, 65, 85);
   --color-gray-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:332 */
+  /* src/components/css/variables.css:335 */
   /* Blue Colors */
   /* --color-blue-500: #3b82f6;
   --color-blue-600: #2563eb; */
-  /* src/components/css/variables.css:336 */
+  /* src/components/css/variables.css:339 */
   /* Slate Colors */
   /* --color-slate-700: rgb(51, 65, 85);
   --color-slate-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:340 */
+  /* src/components/css/variables.css:343 */
   /* Red Colors (for errors, disconnect, etc.) */
   /* --color-red-50: rgb(254, 242, 242);
   --color-red-100: rgb(254, 226, 226);
   --color-red-500: #ef4444;
   --color-red-600: #dc2626; */
-  /* src/components/css/variables.css:346 */
+  /* src/components/css/variables.css:349 */
   /* Green Colors (for success, active states) */
   /* --color-green-50: rgb(240, 253, 244);
   --color-green-100: rgb(220, 252, 231);
   --color-green-500: #10b981;
   --color-green-600: #059669; */
-  /* src/components/css/variables.css:351 */
+  /* src/components/css/variables.css:354 */
 }
 
-/* src/components/css/variables.css:353 */
+/* src/components/css/variables.css:356 */
 
 /* Fallback for browsers that don't support color-mix */
 
-/* src/components/css/variables.css:354 */
+/* src/components/css/variables.css:357 */
 
 @supports not (color: color-mix(in srgb, #000 50%, #fff)) {
-  /* src/components/css/variables.css:355 */
+  /* src/components/css/variables.css:358 */
 
   :root {
-    /* src/components/css/variables.css:356 */
+    /* src/components/css/variables.css:359 */
     /* Derived Theme Colors Fallback */
-    /* src/components/css/variables.css:357 */
-    /* Primary hover: darker version of default primary color #000aaa */
-    /* src/components/css/variables.css:358 */
-    --chat-widget-primary-color-hover: #000991;
-    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:360 */
-    /* Gradient Colors Fallback */
+    /* Primary hover: darker version of default primary color #000aaa */
     /* src/components/css/variables.css:361 */
-    --color-gradient-1: #000aaa;
-    /* Default primary color */
+    --chat-widget-primary-color-hover: #000991;
     /* src/components/css/variables.css:362 */
-    --color-gradient-2: #6c757d;
-    /* Default secondary color */
-    /* src/components/css/variables.css:363 */
-    --color-gradient-3: #6c757d;
+    /* ~15% darker than #000aaa */
     /* src/components/css/variables.css:364 */
-    --color-gradient-4: #6c757d;
+    /* Gradient Colors Fallback */
     /* src/components/css/variables.css:365 */
-    --color-accent: #6c757d;
+    --color-gradient-1: #000aaa;
     /* src/components/css/variables.css:366 */
-    --color-glow: rgba(0, 10, 170, 0.3);
+    /* Default primary color */
+    /* src/components/css/variables.css:367 */
+    --color-gradient-2: #6c757d;
     /* src/components/css/variables.css:368 */
-    /* Sleek View Colors Fallback */
+    /* Default secondary color */
     /* src/components/css/variables.css:369 */
-    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
+    --color-gradient-3: #6c757d;
     /* src/components/css/variables.css:370 */
-    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
+    --color-gradient-4: #6c757d;
+    /* src/components/css/variables.css:371 */
+    --color-accent: #6c757d;
     /* src/components/css/variables.css:372 */
-    /* Scrollbar Colors Fallback */
-    /* src/components/css/variables.css:373 */
-    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
+    --color-glow: rgba(0, 10, 170, 0.3);
     /* src/components/css/variables.css:374 */
-    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
+    /* Sleek View Colors Fallback */
+    /* src/components/css/variables.css:375 */
+    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
     /* src/components/css/variables.css:376 */
-    /* Legacy aliases */
-    /* src/components/css/variables.css:377 */
-    --gradient-1: var(--color-gradient-1);
+    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
     /* src/components/css/variables.css:378 */
-    --gradient-2: var(--color-gradient-2);
+    /* Scrollbar Colors Fallback */
     /* src/components/css/variables.css:379 */
-    --gradient-3: var(--color-gradient-3);
+    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
     /* src/components/css/variables.css:380 */
-    --gradient-4: var(--color-gradient-4);
-    /* src/components/css/variables.css:381 */
-    --accent: var(--color-accent);
+    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
     /* src/components/css/variables.css:382 */
-    --glow: var(--color-glow);
+    /* Legacy aliases */
     /* src/components/css/variables.css:383 */
-    --sleek-main-bg: var(--color-sleek-main-bg);
+    --gradient-1: var(--color-gradient-1);
     /* src/components/css/variables.css:384 */
-    --sleek-main-border: var(--color-sleek-main-border);
+    --gradient-2: var(--color-gradient-2);
     /* src/components/css/variables.css:385 */
-    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    --gradient-3: var(--color-gradient-3);
     /* src/components/css/variables.css:386 */
-    --input-scrollbar-thumb-hover-color: var(
-/* src/components/css/variables.css:387 */
-      --color-scrollbar-input-thumb-hover
-/* src/components/css/variables.css:388 */
-    );
+    --gradient-4: var(--color-gradient-4);
+    /* src/components/css/variables.css:387 */
+    --accent: var(--color-accent);
+    /* src/components/css/variables.css:388 */
+    --glow: var(--color-glow);
     /* src/components/css/variables.css:389 */
+    --sleek-main-bg: var(--color-sleek-main-bg);
+    /* src/components/css/variables.css:390 */
+    --sleek-main-border: var(--color-sleek-main-border);
+    /* src/components/css/variables.css:391 */
+    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    /* src/components/css/variables.css:392 */
+    --input-scrollbar-thumb-hover-color: var(
+/* src/components/css/variables.css:393 */
+      --color-scrollbar-input-thumb-hover
+/* src/components/css/variables.css:394 */
+    );
+    /* src/components/css/variables.css:395 */
   }
 
-  /* src/components/css/variables.css:390 */
+  /* src/components/css/variables.css:396 */
 }
 
 /* End of file: components/css/variables.css */
@@ -130059,6 +129916,10 @@ video {
   width: 40px;
 }
 
+.w-[95%] {
+  width: 95%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -130579,10 +130440,6 @@ video {
 
 .border-t-transparent {
   border-top-color: transparent;
-}
-
-.bg-[var(--chat-widget-primary-color)] {
-  background-color: var(--chat-widget-primary-color);
 }
 
 .bg-blue-100 {
@@ -131589,6 +131446,11 @@ video {
 .focus:ring-blue-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity, 1));
+}
+
+.focus:ring-gray-400:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(156 163 175 / var(--tw-ring-opacity, 1));
 }
 
 .focus:ring-offset-2:focus {
@@ -132949,7 +132811,6 @@ const _PushHookService = class _PushHookService {
     }
     const clientId = encodeURIComponent(this.metaConfig.clientId);
     const sseUrl = `${this.metaConfig.hostUrl}/api/v1/sse/hooks?client_id=${clientId}`;
-    console.log(`[PushHookService] Connecting to SSE: ${sseUrl}`);
     this.isConnecting = true;
     this.abortController = new AbortController();
     fetch(sseUrl, {
@@ -132971,9 +132832,6 @@ const _PushHookService = class _PushHookService {
       }
       const decoder = new TextDecoder();
       let buffer = "";
-      console.log(
-        `[PushHookService] SSE connection opened for client_id: ${this.metaConfig.clientId}`
-      );
       this.reconnectAttempts = 0;
       this.isConnected = true;
       const readStream = async () => {
@@ -133006,24 +132864,10 @@ const _PushHookService = class _PushHookService {
               if (line.startsWith("data: ")) {
                 try {
                   const data = JSON.parse(line.slice(6));
-                  console.log(
-                    `[PushHookService] Received push message:`,
-                    data
-                  );
                   const messageContent = (_b = data.data) == null ? void 0 : _b.message;
                   const clientId2 = data.client_id;
                   if (clientId2 === this.metaConfig.clientId && messageContent) {
                     this.handlePushMessage(messageContent);
-                  } else {
-                    console.warn(
-                      `[PushHookService] Message validation failed:`,
-                      {
-                        receivedClientId: clientId2,
-                        expectedClientId: this.metaConfig.clientId,
-                        hasMessage: !!messageContent,
-                        messageType: data.type
-                      }
-                    );
                   }
                 } catch (error) {
                   console.error(
@@ -133040,7 +132884,6 @@ const _PushHookService = class _PushHookService {
           }
         } catch (error) {
           if (error instanceof Error && error.name === "AbortError") {
-            console.log("[PushHookService] SSE connection aborted");
             this.isConnected = false;
             return;
           }
@@ -133064,7 +132907,6 @@ const _PushHookService = class _PushHookService {
       this.isConnecting = false;
       this.isConnected = false;
       if (error instanceof Error && error.name === "AbortError") {
-        console.log("[PushHookService] SSE connection aborted");
         return;
       }
       console.error(`[PushHookService] Failed to connect to SSE:`, error);
@@ -133207,7 +133049,6 @@ const _PushHookService = class _PushHookService {
    * Disconnects from the SSE endpoint
    */
   disconnect() {
-    console.log(`[PushHookService] Disconnecting SSE...`);
     if (this.reconnectTimeout) {
       clearTimeout(this.reconnectTimeout);
       this.reconnectTimeout = null;
