@@ -111916,7 +111916,7 @@ function VoiceAlternateView({
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "talking-head-wrapper", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
         HumanAvatar,
         {
-          avatarUrl: "../../../public/avatars/VK_tpose.glb",
+          avatarUrl: "https://www.spotinfo.ai/js/avatars/VK_tpose.glb",
           onReady: (head) => {
             headRef.current = head;
             if (document.visibilityState === "visible") {
@@ -112422,7 +112422,7 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Fri Apr 10 18:01:01 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Fri Apr 10 19:34:53 IST 2026 */
 
 /* Start of file: components/avatar/HumanAvatar.css */
 
