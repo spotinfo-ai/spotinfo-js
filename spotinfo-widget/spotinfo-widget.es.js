@@ -1,4 +1,4 @@
-!function(){"use strict";try{if("undefined"!=typeof document){var e=document.createElement("style");e.appendChild(document.createTextNode(':root{--message-popup-image-width: var(--engagement-hook-image-width);--message-popup-image-height: var(--engagement-hook-image-height);--message-popup-offset: 1rem}.message-popup-figurine{position:fixed;width:var(--message-popup-image-width);height:var(--message-popup-image-height);z-index:2147483646;-o-object-fit:cover;object-fit:cover;-o-object-position:center top;object-position:center top;pointer-events:none}.message-popup-figurine-bottom-left{bottom:var(--message-popup-offset);left:var(--message-popup-offset);top:auto;right:auto}.message-popup-figurine-bottom-right{bottom:var(--message-popup-offset);right:var(--message-popup-offset);top:auto;left:auto}.message-popup-figurine-top-left{top:var(--message-popup-offset);left:var(--message-popup-offset);bottom:auto;right:auto}.message-popup-figurine-top-right{top:var(--message-popup-offset);right:var(--message-popup-offset);bottom:auto;left:auto}.message-popup-container{position:fixed;z-index:2147483647;pointer-events:auto}.message-popup-container-bottom-left{bottom:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);left:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);top:auto;right:auto}.message-popup-container-bottom-right{bottom:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);right:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);top:auto;left:auto}.message-popup-container-top-left{top:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);left:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);bottom:auto;right:auto}.message-popup-container-top-right{top:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);right:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);bottom:auto;left:auto}.message-popup-content{padding:8px;background-color:var(--message-bubble-background-color);border-radius:12px;box-shadow:0 4px 12px #0000001a;min-width:220px;max-width:320px;display:flex;align-items:center;cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;font-size:var(--message-font-size);color:var(--message-text-color);position:relative}.message-popup-text-container{flex:1}.message-popup-text{font-size:var(--message-font-size);color:var(--message-text-color);margin:0;word-break:break-word}.message-popup-close-button{position:absolute;top:-10px;right:-10px;width:var(--button-size-secondary);height:var(--button-size-secondary);border-radius:9999px;border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 50%,white);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white);color:var(--color-button-text);box-shadow:0 4px 14px color-mix(in srgb,var(--glow) 60%,transparent),0 2px 6px color-mix(in srgb,var(--chat-widget-primary-color) 18%,transparent);cursor:pointer;overflow:hidden;z-index:20;padding:0;margin-left:0;pointer-events:auto;display:flex;align-items:center;justify-content:center;transition:all .2s ease}.message-popup-close-button:hover{transform:translateY(-1px) scale(1.05);box-shadow:0 8px 20px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent),0 4px 12px color-mix(in srgb,var(--chat-widget-primary-color) 20%,transparent);background:color-mix(in srgb,var(--chat-widget-primary-color-hover) 80%,white)}.message-popup-close-button:focus{outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--glow) 80%,transparent),0 8px 22px color-mix(in srgb,var(--chat-widget-primary-color) 32%,transparent);transform:translateY(-1px) scale(1.03)}.message-popup-close-button:active{transform:translateY(0) scale(.97);box-shadow:0 3px 10px color-mix(in srgb,var(--chat-widget-primary-color) 24%,transparent)}.message-popup-close-button svg{width:calc(var(--button-size-secondary) * .8);height:calc(var(--button-size-secondary) * .8);display:block;flex-shrink:0}.chat-header-container{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--chat-widget-primary-color) 0%,color-mix(in srgb,var(--chat-widget-primary-color) 90%,var(--chat-widget-primary-color-hover) 10%) 100%);transition:all .3s ease}.chat-header-container:before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--chat-widget-primary-color) 85%,var(--chat-widget-secondary-color) 15%),transparent);transition:left .6s ease}.chat-header-container:hover:before{left:100%}.chat-header-container:hover{box-shadow:0 6px 20px color-mix(in srgb,var(--chat-widget-secondary-color) 60%,transparent);transform:translateY(-1px)}.chat-header-content{position:relative;z-index:10;margin-left:auto;margin-right:auto;display:flex;max-width:32rem;align-items:center;justify-content:space-between}.chat-header-left{display:flex;align-items:center;gap:.5rem;padding-left:.5rem;transition:transform .2s ease}.chat-header-left:hover{transform:scale(1.02)}.chat-header-text-container{display:flex;flex-direction:column}.chat-header-text{font-size:1.125rem;line-height:1.75rem;font-weight:600;color:var(--chat-widget-button-content-color);text-shadow:0 2px 4px rgba(0,0,0,.2);transition:all .2s ease}.chat-header-subtitle{font-size:.875rem;line-height:1.25rem;color:var(--chat-widget-button-content-color);text-shadow:0 1px 2px rgba(0,0,0,.1);transition:all .2s ease}.chat-header-logo{border-radius:.5rem;transition:all .3s ease;filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))}.chat-header-logo:hover{transform:scale(1.1) rotate(5deg);filter:drop-shadow(0 4px 8px rgba(0,0,0,.2))}.chat-header-logo{display:block;flex-shrink:0;-o-object-fit:contain;object-fit:contain;width:36px;height:36px;min-width:32px;min-height:32px;aspect-ratio:1;border-radius:6px}.chat-header-actions{display:flex;align-items:center;gap:.25rem}.chat-header-new-chat-button{color:var(--chat-widget-button-content-color);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;border-radius:.75rem;padding:.375rem}.chat-header-new-chat-button:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000);--tw-ring-color: rgb(255 255 255 / .3)}.chat-header-new-chat-button{min-width:32px;min-height:32px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:.5px solid;border-color:var(--chat-widget-secondary-color);color:var(--chat-widget-button-content-color)}.chat-header-new-chat-button:hover{color:var(--chat-widget-button-content-color)}.chat-header-new-chat-button:before{content:"";position:absolute;top:50%;left:50%;width:0;height:0;background:#ffffff1a;border-radius:50%;transform:translate(-50%,-50%);transition:width .3s ease,height .3s ease}.chat-header-new-chat-button:hover:before{width:80px;height:80px}.chat-header-new-chat-button:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 4px 12px #0003}.chat-header-new-chat-button:active{transform:translateY(0) scale(.98)}.chat-header-new-chat-icon{position:relative;z-index:10;height:1.25rem;width:1.25rem;stroke-width:2.5;transition:transform .2s ease}.chat-header-new-chat-button:hover .chat-header-new-chat-icon{transform:rotate(90deg)}.chat-header-close-button{color:var(--chat-widget-button-content-color);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;border-radius:.75rem;padding:.375rem}.chat-header-close-button:hover{background-color:#ef444433}.chat-header-close-button:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000);--tw-ring-color: rgb(252 165 165 / .5)}.chat-header-close-button{min-width:32px;min-height:32px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:.5px solid;border-color:var(--chat-widget-secondary-color);color:var(--chat-widget-button-content-color)}.chat-header-close-button:hover{color:var(--chat-widget-button-content-color)}.chat-header-close-button:before{content:"";position:absolute;top:50%;left:50%;width:0;height:0;background:#ef444433;border-radius:50%;transform:translate(-50%,-50%);transition:width .3s ease,height .3s ease}.chat-header-close-button:hover:before{width:80px;height:80px}.chat-header-close-button:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 4px 12px #ef44444d}.chat-header-close-button:active{transform:translateY(0) scale(.98)}.chat-header-close-icon{position:relative;z-index:10;height:1.25rem;width:1.25rem;stroke-width:2.5;transition:transform .2s ease}.chat-header-close-button:hover .chat-header-close-icon{transform:rotate(90deg)}@media (max-width: 480px){.chat-header-content{padding-left:.5rem;padding-right:.5rem}.chat-header-new-chat-button,.chat-header-close-button{min-width:32px;min-height:32px}.chat-header-new-chat-icon,.chat-header-close-icon{height:1.25rem;width:1.25rem}}.chat-message-container{position:absolute;top:0;right:0;bottom:0;left:0;overflow-y:auto;overflow-x:hidden;scroll-behavior:smooth;padding:1rem;scrollbar-width:var(--message-scrollbar-width);scrollbar-color:var(--color-scrollbar-message-thumb-theme) var(--color-scrollbar-message-track)}.chat-message-container:hover{scrollbar-color:var(--color-scrollbar-message-thumb-theme) var(--color-scrollbar-message-track)}.chat-messages-scroll-container{scroll-behavior:smooth;scrollbar-width:var(--message-scrollbar-width);scrollbar-color:var(--color-scrollbar-message-thumb-theme) var(--color-scrollbar-message-track);-webkit-overflow-scrolling:touch;background:var(--chat-widget-primary-color)}.chat-messages-scroll-container::-webkit-scrollbar{width:var(--message-scrollbar-width)}.chat-messages-scroll-container::-webkit-scrollbar-track{background:transparent;border-radius:3px}.chat-messages-scroll-container::-webkit-scrollbar-thumb{background:var( --chat-widget-button-content-color, var(--chat-widget-secondary-color) );border-radius:3px;-webkit-transition:background-color .2s ease;transition:background-color .2s ease}.chat-messages-scroll-container::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--chat-widget-button-content-color, var(--chat-widget-secondary-color)) 80%,var(--chat-widget-primary-color))}.chat-message-bubble-container{display:flex;flex-direction:column}.chat-message-bubble-wrapper{margin-bottom:.75rem;display:flex;align-items:flex-start}.chat-message-bubble-wrapper-user{flex-direction:row-reverse}.chat-message-bubble-wrapper-user .chat-message-content-container{align-items:flex-end}.chat-message-bubble-wrapper-bot{flex-direction:row}.chat-message-avatar-container{flex-shrink:0;color:var(--message-bubble-icon-color)}.chat-message-user-icon{display:flex;height:2rem;width:2rem;align-items:center;justify-content:center;border-radius:9999px;color:var(--message-bubble-icon-color)}.chat-message-user-icon-inner{font-size:1.125rem;line-height:1.75rem;color:inherit}.chat-message-bot-icon{height:2rem;width:2rem;-o-object-fit:contain;object-fit:contain;color:var(--message-bubble-icon-color)}.chat-message-user-avatar{height:2rem;width:2rem;border-radius:9999px;-o-object-fit:cover;object-fit:cover}.chat-message-content-container{display:flex;flex-direction:column;min-width:50px}.chat-message-content-with-avatar,.chat-message-content-without-avatar{max-width:90%}.chat-message-bubble{border-radius:.75rem;padding:.5rem 1rem;word-wrap:break-word;overflow-wrap:break-word;width:-moz-fit-content;width:fit-content;max-width:100%;background:var(--message-bubble-background-color);color:var(--message-text-color)}.chat-message-bubble-user{margin-left:auto;margin-right:.25rem;border-bottom-right-radius:.125rem}.chat-message-bubble-bot{border-bottom-left-radius:.125rem}.chat-message-markdown{color:var(--tw-prose-body);max-width:65ch}.chat-message-markdown :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em;margin-bottom:1.25em}.chat-message-markdown :where([class~=lead]):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-lead);font-size:1.25em;line-height:1.6;margin-top:1.2em;margin-bottom:1.2em}.chat-message-markdown :where(a):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-links);text-decoration:underline;font-weight:500}.chat-message-markdown :where(strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-bold);font-weight:600}.chat-message-markdown :where(a strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(blockquote strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(thead th strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(ol):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:decimal;margin-top:1.25em;margin-bottom:1.25em;padding-inline-start:1.625em}.chat-message-markdown :where(ol[type=A]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-alpha}.chat-message-markdown :where(ol[type=a]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-alpha}.chat-message-markdown :where(ol[type=A s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-alpha}.chat-message-markdown :where(ol[type=a s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-alpha}.chat-message-markdown :where(ol[type=I]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-roman}.chat-message-markdown :where(ol[type=i]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-roman}.chat-message-markdown :where(ol[type=I s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-roman}.chat-message-markdown :where(ol[type=i s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-roman}.chat-message-markdown :where(ol[type="1"]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:decimal}.chat-message-markdown :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:disc;margin-top:1.25em;margin-bottom:1.25em;padding-inline-start:1.625em}.chat-message-markdown :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker{font-weight:400;color:var(--tw-prose-counters)}.chat-message-markdown :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker{color:var(--tw-prose-bullets)}.chat-message-markdown :where(dt):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;margin-top:1.25em}.chat-message-markdown :where(hr):not(:where([class~=not-prose],[class~=not-prose] *)){border-color:var(--tw-prose-hr);border-top-width:1px;margin-top:3em;margin-bottom:3em}.chat-message-markdown :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:500;font-style:italic;color:var(--tw-prose-quotes);border-inline-start-width:.25rem;border-inline-start-color:var(--tw-prose-quote-borders);quotes:"“""”""‘""’";margin-top:1.6em;margin-bottom:1.6em;padding-inline-start:1em}.chat-message-markdown :where(blockquote p:first-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:open-quote}.chat-message-markdown :where(blockquote p:last-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:close-quote}.chat-message-markdown :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:800;font-size:2.25em;margin-top:0;margin-bottom:.8888889em;line-height:1.1111111}.chat-message-markdown :where(h1 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:900;color:inherit}.chat-message-markdown :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:700;font-size:1.5em;margin-top:2em;margin-bottom:1em;line-height:1.3333333}.chat-message-markdown :where(h2 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:800;color:inherit}.chat-message-markdown :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;font-size:1.25em;margin-top:1.6em;margin-bottom:.6em;line-height:1.6}.chat-message-markdown :where(h3 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:700;color:inherit}.chat-message-markdown :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;margin-top:1.5em;margin-bottom:.5em;line-height:1.5}.chat-message-markdown :where(h4 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:700;color:inherit}.chat-message-markdown :where(img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(picture):not(:where([class~=not-prose],[class~=not-prose] *)){display:block;margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(video):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(kbd):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:500;font-family:inherit;color:var(--tw-prose-kbd);box-shadow:0 0 0 1px rgb(var(--tw-prose-kbd-shadows) / 10%),0 3px rgb(var(--tw-prose-kbd-shadows) / 10%);font-size:.875em;border-radius:.3125rem;padding-top:.1875em;padding-inline-end:.375em;padding-bottom:.1875em;padding-inline-start:.375em}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-code);font-weight:600;font-size:.875em}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:"`"}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:"`"}.chat-message-markdown :where(a code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(h1 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(h2 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-size:.875em}.chat-message-markdown :where(h3 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-size:.9em}.chat-message-markdown :where(h4 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(blockquote code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(thead th code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(pre):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-pre-code);background-color:var(--tw-prose-pre-bg);overflow-x:auto;font-weight:400;font-size:.875em;line-height:1.7142857;margin-top:1.7142857em;margin-bottom:1.7142857em;border-radius:.375rem;padding-top:.8571429em;padding-inline-end:1.1428571em;padding-bottom:.8571429em;padding-inline-start:1.1428571em}.chat-message-markdown :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)){background-color:transparent;border-width:0;border-radius:0;padding:0;font-weight:inherit;color:inherit;font-size:inherit;font-family:inherit;line-height:inherit}.chat-message-markdown :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:none}.chat-message-markdown :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:none}.chat-message-markdown :where(table):not(:where([class~=not-prose],[class~=not-prose] *)){width:100%;table-layout:auto;margin-top:2em;margin-bottom:2em;font-size:.875em;line-height:1.7142857}.chat-message-markdown :where(thead):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:1px;border-bottom-color:var(--tw-prose-th-borders)}.chat-message-markdown :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;vertical-align:bottom;padding-inline-end:.5714286em;padding-bottom:.5714286em;padding-inline-start:.5714286em}.chat-message-markdown :where(tbody tr):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:1px;border-bottom-color:var(--tw-prose-td-borders)}.chat-message-markdown :where(tbody tr:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:0}.chat-message-markdown :where(tbody td):not(:where([class~=not-prose],[class~=not-prose] *)){vertical-align:baseline}.chat-message-markdown :where(tfoot):not(:where([class~=not-prose],[class~=not-prose] *)){border-top-width:1px;border-top-color:var(--tw-prose-th-borders)}.chat-message-markdown :where(tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){vertical-align:top}.chat-message-markdown :where(th,td):not(:where([class~=not-prose],[class~=not-prose] *)){text-align:start}.chat-message-markdown :where(figcaption):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-captions);font-size:.875em;line-height:1.4285714;margin-top:.8571429em}.chat-message-markdown{--tw-prose-body: #374151;--tw-prose-headings: #111827;--tw-prose-lead: #4b5563;--tw-prose-links: #111827;--tw-prose-bold: #111827;--tw-prose-counters: #6b7280;--tw-prose-bullets: #d1d5db;--tw-prose-hr: #e5e7eb;--tw-prose-quotes: #111827;--tw-prose-quote-borders: #e5e7eb;--tw-prose-captions: #6b7280;--tw-prose-kbd: #111827;--tw-prose-kbd-shadows: 17 24 39;--tw-prose-code: #111827;--tw-prose-pre-code: #e5e7eb;--tw-prose-pre-bg: #1f2937;--tw-prose-th-borders: #d1d5db;--tw-prose-td-borders: #e5e7eb;--tw-prose-invert-body: #d1d5db;--tw-prose-invert-headings: #fff;--tw-prose-invert-lead: #9ca3af;--tw-prose-invert-links: #fff;--tw-prose-invert-bold: #fff;--tw-prose-invert-counters: #9ca3af;--tw-prose-invert-bullets: #4b5563;--tw-prose-invert-hr: #374151;--tw-prose-invert-quotes: #f3f4f6;--tw-prose-invert-quote-borders: #374151;--tw-prose-invert-captions: #9ca3af;--tw-prose-invert-kbd: #fff;--tw-prose-invert-kbd-shadows: 255 255 255;--tw-prose-invert-code: #fff;--tw-prose-invert-pre-code: #d1d5db;--tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);--tw-prose-invert-th-borders: #4b5563;--tw-prose-invert-td-borders: #374151;font-size:1rem;line-height:1.75}.chat-message-markdown :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5em;margin-bottom:.5em}.chat-message-markdown :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.375em}.chat-message-markdown :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.375em}.chat-message-markdown :where(.prose>ul>li p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.75em;margin-bottom:.75em}.chat-message-markdown :where(.prose>ul>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em}.chat-message-markdown :where(.prose>ul>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em}.chat-message-markdown :where(.prose>ol>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em}.chat-message-markdown :where(.prose>ol>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em}.chat-message-markdown :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.75em;margin-bottom:.75em}.chat-message-markdown :where(dl):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em;margin-bottom:1.25em}.chat-message-markdown :where(dd):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5em;padding-inline-start:1.625em}.chat-message-markdown :where(tbody td,tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){padding-top:.5714286em;padding-inline-end:.5714286em;padding-bottom:.5714286em;padding-inline-start:.5714286em}.chat-message-markdown :where(figure):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(.prose>:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(.prose>:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown{font-size:.875rem;line-height:1.7142857}.chat-message-markdown :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em}.chat-message-markdown :where([class~=lead]):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.2857143em;line-height:1.5555556;margin-top:.8888889em;margin-bottom:.8888889em}.chat-message-markdown :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.3333333em;margin-bottom:1.3333333em;padding-inline-start:1.1111111em}.chat-message-markdown :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:2.1428571em;margin-top:0;margin-bottom:.8em;line-height:1.2}.chat-message-markdown :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.4285714em;margin-top:1.6em;margin-bottom:.8em;line-height:1.4}.chat-message-markdown :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.2857143em;margin-top:1.5555556em;margin-bottom:.4444444em;line-height:1.5555556}.chat-message-markdown :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.4285714em;margin-bottom:.5714286em;line-height:1.4285714}.chat-message-markdown :where(img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(picture):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(picture>img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:0}.chat-message-markdown :where(video):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(kbd):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;border-radius:.3125rem;padding-top:.1428571em;padding-inline-end:.3571429em;padding-bottom:.1428571em;padding-inline-start:.3571429em}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em}.chat-message-markdown :where(h2 code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.9em}.chat-message-markdown :where(h3 code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8888889em}.chat-message-markdown :where(pre):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;line-height:1.6666667;margin-top:1.6666667em;margin-bottom:1.6666667em;border-radius:.25rem;padding-top:.6666667em;padding-inline-end:1em;padding-bottom:.6666667em;padding-inline-start:1em}.chat-message-markdown :where(ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em;padding-inline-start:1.5714286em}.chat-message-markdown :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em;padding-inline-start:1.5714286em}.chat-message-markdown :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.2857143em;margin-bottom:.2857143em}.chat-message-markdown :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.4285714em}.chat-message-markdown :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.4285714em}.chat-message-markdown :where(.prose-sm>ul>li p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5714286em;margin-bottom:.5714286em}.chat-message-markdown :where(.prose-sm>ul>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em}.chat-message-markdown :where(.prose-sm>ul>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.1428571em}.chat-message-markdown :where(.prose-sm>ol>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em}.chat-message-markdown :where(.prose-sm>ol>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.1428571em}.chat-message-markdown :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5714286em;margin-bottom:.5714286em}.chat-message-markdown :where(dl):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em}.chat-message-markdown :where(dt):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em}.chat-message-markdown :where(dd):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.2857143em;padding-inline-start:1.5714286em}.chat-message-markdown :where(hr):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2.8571429em;margin-bottom:2.8571429em}.chat-message-markdown :where(hr+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(h2+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(h3+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(h4+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(table):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;line-height:1.5}.chat-message-markdown :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:1em;padding-bottom:.6666667em;padding-inline-start:1em}.chat-message-markdown :where(thead th:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.chat-message-markdown :where(thead th:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.chat-message-markdown :where(tbody td,tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){padding-top:.6666667em;padding-inline-end:1em;padding-bottom:.6666667em;padding-inline-start:1em}.chat-message-markdown :where(tbody td:first-child,tfoot td:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.chat-message-markdown :where(tbody td:last-child,tfoot td:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.chat-message-markdown :where(figure):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(figure>*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:0}.chat-message-markdown :where(figcaption):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;line-height:1.3333333;margin-top:.6666667em}.chat-message-markdown :where(.prose-sm>:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(.prose-sm>:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown{max-width:none;text-align:left;color:var(--message-text-color)}.chat-message-markdown :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:.5em}.chat-message-markdown :where(p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown :where(ul,ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:.5em;padding-left:1rem}.chat-message-markdown :where(ul:last-child,ol:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:.25em}.chat-message-markdown :where(li:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-paragraph{margin-bottom:.5rem;text-align:left}.chat-message-paragraph:last-child{margin-bottom:0}.chat-message-unordered-list{margin-bottom:.5rem;list-style-type:disc;padding-left:1rem;text-align:left}.chat-message-unordered-list:last-child{margin-bottom:0}.chat-message-ordered-list{margin-bottom:.5rem;list-style-type:decimal;padding-left:1rem;text-align:left}.chat-message-ordered-list:last-child{margin-bottom:0}.chat-message-list-item{margin-bottom:.25rem;text-align:left}.chat-message-list-item:last-child{margin-bottom:0}.chat-message-code-block{margin-bottom:.5rem;overflow-x:auto;border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:0;text-align:left}.chat-message-code-block:last-child{margin-bottom:0}@media (prefers-color-scheme: dark){.chat-message-code-block{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-link{text-align:left;--tw-text-opacity: 1;color:rgb(37 99 235 / var(--tw-text-opacity, 1));text-decoration-line:underline}.chat-message-link:hover{--tw-text-opacity: 1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.chat-message-blockquote{margin-bottom:.5rem;border-left-width:4px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding-left:1rem;text-align:left;font-style:italic}.chat-message-blockquote:last-child{margin-bottom:0}.chat-message-heading-1{margin-bottom:.5rem;text-align:left;font-size:1.25rem;line-height:1.75rem;font-weight:700}.chat-message-heading-1:last-child{margin-bottom:0}.chat-message-heading-2{margin-bottom:.5rem;text-align:left;font-size:1.125rem;line-height:1.75rem;font-weight:700}.chat-message-heading-2:last-child{margin-bottom:0}.chat-message-heading-3{margin-bottom:.5rem;text-align:left;font-size:1rem;line-height:1.5rem;font-weight:700}.chat-message-heading-3:last-child{margin-bottom:0}.chat-message-heading-4{margin-bottom:.5rem;text-align:left;font-size:.875rem;line-height:1.25rem;font-weight:700}.chat-message-heading-4:last-child{margin-bottom:0}.chat-message-table-container{margin-bottom:.5rem;overflow-x:auto}.chat-message-table-container:last-child{margin-bottom:0}.chat-message-table{min-width:100%}.chat-message-table>:not([hidden])~:not([hidden]){--tw-divide-y-reverse: 0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse));--tw-divide-opacity: 1;border-color:rgb(229 231 235 / var(--tw-divide-opacity, 1))}.chat-message-table{text-align:left}.chat-message-table-header{--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem 1rem;text-align:left}.chat-message-table-cell{border-top-width:1px;padding:.5rem 1rem;text-align:left}.chat-message-inline-code{border-radius:.25rem;padding:.25rem}.chat-message-markdown-content .markdown-paragraph{text-align:left}.chat-message-markdown-content .markdown-code-block{overflow-x:auto;border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-code-block{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-code-block{font-size:11px;border:1px solid rgba(0,0,0,.1)}.chat-message-markdown-content .markdown-inline-code{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.125rem .25rem;font-size:.75rem;line-height:1rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-inline-code{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-inline-code{font-family:Monaco,Menlo,Ubuntu Mono,monospace}.chat-message-markdown-content .markdown-link{--tw-text-opacity: 1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.chat-message-markdown-content .markdown-link:hover{text-decoration-line:underline}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-link{--tw-text-opacity: 1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}}.chat-message-markdown-content .markdown-link{text-decoration:none}.chat-message-markdown-content .markdown-blockquote{border-left-width:4px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding-left:.75rem;font-style:italic}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-blockquote{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.chat-message-markdown-content .markdown-blockquote{margin:.5em 0;font-size:.9em;color:#374151}.chat-message-markdown-content .markdown-heading-1,.chat-message-markdown-content .markdown-heading-2,.chat-message-markdown-content .markdown-heading-3,.chat-message-markdown-content .markdown-heading-4{text-align:left;color:#111827}.chat-message-markdown-content .markdown-heading-1{font-size:1.2em}.chat-message-markdown-content .markdown-heading-2{font-size:1.1em}.chat-message-markdown-content .markdown-heading-3{font-size:1.05em}.chat-message-markdown-content .markdown-heading-4{font-size:1em}.chat-message-markdown-content .markdown-table-container{overflow-x:auto;margin:.5em 0}.chat-message-markdown-content .markdown-table{min-width:100%;border-collapse:collapse;font-size:.9em;border:1px solid #d1d5db}.chat-message-markdown-content .markdown-table-header{border-width:1px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.25rem .5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-table-header{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1));--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-table-header{font-size:.9em;font-weight:600}.chat-message-markdown-content .markdown-table-cell{border-width:1px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding:.25rem .5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-table-cell{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.chat-message-markdown-content .markdown-table-cell{font-size:.9em}.chat-message-markdown-content .markdown-syntax-highlighter{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-syntax-highlighter{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-syntax-highlighter{font-size:11px;border:1px solid rgba(0,0,0,.1);word-wrap:break-word;overflow-wrap:break-word;white-space:pre-wrap;line-break:anywhere}.chat-message-markdown-content .markdown-syntax-highlighter pre{margin:0;background:transparent}.chat-message-timestamp{margin-top:.25rem;font-size:10px;--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1));background:transparent}.chat-message-timestamp-user{text-align:right}.chat-message-timestamp-bot{text-align:left}.chat-message-audio{margin-top:.5rem;max-width:100%}.chat-message-loading{display:flex;align-items:center;justify-content:center;padding:1rem}.chat-message-loading-spinner{height:1.25rem;width:1.25rem}.chat-message-loading-spinner{animation:spin 1s linear infinite;--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.chat-message-separator{position:relative;margin-top:1rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;padding-top:1.5rem;padding-bottom:1.5rem}.chat-message-separator:before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:linear-gradient(to right,transparent,#e2e8f0,transparent);transform:translateY(-50%)}.chat-message-separator-text{position:relative;z-index:10;border-radius:9999px;border-width:1px;--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1));--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1));padding:.5rem 1rem;font-size:.75rem;line-height:1rem;--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1));--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / .05);--tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);font-style:italic;font-weight:500;letter-spacing:.5px;transition:all .2s ease;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.chat-message-separator-text:hover{--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1));--tw-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);--tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);transform:scale(1.02)}.chat-message-date-separator{background:color-mix(in srgb,var(--chat-widget-secondary-color) 80%,transparent 20%);color:color-mix(in srgb,var(--chat-widget-message-text-color) 80%,transparent 20%);font-weight:500;font-style:italic;letter-spacing:.5px}.chat-message-references-divider{margin-top:.5rem;margin-bottom:.5rem}.chat-message-references-divider-user{border-color:#fff3}.chat-message-references-divider-bot{--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.prose p,.prose-override p{margin-top:0!important;margin-bottom:.5em!important}.prose p:last-child,.prose-override p:last-child{margin-bottom:0!important}.prose ul,.prose ol,.prose-override ul,.prose-override ol{margin-top:0!important;margin-bottom:.5em!important;padding-left:1.25em!important}.prose ul:last-child,.prose ol:last-child,.prose-override ul:last-child,.prose-override ol:last-child{margin-bottom:0!important}.prose li,.prose-override li{margin-top:0!important;margin-bottom:.25em!important;padding-left:0!important}.prose li:last-child,.prose-override li:last-child{margin-bottom:0!important}.prose h1,.prose h2,.prose h3,.prose h4,.prose-override h1,.prose-override h2,.prose-override h3,.prose-override h4{margin-top:0!important;margin-bottom:.5em!important}.prose blockquote,.prose-override blockquote{margin-top:0!important;margin-bottom:.5em!important;padding-left:1em!important;font-style:italic!important}.prose table,.prose-override table,.prose pre,.prose-override pre{margin-top:0!important;margin-bottom:.5em!important}.prose code,.prose-override code{padding:.1em .25em!important}.markdown-renderer{width:100%}.markdown-paragraph{margin-bottom:.5rem}.markdown-paragraph:last-child{margin-bottom:0}.markdown-unordered-list{margin-bottom:.5rem;list-style-type:disc;padding-left:1rem}.markdown-unordered-list:last-child{margin-bottom:0}.markdown-ordered-list{margin-bottom:.5rem;list-style-type:decimal;padding-left:1rem}.markdown-ordered-list:last-child{margin-bottom:0}.markdown-list-item{margin-bottom:.25rem}.markdown-list-item:last-child{margin-bottom:0}.markdown-code-block{margin-bottom:.5rem}.markdown-code-block:last-child{margin-bottom:0}.markdown-inline-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.markdown-link{text-decoration-line:underline}.markdown-blockquote{margin-bottom:.5rem;padding-left:1rem;font-style:italic}.markdown-blockquote:last-child{margin-bottom:0}.markdown-heading-1,.markdown-heading-2,.markdown-heading-3,.markdown-heading-4{margin-bottom:.5rem;font-weight:700}.markdown-heading-1:last-child,.markdown-heading-2:last-child,.markdown-heading-3:last-child,.markdown-heading-4:last-child{margin-bottom:0}.markdown-table-container{margin-bottom:.5rem;overflow-x:auto}.markdown-table-container:last-child{margin-bottom:0}.markdown-table{min-width:100%;border-collapse:collapse}.markdown-table-header,.markdown-table-cell{padding:.25rem .5rem}.markdown-syntax-highlighter{width:100%;overflow-x:auto}.chat-input-container{position:sticky;bottom:0;left:0;right:0;padding:var(--input-container-padding);width:100%}.chat-input-base-container{position:relative;display:flex;align-items:center;height:auto;min-height:var(--input-min-height);width:100%}.chat-input-buttons-container-base{display:flex;flex-shrink:0;align-items:center;gap:.25rem}.chat-input-button-base{display:flex;align-items:center;justify-content:center;border-radius:9999px;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;width:var(--button-size-primary);height:var(--button-size-primary);padding:var(--button-padding-primary);color:var(--color-button-text);opacity:var(--button-opacity-normal)}.chat-input-icon-base{width:var(--button-icon-size-primary);height:var(--button-icon-size-primary);fill:var(--color-button-fill);color:var(--color-button-text);opacity:var(--button-opacity-normal)}.chat-input-wrapper{position:relative;margin-left:auto;margin-right:auto;max-width:56rem}.chat-input-container-standard-view,.chat-input-wrapper-standard-view{background:var(--color-input-background)}.chat-input-container-voice-view,.chat-input-wrapper-voice-view{background:var(--chat-widget-primary-color)}.chat-input-container-standard-view .chat-input-button-base{background:var(--color-button-background-primary)}.chat-input-container-voice-view .chat-input-button-base{background:var(--chat-widget-secondary-color)}.text-chat-input-wrapper{position:relative;display:flex;flex:1 1 0%;align-items:center;min-height:var(--input-min-height);font-size:var(--chat-widget-message-font-size);line-height:var(--input-line-height);padding-right:8px}.text-chat-input-placeholder{position:absolute;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--color-input-text);padding:var(--input-text-padding);opacity:var(--color-input-placeholder-opacity)}.text-chat-input-field{flex:1 1 0%;resize:none;outline:2px solid transparent;outline-offset:2px;display:flex;align-items:center;height:var(--input-default-height);min-height:inherit;max-height:inherit;font-size:inherit;line-height:inherit;color:var(--color-input-text);border:none;font-family:inherit;padding:var(--input-text-padding);box-sizing:border-box;font-weight:var(--input-font-weight);transition:var(--transition-normal);overflow-y:auto;word-wrap:break-word;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word;scrollbar-width:var(--input-scrollbar-width);-webkit-overflow-scrolling:touch;border-radius:16px}.chat-input-container-standard-view .text-chat-input-field{scrollbar-color:var(--color-scrollbar-input-thumb) var(--color-scrollbar-input-track)}.chat-input-container-voice-view .text-chat-input-field{border:.5px solid;border-color:var(--chat-widget-secondary-color);scrollbar-color:var(--color-scrollbar-input-thumb-avatar-view) var(--color-scrollbar-input-track)}.text-chat-input-field::-webkit-scrollbar{width:5px}.text-chat-input-field::-webkit-scrollbar-track{background:transparent;border-radius:2.5px}.text-chat-input-field::-webkit-scrollbar-thumb{border-radius:2.5px;-webkit-transition:background-color .2s ease;transition:background-color .2s ease}.chat-input-container-standard-view .text-chat-input-field::-webkit-scrollbar-thumb{background:var(--color-scrollbar-input-thumb)}.chat-input-container-standard-view .text-chat-input-field::-webkit-scrollbar-thumb:hover{background:var(--color-scrollbar-input-thumb-hover)}.chat-input-container-voice-view .text-chat-input-field::-webkit-scrollbar-thumb{background:var(--color-scrollbar-input-thumb-avatar-view)}.chat-input-container-voice-view .text-chat-input-field::-webkit-scrollbar-thumb:hover{background:var(--color-scrollbar-input-thumb-hover-avatar-view)}.text-chat-input-field:focus{outline:none;border:none;box-shadow:none}.text-chat-input-mic-button svg{fill:var(--color-button-fill);color:var(--color-button-text)}.text-chat-input-mic-button:hover{opacity:var(--button-opacity-hover)}.text-chat-input-send-button:hover:not(:disabled){opacity:var(--button-opacity-hover)}.text-chat-input-send-button:disabled{cursor:not-allowed;opacity:var(--button-opacity-disabled)}:root{--sleek-main-min-height: 0px;--sleek-border-radius: 12px;--chat-widget-primary-color: var(--chat-widget-primary-color);--chat-widget-primary-color-hover: var(--chat-widget-primary-color-hover);--chat-widget-secondary-color: var(--chat-widget-secondary-color);--sleek-main-text-color: var(--chat-widget-message-text-color);--sleek-main-bg: color-mix( in srgb, var(--chat-widget-primary-color) 10%, white );--sleek-main-border: var(--chat-widget-secondary-color);--gradient-1: var(--chat-widget-primary-color);--gradient-2: var(--chat-widget-secondary-color);--gradient-3: color-mix( in srgb, var(--chat-widget-primary-color) 60%, var(--chat-widget-secondary-color) );--gradient-4: color-mix( in srgb, var(--chat-widget-primary-color) 40%, var(--chat-widget-secondary-color) );--accent: color-mix( in srgb, var(--chat-widget-primary-color) 70%, var(--chat-widget-secondary-color) );--glow: color-mix(in srgb, var(--chat-widget-primary-color) 30%, transparent);--whatsapp-color: #25d366;--fallback-1: #000aaa;--fallback-2: #6c757d;--fallback-3: #6c757d;--fallback-4: #6c757d;--fallback-accent: #6c757d;--fallback-glow: rgba(0, 10, 170, .3);--sleek-main-bg-fallback: rgba(0, 10, 170, .1);--sleek-main-border-fallback: rgba(108, 117, 125, .8)}@supports not (color: color-mix(in srgb,#000 50%,#fff)){:root{--gradient-1: var(--fallback-1);--gradient-2: var(--fallback-2);--gradient-3: var(--fallback-3);--gradient-4: var(--fallback-4);--accent: var(--fallback-accent);--glow: var(--fallback-glow);--sleek-main-bg: var(--sleek-main-bg-fallback);--sleek-main-border: var(--sleek-main-border-fallback)}.sleek-chat-input-voice-button{background:#000aaabf;box-shadow:0 4px 16px #000aaa36,0 2px 8px #000aaa26}.sleek-chat-input-voice-button:hover{background:var(--fallback-1);opacity:.9;box-shadow:0 8px 24px #000aaa59,0 4px 16px #000aaa40}.sleek-chat-input-voice-button:focus{box-shadow:0 0 0 4px #000aaa3d,0 8px 24px #000aaa59}.sleek-chat-input-voice-button.voice-loading{background:var(--fallback-1);box-shadow:0 4px 16px #000aaa36,0 2px 8px #000aaa40}.thinking-dot{background:var(--chat-widget-primary-color);box-shadow:0 0 4px var(--chat-widget-primary-color)}.sleek-chat-input-field::-moz-placeholder{color:var(--fallback-2);opacity:.6}.sleek-chat-input-field::placeholder{color:var(--fallback-2);opacity:.6}.sleek-chat-input-field:focus::-moz-placeholder{color:var(--fallback-2);opacity:.8}.sleek-chat-input-field:focus::placeholder{color:var(--fallback-2);opacity:.8}.sleek-main.agent-speaking{background:var(--sleek-main-bg-fallback);border:2px solid var(--fallback-1);box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 20px #667eea33,inset 0 1px #ffffffb3;animation:speakingBorderPulseFallback 1.5s ease-in-out infinite}}.sleek-view-wrapper-container{width:100%;height:100%;position:relative;display:flex;flex-direction:column}.sleek-view{display:flex;flex-direction:column;min-height:calc(var(--sleek-main-min-height) + var(--input-min-height));max-height:100%;position:relative;width:100%;flex:1}.sleek-close-button{display:flex;align-items:center;justify-content:center;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.2s;position:absolute;top:-10px;width:var(--button-size-secondary);height:var(--button-size-secondary);border-radius:9999px;border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 50%,white);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white);color:var(--color-button-text);box-shadow:0 4px 14px color-mix(in srgb,var(--glow) 60%,transparent),0 2px 6px color-mix(in srgb,var(--chat-widget-primary-color) 18%,transparent);cursor:pointer;overflow:hidden;z-index:20}.sleek-close-button.position-bottom-right,.sleek-close-button.position-top-right{right:-10px;left:auto}.sleek-close-button.position-bottom-left,.sleek-close-button.position-top-left{left:-10px;right:auto}.sleek-close-button:hover{transform:translateY(-1px) scale(1.05);box-shadow:0 8px 20px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent),0 4px 12px color-mix(in srgb,var(--chat-widget-primary-color) 20%,transparent);background:color-mix(in srgb,var(--chat-widget-primary-color-hover) 80%,white)}.sleek-close-button:focus{outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--glow) 80%,transparent),0 8px 22px color-mix(in srgb,var(--chat-widget-primary-color) 32%,transparent);transform:translateY(-1px) scale(1.03)}.sleek-close-button:active{transform:translateY(0) scale(.97);box-shadow:0 3px 10px color-mix(in srgb,var(--chat-widget-primary-color) 24%,transparent)}.sleek-close-button svg{width:calc(var(--button-size-secondary) * .8);height:calc(var(--button-size-secondary) * .8);display:block;flex-shrink:0;filter:drop-shadow(0 0 1px rgba(255,255,255,.7)) drop-shadow(0 0 2px color-mix(in srgb,var(--glow) 60%,transparent))}:host([data-open="false"]) .sleek-view,spotinfo-chat[data-open=false] .sleek-view{display:none!important;height:0!important;width:0!important;overflow:hidden!important;pointer-events:none!important}.sleek-main{display:flex;flex-direction:column;align-items:center;overflow:hidden;position:relative;min-height:var(--sleek-main-min-height);max-height:none;transition:border .4s cubic-bezier(.4,0,.2,1);opacity:1;transform:translateY(0);flex:1;line-height:var(--input-line-height);background:var(--sleek-main-bg);border-radius:var(--sleek-border-radius);color:var(--color-input-text);border:2px solid var(--sleek-main-border);box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,inset 0 1px #ffffffb3;overflow:visible;animation:slideInUpEnhanced .8s cubic-bezier(.4,0,.2,1);will-change:transform,box-shadow,filter;z-index:2}.sleek-main:focus-within{transform:translateY(-2px) scale(1.01);box-shadow:0 16px 48px #0000001f,0 8px 24px #0000000f,0 0 0 4px var(--glow),inset 0 1px #ffffffe6;border-color:var(--accent)}.sleek-main[style*=height]{animation:contentAppear .6s cubic-bezier(.4,0,.2,1)}.sleek-main.agent-speaking{position:relative;background:var(--sleek-main-bg);border:2px solid var(--chat-widget-primary-color);transition:none;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 20px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent),inset 0 1px #ffffffb3;animation:speakingBorderPulse 1.5s ease-in-out infinite}.sleek-new-chat-button{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;background:#ffffffe6;color:var(--gradient-2);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px #0000001a,0 1px 4px #0000000f;position:absolute;overflow:hidden;z-index:10;opacity:.9;transform:scale(.95);font-size:11px;font-weight:500;letter-spacing:.025em;white-space:nowrap;min-width:60px;height:28px;border-radius:16px;border:1px solid rgba(226,232,240,.6)}.sleek-new-chat-button.position-bottom-right,.sleek-new-chat-button.position-top-right{bottom:0;right:0;top:auto;left:auto}.sleek-new-chat-button.position-bottom-left,.sleek-new-chat-button.position-top-left{bottom:0;left:0;top:auto;right:auto}.sleek-new-chat-button:hover{transform:scale(1.02);opacity:1;background:#fffffff2;box-shadow:0 4px 12px #00000026,0 2px 6px #0000001a;border-color:#e2e8f0cc}.sleek-new-chat-button:focus{outline:none;box-shadow:0 0 0 2px var(--glow),0 4px 12px #00000026;transform:scale(1.01);opacity:1;background:#fff}.sleek-new-chat-button:active{transform:scale(.98);transition:transform .1s ease;background:#f8fafcf2}.sleek-message-container{width:100%;font-size:.875rem;line-height:1.25rem;font-style:normal;line-height:1.625;flex:0 0 auto;display:flex;flex-direction:column;justify-content:center;text-align:left;min-height:inherit;font-size:var(--message-font-size);line-height:var(--input-line-height);transition:all .3s ease-in-out;background:transparent;color:var(--color-input-text);font-weight:500;position:relative;z-index:1;padding:8px}.sleek-message-container:empty{opacity:0;height:0;padding:0;min-height:0}.sleek-message-container:not(:empty){opacity:1;height:auto;padding:8px;animation:fadeInUpEnhanced .5s ease-out}.sleek-message-container:focus{font-weight:500;text-shadow:0 0 15px var(--glow)}.sleek-message-markdown{width:100%;font-size:var(--message-font-size);line-height:var(--input-line-height);color:var(--color-input-text)}.sleek-message-markdown .markdown-paragraph{margin-bottom:.5rem}.sleek-message-markdown .markdown-paragraph:last-child{margin-bottom:0}.sleek-message-markdown .markdown-paragraph{font-size:inherit;line-height:inherit;color:inherit}.sleek-message-markdown .markdown-code-block{overflow-x:auto;border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-code-block{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.sleek-message-markdown .markdown-code-block{font-size:11px;border:1px solid rgba(0,0,0,.1)}.sleek-message-markdown .markdown-inline-code{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.125rem .25rem;font-size:.75rem;line-height:1rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-inline-code{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.sleek-message-markdown .markdown-inline-code{font-family:Monaco,Menlo,Ubuntu Mono,monospace}.sleek-message-markdown .markdown-link{--tw-text-opacity: 1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.sleek-message-markdown .markdown-link:hover{text-decoration-line:underline}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-link{--tw-text-opacity: 1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}}.sleek-message-markdown .markdown-link{text-decoration:none}.sleek-message-markdown .markdown-blockquote{border-left-width:4px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding-left:.75rem;font-style:italic}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-blockquote{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.sleek-message-markdown .markdown-blockquote{margin:.5em 0;font-size:.9em}.sleek-message-markdown .markdown-heading-1,.sleek-message-markdown .markdown-heading-2,.sleek-message-markdown .markdown-heading-3,.sleek-message-markdown .markdown-heading-4{margin-bottom:.5rem;font-weight:700}.sleek-message-markdown .markdown-heading-1:last-child,.sleek-message-markdown .markdown-heading-2:last-child,.sleek-message-markdown .markdown-heading-3:last-child,.sleek-message-markdown .markdown-heading-4:last-child{margin-bottom:0}.sleek-message-markdown .markdown-heading-1,.sleek-message-markdown .markdown-heading-2,.sleek-message-markdown .markdown-heading-3,.sleek-message-markdown .markdown-heading-4{color:inherit}.sleek-message-markdown .markdown-heading-1{font-size:1.2em}.sleek-message-markdown .markdown-heading-2{font-size:1.1em}.sleek-message-markdown .markdown-heading-3{font-size:1.05em}.sleek-message-markdown .markdown-heading-4{font-size:1em}.sleek-message-markdown .markdown-table-container{overflow-x:auto;margin:.5em 0}.sleek-message-markdown .markdown-table{min-width:100%;border-collapse:collapse;font-size:.9em;border:1px solid rgba(0,0,0,.1)}.sleek-message-markdown .markdown-table-header,.sleek-message-markdown .markdown-table-cell{border-width:1px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding:.25rem .5rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-table-header,.sleek-message-markdown .markdown-table-cell{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.sleek-message-markdown .markdown-table-header,.sleek-message-markdown .markdown-table-cell{font-size:.9em}.sleek-message-markdown .markdown-syntax-highlighter{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-syntax-highlighter{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.sleek-message-markdown .markdown-syntax-highlighter{font-size:11px;border:1px solid rgba(0,0,0,.1);word-wrap:break-word;overflow-wrap:break-word;white-space:pre-wrap;line-break:anywhere}.sleek-message-markdown .markdown-syntax-highlighter pre{margin:0;background:transparent}.sleek-spacer{flex:none;height:16px;background:transparent;transition:all .4s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:center;margin:0;padding:0}.sleek-spacer-loading{height:16px;background:transparent;border-radius:8px;display:flex;align-items:center;justify-content:center}.thinking-dots{display:flex;align-items:center;gap:4px}.thinking-dot{width:4px;height:4px;border-radius:50%;background:var(--chat-widget-primary-color);animation:thinkingDotCompact 1.4s ease-in-out infinite;box-shadow:0 0 4px var(--chat-widget-primary-color)}.thinking-dot:nth-child(1){animation-delay:0s}.thinking-dot:nth-child(2){animation-delay:.2s}.thinking-dot:nth-child(3){animation-delay:.4s}.sleek-chat-input-container{width:100%;flex:none;background-color:transparent;margin-top:auto;height:auto;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#f8fafcf2,#f1f5f9d9);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-radius:var(--sleek-border-radius);transition:all .4s cubic-bezier(.4,0,.2,1);padding:4px;box-sizing:border-box;border:1px solid rgba(226,232,240,.4);box-shadow:0 8px 32px #0000001f,0 4px 16px #00000014,inset 0 1px #ffffff80;position:relative;overflow:visible;flex-shrink:0;align-self:flex-end;will-change:transform,box-shadow,filter,background;z-index:10}.sleek-chat-input-container:before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,var(--gradient-1) 0%,var(--gradient-2) 25%,var(--gradient-3) 50%,var(--gradient-4) 75%,var(--accent) 100%);opacity:0;transition:opacity .4s ease;border-radius:inherit;z-index:-1}.sleek-chat-input-container:hover:before{opacity:.1}.sleek-chat-input-container:focus-within{transform:translateY(-2px);box-shadow:0 12px 40px #00000026,0 8px 24px #0000001a,0 0 0 4px var(--glow),inset 0 1px #fff9;border-color:var(--accent);background:linear-gradient(135deg,#fffffffa,#f8fafceb)}.sleek-chat-input-container:focus-within .sleek-chat-input-field{font-weight:500}.sleek-main:focus-within~.sleek-chat-input-container{transform:none;box-shadow:0 8px 32px #0000001f,0 4px 16px #00000014,inset 0 1px #ffffff80;border-color:#e2e8f066;background:linear-gradient(135deg,#f8fafcf2,#f1f5f9d9)}.sleek-chat-input-container.agent-listening{position:relative;overflow:visible;transition:all .4s cubic-bezier(.4,0,.2,1)}.sleek-chat-input-container.agent-listening:before{content:"";position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:linear-gradient(90deg,var(--gradient-2) 0%,var(--gradient-3) 50%,var(--gradient-2) 100%);background-size:200% 100%;border-radius:calc(var(--sleek-border-radius) + 2px);animation:listeningEdgePulse 2s ease-in-out infinite;animation-delay:0s;z-index:-1;opacity:.7}.sleek-chat-input-container.agent-listening:after{content:"";position:absolute;top:1px;left:1px;right:1px;bottom:1px;background:linear-gradient(135deg,#fff6,#ffffff1a);border-radius:calc(var(--sleek-border-radius) - 1px);animation:listeningInnerHighlight 2s ease-in-out infinite;animation-delay:0s;z-index:-1;pointer-events:none}.sleek-chat-input-container.agent-speaking{background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 8%,white),color-mix(in srgb,var(--chat-widget-primary-color) 5%,white));border-color:color-mix(in srgb,var(--chat-widget-primary-color) 30%,white)}.sleek-chat-input-container.agent-speaking:focus-within{transform:translateY(-2px);box-shadow:0 12px 40px #00000026,0 8px 24px #0000001a,0 0 0 4px var(--glow),inset 0 1px #ffffff8c;border-color:var(--accent);background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 10%,white),color-mix(in srgb,var(--chat-widget-primary-color) 6%,white))}.sleek-chat-input-container.agent-speaking .sleek-menu-button{border-color:color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white)}.sleek-chat-input-container.agent-speaking .sleek-menu-button:hover{border-color:color-mix(in srgb,var(--chat-widget-primary-color) 55%,white);box-shadow:0 10px 24px color-mix(in srgb,var(--chat-widget-primary-color) 24%,transparent),0 6px 16px color-mix(in srgb,var(--chat-widget-primary-color) 16%,transparent)}.sleek-chat-input-container.agent-speaking .sleek-menu-button:focus{box-shadow:0 10px 24px color-mix(in srgb,var(--chat-widget-primary-color) 26%,transparent),0 0 0 3px var(--glow)}.sleek-chat-input-wrapper{display:flex;align-items:center;flex:1;min-height:var(--input-min-height);font-size:var(--input-font-size);line-height:var(--input-line-height);position:relative}.sleek-chat-input-field-placeholder{line-height:var(--input-line-height);position:absolute;top:50%;transform:translateY(-50%);font-size:var(--input-font-size);line-height:inherit;font-family:inherit;pointer-events:none;color:var(--color-input-placeholder-text);font-weight:400;transition:all .3s ease}.sleek-chat-input-field-placeholder-listening{font-size:calc(var(--input-font-size) * 1.15);font-weight:600}.sleek-voice-activity-bars{pointer-events:none;flex-shrink:0}.sleek-chat-input-field{flex:1 1 0%;resize:none;outline:2px solid transparent;outline-offset:2px;height:auto;min-height:inherit;max-height:120px;font-size:inherit;line-height:inherit;color:var(--color-input-text);background:transparent;border:none;font-family:inherit;padding:0;margin:0;box-sizing:border-box;font-weight:500;transition:all .3s ease;overflow-y:auto;word-wrap:break-word;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word;display:flex;align-items:center;scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--chat-widget-primary-color) 60%,transparent) transparent;-webkit-overflow-scrolling:touch}.sleek-chat-input-field::-webkit-scrollbar{width:5px}.sleek-chat-input-field::-webkit-scrollbar-track{background:transparent;border-radius:2.5px}.sleek-chat-input-field::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--chat-widget-primary-color) 60%,transparent);border-radius:2.5px;-webkit-transition:background-color .2s ease;transition:background-color .2s ease}.sleek-chat-input-field::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--chat-widget-primary-color) 85%,transparent)}.sleek-chat-input-field:focus{background:transparent;outline:none;border:none;box-shadow:none;font-weight:600}.sleek-chat-input-field:focus::-moz-placeholder{color:var(--color-input-placeholder-text);transform:translate(4px)}.sleek-chat-input-field:focus::placeholder{color:var(--color-input-placeholder-text);transform:translate(4px)}.sleek-chat-input-buttons{flex-shrink:0;gap:.125rem;align-self:center;margin:0;padding:0;height:auto;display:flex;align-items:center}svg.sleek-chat-input-whatsapp-icon{cursor:pointer;border-radius:9999px;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;width:var(--button-size-primary);height:var(--button-size-primary);fill:var(--whatsapp-color);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.6)) drop-shadow(0 0 2px color-mix(in srgb,var(--glow) 60%,transparent));overflow:visible;display:block;flex-shrink:0;will-change:transform,box-shadow,filter}path.sleek-chat-input-whatsapp-path{fill:inherit;transform-origin:center;transform-box:fill-box}svg.sleek-chat-input-whatsapp-icon:hover{transform:translateY(-2px) scale(1.1)}svg.sleek-chat-input-whatsapp-icon:focus{outline:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--glow) 60%,transparent);transform:translateY(-2px) scale(1.1)}.sleek-chat-input-voice-button{border-radius:9999px;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;background:var(--color-button-background-primary);color:var(--color-button-text);width:var(--button-size-primary);height:var(--button-size-primary);display:flex;padding:var(--button-padding-primary);align-items:center;justify-content:center;box-shadow:0 4px 16px color-mix(in srgb,var(--glow) 70%,transparent),0 2px 8px color-mix(in srgb,var(--color-button-background-primary) 15%,transparent);position:relative;overflow:hidden;border:2px solid transparent;opacity:var(--button-opacity-normal);will-change:transform,box-shadow,filter,background}.sleek-chat-input-voice-button:hover{transform:translateY(-2px) scale(1.1);box-shadow:0 8px 24px color-mix(in srgb,var(--color-button-background-primary) 35%,transparent),0 4px 16px color-mix(in srgb,var(--color-button-background-primary) 25%,transparent);opacity:var(--button-opacity-hover)}.sleek-chat-input-voice-button:hover svg{transform:scale(1.1)}.sleek-chat-input-voice-button:focus{outline:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--glow) 80%,transparent),0 8px 24px color-mix(in srgb,var(--color-button-background-primary) 35%,transparent);transform:translateY(-2px) scale(1.05)}.sleek-chat-input-voice-button.voice-active{box-shadow:0 4px 16px #a7f3d04d,0 2px 8px #d1fae540;animation:pulse 2s ease-in-out infinite}.sleek-chat-input-voice-button.voice-loading{background:var(--color-button-background-primary);box-shadow:0 4px 16px color-mix(in srgb,var(--glow) 70%,transparent),0 2px 8px color-mix(in srgb,var(--color-button-background-primary) 25%,transparent);cursor:not-allowed;animation:shimmer 2s infinite}@keyframes slideInUpEnhanced{0%{opacity:0;filter:blur(10px)}50%{opacity:.7;transform:translateY(15px) scale(.98);filter:blur(5px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0px)}}@keyframes floatMain{0%,to{transform:translateY(0) rotate(0)}25%{transform:translateY(-3px) rotate(.5deg)}50%{transform:translateY(-6px) rotate(0)}75%{transform:translateY(-3px) rotate(-.5deg)}}@keyframes contentAppear{0%{opacity:.7;transform:scale(.98)}to{opacity:1;transform:scale(1)}}@keyframes fadeInUpEnhanced{0%{opacity:0;transform:translateY(15px) scale(.95);filter:blur(5px)}50%{opacity:.7;transform:translateY(7px) scale(.98);filter:blur(2px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0px)}}@keyframes gradientShift{0%,to{background-position:0% 50%}50%{background-position:100% 50%}}@keyframes speakingBorderFlow{0%{background-position:0% 50%}to{background-position:300% 50%}}@keyframes speakingBorderPulseFallback{0%{border-color:#667eea;border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px #667eea33,inset 0 1px #ffffffb3}25%{border-color:#00d4ff;border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px #00d4ff66,inset 0 1px #fffc}50%{border-color:#f093fb;border-width:2px;box-shadow:0 16px 48px #0000001f,0 8px 24px #0000000f,0 0 30px #f093fb80,inset 0 1px #ffffffe6}75%{border-color:#f5576c;border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px #f5576c66,inset 0 1px #fffc}to{border-color:#667eea;border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px #667eea33,inset 0 1px #ffffffb3}}@keyframes speakingBorderPulse{0%{border-color:var(--chat-widget-primary-color);border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px color-mix(in srgb,var(--chat-widget-primary-color) 15%,transparent),inset 0 1px #ffffffb3}25%{border-color:var(--accent);border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px color-mix(in srgb,var(--accent) 40%,transparent),inset 0 1px #fffc}50%{border-color:var(--gradient-3);border-width:2px;box-shadow:0 16px 48px #0000001f,0 8px 24px #0000000f,0 0 30px color-mix(in srgb,var(--gradient-3) 50%,transparent),inset 0 1px #ffffffe6}75%{border-color:var(--gradient-4);border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px color-mix(in srgb,var(--gradient-4) 40%,transparent),inset 0 1px #fffc}to{border-color:var(--chat-widget-primary-color);border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px color-mix(in srgb,var(--chat-widget-primary-color) 15%,transparent),inset 0 1px #ffffffb3}}@keyframes listeningEdgePulse{0%{background-position:0% 50%;opacity:.5}50%{background-position:100% 50%;opacity:.8}to{background-position:0% 50%;opacity:.5}}@keyframes listeningInnerHighlight{0%,to{opacity:.3}50%{opacity:.6}}@keyframes float{0%,to{transform:translateY(0)}50%{transform:translateY(-4px)}}@keyframes thinkingDotCompact{0%,60%,to{opacity:.4;transform:scale(.8);box-shadow:0 0 4px var(--chat-widget-primary-color)}30%{opacity:1;transform:scale(1.2);box-shadow:0 0 8px var(--chat-widget-primary-color)}}@keyframes pulse{0%,to{box-shadow:0 4px 16px color-mix(in srgb,var(--gradient-4) 40%,transparent),0 2px 8px color-mix(in srgb,var(--gradient-3) 30%,transparent)}50%{box-shadow:0 6px 20px color-mix(in srgb,var(--gradient-4) 60%,transparent),0 4px 16px color-mix(in srgb,var(--gradient-3) 50%,transparent)}}@keyframes shimmer{0%{background-position:-200% 0}to{background-position:200% 0}}@media (max-width: 768px){.sleek-new-chat-button{bottom:0;right:0;font-size:10px;min-width:55px;height:26px;border-radius:13px}.sleek-spacer-loading{border-radius:6px}.thinking-dot{width:3px;height:3px}.thinking-dots{gap:3px}.sleek-main{display:flex;flex-direction:column;align-items:center;overflow:hidden;padding:0;position:relative;min-height:var(--sleek-main-min-height);max-height:none;border-radius:20px;box-shadow:0 8px 24px #0000000f,0 4px 12px #00000008,inset 0 1px #fff9}.sleek-message-container{min-height:0;font-size:13px}.sleek-chat-input-container{height:auto;max-width:100%;padding:0 14px;gap:12px;align-items:center;justify-content:space-between}.sleek-chat-input-container.agent-listening:before{opacity:.6}.sleek-chat-input-container.agent-listening:after{opacity:.5}.sleek-chat-input-field{font-size:12px;min-height:24px;max-height:100px;line-height:1.3;align-self:center}.sleek-chat-input-buttons{gap:4px;align-self:center;height:auto;align-items:center}}@media (max-width: 480px){.sleek-new-chat-button{font-size:9px;min-width:50px;height:24px;border-radius:12px}.sleek-new-chat-button.position-bottom-right,.sleek-new-chat-button.position-top-right{bottom:0;right:0}.sleek-new-chat-button.position-bottom-left,.sleek-new-chat-button.position-top-left{bottom:0;left:0}.sleek-spacer-loading{border-radius:4px}.thinking-dot{width:2px;height:2px}.thinking-dots{gap:2px}.sleek-main{border-radius:16px;min-height:var(--sleek-main-min-height);box-shadow:0 6px 20px #0000000d,0 3px 10px #00000005,inset 0 1px #ffffff80}.sleek-message-container{min-height:0;font-size:12px}.sleek-chat-input-container{height:auto;padding:0 12px;gap:10px;align-items:center;justify-content:space-between}.sleek-chat-input-container.agent-listening:before{opacity:.5;top:-1px;left:-1px;right:-1px;bottom:-1px}.sleek-chat-input-container.agent-listening:after{opacity:.4}.sleek-chat-input-field{min-height:24px;max-height:80px;line-height:1.2;align-self:center}.sleek-chat-input-buttons{gap:4px;align-self:center;height:auto;align-items:center}.sleek-chat-input-voice-button{min-width:var(--button-size-primary);min-height:var(--button-size-primary)}}.sleek-menu-wrapper{position:relative;flex-shrink:0}.sleek-menu-button{display:flex;align-items:center;justify-content:center;border-radius:9999px;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;width:var(--button-size-secondary);height:var(--button-size-secondary);border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 55%,white);color:var(--color-button-text);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white)}.sleek-menu-button:hover{color:#fff;border-color:color-mix(in srgb,var(--chat-widget-primary-color) 65%,white);transform:translateY(-1px);box-shadow:0 12px 28px color-mix(in srgb,var(--chat-widget-primary-color) 28%,transparent),0 8px 18px color-mix(in srgb,var(--chat-widget-primary-color) 18%,transparent)}.sleek-menu-button:focus{outline:none;box-shadow:0 10px 24px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent)}.sleek-menu-icon{width:100%;height:100%;display:block}.sleek-menu-icon-outline{stroke:currentColor;stroke-width:1.5;fill:none}.sleek-menu-icon-dot{fill:currentColor}.sleek-menu-dropdown{position:absolute;left:0;bottom:calc(100% + 8px);width:160px;border-radius:8px;border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 10%,white),color-mix(in srgb,var(--chat-widget-primary-color) 6%,white));-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 12px 32px #0000001f,0 6px 18px #00000014;z-index:9999;opacity:0;transform:translateY(6px) scale(.98);animation:sleekMenuEnter .16s cubic-bezier(.2,.7,.3,1) forwards;will-change:opacity,transform,box-shadow}.sleek-menu-dropdown:after{content:"";position:absolute;bottom:-6px;left:18px;width:10px;height:10px;background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 10%,white),color-mix(in srgb,var(--chat-widget-primary-color) 6%,white));border-left:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);border-bottom:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);transform:rotate(45deg);box-shadow:0 2px 6px #0000000f}.sleek-menu-item{width:100%;text-align:left;padding:10px 12px;font-size:13px;color:#334155;background:transparent}.sleek-menu-item+.sleek-menu-item{border-top:1px solid rgba(226,232,240,.7)}.sleek-menu-item:hover,.sleek-menu-item:focus{background:color-mix(in srgb,var(--chat-widget-primary-color) 8%,white);color:#1e293b;outline:none}@keyframes sleekMenuEnter{0%{opacity:0;transform:translateY(6px) scale(.98);box-shadow:0 6px 18px #00000014,0 3px 10px #0000000d}to{opacity:1;transform:translateY(0) scale(1);box-shadow:0 12px 32px #0000001f,0 6px 18px #00000014}}.voice-chat-input-status-container{display:flex;flex:1 1 0%;flex-direction:column;gap:.5rem}.voice-chat-input-status-text{font-size:.875rem;line-height:1.25rem;--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.voice-chat-input-activity{display:flex;height:1.5rem;align-items:center}.voice-chat-input-button:focus{outline:2px solid transparent;outline-offset:2px}.voice-chat-input-button-muted{color:var(--color-button-text);background:var(--color-voice-disconnected)}.voice-chat-input-button-unmuted{color:var(--color-button-text);background:var(--color-voice-speaking)}.voice-chat-input-button-disconnect{color:var(--color-button-text);background:var(--color-voice-disconnected)}.voice-chat-input-spinner{height:2rem;width:2rem}.voice-chat-input-spinner{animation:spin 1s linear infinite;border-radius:9999px;border-bottom-width:2px;--tw-border-opacity: 1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.voice-chat-input-spinner-small{height:1.25rem;width:1.25rem}@keyframes spin{to{transform:rotate(360deg)}}.voice-chat-input-spinner-small{animation:spin 1s linear infinite;border-radius:9999px;border-width:2px;--tw-border-opacity: 1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1));border-top-color:transparent}.voice-chat-input-loading-text{margin-left:.5rem;font-size:.875rem;line-height:1.25rem;--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.voice-chat-input-livekit-container{pointer-events:none;position:absolute;right:0;top:0;opacity:0}@keyframes pulse{0%{transform:scaleY(.3)}50%{transform:scaleY(1)}to{transform:scaleY(.3)}}.voice-chat-input-activity-bar{width:.25rem;border-radius:9999px;animation:pulse 1.5s infinite;animation-delay:var(--delay)}.voice-chat-input-agent-state-listening .voice-chat-input-activity-bar{background-color:var(--color-voice-listening)}.voice-chat-input-agent-state-speaking .voice-chat-input-activity-bar{background-color:var(--color-voice-speaking)}.voice-chat-input-agent-state-thinking .voice-chat-input-activity-bar{background-color:var(--color-voice-thinking)}:root{--chat-widget-primary-color-hover: color-mix( in srgb, var(--chat-widget-primary-color) 85%, black );--color-voice-listening: #3b82f6;--color-voice-speaking: #10b981;--color-voice-thinking: #f59e0b;--color-voice-disconnected: #ef4444cb;--color-whatsapp: #1eb655;--opacity-disabled: .7;--opacity-hover: .8;--opacity-normal: 1;--color-input-background: var(--chat-widget-secondary-color);--color-input-text: var(--chat-widget-message-text-color);--color-input-placeholder-text: color-mix( in srgb, var(--color-input-text) 70%, white );--color-input-placeholder-opacity: 70%;--color-input-placeholder-opacity-focus: 80%;--input-default-height: 40px;--input-min-height: 40px;--input-max-height: 120px;--input-max-height-tablet: 100px;--input-max-height-mobile: 80px;--input-line-height: 20px;--input-text-padding-horizontal: 4px;--input-text-padding-vertical: 0px;--input-text-padding: 0 var(--input-text-padding-horizontal);--input-container-padding: 6px 8px;--input-container-padding-sleek: 4px 4px;--input-font-size: var(--chat-widget-message-font-size);--input-font-weight: 400;--input-font-weight-focus: 500;--input-font-weight-bold: 600;--color-scrollbar-input-thumb: color-mix( in srgb, var(--chat-widget-primary-color) 75%, transparent );--color-scrollbar-input-thumb-hover: color-mix( in srgb, var(--chat-widget-primary-color) 90%, transparent );--color-scrollbar-input-thumb-avatar-view: color-mix( in srgb, var(--chat-widget-secondary-color) 75%, transparent );--color-scrollbar-input-thumb-hover-avatar-view: color-mix( in srgb, var(--chat-widget-secondary-color) 90%, transparent );--color-scrollbar-input-track: transparent;--input-scrollbar-width: thin;--input-scrollbar-border-radius: 2.5px;--input-scrollbar-thumb-hover-opacity: var(--opacity-hover);--button-size-primary: 32px;--button-padding-primary: 4px;--button-size-secondary: 24px;--color-button-background-primary: var(--chat-widget-primary-color);--color-button-background-hover: var(--chat-widget-primary-color-hover);--color-button-text: var(--chat-widget-button-content-color);--color-button-fill: var(--chat-widget-button-content-color);--color-button-disconnect: #ef4444;--button-opacity-normal: var(--opacity-normal);--button-opacity-hover: var(--opacity-hover);--button-opacity-disabled: var(--opacity-disabled);--button-icon-size-secondary: 16px;--button-icon-size-primary: 20px;--message-scrollbar-width: thin;--message-scrollbar-width-px: 6px;--message-scrollbar-border-radius: 3px;--color-scrollbar-message-thumb-default: rgb(209 213 219);--color-scrollbar-message-thumb-hover: rgb(156 163 175);--color-scrollbar-message-thumb-theme: var( --chat-widget-button-content-color, var(--chat-widget-secondary-color) );--color-scrollbar-message-thumb-hover-mix: color-mix( in srgb, var(--chat-widget-button-content-color, var(--chat-widget-secondary-color)) 80%, var(--chat-widget-primary-color) );--color-scrollbar-message-track: transparent;--message-text-color: var(--chat-widget-message-text-color);--message-font-size: var(--chat-widget-message-font-size);--message-bubble-background-color: var(--chat-widget-secondary-color);--message-bubble-icon-color: var(--chat-widget-secondary-color);--engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);--engagement-hook-image-height: var( --chat-widget-engagement-hook-image-height );--transition-fast: .2s ease;--transition-normal: all .3s ease;--transition-slow: .4s cubic-bezier(.4, 0, .2, 1);--transition-slow-ease: .4s ease;--border-radius-small: 2.5px;--border-radius-medium: 3px;--border-radius-large: 12px;--border-radius-xl: 16px;--border-radius-2xl: 20px;--border-radius-full: 9999px;--spacing-gap-xs: .5px;--spacing-gap-sm: 4px;--spacing-gap-md: 8px;--spacing-gap-lg: 12px;--spacing-gap-xl: 16px;--z-index-base: 1;--z-index-elevated: 10;--z-index-high: 20;--z-index-maximum: 9999;--border-width-thin: 1px;--border-width-medium: 2px;--border-width-thick: 4px;--shadow-sm: 0 1px 2px rgba(0, 0, 0, .05);--shadow-md: 0 4px 6px rgba(0, 0, 0, .1);--shadow-lg: 0 10px 15px rgba(0, 0, 0, .1);--shadow-xl: 0 20px 25px rgba(0, 0, 0, .1);--sleek-main-min-height: 0px;--sleek-border-radius: var(--border-radius-large);--sleek-main-bg: var(--color-sleek-main-bg);--sleek-main-border: var(--color-sleek-main-border);--sleek-main-text-color: var(--color-sleek-main-text);--color-sleek-main-bg: color-mix( in srgb, var(--chat-widget-primary-color) 10%, white );--color-sleek-main-border: var(--chat-widget-secondary-color);--color-sleek-main-text: var(--chat-widget-message-text-color);--color-gradient-1: var(--chat-widget-primary-color);--color-gradient-2: var(--chat-widget-secondary-color);--color-gradient-3: color-mix( in srgb, var(--chat-widget-primary-color) 60%, var(--chat-widget-secondary-color) );--color-gradient-4: color-mix( in srgb, var(--chat-widget-primary-color) 40%, var(--chat-widget-secondary-color) );--color-accent: color-mix( in srgb, var(--chat-widget-primary-color) 70%, var(--chat-widget-secondary-color) );--color-glow: color-mix( in srgb, var(--chat-widget-primary-color) 30%, transparent );--gradient-1: var(--color-gradient-1);--gradient-2: var(--color-gradient-2);--gradient-3: var(--color-gradient-3);--gradient-4: var(--color-gradient-4);--accent: var(--color-accent);--glow: var(--color-glow);--whatsapp-color: var(--color-whatsapp);--gray-200: var(--color-gray-200);--gray-300: var(--color-gray-300);--gray-400: var(--color-gray-400);--gray-500: var(--color-gray-500);--gray-600: var(--color-gray-600);--gray-700: var(--color-gray-700);--gray-800: var(--color-gray-800);--blue-500: var(--color-blue-500);--blue-600: var(--color-blue-600);--slate-700: var(--color-slate-700);--slate-800: var(--color-slate-800)}@supports not (color: color-mix(in srgb,#000 50%,#fff)){:root{--chat-widget-primary-color-hover: #000991;--color-gradient-1: #000aaa;--color-gradient-2: #6c757d;--color-gradient-3: #6c757d;--color-gradient-4: #6c757d;--color-accent: #6c757d;--color-glow: rgba(0, 10, 170, .3);--color-sleek-main-bg: rgba(0, 10, 170, .1);--color-sleek-main-border: rgba(108, 117, 125, .8);--color-scrollbar-input-thumb: rgba(0, 10, 170, .6);--color-scrollbar-input-thumb-hover: rgba(0, 10, 170, .85);--gradient-1: var(--color-gradient-1);--gradient-2: var(--color-gradient-2);--gradient-3: var(--color-gradient-3);--gradient-4: var(--color-gradient-4);--accent: var(--color-accent);--glow: var(--color-glow);--sleek-main-bg: var(--color-sleek-main-bg);--sleek-main-border: var(--color-sleek-main-border);--input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);--input-scrollbar-thumb-hover-color: var( --color-scrollbar-input-thumb-hover )}}.voice-alternate-view{display:flex;height:100%;flex-direction:column}.voice-alternate-header{position:relative;flex:none;display:flex;flex-direction:column}.voice-alternate-header .chat-header-content{position:relative;z-index:10;margin-left:auto;margin-right:auto;display:flex;max-width:32rem;align-items:center;justify-content:space-between}.voice-alternate-header .chat-header-text{font-size:1.125rem;line-height:1.75rem;font-weight:600;text-shadow:none}.voice-alternate-header .chat-header-subtitle{font-size:.875rem;line-height:1.25rem;text-shadow:none}.voice-alternate-main{display:flex;flex:1 1 0%;flex-direction:column;align-items:center;overflow:hidden;position:relative}.voice-alternate-content-wrapper{display:flex;flex-direction:column;align-items:center;flex:1;width:90%;height:90%;position:relative;overflow:visible;border-radius:16px;margin-top:16px;margin-bottom:12px;background:linear-gradient(to bottom,var(--chat-widget-secondary-color) 0%,var(--chat-widget-secondary-color) 60%,var(--chat-widget-primary-color) 100%)}.talking-head-wrapper{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:2}.voice-alternate-avatar-bars{position:absolute;bottom:8px;left:50%;transform:translate(-50%);display:flex;align-items:center;justify-content:center;border-radius:9999px;border:1px solid rgba(255,255,255,.35);padding:4px 12px;-webkit-backdrop-filter:blur(32px);backdrop-filter:blur(32px);z-index:3}.voice-alternate-chat-input-container{display:flex;align-items:center;justify-content:center;margin-bottom:12px;margin-left:16px;margin-right:16px;padding:8px;border-radius:12px;background:transparent}.voice-alternate-input-buttons{display:flex;align-items:center;justify-content:center;width:100%;gap:16px}.voice-alternate-voice-button{transition-property:all;transition-duration:.15s;transition-timing-function:ease-in-out;display:flex;align-items:center;justify-content:center;border-radius:12px;height:50px;width:180px;color:var(--chat-widget-button-content-color);background:color-mix(in srgb,var(--chat-widget-primary-color) 50%,var(--chat-widget-secondary-color) 50%)}.voice-alternate-voice-button:hover{transform:scale(1.05);opacity:var(--button-opacity-hover)}.voice-alternate-voice-button:focus{outline:none;box-shadow:0 0 0 2px #9ca3af}.voice-alternate-voice-button:disabled{cursor:not-allowed;opacity:var(--button-opacity-disabled)}.voice-alternate-disconnect-button{transition-property:all;transition-duration:.15s;transition-timing-function:ease-in-out;display:flex;align-items:center;justify-content:center;border-radius:12px;height:50px;width:180px;color:var(--chat-widget-button-content-color);background:var(--color-button-disconnect)}.voice-alternate-disconnect-button:hover{transform:scale(1.05);opacity:var(--button-opacity-hover)}.voice-alternate-disconnect-button:focus{outline:none;box-shadow:0 0 0 2px #9ca3af}.voice-alternate-disconnect-button:disabled{cursor:not-allowed;opacity:var(--button-opacity-disabled)}@media (max-width: 768px){.voice-alternate-main{display:flex;flex:1 1 0%;flex-direction:column;align-items:center;overflow:hidden;position:relative}.voice-alternate-content-wrapper{padding-bottom:100px}.voice-alternate-message-box{min-height:60px}.voice-alternate-chat-input-container{margin-left:.5rem;margin-right:.5rem;margin-bottom:.5rem}}.human-avatar{display:block;width:100%;height:100%;position:absolute;top:0;right:0;bottom:0;left:0;min-height:200px}.human-avatar canvas{display:block!important;width:100%!important;height:100%!important;position:absolute!important;top:0!important;left:0!important;-o-object-fit:contain;object-fit:contain;visibility:visible!important;opacity:1!important}.human-avatar-loading,.human-avatar-error{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);padding:.5rem 1rem;font-size:.875rem;text-align:center;z-index:2}.human-avatar-loading{color:var(--chat-widget-primary-color, #6366f1)}.human-avatar-error{color:#dc2626;max-width:90%}.human-avatar:has(canvas) .human-avatar-loading,.human-avatar:has(canvas) .human-avatar-error{display:none}:root{--chat-widget-width: 600px;--chat-widget-height: 650px;--chat-widget-primary-color: #6366f1;--chat-widget-primary-color-hover: #4f46e5;--chat-widget-border-radius: 24px}@media (max-width: 768px){:root{--chat-widget-width: 95vw;--chat-widget-height: 85vh;--chat-widget-border-radius: 12px}}.chat-widget-open-button{position:fixed;border-radius:9999px;--tw-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);--tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;background-color:var(--chat-widget-primary-color);color:var(--chat-widget-button-content-color);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);z-index:9999}.chat-widget-open-button.position-bottom-right{bottom:1rem;right:1rem}.chat-widget-open-button.position-bottom-left{bottom:1rem;left:1rem}.chat-widget-open-button.position-top-right{top:1rem;right:1rem}.chat-widget-open-button.position-top-left{top:1rem;left:1rem}.chat-widget-open-button:hover{background-color:var(--chat-widget-primary-color-hover);transform:scale(1.1) rotate(5deg);box-shadow:0 8px 25px #6366f166}.chat-widget-open-icon{height:1.5rem;width:1.5rem}.chat-widget-container{overflow:hidden;--tw-shadow: 0 25px 50px -12px rgb(0 0 0 / .25);--tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);transition-property:all;transition-duration:.3s;transition-timing-function:cubic-bezier(.4,0,.2,1);width:var(--chat-widget-width);height:var(--chat-widget-height);border-radius:var(--chat-widget-border-radius);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:none!important;background:var(--chat-widget-primary-color);transform:none!important;will-change:height,width;z-index:9999;position:fixed!important}.chat-widget-container.position-bottom-right{bottom:1rem;right:1rem;top:auto!important;left:auto!important}.chat-widget-container.position-bottom-left{bottom:1rem;left:1rem;top:auto!important;right:auto!important}.chat-widget-container.position-top-right{top:1rem;right:1rem;bottom:auto!important;left:auto!important}.chat-widget-container.position-top-left{top:1rem;left:1rem;bottom:auto!important;right:auto!important}.chat-widget-container.sleek-view-mode{height:auto;min-height:60px;max-height:var(--chat-widget-height);transition:height .4s cubic-bezier(.4,0,.2,1);border-radius:0;background:transparent!important;border:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:none!important;overflow:visible;position:fixed!important;transform:none!important;will-change:height;z-index:9999;display:flex;flex-direction:column;justify-content:flex-end}.chat-widget-container.sleek-view-mode.position-bottom-right{bottom:1rem!important;right:1rem!important;top:auto!important;left:auto!important}.chat-widget-container.sleek-view-mode.position-bottom-left{bottom:1rem!important;left:1rem!important;top:auto!important;right:auto!important}.chat-widget-container.sleek-view-mode.position-top-right{top:1rem!important;right:1rem!important;bottom:auto!important;left:auto!important}.chat-widget-container.sleek-view-mode.position-top-left{top:1rem!important;left:1rem!important;bottom:auto!important;right:auto!important}@media (max-width: 768px){.chat-widget-container{width:auto;max-width:none}.chat-widget-container.position-bottom-right,.chat-widget-container.position-bottom-left{bottom:.5rem;left:.5rem;right:.5rem}.chat-widget-container.position-top-right,.chat-widget-container.position-top-left{top:.5rem;left:.5rem;right:.5rem}.chat-widget-container.sleek-view-mode{min-height:100px;max-height:85vh;display:flex;flex-direction:column;justify-content:flex-end;background:transparent!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;border:none!important;box-shadow:none!important;z-index:9999}.chat-widget-container.sleek-view-mode.position-bottom-right,.chat-widget-container.sleek-view-mode.position-bottom-left{bottom:.5rem!important;left:.5rem!important;right:.5rem!important;top:auto!important}.chat-widget-container.sleek-view-mode.position-top-right,.chat-widget-container.sleek-view-mode.position-top-left{top:.5rem!important;left:.5rem!important;right:.5rem!important;bottom:auto!important}}.chat-widget-container-closed{display:none!important;height:0!important;width:0!important;overflow:hidden!important;pointer-events:none!important}.chat-widget-inner-layout{display:flex;height:100%;flex-direction:column}.chat-widget-header-section{flex:none}.chat-widget-messages-section{position:relative;flex:1 1 0%;overflow:hidden}.chat-widget-input-section{flex:none}')),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}}();
+!function(){"use strict";try{if("undefined"!=typeof document){var e=document.createElement("style");e.appendChild(document.createTextNode(':root{--message-popup-image-width: var(--engagement-hook-image-width);--message-popup-image-height: var(--engagement-hook-image-height);--message-popup-offset: 1rem}.message-popup-figurine{position:fixed;width:var(--message-popup-image-width);height:var(--message-popup-image-height);z-index:2147483646;-o-object-fit:cover;object-fit:cover;-o-object-position:center top;object-position:center top;pointer-events:none}.message-popup-figurine-bottom-left{bottom:var(--message-popup-offset);left:var(--message-popup-offset);top:auto;right:auto}.message-popup-figurine-bottom-right{bottom:var(--message-popup-offset);right:var(--message-popup-offset);top:auto;left:auto}.message-popup-figurine-top-left{top:var(--message-popup-offset);left:var(--message-popup-offset);bottom:auto;right:auto}.message-popup-figurine-top-right{top:var(--message-popup-offset);right:var(--message-popup-offset);bottom:auto;left:auto}.message-popup-container{position:fixed;z-index:2147483647;pointer-events:auto}.message-popup-container-bottom-left{bottom:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);left:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);top:auto;right:auto}.message-popup-container-bottom-right{bottom:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);right:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);top:auto;left:auto}.message-popup-container-top-left{top:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);left:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);bottom:auto;right:auto}.message-popup-container-top-right{top:calc(var(--message-popup-offset) + var(--message-popup-image-height) * .62);right:calc(var(--message-popup-offset) + var(--message-popup-image-width) * .9);bottom:auto;left:auto}.message-popup-content{padding:8px;background-color:var(--message-bubble-background-color);border-radius:12px;box-shadow:0 4px 12px #0000001a;min-width:220px;max-width:320px;display:flex;align-items:center;cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;font-size:var(--message-font-size);color:var(--message-text-color);position:relative}.message-popup-text-container{flex:1}.message-popup-text{font-size:var(--message-font-size);color:var(--message-text-color);margin:0;word-break:break-word}.message-popup-close-button{position:absolute;top:-10px;right:-10px;width:var(--button-size-secondary);height:var(--button-size-secondary);border-radius:9999px;border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 50%,white);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white);color:var(--color-button-text);box-shadow:0 4px 14px color-mix(in srgb,var(--glow) 60%,transparent),0 2px 6px color-mix(in srgb,var(--chat-widget-primary-color) 18%,transparent);cursor:pointer;overflow:hidden;z-index:20;padding:0;margin-left:0;pointer-events:auto;display:flex;align-items:center;justify-content:center;transition:all .2s ease}.message-popup-close-button:hover{transform:translateY(-1px) scale(1.05);box-shadow:0 8px 20px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent),0 4px 12px color-mix(in srgb,var(--chat-widget-primary-color) 20%,transparent);background:color-mix(in srgb,var(--chat-widget-primary-color-hover) 80%,white)}.message-popup-close-button:focus{outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--glow) 80%,transparent),0 8px 22px color-mix(in srgb,var(--chat-widget-primary-color) 32%,transparent);transform:translateY(-1px) scale(1.03)}.message-popup-close-button:active{transform:translateY(0) scale(.97);box-shadow:0 3px 10px color-mix(in srgb,var(--chat-widget-primary-color) 24%,transparent)}.message-popup-close-button svg{width:calc(var(--button-size-secondary) * .8);height:calc(var(--button-size-secondary) * .8);display:block;flex-shrink:0}.chat-header-container{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--chat-widget-primary-color) 0%,color-mix(in srgb,var(--chat-widget-primary-color) 90%,var(--chat-widget-primary-color-hover) 10%) 100%);transition:all .3s ease}.chat-header-container:before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--chat-widget-primary-color) 85%,var(--chat-widget-secondary-color) 15%),transparent);transition:left .6s ease}.chat-header-container:hover:before{left:100%}.chat-header-container:hover{box-shadow:0 6px 20px color-mix(in srgb,var(--chat-widget-secondary-color) 60%,transparent);transform:translateY(-1px)}.chat-header-content{position:relative;z-index:10;margin-left:auto;margin-right:auto;display:flex;max-width:32rem;align-items:center;justify-content:space-between}.chat-header-left{display:flex;align-items:center;gap:.5rem;padding-left:.5rem;transition:transform .2s ease}.chat-header-left:hover{transform:scale(1.02)}.chat-header-text-container{display:flex;flex-direction:column}.chat-header-text{font-size:1.125rem;line-height:1.75rem;font-weight:600;color:var(--chat-widget-button-content-color);text-shadow:0 2px 4px rgba(0,0,0,.2);transition:all .2s ease}.chat-header-subtitle{font-size:.875rem;line-height:1.25rem;color:var(--chat-widget-button-content-color);text-shadow:0 1px 2px rgba(0,0,0,.1);transition:all .2s ease}.chat-header-logo{border-radius:.5rem;transition:all .3s ease;filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))}.chat-header-logo:hover{transform:scale(1.1) rotate(5deg);filter:drop-shadow(0 4px 8px rgba(0,0,0,.2))}.chat-header-logo{display:block;flex-shrink:0;-o-object-fit:contain;object-fit:contain;width:36px;height:36px;min-width:32px;min-height:32px;aspect-ratio:1;border-radius:6px}.chat-header-actions{display:flex;align-items:center;gap:.25rem}.chat-header-new-chat-button{color:var(--chat-widget-button-content-color);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;border-radius:.75rem;padding:.375rem}.chat-header-new-chat-button:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000);--tw-ring-color: rgb(255 255 255 / .3)}.chat-header-new-chat-button{min-width:32px;min-height:32px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:.5px solid;border-color:var(--chat-widget-secondary-color);color:var(--chat-widget-button-content-color)}.chat-header-new-chat-button:hover{color:var(--chat-widget-button-content-color)}.chat-header-new-chat-button:before{content:"";position:absolute;top:50%;left:50%;width:0;height:0;background:#ffffff1a;border-radius:50%;transform:translate(-50%,-50%);transition:width .3s ease,height .3s ease}.chat-header-new-chat-button:hover:before{width:80px;height:80px}.chat-header-new-chat-button:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 4px 12px #0003}.chat-header-new-chat-button:active{transform:translateY(0) scale(.98)}.chat-header-new-chat-icon{position:relative;z-index:10;height:1.25rem;width:1.25rem;stroke-width:2.5;transition:transform .2s ease}.chat-header-new-chat-button:hover .chat-header-new-chat-icon{transform:rotate(90deg)}.chat-header-close-button{color:var(--chat-widget-button-content-color);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;border-radius:.75rem;padding:.375rem}.chat-header-close-button:hover{background-color:#ef444433}.chat-header-close-button:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000);--tw-ring-color: rgb(252 165 165 / .5)}.chat-header-close-button{min-width:32px;min-height:32px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:.5px solid;border-color:var(--chat-widget-secondary-color);color:var(--chat-widget-button-content-color)}.chat-header-close-button:hover{color:var(--chat-widget-button-content-color)}.chat-header-close-button:before{content:"";position:absolute;top:50%;left:50%;width:0;height:0;background:#ef444433;border-radius:50%;transform:translate(-50%,-50%);transition:width .3s ease,height .3s ease}.chat-header-close-button:hover:before{width:80px;height:80px}.chat-header-close-button:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 4px 12px #ef44444d}.chat-header-close-button:active{transform:translateY(0) scale(.98)}.chat-header-close-icon{position:relative;z-index:10;height:1.25rem;width:1.25rem;stroke-width:2.5;transition:transform .2s ease}.chat-header-close-button:hover .chat-header-close-icon{transform:rotate(90deg)}@media (max-width: 480px){.chat-header-content{padding-left:.5rem;padding-right:.5rem}.chat-header-new-chat-button,.chat-header-close-button{min-width:32px;min-height:32px}.chat-header-new-chat-icon,.chat-header-close-icon{height:1.25rem;width:1.25rem}}.chat-message-container{position:absolute;top:0;right:0;bottom:0;left:0;overflow-y:auto;overflow-x:hidden;scroll-behavior:smooth;padding:1rem;scrollbar-width:var(--message-scrollbar-width);scrollbar-color:var(--color-scrollbar-message-thumb-theme) var(--color-scrollbar-message-track)}.chat-message-container:hover{scrollbar-color:var(--color-scrollbar-message-thumb-theme) var(--color-scrollbar-message-track)}.chat-messages-scroll-container{scroll-behavior:smooth;scrollbar-width:var(--message-scrollbar-width);scrollbar-color:var(--color-scrollbar-message-thumb-theme) var(--color-scrollbar-message-track);-webkit-overflow-scrolling:touch;background:var(--chat-widget-primary-color)}.chat-messages-scroll-container::-webkit-scrollbar{width:var(--message-scrollbar-width)}.chat-messages-scroll-container::-webkit-scrollbar-track{background:transparent;border-radius:3px}.chat-messages-scroll-container::-webkit-scrollbar-thumb{background:var( --chat-widget-button-content-color, var(--chat-widget-secondary-color) );border-radius:3px;-webkit-transition:background-color .2s ease;transition:background-color .2s ease}.chat-messages-scroll-container::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--chat-widget-button-content-color, var(--chat-widget-secondary-color)) 80%,var(--chat-widget-primary-color))}.chat-message-bubble-container{display:flex;flex-direction:column}.chat-message-bubble-wrapper{margin-bottom:.75rem;display:flex;align-items:flex-start}.chat-message-bubble-wrapper-user{flex-direction:row-reverse}.chat-message-bubble-wrapper-user .chat-message-content-container{align-items:flex-end}.chat-message-bubble-wrapper-bot{flex-direction:row}.chat-message-avatar-container{flex-shrink:0;color:var(--message-bubble-icon-color)}.chat-message-user-icon{display:flex;height:2rem;width:2rem;align-items:center;justify-content:center;border-radius:9999px;color:var(--message-bubble-icon-color)}.chat-message-user-icon-inner{font-size:1.125rem;line-height:1.75rem;color:inherit}.chat-message-bot-icon{height:2rem;width:2rem;-o-object-fit:contain;object-fit:contain;color:var(--message-bubble-icon-color)}.chat-message-user-avatar{height:2rem;width:2rem;border-radius:9999px;-o-object-fit:cover;object-fit:cover}.chat-message-content-container{display:flex;flex-direction:column;min-width:50px}.chat-message-content-with-avatar,.chat-message-content-without-avatar{max-width:90%}.chat-message-bubble{border-radius:.75rem;padding:.5rem 1rem;word-wrap:break-word;overflow-wrap:break-word;width:-moz-fit-content;width:fit-content;max-width:100%;background:var(--message-bubble-background-color);color:var(--message-text-color)}.chat-message-bubble-user{margin-left:auto;margin-right:.25rem;border-bottom-right-radius:.125rem}.chat-message-bubble-bot{border-bottom-left-radius:.125rem}.chat-message-markdown{color:var(--tw-prose-body);max-width:65ch}.chat-message-markdown :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em;margin-bottom:1.25em}.chat-message-markdown :where([class~=lead]):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-lead);font-size:1.25em;line-height:1.6;margin-top:1.2em;margin-bottom:1.2em}.chat-message-markdown :where(a):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-links);text-decoration:underline;font-weight:500}.chat-message-markdown :where(strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-bold);font-weight:600}.chat-message-markdown :where(a strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(blockquote strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(thead th strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(ol):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:decimal;margin-top:1.25em;margin-bottom:1.25em;padding-inline-start:1.625em}.chat-message-markdown :where(ol[type=A]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-alpha}.chat-message-markdown :where(ol[type=a]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-alpha}.chat-message-markdown :where(ol[type=A s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-alpha}.chat-message-markdown :where(ol[type=a s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-alpha}.chat-message-markdown :where(ol[type=I]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-roman}.chat-message-markdown :where(ol[type=i]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-roman}.chat-message-markdown :where(ol[type=I s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-roman}.chat-message-markdown :where(ol[type=i s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-roman}.chat-message-markdown :where(ol[type="1"]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:decimal}.chat-message-markdown :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:disc;margin-top:1.25em;margin-bottom:1.25em;padding-inline-start:1.625em}.chat-message-markdown :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker{font-weight:400;color:var(--tw-prose-counters)}.chat-message-markdown :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker{color:var(--tw-prose-bullets)}.chat-message-markdown :where(dt):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;margin-top:1.25em}.chat-message-markdown :where(hr):not(:where([class~=not-prose],[class~=not-prose] *)){border-color:var(--tw-prose-hr);border-top-width:1px;margin-top:3em;margin-bottom:3em}.chat-message-markdown :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:500;font-style:italic;color:var(--tw-prose-quotes);border-inline-start-width:.25rem;border-inline-start-color:var(--tw-prose-quote-borders);quotes:"“""”""‘""’";margin-top:1.6em;margin-bottom:1.6em;padding-inline-start:1em}.chat-message-markdown :where(blockquote p:first-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:open-quote}.chat-message-markdown :where(blockquote p:last-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:close-quote}.chat-message-markdown :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:800;font-size:2.25em;margin-top:0;margin-bottom:.8888889em;line-height:1.1111111}.chat-message-markdown :where(h1 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:900;color:inherit}.chat-message-markdown :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:700;font-size:1.5em;margin-top:2em;margin-bottom:1em;line-height:1.3333333}.chat-message-markdown :where(h2 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:800;color:inherit}.chat-message-markdown :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;font-size:1.25em;margin-top:1.6em;margin-bottom:.6em;line-height:1.6}.chat-message-markdown :where(h3 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:700;color:inherit}.chat-message-markdown :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;margin-top:1.5em;margin-bottom:.5em;line-height:1.5}.chat-message-markdown :where(h4 strong):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:700;color:inherit}.chat-message-markdown :where(img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(picture):not(:where([class~=not-prose],[class~=not-prose] *)){display:block;margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(video):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(kbd):not(:where([class~=not-prose],[class~=not-prose] *)){font-weight:500;font-family:inherit;color:var(--tw-prose-kbd);box-shadow:0 0 0 1px rgb(var(--tw-prose-kbd-shadows) / 10%),0 3px rgb(var(--tw-prose-kbd-shadows) / 10%);font-size:.875em;border-radius:.3125rem;padding-top:.1875em;padding-inline-end:.375em;padding-bottom:.1875em;padding-inline-start:.375em}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-code);font-weight:600;font-size:.875em}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:"`"}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:"`"}.chat-message-markdown :where(a code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(h1 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(h2 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-size:.875em}.chat-message-markdown :where(h3 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-size:.9em}.chat-message-markdown :where(h4 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(blockquote code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(thead th code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.chat-message-markdown :where(pre):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-pre-code);background-color:var(--tw-prose-pre-bg);overflow-x:auto;font-weight:400;font-size:.875em;line-height:1.7142857;margin-top:1.7142857em;margin-bottom:1.7142857em;border-radius:.375rem;padding-top:.8571429em;padding-inline-end:1.1428571em;padding-bottom:.8571429em;padding-inline-start:1.1428571em}.chat-message-markdown :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)){background-color:transparent;border-width:0;border-radius:0;padding:0;font-weight:inherit;color:inherit;font-size:inherit;font-family:inherit;line-height:inherit}.chat-message-markdown :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:none}.chat-message-markdown :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:none}.chat-message-markdown :where(table):not(:where([class~=not-prose],[class~=not-prose] *)){width:100%;table-layout:auto;margin-top:2em;margin-bottom:2em;font-size:.875em;line-height:1.7142857}.chat-message-markdown :where(thead):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:1px;border-bottom-color:var(--tw-prose-th-borders)}.chat-message-markdown :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;vertical-align:bottom;padding-inline-end:.5714286em;padding-bottom:.5714286em;padding-inline-start:.5714286em}.chat-message-markdown :where(tbody tr):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:1px;border-bottom-color:var(--tw-prose-td-borders)}.chat-message-markdown :where(tbody tr:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:0}.chat-message-markdown :where(tbody td):not(:where([class~=not-prose],[class~=not-prose] *)){vertical-align:baseline}.chat-message-markdown :where(tfoot):not(:where([class~=not-prose],[class~=not-prose] *)){border-top-width:1px;border-top-color:var(--tw-prose-th-borders)}.chat-message-markdown :where(tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){vertical-align:top}.chat-message-markdown :where(th,td):not(:where([class~=not-prose],[class~=not-prose] *)){text-align:start}.chat-message-markdown :where(figcaption):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-captions);font-size:.875em;line-height:1.4285714;margin-top:.8571429em}.chat-message-markdown{--tw-prose-body: #374151;--tw-prose-headings: #111827;--tw-prose-lead: #4b5563;--tw-prose-links: #111827;--tw-prose-bold: #111827;--tw-prose-counters: #6b7280;--tw-prose-bullets: #d1d5db;--tw-prose-hr: #e5e7eb;--tw-prose-quotes: #111827;--tw-prose-quote-borders: #e5e7eb;--tw-prose-captions: #6b7280;--tw-prose-kbd: #111827;--tw-prose-kbd-shadows: 17 24 39;--tw-prose-code: #111827;--tw-prose-pre-code: #e5e7eb;--tw-prose-pre-bg: #1f2937;--tw-prose-th-borders: #d1d5db;--tw-prose-td-borders: #e5e7eb;--tw-prose-invert-body: #d1d5db;--tw-prose-invert-headings: #fff;--tw-prose-invert-lead: #9ca3af;--tw-prose-invert-links: #fff;--tw-prose-invert-bold: #fff;--tw-prose-invert-counters: #9ca3af;--tw-prose-invert-bullets: #4b5563;--tw-prose-invert-hr: #374151;--tw-prose-invert-quotes: #f3f4f6;--tw-prose-invert-quote-borders: #374151;--tw-prose-invert-captions: #9ca3af;--tw-prose-invert-kbd: #fff;--tw-prose-invert-kbd-shadows: 255 255 255;--tw-prose-invert-code: #fff;--tw-prose-invert-pre-code: #d1d5db;--tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);--tw-prose-invert-th-borders: #4b5563;--tw-prose-invert-td-borders: #374151;font-size:1rem;line-height:1.75}.chat-message-markdown :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5em;margin-bottom:.5em}.chat-message-markdown :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.375em}.chat-message-markdown :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.375em}.chat-message-markdown :where(.prose>ul>li p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.75em;margin-bottom:.75em}.chat-message-markdown :where(.prose>ul>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em}.chat-message-markdown :where(.prose>ul>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em}.chat-message-markdown :where(.prose>ol>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em}.chat-message-markdown :where(.prose>ol>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em}.chat-message-markdown :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.75em;margin-bottom:.75em}.chat-message-markdown :where(dl):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em;margin-bottom:1.25em}.chat-message-markdown :where(dd):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5em;padding-inline-start:1.625em}.chat-message-markdown :where(tbody td,tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){padding-top:.5714286em;padding-inline-end:.5714286em;padding-bottom:.5714286em;padding-inline-start:.5714286em}.chat-message-markdown :where(figure):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2em;margin-bottom:2em}.chat-message-markdown :where(.prose>:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(.prose>:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown{font-size:.875rem;line-height:1.7142857}.chat-message-markdown :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em}.chat-message-markdown :where([class~=lead]):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.2857143em;line-height:1.5555556;margin-top:.8888889em;margin-bottom:.8888889em}.chat-message-markdown :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.3333333em;margin-bottom:1.3333333em;padding-inline-start:1.1111111em}.chat-message-markdown :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:2.1428571em;margin-top:0;margin-bottom:.8em;line-height:1.2}.chat-message-markdown :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.4285714em;margin-top:1.6em;margin-bottom:.8em;line-height:1.4}.chat-message-markdown :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.2857143em;margin-top:1.5555556em;margin-bottom:.4444444em;line-height:1.5555556}.chat-message-markdown :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.4285714em;margin-bottom:.5714286em;line-height:1.4285714}.chat-message-markdown :where(img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(picture):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(picture>img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:0}.chat-message-markdown :where(video):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(kbd):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;border-radius:.3125rem;padding-top:.1428571em;padding-inline-end:.3571429em;padding-bottom:.1428571em;padding-inline-start:.3571429em}.chat-message-markdown :where(code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em}.chat-message-markdown :where(h2 code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.9em}.chat-message-markdown :where(h3 code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8888889em}.chat-message-markdown :where(pre):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;line-height:1.6666667;margin-top:1.6666667em;margin-bottom:1.6666667em;border-radius:.25rem;padding-top:.6666667em;padding-inline-end:1em;padding-bottom:.6666667em;padding-inline-start:1em}.chat-message-markdown :where(ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em;padding-inline-start:1.5714286em}.chat-message-markdown :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em;padding-inline-start:1.5714286em}.chat-message-markdown :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.2857143em;margin-bottom:.2857143em}.chat-message-markdown :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.4285714em}.chat-message-markdown :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.4285714em}.chat-message-markdown :where(.prose-sm>ul>li p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5714286em;margin-bottom:.5714286em}.chat-message-markdown :where(.prose-sm>ul>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em}.chat-message-markdown :where(.prose-sm>ul>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.1428571em}.chat-message-markdown :where(.prose-sm>ol>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em}.chat-message-markdown :where(.prose-sm>ol>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.1428571em}.chat-message-markdown :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5714286em;margin-bottom:.5714286em}.chat-message-markdown :where(dl):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em;margin-bottom:1.1428571em}.chat-message-markdown :where(dt):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.1428571em}.chat-message-markdown :where(dd):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.2857143em;padding-inline-start:1.5714286em}.chat-message-markdown :where(hr):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:2.8571429em;margin-bottom:2.8571429em}.chat-message-markdown :where(hr+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(h2+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(h3+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(h4+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(table):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;line-height:1.5}.chat-message-markdown :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:1em;padding-bottom:.6666667em;padding-inline-start:1em}.chat-message-markdown :where(thead th:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.chat-message-markdown :where(thead th:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.chat-message-markdown :where(tbody td,tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){padding-top:.6666667em;padding-inline-end:1em;padding-bottom:.6666667em;padding-inline-start:1em}.chat-message-markdown :where(tbody td:first-child,tfoot td:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.chat-message-markdown :where(tbody td:last-child,tfoot td:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.chat-message-markdown :where(figure):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.7142857em;margin-bottom:1.7142857em}.chat-message-markdown :where(figure>*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:0}.chat-message-markdown :where(figcaption):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8571429em;line-height:1.3333333;margin-top:.6666667em}.chat-message-markdown :where(.prose-sm>:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.chat-message-markdown :where(.prose-sm>:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown{max-width:none;text-align:left;color:var(--message-text-color)}.chat-message-markdown :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:.5em}.chat-message-markdown :where(p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown :where(ul,ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:.5em;padding-left:1rem}.chat-message-markdown :where(ul:last-child,ol:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-markdown :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0;margin-bottom:.25em}.chat-message-markdown :where(li:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.chat-message-paragraph{margin-bottom:.5rem;text-align:left}.chat-message-paragraph:last-child{margin-bottom:0}.chat-message-unordered-list{margin-bottom:.5rem;list-style-type:disc;padding-left:1rem;text-align:left}.chat-message-unordered-list:last-child{margin-bottom:0}.chat-message-ordered-list{margin-bottom:.5rem;list-style-type:decimal;padding-left:1rem;text-align:left}.chat-message-ordered-list:last-child{margin-bottom:0}.chat-message-list-item{margin-bottom:.25rem;text-align:left}.chat-message-list-item:last-child{margin-bottom:0}.chat-message-code-block{margin-bottom:.5rem;overflow-x:auto;border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:0;text-align:left}.chat-message-code-block:last-child{margin-bottom:0}@media (prefers-color-scheme: dark){.chat-message-code-block{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-link{text-align:left;--tw-text-opacity: 1;color:rgb(37 99 235 / var(--tw-text-opacity, 1));text-decoration-line:underline}.chat-message-link:hover{--tw-text-opacity: 1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.chat-message-blockquote{margin-bottom:.5rem;border-left-width:4px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding-left:1rem;text-align:left;font-style:italic}.chat-message-blockquote:last-child{margin-bottom:0}.chat-message-heading-1{margin-bottom:.5rem;text-align:left;font-size:1.25rem;line-height:1.75rem;font-weight:700}.chat-message-heading-1:last-child{margin-bottom:0}.chat-message-heading-2{margin-bottom:.5rem;text-align:left;font-size:1.125rem;line-height:1.75rem;font-weight:700}.chat-message-heading-2:last-child{margin-bottom:0}.chat-message-heading-3{margin-bottom:.5rem;text-align:left;font-size:1rem;line-height:1.5rem;font-weight:700}.chat-message-heading-3:last-child{margin-bottom:0}.chat-message-heading-4{margin-bottom:.5rem;text-align:left;font-size:.875rem;line-height:1.25rem;font-weight:700}.chat-message-heading-4:last-child{margin-bottom:0}.chat-message-table-container{margin-bottom:.5rem;overflow-x:auto}.chat-message-table-container:last-child{margin-bottom:0}.chat-message-table{min-width:100%}.chat-message-table>:not([hidden])~:not([hidden]){--tw-divide-y-reverse: 0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse));--tw-divide-opacity: 1;border-color:rgb(229 231 235 / var(--tw-divide-opacity, 1))}.chat-message-table{text-align:left}.chat-message-table-header{--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem 1rem;text-align:left}.chat-message-table-cell{border-top-width:1px;padding:.5rem 1rem;text-align:left}.chat-message-inline-code{border-radius:.25rem;padding:.25rem}.chat-message-markdown-content .markdown-paragraph{text-align:left}.chat-message-markdown-content .markdown-code-block{overflow-x:auto;border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-code-block{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-code-block{font-size:11px;border:1px solid rgba(0,0,0,.1)}.chat-message-markdown-content .markdown-inline-code{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.125rem .25rem;font-size:.75rem;line-height:1rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-inline-code{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-inline-code{font-family:Monaco,Menlo,Ubuntu Mono,monospace}.chat-message-markdown-content .markdown-link{--tw-text-opacity: 1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.chat-message-markdown-content .markdown-link:hover{text-decoration-line:underline}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-link{--tw-text-opacity: 1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}}.chat-message-markdown-content .markdown-link{text-decoration:none}.chat-message-markdown-content .markdown-blockquote{border-left-width:4px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding-left:.75rem;font-style:italic}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-blockquote{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.chat-message-markdown-content .markdown-blockquote{margin:.5em 0;font-size:.9em;color:#374151}.chat-message-markdown-content .markdown-heading-1,.chat-message-markdown-content .markdown-heading-2,.chat-message-markdown-content .markdown-heading-3,.chat-message-markdown-content .markdown-heading-4{text-align:left;color:#111827}.chat-message-markdown-content .markdown-heading-1{font-size:1.2em}.chat-message-markdown-content .markdown-heading-2{font-size:1.1em}.chat-message-markdown-content .markdown-heading-3{font-size:1.05em}.chat-message-markdown-content .markdown-heading-4{font-size:1em}.chat-message-markdown-content .markdown-table-container{overflow-x:auto;margin:.5em 0}.chat-message-markdown-content .markdown-table{min-width:100%;border-collapse:collapse;font-size:.9em;border:1px solid #d1d5db}.chat-message-markdown-content .markdown-table-header{border-width:1px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.25rem .5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-table-header{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1));--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-table-header{font-size:.9em;font-weight:600}.chat-message-markdown-content .markdown-table-cell{border-width:1px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding:.25rem .5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-table-cell{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.chat-message-markdown-content .markdown-table-cell{font-size:.9em}.chat-message-markdown-content .markdown-syntax-highlighter{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.chat-message-markdown-content .markdown-syntax-highlighter{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.chat-message-markdown-content .markdown-syntax-highlighter{font-size:11px;border:1px solid rgba(0,0,0,.1);word-wrap:break-word;overflow-wrap:break-word;white-space:pre-wrap;line-break:anywhere}.chat-message-markdown-content .markdown-syntax-highlighter pre{margin:0;background:transparent}.chat-message-timestamp{margin-top:.25rem;font-size:10px;--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1));background:transparent}.chat-message-timestamp-user{text-align:right}.chat-message-timestamp-bot{text-align:left}.chat-message-audio{margin-top:.5rem;max-width:100%}.chat-message-loading{display:flex;align-items:center;justify-content:center;padding:1rem}.chat-message-loading-spinner{height:1.25rem;width:1.25rem}.chat-message-loading-spinner{animation:spin 1s linear infinite;--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.chat-message-separator{position:relative;margin-top:1rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;padding-top:1.5rem;padding-bottom:1.5rem}.chat-message-separator:before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:linear-gradient(to right,transparent,#e2e8f0,transparent);transform:translateY(-50%)}.chat-message-separator-text{position:relative;z-index:10;border-radius:9999px;border-width:1px;--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1));--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1));padding:.5rem 1rem;font-size:.75rem;line-height:1rem;--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1));--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / .05);--tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);font-style:italic;font-weight:500;letter-spacing:.5px;transition:all .2s ease;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.chat-message-separator-text:hover{--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1));--tw-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);--tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);transform:scale(1.02)}.chat-message-date-separator{background:color-mix(in srgb,var(--chat-widget-secondary-color) 80%,transparent 20%);color:color-mix(in srgb,var(--chat-widget-message-text-color) 80%,transparent 20%);font-weight:500;font-style:italic;letter-spacing:.5px}.chat-message-references-divider{margin-top:.5rem;margin-bottom:.5rem}.chat-message-references-divider-user{border-color:#fff3}.chat-message-references-divider-bot{--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.prose p,.prose-override p{margin-top:0!important;margin-bottom:.5em!important}.prose p:last-child,.prose-override p:last-child{margin-bottom:0!important}.prose ul,.prose ol,.prose-override ul,.prose-override ol{margin-top:0!important;margin-bottom:.5em!important;padding-left:1.25em!important}.prose ul:last-child,.prose ol:last-child,.prose-override ul:last-child,.prose-override ol:last-child{margin-bottom:0!important}.prose li,.prose-override li{margin-top:0!important;margin-bottom:.25em!important;padding-left:0!important}.prose li:last-child,.prose-override li:last-child{margin-bottom:0!important}.prose h1,.prose h2,.prose h3,.prose h4,.prose-override h1,.prose-override h2,.prose-override h3,.prose-override h4{margin-top:0!important;margin-bottom:.5em!important}.prose blockquote,.prose-override blockquote{margin-top:0!important;margin-bottom:.5em!important;padding-left:1em!important;font-style:italic!important}.prose table,.prose-override table,.prose pre,.prose-override pre{margin-top:0!important;margin-bottom:.5em!important}.prose code,.prose-override code{padding:.1em .25em!important}.markdown-renderer{width:100%}.markdown-paragraph{margin-bottom:.5rem}.markdown-paragraph:last-child{margin-bottom:0}.markdown-unordered-list{margin-bottom:.5rem;list-style-type:disc;padding-left:1rem}.markdown-unordered-list:last-child{margin-bottom:0}.markdown-ordered-list{margin-bottom:.5rem;list-style-type:decimal;padding-left:1rem}.markdown-ordered-list:last-child{margin-bottom:0}.markdown-list-item{margin-bottom:.25rem}.markdown-list-item:last-child{margin-bottom:0}.markdown-code-block{margin-bottom:.5rem}.markdown-code-block:last-child{margin-bottom:0}.markdown-inline-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.markdown-link{text-decoration-line:underline}.markdown-blockquote{margin-bottom:.5rem;padding-left:1rem;font-style:italic}.markdown-blockquote:last-child{margin-bottom:0}.markdown-heading-1,.markdown-heading-2,.markdown-heading-3,.markdown-heading-4{margin-bottom:.5rem;font-weight:700}.markdown-heading-1:last-child,.markdown-heading-2:last-child,.markdown-heading-3:last-child,.markdown-heading-4:last-child{margin-bottom:0}.markdown-table-container{margin-bottom:.5rem;overflow-x:auto}.markdown-table-container:last-child{margin-bottom:0}.markdown-table{min-width:100%;border-collapse:collapse}.markdown-table-header,.markdown-table-cell{padding:.25rem .5rem}.markdown-syntax-highlighter{width:100%;overflow-x:auto}.chat-input-container{position:sticky;bottom:0;left:0;right:0;padding:var(--input-container-padding);width:100%}.chat-input-base-container{position:relative;display:flex;align-items:center;height:auto;min-height:var(--input-min-height);width:100%}.chat-input-buttons-container-base{display:flex;flex-shrink:0;align-items:center;gap:.25rem}.chat-input-button-base{display:flex;align-items:center;justify-content:center;border-radius:9999px;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;width:var(--button-size-primary);height:var(--button-size-primary);padding:var(--button-padding-primary);color:var(--color-button-text);opacity:var(--button-opacity-normal)}.chat-input-icon-base{width:var(--button-icon-size-primary);height:var(--button-icon-size-primary);fill:var(--color-button-fill);color:var(--color-button-text);opacity:var(--button-opacity-normal)}.chat-input-wrapper{position:relative;margin-left:auto;margin-right:auto;max-width:56rem}.chat-input-container-standard-view,.chat-input-wrapper-standard-view{background:var(--color-input-background)}.chat-input-container-voice-view,.chat-input-wrapper-voice-view{background:var(--chat-widget-primary-color)}.chat-input-container-standard-view .chat-input-button-base{background:var(--color-button-background-primary)}.chat-input-container-voice-view .chat-input-button-base{background:var(--chat-widget-secondary-color)}.text-chat-input-wrapper{position:relative;display:flex;flex:1 1 0%;align-items:center;min-height:var(--input-min-height);font-size:var(--chat-widget-message-font-size);line-height:var(--input-line-height);padding-right:8px}.text-chat-input-placeholder{position:absolute;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--color-input-text);padding:var(--input-text-padding);opacity:var(--color-input-placeholder-opacity)}.text-chat-input-field{flex:1 1 0%;resize:none;outline:2px solid transparent;outline-offset:2px;display:flex;align-items:center;height:var(--input-default-height);min-height:inherit;max-height:inherit;font-size:inherit;line-height:inherit;color:var(--color-input-text);border:none;font-family:inherit;padding:var(--input-text-padding);box-sizing:border-box;font-weight:var(--input-font-weight);transition:var(--transition-normal);overflow-y:auto;word-wrap:break-word;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word;scrollbar-width:var(--input-scrollbar-width);-webkit-overflow-scrolling:touch;border-radius:16px}.chat-input-container-standard-view .text-chat-input-field{scrollbar-color:var(--color-scrollbar-input-thumb) var(--color-scrollbar-input-track)}.chat-input-container-voice-view .text-chat-input-field{border:.5px solid;border-color:var(--chat-widget-secondary-color);scrollbar-color:var(--color-scrollbar-input-thumb-avatar-view) var(--color-scrollbar-input-track)}.text-chat-input-field::-webkit-scrollbar{width:5px}.text-chat-input-field::-webkit-scrollbar-track{background:transparent;border-radius:2.5px}.text-chat-input-field::-webkit-scrollbar-thumb{border-radius:2.5px;-webkit-transition:background-color .2s ease;transition:background-color .2s ease}.chat-input-container-standard-view .text-chat-input-field::-webkit-scrollbar-thumb{background:var(--color-scrollbar-input-thumb)}.chat-input-container-standard-view .text-chat-input-field::-webkit-scrollbar-thumb:hover{background:var(--color-scrollbar-input-thumb-hover)}.chat-input-container-voice-view .text-chat-input-field::-webkit-scrollbar-thumb{background:var(--color-scrollbar-input-thumb-avatar-view)}.chat-input-container-voice-view .text-chat-input-field::-webkit-scrollbar-thumb:hover{background:var(--color-scrollbar-input-thumb-hover-avatar-view)}.text-chat-input-field:focus{outline:none;border:none;box-shadow:none}.text-chat-input-mic-button svg{fill:var(--color-button-fill);color:var(--color-button-text)}.text-chat-input-mic-button:hover{opacity:var(--button-opacity-hover)}.text-chat-input-send-button:hover:not(:disabled){opacity:var(--button-opacity-hover)}.text-chat-input-send-button:disabled{cursor:not-allowed;opacity:var(--button-opacity-disabled)}:root{--sleek-main-min-height: 0px;--sleek-border-radius: 12px;--chat-widget-primary-color: var(--chat-widget-primary-color);--chat-widget-primary-color-hover: var(--chat-widget-primary-color-hover);--chat-widget-secondary-color: var(--chat-widget-secondary-color);--sleek-main-text-color: var(--chat-widget-message-text-color);--sleek-main-bg: color-mix( in srgb, var(--chat-widget-primary-color) 10%, white );--sleek-main-border: var(--chat-widget-secondary-color);--gradient-1: var(--chat-widget-primary-color);--gradient-2: var(--chat-widget-secondary-color);--gradient-3: color-mix( in srgb, var(--chat-widget-primary-color) 60%, var(--chat-widget-secondary-color) );--gradient-4: color-mix( in srgb, var(--chat-widget-primary-color) 40%, var(--chat-widget-secondary-color) );--accent: color-mix( in srgb, var(--chat-widget-primary-color) 70%, var(--chat-widget-secondary-color) );--glow: color-mix(in srgb, var(--chat-widget-primary-color) 30%, transparent);--whatsapp-color: #25d366;--fallback-1: #000aaa;--fallback-2: #6c757d;--fallback-3: #6c757d;--fallback-4: #6c757d;--fallback-accent: #6c757d;--fallback-glow: rgba(0, 10, 170, .3);--sleek-main-bg-fallback: rgba(0, 10, 170, .1);--sleek-main-border-fallback: rgba(108, 117, 125, .8)}@supports not (color: color-mix(in srgb,#000 50%,#fff)){:root{--gradient-1: var(--fallback-1);--gradient-2: var(--fallback-2);--gradient-3: var(--fallback-3);--gradient-4: var(--fallback-4);--accent: var(--fallback-accent);--glow: var(--fallback-glow);--sleek-main-bg: var(--sleek-main-bg-fallback);--sleek-main-border: var(--sleek-main-border-fallback)}.sleek-chat-input-voice-button{background:#000aaabf;box-shadow:0 4px 16px #000aaa36,0 2px 8px #000aaa26}.sleek-chat-input-voice-button:hover{background:var(--fallback-1);opacity:.9;box-shadow:0 8px 24px #000aaa59,0 4px 16px #000aaa40}.sleek-chat-input-voice-button:focus{box-shadow:0 0 0 4px #000aaa3d,0 8px 24px #000aaa59}.sleek-chat-input-voice-button.voice-loading{background:var(--fallback-1);box-shadow:0 4px 16px #000aaa36,0 2px 8px #000aaa40}.thinking-dot{background:var(--chat-widget-primary-color);box-shadow:0 0 4px var(--chat-widget-primary-color)}.sleek-chat-input-field::-moz-placeholder{color:var(--fallback-2);opacity:.6}.sleek-chat-input-field::placeholder{color:var(--fallback-2);opacity:.6}.sleek-chat-input-field:focus::-moz-placeholder{color:var(--fallback-2);opacity:.8}.sleek-chat-input-field:focus::placeholder{color:var(--fallback-2);opacity:.8}.sleek-main.agent-speaking{background:var(--sleek-main-bg-fallback);border:2px solid var(--fallback-1);box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 20px #667eea33,inset 0 1px #ffffffb3;animation:speakingBorderPulseFallback 1.5s ease-in-out infinite}}.sleek-view-wrapper-container{width:100%;height:100%;position:relative;display:flex;flex-direction:column}.sleek-view{display:flex;flex-direction:column;min-height:calc(var(--sleek-main-min-height) + var(--input-min-height));max-height:100%;position:relative;width:100%;flex:1}.sleek-close-button{display:flex;align-items:center;justify-content:center;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.2s;position:absolute;top:-10px;width:var(--button-size-secondary);height:var(--button-size-secondary);border-radius:9999px;border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 50%,white);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white);color:var(--color-button-text);box-shadow:0 4px 14px color-mix(in srgb,var(--glow) 60%,transparent),0 2px 6px color-mix(in srgb,var(--chat-widget-primary-color) 18%,transparent);cursor:pointer;overflow:hidden;z-index:20}.sleek-close-button.position-bottom-right,.sleek-close-button.position-top-right{right:-10px;left:auto}.sleek-close-button.position-bottom-left,.sleek-close-button.position-top-left{left:-10px;right:auto}.sleek-close-button:hover{transform:translateY(-1px) scale(1.05);box-shadow:0 8px 20px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent),0 4px 12px color-mix(in srgb,var(--chat-widget-primary-color) 20%,transparent);background:color-mix(in srgb,var(--chat-widget-primary-color-hover) 80%,white)}.sleek-close-button:focus{outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--glow) 80%,transparent),0 8px 22px color-mix(in srgb,var(--chat-widget-primary-color) 32%,transparent);transform:translateY(-1px) scale(1.03)}.sleek-close-button:active{transform:translateY(0) scale(.97);box-shadow:0 3px 10px color-mix(in srgb,var(--chat-widget-primary-color) 24%,transparent)}.sleek-close-button svg{width:calc(var(--button-size-secondary) * .8);height:calc(var(--button-size-secondary) * .8);display:block;flex-shrink:0;filter:drop-shadow(0 0 1px rgba(255,255,255,.7)) drop-shadow(0 0 2px color-mix(in srgb,var(--glow) 60%,transparent))}:host([data-open="false"]) .sleek-view,spotinfo-chat[data-open=false] .sleek-view{display:none!important;height:0!important;width:0!important;overflow:hidden!important;pointer-events:none!important}.sleek-main{display:flex;flex-direction:column;align-items:center;overflow:hidden;position:relative;min-height:var(--sleek-main-min-height);max-height:none;transition:border .4s cubic-bezier(.4,0,.2,1);opacity:1;transform:translateY(0);flex:1;line-height:var(--input-line-height);background:var(--sleek-main-bg);border-radius:var(--sleek-border-radius);color:var(--color-input-text);border:2px solid var(--sleek-main-border);box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,inset 0 1px #ffffffb3;overflow:visible;animation:slideInUpEnhanced .8s cubic-bezier(.4,0,.2,1);will-change:transform,box-shadow,filter;z-index:2}.sleek-main:focus-within{transform:translateY(-2px) scale(1.01);box-shadow:0 16px 48px #0000001f,0 8px 24px #0000000f,0 0 0 4px var(--glow),inset 0 1px #ffffffe6;border-color:var(--accent)}.sleek-main[style*=height]{animation:contentAppear .6s cubic-bezier(.4,0,.2,1)}.sleek-main.agent-speaking{position:relative;background:var(--sleek-main-bg);border:2px solid var(--chat-widget-primary-color);transition:none;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 20px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent),inset 0 1px #ffffffb3;animation:speakingBorderPulse 1.5s ease-in-out infinite}.sleek-new-chat-button{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;background:#ffffffe6;color:var(--gradient-2);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px #0000001a,0 1px 4px #0000000f;position:absolute;overflow:hidden;z-index:10;opacity:.9;transform:scale(.95);font-size:11px;font-weight:500;letter-spacing:.025em;white-space:nowrap;min-width:60px;height:28px;border-radius:16px;border:1px solid rgba(226,232,240,.6)}.sleek-new-chat-button.position-bottom-right,.sleek-new-chat-button.position-top-right{bottom:0;right:0;top:auto;left:auto}.sleek-new-chat-button.position-bottom-left,.sleek-new-chat-button.position-top-left{bottom:0;left:0;top:auto;right:auto}.sleek-new-chat-button:hover{transform:scale(1.02);opacity:1;background:#fffffff2;box-shadow:0 4px 12px #00000026,0 2px 6px #0000001a;border-color:#e2e8f0cc}.sleek-new-chat-button:focus{outline:none;box-shadow:0 0 0 2px var(--glow),0 4px 12px #00000026;transform:scale(1.01);opacity:1;background:#fff}.sleek-new-chat-button:active{transform:scale(.98);transition:transform .1s ease;background:#f8fafcf2}.sleek-message-container{width:100%;font-size:.875rem;line-height:1.25rem;font-style:normal;line-height:1.625;flex:0 0 auto;display:flex;flex-direction:column;justify-content:center;text-align:left;min-height:inherit;font-size:var(--message-font-size);line-height:var(--input-line-height);transition:all .3s ease-in-out;background:transparent;color:var(--color-input-text);font-weight:500;position:relative;z-index:1;padding:8px}.sleek-message-container:empty{opacity:0;height:0;padding:0;min-height:0}.sleek-message-container:not(:empty){opacity:1;height:auto;padding:8px;animation:fadeInUpEnhanced .5s ease-out}.sleek-message-container:focus{font-weight:500;text-shadow:0 0 15px var(--glow)}.sleek-message-markdown{width:100%;font-size:var(--message-font-size);line-height:var(--input-line-height);color:var(--color-input-text)}.sleek-message-markdown .markdown-paragraph{margin-bottom:.5rem}.sleek-message-markdown .markdown-paragraph:last-child{margin-bottom:0}.sleek-message-markdown .markdown-paragraph{font-size:inherit;line-height:inherit;color:inherit}.sleek-message-markdown .markdown-code-block{overflow-x:auto;border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-code-block{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.sleek-message-markdown .markdown-code-block{font-size:11px;border:1px solid rgba(0,0,0,.1)}.sleek-message-markdown .markdown-inline-code{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.125rem .25rem;font-size:.75rem;line-height:1rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-inline-code{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.sleek-message-markdown .markdown-inline-code{font-family:Monaco,Menlo,Ubuntu Mono,monospace}.sleek-message-markdown .markdown-link{--tw-text-opacity: 1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.sleek-message-markdown .markdown-link:hover{text-decoration-line:underline}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-link{--tw-text-opacity: 1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}}.sleek-message-markdown .markdown-link{text-decoration:none}.sleek-message-markdown .markdown-blockquote{border-left-width:4px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding-left:.75rem;font-style:italic}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-blockquote{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.sleek-message-markdown .markdown-blockquote{margin:.5em 0;font-size:.9em}.sleek-message-markdown .markdown-heading-1,.sleek-message-markdown .markdown-heading-2,.sleek-message-markdown .markdown-heading-3,.sleek-message-markdown .markdown-heading-4{margin-bottom:.5rem;font-weight:700}.sleek-message-markdown .markdown-heading-1:last-child,.sleek-message-markdown .markdown-heading-2:last-child,.sleek-message-markdown .markdown-heading-3:last-child,.sleek-message-markdown .markdown-heading-4:last-child{margin-bottom:0}.sleek-message-markdown .markdown-heading-1,.sleek-message-markdown .markdown-heading-2,.sleek-message-markdown .markdown-heading-3,.sleek-message-markdown .markdown-heading-4{color:inherit}.sleek-message-markdown .markdown-heading-1{font-size:1.2em}.sleek-message-markdown .markdown-heading-2{font-size:1.1em}.sleek-message-markdown .markdown-heading-3{font-size:1.05em}.sleek-message-markdown .markdown-heading-4{font-size:1em}.sleek-message-markdown .markdown-table-container{overflow-x:auto;margin:.5em 0}.sleek-message-markdown .markdown-table{min-width:100%;border-collapse:collapse;font-size:.9em;border:1px solid rgba(0,0,0,.1)}.sleek-message-markdown .markdown-table-header,.sleek-message-markdown .markdown-table-cell{border-width:1px;--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));padding:.25rem .5rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-table-header,.sleek-message-markdown .markdown-table-cell{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}}.sleek-message-markdown .markdown-table-header,.sleek-message-markdown .markdown-table-cell{font-size:.9em}.sleek-message-markdown .markdown-syntax-highlighter{border-radius:.25rem;--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));padding:.5rem}@media (prefers-color-scheme: dark){.sleek-message-markdown .markdown-syntax-highlighter{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}}.sleek-message-markdown .markdown-syntax-highlighter{font-size:11px;border:1px solid rgba(0,0,0,.1);word-wrap:break-word;overflow-wrap:break-word;white-space:pre-wrap;line-break:anywhere}.sleek-message-markdown .markdown-syntax-highlighter pre{margin:0;background:transparent}.sleek-spacer{flex:none;height:16px;background:transparent;transition:all .4s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:center;margin:0;padding:0}.sleek-spacer-loading{height:16px;background:transparent;border-radius:8px;display:flex;align-items:center;justify-content:center}.thinking-dots{display:flex;align-items:center;gap:4px}.thinking-dot{width:4px;height:4px;border-radius:50%;background:var(--chat-widget-primary-color);animation:thinkingDotCompact 1.4s ease-in-out infinite;box-shadow:0 0 4px var(--chat-widget-primary-color)}.thinking-dot:nth-child(1){animation-delay:0s}.thinking-dot:nth-child(2){animation-delay:.2s}.thinking-dot:nth-child(3){animation-delay:.4s}.sleek-chat-input-container{width:100%;flex:none;background-color:transparent;margin-top:auto;height:auto;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#f8fafcf2,#f1f5f9d9);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-radius:var(--sleek-border-radius);transition:all .4s cubic-bezier(.4,0,.2,1);padding:4px;box-sizing:border-box;border:1px solid rgba(226,232,240,.4);box-shadow:0 8px 32px #0000001f,0 4px 16px #00000014,inset 0 1px #ffffff80;position:relative;overflow:visible;flex-shrink:0;align-self:flex-end;will-change:transform,box-shadow,filter,background;z-index:10}.sleek-chat-input-container:before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,var(--gradient-1) 0%,var(--gradient-2) 25%,var(--gradient-3) 50%,var(--gradient-4) 75%,var(--accent) 100%);opacity:0;transition:opacity .4s ease;border-radius:inherit;z-index:-1}.sleek-chat-input-container:hover:before{opacity:.1}.sleek-chat-input-container:focus-within{transform:translateY(-2px);box-shadow:0 12px 40px #00000026,0 8px 24px #0000001a,0 0 0 4px var(--glow),inset 0 1px #fff9;border-color:var(--accent);background:linear-gradient(135deg,#fffffffa,#f8fafceb)}.sleek-chat-input-container:focus-within .sleek-chat-input-field{font-weight:500}.sleek-main:focus-within~.sleek-chat-input-container{transform:none;box-shadow:0 8px 32px #0000001f,0 4px 16px #00000014,inset 0 1px #ffffff80;border-color:#e2e8f066;background:linear-gradient(135deg,#f8fafcf2,#f1f5f9d9)}.sleek-chat-input-container.agent-listening{position:relative;overflow:visible;transition:all .4s cubic-bezier(.4,0,.2,1)}.sleek-chat-input-container.agent-listening:before{content:"";position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:linear-gradient(90deg,var(--gradient-2) 0%,var(--gradient-3) 50%,var(--gradient-2) 100%);background-size:200% 100%;border-radius:calc(var(--sleek-border-radius) + 2px);animation:listeningEdgePulse 2s ease-in-out infinite;animation-delay:0s;z-index:-1;opacity:.7}.sleek-chat-input-container.agent-listening:after{content:"";position:absolute;top:1px;left:1px;right:1px;bottom:1px;background:linear-gradient(135deg,#fff6,#ffffff1a);border-radius:calc(var(--sleek-border-radius) - 1px);animation:listeningInnerHighlight 2s ease-in-out infinite;animation-delay:0s;z-index:-1;pointer-events:none}.sleek-chat-input-container.agent-speaking{background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 8%,white),color-mix(in srgb,var(--chat-widget-primary-color) 5%,white));border-color:color-mix(in srgb,var(--chat-widget-primary-color) 30%,white)}.sleek-chat-input-container.agent-speaking:focus-within{transform:translateY(-2px);box-shadow:0 12px 40px #00000026,0 8px 24px #0000001a,0 0 0 4px var(--glow),inset 0 1px #ffffff8c;border-color:var(--accent);background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 10%,white),color-mix(in srgb,var(--chat-widget-primary-color) 6%,white))}.sleek-chat-input-container.agent-speaking .sleek-menu-button{border-color:color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white)}.sleek-chat-input-container.agent-speaking .sleek-menu-button:hover{border-color:color-mix(in srgb,var(--chat-widget-primary-color) 55%,white);box-shadow:0 10px 24px color-mix(in srgb,var(--chat-widget-primary-color) 24%,transparent),0 6px 16px color-mix(in srgb,var(--chat-widget-primary-color) 16%,transparent)}.sleek-chat-input-container.agent-speaking .sleek-menu-button:focus{box-shadow:0 10px 24px color-mix(in srgb,var(--chat-widget-primary-color) 26%,transparent),0 0 0 3px var(--glow)}.sleek-chat-input-wrapper{display:flex;align-items:center;flex:1;min-height:var(--input-min-height);font-size:var(--input-font-size);line-height:var(--input-line-height);position:relative}.sleek-chat-input-field-placeholder{line-height:var(--input-line-height);position:absolute;top:50%;transform:translateY(-50%);font-size:var(--input-font-size);line-height:inherit;font-family:inherit;pointer-events:none;color:var(--color-input-placeholder-text);font-weight:400;transition:all .3s ease}.sleek-chat-input-field-placeholder-listening{font-size:calc(var(--input-font-size) * 1.15);font-weight:600}.sleek-voice-activity-bars{pointer-events:none;flex-shrink:0}.sleek-chat-input-field{flex:1 1 0%;resize:none;outline:2px solid transparent;outline-offset:2px;height:auto;min-height:inherit;max-height:120px;font-size:inherit;line-height:inherit;color:var(--color-input-text);background:transparent;border:none;font-family:inherit;padding:0;margin:0;box-sizing:border-box;font-weight:500;transition:all .3s ease;overflow-y:auto;word-wrap:break-word;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word;display:flex;align-items:center;scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--chat-widget-primary-color) 60%,transparent) transparent;-webkit-overflow-scrolling:touch}.sleek-chat-input-field::-webkit-scrollbar{width:5px}.sleek-chat-input-field::-webkit-scrollbar-track{background:transparent;border-radius:2.5px}.sleek-chat-input-field::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--chat-widget-primary-color) 60%,transparent);border-radius:2.5px;-webkit-transition:background-color .2s ease;transition:background-color .2s ease}.sleek-chat-input-field::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--chat-widget-primary-color) 85%,transparent)}.sleek-chat-input-field:focus{background:transparent;outline:none;border:none;box-shadow:none;font-weight:600}.sleek-chat-input-field:focus::-moz-placeholder{color:var(--color-input-placeholder-text);transform:translate(4px)}.sleek-chat-input-field:focus::placeholder{color:var(--color-input-placeholder-text);transform:translate(4px)}.sleek-chat-input-buttons{flex-shrink:0;gap:.125rem;align-self:center;margin:0;padding:0;height:auto;display:flex;align-items:center}svg.sleek-chat-input-whatsapp-icon{cursor:pointer;border-radius:9999px;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;width:var(--button-size-primary);height:var(--button-size-primary);fill:var(--whatsapp-color);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.6)) drop-shadow(0 0 2px color-mix(in srgb,var(--glow) 60%,transparent));overflow:visible;display:block;flex-shrink:0;will-change:transform,box-shadow,filter}path.sleek-chat-input-whatsapp-path{fill:inherit;transform-origin:center;transform-box:fill-box}svg.sleek-chat-input-whatsapp-icon:hover{transform:translateY(-2px) scale(1.1)}svg.sleek-chat-input-whatsapp-icon:focus{outline:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--glow) 60%,transparent);transform:translateY(-2px) scale(1.1)}.sleek-chat-input-voice-button{border-radius:9999px;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;background:var(--color-button-background-primary);color:var(--color-button-text);width:var(--button-size-primary);height:var(--button-size-primary);display:flex;padding:var(--button-padding-primary);align-items:center;justify-content:center;box-shadow:0 4px 16px color-mix(in srgb,var(--glow) 70%,transparent),0 2px 8px color-mix(in srgb,var(--color-button-background-primary) 15%,transparent);position:relative;overflow:hidden;border:2px solid transparent;opacity:var(--button-opacity-normal);will-change:transform,box-shadow,filter,background}.sleek-chat-input-voice-button:hover{transform:translateY(-2px) scale(1.1);box-shadow:0 8px 24px color-mix(in srgb,var(--color-button-background-primary) 35%,transparent),0 4px 16px color-mix(in srgb,var(--color-button-background-primary) 25%,transparent);opacity:var(--button-opacity-hover)}.sleek-chat-input-voice-button:hover svg{transform:scale(1.1)}.sleek-chat-input-voice-button:focus{outline:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--glow) 80%,transparent),0 8px 24px color-mix(in srgb,var(--color-button-background-primary) 35%,transparent);transform:translateY(-2px) scale(1.05)}.sleek-chat-input-voice-button.voice-active{box-shadow:0 4px 16px #a7f3d04d,0 2px 8px #d1fae540;animation:pulse 2s ease-in-out infinite}.sleek-chat-input-voice-button.voice-loading{background:var(--color-button-background-primary);box-shadow:0 4px 16px color-mix(in srgb,var(--glow) 70%,transparent),0 2px 8px color-mix(in srgb,var(--color-button-background-primary) 25%,transparent);cursor:not-allowed;animation:shimmer 2s infinite}@keyframes slideInUpEnhanced{0%{opacity:0;filter:blur(10px)}50%{opacity:.7;transform:translateY(15px) scale(.98);filter:blur(5px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0px)}}@keyframes floatMain{0%,to{transform:translateY(0) rotate(0)}25%{transform:translateY(-3px) rotate(.5deg)}50%{transform:translateY(-6px) rotate(0)}75%{transform:translateY(-3px) rotate(-.5deg)}}@keyframes contentAppear{0%{opacity:.7;transform:scale(.98)}to{opacity:1;transform:scale(1)}}@keyframes fadeInUpEnhanced{0%{opacity:0;transform:translateY(15px) scale(.95);filter:blur(5px)}50%{opacity:.7;transform:translateY(7px) scale(.98);filter:blur(2px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0px)}}@keyframes gradientShift{0%,to{background-position:0% 50%}50%{background-position:100% 50%}}@keyframes speakingBorderFlow{0%{background-position:0% 50%}to{background-position:300% 50%}}@keyframes speakingBorderPulseFallback{0%{border-color:#667eea;border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px #667eea33,inset 0 1px #ffffffb3}25%{border-color:#00d4ff;border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px #00d4ff66,inset 0 1px #fffc}50%{border-color:#f093fb;border-width:2px;box-shadow:0 16px 48px #0000001f,0 8px 24px #0000000f,0 0 30px #f093fb80,inset 0 1px #ffffffe6}75%{border-color:#f5576c;border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px #f5576c66,inset 0 1px #fffc}to{border-color:#667eea;border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px #667eea33,inset 0 1px #ffffffb3}}@keyframes speakingBorderPulse{0%{border-color:var(--chat-widget-primary-color);border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px color-mix(in srgb,var(--chat-widget-primary-color) 15%,transparent),inset 0 1px #ffffffb3}25%{border-color:var(--accent);border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px color-mix(in srgb,var(--accent) 40%,transparent),inset 0 1px #fffc}50%{border-color:var(--gradient-3);border-width:2px;box-shadow:0 16px 48px #0000001f,0 8px 24px #0000000f,0 0 30px color-mix(in srgb,var(--gradient-3) 50%,transparent),inset 0 1px #ffffffe6}75%{border-color:var(--gradient-4);border-width:2px;box-shadow:0 14px 44px #0000001a,0 7px 22px #0000000d,0 0 20px color-mix(in srgb,var(--gradient-4) 40%,transparent),inset 0 1px #fffc}to{border-color:var(--chat-widget-primary-color);border-width:2px;box-shadow:0 12px 40px #00000014,0 6px 20px #0000000a,0 0 10px color-mix(in srgb,var(--chat-widget-primary-color) 15%,transparent),inset 0 1px #ffffffb3}}@keyframes listeningEdgePulse{0%{background-position:0% 50%;opacity:.5}50%{background-position:100% 50%;opacity:.8}to{background-position:0% 50%;opacity:.5}}@keyframes listeningInnerHighlight{0%,to{opacity:.3}50%{opacity:.6}}@keyframes float{0%,to{transform:translateY(0)}50%{transform:translateY(-4px)}}@keyframes thinkingDotCompact{0%,60%,to{opacity:.4;transform:scale(.8);box-shadow:0 0 4px var(--chat-widget-primary-color)}30%{opacity:1;transform:scale(1.2);box-shadow:0 0 8px var(--chat-widget-primary-color)}}@keyframes pulse{0%,to{box-shadow:0 4px 16px color-mix(in srgb,var(--gradient-4) 40%,transparent),0 2px 8px color-mix(in srgb,var(--gradient-3) 30%,transparent)}50%{box-shadow:0 6px 20px color-mix(in srgb,var(--gradient-4) 60%,transparent),0 4px 16px color-mix(in srgb,var(--gradient-3) 50%,transparent)}}@keyframes shimmer{0%{background-position:-200% 0}to{background-position:200% 0}}@media (max-width: 768px){.sleek-new-chat-button{bottom:0;right:0;font-size:10px;min-width:55px;height:26px;border-radius:13px}.sleek-spacer-loading{border-radius:6px}.thinking-dot{width:3px;height:3px}.thinking-dots{gap:3px}.sleek-main{display:flex;flex-direction:column;align-items:center;overflow:hidden;padding:0;position:relative;min-height:var(--sleek-main-min-height);max-height:none;border-radius:20px;box-shadow:0 8px 24px #0000000f,0 4px 12px #00000008,inset 0 1px #fff9}.sleek-message-container{min-height:0;font-size:13px}.sleek-chat-input-container{height:auto;max-width:100%;padding:0 14px;gap:12px;align-items:center;justify-content:space-between}.sleek-chat-input-container.agent-listening:before{opacity:.6}.sleek-chat-input-container.agent-listening:after{opacity:.5}.sleek-chat-input-field{font-size:12px;min-height:24px;max-height:100px;line-height:1.3;align-self:center}.sleek-chat-input-buttons{gap:4px;align-self:center;height:auto;align-items:center}}@media (max-width: 480px){.sleek-new-chat-button{font-size:9px;min-width:50px;height:24px;border-radius:12px}.sleek-new-chat-button.position-bottom-right,.sleek-new-chat-button.position-top-right{bottom:0;right:0}.sleek-new-chat-button.position-bottom-left,.sleek-new-chat-button.position-top-left{bottom:0;left:0}.sleek-spacer-loading{border-radius:4px}.thinking-dot{width:2px;height:2px}.thinking-dots{gap:2px}.sleek-main{border-radius:16px;min-height:var(--sleek-main-min-height);box-shadow:0 6px 20px #0000000d,0 3px 10px #00000005,inset 0 1px #ffffff80}.sleek-message-container{min-height:0;font-size:12px}.sleek-chat-input-container{height:auto;padding:0 12px;gap:10px;align-items:center;justify-content:space-between}.sleek-chat-input-container.agent-listening:before{opacity:.5;top:-1px;left:-1px;right:-1px;bottom:-1px}.sleek-chat-input-container.agent-listening:after{opacity:.4}.sleek-chat-input-field{min-height:24px;max-height:80px;line-height:1.2;align-self:center}.sleek-chat-input-buttons{gap:4px;align-self:center;height:auto;align-items:center}.sleek-chat-input-voice-button{min-width:var(--button-size-primary);min-height:var(--button-size-primary)}}.sleek-menu-wrapper{position:relative;flex-shrink:0}.sleek-menu-button{display:flex;align-items:center;justify-content:center;border-radius:9999px;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;width:var(--button-size-secondary);height:var(--button-size-secondary);border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 55%,white);color:var(--color-button-text);background:color-mix(in srgb,var(--chat-widget-primary-color) 75%,white)}.sleek-menu-button:hover{color:#fff;border-color:color-mix(in srgb,var(--chat-widget-primary-color) 65%,white);transform:translateY(-1px);box-shadow:0 12px 28px color-mix(in srgb,var(--chat-widget-primary-color) 28%,transparent),0 8px 18px color-mix(in srgb,var(--chat-widget-primary-color) 18%,transparent)}.sleek-menu-button:focus{outline:none;box-shadow:0 10px 24px color-mix(in srgb,var(--chat-widget-primary-color) 30%,transparent)}.sleek-menu-icon{width:100%;height:100%;display:block}.sleek-menu-icon-outline{stroke:currentColor;stroke-width:1.5;fill:none}.sleek-menu-icon-dot{fill:currentColor}.sleek-menu-dropdown{position:absolute;left:0;bottom:calc(100% + 8px);width:160px;border-radius:8px;border:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 10%,white),color-mix(in srgb,var(--chat-widget-primary-color) 6%,white));-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 12px 32px #0000001f,0 6px 18px #00000014;z-index:9999;opacity:0;transform:translateY(6px) scale(.98);animation:sleekMenuEnter .16s cubic-bezier(.2,.7,.3,1) forwards;will-change:opacity,transform,box-shadow}.sleek-menu-dropdown:after{content:"";position:absolute;bottom:-6px;left:18px;width:10px;height:10px;background:linear-gradient(135deg,color-mix(in srgb,var(--chat-widget-primary-color) 10%,white),color-mix(in srgb,var(--chat-widget-primary-color) 6%,white));border-left:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);border-bottom:1px solid color-mix(in srgb,var(--chat-widget-primary-color) 45%,white);transform:rotate(45deg);box-shadow:0 2px 6px #0000000f}.sleek-menu-item{width:100%;text-align:left;padding:10px 12px;font-size:13px;color:#334155;background:transparent}.sleek-menu-item+.sleek-menu-item{border-top:1px solid rgba(226,232,240,.7)}.sleek-menu-item:hover,.sleek-menu-item:focus{background:color-mix(in srgb,var(--chat-widget-primary-color) 8%,white);color:#1e293b;outline:none}@keyframes sleekMenuEnter{0%{opacity:0;transform:translateY(6px) scale(.98);box-shadow:0 6px 18px #00000014,0 3px 10px #0000000d}to{opacity:1;transform:translateY(0) scale(1);box-shadow:0 12px 32px #0000001f,0 6px 18px #00000014}}.voice-chat-input-status-container{display:flex;flex:1 1 0%;flex-direction:column;gap:.5rem}.voice-chat-input-status-text{font-size:.875rem;line-height:1.25rem;--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.voice-chat-input-activity{display:flex;height:1.5rem;align-items:center}.voice-chat-input-button:focus{outline:2px solid transparent;outline-offset:2px}.voice-chat-input-button-muted{color:var(--color-button-text);background:var(--color-voice-disconnected)}.voice-chat-input-button-unmuted{color:var(--color-button-text);background:var(--color-voice-speaking)}.voice-chat-input-button-disconnect{color:var(--color-button-text);background:var(--color-voice-disconnected)}.voice-chat-input-spinner{height:2rem;width:2rem}.voice-chat-input-spinner{animation:spin 1s linear infinite;border-radius:9999px;border-bottom-width:2px;--tw-border-opacity: 1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.voice-chat-input-spinner-small{height:1.25rem;width:1.25rem}@keyframes spin{to{transform:rotate(360deg)}}.voice-chat-input-spinner-small{animation:spin 1s linear infinite;border-radius:9999px;border-width:2px;--tw-border-opacity: 1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1));border-top-color:transparent}.voice-chat-input-loading-text{margin-left:.5rem;font-size:.875rem;line-height:1.25rem;--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.voice-chat-input-livekit-container{pointer-events:none;position:absolute;right:0;top:0;opacity:0}@keyframes pulse{0%{transform:scaleY(.3)}50%{transform:scaleY(1)}to{transform:scaleY(.3)}}.voice-chat-input-activity-bar{width:.25rem;border-radius:9999px;animation:pulse 1.5s infinite;animation-delay:var(--delay)}.voice-chat-input-agent-state-listening .voice-chat-input-activity-bar{background-color:var(--color-voice-listening)}.voice-chat-input-agent-state-speaking .voice-chat-input-activity-bar{background-color:var(--color-voice-speaking)}.voice-chat-input-agent-state-thinking .voice-chat-input-activity-bar{background-color:var(--color-voice-thinking)}:root{--chat-widget-primary-color-hover: color-mix( in srgb, var(--chat-widget-primary-color) 85%, black );--color-voice-listening: #3b82f6;--color-voice-speaking: #10b981;--color-voice-thinking: #f59e0b;--color-voice-disconnected: #ef4444cb;--color-whatsapp: #1eb655;--opacity-disabled: .7;--opacity-hover: .8;--opacity-normal: 1;--color-input-background: var(--chat-widget-secondary-color);--color-input-text: var(--chat-widget-message-text-color);--color-input-placeholder-text: color-mix( in srgb, var(--color-input-text) 70%, white );--color-input-placeholder-opacity: 70%;--color-input-placeholder-opacity-focus: 80%;--input-default-height: 40px;--input-min-height: 40px;--input-max-height: 120px;--input-max-height-tablet: 100px;--input-max-height-mobile: 80px;--input-line-height: 20px;--input-text-padding-horizontal: 4px;--input-text-padding-vertical: 0px;--input-text-padding: 0 var(--input-text-padding-horizontal);--input-container-padding: 6px 8px;--input-container-padding-sleek: 4px 4px;--input-font-size: var(--chat-widget-message-font-size);--input-font-weight: 400;--input-font-weight-focus: 500;--input-font-weight-bold: 600;--color-scrollbar-input-thumb: color-mix( in srgb, var(--chat-widget-primary-color) 75%, transparent );--color-scrollbar-input-thumb-hover: color-mix( in srgb, var(--chat-widget-primary-color) 90%, transparent );--color-scrollbar-input-thumb-avatar-view: color-mix( in srgb, var(--chat-widget-secondary-color) 75%, transparent );--color-scrollbar-input-thumb-hover-avatar-view: color-mix( in srgb, var(--chat-widget-secondary-color) 90%, transparent );--color-scrollbar-input-track: transparent;--input-scrollbar-width: thin;--input-scrollbar-border-radius: 2.5px;--input-scrollbar-thumb-hover-opacity: var(--opacity-hover);--button-size-primary: 32px;--button-padding-primary: 4px;--button-size-secondary: 24px;--color-button-background-primary: var(--chat-widget-primary-color);--color-button-background-hover: var(--chat-widget-primary-color-hover);--color-button-text: var(--chat-widget-button-content-color);--color-button-fill: var(--chat-widget-button-content-color);--color-button-disconnect: #ef4444;--button-opacity-normal: var(--opacity-normal);--button-opacity-hover: var(--opacity-hover);--button-opacity-disabled: var(--opacity-disabled);--button-icon-size-secondary: 16px;--button-icon-size-primary: 20px;--message-scrollbar-width: thin;--message-scrollbar-width-px: 6px;--message-scrollbar-border-radius: 3px;--color-scrollbar-message-thumb-default: rgb(209 213 219);--color-scrollbar-message-thumb-hover: rgb(156 163 175);--color-scrollbar-message-thumb-theme: var( --chat-widget-button-content-color, var(--chat-widget-secondary-color) );--color-scrollbar-message-thumb-hover-mix: color-mix( in srgb, var(--chat-widget-button-content-color, var(--chat-widget-secondary-color)) 80%, var(--chat-widget-primary-color) );--color-scrollbar-message-track: transparent;--message-text-color: var(--chat-widget-message-text-color);--message-font-size: var(--chat-widget-message-font-size);--message-bubble-background-color: var(--chat-widget-secondary-color);--message-bubble-icon-color: var(--chat-widget-secondary-color);--engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);--engagement-hook-image-height: var( --chat-widget-engagement-hook-image-height );--transition-fast: .2s ease;--transition-normal: all .3s ease;--transition-slow: .4s cubic-bezier(.4, 0, .2, 1);--transition-slow-ease: .4s ease;--border-radius-small: 2.5px;--border-radius-medium: 3px;--border-radius-large: 12px;--border-radius-xl: 16px;--border-radius-2xl: 20px;--border-radius-full: 9999px;--spacing-gap-xs: .5px;--spacing-gap-sm: 4px;--spacing-gap-md: 8px;--spacing-gap-lg: 12px;--spacing-gap-xl: 16px;--z-index-base: 1;--z-index-elevated: 10;--z-index-high: 20;--z-index-maximum: 9999;--border-width-thin: 1px;--border-width-medium: 2px;--border-width-thick: 4px;--shadow-sm: 0 1px 2px rgba(0, 0, 0, .05);--shadow-md: 0 4px 6px rgba(0, 0, 0, .1);--shadow-lg: 0 10px 15px rgba(0, 0, 0, .1);--shadow-xl: 0 20px 25px rgba(0, 0, 0, .1);--sleek-main-min-height: 0px;--sleek-border-radius: var(--border-radius-large);--sleek-main-bg: var(--color-sleek-main-bg);--sleek-main-border: var(--color-sleek-main-border);--sleek-main-text-color: var(--color-sleek-main-text);--color-sleek-main-bg: color-mix( in srgb, var(--chat-widget-primary-color) 10%, white );--color-sleek-main-border: var(--chat-widget-secondary-color);--color-sleek-main-text: var(--chat-widget-message-text-color);--color-gradient-1: var(--chat-widget-primary-color);--color-gradient-2: var(--chat-widget-secondary-color);--color-gradient-3: color-mix( in srgb, var(--chat-widget-primary-color) 60%, var(--chat-widget-secondary-color) );--color-gradient-4: color-mix( in srgb, var(--chat-widget-primary-color) 40%, var(--chat-widget-secondary-color) );--color-accent: color-mix( in srgb, var(--chat-widget-primary-color) 70%, var(--chat-widget-secondary-color) );--color-glow: color-mix( in srgb, var(--chat-widget-primary-color) 30%, transparent );--gradient-1: var(--color-gradient-1);--gradient-2: var(--color-gradient-2);--gradient-3: var(--color-gradient-3);--gradient-4: var(--color-gradient-4);--accent: var(--color-accent);--glow: var(--color-glow);--whatsapp-color: var(--color-whatsapp);--gray-200: var(--color-gray-200);--gray-300: var(--color-gray-300);--gray-400: var(--color-gray-400);--gray-500: var(--color-gray-500);--gray-600: var(--color-gray-600);--gray-700: var(--color-gray-700);--gray-800: var(--color-gray-800);--blue-500: var(--color-blue-500);--blue-600: var(--color-blue-600);--slate-700: var(--color-slate-700);--slate-800: var(--color-slate-800)}@supports not (color: color-mix(in srgb,#000 50%,#fff)){:root{--chat-widget-primary-color-hover: #000991;--color-gradient-1: #000aaa;--color-gradient-2: #6c757d;--color-gradient-3: #6c757d;--color-gradient-4: #6c757d;--color-accent: #6c757d;--color-glow: rgba(0, 10, 170, .3);--color-sleek-main-bg: rgba(0, 10, 170, .1);--color-sleek-main-border: rgba(108, 117, 125, .8);--color-scrollbar-input-thumb: rgba(0, 10, 170, .6);--color-scrollbar-input-thumb-hover: rgba(0, 10, 170, .85);--gradient-1: var(--color-gradient-1);--gradient-2: var(--color-gradient-2);--gradient-3: var(--color-gradient-3);--gradient-4: var(--color-gradient-4);--accent: var(--color-accent);--glow: var(--color-glow);--sleek-main-bg: var(--color-sleek-main-bg);--sleek-main-border: var(--color-sleek-main-border);--input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);--input-scrollbar-thumb-hover-color: var( --color-scrollbar-input-thumb-hover )}}.voice-alternate-view{display:flex;height:100%;flex-direction:column}.voice-alternate-header{position:relative;flex:none;display:flex;flex-direction:column}.voice-alternate-header .chat-header-content{position:relative;z-index:10;margin-left:auto;margin-right:auto;display:flex;max-width:32rem;align-items:center;justify-content:space-between}.voice-alternate-header .chat-header-text{font-size:1.125rem;line-height:1.75rem;font-weight:600;text-shadow:none}.voice-alternate-header .chat-header-subtitle{font-size:.875rem;line-height:1.25rem;text-shadow:none}.voice-alternate-main{display:flex;flex:1 1 0%;flex-direction:column;align-items:center;overflow:hidden;position:relative}.voice-alternate-content-wrapper{display:flex;flex-direction:column;align-items:center;flex:1;width:90%;height:90%;position:relative;overflow:visible;border-radius:16px;margin-top:16px;margin-bottom:12px;background:linear-gradient(to bottom,var(--chat-widget-secondary-color) 0%,var(--chat-widget-secondary-color) 60%,var(--chat-widget-primary-color) 100%)}.talking-head-wrapper{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:2}.voice-alternate-avatar-bars{position:absolute;bottom:8px;left:50%;transform:translate(-50%);display:flex;align-items:center;justify-content:center;border-radius:9999px;border:1px solid var(--chat-widget-primary-color);padding:4px 12px;-webkit-backdrop-filter:blur(32px);backdrop-filter:blur(32px);z-index:3}.voice-alternate-chat-input-container{display:flex;align-items:center;justify-content:center;margin-bottom:12px;margin-left:16px;margin-right:16px;padding:8px;border-radius:12px;background:transparent}.voice-alternate-input-buttons{display:flex;align-items:center;justify-content:center;width:100%;gap:16px}.voice-alternate-voice-button{transition-property:all;transition-duration:.15s;transition-timing-function:ease-in-out;display:flex;align-items:center;justify-content:center;border-radius:12px;height:50px;width:180px;color:var(--chat-widget-button-content-color);background:color-mix(in srgb,var(--chat-widget-primary-color) 50%,var(--chat-widget-secondary-color) 50%)}.voice-alternate-voice-button:hover{transform:scale(1.05);opacity:var(--button-opacity-hover)}.voice-alternate-voice-button:focus{outline:none;box-shadow:0 0 0 2px #9ca3af}.voice-alternate-voice-button:disabled{cursor:not-allowed;opacity:var(--button-opacity-disabled)}.voice-alternate-disconnect-button{transition-property:all;transition-duration:.15s;transition-timing-function:ease-in-out;display:flex;align-items:center;justify-content:center;border-radius:12px;height:50px;width:180px;color:var(--chat-widget-button-content-color);background:var(--color-button-disconnect)}.voice-alternate-disconnect-button:hover{transform:scale(1.05);opacity:var(--button-opacity-hover)}.voice-alternate-disconnect-button:focus{outline:none;box-shadow:0 0 0 2px #9ca3af}.voice-alternate-disconnect-button:disabled{cursor:not-allowed;opacity:var(--button-opacity-disabled)}@media (max-width: 768px){.voice-alternate-main{display:flex;flex:1 1 0%;flex-direction:column;align-items:center;overflow:hidden;position:relative}.voice-alternate-content-wrapper{padding-bottom:100px}.voice-alternate-message-box{min-height:60px}.voice-alternate-chat-input-container{margin-left:.5rem;margin-right:.5rem;margin-bottom:.5rem}}.human-avatar{display:block;width:100%;height:100%;position:absolute;top:0;right:0;bottom:0;left:0;min-height:200px}.human-avatar canvas{display:block!important;width:100%!important;height:100%!important;position:absolute!important;top:0!important;left:0!important;-o-object-fit:contain;object-fit:contain;visibility:visible!important;opacity:1!important}.human-avatar-loading,.human-avatar-error{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);padding:.5rem 1rem;font-size:.875rem;text-align:center;z-index:2}.human-avatar-loading{color:var(--chat-widget-primary-color, #6366f1)}.human-avatar-error{color:#dc2626;max-width:90%}.human-avatar:has(canvas) .human-avatar-loading,.human-avatar:has(canvas) .human-avatar-error{display:none}:root{--chat-widget-width: 600px;--chat-widget-height: 650px;--chat-widget-primary-color: #6366f1;--chat-widget-primary-color-hover: #4f46e5;--chat-widget-border-radius: 24px}@media (max-width: 768px){:root{--chat-widget-width: 95vw;--chat-widget-height: 85vh;--chat-widget-border-radius: 12px}}.chat-widget-open-button{position:fixed;border-radius:9999px;--tw-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);--tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;background-color:var(--chat-widget-primary-color);color:var(--chat-widget-button-content-color);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);z-index:9999}.chat-widget-open-button.position-bottom-right{bottom:1rem;right:1rem}.chat-widget-open-button.position-bottom-left{bottom:1rem;left:1rem}.chat-widget-open-button.position-top-right{top:1rem;right:1rem}.chat-widget-open-button.position-top-left{top:1rem;left:1rem}.chat-widget-open-button:hover{background-color:var(--chat-widget-primary-color-hover);transform:scale(1.1) rotate(5deg);box-shadow:0 8px 25px #6366f166}.chat-widget-open-icon{height:1.5rem;width:1.5rem}.chat-widget-container{overflow:hidden;--tw-shadow: 0 25px 50px -12px rgb(0 0 0 / .25);--tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);transition-property:all;transition-duration:.3s;transition-timing-function:cubic-bezier(.4,0,.2,1);width:var(--chat-widget-width);height:var(--chat-widget-height);border-radius:var(--chat-widget-border-radius);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:none!important;background:var(--chat-widget-primary-color);transform:none!important;will-change:height,width;z-index:9999;position:fixed!important}.chat-widget-container.position-bottom-right{bottom:1rem;right:1rem;top:auto!important;left:auto!important}.chat-widget-container.position-bottom-left{bottom:1rem;left:1rem;top:auto!important;right:auto!important}.chat-widget-container.position-top-right{top:1rem;right:1rem;bottom:auto!important;left:auto!important}.chat-widget-container.position-top-left{top:1rem;left:1rem;bottom:auto!important;right:auto!important}.chat-widget-container.sleek-view-mode{height:auto;min-height:60px;max-height:var(--chat-widget-height);transition:height .4s cubic-bezier(.4,0,.2,1);border-radius:0;background:transparent!important;border:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:none!important;overflow:visible;position:fixed!important;transform:none!important;will-change:height;z-index:9999;display:flex;flex-direction:column;justify-content:flex-end}.chat-widget-container.sleek-view-mode.position-bottom-right{bottom:1rem!important;right:1rem!important;top:auto!important;left:auto!important}.chat-widget-container.sleek-view-mode.position-bottom-left{bottom:1rem!important;left:1rem!important;top:auto!important;right:auto!important}.chat-widget-container.sleek-view-mode.position-top-right{top:1rem!important;right:1rem!important;bottom:auto!important;left:auto!important}.chat-widget-container.sleek-view-mode.position-top-left{top:1rem!important;left:1rem!important;bottom:auto!important;right:auto!important}@media (max-width: 768px){.chat-widget-container{width:auto;max-width:none}.chat-widget-container.position-bottom-right,.chat-widget-container.position-bottom-left{bottom:.5rem;left:.5rem;right:.5rem}.chat-widget-container.position-top-right,.chat-widget-container.position-top-left{top:.5rem;left:.5rem;right:.5rem}.chat-widget-container.sleek-view-mode{min-height:100px;max-height:85vh;display:flex;flex-direction:column;justify-content:flex-end;background:transparent!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;border:none!important;box-shadow:none!important;z-index:9999}.chat-widget-container.sleek-view-mode.position-bottom-right,.chat-widget-container.sleek-view-mode.position-bottom-left{bottom:.5rem!important;left:.5rem!important;right:.5rem!important;top:auto!important}.chat-widget-container.sleek-view-mode.position-top-right,.chat-widget-container.sleek-view-mode.position-top-left{top:.5rem!important;left:.5rem!important;right:.5rem!important;bottom:auto!important}}.chat-widget-container-closed{display:none!important;height:0!important;width:0!important;overflow:hidden!important;pointer-events:none!important}.chat-widget-inner-layout{display:flex;height:100%;flex-direction:column}.chat-widget-header-section{flex:none}.chat-widget-messages-section{position:relative;flex:1 1 0%;overflow:hidden}.chat-widget-input-section{flex:none}')),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}}();
 var __defProp = Object.defineProperty;
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
@@ -384,7 +384,7 @@ function requireReact_development() {
           ReactSharedInternals.ReactDebugCurrentFrame = ReactDebugCurrentFrame;
           ReactSharedInternals.ReactCurrentActQueue = ReactCurrentActQueue;
         }
-        function warn(format) {
+        function warn2(format) {
           {
             {
               for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -394,7 +394,7 @@ function requireReact_development() {
             }
           }
         }
-        function error(format) {
+        function error2(format) {
           {
             {
               for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
@@ -428,7 +428,7 @@ function requireReact_development() {
             if (didWarnStateUpdateForUnmountedComponent[warningKey]) {
               return;
             }
-            error("Can't call %s on a component that is not yet mounted. This is a no-op, but it might indicate a bug in your application. Instead, assign to `this.state` directly or define a `state = {};` class property with the desired state in the %s component.", callerName, componentName);
+            error2("Can't call %s on a component that is not yet mounted. This is a no-op, but it might indicate a bug in your application. Instead, assign to `this.state` directly or define a `state = {};` class property with the desired state in the %s component.", callerName, componentName);
             didWarnStateUpdateForUnmountedComponent[warningKey] = true;
           }
         }
@@ -522,7 +522,7 @@ function requireReact_development() {
           var defineDeprecationWarning = function(methodName, info2) {
             Object.defineProperty(Component.prototype, methodName, {
               get: function() {
-                warn("%s(...) is deprecated in plain JavaScript React classes. %s", info2[0], info2[1]);
+                warn2("%s(...) is deprecated in plain JavaScript React classes. %s", info2[0], info2[1]);
                 return void 0;
               }
             });
@@ -582,7 +582,7 @@ function requireReact_development() {
         function checkKeyStringCoercion(value) {
           {
             if (willCoercionThrow(value)) {
-              error("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", typeName(value));
+              error2("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", typeName(value));
               return testStringCoercion(value);
             }
           }
@@ -604,7 +604,7 @@ function requireReact_development() {
           }
           {
             if (typeof type.tag === "number") {
-              error("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue.");
+              error2("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue.");
             }
           }
           if (typeof type === "function") {
@@ -695,7 +695,7 @@ function requireReact_development() {
             {
               if (!specialPropKeyWarningShown) {
                 specialPropKeyWarningShown = true;
-                error("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", displayName);
+                error2("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", displayName);
               }
             }
           };
@@ -710,7 +710,7 @@ function requireReact_development() {
             {
               if (!specialPropRefWarningShown) {
                 specialPropRefWarningShown = true;
-                error("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", displayName);
+                error2("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", displayName);
               }
             }
           };
@@ -725,7 +725,7 @@ function requireReact_development() {
             if (typeof config.ref === "string" && ReactCurrentOwner.current && config.__self && ReactCurrentOwner.current.stateNode !== config.__self) {
               var componentName = getComponentNameFromType(ReactCurrentOwner.current.type);
               if (!didWarnAboutStringRefs[componentName]) {
-                error('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', componentName, config.ref);
+                error2('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', componentName, config.ref);
                 didWarnAboutStringRefs[componentName] = true;
               }
             }
@@ -990,7 +990,7 @@ function requireReact_development() {
               {
                 if (iteratorFn === iterableChildren.entries) {
                   if (!didWarnAboutMaps) {
-                    warn("Using Maps as children is not supported. Use an array of keyed ReactElements instead.");
+                    warn2("Using Maps as children is not supported. Use an array of keyed ReactElements instead.");
                   }
                   didWarnAboutMaps = true;
                 }
@@ -1081,7 +1081,7 @@ function requireReact_development() {
                 get: function() {
                   if (!hasWarnedAboutUsingConsumerProvider) {
                     hasWarnedAboutUsingConsumerProvider = true;
-                    error("Rendering <Context.Consumer.Provider> is not supported and will be removed in a future major release. Did you mean to render <Context.Provider> instead?");
+                    error2("Rendering <Context.Consumer.Provider> is not supported and will be removed in a future major release. Did you mean to render <Context.Provider> instead?");
                   }
                   return context.Provider;
                 },
@@ -1117,7 +1117,7 @@ function requireReact_development() {
                 get: function() {
                   if (!hasWarnedAboutUsingNestedContextConsumers) {
                     hasWarnedAboutUsingNestedContextConsumers = true;
-                    error("Rendering <Context.Consumer.Consumer> is not supported and will be removed in a future major release. Did you mean to render <Context.Consumer> instead?");
+                    error2("Rendering <Context.Consumer.Consumer> is not supported and will be removed in a future major release. Did you mean to render <Context.Consumer> instead?");
                   }
                   return context.Consumer;
                 }
@@ -1128,7 +1128,7 @@ function requireReact_development() {
                 },
                 set: function(displayName) {
                   if (!hasWarnedAboutDisplayNameOnConsumer) {
-                    warn("Setting `displayName` on Context.Consumer has no effect. You should set it directly on the context with Context.displayName = '%s'.", displayName);
+                    warn2("Setting `displayName` on Context.Consumer has no effect. You should set it directly on the context with Context.displayName = '%s'.", displayName);
                     hasWarnedAboutDisplayNameOnConsumer = true;
                   }
                 }
@@ -1156,11 +1156,11 @@ function requireReact_development() {
                 resolved._status = Resolved;
                 resolved._result = moduleObject2;
               }
-            }, function(error2) {
+            }, function(error22) {
               if (payload._status === Pending || payload._status === Uninitialized) {
                 var rejected = payload;
                 rejected._status = Rejected;
-                rejected._result = error2;
+                rejected._result = error22;
               }
             });
             if (payload._status === Uninitialized) {
@@ -1173,12 +1173,12 @@ function requireReact_development() {
             var moduleObject = payload._result;
             {
               if (moduleObject === void 0) {
-                error("lazy: Expected the result of a dynamic import() call. Instead received: %s\n\nYour code should look like: \n  const MyComponent = lazy(() => import('./MyComponent'))\n\nDid you accidentally put curly braces around the import?", moduleObject);
+                error2("lazy: Expected the result of a dynamic import() call. Instead received: %s\n\nYour code should look like: \n  const MyComponent = lazy(() => import('./MyComponent'))\n\nDid you accidentally put curly braces around the import?", moduleObject);
               }
             }
             {
               if (!("default" in moduleObject)) {
-                error("lazy: Expected the result of a dynamic import() call. Instead received: %s\n\nYour code should look like: \n  const MyComponent = lazy(() => import('./MyComponent'))", moduleObject);
+                error2("lazy: Expected the result of a dynamic import() call. Instead received: %s\n\nYour code should look like: \n  const MyComponent = lazy(() => import('./MyComponent'))", moduleObject);
               }
             }
             return moduleObject.default;
@@ -1207,7 +1207,7 @@ function requireReact_development() {
                   return defaultProps;
                 },
                 set: function(newDefaultProps) {
-                  error("React.lazy(...): It is not supported to assign `defaultProps` to a lazy component import. Either specify them where the component is defined, or create a wrapping component around it.");
+                  error2("React.lazy(...): It is not supported to assign `defaultProps` to a lazy component import. Either specify them where the component is defined, or create a wrapping component around it.");
                   defaultProps = newDefaultProps;
                   Object.defineProperty(lazyType, "defaultProps", {
                     enumerable: true
@@ -1220,7 +1220,7 @@ function requireReact_development() {
                   return propTypes;
                 },
                 set: function(newPropTypes) {
-                  error("React.lazy(...): It is not supported to assign `propTypes` to a lazy component import. Either specify them where the component is defined, or create a wrapping component around it.");
+                  error2("React.lazy(...): It is not supported to assign `propTypes` to a lazy component import. Either specify them where the component is defined, or create a wrapping component around it.");
                   propTypes = newPropTypes;
                   Object.defineProperty(lazyType, "propTypes", {
                     enumerable: true
@@ -1234,17 +1234,17 @@ function requireReact_development() {
         function forwardRef(render) {
           {
             if (render != null && render.$$typeof === REACT_MEMO_TYPE) {
-              error("forwardRef requires a render function but received a `memo` component. Instead of forwardRef(memo(...)), use memo(forwardRef(...)).");
+              error2("forwardRef requires a render function but received a `memo` component. Instead of forwardRef(memo(...)), use memo(forwardRef(...)).");
             } else if (typeof render !== "function") {
-              error("forwardRef requires a render function but was given %s.", render === null ? "null" : typeof render);
+              error2("forwardRef requires a render function but was given %s.", render === null ? "null" : typeof render);
             } else {
               if (render.length !== 0 && render.length !== 2) {
-                error("forwardRef render functions accept exactly two parameters: props and ref. %s", render.length === 1 ? "Did you forget to use the ref parameter?" : "Any additional parameter will be undefined.");
+                error2("forwardRef render functions accept exactly two parameters: props and ref. %s", render.length === 1 ? "Did you forget to use the ref parameter?" : "Any additional parameter will be undefined.");
               }
             }
             if (render != null) {
               if (render.defaultProps != null || render.propTypes != null) {
-                error("forwardRef render functions do not support propTypes or defaultProps. Did you accidentally pass a React component?");
+                error2("forwardRef render functions do not support propTypes or defaultProps. Did you accidentally pass a React component?");
               }
             }
           }
@@ -1295,7 +1295,7 @@ function requireReact_development() {
         function memo2(type, compare) {
           {
             if (!isValidElementType(type)) {
-              error("memo: The first argument must be a component. Instead received: %s", type === null ? "null" : typeof type);
+              error2("memo: The first argument must be a component. Instead received: %s", type === null ? "null" : typeof type);
             }
           }
           var elementType = {
@@ -1325,7 +1325,7 @@ function requireReact_development() {
           var dispatcher = ReactCurrentDispatcher.current;
           {
             if (dispatcher === null) {
-              error("Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.");
+              error2("Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.");
             }
           }
           return dispatcher;
@@ -1336,9 +1336,9 @@ function requireReact_development() {
             if (Context._context !== void 0) {
               var realContext = Context._context;
               if (realContext.Consumer === Context) {
-                error("Calling useContext(Context.Consumer) is not supported, may cause bugs, and will be removed in a future major release. Did you mean to call useContext(Context) instead?");
+                error2("Calling useContext(Context.Consumer) is not supported, may cause bugs, and will be removed in a future major release. Did you mean to call useContext(Context) instead?");
               } else if (realContext.Provider === Context) {
-                error("Calling useContext(Context.Provider) is not supported. Did you mean to call useContext(Context) instead?");
+                error2("Calling useContext(Context.Provider) is not supported. Did you mean to call useContext(Context) instead?");
               }
             }
           }
@@ -1476,7 +1476,7 @@ function requireReact_development() {
               });
             }
             if (disabledDepth < 0) {
-              error("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
+              error2("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
             }
           }
         }
@@ -1681,13 +1681,13 @@ function requireReact_development() {
                 }
                 if (error$1 && !(error$1 instanceof Error)) {
                   setCurrentlyValidatingElement(element2);
-                  error("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", componentName || "React class", location2, typeSpecName, typeof error$1);
+                  error2("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", componentName || "React class", location2, typeSpecName, typeof error$1);
                   setCurrentlyValidatingElement(null);
                 }
                 if (error$1 instanceof Error && !(error$1.message in loggedTypeFailures)) {
                   loggedTypeFailures[error$1.message] = true;
                   setCurrentlyValidatingElement(element2);
-                  error("Failed %s type: %s", location2, error$1.message);
+                  error2("Failed %s type: %s", location2, error$1.message);
                   setCurrentlyValidatingElement(null);
                 }
               }
@@ -1759,7 +1759,7 @@ function requireReact_development() {
           }
           {
             setCurrentlyValidatingElement$1(element2);
-            error('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', currentComponentErrorInfo, childOwner);
+            error2('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', currentComponentErrorInfo, childOwner);
             setCurrentlyValidatingElement$1(null);
           }
         }
@@ -1815,10 +1815,10 @@ function requireReact_development() {
             } else if (type.PropTypes !== void 0 && !propTypesMisspellWarningShown) {
               propTypesMisspellWarningShown = true;
               var _name = getComponentNameFromType(type);
-              error("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", _name || "Unknown");
+              error2("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", _name || "Unknown");
             }
             if (typeof type.getDefaultProps === "function" && !type.getDefaultProps.isReactClassApproved) {
-              error("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
+              error2("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
             }
           }
         }
@@ -1829,14 +1829,14 @@ function requireReact_development() {
               var key = keys2[i2];
               if (key !== "children" && key !== "key") {
                 setCurrentlyValidatingElement$1(fragment);
-                error("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", key);
+                error2("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", key);
                 setCurrentlyValidatingElement$1(null);
                 break;
               }
             }
             if (fragment.ref !== null) {
               setCurrentlyValidatingElement$1(fragment);
-              error("Invalid attribute `ref` supplied to `React.Fragment`.");
+              error2("Invalid attribute `ref` supplied to `React.Fragment`.");
               setCurrentlyValidatingElement$1(null);
             }
           }
@@ -1866,7 +1866,7 @@ function requireReact_development() {
               typeString = typeof type;
             }
             {
-              error("React.createElement: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", typeString, info2);
+              error2("React.createElement: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", typeString, info2);
             }
           }
           var element2 = createElement2.apply(this, arguments);
@@ -1892,12 +1892,12 @@ function requireReact_development() {
           {
             if (!didWarnAboutDeprecatedCreateFactory) {
               didWarnAboutDeprecatedCreateFactory = true;
-              warn("React.createFactory() is deprecated and will be removed in a future major release. Consider using JSX or use React.createElement() directly instead.");
+              warn2("React.createFactory() is deprecated and will be removed in a future major release. Consider using JSX or use React.createElement() directly instead.");
             }
             Object.defineProperty(validatedFactory, "type", {
               enumerable: false,
               get: function() {
-                warn("Factory.type is deprecated. Access the class directly before passing it to createFactory.");
+                warn2("Factory.type is deprecated. Access the class directly before passing it to createFactory.");
                 Object.defineProperty(this, "type", {
                   value: type
                 });
@@ -1930,7 +1930,7 @@ function requireReact_development() {
               if (prevTransition === null && currentTransition._updatedFibers) {
                 var updatedFibersCount = currentTransition._updatedFibers.size;
                 if (updatedFibersCount > 10) {
-                  warn("Detected a large number of updates inside startTransition. If this is due to a subscription please re-write it to use React provided hooks. Otherwise concurrent mode guarantees are off the table.");
+                  warn2("Detected a large number of updates inside startTransition. If this is due to a subscription please re-write it to use React provided hooks. Otherwise concurrent mode guarantees are off the table.");
                 }
                 currentTransition._updatedFibers.clear();
               }
@@ -1951,7 +1951,7 @@ function requireReact_development() {
                   if (didWarnAboutMessageChannel === false) {
                     didWarnAboutMessageChannel = true;
                     if (typeof MessageChannel === "undefined") {
-                      error("This browser does not have a MessageChannel implementation, so enqueuing tasks via await act(async () => ...) will fail. Please file an issue at https://github.com/facebook/react/issues if you encounter this warning.");
+                      error2("This browser does not have a MessageChannel implementation, so enqueuing tasks via await act(async () => ...) will fail. Please file an issue at https://github.com/facebook/react/issues if you encounter this warning.");
                     }
                   }
                 }
@@ -1984,9 +1984,9 @@ function requireReact_development() {
                   flushActQueue(queue);
                 }
               }
-            } catch (error2) {
+            } catch (error22) {
               popActScope(prevActScopeDepth);
-              throw error2;
+              throw error22;
             } finally {
               ReactCurrentActQueue.isBatchingLegacy = prevIsBatchingLegacy;
             }
@@ -2003,9 +2003,9 @@ function requireReact_development() {
                     } else {
                       resolve(returnValue2);
                     }
-                  }, function(error2) {
+                  }, function(error22) {
                     popActScope(prevActScopeDepth);
-                    reject(error2);
+                    reject(error22);
                   });
                 }
               };
@@ -2015,7 +2015,7 @@ function requireReact_development() {
                   }).then(function() {
                     if (!wasAwaited) {
                       didWarnNoAwaitAct = true;
-                      error("You called act(async () => ...) without await. This could lead to unexpected testing behaviour, interleaving multiple act calls and mixing their scopes. You should - await act(async () => ...);");
+                      error2("You called act(async () => ...) without await. This could lead to unexpected testing behaviour, interleaving multiple act calls and mixing their scopes. You should - await act(async () => ...);");
                     }
                   });
                 }
@@ -2055,7 +2055,7 @@ function requireReact_development() {
         function popActScope(prevActScopeDepth) {
           {
             if (prevActScopeDepth !== actScopeDepth - 1) {
-              error("You seem to have overlapping act() calls, this is not supported. Be sure to await previous act() calls before making a new one. ");
+              error2("You seem to have overlapping act() calls, this is not supported. Be sure to await previous act() calls before making a new one. ");
             }
             actScopeDepth = prevActScopeDepth;
           }
@@ -2074,8 +2074,8 @@ function requireReact_development() {
                     recursivelyFlushAsyncActWork(returnValue, resolve, reject);
                   }
                 });
-              } catch (error2) {
-                reject(error2);
+              } catch (error22) {
+                reject(error22);
               }
             } else {
               resolve(returnValue);
@@ -2096,9 +2096,9 @@ function requireReact_development() {
                   } while (callback !== null);
                 }
                 queue.length = 0;
-              } catch (error2) {
+              } catch (error22) {
                 queue = queue.slice(i2 + 1);
-                throw error2;
+                throw error22;
               } finally {
                 isFlushing = false;
               }
@@ -2243,7 +2243,7 @@ function requireReactJsxRuntime_development() {
         return null;
       }
       var ReactSharedInternals = React2.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
-      function error(format) {
+      function error2(format) {
         {
           {
             for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
@@ -2312,7 +2312,7 @@ function requireReactJsxRuntime_development() {
         }
         {
           if (typeof type.tag === "number") {
-            error("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue.");
+            error2("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue.");
           }
         }
         if (typeof type === "function") {
@@ -2440,7 +2440,7 @@ function requireReactJsxRuntime_development() {
             });
           }
           if (disabledDepth < 0) {
-            error("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
+            error2("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
           }
         }
       }
@@ -2646,13 +2646,13 @@ function requireReactJsxRuntime_development() {
               }
               if (error$1 && !(error$1 instanceof Error)) {
                 setCurrentlyValidatingElement(element2);
-                error("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", componentName || "React class", location2, typeSpecName, typeof error$1);
+                error2("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", componentName || "React class", location2, typeSpecName, typeof error$1);
                 setCurrentlyValidatingElement(null);
               }
               if (error$1 instanceof Error && !(error$1.message in loggedTypeFailures)) {
                 loggedTypeFailures[error$1.message] = true;
                 setCurrentlyValidatingElement(element2);
-                error("Failed %s type: %s", location2, error$1.message);
+                error2("Failed %s type: %s", location2, error$1.message);
                 setCurrentlyValidatingElement(null);
               }
             }
@@ -2686,7 +2686,7 @@ function requireReactJsxRuntime_development() {
       function checkKeyStringCoercion(value) {
         {
           if (willCoercionThrow(value)) {
-            error("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", typeName(value));
+            error2("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", typeName(value));
             return testStringCoercion(value);
           }
         }
@@ -2732,7 +2732,7 @@ function requireReactJsxRuntime_development() {
           var warnAboutAccessingKey = function() {
             if (!specialPropKeyWarningShown) {
               specialPropKeyWarningShown = true;
-              error("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", displayName);
+              error2("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", displayName);
             }
           };
           warnAboutAccessingKey.isReactWarning = true;
@@ -2747,7 +2747,7 @@ function requireReactJsxRuntime_development() {
           var warnAboutAccessingRef = function() {
             if (!specialPropRefWarningShown) {
               specialPropRefWarningShown = true;
-              error("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", displayName);
+              error2("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", displayName);
             }
           };
           warnAboutAccessingRef.isReactWarning = true;
@@ -2910,7 +2910,7 @@ function requireReactJsxRuntime_development() {
             childOwner = " It was passed a child from " + getComponentNameFromType(element2._owner.type) + ".";
           }
           setCurrentlyValidatingElement$1(element2);
-          error('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', currentComponentErrorInfo, childOwner);
+          error2('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', currentComponentErrorInfo, childOwner);
           setCurrentlyValidatingElement$1(null);
         }
       }
@@ -2968,10 +2968,10 @@ function requireReactJsxRuntime_development() {
           } else if (type.PropTypes !== void 0 && !propTypesMisspellWarningShown) {
             propTypesMisspellWarningShown = true;
             var _name = getComponentNameFromType(type);
-            error("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", _name || "Unknown");
+            error2("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", _name || "Unknown");
           }
           if (typeof type.getDefaultProps === "function" && !type.getDefaultProps.isReactClassApproved) {
-            error("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
+            error2("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
           }
         }
       }
@@ -2982,14 +2982,14 @@ function requireReactJsxRuntime_development() {
             var key = keys2[i2];
             if (key !== "children" && key !== "key") {
               setCurrentlyValidatingElement$1(fragment);
-              error("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", key);
+              error2("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", key);
               setCurrentlyValidatingElement$1(null);
               break;
             }
           }
           if (fragment.ref !== null) {
             setCurrentlyValidatingElement$1(fragment);
-            error("Invalid attribute `ref` supplied to `React.Fragment`.");
+            error2("Invalid attribute `ref` supplied to `React.Fragment`.");
             setCurrentlyValidatingElement$1(null);
           }
         }
@@ -3020,7 +3020,7 @@ function requireReactJsxRuntime_development() {
             } else {
               typeString = typeof type;
             }
-            error("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", typeString, info2);
+            error2("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", typeString, info2);
           }
           var element2 = jsxDEV(type, props, key, source, self2);
           if (element2 == null) {
@@ -3038,7 +3038,7 @@ function requireReactJsxRuntime_development() {
                     Object.freeze(children);
                   }
                 } else {
-                  error("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");
+                  error2("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");
                 }
               } else {
                 validateChildKeys(children, type);
@@ -3054,7 +3054,7 @@ function requireReactJsxRuntime_development() {
               var beforeExample = keys2.length > 0 ? "{key: someKey, " + keys2.join(": ..., ") + ": ...}" : "{key: someKey}";
               if (!didWarnAboutKeySpread[componentName + beforeExample]) {
                 var afterExample = keys2.length > 0 ? "{" + keys2.join(": ..., ") + ": ...}" : "{}";
-                error('A props object containing a "key" prop is being spread into JSX:\n  let props = %s;\n  <%s {...props} />\nReact keys must be passed directly to JSX without using spread:\n  let props = %s;\n  <%s key={someKey} {...props} />', beforeExample, componentName, afterExample, componentName);
+                error2('A props object containing a "key" prop is being spread into JSX:\n  let props = %s;\n  <%s {...props} />\nReact keys must be passed directly to JSX without using spread:\n  let props = %s;\n  <%s key={someKey} {...props} />', beforeExample, componentName, afterExample, componentName);
                 didWarnAboutKeySpread[componentName + beforeExample] = true;
               }
             }
@@ -10254,7 +10254,7 @@ function requireReactDom_development() {
           suppressWarning = newSuppressWarning;
         }
       }
-      function warn(format) {
+      function warn2(format) {
         {
           if (!suppressWarning) {
             for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -10264,7 +10264,7 @@ function requireReactDom_development() {
           }
         }
       }
-      function error(format) {
+      function error2(format) {
         {
           if (!suppressWarning) {
             for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
@@ -10333,7 +10333,7 @@ function requireReactDom_development() {
       function registerDirectEvent(registrationName, dependencies) {
         {
           if (registrationNameDependencies[registrationName]) {
-            error("EventRegistry: More than one plugin attempted to publish the same registration name, `%s`.", registrationName);
+            error2("EventRegistry: More than one plugin attempted to publish the same registration name, `%s`.", registrationName);
           }
         }
         registrationNameDependencies[registrationName] = dependencies;
@@ -10373,7 +10373,7 @@ function requireReactDom_development() {
       function checkAttributeStringCoercion(value, attributeName) {
         {
           if (willCoercionThrow(value)) {
-            error("The provided `%s` attribute is an unsupported type %s. This value must be coerced to a string before before using it here.", attributeName, typeName(value));
+            error2("The provided `%s` attribute is an unsupported type %s. This value must be coerced to a string before before using it here.", attributeName, typeName(value));
             return testStringCoercion(value);
           }
         }
@@ -10381,7 +10381,7 @@ function requireReactDom_development() {
       function checkKeyStringCoercion(value) {
         {
           if (willCoercionThrow(value)) {
-            error("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", typeName(value));
+            error2("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", typeName(value));
             return testStringCoercion(value);
           }
         }
@@ -10389,7 +10389,7 @@ function requireReactDom_development() {
       function checkPropStringCoercion(value, propName) {
         {
           if (willCoercionThrow(value)) {
-            error("The provided `%s` prop is an unsupported type %s. This value must be coerced to a string before before using it here.", propName, typeName(value));
+            error2("The provided `%s` prop is an unsupported type %s. This value must be coerced to a string before before using it here.", propName, typeName(value));
             return testStringCoercion(value);
           }
         }
@@ -10397,7 +10397,7 @@ function requireReactDom_development() {
       function checkCSSPropertyStringCoercion(value, propName) {
         {
           if (willCoercionThrow(value)) {
-            error("The provided `%s` CSS property is an unsupported type %s. This value must be coerced to a string before before using it here.", propName, typeName(value));
+            error2("The provided `%s` CSS property is an unsupported type %s. This value must be coerced to a string before before using it here.", propName, typeName(value));
             return testStringCoercion(value);
           }
         }
@@ -10405,7 +10405,7 @@ function requireReactDom_development() {
       function checkHtmlStringCoercion(value) {
         {
           if (willCoercionThrow(value)) {
-            error("The provided HTML markup uses a value of unsupported type %s. This value must be coerced to a string before before using it here.", typeName(value));
+            error2("The provided HTML markup uses a value of unsupported type %s. This value must be coerced to a string before before using it here.", typeName(value));
             return testStringCoercion(value);
           }
         }
@@ -10413,7 +10413,7 @@ function requireReactDom_development() {
       function checkFormFieldValueStringCoercion(value) {
         {
           if (willCoercionThrow(value)) {
-            error("Form field values (value, checked, defaultValue, or defaultChecked props) must be strings, not %s. This value must be coerced to a string before before using it here.", typeName(value));
+            error2("Form field values (value, checked, defaultValue, or defaultChecked props) must be strings, not %s. This value must be coerced to a string before before using it here.", typeName(value));
             return testStringCoercion(value);
           }
         }
@@ -10443,7 +10443,7 @@ function requireReactDom_development() {
         }
         illegalAttributeNameCache[attributeName] = true;
         {
-          error("Invalid attribute name: `%s`", attributeName);
+          error2("Invalid attribute name: `%s`", attributeName);
         }
         return false;
       }
@@ -10910,7 +10910,7 @@ function requireReactDom_development() {
         {
           if (!didWarn && isJavaScriptProtocol.test(url)) {
             didWarn = true;
-            error("A future version of React will block javascript: URLs as a security precaution. Use event handlers instead if you can. If you need to generate unsafe HTML try using dangerouslySetInnerHTML instead. React was passed %s.", JSON.stringify(url));
+            error2("A future version of React will block javascript: URLs as a security precaution. Use event handlers instead if you can. If you need to generate unsafe HTML try using dangerouslySetInnerHTML instead. React was passed %s.", JSON.stringify(url));
           }
         }
       }
@@ -11143,7 +11143,7 @@ function requireReactDom_development() {
             });
           }
           if (disabledDepth < 0) {
-            error("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
+            error2("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
           }
         }
       }
@@ -11376,7 +11376,7 @@ function requireReactDom_development() {
         }
         {
           if (typeof type.tag === "number") {
-            error("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue.");
+            error2("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue.");
           }
         }
         if (typeof type === "function") {
@@ -11575,10 +11575,10 @@ function requireReactDom_development() {
       function checkControlledValueProps(tagName, props) {
         {
           if (!(hasReadOnlyValue[props.type] || props.onChange || props.onInput || props.readOnly || props.disabled || props.value == null)) {
-            error("You provided a `value` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultValue`. Otherwise, set either `onChange` or `readOnly`.");
+            error2("You provided a `value` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultValue`. Otherwise, set either `onChange` or `readOnly`.");
           }
           if (!(props.onChange || props.readOnly || props.disabled || props.checked == null)) {
-            error("You provided a `checked` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultChecked`. Otherwise, set either `onChange` or `readOnly`.");
+            error2("You provided a `checked` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultChecked`. Otherwise, set either `onChange` or `readOnly`.");
           }
         }
       }
@@ -11705,11 +11705,11 @@ function requireReactDom_development() {
         {
           checkControlledValueProps("input", props);
           if (props.checked !== void 0 && props.defaultChecked !== void 0 && !didWarnCheckedDefaultChecked) {
-            error("%s contains an input of type %s with both checked and defaultChecked props. Input elements must be either controlled or uncontrolled (specify either the checked prop, or the defaultChecked prop, but not both). Decide between using a controlled or uncontrolled input element and remove one of these props. More info: https://reactjs.org/link/controlled-components", getCurrentFiberOwnerNameInDevOrNull() || "A component", props.type);
+            error2("%s contains an input of type %s with both checked and defaultChecked props. Input elements must be either controlled or uncontrolled (specify either the checked prop, or the defaultChecked prop, but not both). Decide between using a controlled or uncontrolled input element and remove one of these props. More info: https://reactjs.org/link/controlled-components", getCurrentFiberOwnerNameInDevOrNull() || "A component", props.type);
             didWarnCheckedDefaultChecked = true;
           }
           if (props.value !== void 0 && props.defaultValue !== void 0 && !didWarnValueDefaultValue) {
-            error("%s contains an input of type %s with both value and defaultValue props. Input elements must be either controlled or uncontrolled (specify either the value prop, or the defaultValue prop, but not both). Decide between using a controlled or uncontrolled input element and remove one of these props. More info: https://reactjs.org/link/controlled-components", getCurrentFiberOwnerNameInDevOrNull() || "A component", props.type);
+            error2("%s contains an input of type %s with both value and defaultValue props. Input elements must be either controlled or uncontrolled (specify either the value prop, or the defaultValue prop, but not both). Decide between using a controlled or uncontrolled input element and remove one of these props. More info: https://reactjs.org/link/controlled-components", getCurrentFiberOwnerNameInDevOrNull() || "A component", props.type);
             didWarnValueDefaultValue = true;
           }
         }
@@ -11733,11 +11733,11 @@ function requireReactDom_development() {
         {
           var controlled = isControlled(props);
           if (!node2._wrapperState.controlled && controlled && !didWarnUncontrolledToControlled) {
-            error("A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://reactjs.org/link/controlled-components");
+            error2("A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://reactjs.org/link/controlled-components");
             didWarnUncontrolledToControlled = true;
           }
           if (node2._wrapperState.controlled && !controlled && !didWarnControlledToUncontrolled) {
-            error("A component is changing a controlled input to be uncontrolled. This is likely caused by the value changing from a defined to undefined, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://reactjs.org/link/controlled-components");
+            error2("A component is changing a controlled input to be uncontrolled. This is likely caused by the value changing from a defined to undefined, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://reactjs.org/link/controlled-components");
             didWarnControlledToUncontrolled = true;
           }
         }
@@ -11861,18 +11861,18 @@ function requireReactDom_development() {
                 }
                 if (!didWarnInvalidChild) {
                   didWarnInvalidChild = true;
-                  error("Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>.");
+                  error2("Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>.");
                 }
               });
             } else if (props.dangerouslySetInnerHTML != null) {
               if (!didWarnInvalidInnerHTML) {
                 didWarnInvalidInnerHTML = true;
-                error("Pass a `value` prop if you set dangerouslyInnerHTML so React knows which value should be selected.");
+                error2("Pass a `value` prop if you set dangerouslyInnerHTML so React knows which value should be selected.");
               }
             }
           }
           if (props.selected != null && !didWarnSelectedSetOnOption) {
-            error("Use the `defaultValue` or `value` props on <select> instead of setting `selected` on <option>.");
+            error2("Use the `defaultValue` or `value` props on <select> instead of setting `selected` on <option>.");
             didWarnSelectedSetOnOption = true;
           }
         }
@@ -11908,9 +11908,9 @@ function requireReactDom_development() {
             }
             var propNameIsArray = isArray(props[propName]);
             if (props.multiple && !propNameIsArray) {
-              error("The `%s` prop supplied to <select> must be an array if `multiple` is true.%s", propName, getDeclarationErrorAddendum());
+              error2("The `%s` prop supplied to <select> must be an array if `multiple` is true.%s", propName, getDeclarationErrorAddendum());
             } else if (!props.multiple && propNameIsArray) {
-              error("The `%s` prop supplied to <select> must be a scalar value if `multiple` is false.%s", propName, getDeclarationErrorAddendum());
+              error2("The `%s` prop supplied to <select> must be a scalar value if `multiple` is false.%s", propName, getDeclarationErrorAddendum());
             }
           }
         }
@@ -11967,7 +11967,7 @@ function requireReactDom_development() {
         };
         {
           if (props.value !== void 0 && props.defaultValue !== void 0 && !didWarnValueDefaultValue$1) {
-            error("Select elements must be either controlled or uncontrolled (specify either the value prop, or the defaultValue prop, but not both). Decide between using a controlled or uncontrolled select element and remove one of these props. More info: https://reactjs.org/link/controlled-components");
+            error2("Select elements must be either controlled or uncontrolled (specify either the value prop, or the defaultValue prop, but not both). Decide between using a controlled or uncontrolled select element and remove one of these props. More info: https://reactjs.org/link/controlled-components");
             didWarnValueDefaultValue$1 = true;
           }
         }
@@ -12022,7 +12022,7 @@ function requireReactDom_development() {
         {
           checkControlledValueProps("textarea", props);
           if (props.value !== void 0 && props.defaultValue !== void 0 && !didWarnValDefaultVal) {
-            error("%s contains a textarea with both value and defaultValue props. Textarea elements must be either controlled or uncontrolled (specify either the value prop, or the defaultValue prop, but not both). Decide between using a controlled or uncontrolled textarea and remove one of these props. More info: https://reactjs.org/link/controlled-components", getCurrentFiberOwnerNameInDevOrNull() || "A component");
+            error2("%s contains a textarea with both value and defaultValue props. Textarea elements must be either controlled or uncontrolled (specify either the value prop, or the defaultValue prop, but not both). Decide between using a controlled or uncontrolled textarea and remove one of these props. More info: https://reactjs.org/link/controlled-components", getCurrentFiberOwnerNameInDevOrNull() || "A component");
             didWarnValDefaultVal = true;
           }
         }
@@ -12031,7 +12031,7 @@ function requireReactDom_development() {
           var children = props.children, defaultValue = props.defaultValue;
           if (children != null) {
             {
-              error("Use the `defaultValue` or `value` props instead of setting children on <textarea>.");
+              error2("Use the `defaultValue` or `value` props instead of setting children on <textarea>.");
             }
             {
               if (defaultValue != null) {
@@ -12293,7 +12293,7 @@ function requireReactDom_development() {
             return;
           }
           warnedStyleNames[name2] = true;
-          error(
+          error2(
             "Unsupported style property %s. Did you mean %s?",
             name2,
             // As Andi Smith suggests
@@ -12307,28 +12307,28 @@ function requireReactDom_development() {
             return;
           }
           warnedStyleNames[name2] = true;
-          error("Unsupported vendor-prefixed style property %s. Did you mean %s?", name2, name2.charAt(0).toUpperCase() + name2.slice(1));
+          error2("Unsupported vendor-prefixed style property %s. Did you mean %s?", name2, name2.charAt(0).toUpperCase() + name2.slice(1));
         };
         var warnStyleValueWithSemicolon = function(name2, value) {
           if (warnedStyleValues.hasOwnProperty(value) && warnedStyleValues[value]) {
             return;
           }
           warnedStyleValues[value] = true;
-          error(`Style property values shouldn't contain a semicolon. Try "%s: %s" instead.`, name2, value.replace(badStyleValueWithSemicolonPattern, ""));
+          error2(`Style property values shouldn't contain a semicolon. Try "%s: %s" instead.`, name2, value.replace(badStyleValueWithSemicolonPattern, ""));
         };
         var warnStyleValueIsNaN = function(name2, value) {
           if (warnedForNaNValue) {
             return;
           }
           warnedForNaNValue = true;
-          error("`NaN` is an invalid value for the `%s` css style property.", name2);
+          error2("`NaN` is an invalid value for the `%s` css style property.", name2);
         };
         var warnStyleValueIsInfinity = function(name2, value) {
           if (warnedForInfinityValue) {
             return;
           }
           warnedForInfinityValue = true;
-          error("`Infinity` is an invalid value for the `%s` css style property.", name2);
+          error2("`Infinity` is an invalid value for the `%s` css style property.", name2);
         };
         warnValidStyle = function(name2, value) {
           if (name2.indexOf("-") > -1) {
@@ -12420,7 +12420,7 @@ function requireReactDom_development() {
                 continue;
               }
               warnedAbout[warningKey] = true;
-              error("%s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values.", isValueEmpty(styleUpdates[originalKey]) ? "Removing" : "Updating", originalKey, correctOriginalKey);
+              error2("%s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values.", isValueEmpty(styleUpdates[originalKey]) ? "Removing" : "Updating", originalKey, correctOriginalKey);
             }
           }
         }
@@ -12466,7 +12466,7 @@ function requireReactDom_development() {
         }
         {
           if (!props.suppressContentEditableWarning && props.contentEditable && props.children != null) {
-            error("A component is `contentEditable` and contains `children` managed by React. It is now your responsibility to guarantee that none of those nodes are unexpectedly modified or duplicated. This is probably not intentional.");
+            error2("A component is `contentEditable` and contains `children` managed by React. It is now your responsibility to guarantee that none of those nodes are unexpectedly modified or duplicated. This is probably not intentional.");
           }
         }
         if (props.style != null && typeof props.style !== "object") {
@@ -13055,12 +13055,12 @@ function requireReactDom_development() {
             var ariaName = "aria-" + name2.slice(4).toLowerCase();
             var correctName = ariaProperties.hasOwnProperty(ariaName) ? ariaName : null;
             if (correctName == null) {
-              error("Invalid ARIA attribute `%s`. ARIA attributes follow the pattern aria-* and must be lowercase.", name2);
+              error2("Invalid ARIA attribute `%s`. ARIA attributes follow the pattern aria-* and must be lowercase.", name2);
               warnedProperties[name2] = true;
               return true;
             }
             if (name2 !== correctName) {
-              error("Invalid ARIA attribute `%s`. Did you mean `%s`?", name2, correctName);
+              error2("Invalid ARIA attribute `%s`. Did you mean `%s`?", name2, correctName);
               warnedProperties[name2] = true;
               return true;
             }
@@ -13073,7 +13073,7 @@ function requireReactDom_development() {
               return false;
             }
             if (name2 !== standardName) {
-              error("Unknown ARIA attribute `%s`. Did you mean `%s`?", name2, standardName);
+              error2("Unknown ARIA attribute `%s`. Did you mean `%s`?", name2, standardName);
               warnedProperties[name2] = true;
               return true;
             }
@@ -13094,9 +13094,9 @@ function requireReactDom_development() {
             return "`" + prop + "`";
           }).join(", ");
           if (invalidProps.length === 1) {
-            error("Invalid aria prop %s on <%s> tag. For details, see https://reactjs.org/link/invalid-aria-props", unknownPropString, type);
+            error2("Invalid aria prop %s on <%s> tag. For details, see https://reactjs.org/link/invalid-aria-props", unknownPropString, type);
           } else if (invalidProps.length > 1) {
-            error("Invalid aria props %s on <%s> tag. For details, see https://reactjs.org/link/invalid-aria-props", unknownPropString, type);
+            error2("Invalid aria props %s on <%s> tag. For details, see https://reactjs.org/link/invalid-aria-props", unknownPropString, type);
           }
         }
       }
@@ -13115,9 +13115,9 @@ function requireReactDom_development() {
           if (props != null && props.value === null && !didWarnValueNull) {
             didWarnValueNull = true;
             if (type === "select" && props.multiple) {
-              error("`value` prop on `%s` should not be null. Consider using an empty array when `multiple` is set to `true` to clear the component or `undefined` for uncontrolled components.", type);
+              error2("`value` prop on `%s` should not be null. Consider using an empty array when `multiple` is set to `true` to clear the component or `undefined` for uncontrolled components.", type);
             } else {
-              error("`value` prop on `%s` should not be null. Consider using an empty string to clear the component or `undefined` for uncontrolled components.", type);
+              error2("`value` prop on `%s` should not be null. Consider using an empty string to clear the component or `undefined` for uncontrolled components.", type);
             }
           }
         }
@@ -13136,7 +13136,7 @@ function requireReactDom_development() {
           }
           var lowerCasedName = name2.toLowerCase();
           if (lowerCasedName === "onfocusin" || lowerCasedName === "onfocusout") {
-            error("React uses onFocus and onBlur instead of onFocusIn and onFocusOut. All React events are normalized to bubble, so onFocusIn and onFocusOut are not needed/supported by React.");
+            error2("React uses onFocus and onBlur instead of onFocusIn and onFocusOut. All React events are normalized to bubble, so onFocusIn and onFocusOut are not needed/supported by React.");
             warnedProperties$1[name2] = true;
             return true;
           }
@@ -13147,18 +13147,18 @@ function requireReactDom_development() {
             }
             var registrationName = possibleRegistrationNames2.hasOwnProperty(lowerCasedName) ? possibleRegistrationNames2[lowerCasedName] : null;
             if (registrationName != null) {
-              error("Invalid event handler property `%s`. Did you mean `%s`?", name2, registrationName);
+              error2("Invalid event handler property `%s`. Did you mean `%s`?", name2, registrationName);
               warnedProperties$1[name2] = true;
               return true;
             }
             if (EVENT_NAME_REGEX.test(name2)) {
-              error("Unknown event handler property `%s`. It will be ignored.", name2);
+              error2("Unknown event handler property `%s`. It will be ignored.", name2);
               warnedProperties$1[name2] = true;
               return true;
             }
           } else if (EVENT_NAME_REGEX.test(name2)) {
             if (INVALID_EVENT_NAME_REGEX.test(name2)) {
-              error("Invalid event handler property `%s`. React events use the camelCase naming convention, for example `onClick`.", name2);
+              error2("Invalid event handler property `%s`. React events use the camelCase naming convention, for example `onClick`.", name2);
             }
             warnedProperties$1[name2] = true;
             return true;
@@ -13167,22 +13167,22 @@ function requireReactDom_development() {
             return true;
           }
           if (lowerCasedName === "innerhtml") {
-            error("Directly setting property `innerHTML` is not permitted. For more information, lookup documentation on `dangerouslySetInnerHTML`.");
+            error2("Directly setting property `innerHTML` is not permitted. For more information, lookup documentation on `dangerouslySetInnerHTML`.");
             warnedProperties$1[name2] = true;
             return true;
           }
           if (lowerCasedName === "aria") {
-            error("The `aria` attribute is reserved for future use in React. Pass individual `aria-` attributes instead.");
+            error2("The `aria` attribute is reserved for future use in React. Pass individual `aria-` attributes instead.");
             warnedProperties$1[name2] = true;
             return true;
           }
           if (lowerCasedName === "is" && value !== null && value !== void 0 && typeof value !== "string") {
-            error("Received a `%s` for a string attribute `is`. If this is expected, cast the value to a string.", typeof value);
+            error2("Received a `%s` for a string attribute `is`. If this is expected, cast the value to a string.", typeof value);
             warnedProperties$1[name2] = true;
             return true;
           }
           if (typeof value === "number" && isNaN(value)) {
-            error("Received NaN for the `%s` attribute. If this is expected, cast the value to a string.", name2);
+            error2("Received NaN for the `%s` attribute. If this is expected, cast the value to a string.", name2);
             warnedProperties$1[name2] = true;
             return true;
           }
@@ -13191,20 +13191,20 @@ function requireReactDom_development() {
           if (possibleStandardNames.hasOwnProperty(lowerCasedName)) {
             var standardName = possibleStandardNames[lowerCasedName];
             if (standardName !== name2) {
-              error("Invalid DOM property `%s`. Did you mean `%s`?", name2, standardName);
+              error2("Invalid DOM property `%s`. Did you mean `%s`?", name2, standardName);
               warnedProperties$1[name2] = true;
               return true;
             }
           } else if (!isReserved && name2 !== lowerCasedName) {
-            error("React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element.", name2, lowerCasedName);
+            error2("React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element.", name2, lowerCasedName);
             warnedProperties$1[name2] = true;
             return true;
           }
           if (typeof value === "boolean" && shouldRemoveAttributeWithWarning(name2, value, propertyInfo, false)) {
             if (value) {
-              error('Received `%s` for a non-boolean attribute `%s`.\n\nIf you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}.', value, name2, name2, value, name2);
+              error2('Received `%s` for a non-boolean attribute `%s`.\n\nIf you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}.', value, name2, name2, value, name2);
             } else {
-              error('Received `%s` for a non-boolean attribute `%s`.\n\nIf you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}.\n\nIf you used to conditionally omit it with %s={condition && value}, pass %s={condition ? value : undefined} instead.', value, name2, name2, value, name2, name2, name2);
+              error2('Received `%s` for a non-boolean attribute `%s`.\n\nIf you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}.\n\nIf you used to conditionally omit it with %s={condition && value}, pass %s={condition ? value : undefined} instead.', value, name2, name2, value, name2, name2, name2);
             }
             warnedProperties$1[name2] = true;
             return true;
@@ -13217,7 +13217,7 @@ function requireReactDom_development() {
             return false;
           }
           if ((value === "false" || value === "true") && propertyInfo !== null && propertyInfo.type === BOOLEAN) {
-            error("Received the string `%s` for the boolean attribute `%s`. %s Did you mean %s={%s}?", value, name2, value === "false" ? "The browser will interpret it as a truthy value." : 'Although this works, it will not work as expected if you pass the string "false".', name2, value);
+            error2("Received the string `%s` for the boolean attribute `%s`. %s Did you mean %s={%s}?", value, name2, value === "false" ? "The browser will interpret it as a truthy value." : 'Although this works, it will not work as expected if you pass the string "false".', name2, value);
             warnedProperties$1[name2] = true;
             return true;
           }
@@ -13237,9 +13237,9 @@ function requireReactDom_development() {
             return "`" + prop + "`";
           }).join(", ");
           if (unknownProps.length === 1) {
-            error("Invalid value for prop %s on <%s> tag. Either remove it from the element, or pass a string or number value to keep it in the DOM. For details, see https://reactjs.org/link/attribute-behavior ", unknownPropString, type);
+            error2("Invalid value for prop %s on <%s> tag. Either remove it from the element, or pass a string or number value to keep it in the DOM. For details, see https://reactjs.org/link/attribute-behavior ", unknownPropString, type);
           } else if (unknownProps.length > 1) {
-            error("Invalid values for props %s on <%s> tag. Either remove them from the element, or pass a string or number value to keep them in the DOM. For details, see https://reactjs.org/link/attribute-behavior ", unknownPropString, type);
+            error2("Invalid values for props %s on <%s> tag. Either remove them from the element, or pass a string or number value to keep them in the DOM. For details, see https://reactjs.org/link/attribute-behavior ", unknownPropString, type);
           }
         }
       };
@@ -13257,7 +13257,7 @@ function requireReactDom_development() {
       function setReplayingEvent(event) {
         {
           if (currentReplayingEvent !== null) {
-            error("Expected currently replaying event to be null. This error is likely caused by a bug in React. Please file an issue.");
+            error2("Expected currently replaying event to be null. This error is likely caused by a bug in React. Please file an issue.");
           }
         }
         currentReplayingEvent = event;
@@ -13265,7 +13265,7 @@ function requireReactDom_development() {
       function resetReplayingEvent() {
         {
           if (currentReplayingEvent === null) {
-            error("Expected currently replaying event to not be null. This error is likely caused by a bug in React. Please file an issue.");
+            error2("Expected currently replaying event to not be null. This error is likely caused by a bug in React. Please file an issue.");
           }
         }
         currentReplayingEvent = null;
@@ -13416,8 +13416,8 @@ function requireReactDom_development() {
         var funcArgs = Array.prototype.slice.call(arguments, 3);
         try {
           func.apply(context, funcArgs);
-        } catch (error2) {
-          this.onError(error2);
+        } catch (error22) {
+          this.onError(error22);
         }
       }
       var invokeGuardedCallbackImpl = invokeGuardedCallbackProd;
@@ -13446,19 +13446,19 @@ function requireReactDom_development() {
               func.apply(context, funcArgs);
               didError = false;
             }
-            var error2;
+            var error22;
             var didSetError = false;
             var isCrossOriginError = false;
             function handleWindowError(event) {
-              error2 = event.error;
+              error22 = event.error;
               didSetError = true;
-              if (error2 === null && event.colno === 0 && event.lineno === 0) {
+              if (error22 === null && event.colno === 0 && event.lineno === 0) {
                 isCrossOriginError = true;
               }
               if (event.defaultPrevented) {
-                if (error2 != null && typeof error2 === "object") {
+                if (error22 != null && typeof error22 === "object") {
                   try {
-                    error2._suppressLogging = true;
+                    error22._suppressLogging = true;
                   } catch (inner) {
                   }
                 }
@@ -13474,11 +13474,11 @@ function requireReactDom_development() {
             }
             if (didCall && didError) {
               if (!didSetError) {
-                error2 = new Error(`An error was thrown inside one of your components, but React doesn't know what it was. This is likely due to browser flakiness. React does its best to preserve the "Pause on exceptions" behavior of the DevTools, which requires some DEV-mode only tricks. It's possible that these don't work in your browser. Try triggering the error in production mode, or switching to a modern browser. If you suspect that this is actually an issue with React, please file an issue.`);
+                error22 = new Error(`An error was thrown inside one of your components, but React doesn't know what it was. This is likely due to browser flakiness. React does its best to preserve the "Pause on exceptions" behavior of the DevTools, which requires some DEV-mode only tricks. It's possible that these don't work in your browser. Try triggering the error in production mode, or switching to a modern browser. If you suspect that this is actually an issue with React, please file an issue.`);
               } else if (isCrossOriginError) {
-                error2 = new Error("A cross-origin error was thrown. React doesn't have access to the actual error object in development. See https://reactjs.org/link/crossorigin-error for more information.");
+                error22 = new Error("A cross-origin error was thrown. React doesn't have access to the actual error object in development. See https://reactjs.org/link/crossorigin-error for more information.");
               }
-              this.onError(error2);
+              this.onError(error22);
             }
             window.removeEventListener("error", handleWindowError);
             if (!didCall) {
@@ -13494,9 +13494,9 @@ function requireReactDom_development() {
       var hasRethrowError = false;
       var rethrowError = null;
       var reporter = {
-        onError: function(error2) {
+        onError: function(error22) {
           hasError = true;
-          caughtError = error2;
+          caughtError = error22;
         }
       };
       function invokeGuardedCallback(name2, func, context, a2, b2, c2, d2, e2, f2) {
@@ -13507,19 +13507,19 @@ function requireReactDom_development() {
       function invokeGuardedCallbackAndCatchFirstError(name2, func, context, a2, b2, c2, d2, e2, f2) {
         invokeGuardedCallback.apply(this, arguments);
         if (hasError) {
-          var error2 = clearCaughtError();
+          var error22 = clearCaughtError();
           if (!hasRethrowError) {
             hasRethrowError = true;
-            rethrowError = error2;
+            rethrowError = error22;
           }
         }
       }
       function rethrowCaughtError() {
         if (hasRethrowError) {
-          var error2 = rethrowError;
+          var error22 = rethrowError;
           hasRethrowError = false;
           rethrowError = null;
-          throw error2;
+          throw error22;
         }
       }
       function hasCaughtError() {
@@ -13527,10 +13527,10 @@ function requireReactDom_development() {
       }
       function clearCaughtError() {
         if (hasError) {
-          var error2 = caughtError;
+          var error22 = caughtError;
           hasError = false;
           caughtError = null;
-          return error2;
+          return error22;
         } else {
           throw new Error("clearCaughtError was called but no error was captured. This error is likely caused by a bug in React. Please file an issue.");
         }
@@ -13704,7 +13704,7 @@ function requireReactDom_development() {
             var ownerFiber = owner;
             var instance = ownerFiber.stateNode;
             if (!instance._warnedAboutRefsInRender) {
-              error("%s is accessing isMounted inside its render() function. render() should be a pure function of props and state. It should never access something that requires stale data from the previous render, such as refs. Move this logic to componentDidMount and componentDidUpdate instead.", getComponentNameFromFiber(ownerFiber) || "A component");
+              error2("%s is accessing isMounted inside its render() function. render() should be a pure function of props and state. It should never access something that requires stale data from the previous render, such as refs. Move this logic to componentDidMount and componentDidUpdate instead.", getComponentNameFromFiber(ownerFiber) || "A component");
             }
             instance._warnedAboutRefsInRender = true;
           }
@@ -13884,7 +13884,7 @@ function requireReactDom_development() {
         }
         if (!hook.supportsFiber) {
           {
-            error("The installed version of React DevTools is too old and will not work with the current version of React. Please update React DevTools. https://reactjs.org/link/react-devtools");
+            error2("The installed version of React DevTools is too old and will not work with the current version of React. Please update React DevTools. https://reactjs.org/link/react-devtools");
           }
           return true;
         }
@@ -13899,7 +13899,7 @@ function requireReactDom_development() {
           injectedHook = hook;
         } catch (err) {
           {
-            error("React instrumentation encountered an error: %s.", err);
+            error2("React instrumentation encountered an error: %s.", err);
           }
         }
         if (hook.checkDCE) {
@@ -13916,7 +13916,7 @@ function requireReactDom_development() {
             } catch (err) {
               if (!hasLoggedError) {
                 hasLoggedError = true;
-                error("React instrumentation encountered an error: %s", err);
+                error2("React instrumentation encountered an error: %s", err);
               }
             }
           }
@@ -13951,7 +13951,7 @@ function requireReactDom_development() {
             {
               if (!hasLoggedError) {
                 hasLoggedError = true;
-                error("React instrumentation encountered an error: %s", err);
+                error2("React instrumentation encountered an error: %s", err);
               }
             }
           }
@@ -13965,7 +13965,7 @@ function requireReactDom_development() {
             {
               if (!hasLoggedError) {
                 hasLoggedError = true;
-                error("React instrumentation encountered an error: %s", err);
+                error2("React instrumentation encountered an error: %s", err);
               }
             }
           }
@@ -13979,7 +13979,7 @@ function requireReactDom_development() {
             {
               if (!hasLoggedError) {
                 hasLoggedError = true;
-                error("React instrumentation encountered an error: %s", err);
+                error2("React instrumentation encountered an error: %s", err);
               }
             }
           }
@@ -13998,7 +13998,7 @@ function requireReactDom_development() {
               {
                 if (!hasLoggedError) {
                   hasLoggedError = true;
-                  error("React instrumentation encountered an error: %s", err);
+                  error2("React instrumentation encountered an error: %s", err);
                 }
               }
             }
@@ -14454,7 +14454,7 @@ function requireReactDom_development() {
             return OffscreenLane;
           default:
             {
-              error("Should have found matching lanes. This is a bug in React.");
+              error2("Should have found matching lanes. This is a bug in React.");
             }
             return lanes;
         }
@@ -14576,7 +14576,7 @@ function requireReactDom_development() {
             return NoTimestamp;
           default:
             {
-              error("Should have found matching lanes. This is a bug in React.");
+              error2("Should have found matching lanes. This is a bug in React.");
             }
             return NoTimestamp;
         }
@@ -16861,7 +16861,7 @@ function requireReactDom_development() {
       function listenToNonDelegatedEvent(domEventName, targetElement) {
         {
           if (!nonDelegatedEvents.has(domEventName)) {
-            error('Did not expect a listenToNonDelegatedEvent() call for "%s". This is a bug in React. Please file an issue.', domEventName);
+            error2('Did not expect a listenToNonDelegatedEvent() call for "%s". This is a bug in React. Please file an issue.', domEventName);
           }
         }
         var isCapturePhaseListener = false;
@@ -16875,7 +16875,7 @@ function requireReactDom_development() {
       function listenToNativeEvent(domEventName, isCapturePhaseListener, target) {
         {
           if (nonDelegatedEvents.has(domEventName) && !isCapturePhaseListener) {
-            error('Did not expect a listenToNativeEvent() call for "%s" in the bubble phase. This is a bug in React. Please file an issue.', domEventName);
+            error2('Did not expect a listenToNativeEvent() call for "%s" in the bubble phase. This is a bug in React. Please file an issue.', domEventName);
           }
         }
         var eventSystemFlags = 0;
@@ -17166,7 +17166,7 @@ function requireReactDom_development() {
             return;
           }
           didWarnInvalidHydration = true;
-          error("Prop `%s` did not match. Server: %s Client: %s", propName, JSON.stringify(normalizedServerValue), JSON.stringify(normalizedClientValue));
+          error2("Prop `%s` did not match. Server: %s Client: %s", propName, JSON.stringify(normalizedServerValue), JSON.stringify(normalizedClientValue));
         };
         warnForExtraAttributes = function(attributeNames) {
           if (didWarnInvalidHydration) {
@@ -17177,13 +17177,13 @@ function requireReactDom_development() {
           attributeNames.forEach(function(name2) {
             names.push(name2);
           });
-          error("Extra attributes from the server: %s", names);
+          error2("Extra attributes from the server: %s", names);
         };
         warnForInvalidEventListener = function(registrationName, listener) {
           if (listener === false) {
-            error("Expected `%s` listener to be a function, instead got `false`.\n\nIf you used to conditionally omit it with %s={condition && value}, pass %s={condition ? value : undefined} instead.", registrationName, registrationName, registrationName);
+            error2("Expected `%s` listener to be a function, instead got `false`.\n\nIf you used to conditionally omit it with %s={condition && value}, pass %s={condition ? value : undefined} instead.", registrationName, registrationName, registrationName);
           } else {
-            error("Expected `%s` listener to be a function, instead got a value of `%s` type.", registrationName, typeof listener);
+            error2("Expected `%s` listener to be a function, instead got a value of `%s` type.", registrationName, typeof listener);
           }
         };
         normalizeHTML = function(parent, html2) {
@@ -17211,7 +17211,7 @@ function requireReactDom_development() {
           {
             if (!didWarnInvalidHydration) {
               didWarnInvalidHydration = true;
-              error('Text content did not match. Server: "%s" Client: "%s"', normalizedServerText, normalizedClientText);
+              error2('Text content did not match. Server: "%s" Client: "%s"', normalizedServerText, normalizedClientText);
             }
           }
         }
@@ -17297,7 +17297,7 @@ function requireReactDom_development() {
           {
             isCustomComponentTag = isCustomComponent(type, props);
             if (!isCustomComponentTag && type !== type.toLowerCase()) {
-              error("<%s /> is using incorrect casing. Use PascalCase for React components, or lowercase for HTML elements.", type);
+              error2("<%s /> is using incorrect casing. Use PascalCase for React components, or lowercase for HTML elements.", type);
             }
           }
           if (type === "script") {
@@ -17327,7 +17327,7 @@ function requireReactDom_development() {
           if (namespaceURI === HTML_NAMESPACE) {
             if (!isCustomComponentTag && Object.prototype.toString.call(domElement) === "[object HTMLUnknownElement]" && !hasOwnProperty2.call(warnedUnknownTags, type)) {
               warnedUnknownTags[type] = true;
-              error("The tag <%s> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.", type);
+              error2("The tag <%s> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.", type);
             }
           }
         }
@@ -17788,7 +17788,7 @@ function requireReactDom_development() {
             return;
           }
           didWarnInvalidHydration = true;
-          error("Did not expect server HTML to contain a <%s> in <%s>.", child.nodeName.toLowerCase(), parentNode.nodeName.toLowerCase());
+          error2("Did not expect server HTML to contain a <%s> in <%s>.", child.nodeName.toLowerCase(), parentNode.nodeName.toLowerCase());
         }
       }
       function warnForDeletedHydratableText(parentNode, child) {
@@ -17797,7 +17797,7 @@ function requireReactDom_development() {
             return;
           }
           didWarnInvalidHydration = true;
-          error('Did not expect server HTML to contain the text node "%s" in <%s>.', child.nodeValue, parentNode.nodeName.toLowerCase());
+          error2('Did not expect server HTML to contain the text node "%s" in <%s>.', child.nodeValue, parentNode.nodeName.toLowerCase());
         }
       }
       function warnForInsertedHydratedElement(parentNode, tag, props) {
@@ -17806,7 +17806,7 @@ function requireReactDom_development() {
             return;
           }
           didWarnInvalidHydration = true;
-          error("Expected server HTML to contain a matching <%s> in <%s>.", tag, parentNode.nodeName.toLowerCase());
+          error2("Expected server HTML to contain a matching <%s> in <%s>.", tag, parentNode.nodeName.toLowerCase());
         }
       }
       function warnForInsertedHydratedText(parentNode, text2) {
@@ -17818,7 +17818,7 @@ function requireReactDom_development() {
             return;
           }
           didWarnInvalidHydration = true;
-          error('Expected server HTML to contain a matching text node for "%s" in <%s>.', text2, parentNode.nodeName.toLowerCase());
+          error2('Expected server HTML to contain a matching text node for "%s" in <%s>.', text2, parentNode.nodeName.toLowerCase());
         }
       }
       function restoreControlledState$3(domElement, tag, props) {
@@ -18040,7 +18040,7 @@ function requireReactDom_development() {
           var parentTag = parentInfo && parentInfo.tag;
           if (childText != null) {
             if (childTag != null) {
-              error("validateDOMNesting: when childText is passed, childTag should be null");
+              error2("validateDOMNesting: when childText is passed, childTag should be null");
             }
             childTag = "#text";
           }
@@ -18073,9 +18073,9 @@ function requireReactDom_development() {
             if (ancestorTag === "table" && childTag === "tr") {
               info2 += " Add a <tbody>, <thead> or <tfoot> to your code to match the DOM tree generated by the browser.";
             }
-            error("validateDOMNesting(...): %s cannot appear as a child of <%s>.%s%s", tagDisplayName, ancestorTag, whitespaceInfo, info2);
+            error2("validateDOMNesting(...): %s cannot appear as a child of <%s>.%s%s", tagDisplayName, ancestorTag, whitespaceInfo, info2);
           } else {
-            error("validateDOMNesting(...): %s cannot appear as a descendant of <%s>.", tagDisplayName, ancestorTag);
+            error2("validateDOMNesting(...): %s cannot appear as a descendant of <%s>.", tagDisplayName, ancestorTag);
           }
         };
       }
@@ -18214,9 +18214,9 @@ function requireReactDom_development() {
       var scheduleMicrotask = typeof queueMicrotask === "function" ? queueMicrotask : typeof localPromise !== "undefined" ? function(callback) {
         return localPromise.resolve(null).then(callback).catch(handleErrorInNextTick);
       } : scheduleTimeout;
-      function handleErrorInNextTick(error2) {
+      function handleErrorInNextTick(error22) {
         setTimeout(function() {
-          throw error2;
+          throw error22;
         });
       }
       function commitMount(domElement, type, newProps, internalInstanceHandle) {
@@ -18572,7 +18572,7 @@ function requireReactDom_development() {
       }
       function errorHydratingContainer(parentContainer) {
         {
-          error("An error occurred during hydration. The server HTML was replaced with client content in <%s>.", parentContainer.nodeName.toLowerCase());
+          error2("An error occurred during hydration. The server HTML was replaced with client content in <%s>.", parentContainer.nodeName.toLowerCase());
         }
       }
       function preparePortalMount(portalInstance) {
@@ -18692,13 +18692,13 @@ function requireReactDom_development() {
               }
               if (error$1 && !(error$1 instanceof Error)) {
                 setCurrentlyValidatingElement(element2);
-                error("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", componentName || "React class", location2, typeSpecName, typeof error$1);
+                error2("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", componentName || "React class", location2, typeSpecName, typeof error$1);
                 setCurrentlyValidatingElement(null);
               }
               if (error$1 instanceof Error && !(error$1.message in loggedTypeFailures)) {
                 loggedTypeFailures[error$1.message] = true;
                 setCurrentlyValidatingElement(element2);
-                error("Failed %s type: %s", location2, error$1.message);
+                error2("Failed %s type: %s", location2, error$1.message);
                 setCurrentlyValidatingElement(null);
               }
             }
@@ -18719,13 +18719,13 @@ function requireReactDom_development() {
       function pop(cursor, fiber) {
         if (index2 < 0) {
           {
-            error("Unexpected pop.");
+            error2("Unexpected pop.");
           }
           return;
         }
         {
           if (fiber !== fiberStack[index2]) {
-            error("Unexpected Fiber popped.");
+            error2("Unexpected Fiber popped.");
           }
         }
         cursor.current = valueStack[index2];
@@ -18835,7 +18835,7 @@ function requireReactDom_development() {
               var componentName = getComponentNameFromFiber(fiber) || "Unknown";
               if (!warnedAboutMissingGetChildContext[componentName]) {
                 warnedAboutMissingGetChildContext[componentName] = true;
-                error("%s.childContextTypes is specified but there is no getChildContext() method on the instance. You can either define getChildContext() on %s or remove childContextTypes from it.", componentName, componentName);
+                error2("%s.childContextTypes is specified but there is no getChildContext() method on the instance. You can either define getChildContext() on %s or remove childContextTypes from it.", componentName, componentName);
               }
             }
             return parentContext;
@@ -18943,12 +18943,12 @@ function requireReactDom_development() {
             }
             syncQueue = null;
             includesLegacySyncCallbacks = false;
-          } catch (error2) {
+          } catch (error22) {
             if (syncQueue !== null) {
               syncQueue = syncQueue.slice(i2 + 1);
             }
             scheduleCallback(ImmediatePriority, flushSyncCallbacks);
-            throw error2;
+            throw error22;
           } finally {
             setCurrentUpdatePriority(previousUpdatePriority);
             isFlushingSyncQueue = false;
@@ -19073,7 +19073,7 @@ function requireReactDom_development() {
       function warnIfNotHydrating() {
         {
           if (!getIsHydrating()) {
-            error("Expected to be hydrating. This is a bug in React. Please file an issue.");
+            error2("Expected to be hydrating. This is a bug in React. Please file an issue.");
           }
         }
       }
@@ -19085,7 +19085,7 @@ function requireReactDom_development() {
       function warnIfHydrating() {
         {
           if (isHydrating) {
-            error("We should not be hydrating here. This is a bug in React. Please file a bug.");
+            error2("We should not be hydrating here. This is a bug in React. Please file a bug.");
           }
         }
       }
@@ -19456,11 +19456,11 @@ function requireReactDom_development() {
       function getIsHydrating() {
         return isHydrating;
       }
-      function queueHydrationError(error2) {
+      function queueHydrationError(error22) {
         if (hydrationErrors === null) {
-          hydrationErrors = [error2];
+          hydrationErrors = [error22];
         } else {
-          hydrationErrors.push(error2);
+          hydrationErrors.push(error22);
         }
       }
       var ReactCurrentBatchConfig$1 = ReactSharedInternals.ReactCurrentBatchConfig;
@@ -19581,27 +19581,27 @@ function requireReactDom_development() {
           }
           if (UNSAFE_componentWillMountUniqueNames.size > 0) {
             var sortedNames = setToSortedString(UNSAFE_componentWillMountUniqueNames);
-            error("Using UNSAFE_componentWillMount in strict mode is not recommended and may indicate bugs in your code. See https://reactjs.org/link/unsafe-component-lifecycles for details.\n\n* Move code with side effects to componentDidMount, and set initial state in the constructor.\n\nPlease update the following components: %s", sortedNames);
+            error2("Using UNSAFE_componentWillMount in strict mode is not recommended and may indicate bugs in your code. See https://reactjs.org/link/unsafe-component-lifecycles for details.\n\n* Move code with side effects to componentDidMount, and set initial state in the constructor.\n\nPlease update the following components: %s", sortedNames);
           }
           if (UNSAFE_componentWillReceivePropsUniqueNames.size > 0) {
             var _sortedNames = setToSortedString(UNSAFE_componentWillReceivePropsUniqueNames);
-            error("Using UNSAFE_componentWillReceiveProps in strict mode is not recommended and may indicate bugs in your code. See https://reactjs.org/link/unsafe-component-lifecycles for details.\n\n* Move data fetching code or side effects to componentDidUpdate.\n* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://reactjs.org/link/derived-state\n\nPlease update the following components: %s", _sortedNames);
+            error2("Using UNSAFE_componentWillReceiveProps in strict mode is not recommended and may indicate bugs in your code. See https://reactjs.org/link/unsafe-component-lifecycles for details.\n\n* Move data fetching code or side effects to componentDidUpdate.\n* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://reactjs.org/link/derived-state\n\nPlease update the following components: %s", _sortedNames);
           }
           if (UNSAFE_componentWillUpdateUniqueNames.size > 0) {
             var _sortedNames2 = setToSortedString(UNSAFE_componentWillUpdateUniqueNames);
-            error("Using UNSAFE_componentWillUpdate in strict mode is not recommended and may indicate bugs in your code. See https://reactjs.org/link/unsafe-component-lifecycles for details.\n\n* Move data fetching code or side effects to componentDidUpdate.\n\nPlease update the following components: %s", _sortedNames2);
+            error2("Using UNSAFE_componentWillUpdate in strict mode is not recommended and may indicate bugs in your code. See https://reactjs.org/link/unsafe-component-lifecycles for details.\n\n* Move data fetching code or side effects to componentDidUpdate.\n\nPlease update the following components: %s", _sortedNames2);
           }
           if (componentWillMountUniqueNames.size > 0) {
             var _sortedNames3 = setToSortedString(componentWillMountUniqueNames);
-            warn("componentWillMount has been renamed, and is not recommended for use. See https://reactjs.org/link/unsafe-component-lifecycles for details.\n\n* Move code with side effects to componentDidMount, and set initial state in the constructor.\n* Rename componentWillMount to UNSAFE_componentWillMount to suppress this warning in non-strict mode. In React 18.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.\n\nPlease update the following components: %s", _sortedNames3);
+            warn2("componentWillMount has been renamed, and is not recommended for use. See https://reactjs.org/link/unsafe-component-lifecycles for details.\n\n* Move code with side effects to componentDidMount, and set initial state in the constructor.\n* Rename componentWillMount to UNSAFE_componentWillMount to suppress this warning in non-strict mode. In React 18.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.\n\nPlease update the following components: %s", _sortedNames3);
           }
           if (componentWillReceivePropsUniqueNames.size > 0) {
             var _sortedNames4 = setToSortedString(componentWillReceivePropsUniqueNames);
-            warn("componentWillReceiveProps has been renamed, and is not recommended for use. See https://reactjs.org/link/unsafe-component-lifecycles for details.\n\n* Move data fetching code or side effects to componentDidUpdate.\n* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://reactjs.org/link/derived-state\n* Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps to suppress this warning in non-strict mode. In React 18.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.\n\nPlease update the following components: %s", _sortedNames4);
+            warn2("componentWillReceiveProps has been renamed, and is not recommended for use. See https://reactjs.org/link/unsafe-component-lifecycles for details.\n\n* Move data fetching code or side effects to componentDidUpdate.\n* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://reactjs.org/link/derived-state\n* Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps to suppress this warning in non-strict mode. In React 18.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.\n\nPlease update the following components: %s", _sortedNames4);
           }
           if (componentWillUpdateUniqueNames.size > 0) {
             var _sortedNames5 = setToSortedString(componentWillUpdateUniqueNames);
-            warn("componentWillUpdate has been renamed, and is not recommended for use. See https://reactjs.org/link/unsafe-component-lifecycles for details.\n\n* Move data fetching code or side effects to componentDidUpdate.\n* Rename componentWillUpdate to UNSAFE_componentWillUpdate to suppress this warning in non-strict mode. In React 18.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.\n\nPlease update the following components: %s", _sortedNames5);
+            warn2("componentWillUpdate has been renamed, and is not recommended for use. See https://reactjs.org/link/unsafe-component-lifecycles for details.\n\n* Move data fetching code or side effects to componentDidUpdate.\n* Rename componentWillUpdate to UNSAFE_componentWillUpdate to suppress this warning in non-strict mode. In React 18.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.\n\nPlease update the following components: %s", _sortedNames5);
           }
         };
         var pendingLegacyContextWarning = /* @__PURE__ */ new Map();
@@ -19609,7 +19609,7 @@ function requireReactDom_development() {
         ReactStrictModeWarnings.recordLegacyContextWarning = function(fiber, instance) {
           var strictRoot = findStrictRoot(fiber);
           if (strictRoot === null) {
-            error("Expected to find a StrictMode component in a strict mode tree. This error is likely caused by a bug in React. Please file an issue.");
+            error2("Expected to find a StrictMode component in a strict mode tree. This error is likely caused by a bug in React. Please file an issue.");
             return;
           }
           if (didWarnAboutLegacyContext.has(fiber.type)) {
@@ -19638,7 +19638,7 @@ function requireReactDom_development() {
             var sortedNames = setToSortedString(uniqueNames);
             try {
               setCurrentFiber(firstFiber);
-              error("Legacy context API has been detected within a strict-mode tree.\n\nThe old API will be supported in all 16.x releases, but applications using it should migrate to the new version.\n\nPlease update the following components: %s\n\nLearn more about this warning here: https://reactjs.org/link/legacy-context", sortedNames);
+              error2("Legacy context API has been detected within a strict-mode tree.\n\nThe old API will be supported in all 16.x releases, but applications using it should migrate to the new version.\n\nPlease update the following components: %s\n\nLearn more about this warning here: https://reactjs.org/link/legacy-context", sortedNames);
             } finally {
               resetCurrentFiber();
             }
@@ -19683,7 +19683,7 @@ function requireReactDom_development() {
             return;
           }
           ownerHasKeyUseWarning[componentName] = true;
-          error('Each child in a list should have a unique "key" prop. See https://reactjs.org/link/warning-keys for more information.');
+          error2('Each child in a list should have a unique "key" prop. See https://reactjs.org/link/warning-keys for more information.');
         };
       }
       function isReactClass(type) {
@@ -19703,7 +19703,7 @@ function requireReactDom_development() {
               var componentName = getComponentNameFromFiber(returnFiber) || "Component";
               if (!didWarnAboutStringRefs[componentName]) {
                 {
-                  error('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. We recommend using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', componentName, mixedRef);
+                  error2('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. We recommend using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', componentName, mixedRef);
                 }
                 didWarnAboutStringRefs[componentName] = true;
               }
@@ -19762,7 +19762,7 @@ function requireReactDom_development() {
             return;
           }
           ownerHasFunctionTypeWarning[componentName] = true;
-          error("Functions are not valid as a React child. This may happen if you return a Component instead of <Component /> from render. Or maybe you meant to call this function rather than return it.");
+          error2("Functions are not valid as a React child. This may happen if you return a Component instead of <Component /> from render. Or maybe you meant to call this function rather than return it.");
         }
       }
       function resolveLazy(lazyType) {
@@ -20038,7 +20038,7 @@ function requireReactDom_development() {
                   knownKeys.add(key);
                   break;
                 }
-                error("Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.", key);
+                error2("Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.", key);
                 break;
               case REACT_LAZY_TYPE:
                 var payload = child._payload;
@@ -20157,13 +20157,13 @@ function requireReactDom_development() {
             if (typeof Symbol === "function" && // $FlowFixMe Flow doesn't know about toStringTag
             newChildrenIterable[Symbol.toStringTag] === "Generator") {
               if (!didWarnAboutGenerators) {
-                error("Using Generators as children is unsupported and will likely yield unexpected results because enumerating a generator mutates it. You may convert it to an array with `Array.from()` or the `[...spread]` operator before rendering. Keep in mind you might need to polyfill these features for older browsers.");
+                error2("Using Generators as children is unsupported and will likely yield unexpected results because enumerating a generator mutates it. You may convert it to an array with `Array.from()` or the `[...spread]` operator before rendering. Keep in mind you might need to polyfill these features for older browsers.");
               }
               didWarnAboutGenerators = true;
             }
             if (newChildrenIterable.entries === iteratorFn) {
               if (!didWarnAboutMaps) {
-                error("Using Maps as children is not supported. Use an array of keyed ReactElements instead.");
+                error2("Using Maps as children is not supported. Use an array of keyed ReactElements instead.");
               }
               didWarnAboutMaps = true;
             }
@@ -20457,7 +20457,7 @@ function requireReactDom_development() {
           context._currentValue = nextValue;
           {
             if (context._currentRenderer !== void 0 && context._currentRenderer !== null && context._currentRenderer !== rendererSigil) {
-              error("Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.");
+              error2("Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.");
             }
             context._currentRenderer = rendererSigil;
           }
@@ -20491,7 +20491,7 @@ function requireReactDom_development() {
         }
         {
           if (node2 !== propagationRoot) {
-            error("Expected to find the propagation root when scheduling context work. This error is likely caused by a bug in React. Please file an issue.");
+            error2("Expected to find the propagation root when scheduling context work. This error is likely caused by a bug in React. Please file an issue.");
           }
         }
       }
@@ -20600,7 +20600,7 @@ function requireReactDom_development() {
       function readContext(context) {
         {
           if (isDisallowedContextReadInDEV) {
-            error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
+            error2("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
           }
         }
         var value = context._currentValue;
@@ -20786,7 +20786,7 @@ function requireReactDom_development() {
         var sharedQueue = updateQueue.shared;
         {
           if (currentlyProcessingQueue === sharedQueue && !didWarnUpdateInsideUpdate) {
-            error("An update (setState, replaceState, or forceUpdate) was scheduled from inside an update function. Update functions should be pure, with zero side-effects. Consider using componentDidUpdate or a callback.");
+            error2("An update (setState, replaceState, or forceUpdate) was scheduled from inside an update function. Update functions should be pure, with zero side-effects. Consider using componentDidUpdate or a callback.");
             didWarnUpdateInsideUpdate = true;
           }
         }
@@ -21293,7 +21293,7 @@ function requireReactDom_development() {
       function checkDepsAreArrayDev(deps) {
         {
           if (deps !== void 0 && deps !== null && !isArray(deps)) {
-            error("%s received a final argument that is not an array (instead, received `%s`). When specified, the final argument must be an array.", currentHookNameInDev, typeof deps);
+            error2("%s received a final argument that is not an array (instead, received `%s`). When specified, the final argument must be an array.", currentHookNameInDev, typeof deps);
           }
         }
       }
@@ -21315,7 +21315,7 @@ function requireReactDom_development() {
                 row += newHookName + "\n";
                 table2 += row;
               }
-              error("React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://reactjs.org/link/rules-of-hooks\n\n   Previous render            Next render\n   ------------------------------------------------------\n%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n", componentName, table2);
+              error2("React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://reactjs.org/link/rules-of-hooks\n\n   Previous render            Next render\n   ------------------------------------------------------\n%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n", componentName, table2);
             }
           }
         }
@@ -21331,13 +21331,13 @@ function requireReactDom_development() {
         }
         if (prevDeps === null) {
           {
-            error("%s received a final argument during this render, but not during the previous render. Even though the final argument is optional, its type cannot change between renders.", currentHookNameInDev);
+            error2("%s received a final argument during this render, but not during the previous render. Even though the final argument is optional, its type cannot change between renders.", currentHookNameInDev);
           }
           return false;
         }
         {
           if (nextDeps.length !== prevDeps.length) {
-            error("The final argument passed to %s changed size between renders. The order and size of this array must remain constant.\n\nPrevious: %s\nIncoming: %s", currentHookNameInDev, "[" + prevDeps.join(", ") + "]", "[" + nextDeps.join(", ") + "]");
+            error2("The final argument passed to %s changed size between renders. The order and size of this array must remain constant.\n\nPrevious: %s\nIncoming: %s", currentHookNameInDev, "[" + prevDeps.join(", ") + "]", "[" + nextDeps.join(", ") + "]");
           }
         }
         for (var i2 = 0; i2 < prevDeps.length && i2 < nextDeps.length; i2++) {
@@ -21410,7 +21410,7 @@ function requireReactDom_development() {
           // now I'll disable the warning that most of the bugs that would trigger
           // it are either exclusive to concurrent mode or exist in both.
           (current2.mode & ConcurrentMode) !== NoMode) {
-            error("Internal React error: Expected static flag was missing. Please notify the React team.");
+            error2("Internal React error: Expected static flag was missing. Please notify the React team.");
           }
         }
         didScheduleRenderPhaseUpdate = false;
@@ -21565,7 +21565,7 @@ function requireReactDom_development() {
           }
           {
             if (current2.baseQueue !== baseQueue) {
-              error("Internal error: Expected work-in-progress queue to be a clone. This is a bug in React.");
+              error2("Internal error: Expected work-in-progress queue to be a clone. This is a bug in React.");
             }
           }
           current2.baseQueue = baseQueue = pendingQueue;
@@ -21700,7 +21700,7 @@ function requireReactDom_development() {
           {
             if (!didWarnUncachedGetSnapshot) {
               if (nextSnapshot !== getServerSnapshot()) {
-                error("The result of getServerSnapshot should be cached to avoid an infinite loop");
+                error2("The result of getServerSnapshot should be cached to avoid an infinite loop");
                 didWarnUncachedGetSnapshot = true;
               }
             }
@@ -21711,7 +21711,7 @@ function requireReactDom_development() {
             if (!didWarnUncachedGetSnapshot) {
               var cachedSnapshot = getSnapshot();
               if (!objectIs(nextSnapshot, cachedSnapshot)) {
-                error("The result of getSnapshot should be cached to avoid an infinite loop");
+                error2("The result of getSnapshot should be cached to avoid an infinite loop");
                 didWarnUncachedGetSnapshot = true;
               }
             }
@@ -21743,7 +21743,7 @@ function requireReactDom_development() {
           if (!didWarnUncachedGetSnapshot) {
             var cachedSnapshot = getSnapshot();
             if (!objectIs(nextSnapshot, cachedSnapshot)) {
-              error("The result of getSnapshot should be cached to avoid an infinite loop");
+              error2("The result of getSnapshot should be cached to avoid an infinite loop");
               didWarnUncachedGetSnapshot = true;
             }
           }
@@ -21812,7 +21812,7 @@ function requireReactDom_development() {
         try {
           var nextValue = latestGetSnapshot();
           return !objectIs(prevValue, nextValue);
-        } catch (error2) {
+        } catch (error22) {
           return true;
         }
       }
@@ -21952,7 +21952,7 @@ function requireReactDom_development() {
           var refObject = ref;
           {
             if (!refObject.hasOwnProperty("current")) {
-              error("Expected useImperativeHandle() first argument to either be a ref callback or React.createRef() object. Instead received: %s.", "an object with keys {" + Object.keys(refObject).join(", ") + "}");
+              error2("Expected useImperativeHandle() first argument to either be a ref callback or React.createRef() object. Instead received: %s.", "an object with keys {" + Object.keys(refObject).join(", ") + "}");
             }
           }
           var _inst2 = create2();
@@ -21965,7 +21965,7 @@ function requireReactDom_development() {
       function mountImperativeHandle(ref, create2, deps) {
         {
           if (typeof create2 !== "function") {
-            error("Expected useImperativeHandle() second argument to be a function that creates a handle. Instead received: %s.", create2 !== null ? typeof create2 : "null");
+            error2("Expected useImperativeHandle() second argument to be a function that creates a handle. Instead received: %s.", create2 !== null ? typeof create2 : "null");
           }
         }
         var effectDeps = deps !== null && deps !== void 0 ? deps.concat([ref]) : null;
@@ -21981,7 +21981,7 @@ function requireReactDom_development() {
       function updateImperativeHandle(ref, create2, deps) {
         {
           if (typeof create2 !== "function") {
-            error("Expected useImperativeHandle() second argument to be a function that creates a handle. Instead received: %s.", create2 !== null ? typeof create2 : "null");
+            error2("Expected useImperativeHandle() second argument to be a function that creates a handle. Instead received: %s.", create2 !== null ? typeof create2 : "null");
           }
         }
         var effectDeps = deps !== null && deps !== void 0 ? deps.concat([ref]) : null;
@@ -22094,7 +22094,7 @@ function requireReactDom_development() {
             if (prevTransition === null && currentTransition._updatedFibers) {
               var updatedFibersCount = currentTransition._updatedFibers.size;
               if (updatedFibersCount > 10) {
-                warn("Detected a large number of updates inside startTransition. If this is due to a subscription please re-write it to use React provided hooks. Otherwise concurrent mode guarantees are off the table.");
+                warn2("Detected a large number of updates inside startTransition. If this is due to a subscription please re-write it to use React provided hooks. Otherwise concurrent mode guarantees are off the table.");
               }
               currentTransition._updatedFibers.clear();
             }
@@ -22154,7 +22154,7 @@ function requireReactDom_development() {
       function dispatchReducerAction(fiber, queue, action) {
         {
           if (typeof arguments[3] === "function") {
-            error("State updates from the useState() and useReducer() Hooks don't support the second callback argument. To execute a side effect after rendering, declare it in the component body with useEffect().");
+            error2("State updates from the useState() and useReducer() Hooks don't support the second callback argument. To execute a side effect after rendering, declare it in the component body with useEffect().");
           }
         }
         var lane = requestUpdateLane(fiber);
@@ -22180,7 +22180,7 @@ function requireReactDom_development() {
       function dispatchSetState(fiber, queue, action) {
         {
           if (typeof arguments[3] === "function") {
-            error("State updates from the useState() and useReducer() Hooks don't support the second callback argument. To execute a side effect after rendering, declare it in the component body with useEffect().");
+            error2("State updates from the useState() and useReducer() Hooks don't support the second callback argument. To execute a side effect after rendering, declare it in the component body with useEffect().");
           }
         }
         var lane = requestUpdateLane(fiber);
@@ -22212,7 +22212,7 @@ function requireReactDom_development() {
                   enqueueConcurrentHookUpdateAndEagerlyBailout(fiber, queue, update, lane);
                   return;
                 }
-              } catch (error2) {
+              } catch (error22) {
               } finally {
                 {
                   ReactCurrentDispatcher$1.current = prevDispatcher;
@@ -22287,10 +22287,10 @@ function requireReactDom_development() {
       var InvalidNestedHooksDispatcherOnRerenderInDEV = null;
       {
         var warnInvalidContextAccess = function() {
-          error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
+          error2("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
         };
         var warnInvalidHookAccess = function() {
-          error("Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://reactjs.org/link/rules-of-hooks");
+          error2("Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://reactjs.org/link/rules-of-hooks");
         };
         HooksDispatcherOnMountInDEV = {
           readContext: function(context) {
@@ -23230,7 +23230,7 @@ function requireReactDom_development() {
           var key = callerName + "_" + callback;
           if (!didWarnOnInvalidCallback.has(key)) {
             didWarnOnInvalidCallback.add(key);
-            error("%s(...): Expected the last optional `callback` argument to be a function. Instead received: %s.", callerName, callback);
+            error2("%s(...): Expected the last optional `callback` argument to be a function. Instead received: %s.", callerName, callback);
           }
         };
         warnOnUndefinedDerivedState = function(type, partialState) {
@@ -23238,7 +23238,7 @@ function requireReactDom_development() {
             var componentName = getComponentNameFromType(type) || "Component";
             if (!didWarnAboutUndefinedDerivedState.has(componentName)) {
               didWarnAboutUndefinedDerivedState.add(componentName);
-              error("%s.getDerivedStateFromProps(): A valid state object (or null) must be returned. You have returned undefined.", componentName);
+              error2("%s.getDerivedStateFromProps(): A valid state object (or null) must be returned. You have returned undefined.", componentName);
             }
           }
         };
@@ -23352,7 +23352,7 @@ function requireReactDom_development() {
               }
             }
             if (shouldUpdate === void 0) {
-              error("%s.shouldComponentUpdate(): Returned undefined instead of a boolean value. Make sure to return true or false.", getComponentNameFromType(ctor) || "Component");
+              error2("%s.shouldComponentUpdate(): Returned undefined instead of a boolean value. Make sure to return true or false.", getComponentNameFromType(ctor) || "Component");
             }
           }
           return shouldUpdate;
@@ -23369,88 +23369,88 @@ function requireReactDom_development() {
           var renderPresent = instance.render;
           if (!renderPresent) {
             if (ctor.prototype && typeof ctor.prototype.render === "function") {
-              error("%s(...): No `render` method found on the returned component instance: did you accidentally return an object from the constructor?", name2);
+              error2("%s(...): No `render` method found on the returned component instance: did you accidentally return an object from the constructor?", name2);
             } else {
-              error("%s(...): No `render` method found on the returned component instance: you may have forgotten to define `render`.", name2);
+              error2("%s(...): No `render` method found on the returned component instance: you may have forgotten to define `render`.", name2);
             }
           }
           if (instance.getInitialState && !instance.getInitialState.isReactClassApproved && !instance.state) {
-            error("getInitialState was defined on %s, a plain JavaScript class. This is only supported for classes created using React.createClass. Did you mean to define a state property instead?", name2);
+            error2("getInitialState was defined on %s, a plain JavaScript class. This is only supported for classes created using React.createClass. Did you mean to define a state property instead?", name2);
           }
           if (instance.getDefaultProps && !instance.getDefaultProps.isReactClassApproved) {
-            error("getDefaultProps was defined on %s, a plain JavaScript class. This is only supported for classes created using React.createClass. Use a static property to define defaultProps instead.", name2);
+            error2("getDefaultProps was defined on %s, a plain JavaScript class. This is only supported for classes created using React.createClass. Use a static property to define defaultProps instead.", name2);
           }
           if (instance.propTypes) {
-            error("propTypes was defined as an instance property on %s. Use a static property to define propTypes instead.", name2);
+            error2("propTypes was defined as an instance property on %s. Use a static property to define propTypes instead.", name2);
           }
           if (instance.contextType) {
-            error("contextType was defined as an instance property on %s. Use a static property to define contextType instead.", name2);
+            error2("contextType was defined as an instance property on %s. Use a static property to define contextType instead.", name2);
           }
           {
             if (ctor.childContextTypes && !didWarnAboutLegacyContext$1.has(ctor) && // Strict Mode has its own warning for legacy context, so we can skip
             // this one.
             (workInProgress2.mode & StrictLegacyMode) === NoMode) {
               didWarnAboutLegacyContext$1.add(ctor);
-              error("%s uses the legacy childContextTypes API which is no longer supported and will be removed in the next major release. Use React.createContext() instead\n\n.Learn more about this warning here: https://reactjs.org/link/legacy-context", name2);
+              error2("%s uses the legacy childContextTypes API which is no longer supported and will be removed in the next major release. Use React.createContext() instead\n\n.Learn more about this warning here: https://reactjs.org/link/legacy-context", name2);
             }
             if (ctor.contextTypes && !didWarnAboutLegacyContext$1.has(ctor) && // Strict Mode has its own warning for legacy context, so we can skip
             // this one.
             (workInProgress2.mode & StrictLegacyMode) === NoMode) {
               didWarnAboutLegacyContext$1.add(ctor);
-              error("%s uses the legacy contextTypes API which is no longer supported and will be removed in the next major release. Use React.createContext() with static contextType instead.\n\nLearn more about this warning here: https://reactjs.org/link/legacy-context", name2);
+              error2("%s uses the legacy contextTypes API which is no longer supported and will be removed in the next major release. Use React.createContext() with static contextType instead.\n\nLearn more about this warning here: https://reactjs.org/link/legacy-context", name2);
             }
             if (instance.contextTypes) {
-              error("contextTypes was defined as an instance property on %s. Use a static property to define contextTypes instead.", name2);
+              error2("contextTypes was defined as an instance property on %s. Use a static property to define contextTypes instead.", name2);
             }
             if (ctor.contextType && ctor.contextTypes && !didWarnAboutContextTypeAndContextTypes.has(ctor)) {
               didWarnAboutContextTypeAndContextTypes.add(ctor);
-              error("%s declares both contextTypes and contextType static properties. The legacy contextTypes property will be ignored.", name2);
+              error2("%s declares both contextTypes and contextType static properties. The legacy contextTypes property will be ignored.", name2);
             }
           }
           if (typeof instance.componentShouldUpdate === "function") {
-            error("%s has a method called componentShouldUpdate(). Did you mean shouldComponentUpdate()? The name is phrased as a question because the function is expected to return a value.", name2);
+            error2("%s has a method called componentShouldUpdate(). Did you mean shouldComponentUpdate()? The name is phrased as a question because the function is expected to return a value.", name2);
           }
           if (ctor.prototype && ctor.prototype.isPureReactComponent && typeof instance.shouldComponentUpdate !== "undefined") {
-            error("%s has a method called shouldComponentUpdate(). shouldComponentUpdate should not be used when extending React.PureComponent. Please extend React.Component if shouldComponentUpdate is used.", getComponentNameFromType(ctor) || "A pure component");
+            error2("%s has a method called shouldComponentUpdate(). shouldComponentUpdate should not be used when extending React.PureComponent. Please extend React.Component if shouldComponentUpdate is used.", getComponentNameFromType(ctor) || "A pure component");
           }
           if (typeof instance.componentDidUnmount === "function") {
-            error("%s has a method called componentDidUnmount(). But there is no such lifecycle method. Did you mean componentWillUnmount()?", name2);
+            error2("%s has a method called componentDidUnmount(). But there is no such lifecycle method. Did you mean componentWillUnmount()?", name2);
           }
           if (typeof instance.componentDidReceiveProps === "function") {
-            error("%s has a method called componentDidReceiveProps(). But there is no such lifecycle method. If you meant to update the state in response to changing props, use componentWillReceiveProps(). If you meant to fetch data or run side-effects or mutations after React has updated the UI, use componentDidUpdate().", name2);
+            error2("%s has a method called componentDidReceiveProps(). But there is no such lifecycle method. If you meant to update the state in response to changing props, use componentWillReceiveProps(). If you meant to fetch data or run side-effects or mutations after React has updated the UI, use componentDidUpdate().", name2);
           }
           if (typeof instance.componentWillRecieveProps === "function") {
-            error("%s has a method called componentWillRecieveProps(). Did you mean componentWillReceiveProps()?", name2);
+            error2("%s has a method called componentWillRecieveProps(). Did you mean componentWillReceiveProps()?", name2);
           }
           if (typeof instance.UNSAFE_componentWillRecieveProps === "function") {
-            error("%s has a method called UNSAFE_componentWillRecieveProps(). Did you mean UNSAFE_componentWillReceiveProps()?", name2);
+            error2("%s has a method called UNSAFE_componentWillRecieveProps(). Did you mean UNSAFE_componentWillReceiveProps()?", name2);
           }
           var hasMutatedProps = instance.props !== newProps;
           if (instance.props !== void 0 && hasMutatedProps) {
-            error("%s(...): When calling super() in `%s`, make sure to pass up the same props that your component's constructor was passed.", name2, name2);
+            error2("%s(...): When calling super() in `%s`, make sure to pass up the same props that your component's constructor was passed.", name2, name2);
           }
           if (instance.defaultProps) {
-            error("Setting defaultProps as an instance property on %s is not supported and will be ignored. Instead, define defaultProps as a static property on %s.", name2, name2);
+            error2("Setting defaultProps as an instance property on %s is not supported and will be ignored. Instead, define defaultProps as a static property on %s.", name2, name2);
           }
           if (typeof instance.getSnapshotBeforeUpdate === "function" && typeof instance.componentDidUpdate !== "function" && !didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate.has(ctor)) {
             didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate.add(ctor);
-            error("%s: getSnapshotBeforeUpdate() should be used with componentDidUpdate(). This component defines getSnapshotBeforeUpdate() only.", getComponentNameFromType(ctor));
+            error2("%s: getSnapshotBeforeUpdate() should be used with componentDidUpdate(). This component defines getSnapshotBeforeUpdate() only.", getComponentNameFromType(ctor));
           }
           if (typeof instance.getDerivedStateFromProps === "function") {
-            error("%s: getDerivedStateFromProps() is defined as an instance method and will be ignored. Instead, declare it as a static method.", name2);
+            error2("%s: getDerivedStateFromProps() is defined as an instance method and will be ignored. Instead, declare it as a static method.", name2);
           }
           if (typeof instance.getDerivedStateFromError === "function") {
-            error("%s: getDerivedStateFromError() is defined as an instance method and will be ignored. Instead, declare it as a static method.", name2);
+            error2("%s: getDerivedStateFromError() is defined as an instance method and will be ignored. Instead, declare it as a static method.", name2);
           }
           if (typeof ctor.getSnapshotBeforeUpdate === "function") {
-            error("%s: getSnapshotBeforeUpdate() is defined as a static method and will be ignored. Instead, declare it as an instance method.", name2);
+            error2("%s: getSnapshotBeforeUpdate() is defined as a static method and will be ignored. Instead, declare it as an instance method.", name2);
           }
           var _state = instance.state;
           if (_state && (typeof _state !== "object" || isArray(_state))) {
-            error("%s.state: must be set to an object or null", name2);
+            error2("%s.state: must be set to an object or null", name2);
           }
           if (typeof instance.getChildContext === "function" && typeof ctor.childContextTypes !== "object") {
-            error("%s.getChildContext(): childContextTypes must be defined in order to use getChildContext().", name2);
+            error2("%s.getChildContext(): childContextTypes must be defined in order to use getChildContext().", name2);
           }
         }
       }
@@ -23487,7 +23487,7 @@ function requireReactDom_development() {
               } else {
                 addendum = " However, it is set to an object with keys {" + Object.keys(contextType).join(", ") + "}.";
               }
-              error("%s defines an invalid contextType. contextType should point to the Context object returned by React.createContext().%s", getComponentNameFromType(ctor) || "Component", addendum);
+              error2("%s defines an invalid contextType. contextType should point to the Context object returned by React.createContext().%s", getComponentNameFromType(ctor) || "Component", addendum);
             }
           }
         }
@@ -23517,7 +23517,7 @@ function requireReactDom_development() {
             var componentName = getComponentNameFromType(ctor) || "Component";
             if (!didWarnAboutUninitializedState.has(componentName)) {
               didWarnAboutUninitializedState.add(componentName);
-              error("`%s` uses `getDerivedStateFromProps` but its initial state is %s. This is not recommended. Instead, define the initial state by assigning an object to `this.state` in the constructor of `%s`. This ensures that `getDerivedStateFromProps` arguments have a consistent shape.", componentName, instance.state === null ? "null" : "undefined", componentName);
+              error2("`%s` uses `getDerivedStateFromProps` but its initial state is %s. This is not recommended. Instead, define the initial state by assigning an object to `this.state` in the constructor of `%s`. This ensures that `getDerivedStateFromProps` arguments have a consistent shape.", componentName, instance.state === null ? "null" : "undefined", componentName);
             }
           }
           if (typeof ctor.getDerivedStateFromProps === "function" || typeof instance.getSnapshotBeforeUpdate === "function") {
@@ -23544,7 +23544,7 @@ function requireReactDom_development() {
               var newApiName = typeof ctor.getDerivedStateFromProps === "function" ? "getDerivedStateFromProps()" : "getSnapshotBeforeUpdate()";
               if (!didWarnAboutLegacyLifecyclesAndDerivedState.has(_componentName)) {
                 didWarnAboutLegacyLifecyclesAndDerivedState.add(_componentName);
-                error("Unsafe legacy lifecycles will not be called for components using new component APIs.\n\n%s uses %s but also contains the following legacy lifecycles:%s%s%s\n\nThe above lifecycles should be removed. Learn more about this warning here:\nhttps://reactjs.org/link/unsafe-component-lifecycles", _componentName, newApiName, foundWillMountName !== null ? "\n  " + foundWillMountName : "", foundWillReceivePropsName !== null ? "\n  " + foundWillReceivePropsName : "", foundWillUpdateName !== null ? "\n  " + foundWillUpdateName : "");
+                error2("Unsafe legacy lifecycles will not be called for components using new component APIs.\n\n%s uses %s but also contains the following legacy lifecycles:%s%s%s\n\nThe above lifecycles should be removed. Learn more about this warning here:\nhttps://reactjs.org/link/unsafe-component-lifecycles", _componentName, newApiName, foundWillMountName !== null ? "\n  " + foundWillMountName : "", foundWillReceivePropsName !== null ? "\n  " + foundWillReceivePropsName : "", foundWillUpdateName !== null ? "\n  " + foundWillUpdateName : "");
               }
             }
           }
@@ -23564,7 +23564,7 @@ function requireReactDom_development() {
         }
         if (oldState !== instance.state) {
           {
-            error("%s.componentWillMount(): Assigning directly to this.state is deprecated (except inside a component's constructor). Use setState instead.", getComponentNameFromFiber(workInProgress2) || "Component");
+            error2("%s.componentWillMount(): Assigning directly to this.state is deprecated (except inside a component's constructor). Use setState instead.", getComponentNameFromFiber(workInProgress2) || "Component");
           }
           classComponentUpdater.enqueueReplaceState(instance, instance.state, null);
         }
@@ -23582,7 +23582,7 @@ function requireReactDom_development() {
             var componentName = getComponentNameFromFiber(workInProgress2) || "Component";
             if (!didWarnAboutStateAssignmentForComponent.has(componentName)) {
               didWarnAboutStateAssignmentForComponent.add(componentName);
-              error("%s.componentWillReceiveProps(): Assigning directly to this.state is deprecated (except inside a component's constructor). Use setState instead.", componentName);
+              error2("%s.componentWillReceiveProps(): Assigning directly to this.state is deprecated (except inside a component's constructor). Use setState instead.", componentName);
             }
           }
           classComponentUpdater.enqueueReplaceState(instance, instance.state, null);
@@ -23609,7 +23609,7 @@ function requireReactDom_development() {
             var componentName = getComponentNameFromType(ctor) || "Component";
             if (!didWarnAboutDirectlyAssigningPropsToState.has(componentName)) {
               didWarnAboutDirectlyAssigningPropsToState.add(componentName);
-              error("%s: It is not recommended to assign props directly to state because updates to props won't be reflected in state. In most cases, it is better to use props directly.", componentName);
+              error2("%s: It is not recommended to assign props directly to state because updates to props won't be reflected in state. In most cases, it is better to use props directly.", componentName);
             }
           }
           if (workInProgress2.mode & StrictLegacyMode) {
@@ -23831,16 +23831,16 @@ function requireReactDom_development() {
           if (logError === false) {
             return;
           }
-          var error2 = errorInfo.value;
+          var error22 = errorInfo.value;
           if (true) {
             var source = errorInfo.source;
             var stack = errorInfo.stack;
             var componentStack = stack !== null ? stack : "";
-            if (error2 != null && error2._suppressLogging) {
+            if (error22 != null && error22._suppressLogging) {
               if (boundary.tag === ClassComponent) {
                 return;
               }
-              console["error"](error2);
+              console["error"](error22);
             }
             var componentName = source ? getComponentNameFromFiber(source) : null;
             var componentNameMessage = componentName ? "The above error occurred in the <" + componentName + "> component:" : "The above error occurred in one of your React components:";
@@ -23867,9 +23867,9 @@ function requireReactDom_development() {
         update.payload = {
           element: null
         };
-        var error2 = errorInfo.value;
+        var error22 = errorInfo.value;
         update.callback = function() {
-          onUncaughtError(error2);
+          onUncaughtError(error22);
           logCapturedError(fiber, errorInfo);
         };
         return update;
@@ -23908,7 +23908,7 @@ function requireReactDom_development() {
             {
               if (typeof getDerivedStateFromError !== "function") {
                 if (!includesSomeLane(fiber.lanes, SyncLane)) {
-                  error("%s: Error boundaries should implement getDerivedStateFromError(). In that method, return a state update to display an error message or fallback UI.", getComponentNameFromFiber(fiber) || "Unknown");
+                  error2("%s: Error boundaries should implement getDerivedStateFromError(). In that method, return a state update to display an error message or fallback UI.", getComponentNameFromFiber(fiber) || "Unknown");
                 }
               }
             }
@@ -24200,7 +24200,7 @@ function requireReactDom_development() {
             if (Component.defaultProps !== void 0) {
               var componentName = getComponentNameFromType(type) || "Unknown";
               if (!didWarnAboutDefaultPropsOnFunctionComponent[componentName]) {
-                error("%s: Support for defaultProps will be removed from memo components in a future major release. Use JavaScript default parameters instead.", componentName);
+                error2("%s: Support for defaultProps will be removed from memo components in a future major release. Use JavaScript default parameters instead.", componentName);
                 didWarnAboutDefaultPropsOnFunctionComponent[componentName] = true;
               }
             }
@@ -24487,7 +24487,7 @@ function requireReactDom_development() {
           var inst = workInProgress2.stateNode;
           if (shouldUpdate && inst.props !== nextProps) {
             if (!didWarnAboutReassigningProps) {
-              error("It looks like %s is reassigning its own `this.props` while rendering. This is not supported and can lead to confusing bugs.", getComponentNameFromFiber(workInProgress2) || "a component");
+              error2("It looks like %s is reassigning its own `this.props` while rendering. This is not supported and can lead to confusing bugs.", getComponentNameFromFiber(workInProgress2) || "a component");
             }
             didWarnAboutReassigningProps = true;
           }
@@ -24735,7 +24735,7 @@ function requireReactDom_development() {
           if (Component.prototype && typeof Component.prototype.render === "function") {
             var componentName = getComponentNameFromType(Component) || "Unknown";
             if (!didWarnAboutBadClass[componentName]) {
-              error("The <%s /> component appears to have a render method, but doesn't extend React.Component. This is likely to cause errors. Change %s to extend React.Component instead.", componentName, componentName);
+              error2("The <%s /> component appears to have a render method, but doesn't extend React.Component. This is likely to cause errors. Change %s to extend React.Component instead.", componentName, componentName);
               didWarnAboutBadClass[componentName] = true;
             }
           }
@@ -24756,7 +24756,7 @@ function requireReactDom_development() {
           if (typeof value === "object" && value !== null && typeof value.render === "function" && value.$$typeof === void 0) {
             var _componentName = getComponentNameFromType(Component) || "Unknown";
             if (!didWarnAboutModulePatternComponent[_componentName]) {
-              error("The <%s /> component appears to be a function component that returns a class instance. Change %s to a class that extends React.Component instead. If you can't use a class try assigning the prototype on the function as a workaround. `%s.prototype = React.Component.prototype`. Don't use an arrow function since it cannot be called with `new` by React.", _componentName, _componentName, _componentName);
+              error2("The <%s /> component appears to be a function component that returns a class instance. Change %s to a class that extends React.Component instead. If you can't use a class try assigning the prototype on the function as a workaround. `%s.prototype = React.Component.prototype`. Don't use an arrow function since it cannot be called with `new` by React.", _componentName, _componentName, _componentName);
               didWarnAboutModulePatternComponent[_componentName] = true;
             }
           }
@@ -24769,7 +24769,7 @@ function requireReactDom_development() {
           {
             var _componentName2 = getComponentNameFromType(Component) || "Unknown";
             if (!didWarnAboutModulePatternComponent[_componentName2]) {
-              error("The <%s /> component appears to be a function component that returns a class instance. Change %s to a class that extends React.Component instead. If you can't use a class try assigning the prototype on the function as a workaround. `%s.prototype = React.Component.prototype`. Don't use an arrow function since it cannot be called with `new` by React.", _componentName2, _componentName2, _componentName2);
+              error2("The <%s /> component appears to be a function component that returns a class instance. Change %s to a class that extends React.Component instead. If you can't use a class try assigning the prototype on the function as a workaround. `%s.prototype = React.Component.prototype`. Don't use an arrow function since it cannot be called with `new` by React.", _componentName2, _componentName2, _componentName2);
               didWarnAboutModulePatternComponent[_componentName2] = true;
             }
           }
@@ -24815,7 +24815,7 @@ function requireReactDom_development() {
         {
           if (Component) {
             if (Component.childContextTypes) {
-              error("%s(...): childContextTypes cannot be defined on a function component.", Component.displayName || Component.name || "Component");
+              error2("%s(...): childContextTypes cannot be defined on a function component.", Component.displayName || Component.name || "Component");
             }
           }
           if (workInProgress2.ref !== null) {
@@ -24831,27 +24831,27 @@ function requireReactDom_development() {
             }
             if (!didWarnAboutFunctionRefs[warningKey]) {
               didWarnAboutFunctionRefs[warningKey] = true;
-              error("Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?%s", info2);
+              error2("Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?%s", info2);
             }
           }
           if (Component.defaultProps !== void 0) {
             var componentName = getComponentNameFromType(Component) || "Unknown";
             if (!didWarnAboutDefaultPropsOnFunctionComponent[componentName]) {
-              error("%s: Support for defaultProps will be removed from function components in a future major release. Use JavaScript default parameters instead.", componentName);
+              error2("%s: Support for defaultProps will be removed from function components in a future major release. Use JavaScript default parameters instead.", componentName);
               didWarnAboutDefaultPropsOnFunctionComponent[componentName] = true;
             }
           }
           if (typeof Component.getDerivedStateFromProps === "function") {
             var _componentName3 = getComponentNameFromType(Component) || "Unknown";
             if (!didWarnAboutGetDerivedStateOnFunctionComponent[_componentName3]) {
-              error("%s: Function components do not support getDerivedStateFromProps.", _componentName3);
+              error2("%s: Function components do not support getDerivedStateFromProps.", _componentName3);
               didWarnAboutGetDerivedStateOnFunctionComponent[_componentName3] = true;
             }
           }
           if (typeof Component.contextType === "object" && Component.contextType !== null) {
             var _componentName4 = getComponentNameFromType(Component) || "Unknown";
             if (!didWarnAboutContextTypeOnFunctionComponent[_componentName4]) {
-              error("%s: Function components do not support contextType.", _componentName4);
+              error2("%s: Function components do not support contextType.", _componentName4);
               didWarnAboutContextTypeOnFunctionComponent[_componentName4] = true;
             }
           }
@@ -25109,7 +25109,7 @@ function requireReactDom_development() {
       function mountDehydratedSuspenseComponent(workInProgress2, suspenseInstance, renderLanes2) {
         if ((workInProgress2.mode & ConcurrentMode) === NoMode) {
           {
-            error("Cannot hydrate Suspense in legacy mode. Switch from ReactDOM.hydrate(element, container) to ReactDOMClient.hydrateRoot(container, <App />).render(element) or remove the Suspense components from the server rendered components.");
+            error2("Cannot hydrate Suspense in legacy mode. Switch from ReactDOM.hydrate(element, container) to ReactDOMClient.hydrateRoot(container, <App />).render(element) or remove the Suspense components from the server rendered components.");
           }
           workInProgress2.lanes = laneToLanes(SyncLane);
         } else if (isSuspenseInstanceFallback(suspenseInstance)) {
@@ -25141,13 +25141,13 @@ function requireReactDom_development() {
               message = _getSuspenseInstanceF.message;
               stack = _getSuspenseInstanceF.stack;
             }
-            var error2;
+            var error22;
             if (message) {
-              error2 = new Error(message);
+              error22 = new Error(message);
             } else {
-              error2 = new Error("The server could not finish this Suspense boundary, likely due to an error during server rendering. Switched to client rendering.");
+              error22 = new Error("The server could not finish this Suspense boundary, likely due to an error during server rendering. Switched to client rendering.");
             }
-            var capturedValue = createCapturedValue(error2, digest, stack);
+            var capturedValue = createCapturedValue(error22, digest, stack);
             return retrySuspenseComponentWithoutHydrating(current2, workInProgress2, renderLanes2, capturedValue);
           }
           var hasContextChanged2 = includesSomeLane(renderLanes2, current2.childLanes);
@@ -25255,20 +25255,20 @@ function requireReactDom_development() {
                 case "together":
                 case "forwards":
                 case "backwards": {
-                  error('"%s" is not a valid value for revealOrder on <SuspenseList />. Use lowercase "%s" instead.', revealOrder, revealOrder.toLowerCase());
+                  error2('"%s" is not a valid value for revealOrder on <SuspenseList />. Use lowercase "%s" instead.', revealOrder, revealOrder.toLowerCase());
                   break;
                 }
                 case "forward":
                 case "backward": {
-                  error('"%s" is not a valid value for revealOrder on <SuspenseList />. React uses the -s suffix in the spelling. Use "%ss" instead.', revealOrder, revealOrder.toLowerCase());
+                  error2('"%s" is not a valid value for revealOrder on <SuspenseList />. React uses the -s suffix in the spelling. Use "%ss" instead.', revealOrder, revealOrder.toLowerCase());
                   break;
                 }
                 default:
-                  error('"%s" is not a supported revealOrder on <SuspenseList />. Did you mean "together", "forwards" or "backwards"?', revealOrder);
+                  error2('"%s" is not a supported revealOrder on <SuspenseList />. Did you mean "together", "forwards" or "backwards"?', revealOrder);
                   break;
               }
             } else {
-              error('%s is not a supported value for revealOrder on <SuspenseList />. Did you mean "together", "forwards" or "backwards"?', revealOrder);
+              error2('%s is not a supported value for revealOrder on <SuspenseList />. Did you mean "together", "forwards" or "backwards"?', revealOrder);
             }
           }
         }
@@ -25278,10 +25278,10 @@ function requireReactDom_development() {
           if (tailMode !== void 0 && !didWarnAboutTailOptions[tailMode]) {
             if (tailMode !== "collapsed" && tailMode !== "hidden") {
               didWarnAboutTailOptions[tailMode] = true;
-              error('"%s" is not a supported value for tail on <SuspenseList />. Did you mean "collapsed" or "hidden"?', tailMode);
+              error2('"%s" is not a supported value for tail on <SuspenseList />. Did you mean "collapsed" or "hidden"?', tailMode);
             } else if (revealOrder !== "forwards" && revealOrder !== "backwards") {
               didWarnAboutTailOptions[tailMode] = true;
-              error('<SuspenseList tail="%s" /> is only valid if revealOrder is "forwards" or "backwards". Did you mean to specify revealOrder="forwards"?', tailMode);
+              error2('<SuspenseList tail="%s" /> is only valid if revealOrder is "forwards" or "backwards". Did you mean to specify revealOrder="forwards"?', tailMode);
             }
           }
         }
@@ -25292,7 +25292,7 @@ function requireReactDom_development() {
           var isIterable = !isAnArray && typeof getIteratorFn(childSlot) === "function";
           if (isAnArray || isIterable) {
             var type = isAnArray ? "array" : "iterable";
-            error("A nested %s was passed to row #%s in <SuspenseList />. Wrap it in an additional SuspenseList to configure its revealOrder: <SuspenseList revealOrder=...> ... <SuspenseList revealOrder=...>{%s}</SuspenseList> ... </SuspenseList>", type, index22, type);
+            error2("A nested %s was passed to row #%s in <SuspenseList />. Wrap it in an additional SuspenseList to configure its revealOrder: <SuspenseList revealOrder=...> ... <SuspenseList revealOrder=...>{%s}</SuspenseList> ... </SuspenseList>", type, index22, type);
             return false;
           }
         }
@@ -25322,7 +25322,7 @@ function requireReactDom_development() {
                   }
                 }
               } else {
-                error('A single row was passed to a <SuspenseList revealOrder="%s" />. This is not useful since it needs multiple rows. Did you mean to pass multiple children or an array?', revealOrder);
+                error2('A single row was passed to a <SuspenseList revealOrder="%s" />. This is not useful since it needs multiple rows. Did you mean to pass multiple children or an array?', revealOrder);
               }
             }
           }
@@ -25461,7 +25461,7 @@ function requireReactDom_development() {
           if (!("value" in newProps)) {
             if (!hasWarnedAboutUsingNoValuePropOnContextProvider) {
               hasWarnedAboutUsingNoValuePropOnContextProvider = true;
-              error("The `value` prop is required for the `<Context.Provider>`. Did you misspell it or forget to pass it?");
+              error2("The `value` prop is required for the `<Context.Provider>`. Did you misspell it or forget to pass it?");
             }
           }
           var providerPropTypes = workInProgress2.type.propTypes;
@@ -25494,7 +25494,7 @@ function requireReactDom_development() {
             if (context !== context.Consumer) {
               if (!hasWarnedAboutUsingContextAsConsumer) {
                 hasWarnedAboutUsingContextAsConsumer = true;
-                error("Rendering <Context> directly is not supported and will be removed in a future major release. Did you mean to render <Context.Consumer> instead?");
+                error2("Rendering <Context> directly is not supported and will be removed in a future major release. Did you mean to render <Context.Consumer> instead?");
               }
             }
           } else {
@@ -25505,7 +25505,7 @@ function requireReactDom_development() {
         var render2 = newProps.children;
         {
           if (typeof render2 !== "function") {
-            error("A context consumer was rendered with multiple children, or a child that isn't a function. A context consumer expects a single child that is a function. If you did pass a function, make sure there is no trailing or leading whitespace around it.");
+            error2("A context consumer was rendered with multiple children, or a child that isn't a function. A context consumer expects a single child that is a function. If you did pass a function, make sure there is no trailing or leading whitespace around it.");
           }
         }
         prepareToReadContext(workInProgress2, renderLanes2);
@@ -26485,10 +26485,10 @@ function requireReactDom_development() {
       var nextEffect = null;
       var inProgressLanes = null;
       var inProgressRoot = null;
-      function reportUncaughtErrorInDEV(error2) {
+      function reportUncaughtErrorInDEV(error22) {
         {
           invokeGuardedCallback(null, function() {
-            throw error2;
+            throw error22;
           });
           clearCaughtError();
         }
@@ -26510,29 +26510,29 @@ function requireReactDom_development() {
       function safelyCallCommitHookLayoutEffectListMount(current2, nearestMountedAncestor) {
         try {
           commitHookEffectListMount(Layout, current2);
-        } catch (error2) {
-          captureCommitPhaseError(current2, nearestMountedAncestor, error2);
+        } catch (error22) {
+          captureCommitPhaseError(current2, nearestMountedAncestor, error22);
         }
       }
       function safelyCallComponentWillUnmount(current2, nearestMountedAncestor, instance) {
         try {
           callComponentWillUnmountWithTimer(current2, instance);
-        } catch (error2) {
-          captureCommitPhaseError(current2, nearestMountedAncestor, error2);
+        } catch (error22) {
+          captureCommitPhaseError(current2, nearestMountedAncestor, error22);
         }
       }
       function safelyCallComponentDidMount(current2, nearestMountedAncestor, instance) {
         try {
           instance.componentDidMount();
-        } catch (error2) {
-          captureCommitPhaseError(current2, nearestMountedAncestor, error2);
+        } catch (error22) {
+          captureCommitPhaseError(current2, nearestMountedAncestor, error22);
         }
       }
       function safelyAttachRef(current2, nearestMountedAncestor) {
         try {
           commitAttachRef(current2);
-        } catch (error2) {
-          captureCommitPhaseError(current2, nearestMountedAncestor, error2);
+        } catch (error22) {
+          captureCommitPhaseError(current2, nearestMountedAncestor, error22);
         }
       }
       function safelyDetachRef(current2, nearestMountedAncestor) {
@@ -26551,12 +26551,12 @@ function requireReactDom_development() {
               } else {
                 retVal = ref(null);
               }
-            } catch (error2) {
-              captureCommitPhaseError(current2, nearestMountedAncestor, error2);
+            } catch (error22) {
+              captureCommitPhaseError(current2, nearestMountedAncestor, error22);
             }
             {
               if (typeof retVal === "function") {
-                error("Unexpected return value from a callback ref in %s. A callback ref should not return a function.", getComponentNameFromFiber(current2));
+                error2("Unexpected return value from a callback ref in %s. A callback ref should not return a function.", getComponentNameFromFiber(current2));
               }
             }
           } else {
@@ -26567,8 +26567,8 @@ function requireReactDom_development() {
       function safelyCallDestroy(current2, nearestMountedAncestor, destroy) {
         try {
           destroy();
-        } catch (error2) {
-          captureCommitPhaseError(current2, nearestMountedAncestor, error2);
+        } catch (error22) {
+          captureCommitPhaseError(current2, nearestMountedAncestor, error22);
         }
       }
       var shouldFireAfterActiveInstanceBlur = false;
@@ -26598,8 +26598,8 @@ function requireReactDom_development() {
           setCurrentFiber(fiber);
           try {
             commitBeforeMutationEffectsOnFiber(fiber);
-          } catch (error2) {
-            captureCommitPhaseError(fiber, fiber.return, error2);
+          } catch (error22) {
+            captureCommitPhaseError(fiber, fiber.return, error22);
           }
           resetCurrentFiber();
           var sibling = fiber.sibling;
@@ -26630,10 +26630,10 @@ function requireReactDom_development() {
                 {
                   if (finishedWork.type === finishedWork.elementType && !didWarnAboutReassigningProps) {
                     if (instance.props !== finishedWork.memoizedProps) {
-                      error("Expected %s props to match memoized props before getSnapshotBeforeUpdate. This might either be because of a bug in React, or because a component reassigns its own `this.props`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
+                      error2("Expected %s props to match memoized props before getSnapshotBeforeUpdate. This might either be because of a bug in React, or because a component reassigns its own `this.props`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
                     }
                     if (instance.state !== finishedWork.memoizedState) {
-                      error("Expected %s state to match memoized state before getSnapshotBeforeUpdate. This might either be because of a bug in React, or because a component reassigns its own `this.state`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
+                      error2("Expected %s state to match memoized state before getSnapshotBeforeUpdate. This might either be because of a bug in React, or because a component reassigns its own `this.state`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
                     }
                   }
                 }
@@ -26642,7 +26642,7 @@ function requireReactDom_development() {
                   var didWarnSet = didWarnAboutUndefinedSnapshotBeforeUpdate;
                   if (snapshot === void 0 && !didWarnSet.has(finishedWork.type)) {
                     didWarnSet.add(finishedWork.type);
-                    error("%s.getSnapshotBeforeUpdate(): A snapshot value (or null) must be returned. You have returned undefined.", getComponentNameFromFiber(finishedWork));
+                    error2("%s.getSnapshotBeforeUpdate(): A snapshot value (or null) must be returned. You have returned undefined.", getComponentNameFromFiber(finishedWork));
                   }
                 }
                 instance.__reactInternalSnapshotBeforeUpdate = snapshot;
@@ -26763,7 +26763,7 @@ function requireReactDom_development() {
                   } else {
                     addendum = " You returned: " + destroy;
                   }
-                  error("%s must not return anything besides a function, which is used for clean-up.%s", hookName, addendum);
+                  error2("%s must not return anything besides a function, which is used for clean-up.%s", hookName, addendum);
                 }
               }
             }
@@ -26836,10 +26836,10 @@ function requireReactDom_development() {
                     {
                       if (finishedWork.type === finishedWork.elementType && !didWarnAboutReassigningProps) {
                         if (instance.props !== finishedWork.memoizedProps) {
-                          error("Expected %s props to match memoized props before componentDidMount. This might either be because of a bug in React, or because a component reassigns its own `this.props`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
+                          error2("Expected %s props to match memoized props before componentDidMount. This might either be because of a bug in React, or because a component reassigns its own `this.props`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
                         }
                         if (instance.state !== finishedWork.memoizedState) {
-                          error("Expected %s state to match memoized state before componentDidMount. This might either be because of a bug in React, or because a component reassigns its own `this.state`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
+                          error2("Expected %s state to match memoized state before componentDidMount. This might either be because of a bug in React, or because a component reassigns its own `this.state`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
                         }
                       }
                     }
@@ -26859,10 +26859,10 @@ function requireReactDom_development() {
                     {
                       if (finishedWork.type === finishedWork.elementType && !didWarnAboutReassigningProps) {
                         if (instance.props !== finishedWork.memoizedProps) {
-                          error("Expected %s props to match memoized props before componentDidUpdate. This might either be because of a bug in React, or because a component reassigns its own `this.props`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
+                          error2("Expected %s props to match memoized props before componentDidUpdate. This might either be because of a bug in React, or because a component reassigns its own `this.props`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
                         }
                         if (instance.state !== finishedWork.memoizedState) {
-                          error("Expected %s state to match memoized state before componentDidUpdate. This might either be because of a bug in React, or because a component reassigns its own `this.state`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
+                          error2("Expected %s state to match memoized state before componentDidUpdate. This might either be because of a bug in React, or because a component reassigns its own `this.state`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
                         }
                       }
                     }
@@ -26884,10 +26884,10 @@ function requireReactDom_development() {
                 {
                   if (finishedWork.type === finishedWork.elementType && !didWarnAboutReassigningProps) {
                     if (instance.props !== finishedWork.memoizedProps) {
-                      error("Expected %s props to match memoized props before processing the update queue. This might either be because of a bug in React, or because a component reassigns its own `this.props`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
+                      error2("Expected %s props to match memoized props before processing the update queue. This might either be because of a bug in React, or because a component reassigns its own `this.props`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
                     }
                     if (instance.state !== finishedWork.memoizedState) {
-                      error("Expected %s state to match memoized state before processing the update queue. This might either be because of a bug in React, or because a component reassigns its own `this.state`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
+                      error2("Expected %s state to match memoized state before processing the update queue. This might either be because of a bug in React, or because a component reassigns its own `this.state`. Please file an issue.", getComponentNameFromFiber(finishedWork) || "instance");
                     }
                   }
                 }
@@ -27035,8 +27035,8 @@ function requireReactDom_development() {
                   } else {
                     unhideInstance(node2.stateNode, node2.memoizedProps);
                   }
-                } catch (error2) {
-                  captureCommitPhaseError(finishedWork, finishedWork.return, error2);
+                } catch (error22) {
+                  captureCommitPhaseError(finishedWork, finishedWork.return, error22);
                 }
               }
             } else if (node2.tag === HostText) {
@@ -27048,8 +27048,8 @@ function requireReactDom_development() {
                   } else {
                     unhideTextInstance(_instance3, node2.memoizedProps);
                   }
-                } catch (error2) {
-                  captureCommitPhaseError(finishedWork, finishedWork.return, error2);
+                } catch (error22) {
+                  captureCommitPhaseError(finishedWork, finishedWork.return, error22);
                 }
               }
             } else if ((node2.tag === OffscreenComponent || node2.tag === LegacyHiddenComponent) && node2.memoizedState !== null && node2 !== finishedWork) ;
@@ -27104,13 +27104,13 @@ function requireReactDom_development() {
             }
             {
               if (typeof retVal === "function") {
-                error("Unexpected return value from a callback ref in %s. A callback ref should not return a function.", getComponentNameFromFiber(finishedWork));
+                error2("Unexpected return value from a callback ref in %s. A callback ref should not return a function.", getComponentNameFromFiber(finishedWork));
               }
             }
           } else {
             {
               if (!ref.hasOwnProperty("current")) {
-                error("Unexpected ref object provided for %s. Use either a ref-setter function or React.createRef().", getComponentNameFromFiber(finishedWork));
+                error2("Unexpected ref object provided for %s. Use either a ref-setter function or React.createRef().", getComponentNameFromFiber(finishedWork));
               }
             }
             ref.current = instanceToUse;
@@ -27493,8 +27493,8 @@ function requireReactDom_development() {
             var childToDelete = deletions[i2];
             try {
               commitDeletionEffects(root22, parentFiber, childToDelete);
-            } catch (error2) {
-              captureCommitPhaseError(childToDelete, parentFiber, error2);
+            } catch (error22) {
+              captureCommitPhaseError(childToDelete, parentFiber, error22);
             }
           }
         }
@@ -27523,22 +27523,22 @@ function requireReactDom_development() {
               try {
                 commitHookEffectListUnmount(Insertion | HasEffect, finishedWork, finishedWork.return);
                 commitHookEffectListMount(Insertion | HasEffect, finishedWork);
-              } catch (error2) {
-                captureCommitPhaseError(finishedWork, finishedWork.return, error2);
+              } catch (error22) {
+                captureCommitPhaseError(finishedWork, finishedWork.return, error22);
               }
               if (finishedWork.mode & ProfileMode) {
                 try {
                   startLayoutEffectTimer();
                   commitHookEffectListUnmount(Layout | HasEffect, finishedWork, finishedWork.return);
-                } catch (error2) {
-                  captureCommitPhaseError(finishedWork, finishedWork.return, error2);
+                } catch (error22) {
+                  captureCommitPhaseError(finishedWork, finishedWork.return, error22);
                 }
                 recordLayoutEffectDuration(finishedWork);
               } else {
                 try {
                   commitHookEffectListUnmount(Layout | HasEffect, finishedWork, finishedWork.return);
-                } catch (error2) {
-                  captureCommitPhaseError(finishedWork, finishedWork.return, error2);
+                } catch (error22) {
+                  captureCommitPhaseError(finishedWork, finishedWork.return, error22);
                 }
               }
             }
@@ -27567,8 +27567,8 @@ function requireReactDom_development() {
                 var instance = finishedWork.stateNode;
                 try {
                   resetTextContent(instance);
-                } catch (error2) {
-                  captureCommitPhaseError(finishedWork, finishedWork.return, error2);
+                } catch (error22) {
+                  captureCommitPhaseError(finishedWork, finishedWork.return, error22);
                 }
               }
               if (flags & Update) {
@@ -27582,8 +27582,8 @@ function requireReactDom_development() {
                   if (updatePayload !== null) {
                     try {
                       commitUpdate(_instance4, updatePayload, type, oldProps, newProps, finishedWork);
-                    } catch (error2) {
-                      captureCommitPhaseError(finishedWork, finishedWork.return, error2);
+                    } catch (error22) {
+                      captureCommitPhaseError(finishedWork, finishedWork.return, error22);
                     }
                   }
                 }
@@ -27604,8 +27604,8 @@ function requireReactDom_development() {
                 var oldText = current2 !== null ? current2.memoizedProps : newText;
                 try {
                   commitTextUpdate(textInstance, oldText, newText);
-                } catch (error2) {
-                  captureCommitPhaseError(finishedWork, finishedWork.return, error2);
+                } catch (error22) {
+                  captureCommitPhaseError(finishedWork, finishedWork.return, error22);
                 }
               }
             }
@@ -27621,8 +27621,8 @@ function requireReactDom_development() {
                   if (prevRootState.isDehydrated) {
                     try {
                       commitHydratedContainer(root22.containerInfo);
-                    } catch (error2) {
-                      captureCommitPhaseError(finishedWork, finishedWork.return, error2);
+                    } catch (error22) {
+                      captureCommitPhaseError(finishedWork, finishedWork.return, error22);
                     }
                   }
                 }
@@ -27654,8 +27654,8 @@ function requireReactDom_development() {
             if (flags & Update) {
               try {
                 commitSuspenseCallback(finishedWork);
-              } catch (error2) {
-                captureCommitPhaseError(finishedWork, finishedWork.return, error2);
+              } catch (error22) {
+                captureCommitPhaseError(finishedWork, finishedWork.return, error22);
               }
               attachSuspenseRetryListeners(finishedWork);
             }
@@ -27725,8 +27725,8 @@ function requireReactDom_development() {
         if (flags & Placement) {
           try {
             commitPlacement(finishedWork);
-          } catch (error2) {
-            captureCommitPhaseError(finishedWork, finishedWork.return, error2);
+          } catch (error22) {
+            captureCommitPhaseError(finishedWork, finishedWork.return, error22);
           }
           finishedWork.flags &= -3;
         }
@@ -27799,8 +27799,8 @@ function requireReactDom_development() {
             setCurrentFiber(fiber);
             try {
               commitLayoutEffectOnFiber(root22, current2, fiber, committedLanes);
-            } catch (error2) {
-              captureCommitPhaseError(fiber, fiber.return, error2);
+            } catch (error22) {
+              captureCommitPhaseError(fiber, fiber.return, error22);
             }
             resetCurrentFiber();
           }
@@ -27908,8 +27908,8 @@ function requireReactDom_development() {
           setCurrentFiber(fiber);
           try {
             reappearLayoutEffectsOnFiber(fiber);
-          } catch (error2) {
-            captureCommitPhaseError(fiber, fiber.return, error2);
+          } catch (error22) {
+            captureCommitPhaseError(fiber, fiber.return, error22);
           }
           resetCurrentFiber();
           if (fiber === subtreeRoot) {
@@ -27948,8 +27948,8 @@ function requireReactDom_development() {
             setCurrentFiber(fiber);
             try {
               commitPassiveMountOnFiber(root22, fiber, committedLanes, committedTransitions);
-            } catch (error2) {
-              captureCommitPhaseError(fiber, fiber.return, error2);
+            } catch (error22) {
+              captureCommitPhaseError(fiber, fiber.return, error22);
             }
             resetCurrentFiber();
           }
@@ -28118,8 +28118,8 @@ function requireReactDom_development() {
             case SimpleMemoComponent: {
               try {
                 commitHookEffectListMount(Layout | HasEffect, fiber);
-              } catch (error2) {
-                captureCommitPhaseError(fiber, fiber.return, error2);
+              } catch (error22) {
+                captureCommitPhaseError(fiber, fiber.return, error22);
               }
               break;
             }
@@ -28127,8 +28127,8 @@ function requireReactDom_development() {
               var instance = fiber.stateNode;
               try {
                 instance.componentDidMount();
-              } catch (error2) {
-                captureCommitPhaseError(fiber, fiber.return, error2);
+              } catch (error22) {
+                captureCommitPhaseError(fiber, fiber.return, error22);
               }
               break;
             }
@@ -28143,8 +28143,8 @@ function requireReactDom_development() {
             case SimpleMemoComponent: {
               try {
                 commitHookEffectListMount(Passive$1 | HasEffect, fiber);
-              } catch (error2) {
-                captureCommitPhaseError(fiber, fiber.return, error2);
+              } catch (error22) {
+                captureCommitPhaseError(fiber, fiber.return, error22);
               }
               break;
             }
@@ -28159,8 +28159,8 @@ function requireReactDom_development() {
             case SimpleMemoComponent: {
               try {
                 commitHookEffectListUnmount(Layout | HasEffect, fiber, fiber.return);
-              } catch (error2) {
-                captureCommitPhaseError(fiber, fiber.return, error2);
+              } catch (error22) {
+                captureCommitPhaseError(fiber, fiber.return, error22);
               }
               break;
             }
@@ -28182,8 +28182,8 @@ function requireReactDom_development() {
             case SimpleMemoComponent: {
               try {
                 commitHookEffectListUnmount(Passive$1 | HasEffect, fiber, fiber.return);
-              } catch (error2) {
-                captureCommitPhaseError(fiber, fiber.return, error2);
+              } catch (error22) {
+                captureCommitPhaseError(fiber, fiber.return, error22);
               }
             }
           }
@@ -28223,7 +28223,7 @@ function requireReactDom_development() {
             typeof IS_REACT_ACT_ENVIRONMENT !== "undefined" ? IS_REACT_ACT_ENVIRONMENT : void 0
           );
           if (!isReactActEnvironmentGlobal && ReactCurrentActQueue.current !== null) {
-            error("The current testing environment is not configured to support act(...)");
+            error2("The current testing environment is not configured to support act(...)");
           }
           return isReactActEnvironmentGlobal;
         }
@@ -28348,7 +28348,7 @@ function requireReactDom_development() {
         checkForNestedUpdates();
         {
           if (isRunningInsertionEffect) {
-            error("useInsertionEffect must not schedule updates.");
+            error2("useInsertionEffect must not schedule updates.");
           }
         }
         {
@@ -28415,7 +28415,7 @@ function requireReactDom_development() {
         !(ReactCurrentActQueue$1.current !== null && existingCallbackNode !== fakeActCallbackNode)) {
           {
             if (existingCallbackNode == null && existingCallbackPriority !== SyncLane) {
-              error("Expected scheduled callback to exist. This error is likely caused by a bug in React. Please file an issue.");
+              error2("Expected scheduled callback to exist. This error is likely caused by a bug in React. Please file an issue.");
             }
           }
           return;
@@ -28644,7 +28644,7 @@ function requireReactDom_development() {
                     if (!objectIs(getSnapshot(), renderedValue)) {
                       return false;
                     }
-                  } catch (error2) {
+                  } catch (error22) {
                     return false;
                   }
                 }
@@ -28894,14 +28894,14 @@ function requireReactDom_development() {
           markRootSuspended$1(workInProgressRoot, workInProgressRootRenderLanes);
         }
       }
-      function renderDidError(error2) {
+      function renderDidError(error22) {
         if (workInProgressRootExitStatus !== RootSuspendedWithDelay) {
           workInProgressRootExitStatus = RootErrored;
         }
         if (workInProgressRootConcurrentErrors === null) {
-          workInProgressRootConcurrentErrors = [error2];
+          workInProgressRootConcurrentErrors = [error22];
         } else {
-          workInProgressRootConcurrentErrors.push(error2);
+          workInProgressRootConcurrentErrors.push(error22);
         }
       }
       function renderHasNotSuspendedYet() {
@@ -29119,7 +29119,7 @@ function requireReactDom_development() {
         } else {
           {
             if (lanes === NoLanes) {
-              error("root.finishedLanes should not be empty during a commit. This is a bug in React.");
+              error2("root.finishedLanes should not be empty during a commit. This is a bug in React.");
             }
           }
         }
@@ -29353,15 +29353,15 @@ function requireReactDom_development() {
           legacyErrorBoundariesThatAlreadyFailed.add(instance);
         }
       }
-      function prepareToThrowUncaughtError(error2) {
+      function prepareToThrowUncaughtError(error22) {
         if (!hasUncaughtError) {
           hasUncaughtError = true;
-          firstUncaughtError = error2;
+          firstUncaughtError = error22;
         }
       }
       var onUncaughtError = prepareToThrowUncaughtError;
-      function captureCommitPhaseErrorOnRoot(rootFiber, sourceFiber, error2) {
-        var errorInfo = createCapturedValueAtFiber(error2, sourceFiber);
+      function captureCommitPhaseErrorOnRoot(rootFiber, sourceFiber, error22) {
+        var errorInfo = createCapturedValueAtFiber(error22, sourceFiber);
         var update = createRootErrorUpdate(rootFiber, errorInfo, SyncLane);
         var root22 = enqueueUpdate(rootFiber, update, SyncLane);
         var eventTime = requestEventTime();
@@ -29405,7 +29405,7 @@ function requireReactDom_development() {
           fiber = fiber.return;
         }
         {
-          error("Internal React error: Attempted to capture a commit phase error inside a detached tree. This indicates a bug in React. Likely causes include deleting the same fiber more than once, committing an already-finished tree, or an inconsistent return pointer.\n\nError message:\n\n%s", error$1);
+          error2("Internal React error: Attempted to capture a commit phase error inside a detached tree. This indicates a bug in React. Likely causes include deleting the same fiber more than once, committing an already-finished tree, or an inconsistent return pointer.\n\nError message:\n\n%s", error$1);
         }
       }
       function pingSuspendedRoot(root22, wakeable, pingedLanes) {
@@ -29479,7 +29479,7 @@ function requireReactDom_development() {
           if (nestedPassiveUpdateCount > NESTED_PASSIVE_UPDATE_LIMIT) {
             nestedPassiveUpdateCount = 0;
             rootWithPassiveNestedUpdates = null;
-            error("Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.");
+            error2("Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.");
           }
         }
       }
@@ -29551,7 +29551,7 @@ function requireReactDom_development() {
           var previousFiber = current;
           try {
             setCurrentFiber(fiber);
-            error("Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously later calls tries to update the component. Move this work to useEffect instead.");
+            error2("Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously later calls tries to update the component. Move this work to useEffect instead.");
           } finally {
             if (previousFiber) {
               setCurrentFiber(fiber);
@@ -29607,13 +29607,13 @@ function requireReactDom_development() {
                 if (!didWarnAboutUpdateInRenderForAnotherComponent.has(dedupeKey)) {
                   didWarnAboutUpdateInRenderForAnotherComponent.add(dedupeKey);
                   var setStateComponentName = getComponentNameFromFiber(fiber) || "Unknown";
-                  error("Cannot update a component (`%s`) while rendering a different component (`%s`). To locate the bad setState() call inside `%s`, follow the stack trace as described in https://reactjs.org/link/setstate-in-render", setStateComponentName, renderingComponentName, renderingComponentName);
+                  error2("Cannot update a component (`%s`) while rendering a different component (`%s`). To locate the bad setState() call inside `%s`, follow the stack trace as described in https://reactjs.org/link/setstate-in-render", setStateComponentName, renderingComponentName, renderingComponentName);
                 }
                 break;
               }
               case ClassComponent: {
                 if (!didWarnAboutUpdateInRender) {
-                  error("Cannot update during an existing state transition (such as within `render`). Render methods should be a pure function of props and state.");
+                  error2("Cannot update during an existing state transition (such as within `render`). Render methods should be a pure function of props and state.");
                   didWarnAboutUpdateInRender = true;
                 }
                 break;
@@ -29674,7 +29674,7 @@ function requireReactDom_development() {
             var previousFiber = current;
             try {
               setCurrentFiber(fiber);
-              error("An update to %s inside a test was not wrapped in act(...).\n\nWhen testing, code that causes React state updates should be wrapped into act(...):\n\nact(() => {\n  /* fire events that update state */\n});\n/* assert on the output */\n\nThis ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act", getComponentNameFromFiber(fiber));
+              error2("An update to %s inside a test was not wrapped in act(...).\n\nWhen testing, code that causes React state updates should be wrapped into act(...):\n\nact(() => {\n  /* fire events that update state */\n});\n/* assert on the output */\n\nThis ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act", getComponentNameFromFiber(fiber));
             } finally {
               if (previousFiber) {
                 setCurrentFiber(fiber);
@@ -29688,7 +29688,7 @@ function requireReactDom_development() {
       function warnIfSuspenseResolutionNotWrappedWithActDEV(root22) {
         {
           if (root22.tag !== LegacyRoot && isConcurrentActEnvironment() && ReactCurrentActQueue$1.current === null) {
-            error("A suspended resource finished loading inside a test, but the event was not wrapped in act(...).\n\nWhen testing, code that resolves suspended data should be wrapped into act(...):\n\nact(() => {\n  /* finish loading suspended data */\n});\n/* assert on the output */\n\nThis ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act");
+            error2("A suspended resource finished loading inside a test, but the event was not wrapped in act(...).\n\nWhen testing, code that resolves suspended data should be wrapped into act(...):\n\nact(() => {\n  /* finish loading suspended data */\n});\n/* assert on the output */\n\nThis ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act");
           }
         }
       }
@@ -30297,7 +30297,7 @@ function requireReactDom_development() {
       function createFiberFromProfiler(pendingProps, mode, lanes, key) {
         {
           if (typeof pendingProps.id !== "string") {
-            error('Profiler must specify an "id" of type `string` as a prop. Received the type `%s` instead.', typeof pendingProps.id);
+            error2('Profiler must specify an "id" of type `string` as a prop. Received the type `%s` instead.', typeof pendingProps.id);
           }
         }
         var fiber = createFiber(Profiler, pendingProps, key, mode | ProfileMode);
@@ -30524,9 +30524,9 @@ function requireReactDom_development() {
               try {
                 setCurrentFiber(hostFiber);
                 if (fiber.mode & StrictLegacyMode) {
-                  error("%s is deprecated in StrictMode. %s was passed an instance of %s which is inside StrictMode. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node", methodName, methodName, componentName);
+                  error2("%s is deprecated in StrictMode. %s was passed an instance of %s which is inside StrictMode. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node", methodName, methodName, componentName);
                 } else {
-                  error("%s is deprecated in StrictMode. %s was passed an instance of %s which renders StrictMode children. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node", methodName, methodName, componentName);
+                  error2("%s is deprecated in StrictMode. %s was passed an instance of %s which renders StrictMode children. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node", methodName, methodName, componentName);
                 }
               } finally {
                 if (previousFiber) {
@@ -30577,7 +30577,7 @@ function requireReactDom_development() {
         {
           if (isRendering && current !== null && !didWarnAboutNestedUpdates) {
             didWarnAboutNestedUpdates = true;
-            error("Render methods should be a pure function of props and state; triggering nested component updates from render is not allowed. If necessary, trigger nested updates in componentDidUpdate.\n\nCheck the render method of %s.", getComponentNameFromFiber(current) || "Unknown");
+            error2("Render methods should be a pure function of props and state; triggering nested component updates from render is not allowed. If necessary, trigger nested updates in componentDidUpdate.\n\nCheck the render method of %s.", getComponentNameFromFiber(current) || "Unknown");
           }
         }
         var update = createUpdate(eventTime, lane);
@@ -30588,7 +30588,7 @@ function requireReactDom_development() {
         if (callback !== null) {
           {
             if (typeof callback !== "function") {
-              error("render(...): Expected the last optional `callback` argument to be a function. Instead received: %s.", callback);
+              error2("render(...): Expected the last optional `callback` argument to be a function. Instead received: %s.", callback);
             }
           }
           update.callback = callback;
@@ -30743,12 +30743,12 @@ function requireReactDom_development() {
         };
         var copyWithRename = function(obj, oldPath, newPath) {
           if (oldPath.length !== newPath.length) {
-            warn("copyWithRename() expects paths of the same length");
+            warn2("copyWithRename() expects paths of the same length");
             return;
           } else {
             for (var i2 = 0; i2 < newPath.length - 1; i2++) {
               if (oldPath[i2] !== newPath[i2]) {
-                warn("copyWithRename() expects paths to be the same except for the deepest key");
+                warn2("copyWithRename() expects paths to be the same except for the deepest key");
                 return;
               }
             }
@@ -30906,8 +30906,8 @@ function requireReactDom_development() {
         // In modern browsers, reportError will dispatch an error event,
         // emulating an uncaught JavaScript error.
         reportError
-      ) : function(error2) {
-        console["error"](error2);
+      ) : function(error22) {
+        console["error"](error22);
       };
       function ReactDOMRoot(internalRoot) {
         this._internalRoot = internalRoot;
@@ -30919,18 +30919,18 @@ function requireReactDom_development() {
         }
         {
           if (typeof arguments[1] === "function") {
-            error("render(...): does not support the second callback argument. To execute a side effect after rendering, declare it in a component body with useEffect().");
+            error2("render(...): does not support the second callback argument. To execute a side effect after rendering, declare it in a component body with useEffect().");
           } else if (isValidContainer(arguments[1])) {
-            error("You passed a container to the second argument of root.render(...). You don't need to pass it again since you already passed it to create the root.");
+            error2("You passed a container to the second argument of root.render(...). You don't need to pass it again since you already passed it to create the root.");
           } else if (typeof arguments[1] !== "undefined") {
-            error("You passed a second argument to root.render(...) but it only accepts one argument.");
+            error2("You passed a second argument to root.render(...) but it only accepts one argument.");
           }
           var container = root22.containerInfo;
           if (container.nodeType !== COMMENT_NODE) {
             var hostInstance = findHostInstanceWithNoPortals(root22.current);
             if (hostInstance) {
               if (hostInstance.parentNode !== container) {
-                error("render(...): It looks like the React-rendered content of the root container was removed without using React. This is not supported and will cause errors. Instead, call root.unmount() to empty a root's container.");
+                error2("render(...): It looks like the React-rendered content of the root container was removed without using React. This is not supported and will cause errors. Instead, call root.unmount() to empty a root's container.");
               }
             }
           }
@@ -30940,7 +30940,7 @@ function requireReactDom_development() {
       ReactDOMHydrationRoot.prototype.unmount = ReactDOMRoot.prototype.unmount = function() {
         {
           if (typeof arguments[0] === "function") {
-            error("unmount(...): does not support a callback argument. To execute a side effect after rendering, declare it in a component body with useEffect().");
+            error2("unmount(...): does not support a callback argument. To execute a side effect after rendering, declare it in a component body with useEffect().");
           }
         }
         var root22 = this._internalRoot;
@@ -30949,7 +30949,7 @@ function requireReactDom_development() {
           var container = root22.containerInfo;
           {
             if (isAlreadyRendering()) {
-              error("Attempted to synchronously unmount a root while React was already rendering. React cannot finish unmounting the root until the current render has completed, which may lead to a race condition.");
+              error2("Attempted to synchronously unmount a root while React was already rendering. React cannot finish unmounting the root until the current render has completed, which may lead to a race condition.");
             }
           }
           flushSync(function() {
@@ -30970,10 +30970,10 @@ function requireReactDom_development() {
         if (options2 !== null && options2 !== void 0) {
           {
             if (options2.hydrate) {
-              warn("hydrate through createRoot is deprecated. Use ReactDOMClient.hydrateRoot(container, <App />) instead.");
+              warn2("hydrate through createRoot is deprecated. Use ReactDOMClient.hydrateRoot(container, <App />) instead.");
             } else {
               if (typeof options2 === "object" && options2 !== null && options2.$$typeof === REACT_ELEMENT_TYPE) {
-                error("You passed a JSX element to createRoot. You probably meant to call root.render instead. Example usage:\n\n  let root = createRoot(domContainer);\n  root.render(<App />);");
+                error2("You passed a JSX element to createRoot. You probably meant to call root.render instead. Example usage:\n\n  let root = createRoot(domContainer);\n  root.render(<App />);");
               }
             }
           }
@@ -31012,7 +31012,7 @@ function requireReactDom_development() {
         warnIfReactDOMContainerInDEV(container);
         {
           if (initialChildren === void 0) {
-            error("Must provide initial children as second argument to hydrateRoot. Example usage: hydrateRoot(domContainer, <App />)");
+            error2("Must provide initial children as second argument to hydrateRoot. Example usage: hydrateRoot(domContainer, <App />)");
           }
         }
         var hydrationCallbacks = options2 != null ? options2 : null;
@@ -31052,13 +31052,13 @@ function requireReactDom_development() {
       function warnIfReactDOMContainerInDEV(container) {
         {
           if (container.nodeType === ELEMENT_NODE && container.tagName && container.tagName.toUpperCase() === "BODY") {
-            error("createRoot(): Creating roots directly with document.body is discouraged, since its children are often manipulated by third-party scripts and browser extensions. This may lead to subtle reconciliation issues. Try using a container element created for your app.");
+            error2("createRoot(): Creating roots directly with document.body is discouraged, since its children are often manipulated by third-party scripts and browser extensions. This may lead to subtle reconciliation issues. Try using a container element created for your app.");
           }
           if (isContainerMarkedAsRoot(container)) {
             if (container._reactRootContainer) {
-              error("You are calling ReactDOMClient.createRoot() on a container that was previously passed to ReactDOM.render(). This is not supported.");
+              error2("You are calling ReactDOMClient.createRoot() on a container that was previously passed to ReactDOM.render(). This is not supported.");
             } else {
-              error("You are calling ReactDOMClient.createRoot() on a container that has already been passed to createRoot() before. Instead, call root.render() on the existing root instead if you want to update it.");
+              error2("You are calling ReactDOMClient.createRoot() on a container that has already been passed to createRoot() before. Instead, call root.render() on the existing root instead if you want to update it.");
             }
           }
         }
@@ -31071,7 +31071,7 @@ function requireReactDom_development() {
             var hostInstance = findHostInstanceWithNoPortals(container._reactRootContainer.current);
             if (hostInstance) {
               if (hostInstance.parentNode !== container) {
-                error("render(...): It looks like the React-rendered content of this container was removed without using React. This is not supported and will cause errors. Instead, call ReactDOM.unmountComponentAtNode to empty a container.");
+                error2("render(...): It looks like the React-rendered content of this container was removed without using React. This is not supported and will cause errors. Instead, call ReactDOM.unmountComponentAtNode to empty a container.");
               }
             }
           }
@@ -31079,10 +31079,10 @@ function requireReactDom_development() {
           var rootEl = getReactRootElementInContainer(container);
           var hasNonRootReactChild = !!(rootEl && getInstanceFromNode(rootEl));
           if (hasNonRootReactChild && !isRootRenderedBySomeReact) {
-            error("render(...): Replacing React-rendered children with a new root component. If you intended to update the children of this node, you should instead have the existing children update their state and render the new components instead of calling ReactDOM.render.");
+            error2("render(...): Replacing React-rendered children with a new root component. If you intended to update the children of this node, you should instead have the existing children update their state and render the new components instead of calling ReactDOM.render.");
           }
           if (container.nodeType === ELEMENT_NODE && container.tagName && container.tagName.toUpperCase() === "BODY") {
-            error("render(): Rendering components directly into document.body is discouraged, since its children are often manipulated by third-party scripts and browser extensions. This may lead to subtle reconciliation issues. Try rendering into a container element created for your app.");
+            error2("render(): Rendering components directly into document.body is discouraged, since its children are often manipulated by third-party scripts and browser extensions. This may lead to subtle reconciliation issues. Try rendering into a container element created for your app.");
           }
         };
       }
@@ -31166,7 +31166,7 @@ function requireReactDom_development() {
       function warnOnInvalidCallback$1(callback, callerName) {
         {
           if (callback !== null && typeof callback !== "function") {
-            error("%s(...): Expected the last optional `callback` argument to be a function. Instead received: %s.", callerName, callback);
+            error2("%s(...): Expected the last optional `callback` argument to be a function. Instead received: %s.", callerName, callback);
           }
         }
       }
@@ -31197,13 +31197,13 @@ function requireReactDom_development() {
         {
           if (!didWarnAboutFindDOMNode) {
             didWarnAboutFindDOMNode = true;
-            error("findDOMNode is deprecated and will be removed in the next major release. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node");
+            error2("findDOMNode is deprecated and will be removed in the next major release. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node");
           }
           var owner = ReactCurrentOwner$3.current;
           if (owner !== null && owner.stateNode !== null) {
             var warnedAboutRefsInRender = owner.stateNode._warnedAboutRefsInRender;
             if (!warnedAboutRefsInRender) {
-              error("%s is accessing findDOMNode inside its render(). render() should be a pure function of props and state. It should never access something that requires stale data from the previous render, such as refs. Move this logic to componentDidMount and componentDidUpdate instead.", getComponentNameFromType(owner.type) || "A component");
+              error2("%s is accessing findDOMNode inside its render(). render() should be a pure function of props and state. It should never access something that requires stale data from the previous render, such as refs. Move this logic to componentDidMount and componentDidUpdate instead.", getComponentNameFromType(owner.type) || "A component");
             }
             owner.stateNode._warnedAboutRefsInRender = true;
           }
@@ -31220,7 +31220,7 @@ function requireReactDom_development() {
       }
       function hydrate(element2, container, callback) {
         {
-          error("ReactDOM.hydrate is no longer supported in React 18. Use hydrateRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot");
+          error2("ReactDOM.hydrate is no longer supported in React 18. Use hydrateRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot");
         }
         if (!isValidContainerLegacy(container)) {
           throw new Error("Target container is not a DOM element.");
@@ -31228,14 +31228,14 @@ function requireReactDom_development() {
         {
           var isModernRoot = isContainerMarkedAsRoot(container) && container._reactRootContainer === void 0;
           if (isModernRoot) {
-            error("You are calling ReactDOM.hydrate() on a container that was previously passed to ReactDOMClient.createRoot(). This is not supported. Did you mean to call hydrateRoot(container, element)?");
+            error2("You are calling ReactDOM.hydrate() on a container that was previously passed to ReactDOMClient.createRoot(). This is not supported. Did you mean to call hydrateRoot(container, element)?");
           }
         }
         return legacyRenderSubtreeIntoContainer(null, element2, container, true, callback);
       }
       function render(element2, container, callback) {
         {
-          error("ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot");
+          error2("ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot");
         }
         if (!isValidContainerLegacy(container)) {
           throw new Error("Target container is not a DOM element.");
@@ -31243,14 +31243,14 @@ function requireReactDom_development() {
         {
           var isModernRoot = isContainerMarkedAsRoot(container) && container._reactRootContainer === void 0;
           if (isModernRoot) {
-            error("You are calling ReactDOM.render() on a container that was previously passed to ReactDOMClient.createRoot(). This is not supported. Did you mean to call root.render(element)?");
+            error2("You are calling ReactDOM.render() on a container that was previously passed to ReactDOMClient.createRoot(). This is not supported. Did you mean to call root.render(element)?");
           }
         }
         return legacyRenderSubtreeIntoContainer(null, element2, container, false, callback);
       }
       function unstable_renderSubtreeIntoContainer(parentComponent, element2, containerNode, callback) {
         {
-          error("ReactDOM.unstable_renderSubtreeIntoContainer() is no longer supported in React 18. Consider using a portal instead. Until you switch to the createRoot API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot");
+          error2("ReactDOM.unstable_renderSubtreeIntoContainer() is no longer supported in React 18. Consider using a portal instead. Until you switch to the createRoot API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot");
         }
         if (!isValidContainerLegacy(containerNode)) {
           throw new Error("Target container is not a DOM element.");
@@ -31265,7 +31265,7 @@ function requireReactDom_development() {
         {
           if (!didWarnAboutUnmountComponentAtNode) {
             didWarnAboutUnmountComponentAtNode = true;
-            error("unmountComponentAtNode is deprecated and will be removed in the next major release. Switch to the createRoot API. Learn more: https://reactjs.org/link/switch-to-createroot");
+            error2("unmountComponentAtNode is deprecated and will be removed in the next major release. Switch to the createRoot API. Learn more: https://reactjs.org/link/switch-to-createroot");
           }
         }
         if (!isValidContainerLegacy(container)) {
@@ -31274,7 +31274,7 @@ function requireReactDom_development() {
         {
           var isModernRoot = isContainerMarkedAsRoot(container) && container._reactRootContainer === void 0;
           if (isModernRoot) {
-            error("You are calling ReactDOM.unmountComponentAtNode() on a container that was previously passed to ReactDOMClient.createRoot(). This is not supported. Did you mean to call root.unmount()?");
+            error2("You are calling ReactDOM.unmountComponentAtNode() on a container that was previously passed to ReactDOMClient.createRoot(). This is not supported. Did you mean to call root.unmount()?");
           }
         }
         if (container._reactRootContainer) {
@@ -31282,7 +31282,7 @@ function requireReactDom_development() {
             var rootEl = getReactRootElementInContainer(container);
             var renderedByDifferentReact = rootEl && !getInstanceFromNode(rootEl);
             if (renderedByDifferentReact) {
-              error("unmountComponentAtNode(): The node you're attempting to unmount was rendered by another copy of React.");
+              error2("unmountComponentAtNode(): The node you're attempting to unmount was rendered by another copy of React.");
             }
           }
           flushSync(function() {
@@ -31298,7 +31298,7 @@ function requireReactDom_development() {
             var hasNonRootReactChild = !!(_rootEl && getInstanceFromNode(_rootEl));
             var isContainerReactRoot = container.nodeType === ELEMENT_NODE && isValidContainerLegacy(container.parentNode) && !!container.parentNode._reactRootContainer;
             if (hasNonRootReactChild) {
-              error("unmountComponentAtNode(): The node you're attempting to unmount was rendered by React and is not a top-level container. %s", isContainerReactRoot ? "You may have accidentally passed in a React root node instead of its container." : "Instead, have the parent component update its state and rerender in order to remove this component.");
+              error2("unmountComponentAtNode(): The node you're attempting to unmount was rendered by React and is not a top-level container. %s", isContainerReactRoot ? "You may have accidentally passed in a React root node instead of its container." : "Instead, have the parent component update its state and rerender in order to remove this component.");
             }
           }
           return false;
@@ -31313,7 +31313,7 @@ function requireReactDom_development() {
         if (typeof Map !== "function" || // $FlowIssue Flow incorrectly thinks Map has no prototype
         Map.prototype == null || typeof Map.prototype.forEach !== "function" || typeof Set !== "function" || // $FlowIssue Flow incorrectly thinks Set has no prototype
         Set.prototype == null || typeof Set.prototype.clear !== "function" || typeof Set.prototype.forEach !== "function") {
-          error("React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills");
+          error2("React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills");
         }
       }
       setRestoreImplementation(restoreControlledState$3);
@@ -31337,7 +31337,7 @@ function requireReactDom_development() {
       function createRoot$1(container, options2) {
         {
           if (!Internals.usingClientEntryPoint && true) {
-            error('You are importing createRoot from "react-dom" which is not supported. You should instead import it from "react-dom/client".');
+            error2('You are importing createRoot from "react-dom" which is not supported. You should instead import it from "react-dom/client".');
           }
         }
         return createRoot(container, options2);
@@ -31345,7 +31345,7 @@ function requireReactDom_development() {
       function hydrateRoot$1(container, initialChildren, options2) {
         {
           if (!Internals.usingClientEntryPoint && true) {
-            error('You are importing hydrateRoot from "react-dom" which is not supported. You should instead import it from "react-dom/client".');
+            error2('You are importing hydrateRoot from "react-dom" which is not supported. You should instead import it from "react-dom/client".');
           }
         }
         return hydrateRoot(container, initialChildren, options2);
@@ -31353,7 +31353,7 @@ function requireReactDom_development() {
       function flushSync$1(fn2) {
         {
           if (isAlreadyRendering()) {
-            error("flushSync was called from inside a lifecycle method. React cannot flush when React is already rendering. Consider moving this call to a scheduler task or micro task.");
+            error2("flushSync was called from inside a lifecycle method. React cannot flush when React is already rendering. Consider moving this call to a scheduler task or micro task.");
           }
         }
         return flushSync(fn2);
@@ -32008,19 +32008,19 @@ class ConversationService {
               } else if (data.type === "reference") {
                 onReference(data.content);
               }
-            } catch (error) {
-              console.error("Error parsing SSE data:", error);
-              onError(error);
+            } catch (error2) {
+              console.error("Error parsing SSE data:", error2);
+              onError(error2);
             }
           }
         }
       }
-    } catch (error) {
-      if (error instanceof Error && error.name === "AbortError") {
+    } catch (error2) {
+      if (error2 instanceof Error && error2.name === "AbortError") {
         console.log("Conversation aborted");
         return;
       }
-      onError(error);
+      onError(error2);
     }
   }
   async sendMessage(message, onChunk, onReference, onError, senderType = "user") {
@@ -32066,19 +32066,19 @@ class ConversationService {
               } else if (data.type === "reference") {
                 onReference(data.content);
               }
-            } catch (error) {
-              console.error("Error parsing SSE data:", error);
-              onError(error);
+            } catch (error2) {
+              console.error("Error parsing SSE data:", error2);
+              onError(error2);
             }
           }
         }
       }
-    } catch (error) {
-      if (error instanceof Error && error.name === "AbortError") {
+    } catch (error2) {
+      if (error2 instanceof Error && error2.name === "AbortError") {
         console.log("Message sending aborted");
         return;
       }
-      onError(error);
+      onError(error2);
     }
   }
   closeConversation() {
@@ -32223,11 +32223,11 @@ class ConversationService {
         } else {
           console.warn("⚠️ ensureRAG API call failed:", response.status);
         }
-      }).catch((error) => {
-        console.error("❌ ensureRAG API call error:", error);
+      }).catch((error2) => {
+        console.error("❌ ensureRAG API call error:", error2);
       });
-    } catch (error) {
-      console.error("❌ Failed to initiate ensureRAG API call:", error);
+    } catch (error2) {
+      console.error("❌ Failed to initiate ensureRAG API call:", error2);
     }
   }
 }
@@ -36630,8 +36630,8 @@ const getClientIP = async () => {
     const response = await fetch("https://api.ipify.org?format=json");
     const data = await response.json();
     return data.ip;
-  } catch (error) {
-    console.warn("[PostHog] Could not fetch client IP:", error);
+  } catch (error2) {
+    console.warn("[PostHog] Could not fetch client IP:", error2);
     return void 0;
   }
 };
@@ -36661,8 +36661,8 @@ const getDeviceProperties = () => {
     properties.title = document.title;
     properties.referrer = document.referrer;
     properties.timestamp = (/* @__PURE__ */ new Date()).toISOString();
-  } catch (error) {
-    console.warn("[Analytics] Error collecting device properties:", error);
+  } catch (error2) {
+    console.warn("[Analytics] Error collecting device properties:", error2);
   }
   return properties;
 };
@@ -37623,8 +37623,8 @@ const MessagePopup = ({
   console.log("[MessagePopup] Creating portal to document.body");
   try {
     return reactDomExports.createPortal(popupContent, document.body);
-  } catch (error) {
-    console.error("[MessagePopup] Error creating portal:", error);
+  } catch (error2) {
+    console.error("[MessagePopup] Error creating portal:", error2);
     return null;
   }
 };
@@ -37634,8 +37634,8 @@ const closeAnyExistingPopup = () => {
     console.log("[PopupUtils] Closing existing popup from another service");
     try {
       activePopupCleanup();
-    } catch (error) {
-      console.error("[PopupUtils] Error closing existing popup:", error);
+    } catch (error2) {
+      console.error("[PopupUtils] Error closing existing popup:", error2);
     }
     activePopupCleanup = null;
   }
@@ -37735,8 +37735,8 @@ const showMessagePopupUtil = (message, position2, callbacks, userId, messageSour
       containerExists: !!document.getElementById("spotinfo-message-popup")
     });
     return cleanupFunction;
-  } catch (error) {
-    console.error("[PopupUtils] Error showing popup:", error);
+  } catch (error2) {
+    console.error("[PopupUtils] Error showing popup:", error2);
     activePopupCleanup = null;
     if (typeof window !== "undefined" && window.spotinfoSetButtonVisibility) {
       window.spotinfoSetButtonVisibility(true);
@@ -38074,12 +38074,12 @@ const _PersonalizedHookService = class _PersonalizedHookService {
             await response.text()
           );
         }
-      } catch (error) {
+      } catch (error2) {
         if (!this.isPollingEnabled() || this.isWidgetOpenRef || this.pollingStopped)
           return;
         console.error(
           `[PersonalizedHookService - ${this.metaConfig.userId}] Poll error (user: ${userId}):`,
-          error
+          error2
         );
       }
       this.scheduleNextPoll(doPoll);
@@ -38311,15 +38311,15 @@ class Observer {
             ...toastSettings
           });
         }
-      }).catch(async (error) => {
+      }).catch(async (error2) => {
         result = [
           "reject",
-          error
+          error2
         ];
         if (data.error !== void 0) {
           shouldDismiss = false;
-          const promiseData = typeof data.error === "function" ? await data.error(error) : data.error;
-          const description = typeof data.description === "function" ? await data.description(error) : data.description;
+          const promiseData = typeof data.error === "function" ? await data.error(error2) : data.error;
+          const description = typeof data.description === "function" ? await data.description(error2) : data.description;
           const isExtendedResult = typeof promiseData === "object" && !React.isValidElement(promiseData);
           const toastSettings = isExtendedResult ? promiseData : {
             message: promiseData
@@ -44026,9 +44026,9 @@ function __asyncValues(o2) {
     }, reject);
   }
 }
-typeof SuppressedError === "function" ? SuppressedError : function(error, suppressed, message) {
+typeof SuppressedError === "function" ? SuppressedError : function(error2, suppressed, message) {
   var e2 = new Error(message);
-  return e2.name = "SuppressedError", e2.error = error, e2.suppressed = suppressed, e2;
+  return e2.name = "SuppressedError", e2.error = error2, e2.suppressed = suppressed, e2;
 };
 var events = { exports: {} };
 var hasRequiredEvents;
@@ -47068,15 +47068,15 @@ var MediaDeviceFailure;
   MediaDeviceFailure2["Other"] = "Other";
 })(MediaDeviceFailure || (MediaDeviceFailure = {}));
 (function(MediaDeviceFailure2) {
-  function getFailure(error) {
-    if (error && "name" in error) {
-      if (error.name === "NotFoundError" || error.name === "DevicesNotFoundError") {
+  function getFailure(error2) {
+    if (error2 && "name" in error2) {
+      if (error2.name === "NotFoundError" || error2.name === "DevicesNotFoundError") {
         return MediaDeviceFailure2.NotFound;
       }
-      if (error.name === "NotAllowedError" || error.name === "PermissionDeniedError") {
+      if (error2.name === "NotAllowedError" || error2.name === "PermissionDeniedError") {
         return MediaDeviceFailure2.PermissionDenied;
       }
-      if (error.name === "NotReadableError" || error.name === "TrackStartError") {
+      if (error2.name === "NotReadableError" || error2.name === "TrackStartError") {
         return MediaDeviceFailure2.DeviceInUse;
       }
       return MediaDeviceFailure2.Other;
@@ -47572,14 +47572,14 @@ function detachTrack(track, element2) {
     Kind2["Video"] = "video";
     Kind2["Unknown"] = "unknown";
   })(Kind = Track2.Kind || (Track2.Kind = {}));
-  let Source;
-  (function(Source2) {
-    Source2["Camera"] = "camera";
-    Source2["Microphone"] = "microphone";
-    Source2["ScreenShare"] = "screen_share";
-    Source2["ScreenShareAudio"] = "screen_share_audio";
-    Source2["Unknown"] = "unknown";
-  })(Source = Track2.Source || (Track2.Source = {}));
+  let Source2;
+  (function(Source22) {
+    Source22["Camera"] = "camera";
+    Source22["Microphone"] = "microphone";
+    Source22["ScreenShare"] = "screen_share";
+    Source22["ScreenShareAudio"] = "screen_share_audio";
+    Source22["Unknown"] = "unknown";
+  })(Source2 = Track2.Source || (Track2.Source = {}));
   let StreamState$1;
   (function(StreamState2) {
     StreamState2["Active"] = "active";
@@ -47610,13 +47610,13 @@ function detachTrack(track, element2) {
   Track2.kindFromProto = kindFromProto;
   function sourceToProto(s2) {
     switch (s2) {
-      case Source.Camera:
+      case Source2.Camera:
         return TrackSource.CAMERA;
-      case Source.Microphone:
+      case Source2.Microphone:
         return TrackSource.MICROPHONE;
-      case Source.ScreenShare:
+      case Source2.ScreenShare:
         return TrackSource.SCREEN_SHARE;
-      case Source.ScreenShareAudio:
+      case Source2.ScreenShareAudio:
         return TrackSource.SCREEN_SHARE_AUDIO;
       default:
         return TrackSource.UNKNOWN;
@@ -47626,15 +47626,15 @@ function detachTrack(track, element2) {
   function sourceFromProto(s2) {
     switch (s2) {
       case TrackSource.CAMERA:
-        return Source.Camera;
+        return Source2.Camera;
       case TrackSource.MICROPHONE:
-        return Source.Microphone;
+        return Source2.Microphone;
       case TrackSource.SCREEN_SHARE:
-        return Source.ScreenShare;
+        return Source2.ScreenShare;
       case TrackSource.SCREEN_SHARE_AUDIO:
-        return Source.ScreenShareAudio;
+        return Source2.ScreenShareAudio;
       default:
-        return Source.Unknown;
+        return Source2.Unknown;
     }
   }
   Track2.sourceFromProto = sourceFromProto;
@@ -51689,8 +51689,8 @@ class LocalTrack extends Track {
           }
           attachToElement(_this3._mediaStreamTrack, processorElement);
           processorElement.muted = true;
-          processorElement.play().catch((error) => _this3.log.error("failed to play processor element", Object.assign(Object.assign({}, _this3.logContext), {
-            error
+          processorElement.play().catch((error2) => _this3.log.error("failed to play processor element", Object.assign(Object.assign({}, _this3.logContext), {
+            error: error2
           })));
           _this3.processor = processor;
           _this3.processorElement = processorElement;
@@ -52900,10 +52900,10 @@ class RTCEngine extends eventsExports.EventEmitter {
       const channelKind = channel.maxRetransmits === 0 ? "lossy" : "reliable";
       if (event instanceof ErrorEvent && event.error) {
         const {
-          error
+          error: error2
         } = event.error;
         this.log.error("DataChannel error on ".concat(channelKind, ": ").concat(event.message), Object.assign(Object.assign({}, this.logContext), {
-          error
+          error: error2
         }));
       } else {
         this.log.error("Unknown DataChannel error on ".concat(channelKind), Object.assign(Object.assign({}, this.logContext), {
@@ -53528,14 +53528,14 @@ class RTCEngine extends eventsExports.EventEmitter {
         }
         (_a = this.regionUrlProvider) === null || _a === void 0 ? void 0 : _a.resetAttempts();
         this.emit(EngineEvent.Restarted);
-      } catch (error) {
+      } catch (error2) {
         const nextRegionUrl = yield (_b = this.regionUrlProvider) === null || _b === void 0 ? void 0 : _b.getNextBestRegionUrl();
         if (nextRegionUrl) {
           yield this.restartConnection(nextRegionUrl);
           return;
         } else {
           (_c = this.regionUrlProvider) === null || _c === void 0 ? void 0 : _c.resetAttempts();
-          throw error;
+          throw error2;
         }
       }
     });
@@ -53555,19 +53555,19 @@ class RTCEngine extends eventsExports.EventEmitter {
       try {
         this.setupSignalClientCallbacks();
         res = yield this.client.reconnect(this.url, this.token, this.participantSid, reason);
-      } catch (error) {
+      } catch (error2) {
         let message = "";
-        if (error instanceof Error) {
-          message = error.message;
-          this.log.error(error.message, Object.assign(Object.assign({}, this.logContext), {
-            error
+        if (error2 instanceof Error) {
+          message = error2.message;
+          this.log.error(error2.message, Object.assign(Object.assign({}, this.logContext), {
+            error: error2
           }));
         }
-        if (error instanceof ConnectionError && error.reason === ConnectionErrorReason.NotAllowed) {
+        if (error2 instanceof ConnectionError && error2.reason === ConnectionErrorReason.NotAllowed) {
           throw new UnexpectedConnectionState("could not reconnect, token might be expired");
         }
-        if (error instanceof ConnectionError && error.reason === ConnectionErrorReason.LeaveRequest) {
-          throw error;
+        if (error2 instanceof ConnectionError && error2.reason === ConnectionErrorReason.LeaveRequest) {
+          throw error2;
         }
         throw new SignalReconnectError(message);
       }
@@ -53620,7 +53620,7 @@ class RTCEngine extends eventsExports.EventEmitter {
     });
   }
   /** @internal */
-  publishRpcResponse(destinationIdentity, requestId, payload, error) {
+  publishRpcResponse(destinationIdentity, requestId, payload, error2) {
     return __awaiter(this, void 0, void 0, function* () {
       const packet = new DataPacket({
         destinationIdentities: [destinationIdentity],
@@ -53629,9 +53629,9 @@ class RTCEngine extends eventsExports.EventEmitter {
           case: "rpcResponse",
           value: new RpcResponse({
             requestId,
-            value: error ? {
+            value: error2 ? {
               case: "error",
-              value: error.toProto()
+              value: error2.toProto()
             } : {
               case: "payload",
               value: payload !== null && payload !== void 0 ? payload : ""
@@ -54011,7 +54011,7 @@ class ByteStreamReader extends BaseStreamReader {
               value: value.content
             };
           }
-        } catch (error) {
+        } catch (error2) {
           return {
             done: true,
             value: void 0
@@ -54103,7 +54103,7 @@ class TextStreamReader extends BaseStreamReader {
               value: decoder.decode(value.content)
             };
           }
-        } catch (error) {
+        } catch (error2) {
           return {
             done: true,
             value: void 0
@@ -55283,13 +55283,13 @@ class LocalParticipant extends Participant {
         case "rpcResponse":
           let rpcResponse = packet.value.value;
           let payload = null;
-          let error = null;
+          let error2 = null;
           if (rpcResponse.value.case === "payload") {
             payload = rpcResponse.value.value;
           } else if (rpcResponse.value.case === "error") {
-            error = RpcError.fromProto(rpcResponse.value.value);
+            error2 = RpcError.fromProto(rpcResponse.value.value);
           }
-          this.handleIncomingRpcResponse(rpcResponse.requestId, payload, error);
+          this.handleIncomingRpcResponse(rpcResponse.requestId, payload, error2);
           break;
         case "rpcAck":
           let rpcAck = packet.value.value;
@@ -55537,8 +55537,8 @@ class LocalParticipant extends Participant {
             const startTime = performance.now();
             this.pendingSignalRequests.set(requestId, {
               resolve,
-              reject: (error) => {
-                reject(error);
+              reject: (error2) => {
+                reject(error2);
                 isRejected = true;
               },
               values: {
@@ -56341,8 +56341,8 @@ class LocalParticipant extends Participant {
               yield this.publishOrRepublishTrack(track, pub.options, true);
             })));
             resolve();
-          } catch (error) {
-            reject(error);
+          } catch (error2) {
+            reject(error2);
           } finally {
             this.republishPromise = void 0;
           }
@@ -56768,10 +56768,10 @@ class LocalParticipant extends Participant {
       console.error("Ack received for unexpected RPC request", requestId);
     }
   }
-  handleIncomingRpcResponse(requestId, payload, error) {
+  handleIncomingRpcResponse(requestId, payload, error2) {
     const handler = this.pendingResponses.get(requestId);
     if (handler) {
-      handler.resolve(payload, error);
+      handler.resolve(payload, error2);
       this.pendingResponses.delete(requestId);
     } else {
       console.error("Response received for unexpected RPC request", requestId);
@@ -57053,8 +57053,8 @@ class RemoteTrackPublication extends TrackPublication {
     this.emitSubscriptionUpdateIfChanged(prevStatus);
   }
   /** @internal */
-  setSubscriptionError(error) {
-    this.emit(TrackEvent.SubscriptionFailed, error);
+  setSubscriptionError(error2) {
+    this.emit(TrackEvent.SubscriptionFailed, error2);
   }
   /** @internal */
   updateInfo(info2) {
@@ -57157,8 +57157,8 @@ class RemoteParticipant extends Participant {
     publication.on(TrackEvent.Unsubscribed, (previousTrack) => {
       this.emit(ParticipantEvent.TrackUnsubscribed, previousTrack, publication);
     });
-    publication.on(TrackEvent.SubscriptionFailed, (error) => {
-      this.emit(ParticipantEvent.TrackSubscriptionFailed, publication.trackSid, error);
+    publication.on(TrackEvent.SubscriptionFailed, (error2) => {
+      this.emit(ParticipantEvent.TrackSubscriptionFailed, publication.trackSid, error2);
     });
   }
   getTrackPublication(source) {
@@ -57443,10 +57443,10 @@ class Room extends eventsExports.EventEmitter {
             let nextUrl = null;
             try {
               nextUrl = yield this.regionUrlProvider.getNextBestRegionUrl((_a3 = this.abortController) === null || _a3 === void 0 ? void 0 : _a3.signal);
-            } catch (error) {
-              if (error instanceof ConnectionError && (error.status === 401 || error.reason === ConnectionErrorReason.Cancelled)) {
+            } catch (error2) {
+              if (error2 instanceof ConnectionError && (error2.status === 401 || error2.reason === ConnectionErrorReason.Cancelled)) {
                 this.handleDisconnect(this.options.stopLocalTrackOnUnpublish);
-                reject(error);
+                reject(error2);
                 return;
               }
             }
@@ -57726,9 +57726,9 @@ class Room extends eventsExports.EventEmitter {
       this.applyJoinResponse(joinResponse);
       try {
         yield this.localParticipant.republishAllTracks(void 0, true);
-      } catch (error) {
+      } catch (error2) {
         this.log.error("error trying to re-publish tracks after reconnection", Object.assign(Object.assign({}, this.logContext), {
-          error
+          error: error2
         }));
       }
       try {
@@ -58181,11 +58181,11 @@ class Room extends eventsExports.EventEmitter {
         } else {
           responsePayload = response;
         }
-      } catch (error) {
-        if (error instanceof RpcError) {
-          responseError = error;
+      } catch (error2) {
+        if (error2 instanceof RpcError) {
+          responseError = error2;
         } else {
-          console.warn("Uncaught error returned by RPC handler for ".concat(method, ". Returning APPLICATION_ERROR instead."), error);
+          console.warn("Uncaught error returned by RPC handler for ".concat(method, ". Returning APPLICATION_ERROR instead."), error2);
           responseError = RpcError.builtIn("APPLICATION_ERROR");
         }
       }
@@ -58221,7 +58221,7 @@ class Room extends eventsExports.EventEmitter {
         }
         this.emit(RoomEvent.ParticipantEncryptionStatusChanged, enabled, participant);
       });
-      this.e2eeManager.on(EncryptionEvent.EncryptionError, (error) => this.emit(RoomEvent.EncryptionError, error));
+      this.e2eeManager.on(EncryptionEvent.EncryptionError, (error2) => this.emit(RoomEvent.EncryptionError, error2));
       (_a = this.e2eeManager) === null || _a === void 0 ? void 0 : _a.setup(this);
     }
   }
@@ -58932,8 +58932,8 @@ class Room extends eventsExports.EventEmitter {
       this.emitWhenConnected(RoomEvent.ParticipantPermissionsChanged, prevPermissions, participant);
     }).on(ParticipantEvent.TrackSubscriptionStatusChanged, (pub, status) => {
       this.emitWhenConnected(RoomEvent.TrackSubscriptionStatusChanged, pub, status, participant);
-    }).on(ParticipantEvent.TrackSubscriptionFailed, (trackSid, error) => {
-      this.emit(RoomEvent.TrackSubscriptionFailed, trackSid, participant, error);
+    }).on(ParticipantEvent.TrackSubscriptionFailed, (trackSid, error2) => {
+      this.emit(RoomEvent.TrackSubscriptionFailed, trackSid, participant, error2);
     }).on(ParticipantEvent.TrackSubscriptionPermissionChanged, (pub, status) => {
       this.emitWhenConnected(RoomEvent.TrackSubscriptionPermissionChanged, pub, status, participant);
     });
@@ -62153,13 +62153,13 @@ async function initializeVoiceConnection(chatMetaConfig, onStateChange, onLoadin
       return details;
     }
     throw new Error("Failed to get connection details");
-  } catch (error) {
-    console.error("Failed to start voice connection:", error);
+  } catch (error2) {
+    console.error("Failed to start voice connection:", error2);
     if (!isPreload) {
       toast.error("Failed to connect to voice chat");
       onStateChange("disconnected");
     }
-    throw error;
+    throw error2;
   } finally {
     if (!isPreload) {
       onLoadingChange(false);
@@ -62216,10 +62216,10 @@ function useVoiceChat(chatMetaConfig, onSwitchToText) {
         setIsMuted(true);
       }
       return details;
-    } catch (error) {
-      console.error("[useVoiceChat] Connection failed:", error);
+    } catch (error2) {
+      console.error("[useVoiceChat] Connection failed:", error2);
       handleHibernation();
-      throw error;
+      throw error2;
     } finally {
       connectingRef.current = false;
     }
@@ -62264,10 +62264,10 @@ function useVoiceChat(chatMetaConfig, onSwitchToText) {
         setIsMuted(false);
         userMutedRef.current = false;
         return;
-      } catch (error) {
+      } catch (error2) {
         console.error(
           "[useVoiceChat] Failed to connect in handleMicButton:",
-          error
+          error2
         );
         setIsMicActiveAndListening(false);
         return;
@@ -62434,10 +62434,10 @@ const _VoiceChatService = class _VoiceChatService {
         clientId: data.client_id
       };
       return this.connectionDetails;
-    } catch (error) {
-      console.error("Error fetching connection details:", error);
+    } catch (error2) {
+      console.error("Error fetching connection details:", error2);
       this.roomCreationFailed = true;
-      throw error;
+      throw error2;
     }
   }
   async dispatchAgent() {
@@ -62474,9 +62474,9 @@ const _VoiceChatService = class _VoiceChatService {
         );
       }
       this.isAgentDispatched = true;
-    } catch (error) {
-      console.error("Error dispatching agent:", error);
-      throw error;
+    } catch (error2) {
+      console.error("Error dispatching agent:", error2);
+      throw error2;
     }
   }
   async deleteRoom(client_id) {
@@ -62507,9 +62507,9 @@ const _VoiceChatService = class _VoiceChatService {
         );
       }
       return;
-    } catch (error) {
-      console.error("Error deleting room:", error);
-      throw error;
+    } catch (error2) {
+      console.error("Error deleting room:", error2);
+      throw error2;
     }
   }
   getCurrentConnectionDetails() {
@@ -62644,10 +62644,10 @@ function ChatProvider({
         const voiceService = VoiceChatService.getInstance(currentMetaConfig);
         const existingDetails = voiceService.getCurrentConnectionDetails();
         if (!existingDetails) {
-          voiceService.createRoom().catch((error) => {
+          voiceService.createRoom().catch((error2) => {
             console.error(
               "ChatContext: Failed to preload room creation:",
-              error
+              error2
             );
             if (voiceService.isRoomCreationFailed()) {
               setIsRoomCreationFailed(true);
@@ -62709,10 +62709,10 @@ function ChatProvider({
         });
         personalizedService.updateConfig(currentMetaConfig, config.position);
         personalizedService.setWidgetOpenState(isWidgetOpen);
-      } catch (error) {
+      } catch (error2) {
         console.error(
           "ChatContext: Failed to initialize PersonalizedHookService:",
-          error
+          error2
         );
       }
     }
@@ -62747,10 +62747,10 @@ function ChatProvider({
             isWidgetOpen: () => isWidgetOpen
           });
           ProactiveEngagementEngine.resetForNewPage();
-        } catch (error) {
+        } catch (error2) {
           console.error(
             "ChatContext: Failed to initialize ProactiveEngagementEngine:",
-            error
+            error2
           );
         }
         pushServiceInstance.connect();
@@ -62781,10 +62781,10 @@ function ChatProvider({
           }
         };
         setTimeout(checkAndEnsureSSE, 2e3);
-      }).catch((error) => {
+      }).catch((error2) => {
         console.error(
           "ChatContext: Failed to initialize PushHookService:",
-          error
+          error2
         );
       });
       return () => {
@@ -62825,8 +62825,8 @@ function ChatProvider({
         },
         "web-journey"
       );
-    } catch (error) {
-      console.error("Failed to send journey event:", error);
+    } catch (error2) {
+      console.error("Failed to send journey event:", error2);
     }
   }, []);
   const updateMessageResponse = reactExports.useCallback(
@@ -62919,11 +62919,11 @@ function ChatProvider({
           updateMessageResponse(currentResponse);
         },
         handleReference,
-        (error) => {
-          console.error("Error in conversation:", error);
+        (error2) => {
+          console.error("Error in conversation:", error2);
           hasError = true;
           setErrorMessage(
-            `Failed to get response: ${error.message || "Unknown error"}`
+            `Failed to get response: ${error2.message || "Unknown error"}`
           );
           setMessages((prev) => prev.filter((msg) => msg.id !== botMessage.id));
         }
@@ -62934,13 +62934,13 @@ function ChatProvider({
         );
         setMessages((prev) => prev.filter((msg) => msg.id !== botMessage.id));
       }
-    } catch (error) {
-      if (error instanceof Error && error.name === "AbortError") {
+    } catch (error2) {
+      if (error2 instanceof Error && error2.name === "AbortError") {
         console.log("Message sending aborted");
       } else {
-        console.error("Failed to send message:", error);
+        console.error("Failed to send message:", error2);
         setErrorMessage(
-          `Failed to send message: ${error instanceof Error ? error.message : "Unknown error"}`
+          `Failed to send message: ${error2 instanceof Error ? error2.message : "Unknown error"}`
         );
       }
     } finally {
@@ -62963,13 +62963,13 @@ function ChatProvider({
           updateMessageResponse(currentResponse);
         },
         handleReference,
-        (error) => {
-          console.error("Error starting conversation:", error);
+        (error2) => {
+          console.error("Error starting conversation:", error2);
           updateMessageResponse(currentResponse, true);
         }
       );
-    } catch (error) {
-      console.error("Failed to start conversation:", error);
+    } catch (error2) {
+      console.error("Failed to start conversation:", error2);
     } finally {
       setIsLoading(false);
       abortControllerRef.current = null;
@@ -63026,8 +63026,8 @@ function ChatProvider({
       } catch (err) {
         console.error("ChatContext: Failed to trigger delete-room:", err);
       }
-    } catch (error) {
-      console.error("Failed to disconnect existing voice room:", error);
+    } catch (error2) {
+      console.error("Failed to disconnect existing voice room:", error2);
     }
     const newClientId = crypto.randomUUID();
     console.log("✅ Generated new client ID:", newClientId);
@@ -63039,8 +63039,8 @@ function ChatProvider({
           newClientId
         );
         console.log("✅ Created new chat id on backend");
-      } catch (error) {
-        console.error("Failed to create new chat id on backend:", error);
+      } catch (error2) {
+        console.error("Failed to create new chat id on backend:", error2);
       } finally {
         setIsLoading(false);
       }
@@ -63059,10 +63059,10 @@ function ChatProvider({
     try {
       const personalizedService = PersonalizedHookService.getInstance();
       personalizedService.updateConfig(newMetaConfig);
-    } catch (error) {
+    } catch (error2) {
       console.error(
         "Failed to update PersonalizedHookService with new client ID:",
-        error
+        error2
       );
     }
     setCurrentMetaConfig(newMetaConfig);
@@ -63074,8 +63074,8 @@ function ChatProvider({
         if (!currentMetaConfig.userId || !currentMetaConfig.apiKey) return;
         const normalizedMessages = await conversationService.current.fetchChatHistory();
         setMessages(normalizedMessages);
-      } catch (error) {
-        console.error("Failed to load chat history:", error);
+      } catch (error2) {
+        console.error("Failed to load chat history:", error2);
       }
     };
     loadChatHistory();
@@ -67441,7 +67441,7 @@ function requireInlineStyleParser() {
       this.source = options.source;
     }
     Position.prototype.content = style;
-    function error(msg) {
+    function error2(msg) {
       var err = new Error(
         options.source + ":" + lineno + ":" + column + ": " + msg
       );
@@ -67485,7 +67485,7 @@ function requireInlineStyleParser() {
       }
       i2 += 2;
       if (EMPTY_STRING === style.charAt(i2 - 1)) {
-        return error("End of comment missing");
+        return error2("End of comment missing");
       }
       var str = style.slice(2, i2 - 2);
       column += 2;
@@ -67502,7 +67502,7 @@ function requireInlineStyleParser() {
       var prop = match(PROPERTY_REGEX);
       if (!prop) return;
       comment();
-      if (!match(COLON_REGEX)) return error("property missing ':'");
+      if (!match(COLON_REGEX)) return error2("property missing ':'");
       var val = match(VALUE_REGEX);
       var ret = pos({
         type: TYPE_DECLARATION,
@@ -68103,13 +68103,13 @@ function createProperty(state, prop, value) {
 function parseStyle(state, value) {
   try {
     return styleToJs(value, { reactCompat: true });
-  } catch (error) {
+  } catch (error2) {
     if (state.ignoreInvalidStyle) {
       return {};
     }
     const cause = (
       /** @type {Error} */
-      error
+      error2
     );
     const message = new VFileMessage("Cannot parse `style` attribute", {
       ancestors: state.ancestors,
@@ -74095,9 +74095,9 @@ function remarkRehype(destination, options) {
     );
   };
 }
-function bail(error) {
-  if (error) {
-    throw error;
+function bail(error2) {
+  if (error2) {
+    throw error2;
   }
 }
 var extend$1;
@@ -74211,11 +74211,11 @@ function trough() {
       throw new TypeError("Expected function as last argument, not " + callback);
     }
     next(null, ...values);
-    function next(error, ...output) {
+    function next(error2, ...output) {
       const fn2 = fns[++middlewareIndex];
       let index2 = -1;
-      if (error) {
-        callback(error);
+      if (error2) {
+        callback(error2);
         return;
       }
       while (++index2 < values.length) {
@@ -74252,10 +74252,10 @@ function wrap(middleware, callback) {
     }
     try {
       result = middleware.apply(this, parameters);
-    } catch (error) {
+    } catch (error2) {
       const exception = (
         /** @type {Error} */
-        error
+        error2
       );
       if (fnExpectsCallback && called) {
         throw exception;
@@ -74272,10 +74272,10 @@ function wrap(middleware, callback) {
       }
     }
   }
-  function done(error, ...output) {
+  function done(error2, ...output) {
     if (!called) {
       called = true;
-      callback(error, ...output);
+      callback(error2, ...output);
     }
   }
   function then(value) {
@@ -74507,26 +74507,26 @@ function urlToPath(path) {
   if (typeof path === "string") {
     path = new URL(path);
   } else if (!isUrl(path)) {
-    const error = new TypeError(
+    const error2 = new TypeError(
       'The "path" argument must be of type string or an instance of URL. Received `' + path + "`"
     );
-    error.code = "ERR_INVALID_ARG_TYPE";
-    throw error;
+    error2.code = "ERR_INVALID_ARG_TYPE";
+    throw error2;
   }
   if (path.protocol !== "file:") {
-    const error = new TypeError("The URL must be of scheme file");
-    error.code = "ERR_INVALID_URL_SCHEME";
-    throw error;
+    const error2 = new TypeError("The URL must be of scheme file");
+    error2.code = "ERR_INVALID_URL_SCHEME";
+    throw error2;
   }
   return getPathFromURLPosix(path);
 }
 function getPathFromURLPosix(url) {
   if (url.hostname !== "") {
-    const error = new TypeError(
+    const error2 = new TypeError(
       'File URL host must be "localhost" or empty on darwin'
     );
-    error.code = "ERR_INVALID_FILE_URL_HOST";
-    throw error;
+    error2.code = "ERR_INVALID_FILE_URL_HOST";
+    throw error2;
   }
   const pathname = url.pathname;
   let index2 = -1;
@@ -74534,11 +74534,11 @@ function getPathFromURLPosix(url) {
     if (pathname.codePointAt(index2) === 37 && pathname.codePointAt(index2 + 1) === 50) {
       const third = pathname.codePointAt(index2 + 2);
       if (third === 70 || third === 102) {
-        const error = new TypeError(
+        const error2 = new TypeError(
           "File URL path must not include encoded / characters"
         );
-        error.code = "ERR_INVALID_FILE_URL_PATH";
-        throw error;
+        error2.code = "ERR_INVALID_FILE_URL_PATH";
+        throw error2;
       }
     }
   }
@@ -75260,9 +75260,9 @@ class Processor extends CallableInstance {
         /** @type {unknown} */
         self2.parse(realFile)
       );
-      self2.run(parseTree, realFile, function(error, tree, file2) {
-        if (error || !tree || !file2) {
-          return realDone(error);
+      self2.run(parseTree, realFile, function(error2, tree, file2) {
+        if (error2 || !tree || !file2) {
+          return realDone(error2);
         }
         const compileTree = (
           /** @type {CompileTree extends undefined ? Node : CompileTree} */
@@ -75276,14 +75276,14 @@ class Processor extends CallableInstance {
           file2.result = compileResult;
         }
         realDone(
-          error,
+          error2,
           /** @type {VFileWithOutput<CompileResult>} */
           file2
         );
       });
-      function realDone(error, file2) {
-        if (error || !file2) {
-          reject(error);
+      function realDone(error2, file2) {
+        if (error2 || !file2) {
+          reject(error2);
         } else if (resolve) {
           resolve(file2);
         } else {
@@ -75332,9 +75332,9 @@ class Processor extends CallableInstance {
     this.process(file, realDone);
     assertDone("processSync", "process", complete);
     return result;
-    function realDone(error, file2) {
+    function realDone(error2, file2) {
       complete = true;
-      bail(error);
+      bail(error2);
       result = file2;
     }
   }
@@ -75388,13 +75388,13 @@ class Processor extends CallableInstance {
     function executor(resolve, reject) {
       const realFile = vfile(file);
       transformers.run(tree, realFile, realDone);
-      function realDone(error, outputTree, file2) {
+      function realDone(error2, outputTree, file2) {
         const resultingTree = (
           /** @type {TailTree extends undefined ? Node : TailTree} */
           outputTree || tree
         );
-        if (error) {
-          reject(error);
+        if (error2) {
+          reject(error2);
         } else if (resolve) {
           resolve(resultingTree);
         } else {
@@ -75426,8 +75426,8 @@ class Processor extends CallableInstance {
     this.run(tree, file, realDone);
     assertDone("runSync", "run", complete);
     return result;
-    function realDone(error, tree2) {
-      bail(error);
+    function realDone(error2, tree2) {
+      bail(error2);
       result = tree2;
       complete = true;
     }
@@ -101992,8 +101992,8 @@ const fetchWhatsappNumber = async (chatMetaConfig) => {
       return phoneNumber.trim();
     }
     return null;
-  } catch (error) {
-    console.error("Error fetching WhatsApp number:", error);
+  } catch (error2) {
+    console.error("Error fetching WhatsApp number:", error2);
     return null;
   }
 };
@@ -102140,8 +102140,8 @@ function TextChatInput({
       });
       if (!whatsappUrl) return;
       window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-    } catch (error) {
-      console.error("Error handling WhatsApp click:", error);
+    } catch (error2) {
+      console.error("Error handling WhatsApp click:", error2);
     }
   };
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -102448,7 +102448,7 @@ function velocityPerSecond(velocity, frameDuration) {
   return frameDuration ? velocity * (1e3 / frameDuration) : 0;
 }
 const warned = /* @__PURE__ */ new Set();
-function warnOnce(condition, message, element2) {
+function warnOnce$1(condition, message, element2) {
   if (condition || warned.has(message))
     return;
   console.warn(message);
@@ -103030,7 +103030,7 @@ class MotionValue {
    */
   onChange(subscription) {
     if (define_process_env_default$5.NODE_ENV !== "production") {
-      warnOnce(false, `value.onChange(callback) is deprecated. Switch to value.on("change", callback).`);
+      warnOnce$1(false, `value.onChange(callback) is deprecated. Switch to value.on("change", callback).`);
     }
     return this.on("change", subscription);
   }
@@ -103304,7 +103304,7 @@ function createDOMMotionComponentProxy(componentFactory) {
   const componentCache = /* @__PURE__ */ new Map();
   const deprecatedFactoryFunction = (...args) => {
     if (define_process_env_default$4.NODE_ENV !== "production") {
-      warnOnce(false, "motion() is deprecated. Use motion.create() instead.");
+      warnOnce$1(false, "motion() is deprecated. Use motion.create() instead.");
     }
     return componentFactory(...args);
   };
@@ -103314,7 +103314,7 @@ function createDOMMotionComponentProxy(componentFactory) {
      * The prop name is passed through as `key` and we can use that to generate a `motion`
      * DOM component with that name.
      */
-    get: (_target, key) => {
+    get: (_target2, key) => {
       if (key === "create")
         return componentFactory;
       if (!componentCache.has(key)) {
@@ -103579,7 +103579,7 @@ const isMotionValue = (value) => Boolean(value && value.getVelocity);
 const getValueAsType = (value, type) => {
   return type && typeof value === "number" ? type.transform(value) : value;
 };
-const clamp = (min, max, v2) => {
+const clamp$1 = (min, max, v2) => {
   if (v2 > max)
     return max;
   if (v2 < min)
@@ -103593,7 +103593,7 @@ const number = {
 };
 const alpha = {
   ...number,
-  transform: (v2) => clamp(0, 1, v2)
+  transform: (v2) => clamp$1(0, 1, v2)
 };
 const scale = {
   ...number,
@@ -104286,7 +104286,7 @@ const splitColor = (aName, bName, cName) => (v2) => {
     alpha: alpha2 !== void 0 ? parseFloat(alpha2) : 1
   };
 };
-const clampRgbUnit = (v2) => clamp(0, 255, v2);
+const clampRgbUnit = (v2) => clamp$1(0, 255, v2);
 const rgbUnit = {
   ...number,
   transform: (v2) => Math.round(clampRgbUnit(v2))
@@ -105184,8 +105184,8 @@ function findSpring({ duration = springDefaults.duration, bounce = springDefault
   let derivative;
   warning(duration <= /* @__PURE__ */ secondsToMilliseconds(springDefaults.maxDuration), "Spring duration must be 10 seconds or less");
   let dampingRatio = 1 - bounce;
-  dampingRatio = clamp(springDefaults.minDamping, springDefaults.maxDamping, dampingRatio);
-  duration = clamp(springDefaults.minDuration, springDefaults.maxDuration, /* @__PURE__ */ millisecondsToSeconds(duration));
+  dampingRatio = clamp$1(springDefaults.minDamping, springDefaults.maxDamping, dampingRatio);
+  duration = clamp$1(springDefaults.minDuration, springDefaults.maxDuration, /* @__PURE__ */ millisecondsToSeconds(duration));
   if (dampingRatio < 1) {
     envelope = (undampedFreq2) => {
       const exponentialDecay = undampedFreq2 * dampingRatio;
@@ -105265,7 +105265,7 @@ function getSpringOptions(options) {
       const visualDuration = options.visualDuration;
       const root2 = 2 * Math.PI / (visualDuration * 1.2);
       const stiffness = root2 * root2;
-      const damping = 2 * clamp(0.05, 1, 1 - (options.bounce || 0)) * Math.sqrt(stiffness);
+      const damping = 2 * clamp$1(0.05, 1, 1 - (options.bounce || 0)) * Math.sqrt(stiffness);
       springOptions = {
         ...springOptions,
         mass: springDefaults.mass,
@@ -105481,7 +105481,7 @@ function interpolate(input, output, { clamp: isClamp = true, ease: ease2, mixer 
     const progressInRange = /* @__PURE__ */ progress(input[i2], input[i2 + 1], v2);
     return mixers[i2](progressInRange);
   };
-  return isClamp ? (v2) => interpolator(clamp(input[0], input[inputLength - 1], v2)) : interpolator;
+  return isClamp ? (v2) => interpolator(clamp$1(input[0], input[inputLength - 1], v2)) : interpolator;
 }
 function fillOffset(offset, remaining) {
   const min = offset[offset.length - 1];
@@ -105671,7 +105671,7 @@ class MainThreadAnimation extends BaseAnimation {
           frameGenerator = mirroredGenerator;
         }
       }
-      elapsed = clamp(0, 1, iterationProgress) * resolvedDuration;
+      elapsed = clamp$1(0, 1, iterationProgress) * resolvedDuration;
     }
     const state = isInDelayPhase ? { done: false, value: keyframes2[0] } : frameGenerator.next(elapsed);
     if (mapPercentToKeyframes) {
@@ -106923,7 +106923,7 @@ function calcOrigin(source, target) {
   } else if (sourceLength > targetLength) {
     origin = /* @__PURE__ */ progress(source.min, source.max - targetLength, target.min);
   }
-  return clamp(0, 1, origin);
+  return clamp$1(0, 1, origin);
 }
 function rebaseAxisConstraints(layout2, constraints) {
   const relativeConstraints = {};
@@ -108058,7 +108058,7 @@ function createProjectionNode({ attachResizeListener, defaultParent, measureScro
       this.nodes.forEach(notifyLayoutUpdate);
       this.clearAllSnapshots();
       const now2 = time.now();
-      frameData.delta = clamp(0, 1e3 / 60, now2 - frameData.timestamp);
+      frameData.delta = clamp$1(0, 1e3 / 60, now2 - frameData.timestamp);
       frameData.timestamp = now2;
       frameData.isProcessing = true;
       frameSteps.update.process(frameData);
@@ -109096,7 +109096,7 @@ function updateMotionValuesFromProps(element2, next, prev) {
     if (isMotionValue(nextValue)) {
       element2.addValue(key, nextValue);
       if (define_process_env_default$1.NODE_ENV === "development") {
-        warnOnce(nextValue.version === "12.6.2", `Attempting to mix Motion versions ${nextValue.version} with 12.6.2 may not work as expected.`);
+        warnOnce$1(nextValue.version === "12.6.2", `Attempting to mix Motion versions ${nextValue.version} with 12.6.2 may not work as expected.`);
       }
     } else if (isMotionValue(prevValue)) {
       element2.addValue(key, motionValue(nextValue, { owner: element2 }));
@@ -109211,7 +109211,7 @@ class VisualElement {
     }
     this.shouldReduceMotion = this.reducedMotionConfig === "never" ? false : this.reducedMotionConfig === "always" ? true : prefersReducedMotion.current;
     if (define_process_env_default.NODE_ENV !== "production") {
-      warnOnce(this.shouldReduceMotion !== true, "You have Reduced Motion enabled on your device. Animations may not appear as expected.");
+      warnOnce$1(this.shouldReduceMotion !== true, "You have Reduced Motion enabled on your device. Animations may not appear as expected.");
     }
     if (this.parent)
       this.parent.children.add(this);
@@ -111187,8 +111187,8 @@ function LivekitConnection(props) {
       connect: true,
       audio: true,
       video: false,
-      onMediaDeviceFailure: (error) => {
-        console.error(`${componentName}: Media device error:`, error);
+      onMediaDeviceFailure: (error2) => {
+        console.error(`${componentName}: Media device error:`, error2);
         toast.error("Microphone access failed. Please check permissions.");
         console.log(
           `${componentName}: Calling handleDisconnect due to media device failure`
@@ -111590,8 +111590,8 @@ const SleekView = ({
       });
       if (!whatsappUrl) return;
       window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-    } catch (error) {
-      console.error("Error handling WhatsApp click:", error);
+    } catch (error2) {
+      console.error("Error handling WhatsApp click:", error2);
     }
   };
   const handleWhatsappKeyDown = (event) => {
@@ -111910,6 +111910,10647 @@ const SleekView = ({
     )
   ] });
 };
+/**
+ * @license
+ * Copyright 2010-2026 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+const REVISION = "183";
+const FrontSide = 0;
+const DoubleSide = 2;
+const NormalBlending = 1;
+const AddEquation = 100;
+const SrcAlphaFactor = 204;
+const OneMinusSrcAlphaFactor = 205;
+const LessEqualDepth = 3;
+const ACESFilmicToneMapping = 4;
+const UVMapping = 300;
+const EquirectangularReflectionMapping = 303;
+const RepeatWrapping = 1e3;
+const ClampToEdgeWrapping = 1001;
+const MirroredRepeatWrapping = 1002;
+const NearestFilter = 1003;
+const LinearFilter = 1006;
+const LinearMipmapLinearFilter = 1008;
+const UnsignedByteType = 1009;
+const FloatType = 1015;
+const HalfFloatType = 1016;
+const RGBAFormat = 1023;
+const TangentSpaceNormalMap = 0;
+const NoColorSpace = "";
+const SRGBColorSpace = "srgb";
+const LinearSRGBColorSpace = "srgb-linear";
+const LinearTransfer = "linear";
+const SRGBTransfer = "srgb";
+const KeepStencilOp = 7680;
+const AlwaysStencilFunc = 519;
+const WebGLCoordinateSystem = 2e3;
+const WebGPUCoordinateSystem = 2001;
+function createElementNS(name2) {
+  return document.createElementNS("http://www.w3.org/1999/xhtml", name2);
+}
+const _cache = {};
+function enhanceLogMessage(params) {
+  const message = params[0];
+  if (typeof message === "string" && message.startsWith("TSL:")) {
+    const stackTrace = params[1];
+    if (stackTrace && stackTrace.isStackTrace) {
+      params[0] += " " + stackTrace.getLocation();
+    } else {
+      params[1] = 'Stack trace not available. Enable "THREE.Node.captureStackTrace" to capture stack traces.';
+    }
+  }
+  return params;
+}
+function warn(...params) {
+  params = enhanceLogMessage(params);
+  const message = "THREE." + params.shift();
+  {
+    const stackTrace = params[0];
+    if (stackTrace && stackTrace.isStackTrace) {
+      console.warn(stackTrace.getError(message));
+    } else {
+      console.warn(message, ...params);
+    }
+  }
+}
+function error(...params) {
+  params = enhanceLogMessage(params);
+  const message = "THREE." + params.shift();
+  {
+    const stackTrace = params[0];
+    if (stackTrace && stackTrace.isStackTrace) {
+      console.error(stackTrace.getError(message));
+    } else {
+      console.error(message, ...params);
+    }
+  }
+}
+function warnOnce(...params) {
+  const message = params.join(" ");
+  if (message in _cache) return;
+  _cache[message] = true;
+  warn(...params);
+}
+class EventDispatcher {
+  /**
+   * Adds the given event listener to the given event type.
+   *
+   * @param {string} type - The type of event to listen to.
+   * @param {Function} listener - The function that gets called when the event is fired.
+   */
+  addEventListener(type, listener) {
+    if (this._listeners === void 0) this._listeners = {};
+    const listeners = this._listeners;
+    if (listeners[type] === void 0) {
+      listeners[type] = [];
+    }
+    if (listeners[type].indexOf(listener) === -1) {
+      listeners[type].push(listener);
+    }
+  }
+  /**
+   * Returns `true` if the given event listener has been added to the given event type.
+   *
+   * @param {string} type - The type of event.
+   * @param {Function} listener - The listener to check.
+   * @return {boolean} Whether the given event listener has been added to the given event type.
+   */
+  hasEventListener(type, listener) {
+    const listeners = this._listeners;
+    if (listeners === void 0) return false;
+    return listeners[type] !== void 0 && listeners[type].indexOf(listener) !== -1;
+  }
+  /**
+   * Removes the given event listener from the given event type.
+   *
+   * @param {string} type - The type of event.
+   * @param {Function} listener - The listener to remove.
+   */
+  removeEventListener(type, listener) {
+    const listeners = this._listeners;
+    if (listeners === void 0) return;
+    const listenerArray = listeners[type];
+    if (listenerArray !== void 0) {
+      const index2 = listenerArray.indexOf(listener);
+      if (index2 !== -1) {
+        listenerArray.splice(index2, 1);
+      }
+    }
+  }
+  /**
+   * Dispatches an event object.
+   *
+   * @param {Object} event - The event that gets fired.
+   */
+  dispatchEvent(event) {
+    const listeners = this._listeners;
+    if (listeners === void 0) return;
+    const listenerArray = listeners[event.type];
+    if (listenerArray !== void 0) {
+      event.target = this;
+      const array = listenerArray.slice(0);
+      for (let i2 = 0, l2 = array.length; i2 < l2; i2++) {
+        array[i2].call(this, event);
+      }
+      event.target = null;
+    }
+  }
+}
+const _lut = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "0a", "0b", "0c", "0d", "0e", "0f", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "1a", "1b", "1c", "1d", "1e", "1f", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "2a", "2b", "2c", "2d", "2e", "2f", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "3a", "3b", "3c", "3d", "3e", "3f", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "4a", "4b", "4c", "4d", "4e", "4f", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "5a", "5b", "5c", "5d", "5e", "5f", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "6a", "6b", "6c", "6d", "6e", "6f", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "7a", "7b", "7c", "7d", "7e", "7f", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "8a", "8b", "8c", "8d", "8e", "8f", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "9a", "9b", "9c", "9d", "9e", "9f", "a0", "a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "a9", "aa", "ab", "ac", "ad", "ae", "af", "b0", "b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8", "b9", "ba", "bb", "bc", "bd", "be", "bf", "c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "ca", "cb", "cc", "cd", "ce", "cf", "d0", "d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8", "d9", "da", "db", "dc", "dd", "de", "df", "e0", "e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9", "ea", "eb", "ec", "ed", "ee", "ef", "f0", "f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "fa", "fb", "fc", "fd", "fe", "ff"];
+function generateUUID() {
+  const d0 = Math.random() * 4294967295 | 0;
+  const d1 = Math.random() * 4294967295 | 0;
+  const d2 = Math.random() * 4294967295 | 0;
+  const d3 = Math.random() * 4294967295 | 0;
+  const uuid = _lut[d0 & 255] + _lut[d0 >> 8 & 255] + _lut[d0 >> 16 & 255] + _lut[d0 >> 24 & 255] + "-" + _lut[d1 & 255] + _lut[d1 >> 8 & 255] + "-" + _lut[d1 >> 16 & 15 | 64] + _lut[d1 >> 24 & 255] + "-" + _lut[d2 & 63 | 128] + _lut[d2 >> 8 & 255] + "-" + _lut[d2 >> 16 & 255] + _lut[d2 >> 24 & 255] + _lut[d3 & 255] + _lut[d3 >> 8 & 255] + _lut[d3 >> 16 & 255] + _lut[d3 >> 24 & 255];
+  return uuid.toLowerCase();
+}
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, value));
+}
+function euclideanModulo(n2, m2) {
+  return (n2 % m2 + m2) % m2;
+}
+function lerp(x2, y2, t2) {
+  return (1 - t2) * x2 + t2 * y2;
+}
+class Vector2 {
+  /**
+   * Constructs a new 2D vector.
+   *
+   * @param {number} [x=0] - The x value of this vector.
+   * @param {number} [y=0] - The y value of this vector.
+   */
+  constructor(x2 = 0, y2 = 0) {
+    Vector2.prototype.isVector2 = true;
+    this.x = x2;
+    this.y = y2;
+  }
+  /**
+   * Alias for {@link Vector2#x}.
+   *
+   * @type {number}
+   */
+  get width() {
+    return this.x;
+  }
+  set width(value) {
+    this.x = value;
+  }
+  /**
+   * Alias for {@link Vector2#y}.
+   *
+   * @type {number}
+   */
+  get height() {
+    return this.y;
+  }
+  set height(value) {
+    this.y = value;
+  }
+  /**
+   * Sets the vector components.
+   *
+   * @param {number} x - The value of the x component.
+   * @param {number} y - The value of the y component.
+   * @return {Vector2} A reference to this vector.
+   */
+  set(x2, y2) {
+    this.x = x2;
+    this.y = y2;
+    return this;
+  }
+  /**
+   * Sets the vector components to the same value.
+   *
+   * @param {number} scalar - The value to set for all vector components.
+   * @return {Vector2} A reference to this vector.
+   */
+  setScalar(scalar) {
+    this.x = scalar;
+    this.y = scalar;
+    return this;
+  }
+  /**
+   * Sets the vector's x component to the given value
+   *
+   * @param {number} x - The value to set.
+   * @return {Vector2} A reference to this vector.
+   */
+  setX(x2) {
+    this.x = x2;
+    return this;
+  }
+  /**
+   * Sets the vector's y component to the given value
+   *
+   * @param {number} y - The value to set.
+   * @return {Vector2} A reference to this vector.
+   */
+  setY(y2) {
+    this.y = y2;
+    return this;
+  }
+  /**
+   * Allows to set a vector component with an index.
+   *
+   * @param {number} index - The component index. `0` equals to x, `1` equals to y.
+   * @param {number} value - The value to set.
+   * @return {Vector2} A reference to this vector.
+   */
+  setComponent(index2, value) {
+    switch (index2) {
+      case 0:
+        this.x = value;
+        break;
+      case 1:
+        this.y = value;
+        break;
+      default:
+        throw new Error("index is out of range: " + index2);
+    }
+    return this;
+  }
+  /**
+   * Returns the value of the vector component which matches the given index.
+   *
+   * @param {number} index - The component index. `0` equals to x, `1` equals to y.
+   * @return {number} A vector component value.
+   */
+  getComponent(index2) {
+    switch (index2) {
+      case 0:
+        return this.x;
+      case 1:
+        return this.y;
+      default:
+        throw new Error("index is out of range: " + index2);
+    }
+  }
+  /**
+   * Returns a new vector with copied values from this instance.
+   *
+   * @return {Vector2} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor(this.x, this.y);
+  }
+  /**
+   * Copies the values of the given vector to this instance.
+   *
+   * @param {Vector2} v - The vector to copy.
+   * @return {Vector2} A reference to this vector.
+   */
+  copy(v2) {
+    this.x = v2.x;
+    this.y = v2.y;
+    return this;
+  }
+  /**
+   * Adds the given vector to this instance.
+   *
+   * @param {Vector2} v - The vector to add.
+   * @return {Vector2} A reference to this vector.
+   */
+  add(v2) {
+    this.x += v2.x;
+    this.y += v2.y;
+    return this;
+  }
+  /**
+   * Adds the given scalar value to all components of this instance.
+   *
+   * @param {number} s - The scalar to add.
+   * @return {Vector2} A reference to this vector.
+   */
+  addScalar(s2) {
+    this.x += s2;
+    this.y += s2;
+    return this;
+  }
+  /**
+   * Adds the given vectors and stores the result in this instance.
+   *
+   * @param {Vector2} a - The first vector.
+   * @param {Vector2} b - The second vector.
+   * @return {Vector2} A reference to this vector.
+   */
+  addVectors(a2, b2) {
+    this.x = a2.x + b2.x;
+    this.y = a2.y + b2.y;
+    return this;
+  }
+  /**
+   * Adds the given vector scaled by the given factor to this instance.
+   *
+   * @param {Vector2} v - The vector.
+   * @param {number} s - The factor that scales `v`.
+   * @return {Vector2} A reference to this vector.
+   */
+  addScaledVector(v2, s2) {
+    this.x += v2.x * s2;
+    this.y += v2.y * s2;
+    return this;
+  }
+  /**
+   * Subtracts the given vector from this instance.
+   *
+   * @param {Vector2} v - The vector to subtract.
+   * @return {Vector2} A reference to this vector.
+   */
+  sub(v2) {
+    this.x -= v2.x;
+    this.y -= v2.y;
+    return this;
+  }
+  /**
+   * Subtracts the given scalar value from all components of this instance.
+   *
+   * @param {number} s - The scalar to subtract.
+   * @return {Vector2} A reference to this vector.
+   */
+  subScalar(s2) {
+    this.x -= s2;
+    this.y -= s2;
+    return this;
+  }
+  /**
+   * Subtracts the given vectors and stores the result in this instance.
+   *
+   * @param {Vector2} a - The first vector.
+   * @param {Vector2} b - The second vector.
+   * @return {Vector2} A reference to this vector.
+   */
+  subVectors(a2, b2) {
+    this.x = a2.x - b2.x;
+    this.y = a2.y - b2.y;
+    return this;
+  }
+  /**
+   * Multiplies the given vector with this instance.
+   *
+   * @param {Vector2} v - The vector to multiply.
+   * @return {Vector2} A reference to this vector.
+   */
+  multiply(v2) {
+    this.x *= v2.x;
+    this.y *= v2.y;
+    return this;
+  }
+  /**
+   * Multiplies the given scalar value with all components of this instance.
+   *
+   * @param {number} scalar - The scalar to multiply.
+   * @return {Vector2} A reference to this vector.
+   */
+  multiplyScalar(scalar) {
+    this.x *= scalar;
+    this.y *= scalar;
+    return this;
+  }
+  /**
+   * Divides this instance by the given vector.
+   *
+   * @param {Vector2} v - The vector to divide.
+   * @return {Vector2} A reference to this vector.
+   */
+  divide(v2) {
+    this.x /= v2.x;
+    this.y /= v2.y;
+    return this;
+  }
+  /**
+   * Divides this vector by the given scalar.
+   *
+   * @param {number} scalar - The scalar to divide.
+   * @return {Vector2} A reference to this vector.
+   */
+  divideScalar(scalar) {
+    return this.multiplyScalar(1 / scalar);
+  }
+  /**
+   * Multiplies this vector (with an implicit 1 as the 3rd component) by
+   * the given 3x3 matrix.
+   *
+   * @param {Matrix3} m - The matrix to apply.
+   * @return {Vector2} A reference to this vector.
+   */
+  applyMatrix3(m2) {
+    const x2 = this.x, y2 = this.y;
+    const e2 = m2.elements;
+    this.x = e2[0] * x2 + e2[3] * y2 + e2[6];
+    this.y = e2[1] * x2 + e2[4] * y2 + e2[7];
+    return this;
+  }
+  /**
+   * If this vector's x or y value is greater than the given vector's x or y
+   * value, replace that value with the corresponding min value.
+   *
+   * @param {Vector2} v - The vector.
+   * @return {Vector2} A reference to this vector.
+   */
+  min(v2) {
+    this.x = Math.min(this.x, v2.x);
+    this.y = Math.min(this.y, v2.y);
+    return this;
+  }
+  /**
+   * If this vector's x or y value is less than the given vector's x or y
+   * value, replace that value with the corresponding max value.
+   *
+   * @param {Vector2} v - The vector.
+   * @return {Vector2} A reference to this vector.
+   */
+  max(v2) {
+    this.x = Math.max(this.x, v2.x);
+    this.y = Math.max(this.y, v2.y);
+    return this;
+  }
+  /**
+   * If this vector's x or y value is greater than the max vector's x or y
+   * value, it is replaced by the corresponding value.
+   * If this vector's x or y value is less than the min vector's x or y value,
+   * it is replaced by the corresponding value.
+   *
+   * @param {Vector2} min - The minimum x and y values.
+   * @param {Vector2} max - The maximum x and y values in the desired range.
+   * @return {Vector2} A reference to this vector.
+   */
+  clamp(min, max) {
+    this.x = clamp(this.x, min.x, max.x);
+    this.y = clamp(this.y, min.y, max.y);
+    return this;
+  }
+  /**
+   * If this vector's x or y values are greater than the max value, they are
+   * replaced by the max value.
+   * If this vector's x or y values are less than the min value, they are
+   * replaced by the min value.
+   *
+   * @param {number} minVal - The minimum value the components will be clamped to.
+   * @param {number} maxVal - The maximum value the components will be clamped to.
+   * @return {Vector2} A reference to this vector.
+   */
+  clampScalar(minVal, maxVal) {
+    this.x = clamp(this.x, minVal, maxVal);
+    this.y = clamp(this.y, minVal, maxVal);
+    return this;
+  }
+  /**
+   * If this vector's length is greater than the max value, it is replaced by
+   * the max value.
+   * If this vector's length is less than the min value, it is replaced by the
+   * min value.
+   *
+   * @param {number} min - The minimum value the vector length will be clamped to.
+   * @param {number} max - The maximum value the vector length will be clamped to.
+   * @return {Vector2} A reference to this vector.
+   */
+  clampLength(min, max) {
+    const length = this.length();
+    return this.divideScalar(length || 1).multiplyScalar(clamp(length, min, max));
+  }
+  /**
+   * The components of this vector are rounded down to the nearest integer value.
+   *
+   * @return {Vector2} A reference to this vector.
+   */
+  floor() {
+    this.x = Math.floor(this.x);
+    this.y = Math.floor(this.y);
+    return this;
+  }
+  /**
+   * The components of this vector are rounded up to the nearest integer value.
+   *
+   * @return {Vector2} A reference to this vector.
+   */
+  ceil() {
+    this.x = Math.ceil(this.x);
+    this.y = Math.ceil(this.y);
+    return this;
+  }
+  /**
+   * The components of this vector are rounded to the nearest integer value
+   *
+   * @return {Vector2} A reference to this vector.
+   */
+  round() {
+    this.x = Math.round(this.x);
+    this.y = Math.round(this.y);
+    return this;
+  }
+  /**
+   * The components of this vector are rounded towards zero (up if negative,
+   * down if positive) to an integer value.
+   *
+   * @return {Vector2} A reference to this vector.
+   */
+  roundToZero() {
+    this.x = Math.trunc(this.x);
+    this.y = Math.trunc(this.y);
+    return this;
+  }
+  /**
+   * Inverts this vector - i.e. sets x = -x and y = -y.
+   *
+   * @return {Vector2} A reference to this vector.
+   */
+  negate() {
+    this.x = -this.x;
+    this.y = -this.y;
+    return this;
+  }
+  /**
+   * Calculates the dot product of the given vector with this instance.
+   *
+   * @param {Vector2} v - The vector to compute the dot product with.
+   * @return {number} The result of the dot product.
+   */
+  dot(v2) {
+    return this.x * v2.x + this.y * v2.y;
+  }
+  /**
+   * Calculates the cross product of the given vector with this instance.
+   *
+   * @param {Vector2} v - The vector to compute the cross product with.
+   * @return {number} The result of the cross product.
+   */
+  cross(v2) {
+    return this.x * v2.y - this.y * v2.x;
+  }
+  /**
+   * Computes the square of the Euclidean length (straight-line length) from
+   * (0, 0) to (x, y). If you are comparing the lengths of vectors, you should
+   * compare the length squared instead as it is slightly more efficient to calculate.
+   *
+   * @return {number} The square length of this vector.
+   */
+  lengthSq() {
+    return this.x * this.x + this.y * this.y;
+  }
+  /**
+   * Computes the  Euclidean length (straight-line length) from (0, 0) to (x, y).
+   *
+   * @return {number} The length of this vector.
+   */
+  length() {
+    return Math.sqrt(this.x * this.x + this.y * this.y);
+  }
+  /**
+   * Computes the Manhattan length of this vector.
+   *
+   * @return {number} The length of this vector.
+   */
+  manhattanLength() {
+    return Math.abs(this.x) + Math.abs(this.y);
+  }
+  /**
+   * Converts this vector to a unit vector - that is, sets it equal to a vector
+   * with the same direction as this one, but with a vector length of `1`.
+   *
+   * @return {Vector2} A reference to this vector.
+   */
+  normalize() {
+    return this.divideScalar(this.length() || 1);
+  }
+  /**
+   * Computes the angle in radians of this vector with respect to the positive x-axis.
+   *
+   * @return {number} The angle in radians.
+   */
+  angle() {
+    const angle = Math.atan2(-this.y, -this.x) + Math.PI;
+    return angle;
+  }
+  /**
+   * Returns the angle between the given vector and this instance in radians.
+   *
+   * @param {Vector2} v - The vector to compute the angle with.
+   * @return {number} The angle in radians.
+   */
+  angleTo(v2) {
+    const denominator = Math.sqrt(this.lengthSq() * v2.lengthSq());
+    if (denominator === 0) return Math.PI / 2;
+    const theta = this.dot(v2) / denominator;
+    return Math.acos(clamp(theta, -1, 1));
+  }
+  /**
+   * Computes the distance from the given vector to this instance.
+   *
+   * @param {Vector2} v - The vector to compute the distance to.
+   * @return {number} The distance.
+   */
+  distanceTo(v2) {
+    return Math.sqrt(this.distanceToSquared(v2));
+  }
+  /**
+   * Computes the squared distance from the given vector to this instance.
+   * If you are just comparing the distance with another distance, you should compare
+   * the distance squared instead as it is slightly more efficient to calculate.
+   *
+   * @param {Vector2} v - The vector to compute the squared distance to.
+   * @return {number} The squared distance.
+   */
+  distanceToSquared(v2) {
+    const dx = this.x - v2.x, dy = this.y - v2.y;
+    return dx * dx + dy * dy;
+  }
+  /**
+   * Computes the Manhattan distance from the given vector to this instance.
+   *
+   * @param {Vector2} v - The vector to compute the Manhattan distance to.
+   * @return {number} The Manhattan distance.
+   */
+  manhattanDistanceTo(v2) {
+    return Math.abs(this.x - v2.x) + Math.abs(this.y - v2.y);
+  }
+  /**
+   * Sets this vector to a vector with the same direction as this one, but
+   * with the specified length.
+   *
+   * @param {number} length - The new length of this vector.
+   * @return {Vector2} A reference to this vector.
+   */
+  setLength(length) {
+    return this.normalize().multiplyScalar(length);
+  }
+  /**
+   * Linearly interpolates between the given vector and this instance, where
+   * alpha is the percent distance along the line - alpha = 0 will be this
+   * vector, and alpha = 1 will be the given one.
+   *
+   * @param {Vector2} v - The vector to interpolate towards.
+   * @param {number} alpha - The interpolation factor, typically in the closed interval `[0, 1]`.
+   * @return {Vector2} A reference to this vector.
+   */
+  lerp(v2, alpha2) {
+    this.x += (v2.x - this.x) * alpha2;
+    this.y += (v2.y - this.y) * alpha2;
+    return this;
+  }
+  /**
+   * Linearly interpolates between the given vectors, where alpha is the percent
+   * distance along the line - alpha = 0 will be first vector, and alpha = 1 will
+   * be the second one. The result is stored in this instance.
+   *
+   * @param {Vector2} v1 - The first vector.
+   * @param {Vector2} v2 - The second vector.
+   * @param {number} alpha - The interpolation factor, typically in the closed interval `[0, 1]`.
+   * @return {Vector2} A reference to this vector.
+   */
+  lerpVectors(v1, v2, alpha2) {
+    this.x = v1.x + (v2.x - v1.x) * alpha2;
+    this.y = v1.y + (v2.y - v1.y) * alpha2;
+    return this;
+  }
+  /**
+   * Returns `true` if this vector is equal with the given one.
+   *
+   * @param {Vector2} v - The vector to test for equality.
+   * @return {boolean} Whether this vector is equal with the given one.
+   */
+  equals(v2) {
+    return v2.x === this.x && v2.y === this.y;
+  }
+  /**
+   * Sets this vector's x value to be `array[ offset ]` and y
+   * value to be `array[ offset + 1 ]`.
+   *
+   * @param {Array<number>} array - An array holding the vector component values.
+   * @param {number} [offset=0] - The offset into the array.
+   * @return {Vector2} A reference to this vector.
+   */
+  fromArray(array, offset = 0) {
+    this.x = array[offset];
+    this.y = array[offset + 1];
+    return this;
+  }
+  /**
+   * Writes the components of this vector to the given array. If no array is provided,
+   * the method returns a new instance.
+   *
+   * @param {Array<number>} [array=[]] - The target array holding the vector components.
+   * @param {number} [offset=0] - Index of the first element in the array.
+   * @return {Array<number>} The vector components.
+   */
+  toArray(array = [], offset = 0) {
+    array[offset] = this.x;
+    array[offset + 1] = this.y;
+    return array;
+  }
+  /**
+   * Sets the components of this vector from the given buffer attribute.
+   *
+   * @param {BufferAttribute} attribute - The buffer attribute holding vector data.
+   * @param {number} index - The index into the attribute.
+   * @return {Vector2} A reference to this vector.
+   */
+  fromBufferAttribute(attribute, index2) {
+    this.x = attribute.getX(index2);
+    this.y = attribute.getY(index2);
+    return this;
+  }
+  /**
+   * Rotates this vector around the given center by the given angle.
+   *
+   * @param {Vector2} center - The point around which to rotate.
+   * @param {number} angle - The angle to rotate, in radians.
+   * @return {Vector2} A reference to this vector.
+   */
+  rotateAround(center, angle) {
+    const c2 = Math.cos(angle), s2 = Math.sin(angle);
+    const x2 = this.x - center.x;
+    const y2 = this.y - center.y;
+    this.x = x2 * c2 - y2 * s2 + center.x;
+    this.y = x2 * s2 + y2 * c2 + center.y;
+    return this;
+  }
+  /**
+   * Sets each component of this vector to a pseudo-random value between `0` and
+   * `1`, excluding `1`.
+   *
+   * @return {Vector2} A reference to this vector.
+   */
+  random() {
+    this.x = Math.random();
+    this.y = Math.random();
+    return this;
+  }
+  *[Symbol.iterator]() {
+    yield this.x;
+    yield this.y;
+  }
+}
+class Quaternion {
+  /**
+   * Constructs a new quaternion.
+   *
+   * @param {number} [x=0] - The x value of this quaternion.
+   * @param {number} [y=0] - The y value of this quaternion.
+   * @param {number} [z=0] - The z value of this quaternion.
+   * @param {number} [w=1] - The w value of this quaternion.
+   */
+  constructor(x2 = 0, y2 = 0, z2 = 0, w2 = 1) {
+    this.isQuaternion = true;
+    this._x = x2;
+    this._y = y2;
+    this._z = z2;
+    this._w = w2;
+  }
+  /**
+   * Interpolates between two quaternions via SLERP. This implementation assumes the
+   * quaternion data are managed in flat arrays.
+   *
+   * @param {Array<number>} dst - The destination array.
+   * @param {number} dstOffset - An offset into the destination array.
+   * @param {Array<number>} src0 - The source array of the first quaternion.
+   * @param {number} srcOffset0 - An offset into the first source array.
+   * @param {Array<number>} src1 -  The source array of the second quaternion.
+   * @param {number} srcOffset1 - An offset into the second source array.
+   * @param {number} t - The interpolation factor. A value in the range `[0,1]` will interpolate. A value outside the range `[0,1]` will extrapolate.
+   * @see {@link Quaternion#slerp}
+   */
+  static slerpFlat(dst, dstOffset, src0, srcOffset0, src1, srcOffset1, t2) {
+    let x0 = src0[srcOffset0 + 0], y0 = src0[srcOffset0 + 1], z0 = src0[srcOffset0 + 2], w0 = src0[srcOffset0 + 3];
+    let x1 = src1[srcOffset1 + 0], y1 = src1[srcOffset1 + 1], z1 = src1[srcOffset1 + 2], w1 = src1[srcOffset1 + 3];
+    if (w0 !== w1 || x0 !== x1 || y0 !== y1 || z0 !== z1) {
+      let dot = x0 * x1 + y0 * y1 + z0 * z1 + w0 * w1;
+      if (dot < 0) {
+        x1 = -x1;
+        y1 = -y1;
+        z1 = -z1;
+        w1 = -w1;
+        dot = -dot;
+      }
+      let s2 = 1 - t2;
+      if (dot < 0.9995) {
+        const theta = Math.acos(dot);
+        const sin = Math.sin(theta);
+        s2 = Math.sin(s2 * theta) / sin;
+        t2 = Math.sin(t2 * theta) / sin;
+        x0 = x0 * s2 + x1 * t2;
+        y0 = y0 * s2 + y1 * t2;
+        z0 = z0 * s2 + z1 * t2;
+        w0 = w0 * s2 + w1 * t2;
+      } else {
+        x0 = x0 * s2 + x1 * t2;
+        y0 = y0 * s2 + y1 * t2;
+        z0 = z0 * s2 + z1 * t2;
+        w0 = w0 * s2 + w1 * t2;
+        const f2 = 1 / Math.sqrt(x0 * x0 + y0 * y0 + z0 * z0 + w0 * w0);
+        x0 *= f2;
+        y0 *= f2;
+        z0 *= f2;
+        w0 *= f2;
+      }
+    }
+    dst[dstOffset] = x0;
+    dst[dstOffset + 1] = y0;
+    dst[dstOffset + 2] = z0;
+    dst[dstOffset + 3] = w0;
+  }
+  /**
+   * Multiplies two quaternions. This implementation assumes the quaternion data are managed
+   * in flat arrays.
+   *
+   * @param {Array<number>} dst - The destination array.
+   * @param {number} dstOffset - An offset into the destination array.
+   * @param {Array<number>} src0 - The source array of the first quaternion.
+   * @param {number} srcOffset0 - An offset into the first source array.
+   * @param {Array<number>} src1 -  The source array of the second quaternion.
+   * @param {number} srcOffset1 - An offset into the second source array.
+   * @return {Array<number>} The destination array.
+   * @see {@link Quaternion#multiplyQuaternions}.
+   */
+  static multiplyQuaternionsFlat(dst, dstOffset, src0, srcOffset0, src1, srcOffset1) {
+    const x0 = src0[srcOffset0];
+    const y0 = src0[srcOffset0 + 1];
+    const z0 = src0[srcOffset0 + 2];
+    const w0 = src0[srcOffset0 + 3];
+    const x1 = src1[srcOffset1];
+    const y1 = src1[srcOffset1 + 1];
+    const z1 = src1[srcOffset1 + 2];
+    const w1 = src1[srcOffset1 + 3];
+    dst[dstOffset] = x0 * w1 + w0 * x1 + y0 * z1 - z0 * y1;
+    dst[dstOffset + 1] = y0 * w1 + w0 * y1 + z0 * x1 - x0 * z1;
+    dst[dstOffset + 2] = z0 * w1 + w0 * z1 + x0 * y1 - y0 * x1;
+    dst[dstOffset + 3] = w0 * w1 - x0 * x1 - y0 * y1 - z0 * z1;
+    return dst;
+  }
+  /**
+   * The x value of this quaternion.
+   *
+   * @type {number}
+   * @default 0
+   */
+  get x() {
+    return this._x;
+  }
+  set x(value) {
+    this._x = value;
+    this._onChangeCallback();
+  }
+  /**
+   * The y value of this quaternion.
+   *
+   * @type {number}
+   * @default 0
+   */
+  get y() {
+    return this._y;
+  }
+  set y(value) {
+    this._y = value;
+    this._onChangeCallback();
+  }
+  /**
+   * The z value of this quaternion.
+   *
+   * @type {number}
+   * @default 0
+   */
+  get z() {
+    return this._z;
+  }
+  set z(value) {
+    this._z = value;
+    this._onChangeCallback();
+  }
+  /**
+   * The w value of this quaternion.
+   *
+   * @type {number}
+   * @default 1
+   */
+  get w() {
+    return this._w;
+  }
+  set w(value) {
+    this._w = value;
+    this._onChangeCallback();
+  }
+  /**
+   * Sets the quaternion components.
+   *
+   * @param {number} x - The x value of this quaternion.
+   * @param {number} y - The y value of this quaternion.
+   * @param {number} z - The z value of this quaternion.
+   * @param {number} w - The w value of this quaternion.
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  set(x2, y2, z2, w2) {
+    this._x = x2;
+    this._y = y2;
+    this._z = z2;
+    this._w = w2;
+    this._onChangeCallback();
+    return this;
+  }
+  /**
+   * Returns a new quaternion with copied values from this instance.
+   *
+   * @return {Quaternion} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor(this._x, this._y, this._z, this._w);
+  }
+  /**
+   * Copies the values of the given quaternion to this instance.
+   *
+   * @param {Quaternion} quaternion - The quaternion to copy.
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  copy(quaternion) {
+    this._x = quaternion.x;
+    this._y = quaternion.y;
+    this._z = quaternion.z;
+    this._w = quaternion.w;
+    this._onChangeCallback();
+    return this;
+  }
+  /**
+   * Sets this quaternion from the rotation specified by the given
+   * Euler angles.
+   *
+   * @param {Euler} euler - The Euler angles.
+   * @param {boolean} [update=true] - Whether the internal `onChange` callback should be executed or not.
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  setFromEuler(euler, update = true) {
+    const x2 = euler._x, y2 = euler._y, z2 = euler._z, order2 = euler._order;
+    const cos = Math.cos;
+    const sin = Math.sin;
+    const c1 = cos(x2 / 2);
+    const c2 = cos(y2 / 2);
+    const c3 = cos(z2 / 2);
+    const s1 = sin(x2 / 2);
+    const s2 = sin(y2 / 2);
+    const s3 = sin(z2 / 2);
+    switch (order2) {
+      case "XYZ":
+        this._x = s1 * c2 * c3 + c1 * s2 * s3;
+        this._y = c1 * s2 * c3 - s1 * c2 * s3;
+        this._z = c1 * c2 * s3 + s1 * s2 * c3;
+        this._w = c1 * c2 * c3 - s1 * s2 * s3;
+        break;
+      case "YXZ":
+        this._x = s1 * c2 * c3 + c1 * s2 * s3;
+        this._y = c1 * s2 * c3 - s1 * c2 * s3;
+        this._z = c1 * c2 * s3 - s1 * s2 * c3;
+        this._w = c1 * c2 * c3 + s1 * s2 * s3;
+        break;
+      case "ZXY":
+        this._x = s1 * c2 * c3 - c1 * s2 * s3;
+        this._y = c1 * s2 * c3 + s1 * c2 * s3;
+        this._z = c1 * c2 * s3 + s1 * s2 * c3;
+        this._w = c1 * c2 * c3 - s1 * s2 * s3;
+        break;
+      case "ZYX":
+        this._x = s1 * c2 * c3 - c1 * s2 * s3;
+        this._y = c1 * s2 * c3 + s1 * c2 * s3;
+        this._z = c1 * c2 * s3 - s1 * s2 * c3;
+        this._w = c1 * c2 * c3 + s1 * s2 * s3;
+        break;
+      case "YZX":
+        this._x = s1 * c2 * c3 + c1 * s2 * s3;
+        this._y = c1 * s2 * c3 + s1 * c2 * s3;
+        this._z = c1 * c2 * s3 - s1 * s2 * c3;
+        this._w = c1 * c2 * c3 - s1 * s2 * s3;
+        break;
+      case "XZY":
+        this._x = s1 * c2 * c3 - c1 * s2 * s3;
+        this._y = c1 * s2 * c3 - s1 * c2 * s3;
+        this._z = c1 * c2 * s3 + s1 * s2 * c3;
+        this._w = c1 * c2 * c3 + s1 * s2 * s3;
+        break;
+      default:
+        warn("Quaternion: .setFromEuler() encountered an unknown order: " + order2);
+    }
+    if (update === true) this._onChangeCallback();
+    return this;
+  }
+  /**
+   * Sets this quaternion from the given axis and angle.
+   *
+   * @param {Vector3} axis - The normalized axis.
+   * @param {number} angle - The angle in radians.
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  setFromAxisAngle(axis, angle) {
+    const halfAngle = angle / 2, s2 = Math.sin(halfAngle);
+    this._x = axis.x * s2;
+    this._y = axis.y * s2;
+    this._z = axis.z * s2;
+    this._w = Math.cos(halfAngle);
+    this._onChangeCallback();
+    return this;
+  }
+  /**
+   * Sets this quaternion from the given rotation matrix.
+   *
+   * @param {Matrix4} m - A 4x4 matrix of which the upper 3x3 of matrix is a pure rotation matrix (i.e. unscaled).
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  setFromRotationMatrix(m2) {
+    const te2 = m2.elements, m11 = te2[0], m12 = te2[4], m13 = te2[8], m21 = te2[1], m22 = te2[5], m23 = te2[9], m31 = te2[2], m32 = te2[6], m33 = te2[10], trace = m11 + m22 + m33;
+    if (trace > 0) {
+      const s2 = 0.5 / Math.sqrt(trace + 1);
+      this._w = 0.25 / s2;
+      this._x = (m32 - m23) * s2;
+      this._y = (m13 - m31) * s2;
+      this._z = (m21 - m12) * s2;
+    } else if (m11 > m22 && m11 > m33) {
+      const s2 = 2 * Math.sqrt(1 + m11 - m22 - m33);
+      this._w = (m32 - m23) / s2;
+      this._x = 0.25 * s2;
+      this._y = (m12 + m21) / s2;
+      this._z = (m13 + m31) / s2;
+    } else if (m22 > m33) {
+      const s2 = 2 * Math.sqrt(1 + m22 - m11 - m33);
+      this._w = (m13 - m31) / s2;
+      this._x = (m12 + m21) / s2;
+      this._y = 0.25 * s2;
+      this._z = (m23 + m32) / s2;
+    } else {
+      const s2 = 2 * Math.sqrt(1 + m33 - m11 - m22);
+      this._w = (m21 - m12) / s2;
+      this._x = (m13 + m31) / s2;
+      this._y = (m23 + m32) / s2;
+      this._z = 0.25 * s2;
+    }
+    this._onChangeCallback();
+    return this;
+  }
+  /**
+   * Sets this quaternion to the rotation required to rotate the direction vector
+   * `vFrom` to the direction vector `vTo`.
+   *
+   * @param {Vector3} vFrom - The first (normalized) direction vector.
+   * @param {Vector3} vTo - The second (normalized) direction vector.
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  setFromUnitVectors(vFrom, vTo) {
+    let r2 = vFrom.dot(vTo) + 1;
+    if (r2 < 1e-8) {
+      r2 = 0;
+      if (Math.abs(vFrom.x) > Math.abs(vFrom.z)) {
+        this._x = -vFrom.y;
+        this._y = vFrom.x;
+        this._z = 0;
+        this._w = r2;
+      } else {
+        this._x = 0;
+        this._y = -vFrom.z;
+        this._z = vFrom.y;
+        this._w = r2;
+      }
+    } else {
+      this._x = vFrom.y * vTo.z - vFrom.z * vTo.y;
+      this._y = vFrom.z * vTo.x - vFrom.x * vTo.z;
+      this._z = vFrom.x * vTo.y - vFrom.y * vTo.x;
+      this._w = r2;
+    }
+    return this.normalize();
+  }
+  /**
+   * Returns the angle between this quaternion and the given one in radians.
+   *
+   * @param {Quaternion} q - The quaternion to compute the angle with.
+   * @return {number} The angle in radians.
+   */
+  angleTo(q2) {
+    return 2 * Math.acos(Math.abs(clamp(this.dot(q2), -1, 1)));
+  }
+  /**
+   * Rotates this quaternion by a given angular step to the given quaternion.
+   * The method ensures that the final quaternion will not overshoot `q`.
+   *
+   * @param {Quaternion} q - The target quaternion.
+   * @param {number} step - The angular step in radians.
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  rotateTowards(q2, step) {
+    const angle = this.angleTo(q2);
+    if (angle === 0) return this;
+    const t2 = Math.min(1, step / angle);
+    this.slerp(q2, t2);
+    return this;
+  }
+  /**
+   * Sets this quaternion to the identity quaternion; that is, to the
+   * quaternion that represents "no rotation".
+   *
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  identity() {
+    return this.set(0, 0, 0, 1);
+  }
+  /**
+   * Inverts this quaternion via {@link Quaternion#conjugate}. The
+   * quaternion is assumed to have unit length.
+   *
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  invert() {
+    return this.conjugate();
+  }
+  /**
+   * Returns the rotational conjugate of this quaternion. The conjugate of a
+   * quaternion represents the same rotation in the opposite direction about
+   * the rotational axis.
+   *
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  conjugate() {
+    this._x *= -1;
+    this._y *= -1;
+    this._z *= -1;
+    this._onChangeCallback();
+    return this;
+  }
+  /**
+   * Calculates the dot product of this quaternion and the given one.
+   *
+   * @param {Quaternion} v - The quaternion to compute the dot product with.
+   * @return {number} The result of the dot product.
+   */
+  dot(v2) {
+    return this._x * v2._x + this._y * v2._y + this._z * v2._z + this._w * v2._w;
+  }
+  /**
+   * Computes the squared Euclidean length (straight-line length) of this quaternion,
+   * considered as a 4 dimensional vector. This can be useful if you are comparing the
+   * lengths of two quaternions, as this is a slightly more efficient calculation than
+   * {@link Quaternion#length}.
+   *
+   * @return {number} The squared Euclidean length.
+   */
+  lengthSq() {
+    return this._x * this._x + this._y * this._y + this._z * this._z + this._w * this._w;
+  }
+  /**
+   * Computes the Euclidean length (straight-line length) of this quaternion,
+   * considered as a 4 dimensional vector.
+   *
+   * @return {number} The Euclidean length.
+   */
+  length() {
+    return Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z + this._w * this._w);
+  }
+  /**
+   * Normalizes this quaternion - that is, calculated the quaternion that performs
+   * the same rotation as this one, but has a length equal to `1`.
+   *
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  normalize() {
+    let l2 = this.length();
+    if (l2 === 0) {
+      this._x = 0;
+      this._y = 0;
+      this._z = 0;
+      this._w = 1;
+    } else {
+      l2 = 1 / l2;
+      this._x = this._x * l2;
+      this._y = this._y * l2;
+      this._z = this._z * l2;
+      this._w = this._w * l2;
+    }
+    this._onChangeCallback();
+    return this;
+  }
+  /**
+   * Multiplies this quaternion by the given one.
+   *
+   * @param {Quaternion} q - The quaternion.
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  multiply(q2) {
+    return this.multiplyQuaternions(this, q2);
+  }
+  /**
+   * Pre-multiplies this quaternion by the given one.
+   *
+   * @param {Quaternion} q - The quaternion.
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  premultiply(q2) {
+    return this.multiplyQuaternions(q2, this);
+  }
+  /**
+   * Multiplies the given quaternions and stores the result in this instance.
+   *
+   * @param {Quaternion} a - The first quaternion.
+   * @param {Quaternion} b - The second quaternion.
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  multiplyQuaternions(a2, b2) {
+    const qax = a2._x, qay = a2._y, qaz = a2._z, qaw = a2._w;
+    const qbx = b2._x, qby = b2._y, qbz = b2._z, qbw = b2._w;
+    this._x = qax * qbw + qaw * qbx + qay * qbz - qaz * qby;
+    this._y = qay * qbw + qaw * qby + qaz * qbx - qax * qbz;
+    this._z = qaz * qbw + qaw * qbz + qax * qby - qay * qbx;
+    this._w = qaw * qbw - qax * qbx - qay * qby - qaz * qbz;
+    this._onChangeCallback();
+    return this;
+  }
+  /**
+   * Performs a spherical linear interpolation between this quaternion and the target quaternion.
+   *
+   * @param {Quaternion} qb - The target quaternion.
+   * @param {number} t - The interpolation factor. A value in the range `[0,1]` will interpolate. A value outside the range `[0,1]` will extrapolate.
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  slerp(qb, t2) {
+    let x2 = qb._x, y2 = qb._y, z2 = qb._z, w2 = qb._w;
+    let dot = this.dot(qb);
+    if (dot < 0) {
+      x2 = -x2;
+      y2 = -y2;
+      z2 = -z2;
+      w2 = -w2;
+      dot = -dot;
+    }
+    let s2 = 1 - t2;
+    if (dot < 0.9995) {
+      const theta = Math.acos(dot);
+      const sin = Math.sin(theta);
+      s2 = Math.sin(s2 * theta) / sin;
+      t2 = Math.sin(t2 * theta) / sin;
+      this._x = this._x * s2 + x2 * t2;
+      this._y = this._y * s2 + y2 * t2;
+      this._z = this._z * s2 + z2 * t2;
+      this._w = this._w * s2 + w2 * t2;
+      this._onChangeCallback();
+    } else {
+      this._x = this._x * s2 + x2 * t2;
+      this._y = this._y * s2 + y2 * t2;
+      this._z = this._z * s2 + z2 * t2;
+      this._w = this._w * s2 + w2 * t2;
+      this.normalize();
+    }
+    return this;
+  }
+  /**
+   * Performs a spherical linear interpolation between the given quaternions
+   * and stores the result in this quaternion.
+   *
+   * @param {Quaternion} qa - The source quaternion.
+   * @param {Quaternion} qb - The target quaternion.
+   * @param {number} t - The interpolation factor in the closed interval `[0, 1]`.
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  slerpQuaternions(qa, qb, t2) {
+    return this.copy(qa).slerp(qb, t2);
+  }
+  /**
+   * Sets this quaternion to a uniformly random, normalized quaternion.
+   *
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  random() {
+    const theta1 = 2 * Math.PI * Math.random();
+    const theta2 = 2 * Math.PI * Math.random();
+    const x0 = Math.random();
+    const r1 = Math.sqrt(1 - x0);
+    const r2 = Math.sqrt(x0);
+    return this.set(
+      r1 * Math.sin(theta1),
+      r1 * Math.cos(theta1),
+      r2 * Math.sin(theta2),
+      r2 * Math.cos(theta2)
+    );
+  }
+  /**
+   * Returns `true` if this quaternion is equal with the given one.
+   *
+   * @param {Quaternion} quaternion - The quaternion to test for equality.
+   * @return {boolean} Whether this quaternion is equal with the given one.
+   */
+  equals(quaternion) {
+    return quaternion._x === this._x && quaternion._y === this._y && quaternion._z === this._z && quaternion._w === this._w;
+  }
+  /**
+   * Sets this quaternion's components from the given array.
+   *
+   * @param {Array<number>} array - An array holding the quaternion component values.
+   * @param {number} [offset=0] - The offset into the array.
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  fromArray(array, offset = 0) {
+    this._x = array[offset];
+    this._y = array[offset + 1];
+    this._z = array[offset + 2];
+    this._w = array[offset + 3];
+    this._onChangeCallback();
+    return this;
+  }
+  /**
+   * Writes the components of this quaternion to the given array. If no array is provided,
+   * the method returns a new instance.
+   *
+   * @param {Array<number>} [array=[]] - The target array holding the quaternion components.
+   * @param {number} [offset=0] - Index of the first element in the array.
+   * @return {Array<number>} The quaternion components.
+   */
+  toArray(array = [], offset = 0) {
+    array[offset] = this._x;
+    array[offset + 1] = this._y;
+    array[offset + 2] = this._z;
+    array[offset + 3] = this._w;
+    return array;
+  }
+  /**
+   * Sets the components of this quaternion from the given buffer attribute.
+   *
+   * @param {BufferAttribute} attribute - The buffer attribute holding quaternion data.
+   * @param {number} index - The index into the attribute.
+   * @return {Quaternion} A reference to this quaternion.
+   */
+  fromBufferAttribute(attribute, index2) {
+    this._x = attribute.getX(index2);
+    this._y = attribute.getY(index2);
+    this._z = attribute.getZ(index2);
+    this._w = attribute.getW(index2);
+    this._onChangeCallback();
+    return this;
+  }
+  /**
+   * This methods defines the serialization result of this class. Returns the
+   * numerical elements of this quaternion in an array of format `[x, y, z, w]`.
+   *
+   * @return {Array<number>} The serialized quaternion.
+   */
+  toJSON() {
+    return this.toArray();
+  }
+  _onChange(callback) {
+    this._onChangeCallback = callback;
+    return this;
+  }
+  _onChangeCallback() {
+  }
+  *[Symbol.iterator]() {
+    yield this._x;
+    yield this._y;
+    yield this._z;
+    yield this._w;
+  }
+}
+class Vector3 {
+  /**
+   * Constructs a new 3D vector.
+   *
+   * @param {number} [x=0] - The x value of this vector.
+   * @param {number} [y=0] - The y value of this vector.
+   * @param {number} [z=0] - The z value of this vector.
+   */
+  constructor(x2 = 0, y2 = 0, z2 = 0) {
+    Vector3.prototype.isVector3 = true;
+    this.x = x2;
+    this.y = y2;
+    this.z = z2;
+  }
+  /**
+   * Sets the vector components.
+   *
+   * @param {number} x - The value of the x component.
+   * @param {number} y - The value of the y component.
+   * @param {number} z - The value of the z component.
+   * @return {Vector3} A reference to this vector.
+   */
+  set(x2, y2, z2) {
+    if (z2 === void 0) z2 = this.z;
+    this.x = x2;
+    this.y = y2;
+    this.z = z2;
+    return this;
+  }
+  /**
+   * Sets the vector components to the same value.
+   *
+   * @param {number} scalar - The value to set for all vector components.
+   * @return {Vector3} A reference to this vector.
+   */
+  setScalar(scalar) {
+    this.x = scalar;
+    this.y = scalar;
+    this.z = scalar;
+    return this;
+  }
+  /**
+   * Sets the vector's x component to the given value.
+   *
+   * @param {number} x - The value to set.
+   * @return {Vector3} A reference to this vector.
+   */
+  setX(x2) {
+    this.x = x2;
+    return this;
+  }
+  /**
+   * Sets the vector's y component to the given value.
+   *
+   * @param {number} y - The value to set.
+   * @return {Vector3} A reference to this vector.
+   */
+  setY(y2) {
+    this.y = y2;
+    return this;
+  }
+  /**
+   * Sets the vector's z component to the given value.
+   *
+   * @param {number} z - The value to set.
+   * @return {Vector3} A reference to this vector.
+   */
+  setZ(z2) {
+    this.z = z2;
+    return this;
+  }
+  /**
+   * Allows to set a vector component with an index.
+   *
+   * @param {number} index - The component index. `0` equals to x, `1` equals to y, `2` equals to z.
+   * @param {number} value - The value to set.
+   * @return {Vector3} A reference to this vector.
+   */
+  setComponent(index2, value) {
+    switch (index2) {
+      case 0:
+        this.x = value;
+        break;
+      case 1:
+        this.y = value;
+        break;
+      case 2:
+        this.z = value;
+        break;
+      default:
+        throw new Error("index is out of range: " + index2);
+    }
+    return this;
+  }
+  /**
+   * Returns the value of the vector component which matches the given index.
+   *
+   * @param {number} index - The component index. `0` equals to x, `1` equals to y, `2` equals to z.
+   * @return {number} A vector component value.
+   */
+  getComponent(index2) {
+    switch (index2) {
+      case 0:
+        return this.x;
+      case 1:
+        return this.y;
+      case 2:
+        return this.z;
+      default:
+        throw new Error("index is out of range: " + index2);
+    }
+  }
+  /**
+   * Returns a new vector with copied values from this instance.
+   *
+   * @return {Vector3} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor(this.x, this.y, this.z);
+  }
+  /**
+   * Copies the values of the given vector to this instance.
+   *
+   * @param {Vector3} v - The vector to copy.
+   * @return {Vector3} A reference to this vector.
+   */
+  copy(v2) {
+    this.x = v2.x;
+    this.y = v2.y;
+    this.z = v2.z;
+    return this;
+  }
+  /**
+   * Adds the given vector to this instance.
+   *
+   * @param {Vector3} v - The vector to add.
+   * @return {Vector3} A reference to this vector.
+   */
+  add(v2) {
+    this.x += v2.x;
+    this.y += v2.y;
+    this.z += v2.z;
+    return this;
+  }
+  /**
+   * Adds the given scalar value to all components of this instance.
+   *
+   * @param {number} s - The scalar to add.
+   * @return {Vector3} A reference to this vector.
+   */
+  addScalar(s2) {
+    this.x += s2;
+    this.y += s2;
+    this.z += s2;
+    return this;
+  }
+  /**
+   * Adds the given vectors and stores the result in this instance.
+   *
+   * @param {Vector3} a - The first vector.
+   * @param {Vector3} b - The second vector.
+   * @return {Vector3} A reference to this vector.
+   */
+  addVectors(a2, b2) {
+    this.x = a2.x + b2.x;
+    this.y = a2.y + b2.y;
+    this.z = a2.z + b2.z;
+    return this;
+  }
+  /**
+   * Adds the given vector scaled by the given factor to this instance.
+   *
+   * @param {Vector3|Vector4} v - The vector.
+   * @param {number} s - The factor that scales `v`.
+   * @return {Vector3} A reference to this vector.
+   */
+  addScaledVector(v2, s2) {
+    this.x += v2.x * s2;
+    this.y += v2.y * s2;
+    this.z += v2.z * s2;
+    return this;
+  }
+  /**
+   * Subtracts the given vector from this instance.
+   *
+   * @param {Vector3} v - The vector to subtract.
+   * @return {Vector3} A reference to this vector.
+   */
+  sub(v2) {
+    this.x -= v2.x;
+    this.y -= v2.y;
+    this.z -= v2.z;
+    return this;
+  }
+  /**
+   * Subtracts the given scalar value from all components of this instance.
+   *
+   * @param {number} s - The scalar to subtract.
+   * @return {Vector3} A reference to this vector.
+   */
+  subScalar(s2) {
+    this.x -= s2;
+    this.y -= s2;
+    this.z -= s2;
+    return this;
+  }
+  /**
+   * Subtracts the given vectors and stores the result in this instance.
+   *
+   * @param {Vector3} a - The first vector.
+   * @param {Vector3} b - The second vector.
+   * @return {Vector3} A reference to this vector.
+   */
+  subVectors(a2, b2) {
+    this.x = a2.x - b2.x;
+    this.y = a2.y - b2.y;
+    this.z = a2.z - b2.z;
+    return this;
+  }
+  /**
+   * Multiplies the given vector with this instance.
+   *
+   * @param {Vector3} v - The vector to multiply.
+   * @return {Vector3} A reference to this vector.
+   */
+  multiply(v2) {
+    this.x *= v2.x;
+    this.y *= v2.y;
+    this.z *= v2.z;
+    return this;
+  }
+  /**
+   * Multiplies the given scalar value with all components of this instance.
+   *
+   * @param {number} scalar - The scalar to multiply.
+   * @return {Vector3} A reference to this vector.
+   */
+  multiplyScalar(scalar) {
+    this.x *= scalar;
+    this.y *= scalar;
+    this.z *= scalar;
+    return this;
+  }
+  /**
+   * Multiplies the given vectors and stores the result in this instance.
+   *
+   * @param {Vector3} a - The first vector.
+   * @param {Vector3} b - The second vector.
+   * @return {Vector3} A reference to this vector.
+   */
+  multiplyVectors(a2, b2) {
+    this.x = a2.x * b2.x;
+    this.y = a2.y * b2.y;
+    this.z = a2.z * b2.z;
+    return this;
+  }
+  /**
+   * Applies the given Euler rotation to this vector.
+   *
+   * @param {Euler} euler - The Euler angles.
+   * @return {Vector3} A reference to this vector.
+   */
+  applyEuler(euler) {
+    return this.applyQuaternion(_quaternion$5.setFromEuler(euler));
+  }
+  /**
+   * Applies a rotation specified by an axis and an angle to this vector.
+   *
+   * @param {Vector3} axis - A normalized vector representing the rotation axis.
+   * @param {number} angle - The angle in radians.
+   * @return {Vector3} A reference to this vector.
+   */
+  applyAxisAngle(axis, angle) {
+    return this.applyQuaternion(_quaternion$5.setFromAxisAngle(axis, angle));
+  }
+  /**
+   * Multiplies this vector with the given 3x3 matrix.
+   *
+   * @param {Matrix3} m - The 3x3 matrix.
+   * @return {Vector3} A reference to this vector.
+   */
+  applyMatrix3(m2) {
+    const x2 = this.x, y2 = this.y, z2 = this.z;
+    const e2 = m2.elements;
+    this.x = e2[0] * x2 + e2[3] * y2 + e2[6] * z2;
+    this.y = e2[1] * x2 + e2[4] * y2 + e2[7] * z2;
+    this.z = e2[2] * x2 + e2[5] * y2 + e2[8] * z2;
+    return this;
+  }
+  /**
+   * Multiplies this vector by the given normal matrix and normalizes
+   * the result.
+   *
+   * @param {Matrix3} m - The normal matrix.
+   * @return {Vector3} A reference to this vector.
+   */
+  applyNormalMatrix(m2) {
+    return this.applyMatrix3(m2).normalize();
+  }
+  /**
+   * Multiplies this vector (with an implicit 1 in the 4th dimension) by m, and
+   * divides by perspective.
+   *
+   * @param {Matrix4} m - The matrix to apply.
+   * @return {Vector3} A reference to this vector.
+   */
+  applyMatrix4(m2) {
+    const x2 = this.x, y2 = this.y, z2 = this.z;
+    const e2 = m2.elements;
+    const w2 = 1 / (e2[3] * x2 + e2[7] * y2 + e2[11] * z2 + e2[15]);
+    this.x = (e2[0] * x2 + e2[4] * y2 + e2[8] * z2 + e2[12]) * w2;
+    this.y = (e2[1] * x2 + e2[5] * y2 + e2[9] * z2 + e2[13]) * w2;
+    this.z = (e2[2] * x2 + e2[6] * y2 + e2[10] * z2 + e2[14]) * w2;
+    return this;
+  }
+  /**
+   * Applies the given Quaternion to this vector.
+   *
+   * @param {Quaternion} q - The Quaternion.
+   * @return {Vector3} A reference to this vector.
+   */
+  applyQuaternion(q2) {
+    const vx = this.x, vy = this.y, vz = this.z;
+    const qx = q2.x, qy = q2.y, qz = q2.z, qw = q2.w;
+    const tx = 2 * (qy * vz - qz * vy);
+    const ty = 2 * (qz * vx - qx * vz);
+    const tz = 2 * (qx * vy - qy * vx);
+    this.x = vx + qw * tx + qy * tz - qz * ty;
+    this.y = vy + qw * ty + qz * tx - qx * tz;
+    this.z = vz + qw * tz + qx * ty - qy * tx;
+    return this;
+  }
+  /**
+   * Projects this vector from world space into the camera's normalized
+   * device coordinate (NDC) space.
+   *
+   * @param {Camera} camera - The camera.
+   * @return {Vector3} A reference to this vector.
+   */
+  project(camera) {
+    return this.applyMatrix4(camera.matrixWorldInverse).applyMatrix4(camera.projectionMatrix);
+  }
+  /**
+   * Unprojects this vector from the camera's normalized device coordinate (NDC)
+   * space into world space.
+   *
+   * @param {Camera} camera - The camera.
+   * @return {Vector3} A reference to this vector.
+   */
+  unproject(camera) {
+    return this.applyMatrix4(camera.projectionMatrixInverse).applyMatrix4(camera.matrixWorld);
+  }
+  /**
+   * Transforms the direction of this vector by a matrix (the upper left 3 x 3
+   * subset of the given 4x4 matrix and then normalizes the result.
+   *
+   * @param {Matrix4} m - The matrix.
+   * @return {Vector3} A reference to this vector.
+   */
+  transformDirection(m2) {
+    const x2 = this.x, y2 = this.y, z2 = this.z;
+    const e2 = m2.elements;
+    this.x = e2[0] * x2 + e2[4] * y2 + e2[8] * z2;
+    this.y = e2[1] * x2 + e2[5] * y2 + e2[9] * z2;
+    this.z = e2[2] * x2 + e2[6] * y2 + e2[10] * z2;
+    return this.normalize();
+  }
+  /**
+   * Divides this instance by the given vector.
+   *
+   * @param {Vector3} v - The vector to divide.
+   * @return {Vector3} A reference to this vector.
+   */
+  divide(v2) {
+    this.x /= v2.x;
+    this.y /= v2.y;
+    this.z /= v2.z;
+    return this;
+  }
+  /**
+   * Divides this vector by the given scalar.
+   *
+   * @param {number} scalar - The scalar to divide.
+   * @return {Vector3} A reference to this vector.
+   */
+  divideScalar(scalar) {
+    return this.multiplyScalar(1 / scalar);
+  }
+  /**
+   * If this vector's x, y or z value is greater than the given vector's x, y or z
+   * value, replace that value with the corresponding min value.
+   *
+   * @param {Vector3} v - The vector.
+   * @return {Vector3} A reference to this vector.
+   */
+  min(v2) {
+    this.x = Math.min(this.x, v2.x);
+    this.y = Math.min(this.y, v2.y);
+    this.z = Math.min(this.z, v2.z);
+    return this;
+  }
+  /**
+   * If this vector's x, y or z value is less than the given vector's x, y or z
+   * value, replace that value with the corresponding max value.
+   *
+   * @param {Vector3} v - The vector.
+   * @return {Vector3} A reference to this vector.
+   */
+  max(v2) {
+    this.x = Math.max(this.x, v2.x);
+    this.y = Math.max(this.y, v2.y);
+    this.z = Math.max(this.z, v2.z);
+    return this;
+  }
+  /**
+   * If this vector's x, y or z value is greater than the max vector's x, y or z
+   * value, it is replaced by the corresponding value.
+   * If this vector's x, y or z value is less than the min vector's x, y or z value,
+   * it is replaced by the corresponding value.
+   *
+   * @param {Vector3} min - The minimum x, y and z values.
+   * @param {Vector3} max - The maximum x, y and z values in the desired range.
+   * @return {Vector3} A reference to this vector.
+   */
+  clamp(min, max) {
+    this.x = clamp(this.x, min.x, max.x);
+    this.y = clamp(this.y, min.y, max.y);
+    this.z = clamp(this.z, min.z, max.z);
+    return this;
+  }
+  /**
+   * If this vector's x, y or z values are greater than the max value, they are
+   * replaced by the max value.
+   * If this vector's x, y or z values are less than the min value, they are
+   * replaced by the min value.
+   *
+   * @param {number} minVal - The minimum value the components will be clamped to.
+   * @param {number} maxVal - The maximum value the components will be clamped to.
+   * @return {Vector3} A reference to this vector.
+   */
+  clampScalar(minVal, maxVal) {
+    this.x = clamp(this.x, minVal, maxVal);
+    this.y = clamp(this.y, minVal, maxVal);
+    this.z = clamp(this.z, minVal, maxVal);
+    return this;
+  }
+  /**
+   * If this vector's length is greater than the max value, it is replaced by
+   * the max value.
+   * If this vector's length is less than the min value, it is replaced by the
+   * min value.
+   *
+   * @param {number} min - The minimum value the vector length will be clamped to.
+   * @param {number} max - The maximum value the vector length will be clamped to.
+   * @return {Vector3} A reference to this vector.
+   */
+  clampLength(min, max) {
+    const length = this.length();
+    return this.divideScalar(length || 1).multiplyScalar(clamp(length, min, max));
+  }
+  /**
+   * The components of this vector are rounded down to the nearest integer value.
+   *
+   * @return {Vector3} A reference to this vector.
+   */
+  floor() {
+    this.x = Math.floor(this.x);
+    this.y = Math.floor(this.y);
+    this.z = Math.floor(this.z);
+    return this;
+  }
+  /**
+   * The components of this vector are rounded up to the nearest integer value.
+   *
+   * @return {Vector3} A reference to this vector.
+   */
+  ceil() {
+    this.x = Math.ceil(this.x);
+    this.y = Math.ceil(this.y);
+    this.z = Math.ceil(this.z);
+    return this;
+  }
+  /**
+   * The components of this vector are rounded to the nearest integer value
+   *
+   * @return {Vector3} A reference to this vector.
+   */
+  round() {
+    this.x = Math.round(this.x);
+    this.y = Math.round(this.y);
+    this.z = Math.round(this.z);
+    return this;
+  }
+  /**
+   * The components of this vector are rounded towards zero (up if negative,
+   * down if positive) to an integer value.
+   *
+   * @return {Vector3} A reference to this vector.
+   */
+  roundToZero() {
+    this.x = Math.trunc(this.x);
+    this.y = Math.trunc(this.y);
+    this.z = Math.trunc(this.z);
+    return this;
+  }
+  /**
+   * Inverts this vector - i.e. sets x = -x, y = -y and z = -z.
+   *
+   * @return {Vector3} A reference to this vector.
+   */
+  negate() {
+    this.x = -this.x;
+    this.y = -this.y;
+    this.z = -this.z;
+    return this;
+  }
+  /**
+   * Calculates the dot product of the given vector with this instance.
+   *
+   * @param {Vector3} v - The vector to compute the dot product with.
+   * @return {number} The result of the dot product.
+   */
+  dot(v2) {
+    return this.x * v2.x + this.y * v2.y + this.z * v2.z;
+  }
+  /**
+   * Computes the square of the Euclidean length (straight-line length) from
+   * (0, 0, 0) to (x, y, z). If you are comparing the lengths of vectors, you should
+   * compare the length squared instead as it is slightly more efficient to calculate.
+   *
+   * @return {number} The square length of this vector.
+   */
+  lengthSq() {
+    return this.x * this.x + this.y * this.y + this.z * this.z;
+  }
+  /**
+   * Computes the  Euclidean length (straight-line length) from (0, 0, 0) to (x, y, z).
+   *
+   * @return {number} The length of this vector.
+   */
+  length() {
+    return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
+  }
+  /**
+   * Computes the Manhattan length of this vector.
+   *
+   * @return {number} The length of this vector.
+   */
+  manhattanLength() {
+    return Math.abs(this.x) + Math.abs(this.y) + Math.abs(this.z);
+  }
+  /**
+   * Converts this vector to a unit vector - that is, sets it equal to a vector
+   * with the same direction as this one, but with a vector length of `1`.
+   *
+   * @return {Vector3} A reference to this vector.
+   */
+  normalize() {
+    return this.divideScalar(this.length() || 1);
+  }
+  /**
+   * Sets this vector to a vector with the same direction as this one, but
+   * with the specified length.
+   *
+   * @param {number} length - The new length of this vector.
+   * @return {Vector3} A reference to this vector.
+   */
+  setLength(length) {
+    return this.normalize().multiplyScalar(length);
+  }
+  /**
+   * Linearly interpolates between the given vector and this instance, where
+   * alpha is the percent distance along the line - alpha = 0 will be this
+   * vector, and alpha = 1 will be the given one.
+   *
+   * @param {Vector3} v - The vector to interpolate towards.
+   * @param {number} alpha - The interpolation factor, typically in the closed interval `[0, 1]`.
+   * @return {Vector3} A reference to this vector.
+   */
+  lerp(v2, alpha2) {
+    this.x += (v2.x - this.x) * alpha2;
+    this.y += (v2.y - this.y) * alpha2;
+    this.z += (v2.z - this.z) * alpha2;
+    return this;
+  }
+  /**
+   * Linearly interpolates between the given vectors, where alpha is the percent
+   * distance along the line - alpha = 0 will be first vector, and alpha = 1 will
+   * be the second one. The result is stored in this instance.
+   *
+   * @param {Vector3} v1 - The first vector.
+   * @param {Vector3} v2 - The second vector.
+   * @param {number} alpha - The interpolation factor, typically in the closed interval `[0, 1]`.
+   * @return {Vector3} A reference to this vector.
+   */
+  lerpVectors(v1, v2, alpha2) {
+    this.x = v1.x + (v2.x - v1.x) * alpha2;
+    this.y = v1.y + (v2.y - v1.y) * alpha2;
+    this.z = v1.z + (v2.z - v1.z) * alpha2;
+    return this;
+  }
+  /**
+   * Calculates the cross product of the given vector with this instance.
+   *
+   * @param {Vector3} v - The vector to compute the cross product with.
+   * @return {Vector3} The result of the cross product.
+   */
+  cross(v2) {
+    return this.crossVectors(this, v2);
+  }
+  /**
+   * Calculates the cross product of the given vectors and stores the result
+   * in this instance.
+   *
+   * @param {Vector3} a - The first vector.
+   * @param {Vector3} b - The second vector.
+   * @return {Vector3} A reference to this vector.
+   */
+  crossVectors(a2, b2) {
+    const ax = a2.x, ay = a2.y, az = a2.z;
+    const bx = b2.x, by = b2.y, bz = b2.z;
+    this.x = ay * bz - az * by;
+    this.y = az * bx - ax * bz;
+    this.z = ax * by - ay * bx;
+    return this;
+  }
+  /**
+   * Projects this vector onto the given one.
+   *
+   * @param {Vector3} v - The vector to project to.
+   * @return {Vector3} A reference to this vector.
+   */
+  projectOnVector(v2) {
+    const denominator = v2.lengthSq();
+    if (denominator === 0) return this.set(0, 0, 0);
+    const scalar = v2.dot(this) / denominator;
+    return this.copy(v2).multiplyScalar(scalar);
+  }
+  /**
+   * Projects this vector onto a plane by subtracting this
+   * vector projected onto the plane's normal from this vector.
+   *
+   * @param {Vector3} planeNormal - The plane normal.
+   * @return {Vector3} A reference to this vector.
+   */
+  projectOnPlane(planeNormal) {
+    _vector$c.copy(this).projectOnVector(planeNormal);
+    return this.sub(_vector$c);
+  }
+  /**
+   * Reflects this vector off a plane orthogonal to the given normal vector.
+   *
+   * @param {Vector3} normal - The (normalized) normal vector.
+   * @return {Vector3} A reference to this vector.
+   */
+  reflect(normal) {
+    return this.sub(_vector$c.copy(normal).multiplyScalar(2 * this.dot(normal)));
+  }
+  /**
+   * Returns the angle between the given vector and this instance in radians.
+   *
+   * @param {Vector3} v - The vector to compute the angle with.
+   * @return {number} The angle in radians.
+   */
+  angleTo(v2) {
+    const denominator = Math.sqrt(this.lengthSq() * v2.lengthSq());
+    if (denominator === 0) return Math.PI / 2;
+    const theta = this.dot(v2) / denominator;
+    return Math.acos(clamp(theta, -1, 1));
+  }
+  /**
+   * Computes the distance from the given vector to this instance.
+   *
+   * @param {Vector3} v - The vector to compute the distance to.
+   * @return {number} The distance.
+   */
+  distanceTo(v2) {
+    return Math.sqrt(this.distanceToSquared(v2));
+  }
+  /**
+   * Computes the squared distance from the given vector to this instance.
+   * If you are just comparing the distance with another distance, you should compare
+   * the distance squared instead as it is slightly more efficient to calculate.
+   *
+   * @param {Vector3} v - The vector to compute the squared distance to.
+   * @return {number} The squared distance.
+   */
+  distanceToSquared(v2) {
+    const dx = this.x - v2.x, dy = this.y - v2.y, dz = this.z - v2.z;
+    return dx * dx + dy * dy + dz * dz;
+  }
+  /**
+   * Computes the Manhattan distance from the given vector to this instance.
+   *
+   * @param {Vector3} v - The vector to compute the Manhattan distance to.
+   * @return {number} The Manhattan distance.
+   */
+  manhattanDistanceTo(v2) {
+    return Math.abs(this.x - v2.x) + Math.abs(this.y - v2.y) + Math.abs(this.z - v2.z);
+  }
+  /**
+   * Sets the vector components from the given spherical coordinates.
+   *
+   * @param {Spherical} s - The spherical coordinates.
+   * @return {Vector3} A reference to this vector.
+   */
+  setFromSpherical(s2) {
+    return this.setFromSphericalCoords(s2.radius, s2.phi, s2.theta);
+  }
+  /**
+   * Sets the vector components from the given spherical coordinates.
+   *
+   * @param {number} radius - The radius.
+   * @param {number} phi - The phi angle in radians.
+   * @param {number} theta - The theta angle in radians.
+   * @return {Vector3} A reference to this vector.
+   */
+  setFromSphericalCoords(radius, phi, theta) {
+    const sinPhiRadius = Math.sin(phi) * radius;
+    this.x = sinPhiRadius * Math.sin(theta);
+    this.y = Math.cos(phi) * radius;
+    this.z = sinPhiRadius * Math.cos(theta);
+    return this;
+  }
+  /**
+   * Sets the vector components from the given cylindrical coordinates.
+   *
+   * @param {Cylindrical} c - The cylindrical coordinates.
+   * @return {Vector3} A reference to this vector.
+   */
+  setFromCylindrical(c2) {
+    return this.setFromCylindricalCoords(c2.radius, c2.theta, c2.y);
+  }
+  /**
+   * Sets the vector components from the given cylindrical coordinates.
+   *
+   * @param {number} radius - The radius.
+   * @param {number} theta - The theta angle in radians.
+   * @param {number} y - The y value.
+   * @return {Vector3} A reference to this vector.
+   */
+  setFromCylindricalCoords(radius, theta, y2) {
+    this.x = radius * Math.sin(theta);
+    this.y = y2;
+    this.z = radius * Math.cos(theta);
+    return this;
+  }
+  /**
+   * Sets the vector components to the position elements of the
+   * given transformation matrix.
+   *
+   * @param {Matrix4} m - The 4x4 matrix.
+   * @return {Vector3} A reference to this vector.
+   */
+  setFromMatrixPosition(m2) {
+    const e2 = m2.elements;
+    this.x = e2[12];
+    this.y = e2[13];
+    this.z = e2[14];
+    return this;
+  }
+  /**
+   * Sets the vector components to the scale elements of the
+   * given transformation matrix.
+   *
+   * @param {Matrix4} m - The 4x4 matrix.
+   * @return {Vector3} A reference to this vector.
+   */
+  setFromMatrixScale(m2) {
+    const sx = this.setFromMatrixColumn(m2, 0).length();
+    const sy = this.setFromMatrixColumn(m2, 1).length();
+    const sz = this.setFromMatrixColumn(m2, 2).length();
+    this.x = sx;
+    this.y = sy;
+    this.z = sz;
+    return this;
+  }
+  /**
+   * Sets the vector components from the specified matrix column.
+   *
+   * @param {Matrix4} m - The 4x4 matrix.
+   * @param {number} index - The column index.
+   * @return {Vector3} A reference to this vector.
+   */
+  setFromMatrixColumn(m2, index2) {
+    return this.fromArray(m2.elements, index2 * 4);
+  }
+  /**
+   * Sets the vector components from the specified matrix column.
+   *
+   * @param {Matrix3} m - The 3x3 matrix.
+   * @param {number} index - The column index.
+   * @return {Vector3} A reference to this vector.
+   */
+  setFromMatrix3Column(m2, index2) {
+    return this.fromArray(m2.elements, index2 * 3);
+  }
+  /**
+   * Sets the vector components from the given Euler angles.
+   *
+   * @param {Euler} e - The Euler angles to set.
+   * @return {Vector3} A reference to this vector.
+   */
+  setFromEuler(e2) {
+    this.x = e2._x;
+    this.y = e2._y;
+    this.z = e2._z;
+    return this;
+  }
+  /**
+   * Sets the vector components from the RGB components of the
+   * given color.
+   *
+   * @param {Color} c - The color to set.
+   * @return {Vector3} A reference to this vector.
+   */
+  setFromColor(c2) {
+    this.x = c2.r;
+    this.y = c2.g;
+    this.z = c2.b;
+    return this;
+  }
+  /**
+   * Returns `true` if this vector is equal with the given one.
+   *
+   * @param {Vector3} v - The vector to test for equality.
+   * @return {boolean} Whether this vector is equal with the given one.
+   */
+  equals(v2) {
+    return v2.x === this.x && v2.y === this.y && v2.z === this.z;
+  }
+  /**
+   * Sets this vector's x value to be `array[ offset ]`, y value to be `array[ offset + 1 ]`
+   * and z value to be `array[ offset + 2 ]`.
+   *
+   * @param {Array<number>} array - An array holding the vector component values.
+   * @param {number} [offset=0] - The offset into the array.
+   * @return {Vector3} A reference to this vector.
+   */
+  fromArray(array, offset = 0) {
+    this.x = array[offset];
+    this.y = array[offset + 1];
+    this.z = array[offset + 2];
+    return this;
+  }
+  /**
+   * Writes the components of this vector to the given array. If no array is provided,
+   * the method returns a new instance.
+   *
+   * @param {Array<number>} [array=[]] - The target array holding the vector components.
+   * @param {number} [offset=0] - Index of the first element in the array.
+   * @return {Array<number>} The vector components.
+   */
+  toArray(array = [], offset = 0) {
+    array[offset] = this.x;
+    array[offset + 1] = this.y;
+    array[offset + 2] = this.z;
+    return array;
+  }
+  /**
+   * Sets the components of this vector from the given buffer attribute.
+   *
+   * @param {BufferAttribute} attribute - The buffer attribute holding vector data.
+   * @param {number} index - The index into the attribute.
+   * @return {Vector3} A reference to this vector.
+   */
+  fromBufferAttribute(attribute, index2) {
+    this.x = attribute.getX(index2);
+    this.y = attribute.getY(index2);
+    this.z = attribute.getZ(index2);
+    return this;
+  }
+  /**
+   * Sets each component of this vector to a pseudo-random value between `0` and
+   * `1`, excluding `1`.
+   *
+   * @return {Vector3} A reference to this vector.
+   */
+  random() {
+    this.x = Math.random();
+    this.y = Math.random();
+    this.z = Math.random();
+    return this;
+  }
+  /**
+   * Sets this vector to a uniformly random point on a unit sphere.
+   *
+   * @return {Vector3} A reference to this vector.
+   */
+  randomDirection() {
+    const theta = Math.random() * Math.PI * 2;
+    const u2 = Math.random() * 2 - 1;
+    const c2 = Math.sqrt(1 - u2 * u2);
+    this.x = c2 * Math.cos(theta);
+    this.y = u2;
+    this.z = c2 * Math.sin(theta);
+    return this;
+  }
+  *[Symbol.iterator]() {
+    yield this.x;
+    yield this.y;
+    yield this.z;
+  }
+}
+const _vector$c = /* @__PURE__ */ new Vector3();
+const _quaternion$5 = /* @__PURE__ */ new Quaternion();
+class Matrix3 {
+  /**
+   * Constructs a new 3x3 matrix. The arguments are supposed to be
+   * in row-major order. If no arguments are provided, the constructor
+   * initializes the matrix as an identity matrix.
+   *
+   * @param {number} [n11] - 1-1 matrix element.
+   * @param {number} [n12] - 1-2 matrix element.
+   * @param {number} [n13] - 1-3 matrix element.
+   * @param {number} [n21] - 2-1 matrix element.
+   * @param {number} [n22] - 2-2 matrix element.
+   * @param {number} [n23] - 2-3 matrix element.
+   * @param {number} [n31] - 3-1 matrix element.
+   * @param {number} [n32] - 3-2 matrix element.
+   * @param {number} [n33] - 3-3 matrix element.
+   */
+  constructor(n11, n12, n13, n21, n22, n23, n31, n32, n33) {
+    Matrix3.prototype.isMatrix3 = true;
+    this.elements = [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ];
+    if (n11 !== void 0) {
+      this.set(n11, n12, n13, n21, n22, n23, n31, n32, n33);
+    }
+  }
+  /**
+   * Sets the elements of the matrix.The arguments are supposed to be
+   * in row-major order.
+   *
+   * @param {number} [n11] - 1-1 matrix element.
+   * @param {number} [n12] - 1-2 matrix element.
+   * @param {number} [n13] - 1-3 matrix element.
+   * @param {number} [n21] - 2-1 matrix element.
+   * @param {number} [n22] - 2-2 matrix element.
+   * @param {number} [n23] - 2-3 matrix element.
+   * @param {number} [n31] - 3-1 matrix element.
+   * @param {number} [n32] - 3-2 matrix element.
+   * @param {number} [n33] - 3-3 matrix element.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  set(n11, n12, n13, n21, n22, n23, n31, n32, n33) {
+    const te2 = this.elements;
+    te2[0] = n11;
+    te2[1] = n21;
+    te2[2] = n31;
+    te2[3] = n12;
+    te2[4] = n22;
+    te2[5] = n32;
+    te2[6] = n13;
+    te2[7] = n23;
+    te2[8] = n33;
+    return this;
+  }
+  /**
+   * Sets this matrix to the 3x3 identity matrix.
+   *
+   * @return {Matrix3} A reference to this matrix.
+   */
+  identity() {
+    this.set(
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    );
+    return this;
+  }
+  /**
+   * Copies the values of the given matrix to this instance.
+   *
+   * @param {Matrix3} m - The matrix to copy.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  copy(m2) {
+    const te2 = this.elements;
+    const me2 = m2.elements;
+    te2[0] = me2[0];
+    te2[1] = me2[1];
+    te2[2] = me2[2];
+    te2[3] = me2[3];
+    te2[4] = me2[4];
+    te2[5] = me2[5];
+    te2[6] = me2[6];
+    te2[7] = me2[7];
+    te2[8] = me2[8];
+    return this;
+  }
+  /**
+   * Extracts the basis of this matrix into the three axis vectors provided.
+   *
+   * @param {Vector3} xAxis - The basis's x axis.
+   * @param {Vector3} yAxis - The basis's y axis.
+   * @param {Vector3} zAxis - The basis's z axis.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  extractBasis(xAxis, yAxis, zAxis) {
+    xAxis.setFromMatrix3Column(this, 0);
+    yAxis.setFromMatrix3Column(this, 1);
+    zAxis.setFromMatrix3Column(this, 2);
+    return this;
+  }
+  /**
+   * Set this matrix to the upper 3x3 matrix of the given 4x4 matrix.
+   *
+   * @param {Matrix4} m - The 4x4 matrix.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  setFromMatrix4(m2) {
+    const me2 = m2.elements;
+    this.set(
+      me2[0],
+      me2[4],
+      me2[8],
+      me2[1],
+      me2[5],
+      me2[9],
+      me2[2],
+      me2[6],
+      me2[10]
+    );
+    return this;
+  }
+  /**
+   * Post-multiplies this matrix by the given 3x3 matrix.
+   *
+   * @param {Matrix3} m - The matrix to multiply with.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  multiply(m2) {
+    return this.multiplyMatrices(this, m2);
+  }
+  /**
+   * Pre-multiplies this matrix by the given 3x3 matrix.
+   *
+   * @param {Matrix3} m - The matrix to multiply with.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  premultiply(m2) {
+    return this.multiplyMatrices(m2, this);
+  }
+  /**
+   * Multiples the given 3x3 matrices and stores the result
+   * in this matrix.
+   *
+   * @param {Matrix3} a - The first matrix.
+   * @param {Matrix3} b - The second matrix.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  multiplyMatrices(a2, b2) {
+    const ae2 = a2.elements;
+    const be2 = b2.elements;
+    const te2 = this.elements;
+    const a11 = ae2[0], a12 = ae2[3], a13 = ae2[6];
+    const a21 = ae2[1], a22 = ae2[4], a23 = ae2[7];
+    const a31 = ae2[2], a32 = ae2[5], a33 = ae2[8];
+    const b11 = be2[0], b12 = be2[3], b13 = be2[6];
+    const b21 = be2[1], b22 = be2[4], b23 = be2[7];
+    const b31 = be2[2], b32 = be2[5], b33 = be2[8];
+    te2[0] = a11 * b11 + a12 * b21 + a13 * b31;
+    te2[3] = a11 * b12 + a12 * b22 + a13 * b32;
+    te2[6] = a11 * b13 + a12 * b23 + a13 * b33;
+    te2[1] = a21 * b11 + a22 * b21 + a23 * b31;
+    te2[4] = a21 * b12 + a22 * b22 + a23 * b32;
+    te2[7] = a21 * b13 + a22 * b23 + a23 * b33;
+    te2[2] = a31 * b11 + a32 * b21 + a33 * b31;
+    te2[5] = a31 * b12 + a32 * b22 + a33 * b32;
+    te2[8] = a31 * b13 + a32 * b23 + a33 * b33;
+    return this;
+  }
+  /**
+   * Multiplies every component of the matrix by the given scalar.
+   *
+   * @param {number} s - The scalar.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  multiplyScalar(s2) {
+    const te2 = this.elements;
+    te2[0] *= s2;
+    te2[3] *= s2;
+    te2[6] *= s2;
+    te2[1] *= s2;
+    te2[4] *= s2;
+    te2[7] *= s2;
+    te2[2] *= s2;
+    te2[5] *= s2;
+    te2[8] *= s2;
+    return this;
+  }
+  /**
+   * Computes and returns the determinant of this matrix.
+   *
+   * @return {number} The determinant.
+   */
+  determinant() {
+    const te2 = this.elements;
+    const a2 = te2[0], b2 = te2[1], c2 = te2[2], d2 = te2[3], e2 = te2[4], f2 = te2[5], g2 = te2[6], h2 = te2[7], i2 = te2[8];
+    return a2 * e2 * i2 - a2 * f2 * h2 - b2 * d2 * i2 + b2 * f2 * g2 + c2 * d2 * h2 - c2 * e2 * g2;
+  }
+  /**
+   * Inverts this matrix, using the [analytic method](https://en.wikipedia.org/wiki/Invertible_matrix#Analytic_solution).
+   * You can not invert with a determinant of zero. If you attempt this, the method produces
+   * a zero matrix instead.
+   *
+   * @return {Matrix3} A reference to this matrix.
+   */
+  invert() {
+    const te2 = this.elements, n11 = te2[0], n21 = te2[1], n31 = te2[2], n12 = te2[3], n22 = te2[4], n32 = te2[5], n13 = te2[6], n23 = te2[7], n33 = te2[8], t11 = n33 * n22 - n32 * n23, t12 = n32 * n13 - n33 * n12, t13 = n23 * n12 - n22 * n13, det = n11 * t11 + n21 * t12 + n31 * t13;
+    if (det === 0) return this.set(0, 0, 0, 0, 0, 0, 0, 0, 0);
+    const detInv = 1 / det;
+    te2[0] = t11 * detInv;
+    te2[1] = (n31 * n23 - n33 * n21) * detInv;
+    te2[2] = (n32 * n21 - n31 * n22) * detInv;
+    te2[3] = t12 * detInv;
+    te2[4] = (n33 * n11 - n31 * n13) * detInv;
+    te2[5] = (n31 * n12 - n32 * n11) * detInv;
+    te2[6] = t13 * detInv;
+    te2[7] = (n21 * n13 - n23 * n11) * detInv;
+    te2[8] = (n22 * n11 - n21 * n12) * detInv;
+    return this;
+  }
+  /**
+   * Transposes this matrix in place.
+   *
+   * @return {Matrix3} A reference to this matrix.
+   */
+  transpose() {
+    let tmp;
+    const m2 = this.elements;
+    tmp = m2[1];
+    m2[1] = m2[3];
+    m2[3] = tmp;
+    tmp = m2[2];
+    m2[2] = m2[6];
+    m2[6] = tmp;
+    tmp = m2[5];
+    m2[5] = m2[7];
+    m2[7] = tmp;
+    return this;
+  }
+  /**
+   * Computes the normal matrix which is the inverse transpose of the upper
+   * left 3x3 portion of the given 4x4 matrix.
+   *
+   * @param {Matrix4} matrix4 - The 4x4 matrix.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  getNormalMatrix(matrix4) {
+    return this.setFromMatrix4(matrix4).invert().transpose();
+  }
+  /**
+   * Transposes this matrix into the supplied array, and returns itself unchanged.
+   *
+   * @param {Array<number>} r - An array to store the transposed matrix elements.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  transposeIntoArray(r2) {
+    const m2 = this.elements;
+    r2[0] = m2[0];
+    r2[1] = m2[3];
+    r2[2] = m2[6];
+    r2[3] = m2[1];
+    r2[4] = m2[4];
+    r2[5] = m2[7];
+    r2[6] = m2[2];
+    r2[7] = m2[5];
+    r2[8] = m2[8];
+    return this;
+  }
+  /**
+   * Sets the UV transform matrix from offset, repeat, rotation, and center.
+   *
+   * @param {number} tx - Offset x.
+   * @param {number} ty - Offset y.
+   * @param {number} sx - Repeat x.
+   * @param {number} sy - Repeat y.
+   * @param {number} rotation - Rotation, in radians. Positive values rotate counterclockwise.
+   * @param {number} cx - Center x of rotation.
+   * @param {number} cy - Center y of rotation
+   * @return {Matrix3} A reference to this matrix.
+   */
+  setUvTransform(tx, ty, sx, sy, rotation, cx, cy) {
+    const c2 = Math.cos(rotation);
+    const s2 = Math.sin(rotation);
+    this.set(
+      sx * c2,
+      sx * s2,
+      -sx * (c2 * cx + s2 * cy) + cx + tx,
+      -sy * s2,
+      sy * c2,
+      -sy * (-s2 * cx + c2 * cy) + cy + ty,
+      0,
+      0,
+      1
+    );
+    return this;
+  }
+  /**
+   * Scales this matrix with the given scalar values.
+   *
+   * @param {number} sx - The amount to scale in the X axis.
+   * @param {number} sy - The amount to scale in the Y axis.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  scale(sx, sy) {
+    this.premultiply(_m3.makeScale(sx, sy));
+    return this;
+  }
+  /**
+   * Rotates this matrix by the given angle.
+   *
+   * @param {number} theta - The rotation in radians.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  rotate(theta) {
+    this.premultiply(_m3.makeRotation(-theta));
+    return this;
+  }
+  /**
+   * Translates this matrix by the given scalar values.
+   *
+   * @param {number} tx - The amount to translate in the X axis.
+   * @param {number} ty - The amount to translate in the Y axis.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  translate(tx, ty) {
+    this.premultiply(_m3.makeTranslation(tx, ty));
+    return this;
+  }
+  // for 2D Transforms
+  /**
+   * Sets this matrix as a 2D translation transform.
+   *
+   * @param {number|Vector2} x - The amount to translate in the X axis or alternatively a translation vector.
+   * @param {number} y - The amount to translate in the Y axis.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  makeTranslation(x2, y2) {
+    if (x2.isVector2) {
+      this.set(
+        1,
+        0,
+        x2.x,
+        0,
+        1,
+        x2.y,
+        0,
+        0,
+        1
+      );
+    } else {
+      this.set(
+        1,
+        0,
+        x2,
+        0,
+        1,
+        y2,
+        0,
+        0,
+        1
+      );
+    }
+    return this;
+  }
+  /**
+   * Sets this matrix as a 2D rotational transformation.
+   *
+   * @param {number} theta - The rotation in radians.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  makeRotation(theta) {
+    const c2 = Math.cos(theta);
+    const s2 = Math.sin(theta);
+    this.set(
+      c2,
+      -s2,
+      0,
+      s2,
+      c2,
+      0,
+      0,
+      0,
+      1
+    );
+    return this;
+  }
+  /**
+   * Sets this matrix as a 2D scale transform.
+   *
+   * @param {number} x - The amount to scale in the X axis.
+   * @param {number} y - The amount to scale in the Y axis.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  makeScale(x2, y2) {
+    this.set(
+      x2,
+      0,
+      0,
+      0,
+      y2,
+      0,
+      0,
+      0,
+      1
+    );
+    return this;
+  }
+  /**
+   * Returns `true` if this matrix is equal with the given one.
+   *
+   * @param {Matrix3} matrix - The matrix to test for equality.
+   * @return {boolean} Whether this matrix is equal with the given one.
+   */
+  equals(matrix) {
+    const te2 = this.elements;
+    const me2 = matrix.elements;
+    for (let i2 = 0; i2 < 9; i2++) {
+      if (te2[i2] !== me2[i2]) return false;
+    }
+    return true;
+  }
+  /**
+   * Sets the elements of the matrix from the given array.
+   *
+   * @param {Array<number>} array - The matrix elements in column-major order.
+   * @param {number} [offset=0] - Index of the first element in the array.
+   * @return {Matrix3} A reference to this matrix.
+   */
+  fromArray(array, offset = 0) {
+    for (let i2 = 0; i2 < 9; i2++) {
+      this.elements[i2] = array[i2 + offset];
+    }
+    return this;
+  }
+  /**
+   * Writes the elements of this matrix to the given array. If no array is provided,
+   * the method returns a new instance.
+   *
+   * @param {Array<number>} [array=[]] - The target array holding the matrix elements in column-major order.
+   * @param {number} [offset=0] - Index of the first element in the array.
+   * @return {Array<number>} The matrix elements in column-major order.
+   */
+  toArray(array = [], offset = 0) {
+    const te2 = this.elements;
+    array[offset] = te2[0];
+    array[offset + 1] = te2[1];
+    array[offset + 2] = te2[2];
+    array[offset + 3] = te2[3];
+    array[offset + 4] = te2[4];
+    array[offset + 5] = te2[5];
+    array[offset + 6] = te2[6];
+    array[offset + 7] = te2[7];
+    array[offset + 8] = te2[8];
+    return array;
+  }
+  /**
+   * Returns a matrix with copied values from this instance.
+   *
+   * @return {Matrix3} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor().fromArray(this.elements);
+  }
+}
+const _m3 = /* @__PURE__ */ new Matrix3();
+const LINEAR_REC709_TO_XYZ = /* @__PURE__ */ new Matrix3().set(
+  0.4123908,
+  0.3575843,
+  0.1804808,
+  0.212639,
+  0.7151687,
+  0.0721923,
+  0.0193308,
+  0.1191948,
+  0.9505322
+);
+const XYZ_TO_LINEAR_REC709 = /* @__PURE__ */ new Matrix3().set(
+  3.2409699,
+  -1.5373832,
+  -0.4986108,
+  -0.9692436,
+  1.8759675,
+  0.0415551,
+  0.0556301,
+  -0.203977,
+  1.0569715
+);
+function createColorManagement() {
+  const ColorManagement2 = {
+    enabled: true,
+    workingColorSpace: LinearSRGBColorSpace,
+    /**
+     * Implementations of supported color spaces.
+     *
+     * Required:
+     *	- primaries: chromaticity coordinates [ rx ry gx gy bx by ]
+     *	- whitePoint: reference white [ x y ]
+     *	- transfer: transfer function (pre-defined)
+     *	- toXYZ: Matrix3 RGB to XYZ transform
+     *	- fromXYZ: Matrix3 XYZ to RGB transform
+     *	- luminanceCoefficients: RGB luminance coefficients
+     *
+     * Optional:
+     *  - outputColorSpaceConfig: { drawingBufferColorSpace: ColorSpace, toneMappingMode: 'extended' | 'standard' }
+     *  - workingColorSpaceConfig: { unpackColorSpace: ColorSpace }
+     *
+     * Reference:
+     * - https://www.russellcottrell.com/photo/matrixCalculator.htm
+     */
+    spaces: {},
+    convert: function(color2, sourceColorSpace, targetColorSpace) {
+      if (this.enabled === false || sourceColorSpace === targetColorSpace || !sourceColorSpace || !targetColorSpace) {
+        return color2;
+      }
+      if (this.spaces[sourceColorSpace].transfer === SRGBTransfer) {
+        color2.r = SRGBToLinear(color2.r);
+        color2.g = SRGBToLinear(color2.g);
+        color2.b = SRGBToLinear(color2.b);
+      }
+      if (this.spaces[sourceColorSpace].primaries !== this.spaces[targetColorSpace].primaries) {
+        color2.applyMatrix3(this.spaces[sourceColorSpace].toXYZ);
+        color2.applyMatrix3(this.spaces[targetColorSpace].fromXYZ);
+      }
+      if (this.spaces[targetColorSpace].transfer === SRGBTransfer) {
+        color2.r = LinearToSRGB(color2.r);
+        color2.g = LinearToSRGB(color2.g);
+        color2.b = LinearToSRGB(color2.b);
+      }
+      return color2;
+    },
+    workingToColorSpace: function(color2, targetColorSpace) {
+      return this.convert(color2, this.workingColorSpace, targetColorSpace);
+    },
+    colorSpaceToWorking: function(color2, sourceColorSpace) {
+      return this.convert(color2, sourceColorSpace, this.workingColorSpace);
+    },
+    getPrimaries: function(colorSpace) {
+      return this.spaces[colorSpace].primaries;
+    },
+    getTransfer: function(colorSpace) {
+      if (colorSpace === NoColorSpace) return LinearTransfer;
+      return this.spaces[colorSpace].transfer;
+    },
+    getToneMappingMode: function(colorSpace) {
+      return this.spaces[colorSpace].outputColorSpaceConfig.toneMappingMode || "standard";
+    },
+    getLuminanceCoefficients: function(target, colorSpace = this.workingColorSpace) {
+      return target.fromArray(this.spaces[colorSpace].luminanceCoefficients);
+    },
+    define: function(colorSpaces) {
+      Object.assign(this.spaces, colorSpaces);
+    },
+    // Internal APIs
+    _getMatrix: function(targetMatrix, sourceColorSpace, targetColorSpace) {
+      return targetMatrix.copy(this.spaces[sourceColorSpace].toXYZ).multiply(this.spaces[targetColorSpace].fromXYZ);
+    },
+    _getDrawingBufferColorSpace: function(colorSpace) {
+      return this.spaces[colorSpace].outputColorSpaceConfig.drawingBufferColorSpace;
+    },
+    _getUnpackColorSpace: function(colorSpace = this.workingColorSpace) {
+      return this.spaces[colorSpace].workingColorSpaceConfig.unpackColorSpace;
+    },
+    // Deprecated
+    fromWorkingColorSpace: function(color2, targetColorSpace) {
+      warnOnce("ColorManagement: .fromWorkingColorSpace() has been renamed to .workingToColorSpace().");
+      return ColorManagement2.workingToColorSpace(color2, targetColorSpace);
+    },
+    toWorkingColorSpace: function(color2, sourceColorSpace) {
+      warnOnce("ColorManagement: .toWorkingColorSpace() has been renamed to .colorSpaceToWorking().");
+      return ColorManagement2.colorSpaceToWorking(color2, sourceColorSpace);
+    }
+  };
+  const REC709_PRIMARIES = [0.64, 0.33, 0.3, 0.6, 0.15, 0.06];
+  const REC709_LUMINANCE_COEFFICIENTS = [0.2126, 0.7152, 0.0722];
+  const D65 = [0.3127, 0.329];
+  ColorManagement2.define({
+    [LinearSRGBColorSpace]: {
+      primaries: REC709_PRIMARIES,
+      whitePoint: D65,
+      transfer: LinearTransfer,
+      toXYZ: LINEAR_REC709_TO_XYZ,
+      fromXYZ: XYZ_TO_LINEAR_REC709,
+      luminanceCoefficients: REC709_LUMINANCE_COEFFICIENTS,
+      workingColorSpaceConfig: { unpackColorSpace: SRGBColorSpace },
+      outputColorSpaceConfig: { drawingBufferColorSpace: SRGBColorSpace }
+    },
+    [SRGBColorSpace]: {
+      primaries: REC709_PRIMARIES,
+      whitePoint: D65,
+      transfer: SRGBTransfer,
+      toXYZ: LINEAR_REC709_TO_XYZ,
+      fromXYZ: XYZ_TO_LINEAR_REC709,
+      luminanceCoefficients: REC709_LUMINANCE_COEFFICIENTS,
+      outputColorSpaceConfig: { drawingBufferColorSpace: SRGBColorSpace }
+    }
+  });
+  return ColorManagement2;
+}
+const ColorManagement = /* @__PURE__ */ createColorManagement();
+function SRGBToLinear(c2) {
+  return c2 < 0.04045 ? c2 * 0.0773993808 : Math.pow(c2 * 0.9478672986 + 0.0521327014, 2.4);
+}
+function LinearToSRGB(c2) {
+  return c2 < 31308e-7 ? c2 * 12.92 : 1.055 * Math.pow(c2, 0.41666) - 0.055;
+}
+let _canvas;
+class ImageUtils {
+  /**
+   * Returns a data URI containing a representation of the given image.
+   *
+   * @param {(HTMLImageElement|HTMLCanvasElement)} image - The image object.
+   * @param {string} [type='image/png'] - Indicates the image format.
+   * @return {string} The data URI.
+   */
+  static getDataURL(image2, type = "image/png") {
+    if (/^data:/i.test(image2.src)) {
+      return image2.src;
+    }
+    if (typeof HTMLCanvasElement === "undefined") {
+      return image2.src;
+    }
+    let canvas;
+    if (image2 instanceof HTMLCanvasElement) {
+      canvas = image2;
+    } else {
+      if (_canvas === void 0) _canvas = createElementNS("canvas");
+      _canvas.width = image2.width;
+      _canvas.height = image2.height;
+      const context = _canvas.getContext("2d");
+      if (image2 instanceof ImageData) {
+        context.putImageData(image2, 0, 0);
+      } else {
+        context.drawImage(image2, 0, 0, image2.width, image2.height);
+      }
+      canvas = _canvas;
+    }
+    return canvas.toDataURL(type);
+  }
+  /**
+   * Converts the given sRGB image data to linear color space.
+   *
+   * @param {(HTMLImageElement|HTMLCanvasElement|ImageBitmap|Object)} image - The image object.
+   * @return {HTMLCanvasElement|Object} The converted image.
+   */
+  static sRGBToLinear(image2) {
+    if (typeof HTMLImageElement !== "undefined" && image2 instanceof HTMLImageElement || typeof HTMLCanvasElement !== "undefined" && image2 instanceof HTMLCanvasElement || typeof ImageBitmap !== "undefined" && image2 instanceof ImageBitmap) {
+      const canvas = createElementNS("canvas");
+      canvas.width = image2.width;
+      canvas.height = image2.height;
+      const context = canvas.getContext("2d");
+      context.drawImage(image2, 0, 0, image2.width, image2.height);
+      const imageData = context.getImageData(0, 0, image2.width, image2.height);
+      const data = imageData.data;
+      for (let i2 = 0; i2 < data.length; i2++) {
+        data[i2] = SRGBToLinear(data[i2] / 255) * 255;
+      }
+      context.putImageData(imageData, 0, 0);
+      return canvas;
+    } else if (image2.data) {
+      const data = image2.data.slice(0);
+      for (let i2 = 0; i2 < data.length; i2++) {
+        if (data instanceof Uint8Array || data instanceof Uint8ClampedArray) {
+          data[i2] = Math.floor(SRGBToLinear(data[i2] / 255) * 255);
+        } else {
+          data[i2] = SRGBToLinear(data[i2]);
+        }
+      }
+      return {
+        data,
+        width: image2.width,
+        height: image2.height
+      };
+    } else {
+      warn("ImageUtils.sRGBToLinear(): Unsupported image type. No color space conversion applied.");
+      return image2;
+    }
+  }
+}
+let _sourceId = 0;
+class Source {
+  /**
+   * Constructs a new video texture.
+   *
+   * @param {any} [data=null] - The data definition of a texture.
+   */
+  constructor(data = null) {
+    this.isSource = true;
+    Object.defineProperty(this, "id", { value: _sourceId++ });
+    this.uuid = generateUUID();
+    this.data = data;
+    this.dataReady = true;
+    this.version = 0;
+  }
+  /**
+   * Returns the dimensions of the source into the given target vector.
+   *
+   * @param {(Vector2|Vector3)} target - The target object the result is written into.
+   * @return {(Vector2|Vector3)} The dimensions of the source.
+   */
+  getSize(target) {
+    const data = this.data;
+    if (typeof HTMLVideoElement !== "undefined" && data instanceof HTMLVideoElement) {
+      target.set(data.videoWidth, data.videoHeight, 0);
+    } else if (typeof VideoFrame !== "undefined" && data instanceof VideoFrame) {
+      target.set(data.displayHeight, data.displayWidth, 0);
+    } else if (data !== null) {
+      target.set(data.width, data.height, data.depth || 0);
+    } else {
+      target.set(0, 0, 0);
+    }
+    return target;
+  }
+  /**
+   * When the property is set to `true`, the engine allocates the memory
+   * for the texture (if necessary) and triggers the actual texture upload
+   * to the GPU next time the source is used.
+   *
+   * @type {boolean}
+   * @default false
+   * @param {boolean} value
+   */
+  set needsUpdate(value) {
+    if (value === true) this.version++;
+  }
+  /**
+   * Serializes the source into JSON.
+   *
+   * @param {?(Object|string)} meta - An optional value holding meta information about the serialization.
+   * @return {Object} A JSON object representing the serialized source.
+   * @see {@link ObjectLoader#parse}
+   */
+  toJSON(meta) {
+    const isRootObject = meta === void 0 || typeof meta === "string";
+    if (!isRootObject && meta.images[this.uuid] !== void 0) {
+      return meta.images[this.uuid];
+    }
+    const output = {
+      uuid: this.uuid,
+      url: ""
+    };
+    const data = this.data;
+    if (data !== null) {
+      let url;
+      if (Array.isArray(data)) {
+        url = [];
+        for (let i2 = 0, l2 = data.length; i2 < l2; i2++) {
+          if (data[i2].isDataTexture) {
+            url.push(serializeImage(data[i2].image));
+          } else {
+            url.push(serializeImage(data[i2]));
+          }
+        }
+      } else {
+        url = serializeImage(data);
+      }
+      output.url = url;
+    }
+    if (!isRootObject) {
+      meta.images[this.uuid] = output;
+    }
+    return output;
+  }
+}
+function serializeImage(image2) {
+  if (typeof HTMLImageElement !== "undefined" && image2 instanceof HTMLImageElement || typeof HTMLCanvasElement !== "undefined" && image2 instanceof HTMLCanvasElement || typeof ImageBitmap !== "undefined" && image2 instanceof ImageBitmap) {
+    return ImageUtils.getDataURL(image2);
+  } else {
+    if (image2.data) {
+      return {
+        data: Array.from(image2.data),
+        width: image2.width,
+        height: image2.height,
+        type: image2.data.constructor.name
+      };
+    } else {
+      warn("Texture: Unable to serialize Texture.");
+      return {};
+    }
+  }
+}
+let _textureId = 0;
+const _tempVec3 = /* @__PURE__ */ new Vector3();
+class Texture extends EventDispatcher {
+  /**
+   * Constructs a new texture.
+   *
+   * @param {?Object} [image=Texture.DEFAULT_IMAGE] - The image holding the texture data.
+   * @param {number} [mapping=Texture.DEFAULT_MAPPING] - The texture mapping.
+   * @param {number} [wrapS=ClampToEdgeWrapping] - The wrapS value.
+   * @param {number} [wrapT=ClampToEdgeWrapping] - The wrapT value.
+   * @param {number} [magFilter=LinearFilter] - The mag filter value.
+   * @param {number} [minFilter=LinearMipmapLinearFilter] - The min filter value.
+   * @param {number} [format=RGBAFormat] - The texture format.
+   * @param {number} [type=UnsignedByteType] - The texture type.
+   * @param {number} [anisotropy=Texture.DEFAULT_ANISOTROPY] - The anisotropy value.
+   * @param {string} [colorSpace=NoColorSpace] - The color space.
+   */
+  constructor(image2 = Texture.DEFAULT_IMAGE, mapping = Texture.DEFAULT_MAPPING, wrapS = ClampToEdgeWrapping, wrapT = ClampToEdgeWrapping, magFilter = LinearFilter, minFilter = LinearMipmapLinearFilter, format = RGBAFormat, type = UnsignedByteType, anisotropy = Texture.DEFAULT_ANISOTROPY, colorSpace = NoColorSpace) {
+    super();
+    this.isTexture = true;
+    Object.defineProperty(this, "id", { value: _textureId++ });
+    this.uuid = generateUUID();
+    this.name = "";
+    this.source = new Source(image2);
+    this.mipmaps = [];
+    this.mapping = mapping;
+    this.channel = 0;
+    this.wrapS = wrapS;
+    this.wrapT = wrapT;
+    this.magFilter = magFilter;
+    this.minFilter = minFilter;
+    this.anisotropy = anisotropy;
+    this.format = format;
+    this.internalFormat = null;
+    this.type = type;
+    this.offset = new Vector2(0, 0);
+    this.repeat = new Vector2(1, 1);
+    this.center = new Vector2(0, 0);
+    this.rotation = 0;
+    this.matrixAutoUpdate = true;
+    this.matrix = new Matrix3();
+    this.generateMipmaps = true;
+    this.premultiplyAlpha = false;
+    this.flipY = true;
+    this.unpackAlignment = 4;
+    this.colorSpace = colorSpace;
+    this.userData = {};
+    this.updateRanges = [];
+    this.version = 0;
+    this.onUpdate = null;
+    this.renderTarget = null;
+    this.isRenderTargetTexture = false;
+    this.isArrayTexture = image2 && image2.depth && image2.depth > 1 ? true : false;
+    this.pmremVersion = 0;
+  }
+  /**
+   * The width of the texture in pixels.
+   */
+  get width() {
+    return this.source.getSize(_tempVec3).x;
+  }
+  /**
+   * The height of the texture in pixels.
+   */
+  get height() {
+    return this.source.getSize(_tempVec3).y;
+  }
+  /**
+   * The depth of the texture in pixels.
+   */
+  get depth() {
+    return this.source.getSize(_tempVec3).z;
+  }
+  /**
+   * The image object holding the texture data.
+   *
+   * @type {?Object}
+   */
+  get image() {
+    return this.source.data;
+  }
+  set image(value = null) {
+    this.source.data = value;
+  }
+  /**
+   * Updates the texture transformation matrix from the from the properties {@link Texture#offset},
+   * {@link Texture#repeat}, {@link Texture#rotation}, and {@link Texture#center}.
+   */
+  updateMatrix() {
+    this.matrix.setUvTransform(this.offset.x, this.offset.y, this.repeat.x, this.repeat.y, this.rotation, this.center.x, this.center.y);
+  }
+  /**
+   * Adds a range of data in the data texture to be updated on the GPU.
+   *
+   * @param {number} start - Position at which to start update.
+   * @param {number} count - The number of components to update.
+   */
+  addUpdateRange(start, count) {
+    this.updateRanges.push({ start, count });
+  }
+  /**
+   * Clears the update ranges.
+   */
+  clearUpdateRanges() {
+    this.updateRanges.length = 0;
+  }
+  /**
+   * Returns a new texture with copied values from this instance.
+   *
+   * @return {Texture} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor().copy(this);
+  }
+  /**
+   * Copies the values of the given texture to this instance.
+   *
+   * @param {Texture} source - The texture to copy.
+   * @return {Texture} A reference to this instance.
+   */
+  copy(source) {
+    this.name = source.name;
+    this.source = source.source;
+    this.mipmaps = source.mipmaps.slice(0);
+    this.mapping = source.mapping;
+    this.channel = source.channel;
+    this.wrapS = source.wrapS;
+    this.wrapT = source.wrapT;
+    this.magFilter = source.magFilter;
+    this.minFilter = source.minFilter;
+    this.anisotropy = source.anisotropy;
+    this.format = source.format;
+    this.internalFormat = source.internalFormat;
+    this.type = source.type;
+    this.offset.copy(source.offset);
+    this.repeat.copy(source.repeat);
+    this.center.copy(source.center);
+    this.rotation = source.rotation;
+    this.matrixAutoUpdate = source.matrixAutoUpdate;
+    this.matrix.copy(source.matrix);
+    this.generateMipmaps = source.generateMipmaps;
+    this.premultiplyAlpha = source.premultiplyAlpha;
+    this.flipY = source.flipY;
+    this.unpackAlignment = source.unpackAlignment;
+    this.colorSpace = source.colorSpace;
+    this.renderTarget = source.renderTarget;
+    this.isRenderTargetTexture = source.isRenderTargetTexture;
+    this.isArrayTexture = source.isArrayTexture;
+    this.userData = JSON.parse(JSON.stringify(source.userData));
+    this.needsUpdate = true;
+    return this;
+  }
+  /**
+   * Sets this texture's properties based on `values`.
+   * @param {Object} values - A container with texture parameters.
+   */
+  setValues(values) {
+    for (const key in values) {
+      const newValue = values[key];
+      if (newValue === void 0) {
+        warn(`Texture.setValues(): parameter '${key}' has value of undefined.`);
+        continue;
+      }
+      const currentValue = this[key];
+      if (currentValue === void 0) {
+        warn(`Texture.setValues(): property '${key}' does not exist.`);
+        continue;
+      }
+      if (currentValue && newValue && (currentValue.isVector2 && newValue.isVector2)) {
+        currentValue.copy(newValue);
+      } else if (currentValue && newValue && (currentValue.isVector3 && newValue.isVector3)) {
+        currentValue.copy(newValue);
+      } else if (currentValue && newValue && (currentValue.isMatrix3 && newValue.isMatrix3)) {
+        currentValue.copy(newValue);
+      } else {
+        this[key] = newValue;
+      }
+    }
+  }
+  /**
+   * Serializes the texture into JSON.
+   *
+   * @param {?(Object|string)} meta - An optional value holding meta information about the serialization.
+   * @return {Object} A JSON object representing the serialized texture.
+   * @see {@link ObjectLoader#parse}
+   */
+  toJSON(meta) {
+    const isRootObject = meta === void 0 || typeof meta === "string";
+    if (!isRootObject && meta.textures[this.uuid] !== void 0) {
+      return meta.textures[this.uuid];
+    }
+    const output = {
+      metadata: {
+        version: 4.7,
+        type: "Texture",
+        generator: "Texture.toJSON"
+      },
+      uuid: this.uuid,
+      name: this.name,
+      image: this.source.toJSON(meta).uuid,
+      mapping: this.mapping,
+      channel: this.channel,
+      repeat: [this.repeat.x, this.repeat.y],
+      offset: [this.offset.x, this.offset.y],
+      center: [this.center.x, this.center.y],
+      rotation: this.rotation,
+      wrap: [this.wrapS, this.wrapT],
+      format: this.format,
+      internalFormat: this.internalFormat,
+      type: this.type,
+      colorSpace: this.colorSpace,
+      minFilter: this.minFilter,
+      magFilter: this.magFilter,
+      anisotropy: this.anisotropy,
+      flipY: this.flipY,
+      generateMipmaps: this.generateMipmaps,
+      premultiplyAlpha: this.premultiplyAlpha,
+      unpackAlignment: this.unpackAlignment
+    };
+    if (Object.keys(this.userData).length > 0) output.userData = this.userData;
+    if (!isRootObject) {
+      meta.textures[this.uuid] = output;
+    }
+    return output;
+  }
+  /**
+   * Frees the GPU-related resources allocated by this instance. Call this
+   * method whenever this instance is no longer used in your app.
+   *
+   * @fires Texture#dispose
+   */
+  dispose() {
+    this.dispatchEvent({ type: "dispose" });
+  }
+  /**
+   * Transforms the given uv vector with the textures uv transformation matrix.
+   *
+   * @param {Vector2} uv - The uv vector.
+   * @return {Vector2} The transformed uv vector.
+   */
+  transformUv(uv) {
+    if (this.mapping !== UVMapping) return uv;
+    uv.applyMatrix3(this.matrix);
+    if (uv.x < 0 || uv.x > 1) {
+      switch (this.wrapS) {
+        case RepeatWrapping:
+          uv.x = uv.x - Math.floor(uv.x);
+          break;
+        case ClampToEdgeWrapping:
+          uv.x = uv.x < 0 ? 0 : 1;
+          break;
+        case MirroredRepeatWrapping:
+          if (Math.abs(Math.floor(uv.x) % 2) === 1) {
+            uv.x = Math.ceil(uv.x) - uv.x;
+          } else {
+            uv.x = uv.x - Math.floor(uv.x);
+          }
+          break;
+      }
+    }
+    if (uv.y < 0 || uv.y > 1) {
+      switch (this.wrapT) {
+        case RepeatWrapping:
+          uv.y = uv.y - Math.floor(uv.y);
+          break;
+        case ClampToEdgeWrapping:
+          uv.y = uv.y < 0 ? 0 : 1;
+          break;
+        case MirroredRepeatWrapping:
+          if (Math.abs(Math.floor(uv.y) % 2) === 1) {
+            uv.y = Math.ceil(uv.y) - uv.y;
+          } else {
+            uv.y = uv.y - Math.floor(uv.y);
+          }
+          break;
+      }
+    }
+    if (this.flipY) {
+      uv.y = 1 - uv.y;
+    }
+    return uv;
+  }
+  /**
+   * Setting this property to `true` indicates the engine the texture
+   * must be updated in the next render. This triggers a texture upload
+   * to the GPU and ensures correct texture parameter configuration.
+   *
+   * @type {boolean}
+   * @default false
+   * @param {boolean} value
+   */
+  set needsUpdate(value) {
+    if (value === true) {
+      this.version++;
+      this.source.needsUpdate = true;
+    }
+  }
+  /**
+   * Setting this property to `true` indicates the engine the PMREM
+   * must be regenerated.
+   *
+   * @type {boolean}
+   * @default false
+   * @param {boolean} value
+   */
+  set needsPMREMUpdate(value) {
+    if (value === true) {
+      this.pmremVersion++;
+    }
+  }
+}
+Texture.DEFAULT_IMAGE = null;
+Texture.DEFAULT_MAPPING = UVMapping;
+Texture.DEFAULT_ANISOTROPY = 1;
+class Vector4 {
+  /**
+   * Constructs a new 4D vector.
+   *
+   * @param {number} [x=0] - The x value of this vector.
+   * @param {number} [y=0] - The y value of this vector.
+   * @param {number} [z=0] - The z value of this vector.
+   * @param {number} [w=1] - The w value of this vector.
+   */
+  constructor(x2 = 0, y2 = 0, z2 = 0, w2 = 1) {
+    Vector4.prototype.isVector4 = true;
+    this.x = x2;
+    this.y = y2;
+    this.z = z2;
+    this.w = w2;
+  }
+  /**
+   * Alias for {@link Vector4#z}.
+   *
+   * @type {number}
+   */
+  get width() {
+    return this.z;
+  }
+  set width(value) {
+    this.z = value;
+  }
+  /**
+   * Alias for {@link Vector4#w}.
+   *
+   * @type {number}
+   */
+  get height() {
+    return this.w;
+  }
+  set height(value) {
+    this.w = value;
+  }
+  /**
+   * Sets the vector components.
+   *
+   * @param {number} x - The value of the x component.
+   * @param {number} y - The value of the y component.
+   * @param {number} z - The value of the z component.
+   * @param {number} w - The value of the w component.
+   * @return {Vector4} A reference to this vector.
+   */
+  set(x2, y2, z2, w2) {
+    this.x = x2;
+    this.y = y2;
+    this.z = z2;
+    this.w = w2;
+    return this;
+  }
+  /**
+   * Sets the vector components to the same value.
+   *
+   * @param {number} scalar - The value to set for all vector components.
+   * @return {Vector4} A reference to this vector.
+   */
+  setScalar(scalar) {
+    this.x = scalar;
+    this.y = scalar;
+    this.z = scalar;
+    this.w = scalar;
+    return this;
+  }
+  /**
+   * Sets the vector's x component to the given value
+   *
+   * @param {number} x - The value to set.
+   * @return {Vector4} A reference to this vector.
+   */
+  setX(x2) {
+    this.x = x2;
+    return this;
+  }
+  /**
+   * Sets the vector's y component to the given value
+   *
+   * @param {number} y - The value to set.
+   * @return {Vector4} A reference to this vector.
+   */
+  setY(y2) {
+    this.y = y2;
+    return this;
+  }
+  /**
+   * Sets the vector's z component to the given value
+   *
+   * @param {number} z - The value to set.
+   * @return {Vector4} A reference to this vector.
+   */
+  setZ(z2) {
+    this.z = z2;
+    return this;
+  }
+  /**
+   * Sets the vector's w component to the given value
+   *
+   * @param {number} w - The value to set.
+   * @return {Vector4} A reference to this vector.
+   */
+  setW(w2) {
+    this.w = w2;
+    return this;
+  }
+  /**
+   * Allows to set a vector component with an index.
+   *
+   * @param {number} index - The component index. `0` equals to x, `1` equals to y,
+   * `2` equals to z, `3` equals to w.
+   * @param {number} value - The value to set.
+   * @return {Vector4} A reference to this vector.
+   */
+  setComponent(index2, value) {
+    switch (index2) {
+      case 0:
+        this.x = value;
+        break;
+      case 1:
+        this.y = value;
+        break;
+      case 2:
+        this.z = value;
+        break;
+      case 3:
+        this.w = value;
+        break;
+      default:
+        throw new Error("index is out of range: " + index2);
+    }
+    return this;
+  }
+  /**
+   * Returns the value of the vector component which matches the given index.
+   *
+   * @param {number} index - The component index. `0` equals to x, `1` equals to y,
+   * `2` equals to z, `3` equals to w.
+   * @return {number} A vector component value.
+   */
+  getComponent(index2) {
+    switch (index2) {
+      case 0:
+        return this.x;
+      case 1:
+        return this.y;
+      case 2:
+        return this.z;
+      case 3:
+        return this.w;
+      default:
+        throw new Error("index is out of range: " + index2);
+    }
+  }
+  /**
+   * Returns a new vector with copied values from this instance.
+   *
+   * @return {Vector4} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor(this.x, this.y, this.z, this.w);
+  }
+  /**
+   * Copies the values of the given vector to this instance.
+   *
+   * @param {Vector3|Vector4} v - The vector to copy.
+   * @return {Vector4} A reference to this vector.
+   */
+  copy(v2) {
+    this.x = v2.x;
+    this.y = v2.y;
+    this.z = v2.z;
+    this.w = v2.w !== void 0 ? v2.w : 1;
+    return this;
+  }
+  /**
+   * Adds the given vector to this instance.
+   *
+   * @param {Vector4} v - The vector to add.
+   * @return {Vector4} A reference to this vector.
+   */
+  add(v2) {
+    this.x += v2.x;
+    this.y += v2.y;
+    this.z += v2.z;
+    this.w += v2.w;
+    return this;
+  }
+  /**
+   * Adds the given scalar value to all components of this instance.
+   *
+   * @param {number} s - The scalar to add.
+   * @return {Vector4} A reference to this vector.
+   */
+  addScalar(s2) {
+    this.x += s2;
+    this.y += s2;
+    this.z += s2;
+    this.w += s2;
+    return this;
+  }
+  /**
+   * Adds the given vectors and stores the result in this instance.
+   *
+   * @param {Vector4} a - The first vector.
+   * @param {Vector4} b - The second vector.
+   * @return {Vector4} A reference to this vector.
+   */
+  addVectors(a2, b2) {
+    this.x = a2.x + b2.x;
+    this.y = a2.y + b2.y;
+    this.z = a2.z + b2.z;
+    this.w = a2.w + b2.w;
+    return this;
+  }
+  /**
+   * Adds the given vector scaled by the given factor to this instance.
+   *
+   * @param {Vector4} v - The vector.
+   * @param {number} s - The factor that scales `v`.
+   * @return {Vector4} A reference to this vector.
+   */
+  addScaledVector(v2, s2) {
+    this.x += v2.x * s2;
+    this.y += v2.y * s2;
+    this.z += v2.z * s2;
+    this.w += v2.w * s2;
+    return this;
+  }
+  /**
+   * Subtracts the given vector from this instance.
+   *
+   * @param {Vector4} v - The vector to subtract.
+   * @return {Vector4} A reference to this vector.
+   */
+  sub(v2) {
+    this.x -= v2.x;
+    this.y -= v2.y;
+    this.z -= v2.z;
+    this.w -= v2.w;
+    return this;
+  }
+  /**
+   * Subtracts the given scalar value from all components of this instance.
+   *
+   * @param {number} s - The scalar to subtract.
+   * @return {Vector4} A reference to this vector.
+   */
+  subScalar(s2) {
+    this.x -= s2;
+    this.y -= s2;
+    this.z -= s2;
+    this.w -= s2;
+    return this;
+  }
+  /**
+   * Subtracts the given vectors and stores the result in this instance.
+   *
+   * @param {Vector4} a - The first vector.
+   * @param {Vector4} b - The second vector.
+   * @return {Vector4} A reference to this vector.
+   */
+  subVectors(a2, b2) {
+    this.x = a2.x - b2.x;
+    this.y = a2.y - b2.y;
+    this.z = a2.z - b2.z;
+    this.w = a2.w - b2.w;
+    return this;
+  }
+  /**
+   * Multiplies the given vector with this instance.
+   *
+   * @param {Vector4} v - The vector to multiply.
+   * @return {Vector4} A reference to this vector.
+   */
+  multiply(v2) {
+    this.x *= v2.x;
+    this.y *= v2.y;
+    this.z *= v2.z;
+    this.w *= v2.w;
+    return this;
+  }
+  /**
+   * Multiplies the given scalar value with all components of this instance.
+   *
+   * @param {number} scalar - The scalar to multiply.
+   * @return {Vector4} A reference to this vector.
+   */
+  multiplyScalar(scalar) {
+    this.x *= scalar;
+    this.y *= scalar;
+    this.z *= scalar;
+    this.w *= scalar;
+    return this;
+  }
+  /**
+   * Multiplies this vector with the given 4x4 matrix.
+   *
+   * @param {Matrix4} m - The 4x4 matrix.
+   * @return {Vector4} A reference to this vector.
+   */
+  applyMatrix4(m2) {
+    const x2 = this.x, y2 = this.y, z2 = this.z, w2 = this.w;
+    const e2 = m2.elements;
+    this.x = e2[0] * x2 + e2[4] * y2 + e2[8] * z2 + e2[12] * w2;
+    this.y = e2[1] * x2 + e2[5] * y2 + e2[9] * z2 + e2[13] * w2;
+    this.z = e2[2] * x2 + e2[6] * y2 + e2[10] * z2 + e2[14] * w2;
+    this.w = e2[3] * x2 + e2[7] * y2 + e2[11] * z2 + e2[15] * w2;
+    return this;
+  }
+  /**
+   * Divides this instance by the given vector.
+   *
+   * @param {Vector4} v - The vector to divide.
+   * @return {Vector4} A reference to this vector.
+   */
+  divide(v2) {
+    this.x /= v2.x;
+    this.y /= v2.y;
+    this.z /= v2.z;
+    this.w /= v2.w;
+    return this;
+  }
+  /**
+   * Divides this vector by the given scalar.
+   *
+   * @param {number} scalar - The scalar to divide.
+   * @return {Vector4} A reference to this vector.
+   */
+  divideScalar(scalar) {
+    return this.multiplyScalar(1 / scalar);
+  }
+  /**
+   * Sets the x, y and z components of this
+   * vector to the quaternion's axis and w to the angle.
+   *
+   * @param {Quaternion} q - The Quaternion to set.
+   * @return {Vector4} A reference to this vector.
+   */
+  setAxisAngleFromQuaternion(q2) {
+    this.w = 2 * Math.acos(q2.w);
+    const s2 = Math.sqrt(1 - q2.w * q2.w);
+    if (s2 < 1e-4) {
+      this.x = 1;
+      this.y = 0;
+      this.z = 0;
+    } else {
+      this.x = q2.x / s2;
+      this.y = q2.y / s2;
+      this.z = q2.z / s2;
+    }
+    return this;
+  }
+  /**
+   * Sets the x, y and z components of this
+   * vector to the axis of rotation and w to the angle.
+   *
+   * @param {Matrix4} m - A 4x4 matrix of which the upper left 3x3 matrix is a pure rotation matrix.
+   * @return {Vector4} A reference to this vector.
+   */
+  setAxisAngleFromRotationMatrix(m2) {
+    let angle, x2, y2, z2;
+    const epsilon = 0.01, epsilon2 = 0.1, te2 = m2.elements, m11 = te2[0], m12 = te2[4], m13 = te2[8], m21 = te2[1], m22 = te2[5], m23 = te2[9], m31 = te2[2], m32 = te2[6], m33 = te2[10];
+    if (Math.abs(m12 - m21) < epsilon && Math.abs(m13 - m31) < epsilon && Math.abs(m23 - m32) < epsilon) {
+      if (Math.abs(m12 + m21) < epsilon2 && Math.abs(m13 + m31) < epsilon2 && Math.abs(m23 + m32) < epsilon2 && Math.abs(m11 + m22 + m33 - 3) < epsilon2) {
+        this.set(1, 0, 0, 0);
+        return this;
+      }
+      angle = Math.PI;
+      const xx = (m11 + 1) / 2;
+      const yy = (m22 + 1) / 2;
+      const zz = (m33 + 1) / 2;
+      const xy = (m12 + m21) / 4;
+      const xz = (m13 + m31) / 4;
+      const yz = (m23 + m32) / 4;
+      if (xx > yy && xx > zz) {
+        if (xx < epsilon) {
+          x2 = 0;
+          y2 = 0.707106781;
+          z2 = 0.707106781;
+        } else {
+          x2 = Math.sqrt(xx);
+          y2 = xy / x2;
+          z2 = xz / x2;
+        }
+      } else if (yy > zz) {
+        if (yy < epsilon) {
+          x2 = 0.707106781;
+          y2 = 0;
+          z2 = 0.707106781;
+        } else {
+          y2 = Math.sqrt(yy);
+          x2 = xy / y2;
+          z2 = yz / y2;
+        }
+      } else {
+        if (zz < epsilon) {
+          x2 = 0.707106781;
+          y2 = 0.707106781;
+          z2 = 0;
+        } else {
+          z2 = Math.sqrt(zz);
+          x2 = xz / z2;
+          y2 = yz / z2;
+        }
+      }
+      this.set(x2, y2, z2, angle);
+      return this;
+    }
+    let s2 = Math.sqrt((m32 - m23) * (m32 - m23) + (m13 - m31) * (m13 - m31) + (m21 - m12) * (m21 - m12));
+    if (Math.abs(s2) < 1e-3) s2 = 1;
+    this.x = (m32 - m23) / s2;
+    this.y = (m13 - m31) / s2;
+    this.z = (m21 - m12) / s2;
+    this.w = Math.acos((m11 + m22 + m33 - 1) / 2);
+    return this;
+  }
+  /**
+   * Sets the vector components to the position elements of the
+   * given transformation matrix.
+   *
+   * @param {Matrix4} m - The 4x4 matrix.
+   * @return {Vector4} A reference to this vector.
+   */
+  setFromMatrixPosition(m2) {
+    const e2 = m2.elements;
+    this.x = e2[12];
+    this.y = e2[13];
+    this.z = e2[14];
+    this.w = e2[15];
+    return this;
+  }
+  /**
+   * If this vector's x, y, z or w value is greater than the given vector's x, y, z or w
+   * value, replace that value with the corresponding min value.
+   *
+   * @param {Vector4} v - The vector.
+   * @return {Vector4} A reference to this vector.
+   */
+  min(v2) {
+    this.x = Math.min(this.x, v2.x);
+    this.y = Math.min(this.y, v2.y);
+    this.z = Math.min(this.z, v2.z);
+    this.w = Math.min(this.w, v2.w);
+    return this;
+  }
+  /**
+   * If this vector's x, y, z or w value is less than the given vector's x, y, z or w
+   * value, replace that value with the corresponding max value.
+   *
+   * @param {Vector4} v - The vector.
+   * @return {Vector4} A reference to this vector.
+   */
+  max(v2) {
+    this.x = Math.max(this.x, v2.x);
+    this.y = Math.max(this.y, v2.y);
+    this.z = Math.max(this.z, v2.z);
+    this.w = Math.max(this.w, v2.w);
+    return this;
+  }
+  /**
+   * If this vector's x, y, z or w value is greater than the max vector's x, y, z or w
+   * value, it is replaced by the corresponding value.
+   * If this vector's x, y, z or w value is less than the min vector's x, y, z or w value,
+   * it is replaced by the corresponding value.
+   *
+   * @param {Vector4} min - The minimum x, y and z values.
+   * @param {Vector4} max - The maximum x, y and z values in the desired range.
+   * @return {Vector4} A reference to this vector.
+   */
+  clamp(min, max) {
+    this.x = clamp(this.x, min.x, max.x);
+    this.y = clamp(this.y, min.y, max.y);
+    this.z = clamp(this.z, min.z, max.z);
+    this.w = clamp(this.w, min.w, max.w);
+    return this;
+  }
+  /**
+   * If this vector's x, y, z or w values are greater than the max value, they are
+   * replaced by the max value.
+   * If this vector's x, y, z or w values are less than the min value, they are
+   * replaced by the min value.
+   *
+   * @param {number} minVal - The minimum value the components will be clamped to.
+   * @param {number} maxVal - The maximum value the components will be clamped to.
+   * @return {Vector4} A reference to this vector.
+   */
+  clampScalar(minVal, maxVal) {
+    this.x = clamp(this.x, minVal, maxVal);
+    this.y = clamp(this.y, minVal, maxVal);
+    this.z = clamp(this.z, minVal, maxVal);
+    this.w = clamp(this.w, minVal, maxVal);
+    return this;
+  }
+  /**
+   * If this vector's length is greater than the max value, it is replaced by
+   * the max value.
+   * If this vector's length is less than the min value, it is replaced by the
+   * min value.
+   *
+   * @param {number} min - The minimum value the vector length will be clamped to.
+   * @param {number} max - The maximum value the vector length will be clamped to.
+   * @return {Vector4} A reference to this vector.
+   */
+  clampLength(min, max) {
+    const length = this.length();
+    return this.divideScalar(length || 1).multiplyScalar(clamp(length, min, max));
+  }
+  /**
+   * The components of this vector are rounded down to the nearest integer value.
+   *
+   * @return {Vector4} A reference to this vector.
+   */
+  floor() {
+    this.x = Math.floor(this.x);
+    this.y = Math.floor(this.y);
+    this.z = Math.floor(this.z);
+    this.w = Math.floor(this.w);
+    return this;
+  }
+  /**
+   * The components of this vector are rounded up to the nearest integer value.
+   *
+   * @return {Vector4} A reference to this vector.
+   */
+  ceil() {
+    this.x = Math.ceil(this.x);
+    this.y = Math.ceil(this.y);
+    this.z = Math.ceil(this.z);
+    this.w = Math.ceil(this.w);
+    return this;
+  }
+  /**
+   * The components of this vector are rounded to the nearest integer value
+   *
+   * @return {Vector4} A reference to this vector.
+   */
+  round() {
+    this.x = Math.round(this.x);
+    this.y = Math.round(this.y);
+    this.z = Math.round(this.z);
+    this.w = Math.round(this.w);
+    return this;
+  }
+  /**
+   * The components of this vector are rounded towards zero (up if negative,
+   * down if positive) to an integer value.
+   *
+   * @return {Vector4} A reference to this vector.
+   */
+  roundToZero() {
+    this.x = Math.trunc(this.x);
+    this.y = Math.trunc(this.y);
+    this.z = Math.trunc(this.z);
+    this.w = Math.trunc(this.w);
+    return this;
+  }
+  /**
+   * Inverts this vector - i.e. sets x = -x, y = -y, z = -z, w = -w.
+   *
+   * @return {Vector4} A reference to this vector.
+   */
+  negate() {
+    this.x = -this.x;
+    this.y = -this.y;
+    this.z = -this.z;
+    this.w = -this.w;
+    return this;
+  }
+  /**
+   * Calculates the dot product of the given vector with this instance.
+   *
+   * @param {Vector4} v - The vector to compute the dot product with.
+   * @return {number} The result of the dot product.
+   */
+  dot(v2) {
+    return this.x * v2.x + this.y * v2.y + this.z * v2.z + this.w * v2.w;
+  }
+  /**
+   * Computes the square of the Euclidean length (straight-line length) from
+   * (0, 0, 0, 0) to (x, y, z, w). If you are comparing the lengths of vectors, you should
+   * compare the length squared instead as it is slightly more efficient to calculate.
+   *
+   * @return {number} The square length of this vector.
+   */
+  lengthSq() {
+    return this.x * this.x + this.y * this.y + this.z * this.z + this.w * this.w;
+  }
+  /**
+   * Computes the  Euclidean length (straight-line length) from (0, 0, 0, 0) to (x, y, z, w).
+   *
+   * @return {number} The length of this vector.
+   */
+  length() {
+    return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z + this.w * this.w);
+  }
+  /**
+   * Computes the Manhattan length of this vector.
+   *
+   * @return {number} The length of this vector.
+   */
+  manhattanLength() {
+    return Math.abs(this.x) + Math.abs(this.y) + Math.abs(this.z) + Math.abs(this.w);
+  }
+  /**
+   * Converts this vector to a unit vector - that is, sets it equal to a vector
+   * with the same direction as this one, but with a vector length of `1`.
+   *
+   * @return {Vector4} A reference to this vector.
+   */
+  normalize() {
+    return this.divideScalar(this.length() || 1);
+  }
+  /**
+   * Sets this vector to a vector with the same direction as this one, but
+   * with the specified length.
+   *
+   * @param {number} length - The new length of this vector.
+   * @return {Vector4} A reference to this vector.
+   */
+  setLength(length) {
+    return this.normalize().multiplyScalar(length);
+  }
+  /**
+   * Linearly interpolates between the given vector and this instance, where
+   * alpha is the percent distance along the line - alpha = 0 will be this
+   * vector, and alpha = 1 will be the given one.
+   *
+   * @param {Vector4} v - The vector to interpolate towards.
+   * @param {number} alpha - The interpolation factor, typically in the closed interval `[0, 1]`.
+   * @return {Vector4} A reference to this vector.
+   */
+  lerp(v2, alpha2) {
+    this.x += (v2.x - this.x) * alpha2;
+    this.y += (v2.y - this.y) * alpha2;
+    this.z += (v2.z - this.z) * alpha2;
+    this.w += (v2.w - this.w) * alpha2;
+    return this;
+  }
+  /**
+   * Linearly interpolates between the given vectors, where alpha is the percent
+   * distance along the line - alpha = 0 will be first vector, and alpha = 1 will
+   * be the second one. The result is stored in this instance.
+   *
+   * @param {Vector4} v1 - The first vector.
+   * @param {Vector4} v2 - The second vector.
+   * @param {number} alpha - The interpolation factor, typically in the closed interval `[0, 1]`.
+   * @return {Vector4} A reference to this vector.
+   */
+  lerpVectors(v1, v2, alpha2) {
+    this.x = v1.x + (v2.x - v1.x) * alpha2;
+    this.y = v1.y + (v2.y - v1.y) * alpha2;
+    this.z = v1.z + (v2.z - v1.z) * alpha2;
+    this.w = v1.w + (v2.w - v1.w) * alpha2;
+    return this;
+  }
+  /**
+   * Returns `true` if this vector is equal with the given one.
+   *
+   * @param {Vector4} v - The vector to test for equality.
+   * @return {boolean} Whether this vector is equal with the given one.
+   */
+  equals(v2) {
+    return v2.x === this.x && v2.y === this.y && v2.z === this.z && v2.w === this.w;
+  }
+  /**
+   * Sets this vector's x value to be `array[ offset ]`, y value to be `array[ offset + 1 ]`,
+   * z value to be `array[ offset + 2 ]`, w value to be `array[ offset + 3 ]`.
+   *
+   * @param {Array<number>} array - An array holding the vector component values.
+   * @param {number} [offset=0] - The offset into the array.
+   * @return {Vector4} A reference to this vector.
+   */
+  fromArray(array, offset = 0) {
+    this.x = array[offset];
+    this.y = array[offset + 1];
+    this.z = array[offset + 2];
+    this.w = array[offset + 3];
+    return this;
+  }
+  /**
+   * Writes the components of this vector to the given array. If no array is provided,
+   * the method returns a new instance.
+   *
+   * @param {Array<number>} [array=[]] - The target array holding the vector components.
+   * @param {number} [offset=0] - Index of the first element in the array.
+   * @return {Array<number>} The vector components.
+   */
+  toArray(array = [], offset = 0) {
+    array[offset] = this.x;
+    array[offset + 1] = this.y;
+    array[offset + 2] = this.z;
+    array[offset + 3] = this.w;
+    return array;
+  }
+  /**
+   * Sets the components of this vector from the given buffer attribute.
+   *
+   * @param {BufferAttribute} attribute - The buffer attribute holding vector data.
+   * @param {number} index - The index into the attribute.
+   * @return {Vector4} A reference to this vector.
+   */
+  fromBufferAttribute(attribute, index2) {
+    this.x = attribute.getX(index2);
+    this.y = attribute.getY(index2);
+    this.z = attribute.getZ(index2);
+    this.w = attribute.getW(index2);
+    return this;
+  }
+  /**
+   * Sets each component of this vector to a pseudo-random value between `0` and
+   * `1`, excluding `1`.
+   *
+   * @return {Vector4} A reference to this vector.
+   */
+  random() {
+    this.x = Math.random();
+    this.y = Math.random();
+    this.z = Math.random();
+    this.w = Math.random();
+    return this;
+  }
+  *[Symbol.iterator]() {
+    yield this.x;
+    yield this.y;
+    yield this.z;
+    yield this.w;
+  }
+}
+class Matrix4 {
+  /**
+   * Constructs a new 4x4 matrix. The arguments are supposed to be
+   * in row-major order. If no arguments are provided, the constructor
+   * initializes the matrix as an identity matrix.
+   *
+   * @param {number} [n11] - 1-1 matrix element.
+   * @param {number} [n12] - 1-2 matrix element.
+   * @param {number} [n13] - 1-3 matrix element.
+   * @param {number} [n14] - 1-4 matrix element.
+   * @param {number} [n21] - 2-1 matrix element.
+   * @param {number} [n22] - 2-2 matrix element.
+   * @param {number} [n23] - 2-3 matrix element.
+   * @param {number} [n24] - 2-4 matrix element.
+   * @param {number} [n31] - 3-1 matrix element.
+   * @param {number} [n32] - 3-2 matrix element.
+   * @param {number} [n33] - 3-3 matrix element.
+   * @param {number} [n34] - 3-4 matrix element.
+   * @param {number} [n41] - 4-1 matrix element.
+   * @param {number} [n42] - 4-2 matrix element.
+   * @param {number} [n43] - 4-3 matrix element.
+   * @param {number} [n44] - 4-4 matrix element.
+   */
+  constructor(n11, n12, n13, n14, n21, n22, n23, n24, n31, n32, n33, n34, n41, n42, n43, n44) {
+    Matrix4.prototype.isMatrix4 = true;
+    this.elements = [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ];
+    if (n11 !== void 0) {
+      this.set(n11, n12, n13, n14, n21, n22, n23, n24, n31, n32, n33, n34, n41, n42, n43, n44);
+    }
+  }
+  /**
+   * Sets the elements of the matrix.The arguments are supposed to be
+   * in row-major order.
+   *
+   * @param {number} [n11] - 1-1 matrix element.
+   * @param {number} [n12] - 1-2 matrix element.
+   * @param {number} [n13] - 1-3 matrix element.
+   * @param {number} [n14] - 1-4 matrix element.
+   * @param {number} [n21] - 2-1 matrix element.
+   * @param {number} [n22] - 2-2 matrix element.
+   * @param {number} [n23] - 2-3 matrix element.
+   * @param {number} [n24] - 2-4 matrix element.
+   * @param {number} [n31] - 3-1 matrix element.
+   * @param {number} [n32] - 3-2 matrix element.
+   * @param {number} [n33] - 3-3 matrix element.
+   * @param {number} [n34] - 3-4 matrix element.
+   * @param {number} [n41] - 4-1 matrix element.
+   * @param {number} [n42] - 4-2 matrix element.
+   * @param {number} [n43] - 4-3 matrix element.
+   * @param {number} [n44] - 4-4 matrix element.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  set(n11, n12, n13, n14, n21, n22, n23, n24, n31, n32, n33, n34, n41, n42, n43, n44) {
+    const te2 = this.elements;
+    te2[0] = n11;
+    te2[4] = n12;
+    te2[8] = n13;
+    te2[12] = n14;
+    te2[1] = n21;
+    te2[5] = n22;
+    te2[9] = n23;
+    te2[13] = n24;
+    te2[2] = n31;
+    te2[6] = n32;
+    te2[10] = n33;
+    te2[14] = n34;
+    te2[3] = n41;
+    te2[7] = n42;
+    te2[11] = n43;
+    te2[15] = n44;
+    return this;
+  }
+  /**
+   * Sets this matrix to the 4x4 identity matrix.
+   *
+   * @return {Matrix4} A reference to this matrix.
+   */
+  identity() {
+    this.set(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    );
+    return this;
+  }
+  /**
+   * Returns a matrix with copied values from this instance.
+   *
+   * @return {Matrix4} A clone of this instance.
+   */
+  clone() {
+    return new Matrix4().fromArray(this.elements);
+  }
+  /**
+   * Copies the values of the given matrix to this instance.
+   *
+   * @param {Matrix4} m - The matrix to copy.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  copy(m2) {
+    const te2 = this.elements;
+    const me2 = m2.elements;
+    te2[0] = me2[0];
+    te2[1] = me2[1];
+    te2[2] = me2[2];
+    te2[3] = me2[3];
+    te2[4] = me2[4];
+    te2[5] = me2[5];
+    te2[6] = me2[6];
+    te2[7] = me2[7];
+    te2[8] = me2[8];
+    te2[9] = me2[9];
+    te2[10] = me2[10];
+    te2[11] = me2[11];
+    te2[12] = me2[12];
+    te2[13] = me2[13];
+    te2[14] = me2[14];
+    te2[15] = me2[15];
+    return this;
+  }
+  /**
+   * Copies the translation component of the given matrix
+   * into this matrix's translation component.
+   *
+   * @param {Matrix4} m - The matrix to copy the translation component.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  copyPosition(m2) {
+    const te2 = this.elements, me2 = m2.elements;
+    te2[12] = me2[12];
+    te2[13] = me2[13];
+    te2[14] = me2[14];
+    return this;
+  }
+  /**
+   * Set the upper 3x3 elements of this matrix to the values of given 3x3 matrix.
+   *
+   * @param {Matrix3} m - The 3x3 matrix.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  setFromMatrix3(m2) {
+    const me2 = m2.elements;
+    this.set(
+      me2[0],
+      me2[3],
+      me2[6],
+      0,
+      me2[1],
+      me2[4],
+      me2[7],
+      0,
+      me2[2],
+      me2[5],
+      me2[8],
+      0,
+      0,
+      0,
+      0,
+      1
+    );
+    return this;
+  }
+  /**
+   * Extracts the basis of this matrix into the three axis vectors provided.
+   *
+   * @param {Vector3} xAxis - The basis's x axis.
+   * @param {Vector3} yAxis - The basis's y axis.
+   * @param {Vector3} zAxis - The basis's z axis.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  extractBasis(xAxis, yAxis, zAxis) {
+    if (this.determinant() === 0) {
+      xAxis.set(1, 0, 0);
+      yAxis.set(0, 1, 0);
+      zAxis.set(0, 0, 1);
+      return this;
+    }
+    xAxis.setFromMatrixColumn(this, 0);
+    yAxis.setFromMatrixColumn(this, 1);
+    zAxis.setFromMatrixColumn(this, 2);
+    return this;
+  }
+  /**
+   * Sets the given basis vectors to this matrix.
+   *
+   * @param {Vector3} xAxis - The basis's x axis.
+   * @param {Vector3} yAxis - The basis's y axis.
+   * @param {Vector3} zAxis - The basis's z axis.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  makeBasis(xAxis, yAxis, zAxis) {
+    this.set(
+      xAxis.x,
+      yAxis.x,
+      zAxis.x,
+      0,
+      xAxis.y,
+      yAxis.y,
+      zAxis.y,
+      0,
+      xAxis.z,
+      yAxis.z,
+      zAxis.z,
+      0,
+      0,
+      0,
+      0,
+      1
+    );
+    return this;
+  }
+  /**
+   * Extracts the rotation component of the given matrix
+   * into this matrix's rotation component.
+   *
+   * Note: This method does not support reflection matrices.
+   *
+   * @param {Matrix4} m - The matrix.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  extractRotation(m2) {
+    if (m2.determinant() === 0) {
+      return this.identity();
+    }
+    const te2 = this.elements;
+    const me2 = m2.elements;
+    const scaleX2 = 1 / _v1$7.setFromMatrixColumn(m2, 0).length();
+    const scaleY2 = 1 / _v1$7.setFromMatrixColumn(m2, 1).length();
+    const scaleZ = 1 / _v1$7.setFromMatrixColumn(m2, 2).length();
+    te2[0] = me2[0] * scaleX2;
+    te2[1] = me2[1] * scaleX2;
+    te2[2] = me2[2] * scaleX2;
+    te2[3] = 0;
+    te2[4] = me2[4] * scaleY2;
+    te2[5] = me2[5] * scaleY2;
+    te2[6] = me2[6] * scaleY2;
+    te2[7] = 0;
+    te2[8] = me2[8] * scaleZ;
+    te2[9] = me2[9] * scaleZ;
+    te2[10] = me2[10] * scaleZ;
+    te2[11] = 0;
+    te2[12] = 0;
+    te2[13] = 0;
+    te2[14] = 0;
+    te2[15] = 1;
+    return this;
+  }
+  /**
+   * Sets the rotation component (the upper left 3x3 matrix) of this matrix to
+   * the rotation specified by the given Euler angles. The rest of
+   * the matrix is set to the identity. Depending on the {@link Euler#order},
+   * there are six possible outcomes. See [this page](https://en.wikipedia.org/wiki/Euler_angles#Rotation_matrix)
+   * for a complete list.
+   *
+   * @param {Euler} euler - The Euler angles.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  makeRotationFromEuler(euler) {
+    const te2 = this.elements;
+    const x2 = euler.x, y2 = euler.y, z2 = euler.z;
+    const a2 = Math.cos(x2), b2 = Math.sin(x2);
+    const c2 = Math.cos(y2), d2 = Math.sin(y2);
+    const e2 = Math.cos(z2), f2 = Math.sin(z2);
+    if (euler.order === "XYZ") {
+      const ae2 = a2 * e2, af = a2 * f2, be2 = b2 * e2, bf = b2 * f2;
+      te2[0] = c2 * e2;
+      te2[4] = -c2 * f2;
+      te2[8] = d2;
+      te2[1] = af + be2 * d2;
+      te2[5] = ae2 - bf * d2;
+      te2[9] = -b2 * c2;
+      te2[2] = bf - ae2 * d2;
+      te2[6] = be2 + af * d2;
+      te2[10] = a2 * c2;
+    } else if (euler.order === "YXZ") {
+      const ce2 = c2 * e2, cf = c2 * f2, de2 = d2 * e2, df = d2 * f2;
+      te2[0] = ce2 + df * b2;
+      te2[4] = de2 * b2 - cf;
+      te2[8] = a2 * d2;
+      te2[1] = a2 * f2;
+      te2[5] = a2 * e2;
+      te2[9] = -b2;
+      te2[2] = cf * b2 - de2;
+      te2[6] = df + ce2 * b2;
+      te2[10] = a2 * c2;
+    } else if (euler.order === "ZXY") {
+      const ce2 = c2 * e2, cf = c2 * f2, de2 = d2 * e2, df = d2 * f2;
+      te2[0] = ce2 - df * b2;
+      te2[4] = -a2 * f2;
+      te2[8] = de2 + cf * b2;
+      te2[1] = cf + de2 * b2;
+      te2[5] = a2 * e2;
+      te2[9] = df - ce2 * b2;
+      te2[2] = -a2 * d2;
+      te2[6] = b2;
+      te2[10] = a2 * c2;
+    } else if (euler.order === "ZYX") {
+      const ae2 = a2 * e2, af = a2 * f2, be2 = b2 * e2, bf = b2 * f2;
+      te2[0] = c2 * e2;
+      te2[4] = be2 * d2 - af;
+      te2[8] = ae2 * d2 + bf;
+      te2[1] = c2 * f2;
+      te2[5] = bf * d2 + ae2;
+      te2[9] = af * d2 - be2;
+      te2[2] = -d2;
+      te2[6] = b2 * c2;
+      te2[10] = a2 * c2;
+    } else if (euler.order === "YZX") {
+      const ac = a2 * c2, ad = a2 * d2, bc = b2 * c2, bd = b2 * d2;
+      te2[0] = c2 * e2;
+      te2[4] = bd - ac * f2;
+      te2[8] = bc * f2 + ad;
+      te2[1] = f2;
+      te2[5] = a2 * e2;
+      te2[9] = -b2 * e2;
+      te2[2] = -d2 * e2;
+      te2[6] = ad * f2 + bc;
+      te2[10] = ac - bd * f2;
+    } else if (euler.order === "XZY") {
+      const ac = a2 * c2, ad = a2 * d2, bc = b2 * c2, bd = b2 * d2;
+      te2[0] = c2 * e2;
+      te2[4] = -f2;
+      te2[8] = d2 * e2;
+      te2[1] = ac * f2 + bd;
+      te2[5] = a2 * e2;
+      te2[9] = ad * f2 - bc;
+      te2[2] = bc * f2 - ad;
+      te2[6] = b2 * e2;
+      te2[10] = bd * f2 + ac;
+    }
+    te2[3] = 0;
+    te2[7] = 0;
+    te2[11] = 0;
+    te2[12] = 0;
+    te2[13] = 0;
+    te2[14] = 0;
+    te2[15] = 1;
+    return this;
+  }
+  /**
+   * Sets the rotation component of this matrix to the rotation specified by
+   * the given Quaternion as outlined [here](https://en.wikipedia.org/wiki/Rotation_matrix#Quaternion)
+   * The rest of the matrix is set to the identity.
+   *
+   * @param {Quaternion} q - The Quaternion.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  makeRotationFromQuaternion(q2) {
+    return this.compose(_zero, q2, _one);
+  }
+  /**
+   * Sets the rotation component of the transformation matrix, looking from `eye` towards
+   * `target`, and oriented by the up-direction.
+   *
+   * @param {Vector3} eye - The eye vector.
+   * @param {Vector3} target - The target vector.
+   * @param {Vector3} up - The up vector.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  lookAt(eye, target, up) {
+    const te2 = this.elements;
+    _z.subVectors(eye, target);
+    if (_z.lengthSq() === 0) {
+      _z.z = 1;
+    }
+    _z.normalize();
+    _x.crossVectors(up, _z);
+    if (_x.lengthSq() === 0) {
+      if (Math.abs(up.z) === 1) {
+        _z.x += 1e-4;
+      } else {
+        _z.z += 1e-4;
+      }
+      _z.normalize();
+      _x.crossVectors(up, _z);
+    }
+    _x.normalize();
+    _y.crossVectors(_z, _x);
+    te2[0] = _x.x;
+    te2[4] = _y.x;
+    te2[8] = _z.x;
+    te2[1] = _x.y;
+    te2[5] = _y.y;
+    te2[9] = _z.y;
+    te2[2] = _x.z;
+    te2[6] = _y.z;
+    te2[10] = _z.z;
+    return this;
+  }
+  /**
+   * Post-multiplies this matrix by the given 4x4 matrix.
+   *
+   * @param {Matrix4} m - The matrix to multiply with.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  multiply(m2) {
+    return this.multiplyMatrices(this, m2);
+  }
+  /**
+   * Pre-multiplies this matrix by the given 4x4 matrix.
+   *
+   * @param {Matrix4} m - The matrix to multiply with.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  premultiply(m2) {
+    return this.multiplyMatrices(m2, this);
+  }
+  /**
+   * Multiples the given 4x4 matrices and stores the result
+   * in this matrix.
+   *
+   * @param {Matrix4} a - The first matrix.
+   * @param {Matrix4} b - The second matrix.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  multiplyMatrices(a2, b2) {
+    const ae2 = a2.elements;
+    const be2 = b2.elements;
+    const te2 = this.elements;
+    const a11 = ae2[0], a12 = ae2[4], a13 = ae2[8], a14 = ae2[12];
+    const a21 = ae2[1], a22 = ae2[5], a23 = ae2[9], a24 = ae2[13];
+    const a31 = ae2[2], a32 = ae2[6], a33 = ae2[10], a34 = ae2[14];
+    const a41 = ae2[3], a42 = ae2[7], a43 = ae2[11], a44 = ae2[15];
+    const b11 = be2[0], b12 = be2[4], b13 = be2[8], b14 = be2[12];
+    const b21 = be2[1], b22 = be2[5], b23 = be2[9], b24 = be2[13];
+    const b31 = be2[2], b32 = be2[6], b33 = be2[10], b34 = be2[14];
+    const b41 = be2[3], b42 = be2[7], b43 = be2[11], b44 = be2[15];
+    te2[0] = a11 * b11 + a12 * b21 + a13 * b31 + a14 * b41;
+    te2[4] = a11 * b12 + a12 * b22 + a13 * b32 + a14 * b42;
+    te2[8] = a11 * b13 + a12 * b23 + a13 * b33 + a14 * b43;
+    te2[12] = a11 * b14 + a12 * b24 + a13 * b34 + a14 * b44;
+    te2[1] = a21 * b11 + a22 * b21 + a23 * b31 + a24 * b41;
+    te2[5] = a21 * b12 + a22 * b22 + a23 * b32 + a24 * b42;
+    te2[9] = a21 * b13 + a22 * b23 + a23 * b33 + a24 * b43;
+    te2[13] = a21 * b14 + a22 * b24 + a23 * b34 + a24 * b44;
+    te2[2] = a31 * b11 + a32 * b21 + a33 * b31 + a34 * b41;
+    te2[6] = a31 * b12 + a32 * b22 + a33 * b32 + a34 * b42;
+    te2[10] = a31 * b13 + a32 * b23 + a33 * b33 + a34 * b43;
+    te2[14] = a31 * b14 + a32 * b24 + a33 * b34 + a34 * b44;
+    te2[3] = a41 * b11 + a42 * b21 + a43 * b31 + a44 * b41;
+    te2[7] = a41 * b12 + a42 * b22 + a43 * b32 + a44 * b42;
+    te2[11] = a41 * b13 + a42 * b23 + a43 * b33 + a44 * b43;
+    te2[15] = a41 * b14 + a42 * b24 + a43 * b34 + a44 * b44;
+    return this;
+  }
+  /**
+   * Multiplies every component of the matrix by the given scalar.
+   *
+   * @param {number} s - The scalar.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  multiplyScalar(s2) {
+    const te2 = this.elements;
+    te2[0] *= s2;
+    te2[4] *= s2;
+    te2[8] *= s2;
+    te2[12] *= s2;
+    te2[1] *= s2;
+    te2[5] *= s2;
+    te2[9] *= s2;
+    te2[13] *= s2;
+    te2[2] *= s2;
+    te2[6] *= s2;
+    te2[10] *= s2;
+    te2[14] *= s2;
+    te2[3] *= s2;
+    te2[7] *= s2;
+    te2[11] *= s2;
+    te2[15] *= s2;
+    return this;
+  }
+  /**
+   * Computes and returns the determinant of this matrix.
+   *
+   * Based on the method outlined [here](http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.html).
+   *
+   * @return {number} The determinant.
+   */
+  determinant() {
+    const te2 = this.elements;
+    const n11 = te2[0], n12 = te2[4], n13 = te2[8], n14 = te2[12];
+    const n21 = te2[1], n22 = te2[5], n23 = te2[9], n24 = te2[13];
+    const n31 = te2[2], n32 = te2[6], n33 = te2[10], n34 = te2[14];
+    const n41 = te2[3], n42 = te2[7], n43 = te2[11], n44 = te2[15];
+    const t11 = n23 * n34 - n24 * n33;
+    const t12 = n22 * n34 - n24 * n32;
+    const t13 = n22 * n33 - n23 * n32;
+    const t21 = n21 * n34 - n24 * n31;
+    const t22 = n21 * n33 - n23 * n31;
+    const t23 = n21 * n32 - n22 * n31;
+    return n11 * (n42 * t11 - n43 * t12 + n44 * t13) - n12 * (n41 * t11 - n43 * t21 + n44 * t22) + n13 * (n41 * t12 - n42 * t21 + n44 * t23) - n14 * (n41 * t13 - n42 * t22 + n43 * t23);
+  }
+  /**
+   * Transposes this matrix in place.
+   *
+   * @return {Matrix4} A reference to this matrix.
+   */
+  transpose() {
+    const te2 = this.elements;
+    let tmp;
+    tmp = te2[1];
+    te2[1] = te2[4];
+    te2[4] = tmp;
+    tmp = te2[2];
+    te2[2] = te2[8];
+    te2[8] = tmp;
+    tmp = te2[6];
+    te2[6] = te2[9];
+    te2[9] = tmp;
+    tmp = te2[3];
+    te2[3] = te2[12];
+    te2[12] = tmp;
+    tmp = te2[7];
+    te2[7] = te2[13];
+    te2[13] = tmp;
+    tmp = te2[11];
+    te2[11] = te2[14];
+    te2[14] = tmp;
+    return this;
+  }
+  /**
+   * Sets the position component for this matrix from the given vector,
+   * without affecting the rest of the matrix.
+   *
+   * @param {number|Vector3} x - The x component of the vector or alternatively the vector object.
+   * @param {number} y - The y component of the vector.
+   * @param {number} z - The z component of the vector.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  setPosition(x2, y2, z2) {
+    const te2 = this.elements;
+    if (x2.isVector3) {
+      te2[12] = x2.x;
+      te2[13] = x2.y;
+      te2[14] = x2.z;
+    } else {
+      te2[12] = x2;
+      te2[13] = y2;
+      te2[14] = z2;
+    }
+    return this;
+  }
+  /**
+   * Inverts this matrix, using the [analytic method](https://en.wikipedia.org/wiki/Invertible_matrix#Analytic_solution).
+   * You can not invert with a determinant of zero. If you attempt this, the method produces
+   * a zero matrix instead.
+   *
+   * @return {Matrix4} A reference to this matrix.
+   */
+  invert() {
+    const te2 = this.elements, n11 = te2[0], n21 = te2[1], n31 = te2[2], n41 = te2[3], n12 = te2[4], n22 = te2[5], n32 = te2[6], n42 = te2[7], n13 = te2[8], n23 = te2[9], n33 = te2[10], n43 = te2[11], n14 = te2[12], n24 = te2[13], n34 = te2[14], n44 = te2[15], t1 = n11 * n22 - n21 * n12, t2 = n11 * n32 - n31 * n12, t3 = n11 * n42 - n41 * n12, t4 = n21 * n32 - n31 * n22, t5 = n21 * n42 - n41 * n22, t6 = n31 * n42 - n41 * n32, t7 = n13 * n24 - n23 * n14, t8 = n13 * n34 - n33 * n14, t9 = n13 * n44 - n43 * n14, t10 = n23 * n34 - n33 * n24, t11 = n23 * n44 - n43 * n24, t12 = n33 * n44 - n43 * n34;
+    const det = t1 * t12 - t2 * t11 + t3 * t10 + t4 * t9 - t5 * t8 + t6 * t7;
+    if (det === 0) return this.set(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    const detInv = 1 / det;
+    te2[0] = (n22 * t12 - n32 * t11 + n42 * t10) * detInv;
+    te2[1] = (n31 * t11 - n21 * t12 - n41 * t10) * detInv;
+    te2[2] = (n24 * t6 - n34 * t5 + n44 * t4) * detInv;
+    te2[3] = (n33 * t5 - n23 * t6 - n43 * t4) * detInv;
+    te2[4] = (n32 * t9 - n12 * t12 - n42 * t8) * detInv;
+    te2[5] = (n11 * t12 - n31 * t9 + n41 * t8) * detInv;
+    te2[6] = (n34 * t3 - n14 * t6 - n44 * t2) * detInv;
+    te2[7] = (n13 * t6 - n33 * t3 + n43 * t2) * detInv;
+    te2[8] = (n12 * t11 - n22 * t9 + n42 * t7) * detInv;
+    te2[9] = (n21 * t9 - n11 * t11 - n41 * t7) * detInv;
+    te2[10] = (n14 * t5 - n24 * t3 + n44 * t1) * detInv;
+    te2[11] = (n23 * t3 - n13 * t5 - n43 * t1) * detInv;
+    te2[12] = (n22 * t8 - n12 * t10 - n32 * t7) * detInv;
+    te2[13] = (n11 * t10 - n21 * t8 + n31 * t7) * detInv;
+    te2[14] = (n24 * t2 - n14 * t4 - n34 * t1) * detInv;
+    te2[15] = (n13 * t4 - n23 * t2 + n33 * t1) * detInv;
+    return this;
+  }
+  /**
+   * Multiplies the columns of this matrix by the given vector.
+   *
+   * @param {Vector3} v - The scale vector.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  scale(v2) {
+    const te2 = this.elements;
+    const x2 = v2.x, y2 = v2.y, z2 = v2.z;
+    te2[0] *= x2;
+    te2[4] *= y2;
+    te2[8] *= z2;
+    te2[1] *= x2;
+    te2[5] *= y2;
+    te2[9] *= z2;
+    te2[2] *= x2;
+    te2[6] *= y2;
+    te2[10] *= z2;
+    te2[3] *= x2;
+    te2[7] *= y2;
+    te2[11] *= z2;
+    return this;
+  }
+  /**
+   * Gets the maximum scale value of the three axes.
+   *
+   * @return {number} The maximum scale.
+   */
+  getMaxScaleOnAxis() {
+    const te2 = this.elements;
+    const scaleXSq = te2[0] * te2[0] + te2[1] * te2[1] + te2[2] * te2[2];
+    const scaleYSq = te2[4] * te2[4] + te2[5] * te2[5] + te2[6] * te2[6];
+    const scaleZSq = te2[8] * te2[8] + te2[9] * te2[9] + te2[10] * te2[10];
+    return Math.sqrt(Math.max(scaleXSq, scaleYSq, scaleZSq));
+  }
+  /**
+   * Sets this matrix as a translation transform from the given vector.
+   *
+   * @param {number|Vector3} x - The amount to translate in the X axis or alternatively a translation vector.
+   * @param {number} y - The amount to translate in the Y axis.
+   * @param {number} z - The amount to translate in the z axis.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  makeTranslation(x2, y2, z2) {
+    if (x2.isVector3) {
+      this.set(
+        1,
+        0,
+        0,
+        x2.x,
+        0,
+        1,
+        0,
+        x2.y,
+        0,
+        0,
+        1,
+        x2.z,
+        0,
+        0,
+        0,
+        1
+      );
+    } else {
+      this.set(
+        1,
+        0,
+        0,
+        x2,
+        0,
+        1,
+        0,
+        y2,
+        0,
+        0,
+        1,
+        z2,
+        0,
+        0,
+        0,
+        1
+      );
+    }
+    return this;
+  }
+  /**
+   * Sets this matrix as a rotational transformation around the X axis by
+   * the given angle.
+   *
+   * @param {number} theta - The rotation in radians.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  makeRotationX(theta) {
+    const c2 = Math.cos(theta), s2 = Math.sin(theta);
+    this.set(
+      1,
+      0,
+      0,
+      0,
+      0,
+      c2,
+      -s2,
+      0,
+      0,
+      s2,
+      c2,
+      0,
+      0,
+      0,
+      0,
+      1
+    );
+    return this;
+  }
+  /**
+   * Sets this matrix as a rotational transformation around the Y axis by
+   * the given angle.
+   *
+   * @param {number} theta - The rotation in radians.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  makeRotationY(theta) {
+    const c2 = Math.cos(theta), s2 = Math.sin(theta);
+    this.set(
+      c2,
+      0,
+      s2,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -s2,
+      0,
+      c2,
+      0,
+      0,
+      0,
+      0,
+      1
+    );
+    return this;
+  }
+  /**
+   * Sets this matrix as a rotational transformation around the Z axis by
+   * the given angle.
+   *
+   * @param {number} theta - The rotation in radians.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  makeRotationZ(theta) {
+    const c2 = Math.cos(theta), s2 = Math.sin(theta);
+    this.set(
+      c2,
+      -s2,
+      0,
+      0,
+      s2,
+      c2,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    );
+    return this;
+  }
+  /**
+   * Sets this matrix as a rotational transformation around the given axis by
+   * the given angle.
+   *
+   * This is a somewhat controversial but mathematically sound alternative to
+   * rotating via Quaternions. See the discussion [here](https://www.gamedev.net/articles/programming/math-and-physics/do-we-really-need-quaternions-r1199).
+   *
+   * @param {Vector3} axis - The normalized rotation axis.
+   * @param {number} angle - The rotation in radians.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  makeRotationAxis(axis, angle) {
+    const c2 = Math.cos(angle);
+    const s2 = Math.sin(angle);
+    const t2 = 1 - c2;
+    const x2 = axis.x, y2 = axis.y, z2 = axis.z;
+    const tx = t2 * x2, ty = t2 * y2;
+    this.set(
+      tx * x2 + c2,
+      tx * y2 - s2 * z2,
+      tx * z2 + s2 * y2,
+      0,
+      tx * y2 + s2 * z2,
+      ty * y2 + c2,
+      ty * z2 - s2 * x2,
+      0,
+      tx * z2 - s2 * y2,
+      ty * z2 + s2 * x2,
+      t2 * z2 * z2 + c2,
+      0,
+      0,
+      0,
+      0,
+      1
+    );
+    return this;
+  }
+  /**
+   * Sets this matrix as a scale transformation.
+   *
+   * @param {number} x - The amount to scale in the X axis.
+   * @param {number} y - The amount to scale in the Y axis.
+   * @param {number} z - The amount to scale in the Z axis.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  makeScale(x2, y2, z2) {
+    this.set(
+      x2,
+      0,
+      0,
+      0,
+      0,
+      y2,
+      0,
+      0,
+      0,
+      0,
+      z2,
+      0,
+      0,
+      0,
+      0,
+      1
+    );
+    return this;
+  }
+  /**
+   * Sets this matrix as a shear transformation.
+   *
+   * @param {number} xy - The amount to shear X by Y.
+   * @param {number} xz - The amount to shear X by Z.
+   * @param {number} yx - The amount to shear Y by X.
+   * @param {number} yz - The amount to shear Y by Z.
+   * @param {number} zx - The amount to shear Z by X.
+   * @param {number} zy - The amount to shear Z by Y.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  makeShear(xy, xz, yx, yz, zx, zy) {
+    this.set(
+      1,
+      yx,
+      zx,
+      0,
+      xy,
+      1,
+      zy,
+      0,
+      xz,
+      yz,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    );
+    return this;
+  }
+  /**
+   * Sets this matrix to the transformation composed of the given position,
+   * rotation (Quaternion) and scale.
+   *
+   * @param {Vector3} position - The position vector.
+   * @param {Quaternion} quaternion - The rotation as a Quaternion.
+   * @param {Vector3} scale - The scale vector.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  compose(position2, quaternion, scale2) {
+    const te2 = this.elements;
+    const x2 = quaternion._x, y2 = quaternion._y, z2 = quaternion._z, w2 = quaternion._w;
+    const x22 = x2 + x2, y22 = y2 + y2, z22 = z2 + z2;
+    const xx = x2 * x22, xy = x2 * y22, xz = x2 * z22;
+    const yy = y2 * y22, yz = y2 * z22, zz = z2 * z22;
+    const wx = w2 * x22, wy = w2 * y22, wz = w2 * z22;
+    const sx = scale2.x, sy = scale2.y, sz = scale2.z;
+    te2[0] = (1 - (yy + zz)) * sx;
+    te2[1] = (xy + wz) * sx;
+    te2[2] = (xz - wy) * sx;
+    te2[3] = 0;
+    te2[4] = (xy - wz) * sy;
+    te2[5] = (1 - (xx + zz)) * sy;
+    te2[6] = (yz + wx) * sy;
+    te2[7] = 0;
+    te2[8] = (xz + wy) * sz;
+    te2[9] = (yz - wx) * sz;
+    te2[10] = (1 - (xx + yy)) * sz;
+    te2[11] = 0;
+    te2[12] = position2.x;
+    te2[13] = position2.y;
+    te2[14] = position2.z;
+    te2[15] = 1;
+    return this;
+  }
+  /**
+   * Decomposes this matrix into its position, rotation and scale components
+   * and provides the result in the given objects.
+   *
+   * Note: Not all matrices are decomposable in this way. For example, if an
+   * object has a non-uniformly scaled parent, then the object's world matrix
+   * may not be decomposable, and this method may not be appropriate.
+   *
+   * @param {Vector3} position - The position vector.
+   * @param {Quaternion} quaternion - The rotation as a Quaternion.
+   * @param {Vector3} scale - The scale vector.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  decompose(position2, quaternion, scale2) {
+    const te2 = this.elements;
+    position2.x = te2[12];
+    position2.y = te2[13];
+    position2.z = te2[14];
+    const det = this.determinant();
+    if (det === 0) {
+      scale2.set(1, 1, 1);
+      quaternion.identity();
+      return this;
+    }
+    let sx = _v1$7.set(te2[0], te2[1], te2[2]).length();
+    const sy = _v1$7.set(te2[4], te2[5], te2[6]).length();
+    const sz = _v1$7.set(te2[8], te2[9], te2[10]).length();
+    if (det < 0) sx = -sx;
+    _m1$2.copy(this);
+    const invSX = 1 / sx;
+    const invSY = 1 / sy;
+    const invSZ = 1 / sz;
+    _m1$2.elements[0] *= invSX;
+    _m1$2.elements[1] *= invSX;
+    _m1$2.elements[2] *= invSX;
+    _m1$2.elements[4] *= invSY;
+    _m1$2.elements[5] *= invSY;
+    _m1$2.elements[6] *= invSY;
+    _m1$2.elements[8] *= invSZ;
+    _m1$2.elements[9] *= invSZ;
+    _m1$2.elements[10] *= invSZ;
+    quaternion.setFromRotationMatrix(_m1$2);
+    scale2.x = sx;
+    scale2.y = sy;
+    scale2.z = sz;
+    return this;
+  }
+  /**
+  	 * Creates a perspective projection matrix. This is used internally by
+  	 * {@link PerspectiveCamera#updateProjectionMatrix}.
+  
+  	 * @param {number} left - Left boundary of the viewing frustum at the near plane.
+  	 * @param {number} right - Right boundary of the viewing frustum at the near plane.
+  	 * @param {number} top - Top boundary of the viewing frustum at the near plane.
+  	 * @param {number} bottom - Bottom boundary of the viewing frustum at the near plane.
+  	 * @param {number} near - The distance from the camera to the near plane.
+  	 * @param {number} far - The distance from the camera to the far plane.
+  	 * @param {(WebGLCoordinateSystem|WebGPUCoordinateSystem)} [coordinateSystem=WebGLCoordinateSystem] - The coordinate system.
+  	 * @param {boolean} [reversedDepth=false] - Whether to use a reversed depth.
+  	 * @return {Matrix4} A reference to this matrix.
+  	 */
+  makePerspective(left, right, top, bottom, near, far, coordinateSystem = WebGLCoordinateSystem, reversedDepth = false) {
+    const te2 = this.elements;
+    const x2 = 2 * near / (right - left);
+    const y2 = 2 * near / (top - bottom);
+    const a2 = (right + left) / (right - left);
+    const b2 = (top + bottom) / (top - bottom);
+    let c2, d2;
+    if (reversedDepth) {
+      c2 = near / (far - near);
+      d2 = far * near / (far - near);
+    } else {
+      if (coordinateSystem === WebGLCoordinateSystem) {
+        c2 = -(far + near) / (far - near);
+        d2 = -2 * far * near / (far - near);
+      } else if (coordinateSystem === WebGPUCoordinateSystem) {
+        c2 = -far / (far - near);
+        d2 = -far * near / (far - near);
+      } else {
+        throw new Error("THREE.Matrix4.makePerspective(): Invalid coordinate system: " + coordinateSystem);
+      }
+    }
+    te2[0] = x2;
+    te2[4] = 0;
+    te2[8] = a2;
+    te2[12] = 0;
+    te2[1] = 0;
+    te2[5] = y2;
+    te2[9] = b2;
+    te2[13] = 0;
+    te2[2] = 0;
+    te2[6] = 0;
+    te2[10] = c2;
+    te2[14] = d2;
+    te2[3] = 0;
+    te2[7] = 0;
+    te2[11] = -1;
+    te2[15] = 0;
+    return this;
+  }
+  /**
+  	 * Creates a orthographic projection matrix. This is used internally by
+  	 * {@link OrthographicCamera#updateProjectionMatrix}.
+  
+  	 * @param {number} left - Left boundary of the viewing frustum at the near plane.
+  	 * @param {number} right - Right boundary of the viewing frustum at the near plane.
+  	 * @param {number} top - Top boundary of the viewing frustum at the near plane.
+  	 * @param {number} bottom - Bottom boundary of the viewing frustum at the near plane.
+  	 * @param {number} near - The distance from the camera to the near plane.
+  	 * @param {number} far - The distance from the camera to the far plane.
+  	 * @param {(WebGLCoordinateSystem|WebGPUCoordinateSystem)} [coordinateSystem=WebGLCoordinateSystem] - The coordinate system.
+  	 * @param {boolean} [reversedDepth=false] - Whether to use a reversed depth.
+  	 * @return {Matrix4} A reference to this matrix.
+  	 */
+  makeOrthographic(left, right, top, bottom, near, far, coordinateSystem = WebGLCoordinateSystem, reversedDepth = false) {
+    const te2 = this.elements;
+    const x2 = 2 / (right - left);
+    const y2 = 2 / (top - bottom);
+    const a2 = -(right + left) / (right - left);
+    const b2 = -(top + bottom) / (top - bottom);
+    let c2, d2;
+    if (reversedDepth) {
+      c2 = 1 / (far - near);
+      d2 = far / (far - near);
+    } else {
+      if (coordinateSystem === WebGLCoordinateSystem) {
+        c2 = -2 / (far - near);
+        d2 = -(far + near) / (far - near);
+      } else if (coordinateSystem === WebGPUCoordinateSystem) {
+        c2 = -1 / (far - near);
+        d2 = -near / (far - near);
+      } else {
+        throw new Error("THREE.Matrix4.makeOrthographic(): Invalid coordinate system: " + coordinateSystem);
+      }
+    }
+    te2[0] = x2;
+    te2[4] = 0;
+    te2[8] = 0;
+    te2[12] = a2;
+    te2[1] = 0;
+    te2[5] = y2;
+    te2[9] = 0;
+    te2[13] = b2;
+    te2[2] = 0;
+    te2[6] = 0;
+    te2[10] = c2;
+    te2[14] = d2;
+    te2[3] = 0;
+    te2[7] = 0;
+    te2[11] = 0;
+    te2[15] = 1;
+    return this;
+  }
+  /**
+   * Returns `true` if this matrix is equal with the given one.
+   *
+   * @param {Matrix4} matrix - The matrix to test for equality.
+   * @return {boolean} Whether this matrix is equal with the given one.
+   */
+  equals(matrix) {
+    const te2 = this.elements;
+    const me2 = matrix.elements;
+    for (let i2 = 0; i2 < 16; i2++) {
+      if (te2[i2] !== me2[i2]) return false;
+    }
+    return true;
+  }
+  /**
+   * Sets the elements of the matrix from the given array.
+   *
+   * @param {Array<number>} array - The matrix elements in column-major order.
+   * @param {number} [offset=0] - Index of the first element in the array.
+   * @return {Matrix4} A reference to this matrix.
+   */
+  fromArray(array, offset = 0) {
+    for (let i2 = 0; i2 < 16; i2++) {
+      this.elements[i2] = array[i2 + offset];
+    }
+    return this;
+  }
+  /**
+   * Writes the elements of this matrix to the given array. If no array is provided,
+   * the method returns a new instance.
+   *
+   * @param {Array<number>} [array=[]] - The target array holding the matrix elements in column-major order.
+   * @param {number} [offset=0] - Index of the first element in the array.
+   * @return {Array<number>} The matrix elements in column-major order.
+   */
+  toArray(array = [], offset = 0) {
+    const te2 = this.elements;
+    array[offset] = te2[0];
+    array[offset + 1] = te2[1];
+    array[offset + 2] = te2[2];
+    array[offset + 3] = te2[3];
+    array[offset + 4] = te2[4];
+    array[offset + 5] = te2[5];
+    array[offset + 6] = te2[6];
+    array[offset + 7] = te2[7];
+    array[offset + 8] = te2[8];
+    array[offset + 9] = te2[9];
+    array[offset + 10] = te2[10];
+    array[offset + 11] = te2[11];
+    array[offset + 12] = te2[12];
+    array[offset + 13] = te2[13];
+    array[offset + 14] = te2[14];
+    array[offset + 15] = te2[15];
+    return array;
+  }
+}
+const _v1$7 = /* @__PURE__ */ new Vector3();
+const _m1$2 = /* @__PURE__ */ new Matrix4();
+const _zero = /* @__PURE__ */ new Vector3(0, 0, 0);
+const _one = /* @__PURE__ */ new Vector3(1, 1, 1);
+const _x = /* @__PURE__ */ new Vector3();
+const _y = /* @__PURE__ */ new Vector3();
+const _z = /* @__PURE__ */ new Vector3();
+const _matrix$2 = /* @__PURE__ */ new Matrix4();
+const _quaternion$4 = /* @__PURE__ */ new Quaternion();
+class Euler {
+  /**
+   * Constructs a new euler instance.
+   *
+   * @param {number} [x=0] - The angle of the x axis in radians.
+   * @param {number} [y=0] - The angle of the y axis in radians.
+   * @param {number} [z=0] - The angle of the z axis in radians.
+   * @param {string} [order=Euler.DEFAULT_ORDER] - A string representing the order that the rotations are applied.
+   */
+  constructor(x2 = 0, y2 = 0, z2 = 0, order2 = Euler.DEFAULT_ORDER) {
+    this.isEuler = true;
+    this._x = x2;
+    this._y = y2;
+    this._z = z2;
+    this._order = order2;
+  }
+  /**
+   * The angle of the x axis in radians.
+   *
+   * @type {number}
+   * @default 0
+   */
+  get x() {
+    return this._x;
+  }
+  set x(value) {
+    this._x = value;
+    this._onChangeCallback();
+  }
+  /**
+   * The angle of the y axis in radians.
+   *
+   * @type {number}
+   * @default 0
+   */
+  get y() {
+    return this._y;
+  }
+  set y(value) {
+    this._y = value;
+    this._onChangeCallback();
+  }
+  /**
+   * The angle of the z axis in radians.
+   *
+   * @type {number}
+   * @default 0
+   */
+  get z() {
+    return this._z;
+  }
+  set z(value) {
+    this._z = value;
+    this._onChangeCallback();
+  }
+  /**
+   * A string representing the order that the rotations are applied.
+   *
+   * @type {string}
+   * @default 'XYZ'
+   */
+  get order() {
+    return this._order;
+  }
+  set order(value) {
+    this._order = value;
+    this._onChangeCallback();
+  }
+  /**
+   * Sets the Euler components.
+   *
+   * @param {number} x - The angle of the x axis in radians.
+   * @param {number} y - The angle of the y axis in radians.
+   * @param {number} z - The angle of the z axis in radians.
+   * @param {string} [order] - A string representing the order that the rotations are applied.
+   * @return {Euler} A reference to this Euler instance.
+   */
+  set(x2, y2, z2, order2 = this._order) {
+    this._x = x2;
+    this._y = y2;
+    this._z = z2;
+    this._order = order2;
+    this._onChangeCallback();
+    return this;
+  }
+  /**
+   * Returns a new Euler instance with copied values from this instance.
+   *
+   * @return {Euler} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor(this._x, this._y, this._z, this._order);
+  }
+  /**
+   * Copies the values of the given Euler instance to this instance.
+   *
+   * @param {Euler} euler - The Euler instance to copy.
+   * @return {Euler} A reference to this Euler instance.
+   */
+  copy(euler) {
+    this._x = euler._x;
+    this._y = euler._y;
+    this._z = euler._z;
+    this._order = euler._order;
+    this._onChangeCallback();
+    return this;
+  }
+  /**
+   * Sets the angles of this Euler instance from a pure rotation matrix.
+   *
+   * @param {Matrix4} m - A 4x4 matrix of which the upper 3x3 of matrix is a pure rotation matrix (i.e. unscaled).
+   * @param {string} [order] - A string representing the order that the rotations are applied.
+   * @param {boolean} [update=true] - Whether the internal `onChange` callback should be executed or not.
+   * @return {Euler} A reference to this Euler instance.
+   */
+  setFromRotationMatrix(m2, order2 = this._order, update = true) {
+    const te2 = m2.elements;
+    const m11 = te2[0], m12 = te2[4], m13 = te2[8];
+    const m21 = te2[1], m22 = te2[5], m23 = te2[9];
+    const m31 = te2[2], m32 = te2[6], m33 = te2[10];
+    switch (order2) {
+      case "XYZ":
+        this._y = Math.asin(clamp(m13, -1, 1));
+        if (Math.abs(m13) < 0.9999999) {
+          this._x = Math.atan2(-m23, m33);
+          this._z = Math.atan2(-m12, m11);
+        } else {
+          this._x = Math.atan2(m32, m22);
+          this._z = 0;
+        }
+        break;
+      case "YXZ":
+        this._x = Math.asin(-clamp(m23, -1, 1));
+        if (Math.abs(m23) < 0.9999999) {
+          this._y = Math.atan2(m13, m33);
+          this._z = Math.atan2(m21, m22);
+        } else {
+          this._y = Math.atan2(-m31, m11);
+          this._z = 0;
+        }
+        break;
+      case "ZXY":
+        this._x = Math.asin(clamp(m32, -1, 1));
+        if (Math.abs(m32) < 0.9999999) {
+          this._y = Math.atan2(-m31, m33);
+          this._z = Math.atan2(-m12, m22);
+        } else {
+          this._y = 0;
+          this._z = Math.atan2(m21, m11);
+        }
+        break;
+      case "ZYX":
+        this._y = Math.asin(-clamp(m31, -1, 1));
+        if (Math.abs(m31) < 0.9999999) {
+          this._x = Math.atan2(m32, m33);
+          this._z = Math.atan2(m21, m11);
+        } else {
+          this._x = 0;
+          this._z = Math.atan2(-m12, m22);
+        }
+        break;
+      case "YZX":
+        this._z = Math.asin(clamp(m21, -1, 1));
+        if (Math.abs(m21) < 0.9999999) {
+          this._x = Math.atan2(-m23, m22);
+          this._y = Math.atan2(-m31, m11);
+        } else {
+          this._x = 0;
+          this._y = Math.atan2(m13, m33);
+        }
+        break;
+      case "XZY":
+        this._z = Math.asin(-clamp(m12, -1, 1));
+        if (Math.abs(m12) < 0.9999999) {
+          this._x = Math.atan2(m32, m22);
+          this._y = Math.atan2(m13, m11);
+        } else {
+          this._x = Math.atan2(-m23, m33);
+          this._y = 0;
+        }
+        break;
+      default:
+        warn("Euler: .setFromRotationMatrix() encountered an unknown order: " + order2);
+    }
+    this._order = order2;
+    if (update === true) this._onChangeCallback();
+    return this;
+  }
+  /**
+   * Sets the angles of this Euler instance from a normalized quaternion.
+   *
+   * @param {Quaternion} q - A normalized Quaternion.
+   * @param {string} [order] - A string representing the order that the rotations are applied.
+   * @param {boolean} [update=true] - Whether the internal `onChange` callback should be executed or not.
+   * @return {Euler} A reference to this Euler instance.
+   */
+  setFromQuaternion(q2, order2, update) {
+    _matrix$2.makeRotationFromQuaternion(q2);
+    return this.setFromRotationMatrix(_matrix$2, order2, update);
+  }
+  /**
+   * Sets the angles of this Euler instance from the given vector.
+   *
+   * @param {Vector3} v - The vector.
+   * @param {string} [order] - A string representing the order that the rotations are applied.
+   * @return {Euler} A reference to this Euler instance.
+   */
+  setFromVector3(v2, order2 = this._order) {
+    return this.set(v2.x, v2.y, v2.z, order2);
+  }
+  /**
+   * Resets the euler angle with a new order by creating a quaternion from this
+   * euler angle and then setting this euler angle with the quaternion and the
+   * new order.
+   *
+   * Warning: This discards revolution information.
+   *
+   * @param {string} [newOrder] - A string representing the new order that the rotations are applied.
+   * @return {Euler} A reference to this Euler instance.
+   */
+  reorder(newOrder) {
+    _quaternion$4.setFromEuler(this);
+    return this.setFromQuaternion(_quaternion$4, newOrder);
+  }
+  /**
+   * Returns `true` if this Euler instance is equal with the given one.
+   *
+   * @param {Euler} euler - The Euler instance to test for equality.
+   * @return {boolean} Whether this Euler instance is equal with the given one.
+   */
+  equals(euler) {
+    return euler._x === this._x && euler._y === this._y && euler._z === this._z && euler._order === this._order;
+  }
+  /**
+   * Sets this Euler instance's components to values from the given array. The first three
+   * entries of the array are assign to the x,y and z components. An optional fourth entry
+   * defines the Euler order.
+   *
+   * @param {Array<number,number,number,?string>} array - An array holding the Euler component values.
+   * @return {Euler} A reference to this Euler instance.
+   */
+  fromArray(array) {
+    this._x = array[0];
+    this._y = array[1];
+    this._z = array[2];
+    if (array[3] !== void 0) this._order = array[3];
+    this._onChangeCallback();
+    return this;
+  }
+  /**
+   * Writes the components of this Euler instance to the given array. If no array is provided,
+   * the method returns a new instance.
+   *
+   * @param {Array<number,number,number,string>} [array=[]] - The target array holding the Euler components.
+   * @param {number} [offset=0] - Index of the first element in the array.
+   * @return {Array<number,number,number,string>} The Euler components.
+   */
+  toArray(array = [], offset = 0) {
+    array[offset] = this._x;
+    array[offset + 1] = this._y;
+    array[offset + 2] = this._z;
+    array[offset + 3] = this._order;
+    return array;
+  }
+  _onChange(callback) {
+    this._onChangeCallback = callback;
+    return this;
+  }
+  _onChangeCallback() {
+  }
+  *[Symbol.iterator]() {
+    yield this._x;
+    yield this._y;
+    yield this._z;
+    yield this._order;
+  }
+}
+Euler.DEFAULT_ORDER = "XYZ";
+class Layers {
+  /**
+   * Constructs a new layers instance, with membership
+   * initially set to layer `0`.
+   */
+  constructor() {
+    this.mask = 1 | 0;
+  }
+  /**
+   * Sets membership to the given layer, and remove membership all other layers.
+   *
+   * @param {number} layer - The layer to set.
+   */
+  set(layer) {
+    this.mask = (1 << layer | 0) >>> 0;
+  }
+  /**
+   * Adds membership of the given layer.
+   *
+   * @param {number} layer - The layer to enable.
+   */
+  enable(layer) {
+    this.mask |= 1 << layer | 0;
+  }
+  /**
+   * Adds membership to all layers.
+   */
+  enableAll() {
+    this.mask = 4294967295 | 0;
+  }
+  /**
+   * Toggles the membership of the given layer.
+   *
+   * @param {number} layer - The layer to toggle.
+   */
+  toggle(layer) {
+    this.mask ^= 1 << layer | 0;
+  }
+  /**
+   * Removes membership of the given layer.
+   *
+   * @param {number} layer - The layer to enable.
+   */
+  disable(layer) {
+    this.mask &= ~(1 << layer | 0);
+  }
+  /**
+   * Removes the membership from all layers.
+   */
+  disableAll() {
+    this.mask = 0;
+  }
+  /**
+   * Returns `true` if this and the given layers object have at least one
+   * layer in common.
+   *
+   * @param {Layers} layers - The layers to test.
+   * @return {boolean } Whether this and the given layers object have at least one layer in common or not.
+   */
+  test(layers) {
+    return (this.mask & layers.mask) !== 0;
+  }
+  /**
+   * Returns `true` if the given layer is enabled.
+   *
+   * @param {number} layer - The layer to test.
+   * @return {boolean } Whether the given layer is enabled or not.
+   */
+  isEnabled(layer) {
+    return (this.mask & (1 << layer | 0)) !== 0;
+  }
+}
+let _object3DId = 0;
+const _v1$6 = /* @__PURE__ */ new Vector3();
+const _q1 = /* @__PURE__ */ new Quaternion();
+const _m1$1 = /* @__PURE__ */ new Matrix4();
+const _target = /* @__PURE__ */ new Vector3();
+const _position$4 = /* @__PURE__ */ new Vector3();
+const _scale$3 = /* @__PURE__ */ new Vector3();
+const _quaternion$3 = /* @__PURE__ */ new Quaternion();
+const _xAxis = /* @__PURE__ */ new Vector3(1, 0, 0);
+const _yAxis = /* @__PURE__ */ new Vector3(0, 1, 0);
+const _zAxis = /* @__PURE__ */ new Vector3(0, 0, 1);
+const _addedEvent = { type: "added" };
+const _removedEvent = { type: "removed" };
+const _childaddedEvent = { type: "childadded", child: null };
+const _childremovedEvent = { type: "childremoved", child: null };
+class Object3D extends EventDispatcher {
+  /**
+   * Constructs a new 3D object.
+   */
+  constructor() {
+    super();
+    this.isObject3D = true;
+    Object.defineProperty(this, "id", { value: _object3DId++ });
+    this.uuid = generateUUID();
+    this.name = "";
+    this.type = "Object3D";
+    this.parent = null;
+    this.children = [];
+    this.up = Object3D.DEFAULT_UP.clone();
+    const position2 = new Vector3();
+    const rotation = new Euler();
+    const quaternion = new Quaternion();
+    const scale2 = new Vector3(1, 1, 1);
+    function onRotationChange() {
+      quaternion.setFromEuler(rotation, false);
+    }
+    function onQuaternionChange() {
+      rotation.setFromQuaternion(quaternion, void 0, false);
+    }
+    rotation._onChange(onRotationChange);
+    quaternion._onChange(onQuaternionChange);
+    Object.defineProperties(this, {
+      /**
+       * Represents the object's local position.
+       *
+       * @name Object3D#position
+       * @type {Vector3}
+       * @default (0,0,0)
+       */
+      position: {
+        configurable: true,
+        enumerable: true,
+        value: position2
+      },
+      /**
+       * Represents the object's local rotation as Euler angles, in radians.
+       *
+       * @name Object3D#rotation
+       * @type {Euler}
+       * @default (0,0,0)
+       */
+      rotation: {
+        configurable: true,
+        enumerable: true,
+        value: rotation
+      },
+      /**
+       * Represents the object's local rotation as Quaternions.
+       *
+       * @name Object3D#quaternion
+       * @type {Quaternion}
+       */
+      quaternion: {
+        configurable: true,
+        enumerable: true,
+        value: quaternion
+      },
+      /**
+       * Represents the object's local scale.
+       *
+       * @name Object3D#scale
+       * @type {Vector3}
+       * @default (1,1,1)
+       */
+      scale: {
+        configurable: true,
+        enumerable: true,
+        value: scale2
+      },
+      /**
+       * Represents the object's model-view matrix.
+       *
+       * @name Object3D#modelViewMatrix
+       * @type {Matrix4}
+       */
+      modelViewMatrix: {
+        value: new Matrix4()
+      },
+      /**
+       * Represents the object's normal matrix.
+       *
+       * @name Object3D#normalMatrix
+       * @type {Matrix3}
+       */
+      normalMatrix: {
+        value: new Matrix3()
+      }
+    });
+    this.matrix = new Matrix4();
+    this.matrixWorld = new Matrix4();
+    this.matrixAutoUpdate = Object3D.DEFAULT_MATRIX_AUTO_UPDATE;
+    this.matrixWorldAutoUpdate = Object3D.DEFAULT_MATRIX_WORLD_AUTO_UPDATE;
+    this.matrixWorldNeedsUpdate = false;
+    this.layers = new Layers();
+    this.visible = true;
+    this.castShadow = false;
+    this.receiveShadow = false;
+    this.frustumCulled = true;
+    this.renderOrder = 0;
+    this.animations = [];
+    this.customDepthMaterial = void 0;
+    this.customDistanceMaterial = void 0;
+    this.static = false;
+    this.userData = {};
+    this.pivot = null;
+  }
+  /**
+   * A callback that is executed immediately before a 3D object is rendered to a shadow map.
+   *
+   * @param {Renderer|WebGLRenderer} renderer - The renderer.
+   * @param {Object3D} object - The 3D object.
+   * @param {Camera} camera - The camera that is used to render the scene.
+   * @param {Camera} shadowCamera - The shadow camera.
+   * @param {BufferGeometry} geometry - The 3D object's geometry.
+   * @param {Material} depthMaterial - The depth material.
+   * @param {Object} group - The geometry group data.
+   */
+  onBeforeShadow() {
+  }
+  /**
+   * A callback that is executed immediately after a 3D object is rendered to a shadow map.
+   *
+   * @param {Renderer|WebGLRenderer} renderer - The renderer.
+   * @param {Object3D} object - The 3D object.
+   * @param {Camera} camera - The camera that is used to render the scene.
+   * @param {Camera} shadowCamera - The shadow camera.
+   * @param {BufferGeometry} geometry - The 3D object's geometry.
+   * @param {Material} depthMaterial - The depth material.
+   * @param {Object} group - The geometry group data.
+   */
+  onAfterShadow() {
+  }
+  /**
+   * A callback that is executed immediately before a 3D object is rendered.
+   *
+   * @param {Renderer|WebGLRenderer} renderer - The renderer.
+   * @param {Object3D} object - The 3D object.
+   * @param {Camera} camera - The camera that is used to render the scene.
+   * @param {BufferGeometry} geometry - The 3D object's geometry.
+   * @param {Material} material - The 3D object's material.
+   * @param {Object} group - The geometry group data.
+   */
+  onBeforeRender() {
+  }
+  /**
+   * A callback that is executed immediately after a 3D object is rendered.
+   *
+   * @param {Renderer|WebGLRenderer} renderer - The renderer.
+   * @param {Object3D} object - The 3D object.
+   * @param {Camera} camera - The camera that is used to render the scene.
+   * @param {BufferGeometry} geometry - The 3D object's geometry.
+   * @param {Material} material - The 3D object's material.
+   * @param {Object} group - The geometry group data.
+   */
+  onAfterRender() {
+  }
+  /**
+   * Applies the given transformation matrix to the object and updates the object's position,
+   * rotation and scale.
+   *
+   * @param {Matrix4} matrix - The transformation matrix.
+   */
+  applyMatrix4(matrix) {
+    if (this.matrixAutoUpdate) this.updateMatrix();
+    this.matrix.premultiply(matrix);
+    this.matrix.decompose(this.position, this.quaternion, this.scale);
+  }
+  /**
+   * Applies a rotation represented by given the quaternion to the 3D object.
+   *
+   * @param {Quaternion} q - The quaternion.
+   * @return {Object3D} A reference to this instance.
+   */
+  applyQuaternion(q2) {
+    this.quaternion.premultiply(q2);
+    return this;
+  }
+  /**
+   * Sets the given rotation represented as an axis/angle couple to the 3D object.
+   *
+   * @param {Vector3} axis - The (normalized) axis vector.
+   * @param {number} angle - The angle in radians.
+   */
+  setRotationFromAxisAngle(axis, angle) {
+    this.quaternion.setFromAxisAngle(axis, angle);
+  }
+  /**
+   * Sets the given rotation represented as Euler angles to the 3D object.
+   *
+   * @param {Euler} euler - The Euler angles.
+   */
+  setRotationFromEuler(euler) {
+    this.quaternion.setFromEuler(euler, true);
+  }
+  /**
+   * Sets the given rotation represented as rotation matrix to the 3D object.
+   *
+   * @param {Matrix4} m - Although a 4x4 matrix is expected, the upper 3x3 portion must be
+   * a pure rotation matrix (i.e, unscaled).
+   */
+  setRotationFromMatrix(m2) {
+    this.quaternion.setFromRotationMatrix(m2);
+  }
+  /**
+   * Sets the given rotation represented as a Quaternion to the 3D object.
+   *
+   * @param {Quaternion} q - The Quaternion
+   */
+  setRotationFromQuaternion(q2) {
+    this.quaternion.copy(q2);
+  }
+  /**
+   * Rotates the 3D object along an axis in local space.
+   *
+   * @param {Vector3} axis - The (normalized) axis vector.
+   * @param {number} angle - The angle in radians.
+   * @return {Object3D} A reference to this instance.
+   */
+  rotateOnAxis(axis, angle) {
+    _q1.setFromAxisAngle(axis, angle);
+    this.quaternion.multiply(_q1);
+    return this;
+  }
+  /**
+   * Rotates the 3D object along an axis in world space.
+   *
+   * @param {Vector3} axis - The (normalized) axis vector.
+   * @param {number} angle - The angle in radians.
+   * @return {Object3D} A reference to this instance.
+   */
+  rotateOnWorldAxis(axis, angle) {
+    _q1.setFromAxisAngle(axis, angle);
+    this.quaternion.premultiply(_q1);
+    return this;
+  }
+  /**
+   * Rotates the 3D object around its X axis in local space.
+   *
+   * @param {number} angle - The angle in radians.
+   * @return {Object3D} A reference to this instance.
+   */
+  rotateX(angle) {
+    return this.rotateOnAxis(_xAxis, angle);
+  }
+  /**
+   * Rotates the 3D object around its Y axis in local space.
+   *
+   * @param {number} angle - The angle in radians.
+   * @return {Object3D} A reference to this instance.
+   */
+  rotateY(angle) {
+    return this.rotateOnAxis(_yAxis, angle);
+  }
+  /**
+   * Rotates the 3D object around its Z axis in local space.
+   *
+   * @param {number} angle - The angle in radians.
+   * @return {Object3D} A reference to this instance.
+   */
+  rotateZ(angle) {
+    return this.rotateOnAxis(_zAxis, angle);
+  }
+  /**
+   * Translate the 3D object by a distance along the given axis in local space.
+   *
+   * @param {Vector3} axis - The (normalized) axis vector.
+   * @param {number} distance - The distance in world units.
+   * @return {Object3D} A reference to this instance.
+   */
+  translateOnAxis(axis, distance2) {
+    _v1$6.copy(axis).applyQuaternion(this.quaternion);
+    this.position.add(_v1$6.multiplyScalar(distance2));
+    return this;
+  }
+  /**
+   * Translate the 3D object by a distance along its X-axis in local space.
+   *
+   * @param {number} distance - The distance in world units.
+   * @return {Object3D} A reference to this instance.
+   */
+  translateX(distance2) {
+    return this.translateOnAxis(_xAxis, distance2);
+  }
+  /**
+   * Translate the 3D object by a distance along its Y-axis in local space.
+   *
+   * @param {number} distance - The distance in world units.
+   * @return {Object3D} A reference to this instance.
+   */
+  translateY(distance2) {
+    return this.translateOnAxis(_yAxis, distance2);
+  }
+  /**
+   * Translate the 3D object by a distance along its Z-axis in local space.
+   *
+   * @param {number} distance - The distance in world units.
+   * @return {Object3D} A reference to this instance.
+   */
+  translateZ(distance2) {
+    return this.translateOnAxis(_zAxis, distance2);
+  }
+  /**
+   * Converts the given vector from this 3D object's local space to world space.
+   *
+   * @param {Vector3} vector - The vector to convert.
+   * @return {Vector3} The converted vector.
+   */
+  localToWorld(vector) {
+    this.updateWorldMatrix(true, false);
+    return vector.applyMatrix4(this.matrixWorld);
+  }
+  /**
+   * Converts the given vector from this 3D object's world space to local space.
+   *
+   * @param {Vector3} vector - The vector to convert.
+   * @return {Vector3} The converted vector.
+   */
+  worldToLocal(vector) {
+    this.updateWorldMatrix(true, false);
+    return vector.applyMatrix4(_m1$1.copy(this.matrixWorld).invert());
+  }
+  /**
+   * Rotates the object to face a point in world space.
+   *
+   * This method does not support objects having non-uniformly-scaled parent(s).
+   *
+   * @param {number|Vector3} x - The x coordinate in world space. Alternatively, a vector representing a position in world space
+   * @param {number} [y] - The y coordinate in world space.
+   * @param {number} [z] - The z coordinate in world space.
+   */
+  lookAt(x2, y2, z2) {
+    if (x2.isVector3) {
+      _target.copy(x2);
+    } else {
+      _target.set(x2, y2, z2);
+    }
+    const parent = this.parent;
+    this.updateWorldMatrix(true, false);
+    _position$4.setFromMatrixPosition(this.matrixWorld);
+    if (this.isCamera || this.isLight) {
+      _m1$1.lookAt(_position$4, _target, this.up);
+    } else {
+      _m1$1.lookAt(_target, _position$4, this.up);
+    }
+    this.quaternion.setFromRotationMatrix(_m1$1);
+    if (parent) {
+      _m1$1.extractRotation(parent.matrixWorld);
+      _q1.setFromRotationMatrix(_m1$1);
+      this.quaternion.premultiply(_q1.invert());
+    }
+  }
+  /**
+   * Adds the given 3D object as a child to this 3D object. An arbitrary number of
+   * objects may be added. Any current parent on an object passed in here will be
+   * removed, since an object can have at most one parent.
+   *
+   * @fires Object3D#added
+   * @fires Object3D#childadded
+   * @param {Object3D} object - The 3D object to add.
+   * @return {Object3D} A reference to this instance.
+   */
+  add(object) {
+    if (arguments.length > 1) {
+      for (let i2 = 0; i2 < arguments.length; i2++) {
+        this.add(arguments[i2]);
+      }
+      return this;
+    }
+    if (object === this) {
+      error("Object3D.add: object can't be added as a child of itself.", object);
+      return this;
+    }
+    if (object && object.isObject3D) {
+      object.removeFromParent();
+      object.parent = this;
+      this.children.push(object);
+      object.dispatchEvent(_addedEvent);
+      _childaddedEvent.child = object;
+      this.dispatchEvent(_childaddedEvent);
+      _childaddedEvent.child = null;
+    } else {
+      error("Object3D.add: object not an instance of THREE.Object3D.", object);
+    }
+    return this;
+  }
+  /**
+   * Removes the given 3D object as child from this 3D object.
+   * An arbitrary number of objects may be removed.
+   *
+   * @fires Object3D#removed
+   * @fires Object3D#childremoved
+   * @param {Object3D} object - The 3D object to remove.
+   * @return {Object3D} A reference to this instance.
+   */
+  remove(object) {
+    if (arguments.length > 1) {
+      for (let i2 = 0; i2 < arguments.length; i2++) {
+        this.remove(arguments[i2]);
+      }
+      return this;
+    }
+    const index2 = this.children.indexOf(object);
+    if (index2 !== -1) {
+      object.parent = null;
+      this.children.splice(index2, 1);
+      object.dispatchEvent(_removedEvent);
+      _childremovedEvent.child = object;
+      this.dispatchEvent(_childremovedEvent);
+      _childremovedEvent.child = null;
+    }
+    return this;
+  }
+  /**
+   * Removes this 3D object from its current parent.
+   *
+   * @fires Object3D#removed
+   * @fires Object3D#childremoved
+   * @return {Object3D} A reference to this instance.
+   */
+  removeFromParent() {
+    const parent = this.parent;
+    if (parent !== null) {
+      parent.remove(this);
+    }
+    return this;
+  }
+  /**
+   * Removes all child objects.
+   *
+   * @fires Object3D#removed
+   * @fires Object3D#childremoved
+   * @return {Object3D} A reference to this instance.
+   */
+  clear() {
+    return this.remove(...this.children);
+  }
+  /**
+   * Adds the given 3D object as a child of this 3D object, while maintaining the object's world
+   * transform. This method does not support scene graphs having non-uniformly-scaled nodes(s).
+   *
+   * @fires Object3D#added
+   * @fires Object3D#childadded
+   * @param {Object3D} object - The 3D object to attach.
+   * @return {Object3D} A reference to this instance.
+   */
+  attach(object) {
+    this.updateWorldMatrix(true, false);
+    _m1$1.copy(this.matrixWorld).invert();
+    if (object.parent !== null) {
+      object.parent.updateWorldMatrix(true, false);
+      _m1$1.multiply(object.parent.matrixWorld);
+    }
+    object.applyMatrix4(_m1$1);
+    object.removeFromParent();
+    object.parent = this;
+    this.children.push(object);
+    object.updateWorldMatrix(false, true);
+    object.dispatchEvent(_addedEvent);
+    _childaddedEvent.child = object;
+    this.dispatchEvent(_childaddedEvent);
+    _childaddedEvent.child = null;
+    return this;
+  }
+  /**
+   * Searches through the 3D object and its children, starting with the 3D object
+   * itself, and returns the first with a matching ID.
+   *
+   * @param {number} id - The id.
+   * @return {Object3D|undefined} The found 3D object. Returns `undefined` if no 3D object has been found.
+   */
+  getObjectById(id2) {
+    return this.getObjectByProperty("id", id2);
+  }
+  /**
+   * Searches through the 3D object and its children, starting with the 3D object
+   * itself, and returns the first with a matching name.
+   *
+   * @param {string} name - The name.
+   * @return {Object3D|undefined} The found 3D object. Returns `undefined` if no 3D object has been found.
+   */
+  getObjectByName(name2) {
+    return this.getObjectByProperty("name", name2);
+  }
+  /**
+   * Searches through the 3D object and its children, starting with the 3D object
+   * itself, and returns the first with a matching property value.
+   *
+   * @param {string} name - The name of the property.
+   * @param {any} value - The value.
+   * @return {Object3D|undefined} The found 3D object. Returns `undefined` if no 3D object has been found.
+   */
+  getObjectByProperty(name2, value) {
+    if (this[name2] === value) return this;
+    for (let i2 = 0, l2 = this.children.length; i2 < l2; i2++) {
+      const child = this.children[i2];
+      const object = child.getObjectByProperty(name2, value);
+      if (object !== void 0) {
+        return object;
+      }
+    }
+    return void 0;
+  }
+  /**
+   * Searches through the 3D object and its children, starting with the 3D object
+   * itself, and returns all 3D objects with a matching property value.
+   *
+   * @param {string} name - The name of the property.
+   * @param {any} value - The value.
+   * @param {Array<Object3D>} result - The method stores the result in this array.
+   * @return {Array<Object3D>} The found 3D objects.
+   */
+  getObjectsByProperty(name2, value, result = []) {
+    if (this[name2] === value) result.push(this);
+    const children = this.children;
+    for (let i2 = 0, l2 = children.length; i2 < l2; i2++) {
+      children[i2].getObjectsByProperty(name2, value, result);
+    }
+    return result;
+  }
+  /**
+   * Returns a vector representing the position of the 3D object in world space.
+   *
+   * @param {Vector3} target - The target vector the result is stored to.
+   * @return {Vector3} The 3D object's position in world space.
+   */
+  getWorldPosition(target) {
+    this.updateWorldMatrix(true, false);
+    return target.setFromMatrixPosition(this.matrixWorld);
+  }
+  /**
+   * Returns a Quaternion representing the position of the 3D object in world space.
+   *
+   * @param {Quaternion} target - The target Quaternion the result is stored to.
+   * @return {Quaternion} The 3D object's rotation in world space.
+   */
+  getWorldQuaternion(target) {
+    this.updateWorldMatrix(true, false);
+    this.matrixWorld.decompose(_position$4, target, _scale$3);
+    return target;
+  }
+  /**
+   * Returns a vector representing the scale of the 3D object in world space.
+   *
+   * @param {Vector3} target - The target vector the result is stored to.
+   * @return {Vector3} The 3D object's scale in world space.
+   */
+  getWorldScale(target) {
+    this.updateWorldMatrix(true, false);
+    this.matrixWorld.decompose(_position$4, _quaternion$3, target);
+    return target;
+  }
+  /**
+   * Returns a vector representing the ("look") direction of the 3D object in world space.
+   *
+   * @param {Vector3} target - The target vector the result is stored to.
+   * @return {Vector3} The 3D object's direction in world space.
+   */
+  getWorldDirection(target) {
+    this.updateWorldMatrix(true, false);
+    const e2 = this.matrixWorld.elements;
+    return target.set(e2[8], e2[9], e2[10]).normalize();
+  }
+  /**
+   * Abstract method to get intersections between a casted ray and this
+   * 3D object. Renderable 3D objects such as {@link Mesh}, {@link Line} or {@link Points}
+   * implement this method in order to use raycasting.
+   *
+   * @abstract
+   * @param {Raycaster} raycaster - The raycaster.
+   * @param {Array<Object>} intersects - An array holding the result of the method.
+   */
+  raycast() {
+  }
+  /**
+   * Executes the callback on this 3D object and all descendants.
+   *
+   * Note: Modifying the scene graph inside the callback is discouraged.
+   *
+   * @param {Function} callback - A callback function that allows to process the current 3D object.
+   */
+  traverse(callback) {
+    callback(this);
+    const children = this.children;
+    for (let i2 = 0, l2 = children.length; i2 < l2; i2++) {
+      children[i2].traverse(callback);
+    }
+  }
+  /**
+   * Like {@link Object3D#traverse}, but the callback will only be executed for visible 3D objects.
+   * Descendants of invisible 3D objects are not traversed.
+   *
+   * Note: Modifying the scene graph inside the callback is discouraged.
+   *
+   * @param {Function} callback - A callback function that allows to process the current 3D object.
+   */
+  traverseVisible(callback) {
+    if (this.visible === false) return;
+    callback(this);
+    const children = this.children;
+    for (let i2 = 0, l2 = children.length; i2 < l2; i2++) {
+      children[i2].traverseVisible(callback);
+    }
+  }
+  /**
+   * Like {@link Object3D#traverse}, but the callback will only be executed for all ancestors.
+   *
+   * Note: Modifying the scene graph inside the callback is discouraged.
+   *
+   * @param {Function} callback - A callback function that allows to process the current 3D object.
+   */
+  traverseAncestors(callback) {
+    const parent = this.parent;
+    if (parent !== null) {
+      callback(parent);
+      parent.traverseAncestors(callback);
+    }
+  }
+  /**
+   * Updates the transformation matrix in local space by computing it from the current
+   * position, rotation and scale values.
+   */
+  updateMatrix() {
+    this.matrix.compose(this.position, this.quaternion, this.scale);
+    const pivot = this.pivot;
+    if (pivot !== null) {
+      const px2 = pivot.x, py = pivot.y, pz = pivot.z;
+      const te2 = this.matrix.elements;
+      te2[12] += px2 - te2[0] * px2 - te2[4] * py - te2[8] * pz;
+      te2[13] += py - te2[1] * px2 - te2[5] * py - te2[9] * pz;
+      te2[14] += pz - te2[2] * px2 - te2[6] * py - te2[10] * pz;
+    }
+    this.matrixWorldNeedsUpdate = true;
+  }
+  /**
+   * Updates the transformation matrix in world space of this 3D objects and its descendants.
+   *
+   * To ensure correct results, this method also recomputes the 3D object's transformation matrix in
+   * local space. The computation of the local and world matrix can be controlled with the
+   * {@link Object3D#matrixAutoUpdate} and {@link Object3D#matrixWorldAutoUpdate} flags which are both
+   * `true` by default.  Set these flags to `false` if you need more control over the update matrix process.
+   *
+   * @param {boolean} [force=false] - When set to `true`, a recomputation of world matrices is forced even
+   * when {@link Object3D#matrixWorldNeedsUpdate} is `false`.
+   */
+  updateMatrixWorld(force) {
+    if (this.matrixAutoUpdate) this.updateMatrix();
+    if (this.matrixWorldNeedsUpdate || force) {
+      if (this.matrixWorldAutoUpdate === true) {
+        if (this.parent === null) {
+          this.matrixWorld.copy(this.matrix);
+        } else {
+          this.matrixWorld.multiplyMatrices(this.parent.matrixWorld, this.matrix);
+        }
+      }
+      this.matrixWorldNeedsUpdate = false;
+      force = true;
+    }
+    const children = this.children;
+    for (let i2 = 0, l2 = children.length; i2 < l2; i2++) {
+      const child = children[i2];
+      child.updateMatrixWorld(force);
+    }
+  }
+  /**
+   * An alternative version of {@link Object3D#updateMatrixWorld} with more control over the
+   * update of ancestor and descendant nodes.
+   *
+   * @param {boolean} [updateParents=false] Whether ancestor nodes should be updated or not.
+   * @param {boolean} [updateChildren=false] Whether descendant nodes should be updated or not.
+   */
+  updateWorldMatrix(updateParents, updateChildren) {
+    const parent = this.parent;
+    if (updateParents === true && parent !== null) {
+      parent.updateWorldMatrix(true, false);
+    }
+    if (this.matrixAutoUpdate) this.updateMatrix();
+    if (this.matrixWorldAutoUpdate === true) {
+      if (this.parent === null) {
+        this.matrixWorld.copy(this.matrix);
+      } else {
+        this.matrixWorld.multiplyMatrices(this.parent.matrixWorld, this.matrix);
+      }
+    }
+    if (updateChildren === true) {
+      const children = this.children;
+      for (let i2 = 0, l2 = children.length; i2 < l2; i2++) {
+        const child = children[i2];
+        child.updateWorldMatrix(false, true);
+      }
+    }
+  }
+  /**
+   * Serializes the 3D object into JSON.
+   *
+   * @param {?(Object|string)} meta - An optional value holding meta information about the serialization.
+   * @return {Object} A JSON object representing the serialized 3D object.
+   * @see {@link ObjectLoader#parse}
+   */
+  toJSON(meta) {
+    const isRootObject = meta === void 0 || typeof meta === "string";
+    const output = {};
+    if (isRootObject) {
+      meta = {
+        geometries: {},
+        materials: {},
+        textures: {},
+        images: {},
+        shapes: {},
+        skeletons: {},
+        animations: {},
+        nodes: {}
+      };
+      output.metadata = {
+        version: 4.7,
+        type: "Object",
+        generator: "Object3D.toJSON"
+      };
+    }
+    const object = {};
+    object.uuid = this.uuid;
+    object.type = this.type;
+    if (this.name !== "") object.name = this.name;
+    if (this.castShadow === true) object.castShadow = true;
+    if (this.receiveShadow === true) object.receiveShadow = true;
+    if (this.visible === false) object.visible = false;
+    if (this.frustumCulled === false) object.frustumCulled = false;
+    if (this.renderOrder !== 0) object.renderOrder = this.renderOrder;
+    if (this.static !== false) object.static = this.static;
+    if (Object.keys(this.userData).length > 0) object.userData = this.userData;
+    object.layers = this.layers.mask;
+    object.matrix = this.matrix.toArray();
+    object.up = this.up.toArray();
+    if (this.pivot !== null) object.pivot = this.pivot.toArray();
+    if (this.matrixAutoUpdate === false) object.matrixAutoUpdate = false;
+    if (this.morphTargetDictionary !== void 0) object.morphTargetDictionary = Object.assign({}, this.morphTargetDictionary);
+    if (this.morphTargetInfluences !== void 0) object.morphTargetInfluences = this.morphTargetInfluences.slice();
+    if (this.isInstancedMesh) {
+      object.type = "InstancedMesh";
+      object.count = this.count;
+      object.instanceMatrix = this.instanceMatrix.toJSON();
+      if (this.instanceColor !== null) object.instanceColor = this.instanceColor.toJSON();
+    }
+    if (this.isBatchedMesh) {
+      object.type = "BatchedMesh";
+      object.perObjectFrustumCulled = this.perObjectFrustumCulled;
+      object.sortObjects = this.sortObjects;
+      object.drawRanges = this._drawRanges;
+      object.reservedRanges = this._reservedRanges;
+      object.geometryInfo = this._geometryInfo.map((info2) => ({
+        ...info2,
+        boundingBox: info2.boundingBox ? info2.boundingBox.toJSON() : void 0,
+        boundingSphere: info2.boundingSphere ? info2.boundingSphere.toJSON() : void 0
+      }));
+      object.instanceInfo = this._instanceInfo.map((info2) => ({ ...info2 }));
+      object.availableInstanceIds = this._availableInstanceIds.slice();
+      object.availableGeometryIds = this._availableGeometryIds.slice();
+      object.nextIndexStart = this._nextIndexStart;
+      object.nextVertexStart = this._nextVertexStart;
+      object.geometryCount = this._geometryCount;
+      object.maxInstanceCount = this._maxInstanceCount;
+      object.maxVertexCount = this._maxVertexCount;
+      object.maxIndexCount = this._maxIndexCount;
+      object.geometryInitialized = this._geometryInitialized;
+      object.matricesTexture = this._matricesTexture.toJSON(meta);
+      object.indirectTexture = this._indirectTexture.toJSON(meta);
+      if (this._colorsTexture !== null) {
+        object.colorsTexture = this._colorsTexture.toJSON(meta);
+      }
+      if (this.boundingSphere !== null) {
+        object.boundingSphere = this.boundingSphere.toJSON();
+      }
+      if (this.boundingBox !== null) {
+        object.boundingBox = this.boundingBox.toJSON();
+      }
+    }
+    function serialize2(library, element2) {
+      if (library[element2.uuid] === void 0) {
+        library[element2.uuid] = element2.toJSON(meta);
+      }
+      return element2.uuid;
+    }
+    if (this.isScene) {
+      if (this.background) {
+        if (this.background.isColor) {
+          object.background = this.background.toJSON();
+        } else if (this.background.isTexture) {
+          object.background = this.background.toJSON(meta).uuid;
+        }
+      }
+      if (this.environment && this.environment.isTexture && this.environment.isRenderTargetTexture !== true) {
+        object.environment = this.environment.toJSON(meta).uuid;
+      }
+    } else if (this.isMesh || this.isLine || this.isPoints) {
+      object.geometry = serialize2(meta.geometries, this.geometry);
+      const parameters = this.geometry.parameters;
+      if (parameters !== void 0 && parameters.shapes !== void 0) {
+        const shapes = parameters.shapes;
+        if (Array.isArray(shapes)) {
+          for (let i2 = 0, l2 = shapes.length; i2 < l2; i2++) {
+            const shape = shapes[i2];
+            serialize2(meta.shapes, shape);
+          }
+        } else {
+          serialize2(meta.shapes, shapes);
+        }
+      }
+    }
+    if (this.isSkinnedMesh) {
+      object.bindMode = this.bindMode;
+      object.bindMatrix = this.bindMatrix.toArray();
+      if (this.skeleton !== void 0) {
+        serialize2(meta.skeletons, this.skeleton);
+        object.skeleton = this.skeleton.uuid;
+      }
+    }
+    if (this.material !== void 0) {
+      if (Array.isArray(this.material)) {
+        const uuids = [];
+        for (let i2 = 0, l2 = this.material.length; i2 < l2; i2++) {
+          uuids.push(serialize2(meta.materials, this.material[i2]));
+        }
+        object.material = uuids;
+      } else {
+        object.material = serialize2(meta.materials, this.material);
+      }
+    }
+    if (this.children.length > 0) {
+      object.children = [];
+      for (let i2 = 0; i2 < this.children.length; i2++) {
+        object.children.push(this.children[i2].toJSON(meta).object);
+      }
+    }
+    if (this.animations.length > 0) {
+      object.animations = [];
+      for (let i2 = 0; i2 < this.animations.length; i2++) {
+        const animation = this.animations[i2];
+        object.animations.push(serialize2(meta.animations, animation));
+      }
+    }
+    if (isRootObject) {
+      const geometries = extractFromCache(meta.geometries);
+      const materials = extractFromCache(meta.materials);
+      const textures = extractFromCache(meta.textures);
+      const images = extractFromCache(meta.images);
+      const shapes = extractFromCache(meta.shapes);
+      const skeletons = extractFromCache(meta.skeletons);
+      const animations2 = extractFromCache(meta.animations);
+      const nodes = extractFromCache(meta.nodes);
+      if (geometries.length > 0) output.geometries = geometries;
+      if (materials.length > 0) output.materials = materials;
+      if (textures.length > 0) output.textures = textures;
+      if (images.length > 0) output.images = images;
+      if (shapes.length > 0) output.shapes = shapes;
+      if (skeletons.length > 0) output.skeletons = skeletons;
+      if (animations2.length > 0) output.animations = animations2;
+      if (nodes.length > 0) output.nodes = nodes;
+    }
+    output.object = object;
+    return output;
+    function extractFromCache(cache) {
+      const values = [];
+      for (const key in cache) {
+        const data = cache[key];
+        delete data.metadata;
+        values.push(data);
+      }
+      return values;
+    }
+  }
+  /**
+   * Returns a new 3D object with copied values from this instance.
+   *
+   * @param {boolean} [recursive=true] - When set to `true`, descendants of the 3D object are also cloned.
+   * @return {Object3D} A clone of this instance.
+   */
+  clone(recursive) {
+    return new this.constructor().copy(this, recursive);
+  }
+  /**
+   * Copies the values of the given 3D object to this instance.
+   *
+   * @param {Object3D} source - The 3D object to copy.
+   * @param {boolean} [recursive=true] - When set to `true`, descendants of the 3D object are cloned.
+   * @return {Object3D} A reference to this instance.
+   */
+  copy(source, recursive = true) {
+    this.name = source.name;
+    this.up.copy(source.up);
+    this.position.copy(source.position);
+    this.rotation.order = source.rotation.order;
+    this.quaternion.copy(source.quaternion);
+    this.scale.copy(source.scale);
+    if (source.pivot !== null) {
+      this.pivot = source.pivot.clone();
+    }
+    this.matrix.copy(source.matrix);
+    this.matrixWorld.copy(source.matrixWorld);
+    this.matrixAutoUpdate = source.matrixAutoUpdate;
+    this.matrixWorldAutoUpdate = source.matrixWorldAutoUpdate;
+    this.matrixWorldNeedsUpdate = source.matrixWorldNeedsUpdate;
+    this.layers.mask = source.layers.mask;
+    this.visible = source.visible;
+    this.castShadow = source.castShadow;
+    this.receiveShadow = source.receiveShadow;
+    this.frustumCulled = source.frustumCulled;
+    this.renderOrder = source.renderOrder;
+    this.static = source.static;
+    this.animations = source.animations.slice();
+    this.userData = JSON.parse(JSON.stringify(source.userData));
+    if (recursive === true) {
+      for (let i2 = 0; i2 < source.children.length; i2++) {
+        const child = source.children[i2];
+        this.add(child.clone());
+      }
+    }
+    return this;
+  }
+}
+Object3D.DEFAULT_UP = /* @__PURE__ */ new Vector3(0, 1, 0);
+Object3D.DEFAULT_MATRIX_AUTO_UPDATE = true;
+Object3D.DEFAULT_MATRIX_WORLD_AUTO_UPDATE = true;
+const _colorKeywords = {
+  "aliceblue": 15792383,
+  "antiquewhite": 16444375,
+  "aqua": 65535,
+  "aquamarine": 8388564,
+  "azure": 15794175,
+  "beige": 16119260,
+  "bisque": 16770244,
+  "black": 0,
+  "blanchedalmond": 16772045,
+  "blue": 255,
+  "blueviolet": 9055202,
+  "brown": 10824234,
+  "burlywood": 14596231,
+  "cadetblue": 6266528,
+  "chartreuse": 8388352,
+  "chocolate": 13789470,
+  "coral": 16744272,
+  "cornflowerblue": 6591981,
+  "cornsilk": 16775388,
+  "crimson": 14423100,
+  "cyan": 65535,
+  "darkblue": 139,
+  "darkcyan": 35723,
+  "darkgoldenrod": 12092939,
+  "darkgray": 11119017,
+  "darkgreen": 25600,
+  "darkgrey": 11119017,
+  "darkkhaki": 12433259,
+  "darkmagenta": 9109643,
+  "darkolivegreen": 5597999,
+  "darkorange": 16747520,
+  "darkorchid": 10040012,
+  "darkred": 9109504,
+  "darksalmon": 15308410,
+  "darkseagreen": 9419919,
+  "darkslateblue": 4734347,
+  "darkslategray": 3100495,
+  "darkslategrey": 3100495,
+  "darkturquoise": 52945,
+  "darkviolet": 9699539,
+  "deeppink": 16716947,
+  "deepskyblue": 49151,
+  "dimgray": 6908265,
+  "dimgrey": 6908265,
+  "dodgerblue": 2003199,
+  "firebrick": 11674146,
+  "floralwhite": 16775920,
+  "forestgreen": 2263842,
+  "fuchsia": 16711935,
+  "gainsboro": 14474460,
+  "ghostwhite": 16316671,
+  "gold": 16766720,
+  "goldenrod": 14329120,
+  "gray": 8421504,
+  "green": 32768,
+  "greenyellow": 11403055,
+  "grey": 8421504,
+  "honeydew": 15794160,
+  "hotpink": 16738740,
+  "indianred": 13458524,
+  "indigo": 4915330,
+  "ivory": 16777200,
+  "khaki": 15787660,
+  "lavender": 15132410,
+  "lavenderblush": 16773365,
+  "lawngreen": 8190976,
+  "lemonchiffon": 16775885,
+  "lightblue": 11393254,
+  "lightcoral": 15761536,
+  "lightcyan": 14745599,
+  "lightgoldenrodyellow": 16448210,
+  "lightgray": 13882323,
+  "lightgreen": 9498256,
+  "lightgrey": 13882323,
+  "lightpink": 16758465,
+  "lightsalmon": 16752762,
+  "lightseagreen": 2142890,
+  "lightskyblue": 8900346,
+  "lightslategray": 7833753,
+  "lightslategrey": 7833753,
+  "lightsteelblue": 11584734,
+  "lightyellow": 16777184,
+  "lime": 65280,
+  "limegreen": 3329330,
+  "linen": 16445670,
+  "magenta": 16711935,
+  "maroon": 8388608,
+  "mediumaquamarine": 6737322,
+  "mediumblue": 205,
+  "mediumorchid": 12211667,
+  "mediumpurple": 9662683,
+  "mediumseagreen": 3978097,
+  "mediumslateblue": 8087790,
+  "mediumspringgreen": 64154,
+  "mediumturquoise": 4772300,
+  "mediumvioletred": 13047173,
+  "midnightblue": 1644912,
+  "mintcream": 16121850,
+  "mistyrose": 16770273,
+  "moccasin": 16770229,
+  "navajowhite": 16768685,
+  "navy": 128,
+  "oldlace": 16643558,
+  "olive": 8421376,
+  "olivedrab": 7048739,
+  "orange": 16753920,
+  "orangered": 16729344,
+  "orchid": 14315734,
+  "palegoldenrod": 15657130,
+  "palegreen": 10025880,
+  "paleturquoise": 11529966,
+  "palevioletred": 14381203,
+  "papayawhip": 16773077,
+  "peachpuff": 16767673,
+  "peru": 13468991,
+  "pink": 16761035,
+  "plum": 14524637,
+  "powderblue": 11591910,
+  "purple": 8388736,
+  "rebeccapurple": 6697881,
+  "red": 16711680,
+  "rosybrown": 12357519,
+  "royalblue": 4286945,
+  "saddlebrown": 9127187,
+  "salmon": 16416882,
+  "sandybrown": 16032864,
+  "seagreen": 3050327,
+  "seashell": 16774638,
+  "sienna": 10506797,
+  "silver": 12632256,
+  "skyblue": 8900331,
+  "slateblue": 6970061,
+  "slategray": 7372944,
+  "slategrey": 7372944,
+  "snow": 16775930,
+  "springgreen": 65407,
+  "steelblue": 4620980,
+  "tan": 13808780,
+  "teal": 32896,
+  "thistle": 14204888,
+  "tomato": 16737095,
+  "turquoise": 4251856,
+  "violet": 15631086,
+  "wheat": 16113331,
+  "white": 16777215,
+  "whitesmoke": 16119285,
+  "yellow": 16776960,
+  "yellowgreen": 10145074
+};
+const _hslA = { h: 0, s: 0, l: 0 };
+const _hslB = { h: 0, s: 0, l: 0 };
+function hue2rgb(p2, q2, t2) {
+  if (t2 < 0) t2 += 1;
+  if (t2 > 1) t2 -= 1;
+  if (t2 < 1 / 6) return p2 + (q2 - p2) * 6 * t2;
+  if (t2 < 1 / 2) return q2;
+  if (t2 < 2 / 3) return p2 + (q2 - p2) * 6 * (2 / 3 - t2);
+  return p2;
+}
+class Color {
+  /**
+   * Constructs a new color.
+   *
+   * Note that standard method of specifying color in three.js is with a hexadecimal triplet,
+   * and that method is used throughout the rest of the documentation.
+   *
+   * @param {(number|string|Color)} [r] - The red component of the color. If `g` and `b` are
+   * not provided, it can be hexadecimal triplet, a CSS-style string or another `Color` instance.
+   * @param {number} [g] - The green component.
+   * @param {number} [b] - The blue component.
+   */
+  constructor(r2, g2, b2) {
+    this.isColor = true;
+    this.r = 1;
+    this.g = 1;
+    this.b = 1;
+    return this.set(r2, g2, b2);
+  }
+  /**
+   * Sets the colors's components from the given values.
+   *
+   * @param {(number|string|Color)} [r] - The red component of the color. If `g` and `b` are
+   * not provided, it can be hexadecimal triplet, a CSS-style string or another `Color` instance.
+   * @param {number} [g] - The green component.
+   * @param {number} [b] - The blue component.
+   * @return {Color} A reference to this color.
+   */
+  set(r2, g2, b2) {
+    if (g2 === void 0 && b2 === void 0) {
+      const value = r2;
+      if (value && value.isColor) {
+        this.copy(value);
+      } else if (typeof value === "number") {
+        this.setHex(value);
+      } else if (typeof value === "string") {
+        this.setStyle(value);
+      }
+    } else {
+      this.setRGB(r2, g2, b2);
+    }
+    return this;
+  }
+  /**
+   * Sets the colors's components to the given scalar value.
+   *
+   * @param {number} scalar - The scalar value.
+   * @return {Color} A reference to this color.
+   */
+  setScalar(scalar) {
+    this.r = scalar;
+    this.g = scalar;
+    this.b = scalar;
+    return this;
+  }
+  /**
+   * Sets this color from a hexadecimal value.
+   *
+   * @param {number} hex - The hexadecimal value.
+   * @param {string} [colorSpace=SRGBColorSpace] - The color space.
+   * @return {Color} A reference to this color.
+   */
+  setHex(hex2, colorSpace = SRGBColorSpace) {
+    hex2 = Math.floor(hex2);
+    this.r = (hex2 >> 16 & 255) / 255;
+    this.g = (hex2 >> 8 & 255) / 255;
+    this.b = (hex2 & 255) / 255;
+    ColorManagement.colorSpaceToWorking(this, colorSpace);
+    return this;
+  }
+  /**
+   * Sets this color from RGB values.
+   *
+   * @param {number} r - Red channel value between `0.0` and `1.0`.
+   * @param {number} g - Green channel value between `0.0` and `1.0`.
+   * @param {number} b - Blue channel value between `0.0` and `1.0`.
+   * @param {string} [colorSpace=ColorManagement.workingColorSpace] - The color space.
+   * @return {Color} A reference to this color.
+   */
+  setRGB(r2, g2, b2, colorSpace = ColorManagement.workingColorSpace) {
+    this.r = r2;
+    this.g = g2;
+    this.b = b2;
+    ColorManagement.colorSpaceToWorking(this, colorSpace);
+    return this;
+  }
+  /**
+   * Sets this color from RGB values.
+   *
+   * @param {number} h - Hue value between `0.0` and `1.0`.
+   * @param {number} s - Saturation value between `0.0` and `1.0`.
+   * @param {number} l - Lightness value between `0.0` and `1.0`.
+   * @param {string} [colorSpace=ColorManagement.workingColorSpace] - The color space.
+   * @return {Color} A reference to this color.
+   */
+  setHSL(h2, s2, l2, colorSpace = ColorManagement.workingColorSpace) {
+    h2 = euclideanModulo(h2, 1);
+    s2 = clamp(s2, 0, 1);
+    l2 = clamp(l2, 0, 1);
+    if (s2 === 0) {
+      this.r = this.g = this.b = l2;
+    } else {
+      const p2 = l2 <= 0.5 ? l2 * (1 + s2) : l2 + s2 - l2 * s2;
+      const q2 = 2 * l2 - p2;
+      this.r = hue2rgb(q2, p2, h2 + 1 / 3);
+      this.g = hue2rgb(q2, p2, h2);
+      this.b = hue2rgb(q2, p2, h2 - 1 / 3);
+    }
+    ColorManagement.colorSpaceToWorking(this, colorSpace);
+    return this;
+  }
+  /**
+   * Sets this color from a CSS-style string. For example, `rgb(250, 0,0)`,
+   * `rgb(100%, 0%, 0%)`, `hsl(0, 100%, 50%)`, `#ff0000`, `#f00`, or `red` ( or
+   * any [X11 color name](https://en.wikipedia.org/wiki/X11_color_names#Color_name_chart) -
+   * all 140 color names are supported).
+   *
+   * @param {string} style - Color as a CSS-style string.
+   * @param {string} [colorSpace=SRGBColorSpace] - The color space.
+   * @return {Color} A reference to this color.
+   */
+  setStyle(style, colorSpace = SRGBColorSpace) {
+    function handleAlpha(string2) {
+      if (string2 === void 0) return;
+      if (parseFloat(string2) < 1) {
+        warn("Color: Alpha component of " + style + " will be ignored.");
+      }
+    }
+    let m2;
+    if (m2 = /^(\w+)\(([^\)]*)\)/.exec(style)) {
+      let color2;
+      const name2 = m2[1];
+      const components = m2[2];
+      switch (name2) {
+        case "rgb":
+        case "rgba":
+          if (color2 = /^\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(?:,\s*(\d*\.?\d+)\s*)?$/.exec(components)) {
+            handleAlpha(color2[4]);
+            return this.setRGB(
+              Math.min(255, parseInt(color2[1], 10)) / 255,
+              Math.min(255, parseInt(color2[2], 10)) / 255,
+              Math.min(255, parseInt(color2[3], 10)) / 255,
+              colorSpace
+            );
+          }
+          if (color2 = /^\s*(\d+)\%\s*,\s*(\d+)\%\s*,\s*(\d+)\%\s*(?:,\s*(\d*\.?\d+)\s*)?$/.exec(components)) {
+            handleAlpha(color2[4]);
+            return this.setRGB(
+              Math.min(100, parseInt(color2[1], 10)) / 100,
+              Math.min(100, parseInt(color2[2], 10)) / 100,
+              Math.min(100, parseInt(color2[3], 10)) / 100,
+              colorSpace
+            );
+          }
+          break;
+        case "hsl":
+        case "hsla":
+          if (color2 = /^\s*(\d*\.?\d+)\s*,\s*(\d*\.?\d+)\%\s*,\s*(\d*\.?\d+)\%\s*(?:,\s*(\d*\.?\d+)\s*)?$/.exec(components)) {
+            handleAlpha(color2[4]);
+            return this.setHSL(
+              parseFloat(color2[1]) / 360,
+              parseFloat(color2[2]) / 100,
+              parseFloat(color2[3]) / 100,
+              colorSpace
+            );
+          }
+          break;
+        default:
+          warn("Color: Unknown color model " + style);
+      }
+    } else if (m2 = /^\#([A-Fa-f\d]+)$/.exec(style)) {
+      const hex2 = m2[1];
+      const size = hex2.length;
+      if (size === 3) {
+        return this.setRGB(
+          parseInt(hex2.charAt(0), 16) / 15,
+          parseInt(hex2.charAt(1), 16) / 15,
+          parseInt(hex2.charAt(2), 16) / 15,
+          colorSpace
+        );
+      } else if (size === 6) {
+        return this.setHex(parseInt(hex2, 16), colorSpace);
+      } else {
+        warn("Color: Invalid hex color " + style);
+      }
+    } else if (style && style.length > 0) {
+      return this.setColorName(style, colorSpace);
+    }
+    return this;
+  }
+  /**
+   * Sets this color from a color name. Faster than {@link Color#setStyle} if
+   * you don't need the other CSS-style formats.
+   *
+   * For convenience, the list of names is exposed in `Color.NAMES` as a hash.
+   * ```js
+   * Color.NAMES.aliceblue // returns 0xF0F8FF
+   * ```
+   *
+   * @param {string} style - The color name.
+   * @param {string} [colorSpace=SRGBColorSpace] - The color space.
+   * @return {Color} A reference to this color.
+   */
+  setColorName(style, colorSpace = SRGBColorSpace) {
+    const hex2 = _colorKeywords[style.toLowerCase()];
+    if (hex2 !== void 0) {
+      this.setHex(hex2, colorSpace);
+    } else {
+      warn("Color: Unknown color " + style);
+    }
+    return this;
+  }
+  /**
+   * Returns a new color with copied values from this instance.
+   *
+   * @return {Color} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor(this.r, this.g, this.b);
+  }
+  /**
+   * Copies the values of the given color to this instance.
+   *
+   * @param {Color} color - The color to copy.
+   * @return {Color} A reference to this color.
+   */
+  copy(color2) {
+    this.r = color2.r;
+    this.g = color2.g;
+    this.b = color2.b;
+    return this;
+  }
+  /**
+   * Copies the given color into this color, and then converts this color from
+   * `SRGBColorSpace` to `LinearSRGBColorSpace`.
+   *
+   * @param {Color} color - The color to copy/convert.
+   * @return {Color} A reference to this color.
+   */
+  copySRGBToLinear(color2) {
+    this.r = SRGBToLinear(color2.r);
+    this.g = SRGBToLinear(color2.g);
+    this.b = SRGBToLinear(color2.b);
+    return this;
+  }
+  /**
+   * Copies the given color into this color, and then converts this color from
+   * `LinearSRGBColorSpace` to `SRGBColorSpace`.
+   *
+   * @param {Color} color - The color to copy/convert.
+   * @return {Color} A reference to this color.
+   */
+  copyLinearToSRGB(color2) {
+    this.r = LinearToSRGB(color2.r);
+    this.g = LinearToSRGB(color2.g);
+    this.b = LinearToSRGB(color2.b);
+    return this;
+  }
+  /**
+   * Converts this color from `SRGBColorSpace` to `LinearSRGBColorSpace`.
+   *
+   * @return {Color} A reference to this color.
+   */
+  convertSRGBToLinear() {
+    this.copySRGBToLinear(this);
+    return this;
+  }
+  /**
+   * Converts this color from `LinearSRGBColorSpace` to `SRGBColorSpace`.
+   *
+   * @return {Color} A reference to this color.
+   */
+  convertLinearToSRGB() {
+    this.copyLinearToSRGB(this);
+    return this;
+  }
+  /**
+   * Returns the hexadecimal value of this color.
+   *
+   * @param {string} [colorSpace=SRGBColorSpace] - The color space.
+   * @return {number} The hexadecimal value.
+   */
+  getHex(colorSpace = SRGBColorSpace) {
+    ColorManagement.workingToColorSpace(_color.copy(this), colorSpace);
+    return Math.round(clamp(_color.r * 255, 0, 255)) * 65536 + Math.round(clamp(_color.g * 255, 0, 255)) * 256 + Math.round(clamp(_color.b * 255, 0, 255));
+  }
+  /**
+   * Returns the hexadecimal value of this color as a string (for example, 'FFFFFF').
+   *
+   * @param {string} [colorSpace=SRGBColorSpace] - The color space.
+   * @return {string} The hexadecimal value as a string.
+   */
+  getHexString(colorSpace = SRGBColorSpace) {
+    return ("000000" + this.getHex(colorSpace).toString(16)).slice(-6);
+  }
+  /**
+   * Converts the colors RGB values into the HSL format and stores them into the
+   * given target object.
+   *
+   * @param {{h:number,s:number,l:number}} target - The target object that is used to store the method's result.
+   * @param {string} [colorSpace=ColorManagement.workingColorSpace] - The color space.
+   * @return {{h:number,s:number,l:number}} The HSL representation of this color.
+   */
+  getHSL(target, colorSpace = ColorManagement.workingColorSpace) {
+    ColorManagement.workingToColorSpace(_color.copy(this), colorSpace);
+    const r2 = _color.r, g2 = _color.g, b2 = _color.b;
+    const max = Math.max(r2, g2, b2);
+    const min = Math.min(r2, g2, b2);
+    let hue, saturation;
+    const lightness = (min + max) / 2;
+    if (min === max) {
+      hue = 0;
+      saturation = 0;
+    } else {
+      const delta = max - min;
+      saturation = lightness <= 0.5 ? delta / (max + min) : delta / (2 - max - min);
+      switch (max) {
+        case r2:
+          hue = (g2 - b2) / delta + (g2 < b2 ? 6 : 0);
+          break;
+        case g2:
+          hue = (b2 - r2) / delta + 2;
+          break;
+        case b2:
+          hue = (r2 - g2) / delta + 4;
+          break;
+      }
+      hue /= 6;
+    }
+    target.h = hue;
+    target.s = saturation;
+    target.l = lightness;
+    return target;
+  }
+  /**
+   * Returns the RGB values of this color and stores them into the given target object.
+   *
+   * @param {Color} target - The target color that is used to store the method's result.
+   * @param {string} [colorSpace=ColorManagement.workingColorSpace] - The color space.
+   * @return {Color} The RGB representation of this color.
+   */
+  getRGB(target, colorSpace = ColorManagement.workingColorSpace) {
+    ColorManagement.workingToColorSpace(_color.copy(this), colorSpace);
+    target.r = _color.r;
+    target.g = _color.g;
+    target.b = _color.b;
+    return target;
+  }
+  /**
+   * Returns the value of this color as a CSS style string. Example: `rgb(255,0,0)`.
+   *
+   * @param {string} [colorSpace=SRGBColorSpace] - The color space.
+   * @return {string} The CSS representation of this color.
+   */
+  getStyle(colorSpace = SRGBColorSpace) {
+    ColorManagement.workingToColorSpace(_color.copy(this), colorSpace);
+    const r2 = _color.r, g2 = _color.g, b2 = _color.b;
+    if (colorSpace !== SRGBColorSpace) {
+      return `color(${colorSpace} ${r2.toFixed(3)} ${g2.toFixed(3)} ${b2.toFixed(3)})`;
+    }
+    return `rgb(${Math.round(r2 * 255)},${Math.round(g2 * 255)},${Math.round(b2 * 255)})`;
+  }
+  /**
+   * Adds the given HSL values to this color's values.
+   * Internally, this converts the color's RGB values to HSL, adds HSL
+   * and then converts the color back to RGB.
+   *
+   * @param {number} h - Hue value between `0.0` and `1.0`.
+   * @param {number} s - Saturation value between `0.0` and `1.0`.
+   * @param {number} l - Lightness value between `0.0` and `1.0`.
+   * @return {Color} A reference to this color.
+   */
+  offsetHSL(h2, s2, l2) {
+    this.getHSL(_hslA);
+    return this.setHSL(_hslA.h + h2, _hslA.s + s2, _hslA.l + l2);
+  }
+  /**
+   * Adds the RGB values of the given color to the RGB values of this color.
+   *
+   * @param {Color} color - The color to add.
+   * @return {Color} A reference to this color.
+   */
+  add(color2) {
+    this.r += color2.r;
+    this.g += color2.g;
+    this.b += color2.b;
+    return this;
+  }
+  /**
+   * Adds the RGB values of the given colors and stores the result in this instance.
+   *
+   * @param {Color} color1 - The first color.
+   * @param {Color} color2 - The second color.
+   * @return {Color} A reference to this color.
+   */
+  addColors(color1, color2) {
+    this.r = color1.r + color2.r;
+    this.g = color1.g + color2.g;
+    this.b = color1.b + color2.b;
+    return this;
+  }
+  /**
+   * Adds the given scalar value to the RGB values of this color.
+   *
+   * @param {number} s - The scalar to add.
+   * @return {Color} A reference to this color.
+   */
+  addScalar(s2) {
+    this.r += s2;
+    this.g += s2;
+    this.b += s2;
+    return this;
+  }
+  /**
+   * Subtracts the RGB values of the given color from the RGB values of this color.
+   *
+   * @param {Color} color - The color to subtract.
+   * @return {Color} A reference to this color.
+   */
+  sub(color2) {
+    this.r = Math.max(0, this.r - color2.r);
+    this.g = Math.max(0, this.g - color2.g);
+    this.b = Math.max(0, this.b - color2.b);
+    return this;
+  }
+  /**
+   * Multiplies the RGB values of the given color with the RGB values of this color.
+   *
+   * @param {Color} color - The color to multiply.
+   * @return {Color} A reference to this color.
+   */
+  multiply(color2) {
+    this.r *= color2.r;
+    this.g *= color2.g;
+    this.b *= color2.b;
+    return this;
+  }
+  /**
+   * Multiplies the given scalar value with the RGB values of this color.
+   *
+   * @param {number} s - The scalar to multiply.
+   * @return {Color} A reference to this color.
+   */
+  multiplyScalar(s2) {
+    this.r *= s2;
+    this.g *= s2;
+    this.b *= s2;
+    return this;
+  }
+  /**
+   * Linearly interpolates this color's RGB values toward the RGB values of the
+   * given color. The alpha argument can be thought of as the ratio between
+   * the two colors, where `0.0` is this color and `1.0` is the first argument.
+   *
+   * @param {Color} color - The color to converge on.
+   * @param {number} alpha - The interpolation factor in the closed interval `[0,1]`.
+   * @return {Color} A reference to this color.
+   */
+  lerp(color2, alpha2) {
+    this.r += (color2.r - this.r) * alpha2;
+    this.g += (color2.g - this.g) * alpha2;
+    this.b += (color2.b - this.b) * alpha2;
+    return this;
+  }
+  /**
+   * Linearly interpolates between the given colors and stores the result in this instance.
+   * The alpha argument can be thought of as the ratio between the two colors, where `0.0`
+   * is the first and `1.0` is the second color.
+   *
+   * @param {Color} color1 - The first color.
+   * @param {Color} color2 - The second color.
+   * @param {number} alpha - The interpolation factor in the closed interval `[0,1]`.
+   * @return {Color} A reference to this color.
+   */
+  lerpColors(color1, color2, alpha2) {
+    this.r = color1.r + (color2.r - color1.r) * alpha2;
+    this.g = color1.g + (color2.g - color1.g) * alpha2;
+    this.b = color1.b + (color2.b - color1.b) * alpha2;
+    return this;
+  }
+  /**
+   * Linearly interpolates this color's HSL values toward the HSL values of the
+   * given color. It differs from {@link Color#lerp} by not interpolating straight
+   * from one color to the other, but instead going through all the hues in between
+   * those two colors. The alpha argument can be thought of as the ratio between
+   * the two colors, where 0.0 is this color and 1.0 is the first argument.
+   *
+   * @param {Color} color - The color to converge on.
+   * @param {number} alpha - The interpolation factor in the closed interval `[0,1]`.
+   * @return {Color} A reference to this color.
+   */
+  lerpHSL(color2, alpha2) {
+    this.getHSL(_hslA);
+    color2.getHSL(_hslB);
+    const h2 = lerp(_hslA.h, _hslB.h, alpha2);
+    const s2 = lerp(_hslA.s, _hslB.s, alpha2);
+    const l2 = lerp(_hslA.l, _hslB.l, alpha2);
+    this.setHSL(h2, s2, l2);
+    return this;
+  }
+  /**
+   * Sets the color's RGB components from the given 3D vector.
+   *
+   * @param {Vector3} v - The vector to set.
+   * @return {Color} A reference to this color.
+   */
+  setFromVector3(v2) {
+    this.r = v2.x;
+    this.g = v2.y;
+    this.b = v2.z;
+    return this;
+  }
+  /**
+   * Transforms this color with the given 3x3 matrix.
+   *
+   * @param {Matrix3} m - The matrix.
+   * @return {Color} A reference to this color.
+   */
+  applyMatrix3(m2) {
+    const r2 = this.r, g2 = this.g, b2 = this.b;
+    const e2 = m2.elements;
+    this.r = e2[0] * r2 + e2[3] * g2 + e2[6] * b2;
+    this.g = e2[1] * r2 + e2[4] * g2 + e2[7] * b2;
+    this.b = e2[2] * r2 + e2[5] * g2 + e2[8] * b2;
+    return this;
+  }
+  /**
+   * Returns `true` if this color is equal with the given one.
+   *
+   * @param {Color} c - The color to test for equality.
+   * @return {boolean} Whether this bounding color is equal with the given one.
+   */
+  equals(c2) {
+    return c2.r === this.r && c2.g === this.g && c2.b === this.b;
+  }
+  /**
+   * Sets this color's RGB components from the given array.
+   *
+   * @param {Array<number>} array - An array holding the RGB values.
+   * @param {number} [offset=0] - The offset into the array.
+   * @return {Color} A reference to this color.
+   */
+  fromArray(array, offset = 0) {
+    this.r = array[offset];
+    this.g = array[offset + 1];
+    this.b = array[offset + 2];
+    return this;
+  }
+  /**
+   * Writes the RGB components of this color to the given array. If no array is provided,
+   * the method returns a new instance.
+   *
+   * @param {Array<number>} [array=[]] - The target array holding the color components.
+   * @param {number} [offset=0] - Index of the first element in the array.
+   * @return {Array<number>} The color components.
+   */
+  toArray(array = [], offset = 0) {
+    array[offset] = this.r;
+    array[offset + 1] = this.g;
+    array[offset + 2] = this.b;
+    return array;
+  }
+  /**
+   * Sets the components of this color from the given buffer attribute.
+   *
+   * @param {BufferAttribute} attribute - The buffer attribute holding color data.
+   * @param {number} index - The index into the attribute.
+   * @return {Color} A reference to this color.
+   */
+  fromBufferAttribute(attribute, index2) {
+    this.r = attribute.getX(index2);
+    this.g = attribute.getY(index2);
+    this.b = attribute.getZ(index2);
+    return this;
+  }
+  /**
+   * This methods defines the serialization result of this class. Returns the color
+   * as a hexadecimal value.
+   *
+   * @return {number} The hexadecimal value.
+   */
+  toJSON() {
+    return this.getHex();
+  }
+  *[Symbol.iterator]() {
+    yield this.r;
+    yield this.g;
+    yield this.b;
+  }
+}
+const _color = /* @__PURE__ */ new Color();
+Color.NAMES = _colorKeywords;
+class Box3 {
+  /**
+   * Constructs a new bounding box.
+   *
+   * @param {Vector3} [min=(Infinity,Infinity,Infinity)] - A vector representing the lower boundary of the box.
+   * @param {Vector3} [max=(-Infinity,-Infinity,-Infinity)] - A vector representing the upper boundary of the box.
+   */
+  constructor(min = new Vector3(Infinity, Infinity, Infinity), max = new Vector3(-Infinity, -Infinity, -Infinity)) {
+    this.isBox3 = true;
+    this.min = min;
+    this.max = max;
+  }
+  /**
+   * Sets the lower and upper boundaries of this box.
+   * Please note that this method only copies the values from the given objects.
+   *
+   * @param {Vector3} min - The lower boundary of the box.
+   * @param {Vector3} max - The upper boundary of the box.
+   * @return {Box3} A reference to this bounding box.
+   */
+  set(min, max) {
+    this.min.copy(min);
+    this.max.copy(max);
+    return this;
+  }
+  /**
+   * Sets the upper and lower bounds of this box so it encloses the position data
+   * in the given array.
+   *
+   * @param {Array<number>} array - An array holding 3D position data.
+   * @return {Box3} A reference to this bounding box.
+   */
+  setFromArray(array) {
+    this.makeEmpty();
+    for (let i2 = 0, il = array.length; i2 < il; i2 += 3) {
+      this.expandByPoint(_vector$b.fromArray(array, i2));
+    }
+    return this;
+  }
+  /**
+   * Sets the upper and lower bounds of this box so it encloses the position data
+   * in the given buffer attribute.
+   *
+   * @param {BufferAttribute} attribute - A buffer attribute holding 3D position data.
+   * @return {Box3} A reference to this bounding box.
+   */
+  setFromBufferAttribute(attribute) {
+    this.makeEmpty();
+    for (let i2 = 0, il = attribute.count; i2 < il; i2++) {
+      this.expandByPoint(_vector$b.fromBufferAttribute(attribute, i2));
+    }
+    return this;
+  }
+  /**
+   * Sets the upper and lower bounds of this box so it encloses the position data
+   * in the given array.
+   *
+   * @param {Array<Vector3>} points - An array holding 3D position data as instances of {@link Vector3}.
+   * @return {Box3} A reference to this bounding box.
+   */
+  setFromPoints(points) {
+    this.makeEmpty();
+    for (let i2 = 0, il = points.length; i2 < il; i2++) {
+      this.expandByPoint(points[i2]);
+    }
+    return this;
+  }
+  /**
+   * Centers this box on the given center vector and sets this box's width, height and
+   * depth to the given size values.
+   *
+   * @param {Vector3} center - The center of the box.
+   * @param {Vector3} size - The x, y and z dimensions of the box.
+   * @return {Box3} A reference to this bounding box.
+   */
+  setFromCenterAndSize(center, size) {
+    const halfSize = _vector$b.copy(size).multiplyScalar(0.5);
+    this.min.copy(center).sub(halfSize);
+    this.max.copy(center).add(halfSize);
+    return this;
+  }
+  /**
+   * Computes the world-axis-aligned bounding box for the given 3D object
+   * (including its children), accounting for the object's, and children's,
+   * world transforms. The function may result in a larger box than strictly necessary.
+   *
+   * @param {Object3D} object - The 3D object to compute the bounding box for.
+   * @param {boolean} [precise=false] - If set to `true`, the method computes the smallest
+   * world-axis-aligned bounding box at the expense of more computation.
+   * @return {Box3} A reference to this bounding box.
+   */
+  setFromObject(object, precise = false) {
+    this.makeEmpty();
+    return this.expandByObject(object, precise);
+  }
+  /**
+   * Returns a new box with copied values from this instance.
+   *
+   * @return {Box3} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor().copy(this);
+  }
+  /**
+   * Copies the values of the given box to this instance.
+   *
+   * @param {Box3} box - The box to copy.
+   * @return {Box3} A reference to this bounding box.
+   */
+  copy(box) {
+    this.min.copy(box.min);
+    this.max.copy(box.max);
+    return this;
+  }
+  /**
+   * Makes this box empty which means in encloses a zero space in 3D.
+   *
+   * @return {Box3} A reference to this bounding box.
+   */
+  makeEmpty() {
+    this.min.x = this.min.y = this.min.z = Infinity;
+    this.max.x = this.max.y = this.max.z = -Infinity;
+    return this;
+  }
+  /**
+   * Returns true if this box includes zero points within its bounds.
+   * Note that a box with equal lower and upper bounds still includes one
+   * point, the one both bounds share.
+   *
+   * @return {boolean} Whether this box is empty or not.
+   */
+  isEmpty() {
+    return this.max.x < this.min.x || this.max.y < this.min.y || this.max.z < this.min.z;
+  }
+  /**
+   * Returns the center point of this box.
+   *
+   * @param {Vector3} target - The target vector that is used to store the method's result.
+   * @return {Vector3} The center point.
+   */
+  getCenter(target) {
+    return this.isEmpty() ? target.set(0, 0, 0) : target.addVectors(this.min, this.max).multiplyScalar(0.5);
+  }
+  /**
+   * Returns the dimensions of this box.
+   *
+   * @param {Vector3} target - The target vector that is used to store the method's result.
+   * @return {Vector3} The size.
+   */
+  getSize(target) {
+    return this.isEmpty() ? target.set(0, 0, 0) : target.subVectors(this.max, this.min);
+  }
+  /**
+   * Expands the boundaries of this box to include the given point.
+   *
+   * @param {Vector3} point - The point that should be included by the bounding box.
+   * @return {Box3} A reference to this bounding box.
+   */
+  expandByPoint(point2) {
+    this.min.min(point2);
+    this.max.max(point2);
+    return this;
+  }
+  /**
+   * Expands this box equilaterally by the given vector. The width of this
+   * box will be expanded by the x component of the vector in both
+   * directions. The height of this box will be expanded by the y component of
+   * the vector in both directions. The depth of this box will be
+   * expanded by the z component of the vector in both directions.
+   *
+   * @param {Vector3} vector - The vector that should expand the bounding box.
+   * @return {Box3} A reference to this bounding box.
+   */
+  expandByVector(vector) {
+    this.min.sub(vector);
+    this.max.add(vector);
+    return this;
+  }
+  /**
+   * Expands each dimension of the box by the given scalar. If negative, the
+   * dimensions of the box will be contracted.
+   *
+   * @param {number} scalar - The scalar value that should expand the bounding box.
+   * @return {Box3} A reference to this bounding box.
+   */
+  expandByScalar(scalar) {
+    this.min.addScalar(-scalar);
+    this.max.addScalar(scalar);
+    return this;
+  }
+  /**
+   * Expands the boundaries of this box to include the given 3D object and
+   * its children, accounting for the object's, and children's, world
+   * transforms. The function may result in a larger box than strictly
+   * necessary (unless the precise parameter is set to true).
+   *
+   * @param {Object3D} object - The 3D object that should expand the bounding box.
+   * @param {boolean} precise - If set to `true`, the method expands the bounding box
+   * as little as necessary at the expense of more computation.
+   * @return {Box3} A reference to this bounding box.
+   */
+  expandByObject(object, precise = false) {
+    object.updateWorldMatrix(false, false);
+    const geometry = object.geometry;
+    if (geometry !== void 0) {
+      const positionAttribute = geometry.getAttribute("position");
+      if (precise === true && positionAttribute !== void 0 && object.isInstancedMesh !== true) {
+        for (let i2 = 0, l2 = positionAttribute.count; i2 < l2; i2++) {
+          if (object.isMesh === true) {
+            object.getVertexPosition(i2, _vector$b);
+          } else {
+            _vector$b.fromBufferAttribute(positionAttribute, i2);
+          }
+          _vector$b.applyMatrix4(object.matrixWorld);
+          this.expandByPoint(_vector$b);
+        }
+      } else {
+        if (object.boundingBox !== void 0) {
+          if (object.boundingBox === null) {
+            object.computeBoundingBox();
+          }
+          _box$4.copy(object.boundingBox);
+        } else {
+          if (geometry.boundingBox === null) {
+            geometry.computeBoundingBox();
+          }
+          _box$4.copy(geometry.boundingBox);
+        }
+        _box$4.applyMatrix4(object.matrixWorld);
+        this.union(_box$4);
+      }
+    }
+    const children = object.children;
+    for (let i2 = 0, l2 = children.length; i2 < l2; i2++) {
+      this.expandByObject(children[i2], precise);
+    }
+    return this;
+  }
+  /**
+   * Returns `true` if the given point lies within or on the boundaries of this box.
+   *
+   * @param {Vector3} point - The point to test.
+   * @return {boolean} Whether the bounding box contains the given point or not.
+   */
+  containsPoint(point2) {
+    return point2.x >= this.min.x && point2.x <= this.max.x && point2.y >= this.min.y && point2.y <= this.max.y && point2.z >= this.min.z && point2.z <= this.max.z;
+  }
+  /**
+   * Returns `true` if this bounding box includes the entirety of the given bounding box.
+   * If this box and the given one are identical, this function also returns `true`.
+   *
+   * @param {Box3} box - The bounding box to test.
+   * @return {boolean} Whether the bounding box contains the given bounding box or not.
+   */
+  containsBox(box) {
+    return this.min.x <= box.min.x && box.max.x <= this.max.x && this.min.y <= box.min.y && box.max.y <= this.max.y && this.min.z <= box.min.z && box.max.z <= this.max.z;
+  }
+  /**
+   * Returns a point as a proportion of this box's width, height and depth.
+   *
+   * @param {Vector3} point - A point in 3D space.
+   * @param {Vector3} target - The target vector that is used to store the method's result.
+   * @return {Vector3} A point as a proportion of this box's width, height and depth.
+   */
+  getParameter(point2, target) {
+    return target.set(
+      (point2.x - this.min.x) / (this.max.x - this.min.x),
+      (point2.y - this.min.y) / (this.max.y - this.min.y),
+      (point2.z - this.min.z) / (this.max.z - this.min.z)
+    );
+  }
+  /**
+   * Returns `true` if the given bounding box intersects with this bounding box.
+   *
+   * @param {Box3} box - The bounding box to test.
+   * @return {boolean} Whether the given bounding box intersects with this bounding box.
+   */
+  intersectsBox(box) {
+    return box.max.x >= this.min.x && box.min.x <= this.max.x && box.max.y >= this.min.y && box.min.y <= this.max.y && box.max.z >= this.min.z && box.min.z <= this.max.z;
+  }
+  /**
+   * Returns `true` if the given bounding sphere intersects with this bounding box.
+   *
+   * @param {Sphere} sphere - The bounding sphere to test.
+   * @return {boolean} Whether the given bounding sphere intersects with this bounding box.
+   */
+  intersectsSphere(sphere) {
+    this.clampPoint(sphere.center, _vector$b);
+    return _vector$b.distanceToSquared(sphere.center) <= sphere.radius * sphere.radius;
+  }
+  /**
+   * Returns `true` if the given plane intersects with this bounding box.
+   *
+   * @param {Plane} plane - The plane to test.
+   * @return {boolean} Whether the given plane intersects with this bounding box.
+   */
+  intersectsPlane(plane) {
+    let min, max;
+    if (plane.normal.x > 0) {
+      min = plane.normal.x * this.min.x;
+      max = plane.normal.x * this.max.x;
+    } else {
+      min = plane.normal.x * this.max.x;
+      max = plane.normal.x * this.min.x;
+    }
+    if (plane.normal.y > 0) {
+      min += plane.normal.y * this.min.y;
+      max += plane.normal.y * this.max.y;
+    } else {
+      min += plane.normal.y * this.max.y;
+      max += plane.normal.y * this.min.y;
+    }
+    if (plane.normal.z > 0) {
+      min += plane.normal.z * this.min.z;
+      max += plane.normal.z * this.max.z;
+    } else {
+      min += plane.normal.z * this.max.z;
+      max += plane.normal.z * this.min.z;
+    }
+    return min <= -plane.constant && max >= -plane.constant;
+  }
+  /**
+   * Returns `true` if the given triangle intersects with this bounding box.
+   *
+   * @param {Triangle} triangle - The triangle to test.
+   * @return {boolean} Whether the given triangle intersects with this bounding box.
+   */
+  intersectsTriangle(triangle) {
+    if (this.isEmpty()) {
+      return false;
+    }
+    this.getCenter(_center);
+    _extents.subVectors(this.max, _center);
+    _v0$1.subVectors(triangle.a, _center);
+    _v1$4.subVectors(triangle.b, _center);
+    _v2$3.subVectors(triangle.c, _center);
+    _f0.subVectors(_v1$4, _v0$1);
+    _f1.subVectors(_v2$3, _v1$4);
+    _f2.subVectors(_v0$1, _v2$3);
+    let axes = [
+      0,
+      -_f0.z,
+      _f0.y,
+      0,
+      -_f1.z,
+      _f1.y,
+      0,
+      -_f2.z,
+      _f2.y,
+      _f0.z,
+      0,
+      -_f0.x,
+      _f1.z,
+      0,
+      -_f1.x,
+      _f2.z,
+      0,
+      -_f2.x,
+      -_f0.y,
+      _f0.x,
+      0,
+      -_f1.y,
+      _f1.x,
+      0,
+      -_f2.y,
+      _f2.x,
+      0
+    ];
+    if (!satForAxes(axes, _v0$1, _v1$4, _v2$3, _extents)) {
+      return false;
+    }
+    axes = [1, 0, 0, 0, 1, 0, 0, 0, 1];
+    if (!satForAxes(axes, _v0$1, _v1$4, _v2$3, _extents)) {
+      return false;
+    }
+    _triangleNormal.crossVectors(_f0, _f1);
+    axes = [_triangleNormal.x, _triangleNormal.y, _triangleNormal.z];
+    return satForAxes(axes, _v0$1, _v1$4, _v2$3, _extents);
+  }
+  /**
+   * Clamps the given point within the bounds of this box.
+   *
+   * @param {Vector3} point - The point to clamp.
+   * @param {Vector3} target - The target vector that is used to store the method's result.
+   * @return {Vector3} The clamped point.
+   */
+  clampPoint(point2, target) {
+    return target.copy(point2).clamp(this.min, this.max);
+  }
+  /**
+   * Returns the euclidean distance from any edge of this box to the specified point. If
+   * the given point lies inside of this box, the distance will be `0`.
+   *
+   * @param {Vector3} point - The point to compute the distance to.
+   * @return {number} The euclidean distance.
+   */
+  distanceToPoint(point2) {
+    return this.clampPoint(point2, _vector$b).distanceTo(point2);
+  }
+  /**
+   * Returns a bounding sphere that encloses this bounding box.
+   *
+   * @param {Sphere} target - The target sphere that is used to store the method's result.
+   * @return {Sphere} The bounding sphere that encloses this bounding box.
+   */
+  getBoundingSphere(target) {
+    if (this.isEmpty()) {
+      target.makeEmpty();
+    } else {
+      this.getCenter(target.center);
+      target.radius = this.getSize(_vector$b).length() * 0.5;
+    }
+    return target;
+  }
+  /**
+   * Computes the intersection of this bounding box and the given one, setting the upper
+   * bound of this box to the lesser of the two boxes' upper bounds and the
+   * lower bound of this box to the greater of the two boxes' lower bounds. If
+   * there's no overlap, makes this box empty.
+   *
+   * @param {Box3} box - The bounding box to intersect with.
+   * @return {Box3} A reference to this bounding box.
+   */
+  intersect(box) {
+    this.min.max(box.min);
+    this.max.min(box.max);
+    if (this.isEmpty()) this.makeEmpty();
+    return this;
+  }
+  /**
+   * Computes the union of this box and another and the given one, setting the upper
+   * bound of this box to the greater of the two boxes' upper bounds and the
+   * lower bound of this box to the lesser of the two boxes' lower bounds.
+   *
+   * @param {Box3} box - The bounding box that will be unioned with this instance.
+   * @return {Box3} A reference to this bounding box.
+   */
+  union(box) {
+    this.min.min(box.min);
+    this.max.max(box.max);
+    return this;
+  }
+  /**
+   * Transforms this bounding box by the given 4x4 transformation matrix.
+   *
+   * @param {Matrix4} matrix - The transformation matrix.
+   * @return {Box3} A reference to this bounding box.
+   */
+  applyMatrix4(matrix) {
+    if (this.isEmpty()) return this;
+    _points[0].set(this.min.x, this.min.y, this.min.z).applyMatrix4(matrix);
+    _points[1].set(this.min.x, this.min.y, this.max.z).applyMatrix4(matrix);
+    _points[2].set(this.min.x, this.max.y, this.min.z).applyMatrix4(matrix);
+    _points[3].set(this.min.x, this.max.y, this.max.z).applyMatrix4(matrix);
+    _points[4].set(this.max.x, this.min.y, this.min.z).applyMatrix4(matrix);
+    _points[5].set(this.max.x, this.min.y, this.max.z).applyMatrix4(matrix);
+    _points[6].set(this.max.x, this.max.y, this.min.z).applyMatrix4(matrix);
+    _points[7].set(this.max.x, this.max.y, this.max.z).applyMatrix4(matrix);
+    this.setFromPoints(_points);
+    return this;
+  }
+  /**
+   * Adds the given offset to both the upper and lower bounds of this bounding box,
+   * effectively moving it in 3D space.
+   *
+   * @param {Vector3} offset - The offset that should be used to translate the bounding box.
+   * @return {Box3} A reference to this bounding box.
+   */
+  translate(offset) {
+    this.min.add(offset);
+    this.max.add(offset);
+    return this;
+  }
+  /**
+   * Returns `true` if this bounding box is equal with the given one.
+   *
+   * @param {Box3} box - The box to test for equality.
+   * @return {boolean} Whether this bounding box is equal with the given one.
+   */
+  equals(box) {
+    return box.min.equals(this.min) && box.max.equals(this.max);
+  }
+  /**
+   * Returns a serialized structure of the bounding box.
+   *
+   * @return {Object} Serialized structure with fields representing the object state.
+   */
+  toJSON() {
+    return {
+      min: this.min.toArray(),
+      max: this.max.toArray()
+    };
+  }
+  /**
+   * Returns a serialized structure of the bounding box.
+   *
+   * @param {Object} json - The serialized json to set the box from.
+   * @return {Box3} A reference to this bounding box.
+   */
+  fromJSON(json) {
+    this.min.fromArray(json.min);
+    this.max.fromArray(json.max);
+    return this;
+  }
+}
+const _points = [
+  /* @__PURE__ */ new Vector3(),
+  /* @__PURE__ */ new Vector3(),
+  /* @__PURE__ */ new Vector3(),
+  /* @__PURE__ */ new Vector3(),
+  /* @__PURE__ */ new Vector3(),
+  /* @__PURE__ */ new Vector3(),
+  /* @__PURE__ */ new Vector3(),
+  /* @__PURE__ */ new Vector3()
+];
+const _vector$b = /* @__PURE__ */ new Vector3();
+const _box$4 = /* @__PURE__ */ new Box3();
+const _v0$1 = /* @__PURE__ */ new Vector3();
+const _v1$4 = /* @__PURE__ */ new Vector3();
+const _v2$3 = /* @__PURE__ */ new Vector3();
+const _f0 = /* @__PURE__ */ new Vector3();
+const _f1 = /* @__PURE__ */ new Vector3();
+const _f2 = /* @__PURE__ */ new Vector3();
+const _center = /* @__PURE__ */ new Vector3();
+const _extents = /* @__PURE__ */ new Vector3();
+const _triangleNormal = /* @__PURE__ */ new Vector3();
+const _testAxis = /* @__PURE__ */ new Vector3();
+function satForAxes(axes, v0, v1, v2, extents) {
+  for (let i2 = 0, j2 = axes.length - 3; i2 <= j2; i2 += 3) {
+    _testAxis.fromArray(axes, i2);
+    const r2 = extents.x * Math.abs(_testAxis.x) + extents.y * Math.abs(_testAxis.y) + extents.z * Math.abs(_testAxis.z);
+    const p0 = v0.dot(_testAxis);
+    const p1 = v1.dot(_testAxis);
+    const p2 = v2.dot(_testAxis);
+    if (Math.max(-Math.max(p0, p1, p2), Math.min(p0, p1, p2)) > r2) {
+      return false;
+    }
+  }
+  return true;
+}
+const _tables = /* @__PURE__ */ _generateTables();
+function _generateTables() {
+  const buffer = new ArrayBuffer(4);
+  const floatView = new Float32Array(buffer);
+  const uint32View = new Uint32Array(buffer);
+  const baseTable = new Uint32Array(512);
+  const shiftTable = new Uint32Array(512);
+  for (let i2 = 0; i2 < 256; ++i2) {
+    const e2 = i2 - 127;
+    if (e2 < -27) {
+      baseTable[i2] = 0;
+      baseTable[i2 | 256] = 32768;
+      shiftTable[i2] = 24;
+      shiftTable[i2 | 256] = 24;
+    } else if (e2 < -14) {
+      baseTable[i2] = 1024 >> -e2 - 14;
+      baseTable[i2 | 256] = 1024 >> -e2 - 14 | 32768;
+      shiftTable[i2] = -e2 - 1;
+      shiftTable[i2 | 256] = -e2 - 1;
+    } else if (e2 <= 15) {
+      baseTable[i2] = e2 + 15 << 10;
+      baseTable[i2 | 256] = e2 + 15 << 10 | 32768;
+      shiftTable[i2] = 13;
+      shiftTable[i2 | 256] = 13;
+    } else if (e2 < 128) {
+      baseTable[i2] = 31744;
+      baseTable[i2 | 256] = 64512;
+      shiftTable[i2] = 24;
+      shiftTable[i2 | 256] = 24;
+    } else {
+      baseTable[i2] = 31744;
+      baseTable[i2 | 256] = 64512;
+      shiftTable[i2] = 13;
+      shiftTable[i2 | 256] = 13;
+    }
+  }
+  const mantissaTable = new Uint32Array(2048);
+  const exponentTable = new Uint32Array(64);
+  const offsetTable = new Uint32Array(64);
+  for (let i2 = 1; i2 < 1024; ++i2) {
+    let m2 = i2 << 13;
+    let e2 = 0;
+    while ((m2 & 8388608) === 0) {
+      m2 <<= 1;
+      e2 -= 8388608;
+    }
+    m2 &= -8388609;
+    e2 += 947912704;
+    mantissaTable[i2] = m2 | e2;
+  }
+  for (let i2 = 1024; i2 < 2048; ++i2) {
+    mantissaTable[i2] = 939524096 + (i2 - 1024 << 13);
+  }
+  for (let i2 = 1; i2 < 31; ++i2) {
+    exponentTable[i2] = i2 << 23;
+  }
+  exponentTable[31] = 1199570944;
+  exponentTable[32] = 2147483648;
+  for (let i2 = 33; i2 < 63; ++i2) {
+    exponentTable[i2] = 2147483648 + (i2 - 32 << 23);
+  }
+  exponentTable[63] = 3347054592;
+  for (let i2 = 1; i2 < 64; ++i2) {
+    if (i2 !== 32) {
+      offsetTable[i2] = 1024;
+    }
+  }
+  return {
+    floatView,
+    uint32View,
+    baseTable,
+    shiftTable,
+    mantissaTable,
+    exponentTable,
+    offsetTable
+  };
+}
+function toHalfFloat(val) {
+  if (Math.abs(val) > 65504) warn("DataUtils.toHalfFloat(): Value out of range.");
+  val = clamp(val, -65504, 65504);
+  _tables.floatView[0] = val;
+  const f2 = _tables.uint32View[0];
+  const e2 = f2 >> 23 & 511;
+  return _tables.baseTable[e2] + ((f2 & 8388607) >> _tables.shiftTable[e2]);
+}
+function fromHalfFloat(val) {
+  const m2 = val >> 10;
+  _tables.uint32View[0] = _tables.mantissaTable[_tables.offsetTable[m2] + (val & 1023)] + _tables.exponentTable[m2];
+  return _tables.floatView[0];
+}
+class DataUtils {
+  /**
+   * Returns a half precision floating point value (FP16) from the given single
+   * precision floating point value (FP32).
+   *
+   * @param {number} val - A single precision floating point value.
+   * @return {number} The FP16 value.
+   */
+  static toHalfFloat(val) {
+    return toHalfFloat(val);
+  }
+  /**
+   * Returns a single precision floating point value (FP32) from the given half
+   * precision floating point value (FP16).
+   *
+   * @param {number} val - A half precision floating point value.
+   * @return {number} The FP32 value.
+   */
+  static fromHalfFloat(val) {
+    return fromHalfFloat(val);
+  }
+}
+const _box$3 = /* @__PURE__ */ new Box3();
+const _v1$3 = /* @__PURE__ */ new Vector3();
+const _v2$2 = /* @__PURE__ */ new Vector3();
+class Sphere {
+  /**
+   * Constructs a new sphere.
+   *
+   * @param {Vector3} [center=(0,0,0)] - The center of the sphere
+   * @param {number} [radius=-1] - The radius of the sphere.
+   */
+  constructor(center = new Vector3(), radius = -1) {
+    this.isSphere = true;
+    this.center = center;
+    this.radius = radius;
+  }
+  /**
+   * Sets the sphere's components by copying the given values.
+   *
+   * @param {Vector3} center - The center.
+   * @param {number} radius - The radius.
+   * @return {Sphere} A reference to this sphere.
+   */
+  set(center, radius) {
+    this.center.copy(center);
+    this.radius = radius;
+    return this;
+  }
+  /**
+   * Computes the minimum bounding sphere for list of points.
+   * If the optional center point is given, it is used as the sphere's
+   * center. Otherwise, the center of the axis-aligned bounding box
+   * encompassing the points is calculated.
+   *
+   * @param {Array<Vector3>} points - A list of points in 3D space.
+   * @param {Vector3} [optionalCenter] - The center of the sphere.
+   * @return {Sphere} A reference to this sphere.
+   */
+  setFromPoints(points, optionalCenter) {
+    const center = this.center;
+    if (optionalCenter !== void 0) {
+      center.copy(optionalCenter);
+    } else {
+      _box$3.setFromPoints(points).getCenter(center);
+    }
+    let maxRadiusSq = 0;
+    for (let i2 = 0, il = points.length; i2 < il; i2++) {
+      maxRadiusSq = Math.max(maxRadiusSq, center.distanceToSquared(points[i2]));
+    }
+    this.radius = Math.sqrt(maxRadiusSq);
+    return this;
+  }
+  /**
+   * Copies the values of the given sphere to this instance.
+   *
+   * @param {Sphere} sphere - The sphere to copy.
+   * @return {Sphere} A reference to this sphere.
+   */
+  copy(sphere) {
+    this.center.copy(sphere.center);
+    this.radius = sphere.radius;
+    return this;
+  }
+  /**
+   * Returns `true` if the sphere is empty (the radius set to a negative number).
+   *
+   * Spheres with a radius of `0` contain only their center point and are not
+   * considered to be empty.
+   *
+   * @return {boolean} Whether this sphere is empty or not.
+   */
+  isEmpty() {
+    return this.radius < 0;
+  }
+  /**
+   * Makes this sphere empty which means in encloses a zero space in 3D.
+   *
+   * @return {Sphere} A reference to this sphere.
+   */
+  makeEmpty() {
+    this.center.set(0, 0, 0);
+    this.radius = -1;
+    return this;
+  }
+  /**
+   * Returns `true` if this sphere contains the given point inclusive of
+   * the surface of the sphere.
+   *
+   * @param {Vector3} point - The point to check.
+   * @return {boolean} Whether this sphere contains the given point or not.
+   */
+  containsPoint(point2) {
+    return point2.distanceToSquared(this.center) <= this.radius * this.radius;
+  }
+  /**
+   * Returns the closest distance from the boundary of the sphere to the
+   * given point. If the sphere contains the point, the distance will
+   * be negative.
+   *
+   * @param {Vector3} point - The point to compute the distance to.
+   * @return {number} The distance to the point.
+   */
+  distanceToPoint(point2) {
+    return point2.distanceTo(this.center) - this.radius;
+  }
+  /**
+   * Returns `true` if this sphere intersects with the given one.
+   *
+   * @param {Sphere} sphere - The sphere to test.
+   * @return {boolean} Whether this sphere intersects with the given one or not.
+   */
+  intersectsSphere(sphere) {
+    const radiusSum = this.radius + sphere.radius;
+    return sphere.center.distanceToSquared(this.center) <= radiusSum * radiusSum;
+  }
+  /**
+   * Returns `true` if this sphere intersects with the given box.
+   *
+   * @param {Box3} box - The box to test.
+   * @return {boolean} Whether this sphere intersects with the given box or not.
+   */
+  intersectsBox(box) {
+    return box.intersectsSphere(this);
+  }
+  /**
+   * Returns `true` if this sphere intersects with the given plane.
+   *
+   * @param {Plane} plane - The plane to test.
+   * @return {boolean} Whether this sphere intersects with the given plane or not.
+   */
+  intersectsPlane(plane) {
+    return Math.abs(plane.distanceToPoint(this.center)) <= this.radius;
+  }
+  /**
+   * Clamps a point within the sphere. If the point is outside the sphere, it
+   * will clamp it to the closest point on the edge of the sphere. Points
+   * already inside the sphere will not be affected.
+   *
+   * @param {Vector3} point - The plane to clamp.
+   * @param {Vector3} target - The target vector that is used to store the method's result.
+   * @return {Vector3} The clamped point.
+   */
+  clampPoint(point2, target) {
+    const deltaLengthSq = this.center.distanceToSquared(point2);
+    target.copy(point2);
+    if (deltaLengthSq > this.radius * this.radius) {
+      target.sub(this.center).normalize();
+      target.multiplyScalar(this.radius).add(this.center);
+    }
+    return target;
+  }
+  /**
+   * Returns a bounding box that encloses this sphere.
+   *
+   * @param {Box3} target - The target box that is used to store the method's result.
+   * @return {Box3} The bounding box that encloses this sphere.
+   */
+  getBoundingBox(target) {
+    if (this.isEmpty()) {
+      target.makeEmpty();
+      return target;
+    }
+    target.set(this.center, this.center);
+    target.expandByScalar(this.radius);
+    return target;
+  }
+  /**
+   * Transforms this sphere with the given 4x4 transformation matrix.
+   *
+   * @param {Matrix4} matrix - The transformation matrix.
+   * @return {Sphere} A reference to this sphere.
+   */
+  applyMatrix4(matrix) {
+    this.center.applyMatrix4(matrix);
+    this.radius = this.radius * matrix.getMaxScaleOnAxis();
+    return this;
+  }
+  /**
+   * Translates the sphere's center by the given offset.
+   *
+   * @param {Vector3} offset - The offset.
+   * @return {Sphere} A reference to this sphere.
+   */
+  translate(offset) {
+    this.center.add(offset);
+    return this;
+  }
+  /**
+   * Expands the boundaries of this sphere to include the given point.
+   *
+   * @param {Vector3} point - The point to include.
+   * @return {Sphere} A reference to this sphere.
+   */
+  expandByPoint(point2) {
+    if (this.isEmpty()) {
+      this.center.copy(point2);
+      this.radius = 0;
+      return this;
+    }
+    _v1$3.subVectors(point2, this.center);
+    const lengthSq = _v1$3.lengthSq();
+    if (lengthSq > this.radius * this.radius) {
+      const length = Math.sqrt(lengthSq);
+      const delta = (length - this.radius) * 0.5;
+      this.center.addScaledVector(_v1$3, delta / length);
+      this.radius += delta;
+    }
+    return this;
+  }
+  /**
+   * Expands this sphere to enclose both the original sphere and the given sphere.
+   *
+   * @param {Sphere} sphere - The sphere to include.
+   * @return {Sphere} A reference to this sphere.
+   */
+  union(sphere) {
+    if (sphere.isEmpty()) {
+      return this;
+    }
+    if (this.isEmpty()) {
+      this.copy(sphere);
+      return this;
+    }
+    if (this.center.equals(sphere.center) === true) {
+      this.radius = Math.max(this.radius, sphere.radius);
+    } else {
+      _v2$2.subVectors(sphere.center, this.center).setLength(sphere.radius);
+      this.expandByPoint(_v1$3.copy(sphere.center).add(_v2$2));
+      this.expandByPoint(_v1$3.copy(sphere.center).sub(_v2$2));
+    }
+    return this;
+  }
+  /**
+   * Returns `true` if this sphere is equal with the given one.
+   *
+   * @param {Sphere} sphere - The sphere to test for equality.
+   * @return {boolean} Whether this bounding sphere is equal with the given one.
+   */
+  equals(sphere) {
+    return sphere.center.equals(this.center) && sphere.radius === this.radius;
+  }
+  /**
+   * Returns a new sphere with copied values from this instance.
+   *
+   * @return {Sphere} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor().copy(this);
+  }
+  /**
+   * Returns a serialized structure of the bounding sphere.
+   *
+   * @return {Object} Serialized structure with fields representing the object state.
+   */
+  toJSON() {
+    return {
+      radius: this.radius,
+      center: this.center.toArray()
+    };
+  }
+  /**
+   * Returns a serialized structure of the bounding sphere.
+   *
+   * @param {Object} json - The serialized json to set the sphere from.
+   * @return {Sphere} A reference to this bounding sphere.
+   */
+  fromJSON(json) {
+    this.radius = json.radius;
+    this.center.fromArray(json.center);
+    return this;
+  }
+}
+let _materialId = 0;
+class Material extends EventDispatcher {
+  /**
+   * Constructs a new material.
+   */
+  constructor() {
+    super();
+    this.isMaterial = true;
+    Object.defineProperty(this, "id", { value: _materialId++ });
+    this.uuid = generateUUID();
+    this.name = "";
+    this.type = "Material";
+    this.blending = NormalBlending;
+    this.side = FrontSide;
+    this.vertexColors = false;
+    this.opacity = 1;
+    this.transparent = false;
+    this.alphaHash = false;
+    this.blendSrc = SrcAlphaFactor;
+    this.blendDst = OneMinusSrcAlphaFactor;
+    this.blendEquation = AddEquation;
+    this.blendSrcAlpha = null;
+    this.blendDstAlpha = null;
+    this.blendEquationAlpha = null;
+    this.blendColor = new Color(0, 0, 0);
+    this.blendAlpha = 0;
+    this.depthFunc = LessEqualDepth;
+    this.depthTest = true;
+    this.depthWrite = true;
+    this.stencilWriteMask = 255;
+    this.stencilFunc = AlwaysStencilFunc;
+    this.stencilRef = 0;
+    this.stencilFuncMask = 255;
+    this.stencilFail = KeepStencilOp;
+    this.stencilZFail = KeepStencilOp;
+    this.stencilZPass = KeepStencilOp;
+    this.stencilWrite = false;
+    this.clippingPlanes = null;
+    this.clipIntersection = false;
+    this.clipShadows = false;
+    this.shadowSide = null;
+    this.colorWrite = true;
+    this.precision = null;
+    this.polygonOffset = false;
+    this.polygonOffsetFactor = 0;
+    this.polygonOffsetUnits = 0;
+    this.dithering = false;
+    this.alphaToCoverage = false;
+    this.premultipliedAlpha = false;
+    this.forceSinglePass = false;
+    this.allowOverride = true;
+    this.visible = true;
+    this.toneMapped = true;
+    this.userData = {};
+    this.version = 0;
+    this._alphaTest = 0;
+  }
+  /**
+   * Sets the alpha value to be used when running an alpha test. The material
+   * will not be rendered if the opacity is lower than this value.
+   *
+   * @type {number}
+   * @readonly
+   * @default 0
+   */
+  get alphaTest() {
+    return this._alphaTest;
+  }
+  set alphaTest(value) {
+    if (this._alphaTest > 0 !== value > 0) {
+      this.version++;
+    }
+    this._alphaTest = value;
+  }
+  /**
+   * An optional callback that is executed immediately before the material is used to render a 3D object.
+   *
+   * This method can only be used when rendering with {@link WebGLRenderer}.
+   *
+   * @param {WebGLRenderer} renderer - The renderer.
+   * @param {Scene} scene - The scene.
+   * @param {Camera} camera - The camera that is used to render the scene.
+   * @param {BufferGeometry} geometry - The 3D object's geometry.
+   * @param {Object3D} object - The 3D object.
+   * @param {Object} group - The geometry group data.
+   */
+  onBeforeRender() {
+  }
+  /**
+   * An optional callback that is executed immediately before the shader
+   * program is compiled. This function is called with the shader source code
+   * as a parameter. Useful for the modification of built-in materials.
+   *
+   * This method can only be used when rendering with {@link WebGLRenderer}. The
+   * recommended approach when customizing materials is to use `WebGPURenderer` with the new
+   * Node Material system and [TSL](https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language).
+   *
+   * @param {{vertexShader:string,fragmentShader:string,uniforms:Object}} shaderobject - The object holds the uniforms and the vertex and fragment shader source.
+   * @param {WebGLRenderer} renderer - A reference to the renderer.
+   */
+  onBeforeCompile() {
+  }
+  /**
+   * In case {@link Material#onBeforeCompile} is used, this callback can be used to identify
+   * values of settings used in `onBeforeCompile()`, so three.js can reuse a cached
+   * shader or recompile the shader for this material as needed.
+   *
+   * This method can only be used when rendering with {@link WebGLRenderer}.
+   *
+   * @return {string} The custom program cache key.
+   */
+  customProgramCacheKey() {
+    return this.onBeforeCompile.toString();
+  }
+  /**
+   * This method can be used to set default values from parameter objects.
+   * It is a generic implementation so it can be used with different types
+   * of materials.
+   *
+   * @param {Object} [values] - The material values to set.
+   */
+  setValues(values) {
+    if (values === void 0) return;
+    for (const key in values) {
+      const newValue = values[key];
+      if (newValue === void 0) {
+        warn(`Material: parameter '${key}' has value of undefined.`);
+        continue;
+      }
+      const currentValue = this[key];
+      if (currentValue === void 0) {
+        warn(`Material: '${key}' is not a property of THREE.${this.type}.`);
+        continue;
+      }
+      if (currentValue && currentValue.isColor) {
+        currentValue.set(newValue);
+      } else if (currentValue && currentValue.isVector3 && (newValue && newValue.isVector3)) {
+        currentValue.copy(newValue);
+      } else {
+        this[key] = newValue;
+      }
+    }
+  }
+  /**
+   * Serializes the material into JSON.
+   *
+   * @param {?(Object|string)} meta - An optional value holding meta information about the serialization.
+   * @return {Object} A JSON object representing the serialized material.
+   * @see {@link ObjectLoader#parse}
+   */
+  toJSON(meta) {
+    const isRootObject = meta === void 0 || typeof meta === "string";
+    if (isRootObject) {
+      meta = {
+        textures: {},
+        images: {}
+      };
+    }
+    const data = {
+      metadata: {
+        version: 4.7,
+        type: "Material",
+        generator: "Material.toJSON"
+      }
+    };
+    data.uuid = this.uuid;
+    data.type = this.type;
+    if (this.name !== "") data.name = this.name;
+    if (this.color && this.color.isColor) data.color = this.color.getHex();
+    if (this.roughness !== void 0) data.roughness = this.roughness;
+    if (this.metalness !== void 0) data.metalness = this.metalness;
+    if (this.sheen !== void 0) data.sheen = this.sheen;
+    if (this.sheenColor && this.sheenColor.isColor) data.sheenColor = this.sheenColor.getHex();
+    if (this.sheenRoughness !== void 0) data.sheenRoughness = this.sheenRoughness;
+    if (this.emissive && this.emissive.isColor) data.emissive = this.emissive.getHex();
+    if (this.emissiveIntensity !== void 0 && this.emissiveIntensity !== 1) data.emissiveIntensity = this.emissiveIntensity;
+    if (this.specular && this.specular.isColor) data.specular = this.specular.getHex();
+    if (this.specularIntensity !== void 0) data.specularIntensity = this.specularIntensity;
+    if (this.specularColor && this.specularColor.isColor) data.specularColor = this.specularColor.getHex();
+    if (this.shininess !== void 0) data.shininess = this.shininess;
+    if (this.clearcoat !== void 0) data.clearcoat = this.clearcoat;
+    if (this.clearcoatRoughness !== void 0) data.clearcoatRoughness = this.clearcoatRoughness;
+    if (this.clearcoatMap && this.clearcoatMap.isTexture) {
+      data.clearcoatMap = this.clearcoatMap.toJSON(meta).uuid;
+    }
+    if (this.clearcoatRoughnessMap && this.clearcoatRoughnessMap.isTexture) {
+      data.clearcoatRoughnessMap = this.clearcoatRoughnessMap.toJSON(meta).uuid;
+    }
+    if (this.clearcoatNormalMap && this.clearcoatNormalMap.isTexture) {
+      data.clearcoatNormalMap = this.clearcoatNormalMap.toJSON(meta).uuid;
+      data.clearcoatNormalScale = this.clearcoatNormalScale.toArray();
+    }
+    if (this.sheenColorMap && this.sheenColorMap.isTexture) {
+      data.sheenColorMap = this.sheenColorMap.toJSON(meta).uuid;
+    }
+    if (this.sheenRoughnessMap && this.sheenRoughnessMap.isTexture) {
+      data.sheenRoughnessMap = this.sheenRoughnessMap.toJSON(meta).uuid;
+    }
+    if (this.dispersion !== void 0) data.dispersion = this.dispersion;
+    if (this.iridescence !== void 0) data.iridescence = this.iridescence;
+    if (this.iridescenceIOR !== void 0) data.iridescenceIOR = this.iridescenceIOR;
+    if (this.iridescenceThicknessRange !== void 0) data.iridescenceThicknessRange = this.iridescenceThicknessRange;
+    if (this.iridescenceMap && this.iridescenceMap.isTexture) {
+      data.iridescenceMap = this.iridescenceMap.toJSON(meta).uuid;
+    }
+    if (this.iridescenceThicknessMap && this.iridescenceThicknessMap.isTexture) {
+      data.iridescenceThicknessMap = this.iridescenceThicknessMap.toJSON(meta).uuid;
+    }
+    if (this.anisotropy !== void 0) data.anisotropy = this.anisotropy;
+    if (this.anisotropyRotation !== void 0) data.anisotropyRotation = this.anisotropyRotation;
+    if (this.anisotropyMap && this.anisotropyMap.isTexture) {
+      data.anisotropyMap = this.anisotropyMap.toJSON(meta).uuid;
+    }
+    if (this.map && this.map.isTexture) data.map = this.map.toJSON(meta).uuid;
+    if (this.matcap && this.matcap.isTexture) data.matcap = this.matcap.toJSON(meta).uuid;
+    if (this.alphaMap && this.alphaMap.isTexture) data.alphaMap = this.alphaMap.toJSON(meta).uuid;
+    if (this.lightMap && this.lightMap.isTexture) {
+      data.lightMap = this.lightMap.toJSON(meta).uuid;
+      data.lightMapIntensity = this.lightMapIntensity;
+    }
+    if (this.aoMap && this.aoMap.isTexture) {
+      data.aoMap = this.aoMap.toJSON(meta).uuid;
+      data.aoMapIntensity = this.aoMapIntensity;
+    }
+    if (this.bumpMap && this.bumpMap.isTexture) {
+      data.bumpMap = this.bumpMap.toJSON(meta).uuid;
+      data.bumpScale = this.bumpScale;
+    }
+    if (this.normalMap && this.normalMap.isTexture) {
+      data.normalMap = this.normalMap.toJSON(meta).uuid;
+      data.normalMapType = this.normalMapType;
+      data.normalScale = this.normalScale.toArray();
+    }
+    if (this.displacementMap && this.displacementMap.isTexture) {
+      data.displacementMap = this.displacementMap.toJSON(meta).uuid;
+      data.displacementScale = this.displacementScale;
+      data.displacementBias = this.displacementBias;
+    }
+    if (this.roughnessMap && this.roughnessMap.isTexture) data.roughnessMap = this.roughnessMap.toJSON(meta).uuid;
+    if (this.metalnessMap && this.metalnessMap.isTexture) data.metalnessMap = this.metalnessMap.toJSON(meta).uuid;
+    if (this.emissiveMap && this.emissiveMap.isTexture) data.emissiveMap = this.emissiveMap.toJSON(meta).uuid;
+    if (this.specularMap && this.specularMap.isTexture) data.specularMap = this.specularMap.toJSON(meta).uuid;
+    if (this.specularIntensityMap && this.specularIntensityMap.isTexture) data.specularIntensityMap = this.specularIntensityMap.toJSON(meta).uuid;
+    if (this.specularColorMap && this.specularColorMap.isTexture) data.specularColorMap = this.specularColorMap.toJSON(meta).uuid;
+    if (this.envMap && this.envMap.isTexture) {
+      data.envMap = this.envMap.toJSON(meta).uuid;
+      if (this.combine !== void 0) data.combine = this.combine;
+    }
+    if (this.envMapRotation !== void 0) data.envMapRotation = this.envMapRotation.toArray();
+    if (this.envMapIntensity !== void 0) data.envMapIntensity = this.envMapIntensity;
+    if (this.reflectivity !== void 0) data.reflectivity = this.reflectivity;
+    if (this.refractionRatio !== void 0) data.refractionRatio = this.refractionRatio;
+    if (this.gradientMap && this.gradientMap.isTexture) {
+      data.gradientMap = this.gradientMap.toJSON(meta).uuid;
+    }
+    if (this.transmission !== void 0) data.transmission = this.transmission;
+    if (this.transmissionMap && this.transmissionMap.isTexture) data.transmissionMap = this.transmissionMap.toJSON(meta).uuid;
+    if (this.thickness !== void 0) data.thickness = this.thickness;
+    if (this.thicknessMap && this.thicknessMap.isTexture) data.thicknessMap = this.thicknessMap.toJSON(meta).uuid;
+    if (this.attenuationDistance !== void 0 && this.attenuationDistance !== Infinity) data.attenuationDistance = this.attenuationDistance;
+    if (this.attenuationColor !== void 0) data.attenuationColor = this.attenuationColor.getHex();
+    if (this.size !== void 0) data.size = this.size;
+    if (this.shadowSide !== null) data.shadowSide = this.shadowSide;
+    if (this.sizeAttenuation !== void 0) data.sizeAttenuation = this.sizeAttenuation;
+    if (this.blending !== NormalBlending) data.blending = this.blending;
+    if (this.side !== FrontSide) data.side = this.side;
+    if (this.vertexColors === true) data.vertexColors = true;
+    if (this.opacity < 1) data.opacity = this.opacity;
+    if (this.transparent === true) data.transparent = true;
+    if (this.blendSrc !== SrcAlphaFactor) data.blendSrc = this.blendSrc;
+    if (this.blendDst !== OneMinusSrcAlphaFactor) data.blendDst = this.blendDst;
+    if (this.blendEquation !== AddEquation) data.blendEquation = this.blendEquation;
+    if (this.blendSrcAlpha !== null) data.blendSrcAlpha = this.blendSrcAlpha;
+    if (this.blendDstAlpha !== null) data.blendDstAlpha = this.blendDstAlpha;
+    if (this.blendEquationAlpha !== null) data.blendEquationAlpha = this.blendEquationAlpha;
+    if (this.blendColor && this.blendColor.isColor) data.blendColor = this.blendColor.getHex();
+    if (this.blendAlpha !== 0) data.blendAlpha = this.blendAlpha;
+    if (this.depthFunc !== LessEqualDepth) data.depthFunc = this.depthFunc;
+    if (this.depthTest === false) data.depthTest = this.depthTest;
+    if (this.depthWrite === false) data.depthWrite = this.depthWrite;
+    if (this.colorWrite === false) data.colorWrite = this.colorWrite;
+    if (this.stencilWriteMask !== 255) data.stencilWriteMask = this.stencilWriteMask;
+    if (this.stencilFunc !== AlwaysStencilFunc) data.stencilFunc = this.stencilFunc;
+    if (this.stencilRef !== 0) data.stencilRef = this.stencilRef;
+    if (this.stencilFuncMask !== 255) data.stencilFuncMask = this.stencilFuncMask;
+    if (this.stencilFail !== KeepStencilOp) data.stencilFail = this.stencilFail;
+    if (this.stencilZFail !== KeepStencilOp) data.stencilZFail = this.stencilZFail;
+    if (this.stencilZPass !== KeepStencilOp) data.stencilZPass = this.stencilZPass;
+    if (this.stencilWrite === true) data.stencilWrite = this.stencilWrite;
+    if (this.rotation !== void 0 && this.rotation !== 0) data.rotation = this.rotation;
+    if (this.polygonOffset === true) data.polygonOffset = true;
+    if (this.polygonOffsetFactor !== 0) data.polygonOffsetFactor = this.polygonOffsetFactor;
+    if (this.polygonOffsetUnits !== 0) data.polygonOffsetUnits = this.polygonOffsetUnits;
+    if (this.linewidth !== void 0 && this.linewidth !== 1) data.linewidth = this.linewidth;
+    if (this.dashSize !== void 0) data.dashSize = this.dashSize;
+    if (this.gapSize !== void 0) data.gapSize = this.gapSize;
+    if (this.scale !== void 0) data.scale = this.scale;
+    if (this.dithering === true) data.dithering = true;
+    if (this.alphaTest > 0) data.alphaTest = this.alphaTest;
+    if (this.alphaHash === true) data.alphaHash = true;
+    if (this.alphaToCoverage === true) data.alphaToCoverage = true;
+    if (this.premultipliedAlpha === true) data.premultipliedAlpha = true;
+    if (this.forceSinglePass === true) data.forceSinglePass = true;
+    if (this.allowOverride === false) data.allowOverride = false;
+    if (this.wireframe === true) data.wireframe = true;
+    if (this.wireframeLinewidth > 1) data.wireframeLinewidth = this.wireframeLinewidth;
+    if (this.wireframeLinecap !== "round") data.wireframeLinecap = this.wireframeLinecap;
+    if (this.wireframeLinejoin !== "round") data.wireframeLinejoin = this.wireframeLinejoin;
+    if (this.flatShading === true) data.flatShading = true;
+    if (this.visible === false) data.visible = false;
+    if (this.toneMapped === false) data.toneMapped = false;
+    if (this.fog === false) data.fog = false;
+    if (Object.keys(this.userData).length > 0) data.userData = this.userData;
+    function extractFromCache(cache) {
+      const values = [];
+      for (const key in cache) {
+        const data2 = cache[key];
+        delete data2.metadata;
+        values.push(data2);
+      }
+      return values;
+    }
+    if (isRootObject) {
+      const textures = extractFromCache(meta.textures);
+      const images = extractFromCache(meta.images);
+      if (textures.length > 0) data.textures = textures;
+      if (images.length > 0) data.images = images;
+    }
+    return data;
+  }
+  /**
+   * Returns a new material with copied values from this instance.
+   *
+   * @return {Material} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor().copy(this);
+  }
+  /**
+   * Copies the values of the given material to this instance.
+   *
+   * @param {Material} source - The material to copy.
+   * @return {Material} A reference to this instance.
+   */
+  copy(source) {
+    this.name = source.name;
+    this.blending = source.blending;
+    this.side = source.side;
+    this.vertexColors = source.vertexColors;
+    this.opacity = source.opacity;
+    this.transparent = source.transparent;
+    this.blendSrc = source.blendSrc;
+    this.blendDst = source.blendDst;
+    this.blendEquation = source.blendEquation;
+    this.blendSrcAlpha = source.blendSrcAlpha;
+    this.blendDstAlpha = source.blendDstAlpha;
+    this.blendEquationAlpha = source.blendEquationAlpha;
+    this.blendColor.copy(source.blendColor);
+    this.blendAlpha = source.blendAlpha;
+    this.depthFunc = source.depthFunc;
+    this.depthTest = source.depthTest;
+    this.depthWrite = source.depthWrite;
+    this.stencilWriteMask = source.stencilWriteMask;
+    this.stencilFunc = source.stencilFunc;
+    this.stencilRef = source.stencilRef;
+    this.stencilFuncMask = source.stencilFuncMask;
+    this.stencilFail = source.stencilFail;
+    this.stencilZFail = source.stencilZFail;
+    this.stencilZPass = source.stencilZPass;
+    this.stencilWrite = source.stencilWrite;
+    const srcPlanes = source.clippingPlanes;
+    let dstPlanes = null;
+    if (srcPlanes !== null) {
+      const n2 = srcPlanes.length;
+      dstPlanes = new Array(n2);
+      for (let i2 = 0; i2 !== n2; ++i2) {
+        dstPlanes[i2] = srcPlanes[i2].clone();
+      }
+    }
+    this.clippingPlanes = dstPlanes;
+    this.clipIntersection = source.clipIntersection;
+    this.clipShadows = source.clipShadows;
+    this.shadowSide = source.shadowSide;
+    this.colorWrite = source.colorWrite;
+    this.precision = source.precision;
+    this.polygonOffset = source.polygonOffset;
+    this.polygonOffsetFactor = source.polygonOffsetFactor;
+    this.polygonOffsetUnits = source.polygonOffsetUnits;
+    this.dithering = source.dithering;
+    this.alphaTest = source.alphaTest;
+    this.alphaHash = source.alphaHash;
+    this.alphaToCoverage = source.alphaToCoverage;
+    this.premultipliedAlpha = source.premultipliedAlpha;
+    this.forceSinglePass = source.forceSinglePass;
+    this.allowOverride = source.allowOverride;
+    this.visible = source.visible;
+    this.toneMapped = source.toneMapped;
+    this.userData = JSON.parse(JSON.stringify(source.userData));
+    return this;
+  }
+  /**
+   * Frees the GPU-related resources allocated by this instance. Call this
+   * method whenever this instance is no longer used in your app.
+   *
+   * @fires Material#dispose
+   */
+  dispose() {
+    this.dispatchEvent({ type: "dispose" });
+  }
+  /**
+   * Setting this property to `true` indicates the engine the material
+   * needs to be recompiled.
+   *
+   * @type {boolean}
+   * @default false
+   * @param {boolean} value
+   */
+  set needsUpdate(value) {
+    if (value === true) this.version++;
+  }
+}
+class DataTexture extends Texture {
+  /**
+   * Constructs a new data texture.
+   *
+   * @param {?TypedArray} [data=null] - The buffer data.
+   * @param {number} [width=1] - The width of the texture.
+   * @param {number} [height=1] - The height of the texture.
+   * @param {number} [format=RGBAFormat] - The texture format.
+   * @param {number} [type=UnsignedByteType] - The texture type.
+   * @param {number} [mapping=Texture.DEFAULT_MAPPING] - The texture mapping.
+   * @param {number} [wrapS=ClampToEdgeWrapping] - The wrapS value.
+   * @param {number} [wrapT=ClampToEdgeWrapping] - The wrapT value.
+   * @param {number} [magFilter=NearestFilter] - The mag filter value.
+   * @param {number} [minFilter=NearestFilter] - The min filter value.
+   * @param {number} [anisotropy=Texture.DEFAULT_ANISOTROPY] - The anisotropy value.
+   * @param {string} [colorSpace=NoColorSpace] - The color space.
+   */
+  constructor(data = null, width = 1, height = 1, format, type, mapping, wrapS, wrapT, magFilter = NearestFilter, minFilter = NearestFilter, anisotropy, colorSpace) {
+    super(null, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy, colorSpace);
+    this.isDataTexture = true;
+    this.image = { data, width, height };
+    this.generateMipmaps = false;
+    this.flipY = false;
+    this.unpackAlignment = 1;
+  }
+}
+const _vector1 = /* @__PURE__ */ new Vector3();
+const _vector2 = /* @__PURE__ */ new Vector3();
+const _normalMatrix = /* @__PURE__ */ new Matrix3();
+class Plane {
+  /**
+   * Constructs a new plane.
+   *
+   * @param {Vector3} [normal=(1,0,0)] - A unit length vector defining the normal of the plane.
+   * @param {number} [constant=0] - The signed distance from the origin to the plane.
+   */
+  constructor(normal = new Vector3(1, 0, 0), constant = 0) {
+    this.isPlane = true;
+    this.normal = normal;
+    this.constant = constant;
+  }
+  /**
+   * Sets the plane components by copying the given values.
+   *
+   * @param {Vector3} normal - The normal.
+   * @param {number} constant - The constant.
+   * @return {Plane} A reference to this plane.
+   */
+  set(normal, constant) {
+    this.normal.copy(normal);
+    this.constant = constant;
+    return this;
+  }
+  /**
+   * Sets the plane components by defining `x`, `y`, `z` as the
+   * plane normal and `w` as the constant.
+   *
+   * @param {number} x - The value for the normal's x component.
+   * @param {number} y - The value for the normal's y component.
+   * @param {number} z - The value for the normal's z component.
+   * @param {number} w - The constant value.
+   * @return {Plane} A reference to this plane.
+   */
+  setComponents(x2, y2, z2, w2) {
+    this.normal.set(x2, y2, z2);
+    this.constant = w2;
+    return this;
+  }
+  /**
+   * Sets the plane from the given normal and coplanar point (that is a point
+   * that lies onto the plane).
+   *
+   * @param {Vector3} normal - The normal.
+   * @param {Vector3} point - A coplanar point.
+   * @return {Plane} A reference to this plane.
+   */
+  setFromNormalAndCoplanarPoint(normal, point2) {
+    this.normal.copy(normal);
+    this.constant = -point2.dot(this.normal);
+    return this;
+  }
+  /**
+   * Sets the plane from three coplanar points. The winding order is
+   * assumed to be counter-clockwise, and determines the direction of
+   * the plane normal.
+   *
+   * @param {Vector3} a - The first coplanar point.
+   * @param {Vector3} b - The second coplanar point.
+   * @param {Vector3} c - The third coplanar point.
+   * @return {Plane} A reference to this plane.
+   */
+  setFromCoplanarPoints(a2, b2, c2) {
+    const normal = _vector1.subVectors(c2, b2).cross(_vector2.subVectors(a2, b2)).normalize();
+    this.setFromNormalAndCoplanarPoint(normal, a2);
+    return this;
+  }
+  /**
+   * Copies the values of the given plane to this instance.
+   *
+   * @param {Plane} plane - The plane to copy.
+   * @return {Plane} A reference to this plane.
+   */
+  copy(plane) {
+    this.normal.copy(plane.normal);
+    this.constant = plane.constant;
+    return this;
+  }
+  /**
+   * Normalizes the plane normal and adjusts the constant accordingly.
+   *
+   * @return {Plane} A reference to this plane.
+   */
+  normalize() {
+    const inverseNormalLength = 1 / this.normal.length();
+    this.normal.multiplyScalar(inverseNormalLength);
+    this.constant *= inverseNormalLength;
+    return this;
+  }
+  /**
+   * Negates both the plane normal and the constant.
+   *
+   * @return {Plane} A reference to this plane.
+   */
+  negate() {
+    this.constant *= -1;
+    this.normal.negate();
+    return this;
+  }
+  /**
+   * Returns the signed distance from the given point to this plane.
+   *
+   * @param {Vector3} point - The point to compute the distance for.
+   * @return {number} The signed distance.
+   */
+  distanceToPoint(point2) {
+    return this.normal.dot(point2) + this.constant;
+  }
+  /**
+   * Returns the signed distance from the given sphere to this plane.
+   *
+   * @param {Sphere} sphere - The sphere to compute the distance for.
+   * @return {number} The signed distance.
+   */
+  distanceToSphere(sphere) {
+    return this.distanceToPoint(sphere.center) - sphere.radius;
+  }
+  /**
+   * Projects a the given point onto the plane.
+   *
+   * @param {Vector3} point - The point to project.
+   * @param {Vector3} target - The target vector that is used to store the method's result.
+   * @return {Vector3} The projected point on the plane.
+   */
+  projectPoint(point2, target) {
+    return target.copy(point2).addScaledVector(this.normal, -this.distanceToPoint(point2));
+  }
+  /**
+   * Returns the intersection point of the passed line and the plane. Returns
+   * `null` if the line does not intersect. Returns the line's starting point if
+   * the line is coplanar with the plane.
+   *
+   * @param {Line3} line - The line to compute the intersection for.
+   * @param {Vector3} target - The target vector that is used to store the method's result.
+   * @return {?Vector3} The intersection point.
+   */
+  intersectLine(line, target) {
+    const direction = line.delta(_vector1);
+    const denominator = this.normal.dot(direction);
+    if (denominator === 0) {
+      if (this.distanceToPoint(line.start) === 0) {
+        return target.copy(line.start);
+      }
+      return null;
+    }
+    const t2 = -(line.start.dot(this.normal) + this.constant) / denominator;
+    if (t2 < 0 || t2 > 1) {
+      return null;
+    }
+    return target.copy(line.start).addScaledVector(direction, t2);
+  }
+  /**
+   * Returns `true` if the given line segment intersects with (passes through) the plane.
+   *
+   * @param {Line3} line - The line to test.
+   * @return {boolean} Whether the given line segment intersects with the plane or not.
+   */
+  intersectsLine(line) {
+    const startSign = this.distanceToPoint(line.start);
+    const endSign = this.distanceToPoint(line.end);
+    return startSign < 0 && endSign > 0 || endSign < 0 && startSign > 0;
+  }
+  /**
+   * Returns `true` if the given bounding box intersects with the plane.
+   *
+   * @param {Box3} box - The bounding box to test.
+   * @return {boolean} Whether the given bounding box intersects with the plane or not.
+   */
+  intersectsBox(box) {
+    return box.intersectsPlane(this);
+  }
+  /**
+   * Returns `true` if the given bounding sphere intersects with the plane.
+   *
+   * @param {Sphere} sphere - The bounding sphere to test.
+   * @return {boolean} Whether the given bounding sphere intersects with the plane or not.
+   */
+  intersectsSphere(sphere) {
+    return sphere.intersectsPlane(this);
+  }
+  /**
+   * Returns a coplanar vector to the plane, by calculating the
+   * projection of the normal at the origin onto the plane.
+   *
+   * @param {Vector3} target - The target vector that is used to store the method's result.
+   * @return {Vector3} The coplanar point.
+   */
+  coplanarPoint(target) {
+    return target.copy(this.normal).multiplyScalar(-this.constant);
+  }
+  /**
+   * Apply a 4x4 matrix to the plane. The matrix must be an affine, homogeneous transform.
+   *
+   * The optional normal matrix can be pre-computed like so:
+   * ```js
+   * const optionalNormalMatrix = new THREE.Matrix3().getNormalMatrix( matrix );
+   * ```
+   *
+   * @param {Matrix4} matrix - The transformation matrix.
+   * @param {Matrix4} [optionalNormalMatrix] - A pre-computed normal matrix.
+   * @return {Plane} A reference to this plane.
+   */
+  applyMatrix4(matrix, optionalNormalMatrix) {
+    const normalMatrix = optionalNormalMatrix || _normalMatrix.getNormalMatrix(matrix);
+    const referencePoint = this.coplanarPoint(_vector1).applyMatrix4(matrix);
+    const normal = this.normal.applyMatrix3(normalMatrix).normalize();
+    this.constant = -referencePoint.dot(normal);
+    return this;
+  }
+  /**
+   * Translates the plane by the distance defined by the given offset vector.
+   * Note that this only affects the plane constant and will not affect the normal vector.
+   *
+   * @param {Vector3} offset - The offset vector.
+   * @return {Plane} A reference to this plane.
+   */
+  translate(offset) {
+    this.constant -= offset.dot(this.normal);
+    return this;
+  }
+  /**
+   * Returns `true` if this plane is equal with the given one.
+   *
+   * @param {Plane} plane - The plane to test for equality.
+   * @return {boolean} Whether this plane is equal with the given one.
+   */
+  equals(plane) {
+    return plane.normal.equals(this.normal) && plane.constant === this.constant;
+  }
+  /**
+   * Returns a new plane with copied values from this instance.
+   *
+   * @return {Plane} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor().copy(this);
+  }
+}
+const _sphere$3 = /* @__PURE__ */ new Sphere();
+const _defaultSpriteCenter = /* @__PURE__ */ new Vector2(0.5, 0.5);
+const _vector$6 = /* @__PURE__ */ new Vector3();
+class Frustum {
+  /**
+   * Constructs a new frustum.
+   *
+   * @param {Plane} [p0] - The first plane that encloses the frustum.
+   * @param {Plane} [p1] - The second plane that encloses the frustum.
+   * @param {Plane} [p2] - The third plane that encloses the frustum.
+   * @param {Plane} [p3] - The fourth plane that encloses the frustum.
+   * @param {Plane} [p4] - The fifth plane that encloses the frustum.
+   * @param {Plane} [p5] - The sixth plane that encloses the frustum.
+   */
+  constructor(p0 = new Plane(), p1 = new Plane(), p2 = new Plane(), p3 = new Plane(), p4 = new Plane(), p5 = new Plane()) {
+    this.planes = [p0, p1, p2, p3, p4, p5];
+  }
+  /**
+   * Sets the frustum planes by copying the given planes.
+   *
+   * @param {Plane} [p0] - The first plane that encloses the frustum.
+   * @param {Plane} [p1] - The second plane that encloses the frustum.
+   * @param {Plane} [p2] - The third plane that encloses the frustum.
+   * @param {Plane} [p3] - The fourth plane that encloses the frustum.
+   * @param {Plane} [p4] - The fifth plane that encloses the frustum.
+   * @param {Plane} [p5] - The sixth plane that encloses the frustum.
+   * @return {Frustum} A reference to this frustum.
+   */
+  set(p0, p1, p2, p3, p4, p5) {
+    const planes = this.planes;
+    planes[0].copy(p0);
+    planes[1].copy(p1);
+    planes[2].copy(p2);
+    planes[3].copy(p3);
+    planes[4].copy(p4);
+    planes[5].copy(p5);
+    return this;
+  }
+  /**
+   * Copies the values of the given frustum to this instance.
+   *
+   * @param {Frustum} frustum - The frustum to copy.
+   * @return {Frustum} A reference to this frustum.
+   */
+  copy(frustum) {
+    const planes = this.planes;
+    for (let i2 = 0; i2 < 6; i2++) {
+      planes[i2].copy(frustum.planes[i2]);
+    }
+    return this;
+  }
+  /**
+   * Sets the frustum planes from the given projection matrix.
+   *
+   * @param {Matrix4} m - The projection matrix.
+   * @param {(WebGLCoordinateSystem|WebGPUCoordinateSystem)} coordinateSystem - The coordinate system.
+   * @param {boolean} [reversedDepth=false] - Whether to use a reversed depth.
+   * @return {Frustum} A reference to this frustum.
+   */
+  setFromProjectionMatrix(m2, coordinateSystem = WebGLCoordinateSystem, reversedDepth = false) {
+    const planes = this.planes;
+    const me2 = m2.elements;
+    const me0 = me2[0], me1 = me2[1], me22 = me2[2], me3 = me2[3];
+    const me4 = me2[4], me5 = me2[5], me6 = me2[6], me7 = me2[7];
+    const me8 = me2[8], me9 = me2[9], me10 = me2[10], me11 = me2[11];
+    const me12 = me2[12], me13 = me2[13], me14 = me2[14], me15 = me2[15];
+    planes[0].setComponents(me3 - me0, me7 - me4, me11 - me8, me15 - me12).normalize();
+    planes[1].setComponents(me3 + me0, me7 + me4, me11 + me8, me15 + me12).normalize();
+    planes[2].setComponents(me3 + me1, me7 + me5, me11 + me9, me15 + me13).normalize();
+    planes[3].setComponents(me3 - me1, me7 - me5, me11 - me9, me15 - me13).normalize();
+    if (reversedDepth) {
+      planes[4].setComponents(me22, me6, me10, me14).normalize();
+      planes[5].setComponents(me3 - me22, me7 - me6, me11 - me10, me15 - me14).normalize();
+    } else {
+      planes[4].setComponents(me3 - me22, me7 - me6, me11 - me10, me15 - me14).normalize();
+      if (coordinateSystem === WebGLCoordinateSystem) {
+        planes[5].setComponents(me3 + me22, me7 + me6, me11 + me10, me15 + me14).normalize();
+      } else if (coordinateSystem === WebGPUCoordinateSystem) {
+        planes[5].setComponents(me22, me6, me10, me14).normalize();
+      } else {
+        throw new Error("THREE.Frustum.setFromProjectionMatrix(): Invalid coordinate system: " + coordinateSystem);
+      }
+    }
+    return this;
+  }
+  /**
+   * Returns `true` if the 3D object's bounding sphere is intersecting this frustum.
+   *
+   * Note that the 3D object must have a geometry so that the bounding sphere can be calculated.
+   *
+   * @param {Object3D} object - The 3D object to test.
+   * @return {boolean} Whether the 3D object's bounding sphere is intersecting this frustum or not.
+   */
+  intersectsObject(object) {
+    if (object.boundingSphere !== void 0) {
+      if (object.boundingSphere === null) object.computeBoundingSphere();
+      _sphere$3.copy(object.boundingSphere).applyMatrix4(object.matrixWorld);
+    } else {
+      const geometry = object.geometry;
+      if (geometry.boundingSphere === null) geometry.computeBoundingSphere();
+      _sphere$3.copy(geometry.boundingSphere).applyMatrix4(object.matrixWorld);
+    }
+    return this.intersectsSphere(_sphere$3);
+  }
+  /**
+   * Returns `true` if the given sprite is intersecting this frustum.
+   *
+   * @param {Sprite} sprite - The sprite to test.
+   * @return {boolean} Whether the sprite is intersecting this frustum or not.
+   */
+  intersectsSprite(sprite) {
+    _sphere$3.center.set(0, 0, 0);
+    const offset = _defaultSpriteCenter.distanceTo(sprite.center);
+    _sphere$3.radius = 0.7071067811865476 + offset;
+    _sphere$3.applyMatrix4(sprite.matrixWorld);
+    return this.intersectsSphere(_sphere$3);
+  }
+  /**
+   * Returns `true` if the given bounding sphere is intersecting this frustum.
+   *
+   * @param {Sphere} sphere - The bounding sphere to test.
+   * @return {boolean} Whether the bounding sphere is intersecting this frustum or not.
+   */
+  intersectsSphere(sphere) {
+    const planes = this.planes;
+    const center = sphere.center;
+    const negRadius = -sphere.radius;
+    for (let i2 = 0; i2 < 6; i2++) {
+      const distance2 = planes[i2].distanceToPoint(center);
+      if (distance2 < negRadius) {
+        return false;
+      }
+    }
+    return true;
+  }
+  /**
+   * Returns `true` if the given bounding box is intersecting this frustum.
+   *
+   * @param {Box3} box - The bounding box to test.
+   * @return {boolean} Whether the bounding box is intersecting this frustum or not.
+   */
+  intersectsBox(box) {
+    const planes = this.planes;
+    for (let i2 = 0; i2 < 6; i2++) {
+      const plane = planes[i2];
+      _vector$6.x = plane.normal.x > 0 ? box.max.x : box.min.x;
+      _vector$6.y = plane.normal.y > 0 ? box.max.y : box.min.y;
+      _vector$6.z = plane.normal.z > 0 ? box.max.z : box.min.z;
+      if (plane.distanceToPoint(_vector$6) < 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+  /**
+   * Returns `true` if the given point lies within the frustum.
+   *
+   * @param {Vector3} point - The point to test.
+   * @return {boolean} Whether the point lies within this frustum or not.
+   */
+  containsPoint(point2) {
+    const planes = this.planes;
+    for (let i2 = 0; i2 < 6; i2++) {
+      if (planes[i2].distanceToPoint(point2) < 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+  /**
+   * Returns a new frustum with copied values from this instance.
+   *
+   * @return {Frustum} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor().copy(this);
+  }
+}
+class MeshStandardMaterial extends Material {
+  /**
+   * Constructs a new mesh standard material.
+   *
+   * @param {Object} [parameters] - An object with one or more properties
+   * defining the material's appearance. Any property of the material
+   * (including any property from inherited materials) can be passed
+   * in here. Color values can be passed any type of value accepted
+   * by {@link Color#set}.
+   */
+  constructor(parameters) {
+    super();
+    this.isMeshStandardMaterial = true;
+    this.type = "MeshStandardMaterial";
+    this.defines = { "STANDARD": "" };
+    this.color = new Color(16777215);
+    this.roughness = 1;
+    this.metalness = 0;
+    this.map = null;
+    this.lightMap = null;
+    this.lightMapIntensity = 1;
+    this.aoMap = null;
+    this.aoMapIntensity = 1;
+    this.emissive = new Color(0);
+    this.emissiveIntensity = 1;
+    this.emissiveMap = null;
+    this.bumpMap = null;
+    this.bumpScale = 1;
+    this.normalMap = null;
+    this.normalMapType = TangentSpaceNormalMap;
+    this.normalScale = new Vector2(1, 1);
+    this.displacementMap = null;
+    this.displacementScale = 1;
+    this.displacementBias = 0;
+    this.roughnessMap = null;
+    this.metalnessMap = null;
+    this.alphaMap = null;
+    this.envMap = null;
+    this.envMapRotation = new Euler();
+    this.envMapIntensity = 1;
+    this.wireframe = false;
+    this.wireframeLinewidth = 1;
+    this.wireframeLinecap = "round";
+    this.wireframeLinejoin = "round";
+    this.flatShading = false;
+    this.fog = true;
+    this.setValues(parameters);
+  }
+  copy(source) {
+    super.copy(source);
+    this.defines = { "STANDARD": "" };
+    this.color.copy(source.color);
+    this.roughness = source.roughness;
+    this.metalness = source.metalness;
+    this.map = source.map;
+    this.lightMap = source.lightMap;
+    this.lightMapIntensity = source.lightMapIntensity;
+    this.aoMap = source.aoMap;
+    this.aoMapIntensity = source.aoMapIntensity;
+    this.emissive.copy(source.emissive);
+    this.emissiveMap = source.emissiveMap;
+    this.emissiveIntensity = source.emissiveIntensity;
+    this.bumpMap = source.bumpMap;
+    this.bumpScale = source.bumpScale;
+    this.normalMap = source.normalMap;
+    this.normalMapType = source.normalMapType;
+    this.normalScale.copy(source.normalScale);
+    this.displacementMap = source.displacementMap;
+    this.displacementScale = source.displacementScale;
+    this.displacementBias = source.displacementBias;
+    this.roughnessMap = source.roughnessMap;
+    this.metalnessMap = source.metalnessMap;
+    this.alphaMap = source.alphaMap;
+    this.envMap = source.envMap;
+    this.envMapRotation.copy(source.envMapRotation);
+    this.envMapIntensity = source.envMapIntensity;
+    this.wireframe = source.wireframe;
+    this.wireframeLinewidth = source.wireframeLinewidth;
+    this.wireframeLinecap = source.wireframeLinecap;
+    this.wireframeLinejoin = source.wireframeLinejoin;
+    this.flatShading = source.flatShading;
+    this.fog = source.fog;
+    return this;
+  }
+}
+class MeshPhysicalMaterial extends MeshStandardMaterial {
+  /**
+   * Constructs a new mesh physical material.
+   *
+   * @param {Object} [parameters] - An object with one or more properties
+   * defining the material's appearance. Any property of the material
+   * (including any property from inherited materials) can be passed
+   * in here. Color values can be passed any type of value accepted
+   * by {@link Color#set}.
+   */
+  constructor(parameters) {
+    super();
+    this.isMeshPhysicalMaterial = true;
+    this.defines = {
+      "STANDARD": "",
+      "PHYSICAL": ""
+    };
+    this.type = "MeshPhysicalMaterial";
+    this.anisotropyRotation = 0;
+    this.anisotropyMap = null;
+    this.clearcoatMap = null;
+    this.clearcoatRoughness = 0;
+    this.clearcoatRoughnessMap = null;
+    this.clearcoatNormalScale = new Vector2(1, 1);
+    this.clearcoatNormalMap = null;
+    this.ior = 1.5;
+    Object.defineProperty(this, "reflectivity", {
+      get: function() {
+        return clamp(2.5 * (this.ior - 1) / (this.ior + 1), 0, 1);
+      },
+      set: function(reflectivity) {
+        this.ior = (1 + 0.4 * reflectivity) / (1 - 0.4 * reflectivity);
+      }
+    });
+    this.iridescenceMap = null;
+    this.iridescenceIOR = 1.3;
+    this.iridescenceThicknessRange = [100, 400];
+    this.iridescenceThicknessMap = null;
+    this.sheenColor = new Color(0);
+    this.sheenColorMap = null;
+    this.sheenRoughness = 1;
+    this.sheenRoughnessMap = null;
+    this.transmissionMap = null;
+    this.thickness = 0;
+    this.thicknessMap = null;
+    this.attenuationDistance = Infinity;
+    this.attenuationColor = new Color(1, 1, 1);
+    this.specularIntensity = 1;
+    this.specularIntensityMap = null;
+    this.specularColor = new Color(1, 1, 1);
+    this.specularColorMap = null;
+    this._anisotropy = 0;
+    this._clearcoat = 0;
+    this._dispersion = 0;
+    this._iridescence = 0;
+    this._sheen = 0;
+    this._transmission = 0;
+    this.setValues(parameters);
+  }
+  /**
+   * The anisotropy strength, from `0.0` to `1.0`.
+   *
+   * @type {number}
+   * @default 0
+   */
+  get anisotropy() {
+    return this._anisotropy;
+  }
+  set anisotropy(value) {
+    if (this._anisotropy > 0 !== value > 0) {
+      this.version++;
+    }
+    this._anisotropy = value;
+  }
+  /**
+   * Represents the intensity of the clear coat layer, from `0.0` to `1.0`. Use
+   * clear coat related properties to enable multilayer materials that have a
+   * thin translucent layer over the base layer.
+   *
+   * @type {number}
+   * @default 0
+   */
+  get clearcoat() {
+    return this._clearcoat;
+  }
+  set clearcoat(value) {
+    if (this._clearcoat > 0 !== value > 0) {
+      this.version++;
+    }
+    this._clearcoat = value;
+  }
+  /**
+   * The intensity of the iridescence layer, simulating RGB color shift based on the angle between
+   * the surface and the viewer, from `0.0` to `1.0`.
+   *
+   * @type {number}
+   * @default 0
+   */
+  get iridescence() {
+    return this._iridescence;
+  }
+  set iridescence(value) {
+    if (this._iridescence > 0 !== value > 0) {
+      this.version++;
+    }
+    this._iridescence = value;
+  }
+  /**
+   * Defines the strength of the angular separation of colors (chromatic aberration) transmitting
+   * through a relatively clear volume. Any value zero or larger is valid, the typical range of
+   * realistic values is `[0, 1]`. This property can be only be used with transmissive objects.
+   *
+   * @type {number}
+   * @default 0
+   */
+  get dispersion() {
+    return this._dispersion;
+  }
+  set dispersion(value) {
+    if (this._dispersion > 0 !== value > 0) {
+      this.version++;
+    }
+    this._dispersion = value;
+  }
+  /**
+   * The intensity of the sheen layer, from `0.0` to `1.0`.
+   *
+   * @type {number}
+   * @default 0
+   */
+  get sheen() {
+    return this._sheen;
+  }
+  set sheen(value) {
+    if (this._sheen > 0 !== value > 0) {
+      this.version++;
+    }
+    this._sheen = value;
+  }
+  /**
+   * Degree of transmission (or optical transparency), from `0.0` to `1.0`.
+   *
+   * Thin, transparent or semitransparent, plastic or glass materials remain
+   * largely reflective even if they are fully transmissive. The transmission
+   * property can be used to model these materials.
+   *
+   * When transmission is non-zero, `opacity` should be  set to `1`.
+   *
+   * @type {number}
+   * @default 0
+   */
+  get transmission() {
+    return this._transmission;
+  }
+  set transmission(value) {
+    if (this._transmission > 0 !== value > 0) {
+      this.version++;
+    }
+    this._transmission = value;
+  }
+  copy(source) {
+    super.copy(source);
+    this.defines = {
+      "STANDARD": "",
+      "PHYSICAL": ""
+    };
+    this.anisotropy = source.anisotropy;
+    this.anisotropyRotation = source.anisotropyRotation;
+    this.anisotropyMap = source.anisotropyMap;
+    this.clearcoat = source.clearcoat;
+    this.clearcoatMap = source.clearcoatMap;
+    this.clearcoatRoughness = source.clearcoatRoughness;
+    this.clearcoatRoughnessMap = source.clearcoatRoughnessMap;
+    this.clearcoatNormalMap = source.clearcoatNormalMap;
+    this.clearcoatNormalScale.copy(source.clearcoatNormalScale);
+    this.dispersion = source.dispersion;
+    this.ior = source.ior;
+    this.iridescence = source.iridescence;
+    this.iridescenceMap = source.iridescenceMap;
+    this.iridescenceIOR = source.iridescenceIOR;
+    this.iridescenceThicknessRange = [...source.iridescenceThicknessRange];
+    this.iridescenceThicknessMap = source.iridescenceThicknessMap;
+    this.sheen = source.sheen;
+    this.sheenColor.copy(source.sheenColor);
+    this.sheenColorMap = source.sheenColorMap;
+    this.sheenRoughness = source.sheenRoughness;
+    this.sheenRoughnessMap = source.sheenRoughnessMap;
+    this.transmission = source.transmission;
+    this.transmissionMap = source.transmissionMap;
+    this.thickness = source.thickness;
+    this.thicknessMap = source.thicknessMap;
+    this.attenuationDistance = source.attenuationDistance;
+    this.attenuationColor.copy(source.attenuationColor);
+    this.specularIntensity = source.specularIntensity;
+    this.specularIntensityMap = source.specularIntensityMap;
+    this.specularColor.copy(source.specularColor);
+    this.specularColorMap = source.specularColorMap;
+    return this;
+  }
+}
+const Cache = {
+  /**
+   * Whether caching is enabled or not.
+   *
+   * @static
+   * @type {boolean}
+   * @default false
+   */
+  enabled: false,
+  /**
+   * A dictionary that holds cached files.
+   *
+   * @static
+   * @type {Object<string,Object>}
+   */
+  files: {},
+  /**
+   * Adds a cache entry with a key to reference the file. If this key already
+   * holds a file, it is overwritten.
+   *
+   * @static
+   * @param {string} key - The key to reference the cached file.
+   * @param {Object} file -  The file to be cached.
+   */
+  add: function(key, file) {
+    if (this.enabled === false) return;
+    if (isBlobURL(key)) return;
+    this.files[key] = file;
+  },
+  /**
+   * Gets the cached value for the given key.
+   *
+   * @static
+   * @param {string} key - The key to reference the cached file.
+   * @return {Object|undefined} The cached file. If the key does not exist `undefined` is returned.
+   */
+  get: function(key) {
+    if (this.enabled === false) return;
+    if (isBlobURL(key)) return;
+    return this.files[key];
+  },
+  /**
+   * Removes the cached file associated with the given key.
+   *
+   * @static
+   * @param {string} key - The key to reference the cached file.
+   */
+  remove: function(key) {
+    delete this.files[key];
+  },
+  /**
+   * Remove all values from the cache.
+   *
+   * @static
+   */
+  clear: function() {
+    this.files = {};
+  }
+};
+function isBlobURL(key) {
+  try {
+    const urlString = key.slice(key.indexOf(":") + 1);
+    const url = new URL(urlString);
+    return url.protocol === "blob:";
+  } catch (e2) {
+    return false;
+  }
+}
+class LoadingManager {
+  /**
+   * Constructs a new loading manager.
+   *
+   * @param {Function} [onLoad] - Executes when all items have been loaded.
+   * @param {Function} [onProgress] - Executes when single items have been loaded.
+   * @param {Function} [onError] - Executes when an error occurs.
+   */
+  constructor(onLoad, onProgress, onError) {
+    const scope = this;
+    let isLoading = false;
+    let itemsLoaded = 0;
+    let itemsTotal = 0;
+    let urlModifier = void 0;
+    const handlers2 = [];
+    this.onStart = void 0;
+    this.onLoad = onLoad;
+    this.onProgress = onProgress;
+    this.onError = onError;
+    this._abortController = null;
+    this.itemStart = function(url) {
+      itemsTotal++;
+      if (isLoading === false) {
+        if (scope.onStart !== void 0) {
+          scope.onStart(url, itemsLoaded, itemsTotal);
+        }
+      }
+      isLoading = true;
+    };
+    this.itemEnd = function(url) {
+      itemsLoaded++;
+      if (scope.onProgress !== void 0) {
+        scope.onProgress(url, itemsLoaded, itemsTotal);
+      }
+      if (itemsLoaded === itemsTotal) {
+        isLoading = false;
+        if (scope.onLoad !== void 0) {
+          scope.onLoad();
+        }
+      }
+    };
+    this.itemError = function(url) {
+      if (scope.onError !== void 0) {
+        scope.onError(url);
+      }
+    };
+    this.resolveURL = function(url) {
+      if (urlModifier) {
+        return urlModifier(url);
+      }
+      return url;
+    };
+    this.setURLModifier = function(transform) {
+      urlModifier = transform;
+      return this;
+    };
+    this.addHandler = function(regex, loader) {
+      handlers2.push(regex, loader);
+      return this;
+    };
+    this.removeHandler = function(regex) {
+      const index2 = handlers2.indexOf(regex);
+      if (index2 !== -1) {
+        handlers2.splice(index2, 2);
+      }
+      return this;
+    };
+    this.getHandler = function(file) {
+      for (let i2 = 0, l2 = handlers2.length; i2 < l2; i2 += 2) {
+        const regex = handlers2[i2];
+        const loader = handlers2[i2 + 1];
+        if (regex.global) regex.lastIndex = 0;
+        if (regex.test(file)) {
+          return loader;
+        }
+      }
+      return null;
+    };
+    this.abort = function() {
+      this.abortController.abort();
+      this._abortController = null;
+      return this;
+    };
+  }
+  // TODO: Revert this back to a single member variable once this issue has been fixed
+  // https://github.com/cloudflare/workerd/issues/3657
+  /**
+   * Used for aborting ongoing requests in loaders using this manager.
+   *
+   * @type {AbortController}
+   */
+  get abortController() {
+    if (!this._abortController) {
+      this._abortController = new AbortController();
+    }
+    return this._abortController;
+  }
+}
+const DefaultLoadingManager = /* @__PURE__ */ new LoadingManager();
+class Loader {
+  /**
+   * Constructs a new loader.
+   *
+   * @param {LoadingManager} [manager] - The loading manager.
+   */
+  constructor(manager) {
+    this.manager = manager !== void 0 ? manager : DefaultLoadingManager;
+    this.crossOrigin = "anonymous";
+    this.withCredentials = false;
+    this.path = "";
+    this.resourcePath = "";
+    this.requestHeader = {};
+    if (typeof __THREE_DEVTOOLS__ !== "undefined") {
+      __THREE_DEVTOOLS__.dispatchEvent(new CustomEvent("observe", { detail: this }));
+    }
+  }
+  /**
+   * This method needs to be implemented by all concrete loaders. It holds the
+   * logic for loading assets from the backend.
+   *
+   * @abstract
+   * @param {string} url - The path/URL of the file to be loaded.
+   * @param {Function} onLoad - Executed when the loading process has been finished.
+   * @param {onProgressCallback} [onProgress] - Executed while the loading is in progress.
+   * @param {onErrorCallback} [onError] - Executed when errors occur.
+   */
+  load() {
+  }
+  /**
+   * A async version of {@link Loader#load}.
+   *
+   * @param {string} url - The path/URL of the file to be loaded.
+   * @param {onProgressCallback} [onProgress] - Executed while the loading is in progress.
+   * @return {Promise} A Promise that resolves when the asset has been loaded.
+   */
+  loadAsync(url, onProgress) {
+    const scope = this;
+    return new Promise(function(resolve, reject) {
+      scope.load(url, resolve, onProgress, reject);
+    });
+  }
+  /**
+   * This method needs to be implemented by all concrete loaders. It holds the
+   * logic for parsing the asset into three.js entities.
+   *
+   * @abstract
+   * @param {any} data - The data to parse.
+   */
+  parse() {
+  }
+  /**
+   * Sets the `crossOrigin` String to implement CORS for loading the URL
+   * from a different domain that allows CORS.
+   *
+   * @param {string} crossOrigin - The `crossOrigin` value.
+   * @return {Loader} A reference to this instance.
+   */
+  setCrossOrigin(crossOrigin) {
+    this.crossOrigin = crossOrigin;
+    return this;
+  }
+  /**
+   * Whether the XMLHttpRequest uses credentials such as cookies, authorization
+   * headers or TLS client certificates, see [XMLHttpRequest.withCredentials](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/withCredentials).
+   *
+   * Note: This setting has no effect if you are loading files locally or from the same domain.
+   *
+   * @param {boolean} value - The `withCredentials` value.
+   * @return {Loader} A reference to this instance.
+   */
+  setWithCredentials(value) {
+    this.withCredentials = value;
+    return this;
+  }
+  /**
+   * Sets the base path for the asset.
+   *
+   * @param {string} path - The base path.
+   * @return {Loader} A reference to this instance.
+   */
+  setPath(path) {
+    this.path = path;
+    return this;
+  }
+  /**
+   * Sets the base path for dependent resources like textures.
+   *
+   * @param {string} resourcePath - The resource path.
+   * @return {Loader} A reference to this instance.
+   */
+  setResourcePath(resourcePath) {
+    this.resourcePath = resourcePath;
+    return this;
+  }
+  /**
+   * Sets the given request header.
+   *
+   * @param {Object} requestHeader - A [request header](https://developer.mozilla.org/en-US/docs/Glossary/Request_header)
+   * for configuring the HTTP request.
+   * @return {Loader} A reference to this instance.
+   */
+  setRequestHeader(requestHeader) {
+    this.requestHeader = requestHeader;
+    return this;
+  }
+  /**
+   * This method can be implemented in loaders for aborting ongoing requests.
+   *
+   * @abstract
+   * @return {Loader} A reference to this instance.
+   */
+  abort() {
+    return this;
+  }
+}
+Loader.DEFAULT_MATERIAL_NAME = "__DEFAULT";
+const loading = {};
+class HttpError extends Error {
+  constructor(message, response) {
+    super(message);
+    this.response = response;
+  }
+}
+class FileLoader extends Loader {
+  /**
+   * Constructs a new file loader.
+   *
+   * @param {LoadingManager} [manager] - The loading manager.
+   */
+  constructor(manager) {
+    super(manager);
+    this.mimeType = "";
+    this.responseType = "";
+    this._abortController = new AbortController();
+  }
+  /**
+   * Starts loading from the given URL and pass the loaded response to the `onLoad()` callback.
+   *
+   * @param {string} url - The path/URL of the file to be loaded. This can also be a data URI.
+   * @param {function(any)} onLoad - Executed when the loading process has been finished.
+   * @param {onProgressCallback} [onProgress] - Executed while the loading is in progress.
+   * @param {onErrorCallback} [onError] - Executed when errors occur.
+   * @return {any|undefined} The cached resource if available.
+   */
+  load(url, onLoad, onProgress, onError) {
+    if (url === void 0) url = "";
+    if (this.path !== void 0) url = this.path + url;
+    url = this.manager.resolveURL(url);
+    const cached = Cache.get(`file:${url}`);
+    if (cached !== void 0) {
+      this.manager.itemStart(url);
+      setTimeout(() => {
+        if (onLoad) onLoad(cached);
+        this.manager.itemEnd(url);
+      }, 0);
+      return cached;
+    }
+    if (loading[url] !== void 0) {
+      loading[url].push({
+        onLoad,
+        onProgress,
+        onError
+      });
+      return;
+    }
+    loading[url] = [];
+    loading[url].push({
+      onLoad,
+      onProgress,
+      onError
+    });
+    const req = new Request(url, {
+      headers: new Headers(this.requestHeader),
+      credentials: this.withCredentials ? "include" : "same-origin",
+      signal: typeof AbortSignal.any === "function" ? AbortSignal.any([this._abortController.signal, this.manager.abortController.signal]) : this._abortController.signal
+    });
+    const mimeType = this.mimeType;
+    const responseType = this.responseType;
+    fetch(req).then((response) => {
+      if (response.status === 200 || response.status === 0) {
+        if (response.status === 0) {
+          warn("FileLoader: HTTP Status 0 received.");
+        }
+        if (typeof ReadableStream === "undefined" || response.body === void 0 || response.body.getReader === void 0) {
+          return response;
+        }
+        const callbacks = loading[url];
+        const reader = response.body.getReader();
+        const contentLength = response.headers.get("X-File-Size") || response.headers.get("Content-Length");
+        const total = contentLength ? parseInt(contentLength) : 0;
+        const lengthComputable = total !== 0;
+        let loaded = 0;
+        const stream = new ReadableStream({
+          start(controller) {
+            readData();
+            function readData() {
+              reader.read().then(({ done, value }) => {
+                if (done) {
+                  controller.close();
+                } else {
+                  loaded += value.byteLength;
+                  const event = new ProgressEvent("progress", { lengthComputable, loaded, total });
+                  for (let i2 = 0, il = callbacks.length; i2 < il; i2++) {
+                    const callback = callbacks[i2];
+                    if (callback.onProgress) callback.onProgress(event);
+                  }
+                  controller.enqueue(value);
+                  readData();
+                }
+              }, (e2) => {
+                controller.error(e2);
+              });
+            }
+          }
+        });
+        return new Response(stream);
+      } else {
+        throw new HttpError(`fetch for "${response.url}" responded with ${response.status}: ${response.statusText}`, response);
+      }
+    }).then((response) => {
+      switch (responseType) {
+        case "arraybuffer":
+          return response.arrayBuffer();
+        case "blob":
+          return response.blob();
+        case "document":
+          return response.text().then((text2) => {
+            const parser2 = new DOMParser();
+            return parser2.parseFromString(text2, mimeType);
+          });
+        case "json":
+          return response.json();
+        default:
+          if (mimeType === "") {
+            return response.text();
+          } else {
+            const re3 = /charset="?([^;"\s]*)"?/i;
+            const exec = re3.exec(mimeType);
+            const label = exec && exec[1] ? exec[1].toLowerCase() : void 0;
+            const decoder = new TextDecoder(label);
+            return response.arrayBuffer().then((ab) => decoder.decode(ab));
+          }
+      }
+    }).then((data) => {
+      Cache.add(`file:${url}`, data);
+      const callbacks = loading[url];
+      delete loading[url];
+      for (let i2 = 0, il = callbacks.length; i2 < il; i2++) {
+        const callback = callbacks[i2];
+        if (callback.onLoad) callback.onLoad(data);
+      }
+    }).catch((err) => {
+      const callbacks = loading[url];
+      if (callbacks === void 0) {
+        this.manager.itemError(url);
+        throw err;
+      }
+      delete loading[url];
+      for (let i2 = 0, il = callbacks.length; i2 < il; i2++) {
+        const callback = callbacks[i2];
+        if (callback.onError) callback.onError(err);
+      }
+      this.manager.itemError(url);
+    }).finally(() => {
+      this.manager.itemEnd(url);
+    });
+    this.manager.itemStart(url);
+  }
+  /**
+   * Sets the expected response type.
+   *
+   * @param {('arraybuffer'|'blob'|'document'|'json'|'')} value - The response type.
+   * @return {FileLoader} A reference to this file loader.
+   */
+  setResponseType(value) {
+    this.responseType = value;
+    return this;
+  }
+  /**
+   * Sets the expected mime type of the loaded file.
+   *
+   * @param {string} value - The mime type.
+   * @return {FileLoader} A reference to this file loader.
+   */
+  setMimeType(value) {
+    this.mimeType = value;
+    return this;
+  }
+  /**
+   * Aborts ongoing fetch requests.
+   *
+   * @return {FileLoader} A reference to this instance.
+   */
+  abort() {
+    this._abortController.abort();
+    this._abortController = new AbortController();
+    return this;
+  }
+}
+class DataTextureLoader extends Loader {
+  /**
+   * Constructs a new data texture loader.
+   *
+   * @param {LoadingManager} [manager] - The loading manager.
+   */
+  constructor(manager) {
+    super(manager);
+  }
+  /**
+   * Starts loading from the given URL and passes the loaded data texture
+   * to the `onLoad()` callback. The method also returns a new texture object which can
+   * directly be used for material creation. If you do it this way, the texture
+   * may pop up in your scene once the respective loading process is finished.
+   *
+   * @param {string} url - The path/URL of the file to be loaded. This can also be a data URI.
+   * @param {function(DataTexture)} onLoad - Executed when the loading process has been finished.
+   * @param {onProgressCallback} onProgress - Executed while the loading is in progress.
+   * @param {onErrorCallback} onError - Executed when errors occur.
+   * @return {DataTexture} The data texture.
+   */
+  load(url, onLoad, onProgress, onError) {
+    const scope = this;
+    const texture = new DataTexture();
+    const loader = new FileLoader(this.manager);
+    loader.setResponseType("arraybuffer");
+    loader.setRequestHeader(this.requestHeader);
+    loader.setPath(this.path);
+    loader.setWithCredentials(scope.withCredentials);
+    loader.load(url, function(buffer) {
+      let texData;
+      try {
+        texData = scope.parse(buffer);
+      } catch (error2) {
+        if (onError !== void 0) {
+          onError(error2);
+        } else {
+          error2(error2);
+          return;
+        }
+      }
+      if (texData.image !== void 0) {
+        texture.image = texData.image;
+      } else if (texData.data !== void 0) {
+        texture.image.width = texData.width;
+        texture.image.height = texData.height;
+        texture.image.data = texData.data;
+      }
+      texture.wrapS = texData.wrapS !== void 0 ? texData.wrapS : ClampToEdgeWrapping;
+      texture.wrapT = texData.wrapT !== void 0 ? texData.wrapT : ClampToEdgeWrapping;
+      texture.magFilter = texData.magFilter !== void 0 ? texData.magFilter : LinearFilter;
+      texture.minFilter = texData.minFilter !== void 0 ? texData.minFilter : LinearFilter;
+      texture.anisotropy = texData.anisotropy !== void 0 ? texData.anisotropy : 1;
+      if (texData.colorSpace !== void 0) {
+        texture.colorSpace = texData.colorSpace;
+      }
+      if (texData.flipY !== void 0) {
+        texture.flipY = texData.flipY;
+      }
+      if (texData.format !== void 0) {
+        texture.format = texData.format;
+      }
+      if (texData.type !== void 0) {
+        texture.type = texData.type;
+      }
+      if (texData.mipmaps !== void 0) {
+        texture.mipmaps = texData.mipmaps;
+        texture.minFilter = LinearMipmapLinearFilter;
+      }
+      if (texData.mipmapCount === 1) {
+        texture.minFilter = LinearFilter;
+      }
+      if (texData.generateMipmaps !== void 0) {
+        texture.generateMipmaps = texData.generateMipmaps;
+      }
+      texture.needsUpdate = true;
+      if (onLoad) onLoad(texture, texData);
+    }, onProgress, onError);
+    return texture;
+  }
+}
+class Light extends Object3D {
+  /**
+   * Constructs a new light.
+   *
+   * @param {(number|Color|string)} [color=0xffffff] - The light's color.
+   * @param {number} [intensity=1] - The light's strength/intensity.
+   */
+  constructor(color2, intensity = 1) {
+    super();
+    this.isLight = true;
+    this.type = "Light";
+    this.color = new Color(color2);
+    this.intensity = intensity;
+  }
+  /**
+   * Frees the GPU-related resources allocated by this instance. Call this
+   * method whenever this instance is no longer used in your app.
+   */
+  dispose() {
+    this.dispatchEvent({ type: "dispose" });
+  }
+  copy(source, recursive) {
+    super.copy(source, recursive);
+    this.color.copy(source.color);
+    this.intensity = source.intensity;
+    return this;
+  }
+  toJSON(meta) {
+    const data = super.toJSON(meta);
+    data.object.color = this.color.getHex();
+    data.object.intensity = this.intensity;
+    return data;
+  }
+}
+const _projScreenMatrix = /* @__PURE__ */ new Matrix4();
+const _lightPositionWorld = /* @__PURE__ */ new Vector3();
+const _lookTarget = /* @__PURE__ */ new Vector3();
+class LightShadow {
+  /**
+   * Constructs a new light shadow.
+   *
+   * @param {Camera} camera - The light's view of the world.
+   */
+  constructor(camera) {
+    this.camera = camera;
+    this.intensity = 1;
+    this.bias = 0;
+    this.biasNode = null;
+    this.normalBias = 0;
+    this.radius = 1;
+    this.blurSamples = 8;
+    this.mapSize = new Vector2(512, 512);
+    this.mapType = UnsignedByteType;
+    this.map = null;
+    this.mapPass = null;
+    this.matrix = new Matrix4();
+    this.autoUpdate = true;
+    this.needsUpdate = false;
+    this._frustum = new Frustum();
+    this._frameExtents = new Vector2(1, 1);
+    this._viewportCount = 1;
+    this._viewports = [
+      new Vector4(0, 0, 1, 1)
+    ];
+  }
+  /**
+   * Used internally by the renderer to get the number of viewports that need
+   * to be rendered for this shadow.
+   *
+   * @return {number} The viewport count.
+   */
+  getViewportCount() {
+    return this._viewportCount;
+  }
+  /**
+   * Gets the shadow cameras frustum. Used internally by the renderer to cull objects.
+   *
+   * @return {Frustum} The shadow camera frustum.
+   */
+  getFrustum() {
+    return this._frustum;
+  }
+  /**
+   * Update the matrices for the camera and shadow, used internally by the renderer.
+   *
+   * @param {Light} light - The light for which the shadow is being rendered.
+   */
+  updateMatrices(light) {
+    const shadowCamera = this.camera;
+    const shadowMatrix = this.matrix;
+    _lightPositionWorld.setFromMatrixPosition(light.matrixWorld);
+    shadowCamera.position.copy(_lightPositionWorld);
+    _lookTarget.setFromMatrixPosition(light.target.matrixWorld);
+    shadowCamera.lookAt(_lookTarget);
+    shadowCamera.updateMatrixWorld();
+    _projScreenMatrix.multiplyMatrices(shadowCamera.projectionMatrix, shadowCamera.matrixWorldInverse);
+    this._frustum.setFromProjectionMatrix(_projScreenMatrix, shadowCamera.coordinateSystem, shadowCamera.reversedDepth);
+    if (shadowCamera.coordinateSystem === WebGPUCoordinateSystem || shadowCamera.reversedDepth) {
+      shadowMatrix.set(
+        0.5,
+        0,
+        0,
+        0.5,
+        0,
+        0.5,
+        0,
+        0.5,
+        0,
+        0,
+        1,
+        0,
+        // Identity Z (preserving the correct [0, 1] range from the projection matrix)
+        0,
+        0,
+        0,
+        1
+      );
+    } else {
+      shadowMatrix.set(
+        0.5,
+        0,
+        0,
+        0.5,
+        0,
+        0.5,
+        0,
+        0.5,
+        0,
+        0,
+        0.5,
+        0.5,
+        0,
+        0,
+        0,
+        1
+      );
+    }
+    shadowMatrix.multiply(_projScreenMatrix);
+  }
+  /**
+   * Returns a viewport definition for the given viewport index.
+   *
+   * @param {number} viewportIndex - The viewport index.
+   * @return {Vector4} The viewport.
+   */
+  getViewport(viewportIndex) {
+    return this._viewports[viewportIndex];
+  }
+  /**
+   * Returns the frame extends.
+   *
+   * @return {Vector2} The frame extends.
+   */
+  getFrameExtents() {
+    return this._frameExtents;
+  }
+  /**
+   * Frees the GPU-related resources allocated by this instance. Call this
+   * method whenever this instance is no longer used in your app.
+   */
+  dispose() {
+    if (this.map) {
+      this.map.dispose();
+    }
+    if (this.mapPass) {
+      this.mapPass.dispose();
+    }
+  }
+  /**
+   * Copies the values of the given light shadow instance to this instance.
+   *
+   * @param {LightShadow} source - The light shadow to copy.
+   * @return {LightShadow} A reference to this light shadow instance.
+   */
+  copy(source) {
+    this.camera = source.camera.clone();
+    this.intensity = source.intensity;
+    this.bias = source.bias;
+    this.radius = source.radius;
+    this.autoUpdate = source.autoUpdate;
+    this.needsUpdate = source.needsUpdate;
+    this.normalBias = source.normalBias;
+    this.blurSamples = source.blurSamples;
+    this.mapSize.copy(source.mapSize);
+    this.biasNode = source.biasNode;
+    return this;
+  }
+  /**
+   * Returns a new light shadow instance with copied values from this instance.
+   *
+   * @return {LightShadow} A clone of this instance.
+   */
+  clone() {
+    return new this.constructor().copy(this);
+  }
+  /**
+   * Serializes the light shadow into JSON.
+   *
+   * @return {Object} A JSON object representing the serialized light shadow.
+   * @see {@link ObjectLoader#parse}
+   */
+  toJSON() {
+    const object = {};
+    if (this.intensity !== 1) object.intensity = this.intensity;
+    if (this.bias !== 0) object.bias = this.bias;
+    if (this.normalBias !== 0) object.normalBias = this.normalBias;
+    if (this.radius !== 1) object.radius = this.radius;
+    if (this.mapSize.x !== 512 || this.mapSize.y !== 512) object.mapSize = this.mapSize.toArray();
+    object.camera = this.camera.toJSON(false).object;
+    delete object.camera.matrix;
+    return object;
+  }
+}
+const _position$2 = /* @__PURE__ */ new Vector3();
+const _quaternion$2 = /* @__PURE__ */ new Quaternion();
+const _scale$2 = /* @__PURE__ */ new Vector3();
+class Camera extends Object3D {
+  /**
+   * Constructs a new camera.
+   */
+  constructor() {
+    super();
+    this.isCamera = true;
+    this.type = "Camera";
+    this.matrixWorldInverse = new Matrix4();
+    this.projectionMatrix = new Matrix4();
+    this.projectionMatrixInverse = new Matrix4();
+    this.coordinateSystem = WebGLCoordinateSystem;
+    this._reversedDepth = false;
+  }
+  /**
+   * The flag that indicates whether the camera uses a reversed depth buffer.
+   *
+   * @type {boolean}
+   * @default false
+   */
+  get reversedDepth() {
+    return this._reversedDepth;
+  }
+  copy(source, recursive) {
+    super.copy(source, recursive);
+    this.matrixWorldInverse.copy(source.matrixWorldInverse);
+    this.projectionMatrix.copy(source.projectionMatrix);
+    this.projectionMatrixInverse.copy(source.projectionMatrixInverse);
+    this.coordinateSystem = source.coordinateSystem;
+    return this;
+  }
+  /**
+   * Returns a vector representing the ("look") direction of the 3D object in world space.
+   *
+   * This method is overwritten since cameras have a different forward vector compared to other
+   * 3D objects. A camera looks down its local, negative z-axis by default.
+   *
+   * @param {Vector3} target - The target vector the result is stored to.
+   * @return {Vector3} The 3D object's direction in world space.
+   */
+  getWorldDirection(target) {
+    return super.getWorldDirection(target).negate();
+  }
+  updateMatrixWorld(force) {
+    super.updateMatrixWorld(force);
+    this.matrixWorld.decompose(_position$2, _quaternion$2, _scale$2);
+    if (_scale$2.x === 1 && _scale$2.y === 1 && _scale$2.z === 1) {
+      this.matrixWorldInverse.copy(this.matrixWorld).invert();
+    } else {
+      this.matrixWorldInverse.compose(_position$2, _quaternion$2, _scale$2.set(1, 1, 1)).invert();
+    }
+  }
+  updateWorldMatrix(updateParents, updateChildren) {
+    super.updateWorldMatrix(updateParents, updateChildren);
+    this.matrixWorld.decompose(_position$2, _quaternion$2, _scale$2);
+    if (_scale$2.x === 1 && _scale$2.y === 1 && _scale$2.z === 1) {
+      this.matrixWorldInverse.copy(this.matrixWorld).invert();
+    } else {
+      this.matrixWorldInverse.compose(_position$2, _quaternion$2, _scale$2.set(1, 1, 1)).invert();
+    }
+  }
+  clone() {
+    return new this.constructor().copy(this);
+  }
+}
+class OrthographicCamera extends Camera {
+  /**
+   * Constructs a new orthographic camera.
+   *
+   * @param {number} [left=-1] - The left plane of the camera's frustum.
+   * @param {number} [right=1] - The right plane of the camera's frustum.
+   * @param {number} [top=1] - The top plane of the camera's frustum.
+   * @param {number} [bottom=-1] - The bottom plane of the camera's frustum.
+   * @param {number} [near=0.1] - The camera's near plane.
+   * @param {number} [far=2000] - The camera's far plane.
+   */
+  constructor(left = -1, right = 1, top = 1, bottom = -1, near = 0.1, far = 2e3) {
+    super();
+    this.isOrthographicCamera = true;
+    this.type = "OrthographicCamera";
+    this.zoom = 1;
+    this.view = null;
+    this.left = left;
+    this.right = right;
+    this.top = top;
+    this.bottom = bottom;
+    this.near = near;
+    this.far = far;
+    this.updateProjectionMatrix();
+  }
+  copy(source, recursive) {
+    super.copy(source, recursive);
+    this.left = source.left;
+    this.right = source.right;
+    this.top = source.top;
+    this.bottom = source.bottom;
+    this.near = source.near;
+    this.far = source.far;
+    this.zoom = source.zoom;
+    this.view = source.view === null ? null : Object.assign({}, source.view);
+    return this;
+  }
+  /**
+   * Sets an offset in a larger frustum. This is useful for multi-window or
+   * multi-monitor/multi-machine setups.
+   *
+   * @param {number} fullWidth - The full width of multiview setup.
+   * @param {number} fullHeight - The full height of multiview setup.
+   * @param {number} x - The horizontal offset of the subcamera.
+   * @param {number} y - The vertical offset of the subcamera.
+   * @param {number} width - The width of subcamera.
+   * @param {number} height - The height of subcamera.
+   * @see {@link PerspectiveCamera#setViewOffset}
+   */
+  setViewOffset(fullWidth, fullHeight, x2, y2, width, height) {
+    if (this.view === null) {
+      this.view = {
+        enabled: true,
+        fullWidth: 1,
+        fullHeight: 1,
+        offsetX: 0,
+        offsetY: 0,
+        width: 1,
+        height: 1
+      };
+    }
+    this.view.enabled = true;
+    this.view.fullWidth = fullWidth;
+    this.view.fullHeight = fullHeight;
+    this.view.offsetX = x2;
+    this.view.offsetY = y2;
+    this.view.width = width;
+    this.view.height = height;
+    this.updateProjectionMatrix();
+  }
+  /**
+   * Removes the view offset from the projection matrix.
+   */
+  clearViewOffset() {
+    if (this.view !== null) {
+      this.view.enabled = false;
+    }
+    this.updateProjectionMatrix();
+  }
+  /**
+   * Updates the camera's projection matrix. Must be called after any change of
+   * camera properties.
+   */
+  updateProjectionMatrix() {
+    const dx = (this.right - this.left) / (2 * this.zoom);
+    const dy = (this.top - this.bottom) / (2 * this.zoom);
+    const cx = (this.right + this.left) / 2;
+    const cy = (this.top + this.bottom) / 2;
+    let left = cx - dx;
+    let right = cx + dx;
+    let top = cy + dy;
+    let bottom = cy - dy;
+    if (this.view !== null && this.view.enabled) {
+      const scaleW = (this.right - this.left) / this.view.fullWidth / this.zoom;
+      const scaleH = (this.top - this.bottom) / this.view.fullHeight / this.zoom;
+      left += scaleW * this.view.offsetX;
+      right = left + scaleW * this.view.width;
+      top -= scaleH * this.view.offsetY;
+      bottom = top - scaleH * this.view.height;
+    }
+    this.projectionMatrix.makeOrthographic(left, right, top, bottom, this.near, this.far, this.coordinateSystem, this.reversedDepth);
+    this.projectionMatrixInverse.copy(this.projectionMatrix).invert();
+  }
+  toJSON(meta) {
+    const data = super.toJSON(meta);
+    data.object.zoom = this.zoom;
+    data.object.left = this.left;
+    data.object.right = this.right;
+    data.object.top = this.top;
+    data.object.bottom = this.bottom;
+    data.object.near = this.near;
+    data.object.far = this.far;
+    if (this.view !== null) data.object.view = Object.assign({}, this.view);
+    return data;
+  }
+}
+class DirectionalLightShadow extends LightShadow {
+  /**
+   * Constructs a new directional light shadow.
+   */
+  constructor() {
+    super(new OrthographicCamera(-5, 5, 5, -5, 0.5, 500));
+    this.isDirectionalLightShadow = true;
+  }
+}
+class DirectionalLight extends Light {
+  /**
+   * Constructs a new directional light.
+   *
+   * @param {(number|Color|string)} [color=0xffffff] - The light's color.
+   * @param {number} [intensity=1] - The light's strength/intensity.
+   */
+  constructor(color2, intensity) {
+    super(color2, intensity);
+    this.isDirectionalLight = true;
+    this.type = "DirectionalLight";
+    this.position.copy(Object3D.DEFAULT_UP);
+    this.updateMatrix();
+    this.target = new Object3D();
+    this.shadow = new DirectionalLightShadow();
+  }
+  dispose() {
+    super.dispose();
+    this.shadow.dispose();
+  }
+  copy(source) {
+    super.copy(source);
+    this.target = source.target.clone();
+    this.shadow = source.shadow.clone();
+    return this;
+  }
+  toJSON(meta) {
+    const data = super.toJSON(meta);
+    data.object.shadow = this.shadow.toJSON();
+    data.object.target = this.target.uuid;
+    return data;
+  }
+}
+class AmbientLight extends Light {
+  /**
+   * Constructs a new ambient light.
+   *
+   * @param {(number|Color|string)} [color=0xffffff] - The light's color.
+   * @param {number} [intensity=1] - The light's strength/intensity.
+   */
+  constructor(color2, intensity) {
+    super(color2, intensity);
+    this.isAmbientLight = true;
+    this.type = "AmbientLight";
+  }
+}
+if (typeof __THREE_DEVTOOLS__ !== "undefined") {
+  __THREE_DEVTOOLS__.dispatchEvent(new CustomEvent("register", { detail: {
+    revision: REVISION
+  } }));
+}
+if (typeof window !== "undefined") {
+  if (window.__THREE__) {
+    warn("WARNING: Multiple instances of Three.js being imported.");
+  } else {
+    window.__THREE__ = REVISION;
+  }
+}
+class HDRLoader extends DataTextureLoader {
+  /**
+      * Constructs a new RGBE/HDR loader.
+      *
+      * @param {LoadingManager} [manager] - The loading manager.
+      */
+  constructor(manager) {
+    super(manager);
+    this.type = HalfFloatType;
+  }
+  /**
+      * Parses the given RGBE texture data.
+      *
+      * @param {ArrayBuffer} buffer - The raw texture data.
+      * @return {DataTextureLoader~TexData} An object representing the parsed texture data.
+      */
+  parse(buffer) {
+    const rgbe_read_error = 1, rgbe_write_error = 2, rgbe_format_error = 3, rgbe_memory_error = 4, rgbe_error = function(rgbe_error_code, msg) {
+      switch (rgbe_error_code) {
+        case rgbe_read_error:
+          throw new Error("THREE.HDRLoader: Read Error: " + (msg || ""));
+        case rgbe_write_error:
+          throw new Error("THREE.HDRLoader: Write Error: " + (msg || ""));
+        case rgbe_format_error:
+          throw new Error("THREE.HDRLoader: Bad File Format: " + (msg || ""));
+        default:
+        case rgbe_memory_error:
+          throw new Error("THREE.HDRLoader: Memory Error: " + (msg || ""));
+      }
+    }, RGBE_VALID_PROGRAMTYPE = 1, RGBE_VALID_FORMAT = 2, RGBE_VALID_DIMENSIONS = 4, NEWLINE = "\n", fgets = function(buffer2, lineLimit, consume) {
+      const chunkSize = 128;
+      lineLimit = !lineLimit ? 1024 : lineLimit;
+      let p2 = buffer2.pos, i2 = -1, len = 0, s2 = "", chunk = String.fromCharCode.apply(null, new Uint16Array(buffer2.subarray(p2, p2 + chunkSize)));
+      while (0 > (i2 = chunk.indexOf(NEWLINE)) && len < lineLimit && p2 < buffer2.byteLength) {
+        s2 += chunk;
+        len += chunk.length;
+        p2 += chunkSize;
+        chunk += String.fromCharCode.apply(null, new Uint16Array(buffer2.subarray(p2, p2 + chunkSize)));
+      }
+      if (-1 < i2) {
+        buffer2.pos += len + i2 + 1;
+        return s2 + chunk.slice(0, i2);
+      }
+      return false;
+    }, RGBE_ReadHeader = function(buffer2) {
+      const magic_token_re = /^#\?(\S+)/, gamma_re = /^\s*GAMMA\s*=\s*(\d+(\.\d+)?)\s*$/, exposure_re = /^\s*EXPOSURE\s*=\s*(\d+(\.\d+)?)\s*$/, format_re = /^\s*FORMAT=(\S+)\s*$/, dimensions_re = /^\s*\-Y\s+(\d+)\s+\+X\s+(\d+)\s*$/, header = {
+        valid: 0,
+        /* indicate which fields are valid */
+        string: "",
+        /* the actual header string */
+        comments: "",
+        /* comments found in header */
+        programtype: "RGBE",
+        /* listed at beginning of file to identify it after "#?". defaults to "RGBE" */
+        format: "",
+        /* RGBE format, default 32-bit_rle_rgbe */
+        gamma: 1,
+        /* image has already been gamma corrected with given gamma. defaults to 1.0 (no correction) */
+        exposure: 1,
+        /* a value of 1.0 in an image corresponds to <exposure> watts/steradian/m^2. defaults to 1.0 */
+        width: 0,
+        height: 0
+        /* image dimensions, width/height */
+      };
+      let line, match;
+      if (buffer2.pos >= buffer2.byteLength || !(line = fgets(buffer2))) {
+        rgbe_error(rgbe_read_error, "no header found");
+      }
+      if (!(match = line.match(magic_token_re))) {
+        rgbe_error(rgbe_format_error, "bad initial token");
+      }
+      header.valid |= RGBE_VALID_PROGRAMTYPE;
+      header.programtype = match[1];
+      header.string += line + "\n";
+      while (true) {
+        line = fgets(buffer2);
+        if (false === line) break;
+        header.string += line + "\n";
+        if ("#" === line.charAt(0)) {
+          header.comments += line + "\n";
+          continue;
+        }
+        if (match = line.match(gamma_re)) {
+          header.gamma = parseFloat(match[1]);
+        }
+        if (match = line.match(exposure_re)) {
+          header.exposure = parseFloat(match[1]);
+        }
+        if (match = line.match(format_re)) {
+          header.valid |= RGBE_VALID_FORMAT;
+          header.format = match[1];
+        }
+        if (match = line.match(dimensions_re)) {
+          header.valid |= RGBE_VALID_DIMENSIONS;
+          header.height = parseInt(match[1], 10);
+          header.width = parseInt(match[2], 10);
+        }
+        if (header.valid & RGBE_VALID_FORMAT && header.valid & RGBE_VALID_DIMENSIONS) break;
+      }
+      if (!(header.valid & RGBE_VALID_FORMAT)) {
+        rgbe_error(rgbe_format_error, "missing format specifier");
+      }
+      if (!(header.valid & RGBE_VALID_DIMENSIONS)) {
+        rgbe_error(rgbe_format_error, "missing image size specifier");
+      }
+      return header;
+    }, RGBE_ReadPixels_RLE = function(buffer2, w3, h3) {
+      const scanline_width = w3;
+      if (
+        // run length encoding is not allowed so read flat
+        scanline_width < 8 || scanline_width > 32767 || // this file is not run length encoded
+        (2 !== buffer2[0] || 2 !== buffer2[1] || buffer2[2] & 128)
+      ) {
+        return new Uint8Array(buffer2);
+      }
+      if (scanline_width !== (buffer2[2] << 8 | buffer2[3])) {
+        rgbe_error(rgbe_format_error, "wrong scanline width");
+      }
+      const data_rgba = new Uint8Array(4 * w3 * h3);
+      if (!data_rgba.length) {
+        rgbe_error(rgbe_memory_error, "unable to allocate buffer space");
+      }
+      let offset = 0, pos = 0;
+      const ptr_end = 4 * scanline_width;
+      const rgbeStart = new Uint8Array(4);
+      const scanline_buffer = new Uint8Array(ptr_end);
+      let num_scanlines = h3;
+      while (num_scanlines > 0 && pos < buffer2.byteLength) {
+        if (pos + 4 > buffer2.byteLength) {
+          rgbe_error(rgbe_read_error);
+        }
+        rgbeStart[0] = buffer2[pos++];
+        rgbeStart[1] = buffer2[pos++];
+        rgbeStart[2] = buffer2[pos++];
+        rgbeStart[3] = buffer2[pos++];
+        if (2 != rgbeStart[0] || 2 != rgbeStart[1] || (rgbeStart[2] << 8 | rgbeStart[3]) != scanline_width) {
+          rgbe_error(rgbe_format_error, "bad rgbe scanline format");
+        }
+        let ptr = 0, count;
+        while (ptr < ptr_end && pos < buffer2.byteLength) {
+          count = buffer2[pos++];
+          const isEncodedRun = count > 128;
+          if (isEncodedRun) count -= 128;
+          if (0 === count || ptr + count > ptr_end) {
+            rgbe_error(rgbe_format_error, "bad scanline data");
+          }
+          if (isEncodedRun) {
+            const byteValue = buffer2[pos++];
+            for (let i2 = 0; i2 < count; i2++) {
+              scanline_buffer[ptr++] = byteValue;
+            }
+          } else {
+            scanline_buffer.set(buffer2.subarray(pos, pos + count), ptr);
+            ptr += count;
+            pos += count;
+          }
+        }
+        const l2 = scanline_width;
+        for (let i2 = 0; i2 < l2; i2++) {
+          let off = 0;
+          data_rgba[offset] = scanline_buffer[i2 + off];
+          off += scanline_width;
+          data_rgba[offset + 1] = scanline_buffer[i2 + off];
+          off += scanline_width;
+          data_rgba[offset + 2] = scanline_buffer[i2 + off];
+          off += scanline_width;
+          data_rgba[offset + 3] = scanline_buffer[i2 + off];
+          offset += 4;
+        }
+        num_scanlines--;
+      }
+      return data_rgba;
+    };
+    const RGBEByteToRGBFloat = function(sourceArray, sourceOffset, destArray, destOffset) {
+      const e2 = sourceArray[sourceOffset + 3];
+      const scale2 = Math.pow(2, e2 - 128) / 255;
+      destArray[destOffset + 0] = sourceArray[sourceOffset + 0] * scale2;
+      destArray[destOffset + 1] = sourceArray[sourceOffset + 1] * scale2;
+      destArray[destOffset + 2] = sourceArray[sourceOffset + 2] * scale2;
+      destArray[destOffset + 3] = 1;
+    };
+    const RGBEByteToRGBHalf = function(sourceArray, sourceOffset, destArray, destOffset) {
+      const e2 = sourceArray[sourceOffset + 3];
+      const scale2 = Math.pow(2, e2 - 128) / 255;
+      destArray[destOffset + 0] = DataUtils.toHalfFloat(Math.min(sourceArray[sourceOffset + 0] * scale2, 65504));
+      destArray[destOffset + 1] = DataUtils.toHalfFloat(Math.min(sourceArray[sourceOffset + 1] * scale2, 65504));
+      destArray[destOffset + 2] = DataUtils.toHalfFloat(Math.min(sourceArray[sourceOffset + 2] * scale2, 65504));
+      destArray[destOffset + 3] = DataUtils.toHalfFloat(1);
+    };
+    const byteArray = new Uint8Array(buffer);
+    byteArray.pos = 0;
+    const rgbe_header_info = RGBE_ReadHeader(byteArray);
+    const w2 = rgbe_header_info.width, h2 = rgbe_header_info.height, image_rgba_data = RGBE_ReadPixels_RLE(byteArray.subarray(byteArray.pos), w2, h2);
+    let data, type;
+    let numElements;
+    switch (this.type) {
+      case FloatType:
+        numElements = image_rgba_data.length / 4;
+        const floatArray = new Float32Array(numElements * 4);
+        for (let j2 = 0; j2 < numElements; j2++) {
+          RGBEByteToRGBFloat(image_rgba_data, j2 * 4, floatArray, j2 * 4);
+        }
+        data = floatArray;
+        type = FloatType;
+        break;
+      case HalfFloatType:
+        numElements = image_rgba_data.length / 4;
+        const halfArray = new Uint16Array(numElements * 4);
+        for (let j2 = 0; j2 < numElements; j2++) {
+          RGBEByteToRGBHalf(image_rgba_data, j2 * 4, halfArray, j2 * 4);
+        }
+        data = halfArray;
+        type = HalfFloatType;
+        break;
+      default:
+        throw new Error("THREE.HDRLoader: Unsupported type: " + this.type);
+    }
+    return {
+      width: w2,
+      height: h2,
+      data,
+      header: rgbe_header_info.string,
+      gamma: rgbe_header_info.gamma,
+      exposure: rgbe_header_info.exposure,
+      type
+    };
+  }
+  /**
+      * Sets the texture type.
+      *
+      * @param {(HalfFloatType|FloatType)} value - The texture type to set.
+      * @return {HDRLoader} A reference to this loader.
+      */
+  setDataType(value) {
+    this.type = value;
+    return this;
+  }
+  load(url, onLoad, onProgress, onError) {
+    function onLoadCallback(texture, texData) {
+      switch (texture.type) {
+        case FloatType:
+        case HalfFloatType:
+          texture.colorSpace = LinearSRGBColorSpace;
+          texture.minFilter = LinearFilter;
+          texture.magFilter = LinearFilter;
+          texture.generateMipmaps = false;
+          texture.flipY = true;
+          break;
+      }
+      if (onLoad) onLoad(texture, texData);
+    }
+    return super.load(url, onLoadCallback, onProgress, onError);
+  }
+}
 const HumanAvatar = ({
   className,
   avatarUrl,
@@ -111919,8 +122560,8 @@ const HumanAvatar = ({
   const headRef = reactExports.useRef(null);
   const [libLoaded, setLibLoaded] = reactExports.useState(false);
   const [initDone, setInitDone] = reactExports.useState(false);
-  const [error, setError] = reactExports.useState(null);
-  const [loading, setLoading] = reactExports.useState(true);
+  const [error2, setError] = reactExports.useState(null);
+  const [loading2, setLoading] = reactExports.useState(true);
   const onReadyRef = reactExports.useRef(onReady);
   const visibilityCleanupRef = reactExports.useRef(null);
   const visemeState = {};
@@ -111931,29 +122572,18 @@ const HumanAvatar = ({
     if (libLoaded || typeof window === "undefined") return;
     const loadTalkingHead = async () => {
       try {
-        let importMapEl = document.querySelector('script[type="importmap"]');
-        if (!importMapEl) {
-          importMapEl = document.createElement("script");
-          importMapEl.setAttribute("type", "importmap");
-          importMapEl.textContent = JSON.stringify({
-            imports: {
-              three: "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js/+esm",
-              "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
-              talkinghead: "https://cdn.jsdelivr.net/gh/met4citizen/TalkingHead@1.7/modules/talkinghead.mjs",
-              headaudio: "https://cdn.jsdelivr.net/gh/met4citizen/HeadAudio@main/modules/headaudio.mjs"
-            }
-          });
-          document.head.appendChild(importMapEl);
-          await new Promise((r2) => setTimeout(r2, 200));
-        }
-        const script = document.createElement("script");
-        script.type = "module";
-        script.textContent = `
-          import { TalkingHead } from 'https://cdn.jsdelivr.net/gh/met4citizen/TalkingHead@1.7/modules/talkinghead.mjs';
-          window.TalkingHead = TalkingHead;
-          window.dispatchEvent(new CustomEvent('talkinghead-loaded'));
-        `;
-        document.head.appendChild(script);
+        const importMap = document.createElement("script");
+        importMap.type = "importmap";
+        importMap.textContent = JSON.stringify({
+          imports: {
+            three: "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+          }
+        });
+        document.head.appendChild(importMap);
+        await new Promise((r2) => setTimeout(r2, 100));
+        const { TalkingHead } = await import("https://cdn.jsdelivr.net/gh/met4citizen/TalkingHead@1.7/modules/talkinghead.mjs");
+        window.TalkingHead = TalkingHead;
         await new Promise((resolve) => {
           const handler = () => {
             window.removeEventListener("talkinghead-loaded", handler);
@@ -112001,7 +122631,7 @@ const HumanAvatar = ({
         blinkInterval: 4e3,
         headMovement: false,
         backgroundColor: null,
-        pixelRatio: window.devicePixelRatio,
+        pixelRatio: Math.min(window.devicePixelRatio, 2),
         avatarSpeakingEyeContact: 1,
         avatarSpeakingHeadMove: 0,
         avatarIdleHeadMove: 0,
@@ -112030,6 +122660,65 @@ const HumanAvatar = ({
         }
         return;
       }
+      const scene = head.scene;
+      const renderer = head.renderer;
+      new HDRLoader().load(
+        "https://www.spotinfo.ai/js/public/hdri/studio.hdr",
+        (texture) => {
+          texture.mapping = EquirectangularReflectionMapping;
+          scene.environment = texture;
+        }
+      );
+      if (renderer) {
+        renderer.physicallyCorrectLights = true;
+        renderer.outputColorSpace = SRGBColorSpace;
+        renderer.toneMapping = ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1;
+        renderer.shadowMap.enabled = true;
+      }
+      scene.traverse((child) => {
+        if (!child.isMesh || !child.material) return;
+        const mat = child.material;
+        const name2 = child.name.toLowerCase();
+        if (name2.includes("skin") || name2.includes("face")) {
+          mat.roughness = 0.45;
+          mat.envMapIntensity = 1.8;
+        }
+        if (name2.includes("eye")) {
+          mat.roughness = 0.08;
+          mat.envMapIntensity = 2;
+        }
+        if (name2.includes("hair")) {
+          const newMat = new MeshPhysicalMaterial({
+            map: child.material.map,
+            transparent: true,
+            alphaTest: 0.5,
+            roughness: 0.8,
+            metalness: 0,
+            // 🔥 KEY ADDITIONS
+            transmission: 0,
+            clearcoat: 0.3,
+            clearcoatRoughness: 0.6,
+            side: DoubleSide
+          });
+          newMat.envMapIntensity = 0.2;
+          child.material = newMat;
+        }
+        mat.needsUpdate = true;
+        child.material.color.multiplyScalar(0.9);
+      });
+      const keyLight = new DirectionalLight(16777215, 1.2);
+      keyLight.position.set(1, 2, 3);
+      scene.add(keyLight);
+      const fillLight = new DirectionalLight(16777215, 0.4);
+      fillLight.position.set(-2, 1, 2);
+      scene.add(fillLight);
+      const rim = new DirectionalLight(16777215, 0.6);
+      rim.position.set(-2, 3, -2);
+      rim.intensity = 1;
+      scene.add(rim);
+      scene.add(new AmbientLight(16777215, 0.15));
+      scene.background = null;
       if (!head.mtAvatar) {
         console.warn("mtAvatar not found — HeadAudio may not work");
       }
@@ -112057,12 +122746,14 @@ const HumanAvatar = ({
           await headaudio.loadModel(
             "https://cdn.jsdelivr.net/gh/met4citizen/HeadAudio@main/dist/model-en-mixed.bin"
           );
+          const AMP2 = 2;
           const SMOOTHING = 0.5;
           headaudio.onvalue = (key, value) => {
             var _a2;
             if (!((_a2 = head.mtAvatar) == null ? void 0 : _a2[key])) return;
             const prev = visemeState[key] ?? 0;
-            const smoothed = prev * SMOOTHING + value * (1 - SMOOTHING);
+            const amplified = Math.min(1, value * AMP2);
+            const smoothed = prev * SMOOTHING + amplified * (1 - SMOOTHING);
             visemeState[key] = smoothed;
             Object.assign(head.mtAvatar[key], {
               newvalue: smoothed,
@@ -112140,8 +122831,8 @@ const HumanAvatar = ({
       role: "img",
       "aria-label": "3D talking head avatar",
       children: [
-        loading && !error && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "human-avatar-loading", "aria-live": "polite", children: "Loading avatar…" }),
-        error && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "human-avatar-error", role: "alert", children: error })
+        loading2 && !error2 && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "human-avatar-loading", "aria-live": "polite", children: "Loading avatar…" }),
+        error2 && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "human-avatar-error", role: "alert", children: error2 })
       ]
     }
   );
@@ -112404,7 +123095,7 @@ function VoiceAlternateView({
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "talking-head-wrapper", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
         HumanAvatar,
         {
-          avatarUrl: "https://www.spotinfo.ai/js/public/avatars/VK_tpose.glb",
+          avatarUrl: "https://www.spotinfo.ai/js/public/avatars/male_wo_beard_tpose_updated.glb",
           onReady: (head) => {
             headRef.current = head;
             if (document.visibilityState === "visible") {
@@ -112910,7 +123601,7 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Sun Apr 12 23:40:12 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Mon Apr 13 18:22:26 IST 2026 */
 
 /* Start of file: components/avatar/HumanAvatar.css */
 
@@ -117450,1856 +128141,6 @@ It has 3 components:
 }
 
 /* End of file: components/css/ChatMessage.css */
-
-/* Start of file: components/css/GlowingCloudAnimation.css */
-
-/* src/components/css/GlowingCloudAnimation.css:1 */
-
-/* ================================================
-   CENTRALIZED CSS VARIABLES
-   ================================================
-   This file contains all shared CSS variables used across components.
-   Import this file in components that need these variables.
-   ================================================ */
-
-/* src/components/css/variables.css:8 */
-
-:root {
-  /* ================================================
-     COLORS - ALL COLORS IN ONE PLACE
-     ================================================ */
-  /* src/components/css/variables.css:13 */
-  /* Theme Colors (from chat widget config - use these directly) */
-  /* src/components/css/variables.css:14 */
-  /* --chat-widget-primary-color (defined elsewhere) */
-  /* src/components/css/variables.css:15 */
-  /* --chat-widget-secondary-color (defined elsewhere) */
-  /* src/components/css/variables.css:16 */
-  /* --chat-widget-button-content-color (defined elsewhere) */
-  /* src/components/css/variables.css:17 */
-  /* --chat-widget-message-text-color (defined elsewhere) */
-  /* src/components/css/variables.css:18 */
-  /* --chat-widget-message-font-size (defined elsewhere) */
-  /* src/components/css/variables.css:20 */
-  /* Derived Theme Colors */
-  /* src/components/css/variables.css:21 */
-  /* Primary hover: darker version of primary color (85% primary + 15% black) */
-  /* src/components/css/variables.css:22 */
-  --chat-widget-primary-color-hover: color-mix(
-/* src/components/css/variables.css:23 */
-    in srgb,
-/* src/components/css/variables.css:24 */
-    var(--chat-widget-primary-color) 85%,
-/* src/components/css/variables.css:25 */
-    black
-/* src/components/css/variables.css:26 */
-  );
-  /* src/components/css/variables.css:28 */
-  /* Voice State Colors */
-  /* src/components/css/variables.css:29 */
-  --color-voice-listening: #3b82f6;
-  /* src/components/css/variables.css:30 */
-  /* Blue */
-  /* src/components/css/variables.css:31 */
-  --color-voice-speaking: #10b981;
-  /* src/components/css/variables.css:32 */
-  /* Green */
-  /* src/components/css/variables.css:33 */
-  --color-voice-thinking: #f59e0b;
-  /* src/components/css/variables.css:34 */
-  /* Amber/Orange */
-  /* src/components/css/variables.css:35 */
-  --color-voice-disconnected: #ef4444cb;
-  /* src/components/css/variables.css:36 */
-  /* Red */
-  /* src/components/css/variables.css:38 */
-  /* --color-voice-listening-alt: #8b5cf6; Purple/Violet */
-  /* src/components/css/variables.css:39 */
-  /* --color-voice-speaking-alt: #058158; Darker Green */
-  /* src/components/css/variables.css:40 */
-  /* --color-voice-speaking-alt-2: #00ff00; Bright Green */
-  /* src/components/css/variables.css:41 */
-  /* --color-voice-thinking-alt: #fbbf24; Yellow */
-  /* src/components/css/variables.css:43 */
-  /* Special/Brand Colors */
-  /* src/components/css/variables.css:44 */
-  --color-whatsapp: #1eb655;
-  /* src/components/css/variables.css:46 */
-  /* Opacity Values */
-  /* src/components/css/variables.css:47 */
-  --opacity-disabled: 0.7;
-  /* src/components/css/variables.css:48 */
-  --opacity-hover: 0.8;
-  /* src/components/css/variables.css:49 */
-  --opacity-normal: 1;
-  /* ================================================
-     INPUT AREA VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:55 */
-  /* Input Colors */
-  /* src/components/css/variables.css:57 */
-  --color-input-background: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:58 */
-  --color-input-text: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:59 */
-  --color-input-placeholder-text: color-mix(
-/* src/components/css/variables.css:60 */
-    in srgb,
-/* src/components/css/variables.css:61 */
-    var(--color-input-text) 70%,
-/* src/components/css/variables.css:62 */
-    white
-/* src/components/css/variables.css:63 */
-  );
-  /* src/components/css/variables.css:64 */
-  --color-input-placeholder-opacity: 70%;
-  /* src/components/css/variables.css:65 */
-  --color-input-placeholder-opacity-focus: 80%;
-  /* src/components/css/variables.css:67 */
-  /* Input Dimensions */
-  /* src/components/css/variables.css:68 */
-  --input-default-height: 40px;
-  /* src/components/css/variables.css:69 */
-  --input-min-height: 40px;
-  /* src/components/css/variables.css:70 */
-  --input-max-height: 120px;
-  /* src/components/css/variables.css:71 */
-  --input-max-height-tablet: 100px;
-  /* src/components/css/variables.css:72 */
-  --input-max-height-mobile: 80px;
-  /* src/components/css/variables.css:74 */
-  /* Input Line Height */
-  /* src/components/css/variables.css:75 */
-  --input-line-height: 20px;
-  /* src/components/css/variables.css:77 */
-  /* Input Padding */
-  /* src/components/css/variables.css:78 */
-  --input-text-padding-horizontal: 4px;
-  /* src/components/css/variables.css:79 */
-  --input-text-padding-vertical: 0px;
-  /* src/components/css/variables.css:80 */
-  --input-text-padding: 0 var(--input-text-padding-horizontal);
-  /* src/components/css/variables.css:81 */
-  --input-container-padding: 6px 8px;
-  /* src/components/css/variables.css:82 */
-  --input-container-padding-sleek: 4px 4px;
-  /* src/components/css/variables.css:84 */
-  /* Input Font */
-  /* src/components/css/variables.css:85 */
-  --input-font-size: var(--chat-widget-message-font-size);
-  /* src/components/css/variables.css:86 */
-  --input-font-weight: 400;
-  /* src/components/css/variables.css:87 */
-  --input-font-weight-focus: 500;
-  /* src/components/css/variables.css:88 */
-  --input-font-weight-bold: 600;
-  /* ================================================
-     INPUT SCROLLBAR VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:94 */
-  /* Scrollbar Colors */
-  /* src/components/css/variables.css:95 */
-  --color-scrollbar-input-thumb: color-mix(
-/* src/components/css/variables.css:96 */
-    in srgb,
-/* src/components/css/variables.css:97 */
-    var(--chat-widget-primary-color) 75%,
-/* src/components/css/variables.css:98 */
-    transparent
-/* src/components/css/variables.css:99 */
-  );
-  /* src/components/css/variables.css:100 */
-  --color-scrollbar-input-thumb-hover: color-mix(
-/* src/components/css/variables.css:101 */
-    in srgb,
-/* src/components/css/variables.css:102 */
-    var(--chat-widget-primary-color) 90%,
-/* src/components/css/variables.css:103 */
-    transparent
-/* src/components/css/variables.css:104 */
-  );
-  /* src/components/css/variables.css:106 */
-  --color-scrollbar-input-thumb-avatar-view: color-mix(
-/* src/components/css/variables.css:107 */
-    in srgb,
-/* src/components/css/variables.css:108 */
-    var(--chat-widget-secondary-color) 75%,
-/* src/components/css/variables.css:109 */
-    transparent
-/* src/components/css/variables.css:110 */
-  );
-  /* src/components/css/variables.css:111 */
-  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
-/* src/components/css/variables.css:112 */
-    in srgb,
-/* src/components/css/variables.css:113 */
-    var(--chat-widget-secondary-color) 90%,
-/* src/components/css/variables.css:114 */
-    transparent
-/* src/components/css/variables.css:115 */
-  );
-  /* src/components/css/variables.css:117 */
-  --color-scrollbar-input-track: transparent;
-  /* src/components/css/variables.css:119 */
-  --input-scrollbar-width: thin;
-  /* src/components/css/variables.css:120 */
-  --input-scrollbar-border-radius: 2.5px;
-  /* src/components/css/variables.css:121 */
-  --input-scrollbar-thumb-hover-opacity: var(--opacity-hover);
-  /* ================================================
-     BUTTON VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:127 */
-  /* Button Dimensions */
-  /* src/components/css/variables.css:128 */
-  --button-size-primary: 32px;
-  /* src/components/css/variables.css:129 */
-  --button-padding-primary: 4px;
-  /* src/components/css/variables.css:130 */
-  --button-size-secondary: 24px;
-  /* src/components/css/variables.css:132 */
-  /* Button Colors */
-  /* src/components/css/variables.css:133 */
-  --color-button-background-primary: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:134 */
-  --color-button-background-hover: var(--chat-widget-primary-color-hover);
-  /* src/components/css/variables.css:135 */
-  --color-button-text: var(--chat-widget-button-content-color);
-  /* src/components/css/variables.css:136 */
-  --color-button-fill: var(--chat-widget-button-content-color);
-  /* src/components/css/variables.css:138 */
-  --color-button-disconnect: #ef4444;
-  /* src/components/css/variables.css:140 */
-  /* Button Opacity States */
-  /* src/components/css/variables.css:141 */
-  --button-opacity-normal: var(--opacity-normal);
-  /* src/components/css/variables.css:142 */
-  --button-opacity-hover: var(--opacity-hover);
-  /* src/components/css/variables.css:143 */
-  --button-opacity-disabled: var(--opacity-disabled);
-  /* ================================================
-     ICON VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:149 */
-  /* Icon Sizes */
-  /* src/components/css/variables.css:150 */
-  --button-icon-size-secondary: 16px;
-  /* src/components/css/variables.css:151 */
-  --button-icon-size-primary: 20px;
-  /* src/components/css/variables.css:152 */
-  /* w-5 h-5 equivalent */
-  /* ================================================
-     CHAT MESSAGE CONTAINER SCROLLBAR
-     ================================================ */
-  /* src/components/css/variables.css:158 */
-  --message-scrollbar-width: thin;
-  /* src/components/css/variables.css:159 */
-  --message-scrollbar-width-px: 6px;
-  /* src/components/css/variables.css:160 */
-  --message-scrollbar-border-radius: 3px;
-  /* src/components/css/variables.css:162 */
-  /* Scrollbar Colors */
-  /* src/components/css/variables.css:163 */
-  --color-scrollbar-message-thumb-default: rgb(209 213 219);
-  /* src/components/css/variables.css:164 */
-  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
-  /* src/components/css/variables.css:165 */
-  --color-scrollbar-message-thumb-theme: var(
-/* src/components/css/variables.css:166 */
-    --chat-widget-button-content-color,
-/* src/components/css/variables.css:167 */
-    var(--chat-widget-secondary-color)
-/* src/components/css/variables.css:168 */
-  );
-  /* src/components/css/variables.css:169 */
-  --color-scrollbar-message-thumb-hover-mix: color-mix(
-/* src/components/css/variables.css:170 */
-    in srgb,
-/* src/components/css/variables.css:171 */
-    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
-/* src/components/css/variables.css:172 */
-      80%,
-/* src/components/css/variables.css:173 */
-    var(--chat-widget-primary-color)
-/* src/components/css/variables.css:174 */
-  );
-  /* src/components/css/variables.css:175 */
-  --color-scrollbar-message-track: transparent;
-  /* ================================================
-     CHAT MESSAGE
-     ================================================ */
-  /* src/components/css/variables.css:181 */
-  --message-text-color: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:182 */
-  --message-font-size: var(--chat-widget-message-font-size);
-  /* ================================================
-     CHAT MESSAGE BUBBLES
-     ================================================ */
-  /* src/components/css/variables.css:188 */
-  --message-bubble-background-color: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:189 */
-  --message-bubble-icon-color: var(--chat-widget-secondary-color);
-  /* ================================================
-     ENGAGEMENT HOOK IMAGE
-     ================================================ */
-  /* src/components/css/variables.css:195 */
-  /* Engagement Hook Image Variables (defined elsewhere via JavaScript) */
-  /* src/components/css/variables.css:196 */
-  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
-  /* src/components/css/variables.css:197 */
-  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
-  /* src/components/css/variables.css:199 */
-  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
-  /* src/components/css/variables.css:200 */
-  --engagement-hook-image-height: var(
-/* src/components/css/variables.css:201 */
-    --chat-widget-engagement-hook-image-height
-/* src/components/css/variables.css:202 */
-  );
-  /* ================================================
-     TRANSITION VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:208 */
-  --transition-fast: 0.2s ease;
-  /* src/components/css/variables.css:209 */
-  --transition-normal: all 0.3s ease;
-  /* src/components/css/variables.css:210 */
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  /* src/components/css/variables.css:211 */
-  --transition-slow-ease: 0.4s ease;
-  /* ================================================
-     BORDER RADIUS VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:217 */
-  --border-radius-small: 2.5px;
-  /* src/components/css/variables.css:218 */
-  --border-radius-medium: 3px;
-  /* src/components/css/variables.css:219 */
-  --border-radius-large: 12px;
-  /* src/components/css/variables.css:220 */
-  --border-radius-xl: 16px;
-  /* src/components/css/variables.css:221 */
-  --border-radius-2xl: 20px;
-  /* src/components/css/variables.css:222 */
-  --border-radius-full: 9999px;
-  /* ================================================
-     SPACING & GAP VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:228 */
-  --spacing-gap-xs: 0.5px;
-  /* src/components/css/variables.css:229 */
-  --spacing-gap-sm: 4px;
-  /* src/components/css/variables.css:230 */
-  --spacing-gap-md: 8px;
-  /* src/components/css/variables.css:231 */
-  --spacing-gap-lg: 12px;
-  /* src/components/css/variables.css:232 */
-  --spacing-gap-xl: 16px;
-  /* ================================================
-     Z-INDEX VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:238 */
-  --z-index-base: 1;
-  /* src/components/css/variables.css:239 */
-  --z-index-elevated: 10;
-  /* src/components/css/variables.css:240 */
-  --z-index-high: 20;
-  /* src/components/css/variables.css:241 */
-  --z-index-maximum: 9999;
-  /* ================================================
-     BORDER VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:247 */
-  --border-width-thin: 1px;
-  /* src/components/css/variables.css:248 */
-  --border-width-medium: 2px;
-  /* src/components/css/variables.css:249 */
-  --border-width-thick: 4px;
-  /* ================================================
-     BOX SHADOW VARIABLES (for consistency)
-     ================================================ */
-  /* src/components/css/variables.css:255 */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  /* src/components/css/variables.css:256 */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:257 */
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  /* src/components/css/variables.css:258 */
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
-  /* ================================================
-     SLEEK VIEW SPECIFIC VARIABLES
-     ================================================ */
-  /* src/components/css/variables.css:264 */
-  /* These are already defined in SleekView.css but should be here for consistency */
-  /* src/components/css/variables.css:265 */
-  --sleek-main-min-height: 0px;
-  /* src/components/css/variables.css:266 */
-  --sleek-border-radius: var(--border-radius-large);
-  /* src/components/css/variables.css:267 */
-  --sleek-main-bg: var(--color-sleek-main-bg);
-  /* src/components/css/variables.css:268 */
-  --sleek-main-border: var(--color-sleek-main-border);
-  /* src/components/css/variables.css:269 */
-  --sleek-main-text-color: var(--color-sleek-main-text);
-  /* src/components/css/variables.css:271 */
-  /* Sleek View Colors */
-  /* src/components/css/variables.css:272 */
-  --color-sleek-main-bg: color-mix(
-/* src/components/css/variables.css:273 */
-    in srgb,
-/* src/components/css/variables.css:274 */
-    var(--chat-widget-primary-color) 10%,
-/* src/components/css/variables.css:275 */
-    white
-/* src/components/css/variables.css:276 */
-  );
-  /* src/components/css/variables.css:277 */
-  --color-sleek-main-border: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:278 */
-  --color-sleek-main-text: var(--chat-widget-message-text-color);
-  /* src/components/css/variables.css:280 */
-  /* Gradient Colors (derived from primary/secondary) */
-  /* src/components/css/variables.css:281 */
-  --color-gradient-1: var(--chat-widget-primary-color);
-  /* src/components/css/variables.css:282 */
-  --color-gradient-2: var(--chat-widget-secondary-color);
-  /* src/components/css/variables.css:283 */
-  --color-gradient-3: color-mix(
-/* src/components/css/variables.css:284 */
-    in srgb,
-/* src/components/css/variables.css:285 */
-    var(--chat-widget-primary-color) 60%,
-/* src/components/css/variables.css:286 */
-    var(--chat-widget-secondary-color)
-/* src/components/css/variables.css:287 */
-  );
-  /* src/components/css/variables.css:288 */
-  --color-gradient-4: color-mix(
-/* src/components/css/variables.css:289 */
-    in srgb,
-/* src/components/css/variables.css:290 */
-    var(--chat-widget-primary-color) 40%,
-/* src/components/css/variables.css:291 */
-    var(--chat-widget-secondary-color)
-/* src/components/css/variables.css:292 */
-  );
-  /* src/components/css/variables.css:293 */
-  --color-accent: color-mix(
-/* src/components/css/variables.css:294 */
-    in srgb,
-/* src/components/css/variables.css:295 */
-    var(--chat-widget-primary-color) 70%,
-/* src/components/css/variables.css:296 */
-    var(--chat-widget-secondary-color)
-/* src/components/css/variables.css:297 */
-  );
-  /* src/components/css/variables.css:298 */
-  --color-glow: color-mix(
-/* src/components/css/variables.css:299 */
-    in srgb,
-/* src/components/css/variables.css:300 */
-    var(--chat-widget-primary-color) 30%,
-/* src/components/css/variables.css:301 */
-    transparent
-/* src/components/css/variables.css:302 */
-  );
-  /* src/components/css/variables.css:304 */
-  /* Legacy Gradient Variables (for backward compatibility) */
-  /* src/components/css/variables.css:305 */
-  --gradient-1: var(--color-gradient-1);
-  /* src/components/css/variables.css:306 */
-  --gradient-2: var(--color-gradient-2);
-  /* src/components/css/variables.css:307 */
-  --gradient-3: var(--color-gradient-3);
-  /* src/components/css/variables.css:308 */
-  --gradient-4: var(--color-gradient-4);
-  /* src/components/css/variables.css:309 */
-  --accent: var(--color-accent);
-  /* src/components/css/variables.css:310 */
-  --glow: var(--color-glow);
-  /* src/components/css/variables.css:312 */
-  /* Legacy Color Aliases (for backward compatibility) */
-  /* src/components/css/variables.css:313 */
-  --whatsapp-color: var(--color-whatsapp);
-  /* src/components/css/variables.css:314 */
-  --gray-200: var(--color-gray-200);
-  /* src/components/css/variables.css:315 */
-  --gray-300: var(--color-gray-300);
-  /* src/components/css/variables.css:316 */
-  --gray-400: var(--color-gray-400);
-  /* src/components/css/variables.css:317 */
-  --gray-500: var(--color-gray-500);
-  /* src/components/css/variables.css:318 */
-  --gray-600: var(--color-gray-600);
-  /* src/components/css/variables.css:319 */
-  --gray-700: var(--color-gray-700);
-  /* src/components/css/variables.css:320 */
-  --gray-800: var(--color-gray-800);
-  /* src/components/css/variables.css:321 */
-  --blue-500: var(--color-blue-500);
-  /* src/components/css/variables.css:322 */
-  --blue-600: var(--color-blue-600);
-  /* src/components/css/variables.css:323 */
-  --slate-700: var(--color-slate-700);
-  /* src/components/css/variables.css:324 */
-  --slate-800: var(--color-slate-800);
-  /* src/components/css/variables.css:326 */
-  /* Gray Scale Colors */
-  /* --color-gray-200: rgb(229, 231, 235);
-  --color-gray-300: rgb(209, 213, 219);
-  --color-gray-400: rgb(156, 163, 175);
-  --color-gray-500: rgb(107, 114, 128);
-  --color-gray-600: rgb(75, 85, 99);
-  --color-gray-700: rgb(51, 65, 85);
-  --color-gray-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:335 */
-  /* Blue Colors */
-  /* --color-blue-500: #3b82f6;
-  --color-blue-600: #2563eb; */
-  /* src/components/css/variables.css:339 */
-  /* Slate Colors */
-  /* --color-slate-700: rgb(51, 65, 85);
-  --color-slate-800: rgb(30, 41, 59); */
-  /* src/components/css/variables.css:343 */
-  /* Red Colors (for errors, disconnect, etc.) */
-  /* --color-red-50: rgb(254, 242, 242);
-  --color-red-100: rgb(254, 226, 226);
-  --color-red-500: #ef4444;
-  --color-red-600: #dc2626; */
-  /* src/components/css/variables.css:349 */
-  /* Green Colors (for success, active states) */
-  /* --color-green-50: rgb(240, 253, 244);
-  --color-green-100: rgb(220, 252, 231);
-  --color-green-500: #10b981;
-  --color-green-600: #059669; */
-  /* src/components/css/variables.css:354 */
-}
-
-/* src/components/css/variables.css:356 */
-
-/* Fallback for browsers that don't support color-mix */
-
-/* src/components/css/variables.css:357 */
-
-@supports not (color: color-mix(in srgb, #000 50%, #fff)) {
-  /* src/components/css/variables.css:358 */
-
-  :root {
-    /* src/components/css/variables.css:359 */
-    /* Derived Theme Colors Fallback */
-    /* src/components/css/variables.css:360 */
-    /* Primary hover: darker version of default primary color #000aaa */
-    /* src/components/css/variables.css:361 */
-    --chat-widget-primary-color-hover: #000991;
-    /* src/components/css/variables.css:362 */
-    /* ~15% darker than #000aaa */
-    /* src/components/css/variables.css:364 */
-    /* Gradient Colors Fallback */
-    /* src/components/css/variables.css:365 */
-    --color-gradient-1: #000aaa;
-    /* src/components/css/variables.css:366 */
-    /* Default primary color */
-    /* src/components/css/variables.css:367 */
-    --color-gradient-2: #6c757d;
-    /* src/components/css/variables.css:368 */
-    /* Default secondary color */
-    /* src/components/css/variables.css:369 */
-    --color-gradient-3: #6c757d;
-    /* src/components/css/variables.css:370 */
-    --color-gradient-4: #6c757d;
-    /* src/components/css/variables.css:371 */
-    --color-accent: #6c757d;
-    /* src/components/css/variables.css:372 */
-    --color-glow: rgba(0, 10, 170, 0.3);
-    /* src/components/css/variables.css:374 */
-    /* Sleek View Colors Fallback */
-    /* src/components/css/variables.css:375 */
-    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
-    /* src/components/css/variables.css:376 */
-    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
-    /* src/components/css/variables.css:378 */
-    /* Scrollbar Colors Fallback */
-    /* src/components/css/variables.css:379 */
-    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
-    /* src/components/css/variables.css:380 */
-    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
-    /* src/components/css/variables.css:382 */
-    /* Legacy aliases */
-    /* src/components/css/variables.css:383 */
-    --gradient-1: var(--color-gradient-1);
-    /* src/components/css/variables.css:384 */
-    --gradient-2: var(--color-gradient-2);
-    /* src/components/css/variables.css:385 */
-    --gradient-3: var(--color-gradient-3);
-    /* src/components/css/variables.css:386 */
-    --gradient-4: var(--color-gradient-4);
-    /* src/components/css/variables.css:387 */
-    --accent: var(--color-accent);
-    /* src/components/css/variables.css:388 */
-    --glow: var(--color-glow);
-    /* src/components/css/variables.css:389 */
-    --sleek-main-bg: var(--color-sleek-main-bg);
-    /* src/components/css/variables.css:390 */
-    --sleek-main-border: var(--color-sleek-main-border);
-    /* src/components/css/variables.css:391 */
-    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
-    /* src/components/css/variables.css:392 */
-    --input-scrollbar-thumb-hover-color: var(
-/* src/components/css/variables.css:393 */
-      --color-scrollbar-input-thumb-hover
-/* src/components/css/variables.css:394 */
-    );
-    /* src/components/css/variables.css:395 */
-  }
-
-  /* src/components/css/variables.css:396 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:3 */
-
-/* Container for the glowing cloud animation */
-
-/* src/components/css/GlowingCloudAnimation.css:4 */
-
-.glowing-cloud-container {
-  /* src/components/css/GlowingCloudAnimation.css:5 */
-  position: absolute;
-  /* src/components/css/GlowingCloudAnimation.css:6 */
-  top: 50%;
-  /* src/components/css/GlowingCloudAnimation.css:7 */
-  left: 50%;
-  /* src/components/css/GlowingCloudAnimation.css:8 */
-  transform: translate(-50%, -50%);
-  /* src/components/css/GlowingCloudAnimation.css:9 */
-  width: 100%;
-  /* src/components/css/GlowingCloudAnimation.css:10 */
-  height: 100%;
-  /* src/components/css/GlowingCloudAnimation.css:11 */
-  pointer-events: none;
-  /* src/components/css/GlowingCloudAnimation.css:12 */
-  z-index: 0;
-  /* src/components/css/GlowingCloudAnimation.css:13 */
-  overflow: hidden;
-  /* src/components/css/GlowingCloudAnimation.css:14 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:16 */
-
-/* Base orb styling */
-
-/* src/components/css/GlowingCloudAnimation.css:17 */
-
-.glowing-cloud-orb {
-  /* src/components/css/GlowingCloudAnimation.css:18 */
-  position: absolute;
-  /* src/components/css/GlowingCloudAnimation.css:19 */
-  border-radius: 50%;
-  /* src/components/css/GlowingCloudAnimation.css:20 */
-  filter: blur(50px) brightness(1.2);
-  /* src/components/css/GlowingCloudAnimation.css:21 */
-  opacity: 0.9;
-  /* src/components/css/GlowingCloudAnimation.css:22 */
-  mix-blend-mode: screen;
-  /* src/components/css/GlowingCloudAnimation.css:23 */
-  will-change: transform, opacity;
-  /* src/components/css/GlowingCloudAnimation.css:24 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:26 */
-
-/* Individual orb positioning and animations */
-
-/* src/components/css/GlowingCloudAnimation.css:27 */
-
-.glowing-cloud-orb-1 {
-  /* src/components/css/GlowingCloudAnimation.css:28 */
-  width: 280px;
-  /* src/components/css/GlowingCloudAnimation.css:29 */
-  height: 280px;
-  /* src/components/css/GlowingCloudAnimation.css:30 */
-  top: 20%;
-  /* src/components/css/GlowingCloudAnimation.css:31 */
-  left: 15%;
-  /* src/components/css/GlowingCloudAnimation.css:32 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:33 */
-    circle at 30% 30%,
-/* src/components/css/GlowingCloudAnimation.css:34 */
-    rgba(139, 92, 246, 1),
-/* src/components/css/GlowingCloudAnimation.css:35 */
-    rgba(139, 92, 246, 0.8),
-/* src/components/css/GlowingCloudAnimation.css:36 */
-    rgba(99, 102, 241, 0.6),
-/* src/components/css/GlowingCloudAnimation.css:37 */
-    transparent 60%
-/* src/components/css/GlowingCloudAnimation.css:38 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:39 */
-  animation: float-1 8s ease-in-out infinite;
-  /* src/components/css/GlowingCloudAnimation.css:40 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:42 */
-
-.glowing-cloud-orb-2 {
-  /* src/components/css/GlowingCloudAnimation.css:43 */
-  width: 260px;
-  /* src/components/css/GlowingCloudAnimation.css:44 */
-  height: 260px;
-  /* src/components/css/GlowingCloudAnimation.css:45 */
-  top: 60%;
-  /* src/components/css/GlowingCloudAnimation.css:46 */
-  right: 20%;
-  /* src/components/css/GlowingCloudAnimation.css:47 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:48 */
-    circle at 40% 40%,
-/* src/components/css/GlowingCloudAnimation.css:49 */
-    rgba(99, 102, 241, 1),
-/* src/components/css/GlowingCloudAnimation.css:50 */
-    rgba(139, 92, 246, 0.8),
-/* src/components/css/GlowingCloudAnimation.css:51 */
-    rgba(99, 102, 241, 0.5),
-/* src/components/css/GlowingCloudAnimation.css:52 */
-    transparent 60%
-/* src/components/css/GlowingCloudAnimation.css:53 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:54 */
-  animation: float-2 10s ease-in-out infinite;
-  /* src/components/css/GlowingCloudAnimation.css:55 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:57 */
-
-.glowing-cloud-orb-3 {
-  /* src/components/css/GlowingCloudAnimation.css:58 */
-  width: 240px;
-  /* src/components/css/GlowingCloudAnimation.css:59 */
-  height: 240px;
-  /* src/components/css/GlowingCloudAnimation.css:60 */
-  bottom: 25%;
-  /* src/components/css/GlowingCloudAnimation.css:61 */
-  left: 25%;
-  /* src/components/css/GlowingCloudAnimation.css:62 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:63 */
-    circle at 50% 50%,
-/* src/components/css/GlowingCloudAnimation.css:64 */
-    rgba(139, 92, 246, 0.95),
-/* src/components/css/GlowingCloudAnimation.css:65 */
-    rgba(99, 102, 241, 0.7),
-/* src/components/css/GlowingCloudAnimation.css:66 */
-    rgba(139, 92, 246, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:67 */
-    transparent 60%
-/* src/components/css/GlowingCloudAnimation.css:68 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:69 */
-  animation: float-3 12s ease-in-out infinite;
-  /* src/components/css/GlowingCloudAnimation.css:70 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:72 */
-
-.glowing-cloud-orb-4 {
-  /* src/components/css/GlowingCloudAnimation.css:73 */
-  width: 220px;
-  /* src/components/css/GlowingCloudAnimation.css:74 */
-  height: 220px;
-  /* src/components/css/GlowingCloudAnimation.css:75 */
-  top: 40%;
-  /* src/components/css/GlowingCloudAnimation.css:76 */
-  right: 35%;
-  /* src/components/css/GlowingCloudAnimation.css:77 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:78 */
-    circle at 35% 35%,
-/* src/components/css/GlowingCloudAnimation.css:79 */
-    rgba(99, 102, 241, 0.9),
-/* src/components/css/GlowingCloudAnimation.css:80 */
-    rgba(139, 92, 246, 0.7),
-/* src/components/css/GlowingCloudAnimation.css:81 */
-    rgba(99, 102, 241, 0.5),
-/* src/components/css/GlowingCloudAnimation.css:82 */
-    transparent 60%
-/* src/components/css/GlowingCloudAnimation.css:83 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:84 */
-  animation: float-4 9s ease-in-out infinite;
-  /* src/components/css/GlowingCloudAnimation.css:85 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:87 */
-
-.glowing-cloud-orb-5 {
-  /* src/components/css/GlowingCloudAnimation.css:88 */
-  width: 200px;
-  /* src/components/css/GlowingCloudAnimation.css:89 */
-  height: 200px;
-  /* src/components/css/GlowingCloudAnimation.css:90 */
-  bottom: 40%;
-  /* src/components/css/GlowingCloudAnimation.css:91 */
-  right: 15%;
-  /* src/components/css/GlowingCloudAnimation.css:92 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:93 */
-    circle at 45% 45%,
-/* src/components/css/GlowingCloudAnimation.css:94 */
-    rgba(139, 92, 246, 0.85),
-/* src/components/css/GlowingCloudAnimation.css:95 */
-    rgba(99, 102, 241, 0.6),
-/* src/components/css/GlowingCloudAnimation.css:96 */
-    rgba(139, 92, 246, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:97 */
-    transparent 60%
-/* src/components/css/GlowingCloudAnimation.css:98 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:99 */
-  animation: float-5 11s ease-in-out infinite;
-  /* src/components/css/GlowingCloudAnimation.css:100 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:102 */
-
-.glowing-cloud-orb-6 {
-  /* src/components/css/GlowingCloudAnimation.css:103 */
-  width: 180px;
-  /* src/components/css/GlowingCloudAnimation.css:104 */
-  height: 180px;
-  /* src/components/css/GlowingCloudAnimation.css:105 */
-  top: 10%;
-  /* src/components/css/GlowingCloudAnimation.css:106 */
-  right: 10%;
-  /* src/components/css/GlowingCloudAnimation.css:107 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:108 */
-    circle at 50% 50%,
-/* src/components/css/GlowingCloudAnimation.css:109 */
-    rgba(139, 92, 246, 0.8),
-/* src/components/css/GlowingCloudAnimation.css:110 */
-    rgba(99, 102, 241, 0.5),
-/* src/components/css/GlowingCloudAnimation.css:111 */
-    rgba(139, 92, 246, 0.3),
-/* src/components/css/GlowingCloudAnimation.css:112 */
-    transparent 60%
-/* src/components/css/GlowingCloudAnimation.css:113 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:114 */
-  animation: float-6 13s ease-in-out infinite;
-  /* src/components/css/GlowingCloudAnimation.css:115 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:117 */
-
-.glowing-cloud-orb-7 {
-  /* src/components/css/GlowingCloudAnimation.css:118 */
-  width: 160px;
-  /* src/components/css/GlowingCloudAnimation.css:119 */
-  height: 160px;
-  /* src/components/css/GlowingCloudAnimation.css:120 */
-  bottom: 15%;
-  /* src/components/css/GlowingCloudAnimation.css:121 */
-  left: 10%;
-  /* src/components/css/GlowingCloudAnimation.css:122 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:123 */
-    circle at 40% 40%,
-/* src/components/css/GlowingCloudAnimation.css:124 */
-    rgba(99, 102, 241, 0.75),
-/* src/components/css/GlowingCloudAnimation.css:125 */
-    rgba(139, 92, 246, 0.5),
-/* src/components/css/GlowingCloudAnimation.css:126 */
-    rgba(99, 102, 241, 0.3),
-/* src/components/css/GlowingCloudAnimation.css:127 */
-    transparent 60%
-/* src/components/css/GlowingCloudAnimation.css:128 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:129 */
-  animation: float-7 14s ease-in-out infinite;
-  /* src/components/css/GlowingCloudAnimation.css:130 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:132 */
-
-/* Floating animations */
-
-/* src/components/css/GlowingCloudAnimation.css:133 */
-
-@keyframes float-1 {
-  /* src/components/css/GlowingCloudAnimation.css:134 */
-
-  0%,
-/* src/components/css/GlowingCloudAnimation.css:135 */
-  100% {
-    /* src/components/css/GlowingCloudAnimation.css:136 */
-    transform: translate(0, 0) scale(1);
-    /* src/components/css/GlowingCloudAnimation.css:137 */
-    opacity: 0.85;
-    /* src/components/css/GlowingCloudAnimation.css:138 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:139 */
-
-  33% {
-    /* src/components/css/GlowingCloudAnimation.css:140 */
-    transform: translate(20px, -30px) scale(1.15);
-    /* src/components/css/GlowingCloudAnimation.css:141 */
-    opacity: 1;
-    /* src/components/css/GlowingCloudAnimation.css:142 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:143 */
-
-  66% {
-    /* src/components/css/GlowingCloudAnimation.css:144 */
-    transform: translate(-15px, 20px) scale(0.95);
-    /* src/components/css/GlowingCloudAnimation.css:145 */
-    opacity: 0.75;
-    /* src/components/css/GlowingCloudAnimation.css:146 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:147 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:149 */
-
-@keyframes float-2 {
-  /* src/components/css/GlowingCloudAnimation.css:150 */
-
-  0%,
-/* src/components/css/GlowingCloudAnimation.css:151 */
-  100% {
-    /* src/components/css/GlowingCloudAnimation.css:152 */
-    transform: translate(0, 0) scale(1);
-    /* src/components/css/GlowingCloudAnimation.css:153 */
-    opacity: 0.8;
-    /* src/components/css/GlowingCloudAnimation.css:154 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:155 */
-
-  50% {
-    /* src/components/css/GlowingCloudAnimation.css:156 */
-    transform: translate(-25px, 25px) scale(1.2);
-    /* src/components/css/GlowingCloudAnimation.css:157 */
-    opacity: 0.95;
-    /* src/components/css/GlowingCloudAnimation.css:158 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:159 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:161 */
-
-@keyframes float-3 {
-  /* src/components/css/GlowingCloudAnimation.css:162 */
-
-  0%,
-/* src/components/css/GlowingCloudAnimation.css:163 */
-  100% {
-    /* src/components/css/GlowingCloudAnimation.css:164 */
-    transform: translate(0, 0) scale(1);
-    /* src/components/css/GlowingCloudAnimation.css:165 */
-    opacity: 0.85;
-    /* src/components/css/GlowingCloudAnimation.css:166 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:167 */
-
-  25% {
-    /* src/components/css/GlowingCloudAnimation.css:168 */
-    transform: translate(30px, -20px) scale(1.1);
-    /* src/components/css/GlowingCloudAnimation.css:169 */
-    opacity: 1;
-    /* src/components/css/GlowingCloudAnimation.css:170 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:171 */
-
-  75% {
-    /* src/components/css/GlowingCloudAnimation.css:172 */
-    transform: translate(-20px, -10px) scale(0.9);
-    /* src/components/css/GlowingCloudAnimation.css:173 */
-    opacity: 0.7;
-    /* src/components/css/GlowingCloudAnimation.css:174 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:175 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:177 */
-
-@keyframes float-4 {
-  /* src/components/css/GlowingCloudAnimation.css:178 */
-
-  0%,
-/* src/components/css/GlowingCloudAnimation.css:179 */
-  100% {
-    /* src/components/css/GlowingCloudAnimation.css:180 */
-    transform: translate(0, 0) scale(1);
-    /* src/components/css/GlowingCloudAnimation.css:181 */
-    opacity: 0.8;
-    /* src/components/css/GlowingCloudAnimation.css:182 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:183 */
-
-  40% {
-    /* src/components/css/GlowingCloudAnimation.css:184 */
-    transform: translate(-15px, 30px) scale(1.15);
-    /* src/components/css/GlowingCloudAnimation.css:185 */
-    opacity: 0.95;
-    /* src/components/css/GlowingCloudAnimation.css:186 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:187 */
-
-  80% {
-    /* src/components/css/GlowingCloudAnimation.css:188 */
-    transform: translate(20px, -15px) scale(0.9);
-    /* src/components/css/GlowingCloudAnimation.css:189 */
-    opacity: 0.7;
-    /* src/components/css/GlowingCloudAnimation.css:190 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:191 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:193 */
-
-@keyframes float-5 {
-  /* src/components/css/GlowingCloudAnimation.css:194 */
-
-  0%,
-/* src/components/css/GlowingCloudAnimation.css:195 */
-  100% {
-    /* src/components/css/GlowingCloudAnimation.css:196 */
-    transform: translate(0, 0) scale(1);
-    /* src/components/css/GlowingCloudAnimation.css:197 */
-    opacity: 0.75;
-    /* src/components/css/GlowingCloudAnimation.css:198 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:199 */
-
-  30% {
-    /* src/components/css/GlowingCloudAnimation.css:200 */
-    transform: translate(25px, 20px) scale(1.25);
-    /* src/components/css/GlowingCloudAnimation.css:201 */
-    opacity: 0.9;
-    /* src/components/css/GlowingCloudAnimation.css:202 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:203 */
-
-  70% {
-    /* src/components/css/GlowingCloudAnimation.css:204 */
-    transform: translate(-30px, -25px) scale(0.85);
-    /* src/components/css/GlowingCloudAnimation.css:205 */
-    opacity: 0.65;
-    /* src/components/css/GlowingCloudAnimation.css:206 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:207 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:209 */
-
-@keyframes float-6 {
-  /* src/components/css/GlowingCloudAnimation.css:210 */
-
-  0%,
-/* src/components/css/GlowingCloudAnimation.css:211 */
-  100% {
-    /* src/components/css/GlowingCloudAnimation.css:212 */
-    transform: translate(0, 0) scale(1);
-    /* src/components/css/GlowingCloudAnimation.css:213 */
-    opacity: 0.7;
-    /* src/components/css/GlowingCloudAnimation.css:214 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:215 */
-
-  35% {
-    /* src/components/css/GlowingCloudAnimation.css:216 */
-    transform: translate(-20px, 35px) scale(1.2);
-    /* src/components/css/GlowingCloudAnimation.css:217 */
-    opacity: 0.85;
-    /* src/components/css/GlowingCloudAnimation.css:218 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:219 */
-
-  70% {
-    /* src/components/css/GlowingCloudAnimation.css:220 */
-    transform: translate(30px, -15px) scale(0.9);
-    /* src/components/css/GlowingCloudAnimation.css:221 */
-    opacity: 0.6;
-    /* src/components/css/GlowingCloudAnimation.css:222 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:223 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:225 */
-
-@keyframes float-7 {
-  /* src/components/css/GlowingCloudAnimation.css:226 */
-
-  0%,
-/* src/components/css/GlowingCloudAnimation.css:227 */
-  100% {
-    /* src/components/css/GlowingCloudAnimation.css:228 */
-    transform: translate(0, 0) scale(1);
-    /* src/components/css/GlowingCloudAnimation.css:229 */
-    opacity: 0.65;
-    /* src/components/css/GlowingCloudAnimation.css:230 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:231 */
-
-  40% {
-    /* src/components/css/GlowingCloudAnimation.css:232 */
-    transform: translate(35px, 25px) scale(1.15);
-    /* src/components/css/GlowingCloudAnimation.css:233 */
-    opacity: 0.8;
-    /* src/components/css/GlowingCloudAnimation.css:234 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:235 */
-
-  80% {
-    /* src/components/css/GlowingCloudAnimation.css:236 */
-    transform: translate(-25px, -30px) scale(0.88);
-    /* src/components/css/GlowingCloudAnimation.css:237 */
-    opacity: 0.55;
-    /* src/components/css/GlowingCloudAnimation.css:238 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:239 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:241 */
-
-/* Listening state - Vibrant Purple/Blue nebula tones */
-
-/* src/components/css/GlowingCloudAnimation.css:242 */
-
-.glowing-cloud-listening .glowing-cloud-orb-1 {
-  /* src/components/css/GlowingCloudAnimation.css:243 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:244 */
-    circle at 30% 30%,
-/* src/components/css/GlowingCloudAnimation.css:245 */
-    rgba(139, 92, 246, 1),
-/* src/components/css/GlowingCloudAnimation.css:246 */
-    rgba(124, 58, 237, 0.9),
-/* src/components/css/GlowingCloudAnimation.css:247 */
-    rgba(99, 102, 241, 0.7),
-/* src/components/css/GlowingCloudAnimation.css:248 */
-    rgba(79, 70, 229, 0.5),
-/* src/components/css/GlowingCloudAnimation.css:249 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:250 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:251 */
-  filter: blur(50px) brightness(1.3);
-  /* src/components/css/GlowingCloudAnimation.css:252 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:254 */
-
-.glowing-cloud-listening .glowing-cloud-orb-2 {
-  /* src/components/css/GlowingCloudAnimation.css:255 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:256 */
-    circle at 40% 40%,
-/* src/components/css/GlowingCloudAnimation.css:257 */
-    rgba(99, 102, 241, 1),
-/* src/components/css/GlowingCloudAnimation.css:258 */
-    rgba(79, 70, 229, 0.9),
-/* src/components/css/GlowingCloudAnimation.css:259 */
-    rgba(139, 92, 246, 0.7),
-/* src/components/css/GlowingCloudAnimation.css:260 */
-    rgba(124, 58, 237, 0.5),
-/* src/components/css/GlowingCloudAnimation.css:261 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:262 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:263 */
-  filter: blur(50px) brightness(1.3);
-  /* src/components/css/GlowingCloudAnimation.css:264 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:266 */
-
-.glowing-cloud-listening .glowing-cloud-orb-3 {
-  /* src/components/css/GlowingCloudAnimation.css:267 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:268 */
-    circle at 50% 50%,
-/* src/components/css/GlowingCloudAnimation.css:269 */
-    rgba(139, 92, 246, 0.95),
-/* src/components/css/GlowingCloudAnimation.css:270 */
-    rgba(99, 102, 241, 0.8),
-/* src/components/css/GlowingCloudAnimation.css:271 */
-    rgba(124, 58, 237, 0.6),
-/* src/components/css/GlowingCloudAnimation.css:272 */
-    rgba(79, 70, 229, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:273 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:274 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:275 */
-  filter: blur(50px) brightness(1.25);
-  /* src/components/css/GlowingCloudAnimation.css:276 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:278 */
-
-.glowing-cloud-listening .glowing-cloud-orb-4 {
-  /* src/components/css/GlowingCloudAnimation.css:279 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:280 */
-    circle at 35% 35%,
-/* src/components/css/GlowingCloudAnimation.css:281 */
-    rgba(99, 102, 241, 0.9),
-/* src/components/css/GlowingCloudAnimation.css:282 */
-    rgba(139, 92, 246, 0.8),
-/* src/components/css/GlowingCloudAnimation.css:283 */
-    rgba(79, 70, 229, 0.6),
-/* src/components/css/GlowingCloudAnimation.css:284 */
-    rgba(124, 58, 237, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:285 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:286 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:287 */
-  filter: blur(50px) brightness(1.25);
-  /* src/components/css/GlowingCloudAnimation.css:288 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:290 */
-
-.glowing-cloud-listening .glowing-cloud-orb-5 {
-  /* src/components/css/GlowingCloudAnimation.css:291 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:292 */
-    circle at 45% 45%,
-/* src/components/css/GlowingCloudAnimation.css:293 */
-    rgba(139, 92, 246, 0.85),
-/* src/components/css/GlowingCloudAnimation.css:294 */
-    rgba(124, 58, 237, 0.7),
-/* src/components/css/GlowingCloudAnimation.css:295 */
-    rgba(99, 102, 241, 0.5),
-/* src/components/css/GlowingCloudAnimation.css:296 */
-    rgba(79, 70, 229, 0.3),
-/* src/components/css/GlowingCloudAnimation.css:297 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:298 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:299 */
-  filter: blur(50px) brightness(1.2);
-  /* src/components/css/GlowingCloudAnimation.css:300 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:302 */
-
-.glowing-cloud-listening .glowing-cloud-orb-6 {
-  /* src/components/css/GlowingCloudAnimation.css:303 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:304 */
-    circle at 50% 50%,
-/* src/components/css/GlowingCloudAnimation.css:305 */
-    rgba(99, 102, 241, 0.8),
-/* src/components/css/GlowingCloudAnimation.css:306 */
-    rgba(139, 92, 246, 0.65),
-/* src/components/css/GlowingCloudAnimation.css:307 */
-    rgba(124, 58, 237, 0.45),
-/* src/components/css/GlowingCloudAnimation.css:308 */
-    rgba(79, 70, 229, 0.25),
-/* src/components/css/GlowingCloudAnimation.css:309 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:310 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:311 */
-  filter: blur(50px) brightness(1.2);
-  /* src/components/css/GlowingCloudAnimation.css:312 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:314 */
-
-.glowing-cloud-listening .glowing-cloud-orb-7 {
-  /* src/components/css/GlowingCloudAnimation.css:315 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:316 */
-    circle at 40% 40%,
-/* src/components/css/GlowingCloudAnimation.css:317 */
-    rgba(124, 58, 237, 0.75),
-/* src/components/css/GlowingCloudAnimation.css:318 */
-    rgba(99, 102, 241, 0.6),
-/* src/components/css/GlowingCloudAnimation.css:319 */
-    rgba(139, 92, 246, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:320 */
-    rgba(79, 70, 229, 0.2),
-/* src/components/css/GlowingCloudAnimation.css:321 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:322 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:323 */
-  filter: blur(50px) brightness(1.15);
-  /* src/components/css/GlowingCloudAnimation.css:324 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:326 */
-
-/* Thinking state - Vibrant Amber/Yellow nebula tones */
-
-/* src/components/css/GlowingCloudAnimation.css:327 */
-
-.glowing-cloud-thinking .glowing-cloud-orb-1 {
-  /* src/components/css/GlowingCloudAnimation.css:328 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:329 */
-    circle at 30% 30%,
-/* src/components/css/GlowingCloudAnimation.css:330 */
-    rgba(245, 158, 11, 1),
-/* src/components/css/GlowingCloudAnimation.css:331 */
-    rgba(251, 191, 36, 0.9),
-/* src/components/css/GlowingCloudAnimation.css:332 */
-    rgba(252, 211, 77, 0.7),
-/* src/components/css/GlowingCloudAnimation.css:333 */
-    rgba(245, 158, 11, 0.5),
-/* src/components/css/GlowingCloudAnimation.css:334 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:335 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:336 */
-  filter: blur(50px) brightness(1.3);
-  /* src/components/css/GlowingCloudAnimation.css:337 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:339 */
-
-.glowing-cloud-thinking .glowing-cloud-orb-2 {
-  /* src/components/css/GlowingCloudAnimation.css:340 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:341 */
-    circle at 40% 40%,
-/* src/components/css/GlowingCloudAnimation.css:342 */
-    rgba(251, 191, 36, 1),
-/* src/components/css/GlowingCloudAnimation.css:343 */
-    rgba(252, 211, 77, 0.9),
-/* src/components/css/GlowingCloudAnimation.css:344 */
-    rgba(245, 158, 11, 0.7),
-/* src/components/css/GlowingCloudAnimation.css:345 */
-    rgba(217, 119, 6, 0.5),
-/* src/components/css/GlowingCloudAnimation.css:346 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:347 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:348 */
-  filter: blur(50px) brightness(1.3);
-  /* src/components/css/GlowingCloudAnimation.css:349 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:351 */
-
-.glowing-cloud-thinking .glowing-cloud-orb-3 {
-  /* src/components/css/GlowingCloudAnimation.css:352 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:353 */
-    circle at 50% 50%,
-/* src/components/css/GlowingCloudAnimation.css:354 */
-    rgba(245, 158, 11, 0.95),
-/* src/components/css/GlowingCloudAnimation.css:355 */
-    rgba(251, 191, 36, 0.8),
-/* src/components/css/GlowingCloudAnimation.css:356 */
-    rgba(252, 211, 77, 0.6),
-/* src/components/css/GlowingCloudAnimation.css:357 */
-    rgba(245, 158, 11, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:358 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:359 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:360 */
-  filter: blur(50px) brightness(1.25);
-  /* src/components/css/GlowingCloudAnimation.css:361 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:363 */
-
-.glowing-cloud-thinking .glowing-cloud-orb-4 {
-  /* src/components/css/GlowingCloudAnimation.css:364 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:365 */
-    circle at 35% 35%,
-/* src/components/css/GlowingCloudAnimation.css:366 */
-    rgba(251, 191, 36, 0.9),
-/* src/components/css/GlowingCloudAnimation.css:367 */
-    rgba(252, 211, 77, 0.8),
-/* src/components/css/GlowingCloudAnimation.css:368 */
-    rgba(245, 158, 11, 0.6),
-/* src/components/css/GlowingCloudAnimation.css:369 */
-    rgba(217, 119, 6, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:370 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:371 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:372 */
-  filter: blur(50px) brightness(1.25);
-  /* src/components/css/GlowingCloudAnimation.css:373 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:375 */
-
-.glowing-cloud-thinking .glowing-cloud-orb-5 {
-  /* src/components/css/GlowingCloudAnimation.css:376 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:377 */
-    circle at 45% 45%,
-/* src/components/css/GlowingCloudAnimation.css:378 */
-    rgba(245, 158, 11, 0.85),
-/* src/components/css/GlowingCloudAnimation.css:379 */
-    rgba(251, 191, 36, 0.7),
-/* src/components/css/GlowingCloudAnimation.css:380 */
-    rgba(252, 211, 77, 0.5),
-/* src/components/css/GlowingCloudAnimation.css:381 */
-    rgba(217, 119, 6, 0.3),
-/* src/components/css/GlowingCloudAnimation.css:382 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:383 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:384 */
-  filter: blur(50px) brightness(1.2);
-  /* src/components/css/GlowingCloudAnimation.css:385 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:387 */
-
-.glowing-cloud-thinking .glowing-cloud-orb-6 {
-  /* src/components/css/GlowingCloudAnimation.css:388 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:389 */
-    circle at 50% 50%,
-/* src/components/css/GlowingCloudAnimation.css:390 */
-    rgba(251, 191, 36, 0.8),
-/* src/components/css/GlowingCloudAnimation.css:391 */
-    rgba(252, 211, 77, 0.65),
-/* src/components/css/GlowingCloudAnimation.css:392 */
-    rgba(245, 158, 11, 0.45),
-/* src/components/css/GlowingCloudAnimation.css:393 */
-    rgba(217, 119, 6, 0.25),
-/* src/components/css/GlowingCloudAnimation.css:394 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:395 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:396 */
-  filter: blur(50px) brightness(1.2);
-  /* src/components/css/GlowingCloudAnimation.css:397 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:399 */
-
-.glowing-cloud-thinking .glowing-cloud-orb-7 {
-  /* src/components/css/GlowingCloudAnimation.css:400 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:401 */
-    circle at 40% 40%,
-/* src/components/css/GlowingCloudAnimation.css:402 */
-    rgba(252, 211, 77, 0.75),
-/* src/components/css/GlowingCloudAnimation.css:403 */
-    rgba(251, 191, 36, 0.6),
-/* src/components/css/GlowingCloudAnimation.css:404 */
-    rgba(245, 158, 11, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:405 */
-    rgba(217, 119, 6, 0.2),
-/* src/components/css/GlowingCloudAnimation.css:406 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:407 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:408 */
-  filter: blur(50px) brightness(1.15);
-  /* src/components/css/GlowingCloudAnimation.css:409 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:411 */
-
-/* Speaking state - Vibrant Green/Teal nebula tones */
-
-/* src/components/css/GlowingCloudAnimation.css:412 */
-
-.glowing-cloud-speaking .glowing-cloud-orb-1 {
-  /* src/components/css/GlowingCloudAnimation.css:413 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:414 */
-    circle at 30% 30%,
-/* src/components/css/GlowingCloudAnimation.css:415 */
-    rgba(5, 150, 105, 1),
-/* src/components/css/GlowingCloudAnimation.css:416 */
-    rgba(16, 185, 129, 0.9),
-/* src/components/css/GlowingCloudAnimation.css:417 */
-    rgba(20, 184, 166, 0.7),
-/* src/components/css/GlowingCloudAnimation.css:418 */
-    rgba(6, 182, 212, 0.5),
-/* src/components/css/GlowingCloudAnimation.css:419 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:420 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:421 */
-  filter: blur(50px) brightness(1.3);
-  /* src/components/css/GlowingCloudAnimation.css:422 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:424 */
-
-.glowing-cloud-speaking .glowing-cloud-orb-2 {
-  /* src/components/css/GlowingCloudAnimation.css:425 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:426 */
-    circle at 40% 40%,
-/* src/components/css/GlowingCloudAnimation.css:427 */
-    rgba(20, 184, 166, 1),
-/* src/components/css/GlowingCloudAnimation.css:428 */
-    rgba(6, 182, 212, 0.9),
-/* src/components/css/GlowingCloudAnimation.css:429 */
-    rgba(5, 150, 105, 0.7),
-/* src/components/css/GlowingCloudAnimation.css:430 */
-    rgba(16, 185, 129, 0.5),
-/* src/components/css/GlowingCloudAnimation.css:431 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:432 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:433 */
-  filter: blur(50px) brightness(1.3);
-  /* src/components/css/GlowingCloudAnimation.css:434 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:436 */
-
-.glowing-cloud-speaking .glowing-cloud-orb-3 {
-  /* src/components/css/GlowingCloudAnimation.css:437 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:438 */
-    circle at 50% 50%,
-/* src/components/css/GlowingCloudAnimation.css:439 */
-    rgba(5, 150, 105, 0.95),
-/* src/components/css/GlowingCloudAnimation.css:440 */
-    rgba(16, 185, 129, 0.8),
-/* src/components/css/GlowingCloudAnimation.css:441 */
-    rgba(20, 184, 166, 0.6),
-/* src/components/css/GlowingCloudAnimation.css:442 */
-    rgba(6, 182, 212, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:443 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:444 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:445 */
-  filter: blur(50px) brightness(1.25);
-  /* src/components/css/GlowingCloudAnimation.css:446 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:448 */
-
-.glowing-cloud-speaking .glowing-cloud-orb-4 {
-  /* src/components/css/GlowingCloudAnimation.css:449 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:450 */
-    circle at 35% 35%,
-/* src/components/css/GlowingCloudAnimation.css:451 */
-    rgba(20, 184, 166, 0.9),
-/* src/components/css/GlowingCloudAnimation.css:452 */
-    rgba(6, 182, 212, 0.8),
-/* src/components/css/GlowingCloudAnimation.css:453 */
-    rgba(5, 150, 105, 0.6),
-/* src/components/css/GlowingCloudAnimation.css:454 */
-    rgba(16, 185, 129, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:455 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:456 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:457 */
-  filter: blur(50px) brightness(1.25);
-  /* src/components/css/GlowingCloudAnimation.css:458 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:460 */
-
-.glowing-cloud-speaking .glowing-cloud-orb-5 {
-  /* src/components/css/GlowingCloudAnimation.css:461 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:462 */
-    circle at 45% 45%,
-/* src/components/css/GlowingCloudAnimation.css:463 */
-    rgba(5, 150, 105, 0.85),
-/* src/components/css/GlowingCloudAnimation.css:464 */
-    rgba(16, 185, 129, 0.7),
-/* src/components/css/GlowingCloudAnimation.css:465 */
-    rgba(20, 184, 166, 0.5),
-/* src/components/css/GlowingCloudAnimation.css:466 */
-    rgba(6, 182, 212, 0.3),
-/* src/components/css/GlowingCloudAnimation.css:467 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:468 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:469 */
-  filter: blur(50px) brightness(1.2);
-  /* src/components/css/GlowingCloudAnimation.css:470 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:472 */
-
-.glowing-cloud-speaking .glowing-cloud-orb-6 {
-  /* src/components/css/GlowingCloudAnimation.css:473 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:474 */
-    circle at 50% 50%,
-/* src/components/css/GlowingCloudAnimation.css:475 */
-    rgba(20, 184, 166, 0.8),
-/* src/components/css/GlowingCloudAnimation.css:476 */
-    rgba(6, 182, 212, 0.65),
-/* src/components/css/GlowingCloudAnimation.css:477 */
-    rgba(5, 150, 105, 0.45),
-/* src/components/css/GlowingCloudAnimation.css:478 */
-    rgba(16, 185, 129, 0.25),
-/* src/components/css/GlowingCloudAnimation.css:479 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:480 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:481 */
-  filter: blur(50px) brightness(1.2);
-  /* src/components/css/GlowingCloudAnimation.css:482 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:484 */
-
-.glowing-cloud-speaking .glowing-cloud-orb-7 {
-  /* src/components/css/GlowingCloudAnimation.css:485 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:486 */
-    circle at 40% 40%,
-/* src/components/css/GlowingCloudAnimation.css:487 */
-    rgba(6, 182, 212, 0.75),
-/* src/components/css/GlowingCloudAnimation.css:488 */
-    rgba(20, 184, 166, 0.6),
-/* src/components/css/GlowingCloudAnimation.css:489 */
-    rgba(5, 150, 105, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:490 */
-    rgba(16, 185, 129, 0.2),
-/* src/components/css/GlowingCloudAnimation.css:491 */
-    transparent 55%
-/* src/components/css/GlowingCloudAnimation.css:492 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:493 */
-  filter: blur(50px) brightness(1.15);
-  /* src/components/css/GlowingCloudAnimation.css:494 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:496 */
-
-/* Pulse animation for all states - more vibrant */
-
-/* src/components/css/GlowingCloudAnimation.css:497 */
-
-.glowing-cloud-container::before {
-  /* src/components/css/GlowingCloudAnimation.css:498 */
-  content: '';
-  /* src/components/css/GlowingCloudAnimation.css:499 */
-  position: absolute;
-  /* src/components/css/GlowingCloudAnimation.css:500 */
-  top: 50%;
-  /* src/components/css/GlowingCloudAnimation.css:501 */
-  left: 50%;
-  /* src/components/css/GlowingCloudAnimation.css:502 */
-  transform: translate(-50%, -50%);
-  /* src/components/css/GlowingCloudAnimation.css:503 */
-  width: 400px;
-  /* src/components/css/GlowingCloudAnimation.css:504 */
-  height: 400px;
-  /* src/components/css/GlowingCloudAnimation.css:505 */
-  border-radius: 50%;
-  /* src/components/css/GlowingCloudAnimation.css:506 */
-  opacity: 0.3;
-  /* src/components/css/GlowingCloudAnimation.css:507 */
-  filter: blur(60px);
-  /* src/components/css/GlowingCloudAnimation.css:508 */
-  animation: pulse 3s ease-in-out infinite;
-  /* src/components/css/GlowingCloudAnimation.css:509 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:511 */
-
-.glowing-cloud-listening .glowing-cloud-container::before {
-  /* src/components/css/GlowingCloudAnimation.css:512 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:513 */
-    circle,
-/* src/components/css/GlowingCloudAnimation.css:514 */
-    rgba(139, 92, 246, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:515 */
-    rgba(99, 102, 241, 0.2),
-/* src/components/css/GlowingCloudAnimation.css:516 */
-    transparent 70%
-/* src/components/css/GlowingCloudAnimation.css:517 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:518 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:520 */
-
-.glowing-cloud-thinking .glowing-cloud-container::before {
-  /* src/components/css/GlowingCloudAnimation.css:521 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:522 */
-    circle,
-/* src/components/css/GlowingCloudAnimation.css:523 */
-    rgba(245, 158, 11, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:524 */
-    rgba(251, 191, 36, 0.2),
-/* src/components/css/GlowingCloudAnimation.css:525 */
-    transparent 70%
-/* src/components/css/GlowingCloudAnimation.css:526 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:527 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:529 */
-
-.glowing-cloud-speaking .glowing-cloud-container::before {
-  /* src/components/css/GlowingCloudAnimation.css:530 */
-  background: radial-gradient(
-/* src/components/css/GlowingCloudAnimation.css:531 */
-    circle,
-/* src/components/css/GlowingCloudAnimation.css:532 */
-    rgba(5, 150, 105, 0.4),
-/* src/components/css/GlowingCloudAnimation.css:533 */
-    rgba(20, 184, 166, 0.2),
-/* src/components/css/GlowingCloudAnimation.css:534 */
-    transparent 70%
-/* src/components/css/GlowingCloudAnimation.css:535 */
-  );
-  /* src/components/css/GlowingCloudAnimation.css:536 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:538 */
-
-@keyframes pulse {
-  /* src/components/css/GlowingCloudAnimation.css:539 */
-
-  0%,
-/* src/components/css/GlowingCloudAnimation.css:540 */
-  100% {
-    /* src/components/css/GlowingCloudAnimation.css:541 */
-    transform: translate(-50%, -50%) scale(1);
-    /* src/components/css/GlowingCloudAnimation.css:542 */
-    opacity: 0.3;
-    /* src/components/css/GlowingCloudAnimation.css:543 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:544 */
-
-  50% {
-    /* src/components/css/GlowingCloudAnimation.css:545 */
-    transform: translate(-50%, -50%) scale(1.4);
-    /* src/components/css/GlowingCloudAnimation.css:546 */
-    opacity: 0.5;
-    /* src/components/css/GlowingCloudAnimation.css:547 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:548 */
-}
-
-/* src/components/css/GlowingCloudAnimation.css:550 */
-
-/* Responsive adjustments */
-
-/* src/components/css/GlowingCloudAnimation.css:551 */
-
-@media (max-width: 768px) {
-  /* src/components/css/GlowingCloudAnimation.css:552 */
-
-  .glowing-cloud-orb-1 {
-    /* src/components/css/GlowingCloudAnimation.css:553 */
-    width: 200px;
-    /* src/components/css/GlowingCloudAnimation.css:554 */
-    height: 200px;
-    /* src/components/css/GlowingCloudAnimation.css:555 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:557 */
-
-  .glowing-cloud-orb-2 {
-    /* src/components/css/GlowingCloudAnimation.css:558 */
-    width: 180px;
-    /* src/components/css/GlowingCloudAnimation.css:559 */
-    height: 180px;
-    /* src/components/css/GlowingCloudAnimation.css:560 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:562 */
-
-  .glowing-cloud-orb-3 {
-    /* src/components/css/GlowingCloudAnimation.css:563 */
-    width: 160px;
-    /* src/components/css/GlowingCloudAnimation.css:564 */
-    height: 160px;
-    /* src/components/css/GlowingCloudAnimation.css:565 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:567 */
-
-  .glowing-cloud-orb-4 {
-    /* src/components/css/GlowingCloudAnimation.css:568 */
-    width: 140px;
-    /* src/components/css/GlowingCloudAnimation.css:569 */
-    height: 140px;
-    /* src/components/css/GlowingCloudAnimation.css:570 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:572 */
-
-  .glowing-cloud-orb-5 {
-    /* src/components/css/GlowingCloudAnimation.css:573 */
-    width: 120px;
-    /* src/components/css/GlowingCloudAnimation.css:574 */
-    height: 120px;
-    /* src/components/css/GlowingCloudAnimation.css:575 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:577 */
-
-  .glowing-cloud-orb-6 {
-    /* src/components/css/GlowingCloudAnimation.css:578 */
-    width: 110px;
-    /* src/components/css/GlowingCloudAnimation.css:579 */
-    height: 110px;
-    /* src/components/css/GlowingCloudAnimation.css:580 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:582 */
-
-  .glowing-cloud-orb-7 {
-    /* src/components/css/GlowingCloudAnimation.css:583 */
-    width: 100px;
-    /* src/components/css/GlowingCloudAnimation.css:584 */
-    height: 100px;
-    /* src/components/css/GlowingCloudAnimation.css:585 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:587 */
-
-  .glowing-cloud-container::before {
-    /* src/components/css/GlowingCloudAnimation.css:588 */
-    width: 280px;
-    /* src/components/css/GlowingCloudAnimation.css:589 */
-    height: 280px;
-    /* src/components/css/GlowingCloudAnimation.css:590 */
-  }
-
-  /* src/components/css/GlowingCloudAnimation.css:591 */
-}
-
-/* End of file: components/css/GlowingCloudAnimation.css */
 
 /* Start of file: components/css/MarkdownRenderer.css */
 
@@ -126415,7 +135256,7 @@ svg.sleek-chat-input-whatsapp-icon:focus {
   /* src/components/css/VoiceAlternateView.css:78 */
   border-radius: 9999px;
   /* src/components/css/VoiceAlternateView.css:79 */
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid var(--chat-widget-primary-color);
   /* src/components/css/VoiceAlternateView.css:81 */
   padding: 4px 12px;
   /* src/components/css/VoiceAlternateView.css:83 */
@@ -132020,8 +140861,8 @@ const ChatWidgetWrapper = (props = {}) => {
       if (hostElement) {
         hostElement.setAttribute("data-open", newIsOpen.toString());
       }
-    } catch (error) {
-      console.error("Error in handleWidgetToggle:", error);
+    } catch (error2) {
+      console.error("Error in handleWidgetToggle:", error2);
     }
   }, []);
   const handleOpen = reactExports.useCallback(() => {
@@ -133104,10 +141945,10 @@ const _PushHookService = class _PushHookService {
                   if (clientId2 === this.metaConfig.clientId && messageContent) {
                     this.handlePushMessage(messageContent);
                   }
-                } catch (error) {
+                } catch (error2) {
                   console.error(
                     `[PushHookService] Error parsing SSE message:`,
-                    error
+                    error2
                   );
                 }
               } else if (line.trim() === "") {
@@ -133117,34 +141958,34 @@ const _PushHookService = class _PushHookService {
               }
             }
           }
-        } catch (error) {
-          if (error instanceof Error && error.name === "AbortError") {
+        } catch (error2) {
+          if (error2 instanceof Error && error2.name === "AbortError") {
             this.isConnected = false;
             return;
           }
-          console.error("[PushHookService] SSE stream error:", error);
+          console.error("[PushHookService] SSE stream error:", error2);
           this.isConnected = false;
-          throw error;
+          throw error2;
         } finally {
           this.isConnecting = false;
         }
       };
-      readStream().catch((error) => {
+      readStream().catch((error2) => {
         var _a2;
-        console.error(`[PushHookService] SSE stream error:`, error);
+        console.error(`[PushHookService] SSE stream error:`, error2);
         this.isConnecting = false;
         this.isConnected = false;
         if (!((_a2 = this.abortController) == null ? void 0 : _a2.signal.aborted)) {
           this.scheduleReconnect();
         }
       });
-    }).catch((error) => {
+    }).catch((error2) => {
       this.isConnecting = false;
       this.isConnected = false;
-      if (error instanceof Error && error.name === "AbortError") {
+      if (error2 instanceof Error && error2.name === "AbortError") {
         return;
       }
-      console.error(`[PushHookService] Failed to connect to SSE:`, error);
+      console.error(`[PushHookService] Failed to connect to SSE:`, error2);
       this.scheduleReconnect();
     });
   }
