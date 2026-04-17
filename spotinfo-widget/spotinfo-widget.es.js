@@ -37628,6 +37628,32 @@ const MessagePopup = ({
     return null;
   }
 };
+const reportHookDelivery = (metaConfig, hookType) => {
+  if (!metaConfig.hostUrl || !metaConfig.apiKey || !metaConfig.clientId) {
+    console.warn(
+      "[HookDeliveryService] hook delivery reporting skipped: missing hostUrl, apiKey or clientId"
+    );
+    return;
+  }
+  const url = `${metaConfig.hostUrl}/api/v1/hook_delivery_details`;
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": metaConfig.apiKey
+    },
+    body: JSON.stringify({
+      client_id: metaConfig.clientId,
+      hook_type: hookType,
+      delivered_time: (/* @__PURE__ */ new Date()).toISOString()
+    })
+  }).catch((error2) => {
+    console.warn(
+      "[HookDeliveryService] hook delivery reporting failed:",
+      error2
+    );
+  });
+};
 let activePopupCleanup = null;
 const closeAnyExistingPopup = () => {
   if (activePopupCleanup) {
@@ -37644,8 +37670,14 @@ const closeAnyExistingPopup = () => {
     existingContainer.remove();
   }
 };
-const showMessagePopupUtil = (message, position2, callbacks, userId, messageSource) => {
+const showMessagePopupUtil = (message, position2, callbacks, userId, messageSource, metaConfig) => {
   console.log("[PopupUtils] Starting to show popup...");
+  if (!metaConfig || !messageSource) ;
+  else if (messageSource === "proactive_hook" || messageSource === "personalized_hook") {
+    reportHookDelivery(metaConfig, messageSource);
+  } else if (messageSource === "sse") {
+    reportHookDelivery(metaConfig, "proactive_hook");
+  }
   closeAnyExistingPopup();
   if (typeof window !== "undefined" && window.spotinfoSetButtonVisibility) {
     console.log("[PopupUtils] Attempting to hide widget button.");
@@ -37938,7 +37970,8 @@ const _PersonalizedHookService = class _PersonalizedHookService {
         }
       },
       this.metaConfig.userId,
-      "personalized_hook"
+      "personalized_hook",
+      this.metaConfig
     );
   }
   removeMessagePopup() {
@@ -122626,8 +122659,7 @@ const HumanAvatar = ({
         lipsyncLang: "en",
         // keep idle animation as false, otherwise it avatar around randomly
         idleAnimation: false,
-        modelRotation: [0.5, 0, 0],
-        // tilt head UP slightly
+        modelRotation: [0.5, -0.1, -0.2],
         blinkInterval: 4e3,
         headMovement: false,
         backgroundColor: null,
@@ -122747,16 +122779,26 @@ const HumanAvatar = ({
             "https://cdn.jsdelivr.net/gh/met4citizen/HeadAudio@main/dist/model-en-mixed.bin"
           );
           const AMP2 = 2;
-          const SMOOTHING = 0.5;
+          const SMOOTHING = 0.6;
+          const THRESHOLD = 0.02;
+          const CLOSE_THRESHOLD = 0.01;
           headaudio.onvalue = (key, value) => {
             var _a2;
+            let finalValue;
             if (!((_a2 = head.mtAvatar) == null ? void 0 : _a2[key])) return;
             const prev = visemeState[key] ?? 0;
             const amplified = Math.min(1, value * AMP2);
-            const smoothed = prev * SMOOTHING + amplified * (1 - SMOOTHING);
-            visemeState[key] = smoothed;
+            if (amplified < CLOSE_THRESHOLD) {
+              finalValue = 0;
+            } else {
+              const isClosing = amplified < prev;
+              const dynamicSmoothing = isClosing ? 0.3 : SMOOTHING;
+              const smoothed = prev * dynamicSmoothing + amplified * (1 - dynamicSmoothing);
+              finalValue = smoothed < THRESHOLD ? 0 : smoothed;
+            }
+            visemeState[key] = finalValue;
             Object.assign(head.mtAvatar[key], {
-              newvalue: smoothed,
+              newvalue: finalValue,
               needsUpdate: true
             });
           };
@@ -122770,7 +122812,12 @@ const HumanAvatar = ({
       }
       head.animMoods["still"] = {
         //  use headRotateX as -0.4 with face and -0.2 with upper camera
-        baseline: { eyesRotateX: -0.85, headRotateX: -0.2 },
+        baseline: {
+          eyesRotateX: -0.85,
+          headRotateX: -0.2,
+          headRotateY: 0,
+          eyesRotateY: 0
+        },
         speech: { deltaRate: 0, deltaPitch: 0, deltaVolume: 0 },
         anims: [
           {
@@ -123601,7 +123648,7 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Mon Apr 13 18:22:26 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Fri Apr 17 23:43:51 IST 2026 */
 
 /* Start of file: components/avatar/HumanAvatar.css */
 
@@ -141777,6 +141824,7 @@ const _PushHookService = class _PushHookService {
     __publicField(this, "popupCleanup", null);
     /** True when a hook popup is visible and user has not yet clicked Open or Dismiss. Blocks showing another hook. */
     __publicField(this, "hasPendingHookNotActedOn", false);
+    // private reconnectTimeout: NodeJS.Timeout | null = null;
     __publicField(this, "reconnectTimeout", null);
     __publicField(this, "reconnectAttempts", 0);
     __publicField(this, "maxReconnectAttempts", 5);
@@ -142087,7 +142135,8 @@ const _PushHookService = class _PushHookService {
         }
       },
       this.metaConfig.userId,
-      source
+      source,
+      this.metaConfig
     );
   }
   showProactiveHook(messageContent, reason) {
