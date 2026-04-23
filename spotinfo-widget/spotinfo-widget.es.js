@@ -36814,7 +36814,10 @@ const _ProactiveEngagementEngine = class _ProactiveEngagementEngine {
         options.isWidgetOpen
       );
     } else {
-      _ProactiveEngagementEngine.instance.updateConfig(options.metaConfig);
+      const inst = _ProactiveEngagementEngine.instance;
+      inst.updateConfig(options.metaConfig);
+      inst.pushHookService = options.pushHookService;
+      inst.isWidgetOpen = options.isWidgetOpen;
     }
     return _ProactiveEngagementEngine.instance;
   }
@@ -123648,7 +123651,7 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Fri Apr 17 23:43:51 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Thu Apr 23 12:39:08 IST 2026 */
 
 /* Start of file: components/avatar/HumanAvatar.css */
 
@@ -141818,6 +141821,8 @@ const _PushHookService = class _PushHookService {
     __publicField(this, "openWidgetInSleekViewCallback");
     __publicField(this, "closeWidgetCallback");
     __publicField(this, "isWidgetOpenCallback");
+    /** Synced from ChatContext via setWidgetOpenState — callback from getInstance is only set once. */
+    __publicField(this, "widgetOpenRef", false);
     __publicField(this, "onHookActedOnCallback");
     // private eventSource: EventSource | null = null;
     __publicField(this, "position");
@@ -141838,6 +141843,7 @@ const _PushHookService = class _PushHookService {
     this.openWidgetInSleekViewCallback = openWidgetInSleekView;
     this.closeWidgetCallback = closeWidget;
     this.isWidgetOpenCallback = isWidgetOpen;
+    this.widgetOpenRef = isWidgetOpen();
     this.onHookActedOnCallback = onHookActedOn;
     this.position = position2;
     if (!metaConfig.hostUrl) {
@@ -141915,6 +141921,7 @@ const _PushHookService = class _PushHookService {
     }
   }
   setWidgetOpenState(isOpen) {
+    this.widgetOpenRef = isOpen;
     console.log(`[PushHookService] Widget state changed: ${isOpen}`);
   }
   /**
@@ -142141,11 +142148,8 @@ const _PushHookService = class _PushHookService {
   }
   showProactiveHook(messageContent, reason) {
     console.log("[PushHookService] Showing proactive hook", { reason });
-    if (this.isWidgetOpenCallback()) {
-      this.closeWidgetCallback();
-      setTimeout(() => {
-        this.showPopup(messageContent, "proactive_hook");
-      }, 300);
+    if (this.widgetOpenRef || this.isWidgetOpenCallback()) {
+      console.log("[PushHookService] Skipping proactive hook — widget is open");
       return;
     }
     this.showPopup(messageContent, "proactive_hook");
