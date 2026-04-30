@@ -36471,6 +36471,619 @@ var sa = (Xo = Bo[Wo] = new Yo$1(), function() {
   }
   null != o$1 && o$1.addEventListener ? "complete" === o$1.readyState ? i2() : st(o$1, "DOMContentLoaded", i2, { capture: false }) : t && j.error("Browser doesn't support `document.addEventListener` so PostHog couldn't be initialized");
 }(), Xo);
+const aadhaarKeywords = [
+  // Core Variants
+  "aadhaar",
+  "aadhar",
+  "adhaar",
+  "adhar",
+  // Common Field Names / Keys
+  "aadhaar_number",
+  "aadhar_number",
+  "aadhaar_no",
+  "aadhar_no",
+  "aadhaar_num",
+  "aadhar_num",
+  "aadhaar_id",
+  "aadhar_id",
+  "aadhaar_card",
+  "aadhar_card",
+  "aadhaarcard",
+  "aadharcard",
+  // Abbreviations / Short Forms
+  "uid",
+  "uidai",
+  "uid_number",
+  "uid_no",
+  "uid_num",
+  // Number Representations
+  "aadhaar#",
+  "aadhar#",
+  "aadhaar id",
+  "aadhar id",
+  // Government / Contextual Terms
+  "uidai_number",
+  "uidai_id",
+  "aadhaar_uid",
+  "aadhaar_identity",
+  // Loose / Noisy Variants
+  "adhar_no",
+  "adhr",
+  "aadr",
+  "adr_number"
+];
+const voterIdKeywords = [
+  // Core Variants
+  "voter",
+  "voterid",
+  "voter_id",
+  "voter-id",
+  "voter card",
+  "votercard",
+  "voteridcard",
+  "voter id card",
+  // Official Names
+  "electoral photo identity card",
+  "epic",
+  "epic number",
+  "epic no",
+  "epic id",
+  // Authority / Context
+  "eci",
+  "election commission",
+  "election commission of india",
+  "eci id",
+  "eci number",
+  // Common Field Names
+  "voter_number",
+  "voter_no",
+  "voter_num",
+  "voter_id_number",
+  "voter_id_no",
+  // Loose / Noisy Variants
+  "votrid",
+  "voteridno",
+  "voter_card_no",
+  "epicno",
+  "epicnumber"
+];
+const panKeywords = [
+  // Core Variants
+  "pan",
+  "pan card",
+  "pancard",
+  "pan id",
+  "pan number",
+  // Official Name
+  "permanent account number",
+  // Common Field Names
+  "pan_no",
+  "pan_number",
+  "pan_num",
+  "pan_id",
+  "pan_card_number"
+];
+const gstKeywords = [
+  // Core Variants
+  "gst",
+  "gstin",
+  "gst number",
+  "gst no",
+  "gst id",
+  // Official Name
+  "goods and services tax",
+  "goods and service tax",
+  // Common Field Names
+  "gst_number",
+  "gst_no",
+  "gst_num",
+  "gst_id",
+  "gstin_number",
+  "gstin_no",
+  "gstin_id",
+  // Business / Tax Context
+  "tax id gst",
+  "indirect tax gst",
+  "gst registration",
+  "gst registration number",
+  // Loose / Noisy Variants
+  "gstnum",
+  "gstno",
+  "gstinno",
+  "gstinnumber"
+];
+const drivingLicenseKeywords = [
+  // Core Variants
+  "driving license",
+  "driving licence",
+  "driver license",
+  "driver licence",
+  // Compact / Joined Forms
+  "drivinglicense",
+  "drivinglicence",
+  "driverlicense",
+  "driverlicence",
+  // Short Forms / Abbreviations
+  "dl",
+  "dl number",
+  "dl no",
+  "dl id",
+  // Common Field Names
+  "dl_number",
+  "dl_no",
+  "dl_num",
+  "dl_id",
+  "license_number",
+  "licence_number",
+  "driver_license_number",
+  "driver_licence_number",
+  // Variants from your examples
+  "driverlic",
+  "driverlics",
+  "driverlicenses",
+  "driverlicences",
+  // Government / Context
+  "driving license number",
+  "driving licence number",
+  "driver license number",
+  "driver licence number",
+  // Loose / Noisy Variants
+  "dlno",
+  "dlnumber",
+  "licensenumber",
+  "licencenumber"
+];
+const debitCardKeywords = [
+  // Core Variants
+  "debit card",
+  "debitcard",
+  "debit",
+  // Card Types / Context
+  "bank card",
+  "atm card",
+  "atmcard",
+  "payment card",
+  // Common Field Names
+  "debit_card_number",
+  "debitcard_number",
+  "card_number",
+  "card_no",
+  "card_num",
+  "card id",
+  // Banking Context
+  "linked debit",
+  "account debit card",
+  "bank debit card",
+  // Card Details (sensitive fields)
+  "expiry",
+  "expiry date",
+  "exp date",
+  "valid thru",
+  "valid through",
+  "cvv",
+  "cvc",
+  "security code",
+  // Loose / Noisy Variants
+  "debitcardno",
+  "debitcardnum",
+  "cardno",
+  "cardnumber",
+  "atmcardno"
+];
+const creditCardKeywords = [
+  // Core Variants
+  "credit card",
+  "creditcard",
+  "credit",
+  // Card Types / Networks
+  "visa",
+  "mastercard",
+  "amex",
+  "american express",
+  "rupay",
+  "discover",
+  // Common Field Names
+  "credit_card_number",
+  "creditcard_number",
+  "card_number",
+  "card_no",
+  "card_num",
+  "card id",
+  // Card Details (sensitive fields)
+  "expiry",
+  "expiry date",
+  "exp date",
+  "valid thru",
+  "valid through",
+  "cvv",
+  "cvc",
+  "security code",
+  "card verification value",
+  // Billing Context
+  "billing card",
+  "payment card",
+  "card details",
+  // Loose / Noisy Variants
+  "creditcardno",
+  "creditcardnum",
+  "cardno",
+  "cardnumber"
+];
+const emailKeywords = [
+  // Core Variants
+  "email",
+  "e-mail",
+  "mail",
+  "email id",
+  "email address",
+  "mail id",
+  "mail address",
+  // Common Field Names
+  "email_id",
+  "email_address",
+  "emailid",
+  "emailaddress",
+  "mail_id",
+  "mail_address",
+  // Forms / Inputs
+  "user email",
+  "contact email",
+  "primary email",
+  "secondary email",
+  "work email",
+  "personal email",
+  // Auth / Account Context
+  "login email",
+  "registered email",
+  "account email",
+  "signin email",
+  "signup email",
+  // Variants with symbols
+  "email#",
+  "mail#",
+  "email_id#",
+  // Loose / Noisy Variants
+  "e mail",
+  "emailaddr",
+  "mailaddr",
+  "emailadd",
+  "mailadd"
+];
+const phoneKeywords = [
+  // Core Variants
+  "phone",
+  "phone number",
+  "phonenumber",
+  "mobile",
+  "mobile number",
+  "mobilenumber",
+  "contact",
+  "contact number",
+  "contactnumber",
+  "telephone",
+  "telephone number",
+  "telephonenumber",
+  "tel",
+  "tel no",
+  "tel number",
+  // Common Field Names
+  "phone_no",
+  "phone_number",
+  "phone_num",
+  "mobile_no",
+  "mobile_number",
+  "mobile_num",
+  "contact_no",
+  "contact_number",
+  "contact_num",
+  "tel_no",
+  "tel_number",
+  "tel_num",
+  // Short / Forms
+  "ph no",
+  "ph number",
+  "mob no",
+  "mob number",
+  "contact no",
+  "contact num",
+  // International / Context
+  "cell",
+  "cell number",
+  "cellphone",
+  "cell phone",
+  "whatsapp",
+  "whatsapp number",
+  "whatsapp no",
+  // Variants with symbols
+  "phone#",
+  "mobile#",
+  "contact#",
+  "tel#",
+  // Loose / Noisy Variants
+  "phoneno",
+  "phonenumber",
+  "mobileno",
+  "mobilenum",
+  "contactno",
+  "contactnum",
+  "telno",
+  "telnumber"
+];
+const passwordKeywords = [
+  // Core
+  "password",
+  "passcode",
+  "pass code",
+  "passwd",
+  "pwd",
+  // Field Names
+  "user_password",
+  "account_password",
+  "login_password",
+  "password_field",
+  "password_input",
+  "passcode_value",
+  // Auth Context
+  "login password",
+  "signin password",
+  "signup password",
+  "account passcode",
+  "security password",
+  // PIN-related (careful: medium confidence)
+  "pin",
+  "pin code",
+  "mpin",
+  "atm pin",
+  "card pin",
+  "secure pin",
+  // Variants
+  "passwrd",
+  "pasword",
+  "pass_code",
+  "pwdvalue"
+];
+const otpKeywords = [
+  // Core
+  "otp",
+  "one time password",
+  "one-time password",
+  "one time passcode",
+  "one-time passcode",
+  // Variants
+  "otp code",
+  "otp number",
+  "otp no",
+  "otp value",
+  "otp pin",
+  // Verification Context
+  "verification code",
+  "verify code",
+  "verification otp",
+  "verification number",
+  "verification pin",
+  // Authentication Context
+  "auth code",
+  "authentication code",
+  "auth otp",
+  "auth number",
+  // Login / Security Context
+  "login otp",
+  "signin otp",
+  "signup otp",
+  "secure code",
+  "security code",
+  "security otp",
+  // SMS / Email Context
+  "sms code",
+  "sms otp",
+  "email otp",
+  "email code",
+  "mail otp",
+  // App / MFA Context
+  "2fa",
+  "2fa code",
+  "two factor code",
+  "two factor authentication",
+  "mfa",
+  "mfa code",
+  "multi factor code",
+  "multi factor authentication",
+  // Field Names
+  "otp_code",
+  "otp_number",
+  "otp_value",
+  "verification_code",
+  "auth_code",
+  "security_code",
+  // Symbol Variants
+  "otp#",
+  "otp_code#",
+  "auth_code#",
+  "verification_code#",
+  // Loose / Noisy
+  "otpnum",
+  "otpno",
+  "otpvalue",
+  "verifycode",
+  "authcode",
+  "securitycode"
+];
+const addressKeywords = [
+  // Core Variants
+  "address",
+  "full address",
+  "residential address",
+  "home address",
+  "permanent address",
+  "current address",
+  "mailing address",
+  "postal address",
+  "communication address",
+  // Common Field Names
+  "address_line1",
+  "address_line2",
+  "address1",
+  "address2",
+  "addr",
+  "addr_line1",
+  "addr_line2",
+  "user_address",
+  "customer_address",
+  // Components (often used instead of full address)
+  "street",
+  "street address",
+  "street name",
+  "road",
+  "lane",
+  "area",
+  "locality",
+  "sector",
+  "block",
+  "building",
+  "house number",
+  "flat number",
+  "apartment",
+  "society",
+  // Location Hierarchy
+  "city",
+  "town",
+  "village",
+  "district",
+  "state",
+  "province",
+  "region",
+  "country",
+  // Postal Info
+  "pincode",
+  "pin code",
+  "postal code",
+  "zip",
+  "zip code",
+  "postcode",
+  // Contextual Variants
+  "shipping address",
+  "billing address",
+  "delivery address",
+  "office address",
+  "work address",
+  // Loose / Noisy Variants
+  "addr1",
+  "addr2",
+  "addressline1",
+  "addressline2",
+  "streetaddr",
+  "homeaddr"
+];
+let dataPolicy = {
+  mask: [
+    ...aadhaarKeywords,
+    ...voterIdKeywords,
+    ...panKeywords,
+    ...gstKeywords,
+    ...drivingLicenseKeywords,
+    ...debitCardKeywords,
+    ...creditCardKeywords,
+    ...emailKeywords,
+    ...phoneKeywords,
+    ...passwordKeywords,
+    ...otpKeywords,
+    ...addressKeywords
+  ],
+  reject: []
+};
+const normalize$2 = (str) => str.toLowerCase().replace(/[^a-z0-9]/g, "");
+const matchesPolicy = (key, list2) => {
+  if (!list2) return false;
+  const normalizedKey = normalize$2(key);
+  return list2.some((item) => normalizedKey.includes(normalize$2(item)));
+};
+const EMAIL_REGEX = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i;
+const INDIAN_PHONE_REGEX = /\b(?:\+?91[\s-]?)?[6-9](?:[\s-]?\d){9}\b/;
+const PAN_REGEX = /\b[A-Z]{5}[0-9]{4}[A-Z]\b/i;
+const AADHAAR_REGEX = /\b\d{4}[\s-]?\d{4}[\s-]?\d{4}\b/;
+const PAYMENT_CARD_REGEX = /\b(?:\d[ -]*?){13,16}\b/;
+const INDIAN_PASSPORT_REGEX = /\b[A-Z][1-9][\s-]?\d{6}\b/i;
+const DATE_OF_BIRTH_REGEX = /\b(?:0?[1-9]|[12]\d|3[01])[-/.\s](?:0?[1-9]|1[0-2]|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[-/.\s](?:19|20)\d{2}\b/i;
+const INDIAN_DRIVING_LICENSE_REGEX = /\b(?:AN|AP|AR|AS|BR|CG|CH|DD|DL|DN|GA|GJ|HP|HR|JH|JK|KA|KL|LA|LD|MH|ML|MN|MP|MZ|NL|OD|OR|PB|PY|RJ|SK|TN|TS|TR|UA|UK|UP|WB)[ -/]?\d{1,3}[A-Z]?[ -/]?(?:(?:19|20)?\d{2})?[ -/]?\d{4,7}\b/i;
+const GSTIN_REGEX = /\b(0[1-9]|1[0-9]|2[0-9]|3[0-8])[A-Z]{5}[0-9]{4}[A-Z][0-9A-Z]Z[0-9A-Z]\b/i;
+const INDIAN_VOTER_ID_REGEX = /\b[A-Z]{3}[0-9]{7}\b/i;
+const SENSITIVE_PATTERNS = [
+  EMAIL_REGEX,
+  INDIAN_PHONE_REGEX,
+  PAN_REGEX,
+  AADHAAR_REGEX,
+  INDIAN_DRIVING_LICENSE_REGEX,
+  PAYMENT_CARD_REGEX,
+  INDIAN_PASSPORT_REGEX,
+  DATE_OF_BIRTH_REGEX,
+  GSTIN_REGEX,
+  INDIAN_VOTER_ID_REGEX
+];
+const containsSensitiveValue = (value) => {
+  if (typeof value !== "string") return false;
+  return SENSITIVE_PATTERNS.some((regex) => regex.test(value));
+};
+const maskValue = (value) => {
+  const str = String(value);
+  return "*".repeat(str.length);
+};
+const maskSensitivePatterns = (value) => {
+  let masked = value;
+  for (const regex of SENSITIVE_PATTERNS) {
+    const globalRegex = new RegExp(
+      regex.source,
+      regex.flags.includes("g") ? regex.flags : regex.flags + "g"
+    );
+    masked = masked.replace(globalRegex, (match) => "*".repeat(match.length));
+  }
+  return masked;
+};
+const ALWAYS_MASK_INPUT_TYPES = /* @__PURE__ */ new Set(["password", "email", "tel"]);
+const shouldMaskByInputType = (fieldObj) => {
+  if (!fieldObj || typeof fieldObj !== "object") return false;
+  const inputType = String(fieldObj.inputType || "").toLowerCase();
+  return ALWAYS_MASK_INPUT_TYPES.has(inputType);
+};
+const maskFormField = (fieldObj) => ({
+  ...fieldObj,
+  value: maskValue(fieldObj.value)
+});
+const sanitizeProperties = (obj) => {
+  if (!obj || typeof obj !== "object") return obj;
+  const sanitized = Array.isArray(obj) ? [] : {};
+  const flatInputType = typeof obj.inputType === "string" ? obj.inputType.toLowerCase() : null;
+  const shouldMaskFlatInput = flatInputType !== null && ALWAYS_MASK_INPUT_TYPES.has(flatInputType);
+  for (const key in obj) {
+    const value = obj[key];
+    if (shouldMaskFlatInput && key === "inputValue" && typeof value === "string") {
+      sanitized[key] = maskValue(value);
+      continue;
+    }
+    if (matchesPolicy(key, dataPolicy.reject)) {
+      console.warn("[Policy Reject]", obj);
+      console.warn("[Policy Reject]", key);
+      continue;
+    }
+    if (matchesPolicy(key, dataPolicy.mask)) {
+      sanitized[key] = maskValue(value);
+      continue;
+    }
+    if (typeof value === "string" && containsSensitiveValue(value)) {
+      sanitized[key] = maskSensitivePatterns(value);
+      continue;
+    }
+    if (shouldMaskByInputType(value)) {
+      sanitized[key] = maskFormField(value);
+      continue;
+    }
+    if (typeof value === "object") {
+      sanitized[key] = sanitizeProperties(value);
+    } else {
+      sanitized[key] = value;
+    }
+  }
+  return sanitized;
+};
 const base_url = "https://api.spotinfo.ai";
 const user_journey_path = "/api/v1/register_user_journey";
 const backend_event_endpoint = `${base_url}${user_journey_path}`;
@@ -36522,20 +37135,18 @@ const initPostHog = (postHogApiKey, clientId, distinctId, collectionApiKey) => {
   initSessionUTM();
   sa.init(postHogApiKey, {
     loaded: (phInstance) => {
-      console.log("[PostHog] Widget initialized:", {
-        clientId,
-        distinctId
-      });
       phInstance.identify(distinctId);
     },
     capture_pageview: true,
     capture_pageleave: false,
+    // Disable unsafe auto capture
     autocapture: true,
     persistence: "localStorage+cookie",
     disable_session_recording: true,
     advanced_disable_decide: true,
     person_profiles: "always",
-    ip: true,
+    // Disable IP tracking for privacy
+    ip: false,
     xhr_headers: {
       "X-Api-Key": collectionApiKey,
       "X-Client-Id": clientId,
@@ -36545,25 +37156,23 @@ const initPostHog = (postHogApiKey, clientId, distinctId, collectionApiKey) => {
   if (!isCapturePatched && typeof sa.capture === "function") {
     const originalCapture = sa.capture.bind(sa);
     sa.capture = function(event, properties = {}, options = {}) {
+      console.log("[DATA_SECURITY] event = ", event);
+      console.log("[DATA_SECURITY] properties = ", properties);
+      const cleanedProps = sanitizeProperties(properties);
+      console.log("[DATA_SECURITY] cleanedProps = ", cleanedProps);
       const sessionUTM = getSessionUTM();
       const enhancedProperties = {
-        ...properties,
+        ...cleanedProps,
         ...sessionUTM,
         $browser: sa.get_property("$browser"),
-        $browser_version: sa.get_property("$browser_version"),
         $os: sa.get_property("$os"),
         $device_type: sa.get_property("$device_type"),
         $current_url: sa.get_property("$current_url"),
         $host: sa.get_property("$host"),
         $pathname: sa.get_property("$pathname"),
         $referrer: sa.get_property("$referrer"),
-        $referring_domain: sa.get_property("$referring_domain"),
         $screen_height: sa.get_property("$screen_height"),
-        $screen_width: sa.get_property("$screen_width"),
-        $viewport_height: sa.get_property("$viewport_height"),
-        $viewport_width: sa.get_property("$viewport_width"),
-        $lib: "web",
-        $lib_version: sa.get_property("$lib_version")
+        $screen_width: sa.get_property("$screen_width")
       };
       if (shouldSendEventsToBackend) {
         const headers = {
@@ -36572,8 +37181,6 @@ const initPostHog = (postHogApiKey, clientId, distinctId, collectionApiKey) => {
         if (activeCollectionApiKeyForPatch) {
           headers["X-Api-Key"] = activeCollectionApiKeyForPatch;
         }
-        console.log("Sending event to backend:", shouldSendEventsToBackend);
-        console.log("backend_event_endpoint = ", backend_event_endpoint);
         fetch(backend_event_endpoint, {
           method: "POST",
           headers,
@@ -36591,11 +37198,11 @@ const initPostHog = (postHogApiKey, clientId, distinctId, collectionApiKey) => {
     isCapturePatched = true;
   }
 };
-const disableBackendEventSending = () => {
-  shouldSendEventsToBackend = false;
-};
 const enableBackendEventSending = () => {
   shouldSendEventsToBackend = true;
+};
+const disableBackendEventSending = () => {
+  shouldSendEventsToBackend = false;
 };
 const DEFAULT_POSITION_OFFSET = "20px";
 function getPositionStyles(position2 = DEFAULT_POSITION, offset = DEFAULT_POSITION_OFFSET) {
@@ -36772,11 +37379,12 @@ const trackFormSubmit = (formId, action, properties = {}) => {
     action
   });
 };
-const trackInputChanged = (inputValue, inputCaption, properties = {}) => {
+const trackInputChanged = (inputValue, inputCaption, inputType, properties = {}) => {
   trackWidgetEvent("input_changed", {
     ...properties,
     inputValue,
-    inputCaption
+    inputCaption,
+    inputType
   });
 };
 const trackScrollStoppedWithVisibleContent = (visibleContentSamples, eventSpecificProperties = {}) => {
@@ -36786,6 +37394,69 @@ const trackScrollStoppedWithVisibleContent = (visibleContentSamples, eventSpecif
     visibleSections: visibleContentSamples
   });
 };
+const DATA_LAYER_PLACEHOLDER_REGEX$1 = /\{data-layer-([^{}]+)\}/g;
+const getValueByPath = (source, path) => {
+  if (!source || typeof source !== "object" || !path) {
+    return void 0;
+  }
+  const pathSegments = path.split(".").map((segment) => segment.trim()).filter(Boolean);
+  if (pathSegments.length === 0) {
+    return void 0;
+  }
+  let current = source;
+  for (const segment of pathSegments) {
+    if (!current || typeof current !== "object") {
+      return void 0;
+    }
+    if (Array.isArray(current)) {
+      const index2 = Number(segment);
+      if (!Number.isInteger(index2) || index2 < 0 || index2 >= current.length) {
+        return void 0;
+      }
+      current = current[index2];
+      continue;
+    }
+    const record = current;
+    if (!Object.prototype.hasOwnProperty.call(record, segment)) {
+      return void 0;
+    }
+    current = record[segment];
+  }
+  return current;
+};
+const getLatestDataLayerValueByPath = (path) => {
+  if (!Array.isArray(window.dataLayer) || !path) {
+    return null;
+  }
+  for (let index2 = window.dataLayer.length - 1; index2 >= 0; index2 -= 1) {
+    const foundValue = getValueByPath(window.dataLayer[index2], path);
+    if (foundValue === void 0 || foundValue === null) {
+      continue;
+    }
+    if (typeof foundValue === "string") {
+      const trimmed = foundValue.trim();
+      if (trimmed.length > 0) {
+        return trimmed;
+      }
+      continue;
+    }
+    return String(foundValue);
+  }
+  return null;
+};
+const resolveDataLayerPlaceholders = (messageTemplate) => {
+  if (typeof messageTemplate !== "string" || messageTemplate.length === 0) {
+    return messageTemplate;
+  }
+  return messageTemplate.replace(
+    DATA_LAYER_PLACEHOLDER_REGEX$1,
+    (fullMatch, path) => {
+      const resolvedValue = getLatestDataLayerValueByPath(path);
+      return resolvedValue ?? fullMatch;
+    }
+  );
+};
+const DATA_LAYER_PLACEHOLDER_REGEX = /\{data-layer-[^{}]+\}/;
 const _ProactiveEngagementEngine = class _ProactiveEngagementEngine {
   constructor(metaConfig, pushHookService2, isWidgetOpen) {
     __publicField(this, "config");
@@ -37028,7 +37699,8 @@ const _ProactiveEngagementEngine = class _ProactiveEngagementEngine {
     if (!this.config.enabled) return;
     if (this.isWidgetOpen()) return;
     const reasonConfig = this.config[reason];
-    const message = reasonConfig && "message" in reasonConfig && reasonConfig.message ? reasonConfig.message : "Need help completing this step? I can assist.";
+    const messageTemplate = reasonConfig && "message" in reasonConfig && reasonConfig.message ? reasonConfig.message : "Need help completing this step? I can assist.";
+    const message = DATA_LAYER_PLACEHOLDER_REGEX.test(messageTemplate) ? resolveDataLayerPlaceholders(messageTemplate) : messageTemplate;
     console.log("[ProactiveEngagement] triggerHook using message:", message);
     if (typeof this.pushHookService.showProactiveHook === "function") {
       this.pushHookService.showProactiveHook(message, reason);
@@ -37367,12 +38039,18 @@ const useAnalytics = ({
           if (element2 instanceof HTMLInputElement || element2 instanceof HTMLSelectElement || element2 instanceof HTMLTextAreaElement) {
             if (element2.name) {
               let value = "";
+              let inputType = "text";
               if (element2 instanceof HTMLSelectElement) {
                 value = ((_a = element2.options[element2.selectedIndex]) == null ? void 0 : _a.value) || "";
+                inputType = "select";
+              } else if (element2 instanceof HTMLTextAreaElement) {
+                value = element2.value || "";
+                inputType = "textarea";
               } else {
                 value = element2.value || "";
+                inputType = element2.type || "text";
               }
-              formData[element2.name] = value;
+              formData[element2.name] = { value, inputType };
             }
           }
         });
@@ -37396,10 +38074,12 @@ const useAnalytics = ({
         (((_f = inputElement.getAttribute("aria-label")) == null ? void 0 : _f.toLowerCase()) || "").includes("search") || (((_g = inputElement.getAttribute("title")) == null ? void 0 : _g.toLowerCase()) || "").includes(
           "search"
         );
+        const inputType = inputElement.type || "text";
         if (isSearch) {
           trackWidgetEvent(WidgetEvents.SEARCH_EVENT, {
             inputValue: inputElement.value,
-            inputCaption: labelText
+            inputCaption: labelText,
+            inputType
           });
           const engine = ProactiveEngagementEngine.getInstance();
           if (engine) {
@@ -37407,7 +38087,7 @@ const useAnalytics = ({
             engine.handleSearch(inputElement.value);
           }
         } else {
-          trackInputChanged(inputElement.value, labelText);
+          trackInputChanged(inputElement.value, labelText, inputType);
           const engine = ProactiveEngagementEngine.getInstance();
           if (engine) {
             engine.markActivity("typing");
@@ -123651,7 +124331,7 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Thu Apr 23 12:39:08 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Thu Apr 30 08:06:09 IST 2026 */
 
 /* Start of file: components/avatar/HumanAvatar.css */
 
@@ -139936,6 +140616,10 @@ video {
   font-weight: 600;
 }
 
+.lowercase {
+  text-transform: lowercase;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -141393,6 +142077,7 @@ class StyledChatWidget extends ChatWidgetWebComponent {
     __publicField(this, "_userIdGenerated", false);
     __publicField(this, "_generatedUserId", null);
   }
+  // private _dataLayerEventsPushed: boolean = false;
   connectedCallback() {
     var _a;
     console.log("[StyledChatWidget] connectedCallback called", {
