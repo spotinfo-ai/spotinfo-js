@@ -112325,24 +112325,23 @@ const detectBrowserGuide = () => {
       steps: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
           "Click the ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "lock" }),
-          " or ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "tune" }),
-          " icon in the address bar."
+          /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "info" }),
+          " icon in the address bar on left."
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-          "Open ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "Site settings" }),
-          " and set",
-          " ",
+          "Toggle ",
           /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "Microphone" }),
           " to ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "Allow" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "Allowed" }),
           "."
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-          "Reload the page and click ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: tryAgainText }),
+          "Click on ",
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("strong", { children: [
+            "'",
+            tryAgainText,
+            "'"
+          ] }),
           "."
         ] })
       ]
@@ -125750,7 +125749,7 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Tue May  5 18:37:24 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Tue May  5 18:51:23 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
