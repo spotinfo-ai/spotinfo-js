@@ -113374,10 +113374,18 @@ const ModernView = ({
   const handleInputChange = (e2) => {
     handleTextChange(e2.target.value);
   };
+  const clearTextInput = () => {
+    setInputText("");
+    if (textareaRef.current) {
+      textareaRef.current.value = "";
+      textareaRef.current.style.height = "auto";
+    }
+  };
   const handleSendMessage = () => {
     const value = inputText.trim();
     if (!value || isLoading) return;
     sendMessage(value);
+    clearTextInput();
   };
   const handleKeyDown = (e2) => {
     if (e2.key === "Enter" && !e2.shiftKey) {
@@ -125749,7 +125757,7 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Tue May  5 18:51:23 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Tue May  5 19:40:28 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
