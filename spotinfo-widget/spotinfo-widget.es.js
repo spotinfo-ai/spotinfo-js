@@ -125879,7 +125879,7 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Wed May  6 17:13:03 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Wed May  6 18:01:37 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -147763,7 +147763,7 @@ const generateGlobalStyles = (width, height, position2 = DEFAULT_POSITION, rootB
     border-radius: 999px !important;
     padding: 0 16px 0 8px !important;
     gap: 10px !important;
-    background-color: color-mix(in srgb, var(--chat-widget-secondary-color) 10%, #fff 90%) !important;
+    // background-color: color-mix(in srgb, var(--chat-widget-secondary-color) 10%, #fff 90%) !important;
     border: 1.5px solid color-mix(in srgb, var(--chat-widget-secondary-color) 75%, #fff 25%) !important;
     box-shadow: 0 2px 12px rgba(0,0,0,0.10) !important;
     color: var(--chat-widget-primary-color) !important;
@@ -147775,7 +147775,7 @@ const generateGlobalStyles = (width, height, position2 = DEFAULT_POSITION, rootB
     width: 40px !important;
     height: 40px !important;
     border-radius: 50% !important;
-    background-color: var(--chat-widget-primary-color) !important;
+    background-color: color-mix(in srgb, var(--chat-widget-primary-color) 15%, #fff 90%) !important;
     opacity: 0.8 !important;
     display: flex !important;
     align-items: center !important;
@@ -148025,7 +148025,7 @@ const generateShadowStyles = (width, height, primaryColor, primaryColorHover, po
     width: 40px !important;
     height: 40px !important;
     border-radius: 50% !important;
-    background-color: var(--chat-widget-primary-color) !important;
+    // background-color: color-mix(in srgb, var(--chat-widget-primary-color) 15%, #fff 90%) !important; 
     opacity: 0.8 !important;
     display: flex !important;
     align-items: center !important;
