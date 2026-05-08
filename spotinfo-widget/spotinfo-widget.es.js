@@ -125890,7 +125890,7 @@ function buildConfigs(props) {
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Fri May  8 19:58:28 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Fri May  8 20:10:41 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -148633,11 +148633,11 @@ class StyledChatWidget extends ChatWidgetWebComponent {
     const isMobileViewport = typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches;
     const xOffset = this.getAttr(
       isMobileViewport ? "mobile-x-offset" : "desktop-x-offset",
-      DEFAULT_POSITION_OFFSET
+      isMobileViewport ? defaultWidgetConfig.mobileXOffset : defaultWidgetConfig.desktopXOffset
     );
     const yOffset = this.getAttr(
       isMobileViewport ? "mobile-y-offset" : "desktop-y-offset",
-      DEFAULT_POSITION_OFFSET
+      isMobileViewport ? defaultWidgetConfig.mobileYOffset : defaultWidgetConfig.desktopYOffset
     );
     const positionStyles = getPositionStyles(position2, {
       xOffset,
