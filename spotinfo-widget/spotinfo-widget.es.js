@@ -31747,6 +31747,10 @@ const ROOT_SUBTITLE = "Online · replies in 10s";
 const VIEW_TYPE = "modern_view";
 const HEIGHT = "600px";
 const WIDTH = "400px";
+const DESKTOP_X_OFFSET = "20px";
+const DESKTOP_Y_OFFSET = "20px";
+const MOBILE_X_OFFSET = "4vw";
+const MOBILE_Y_OFFSET = "8vh";
 const PRIMARY_COLOR = "#3641db";
 const SECONDARY_COLOR = "#E9E6FF";
 const MESSAGE_TEXT_COLOR = "#000000";
@@ -31881,6 +31885,10 @@ const defaultWidgetConfig = {
   viewType: VIEW_TYPE,
   height: HEIGHT,
   width: WIDTH,
+  desktopXOffset: DESKTOP_X_OFFSET,
+  desktopYOffset: DESKTOP_Y_OFFSET,
+  mobileXOffset: MOBILE_X_OFFSET,
+  mobileYOffset: MOBILE_Y_OFFSET,
   botName: BOT_NAME,
   rootTitle: ROOT_TITLE,
   rootSubtitle: ROOT_SUBTITLE,
@@ -37279,7 +37287,11 @@ const disableBackendEventSending = () => {
   shouldSendEventsToBackend = false;
 };
 const DEFAULT_POSITION_OFFSET = "20px";
-function getPositionStyles(position2 = DEFAULT_POSITION, offset = DEFAULT_POSITION_OFFSET) {
+function getPositionStyles(position2 = DEFAULT_POSITION, offsets = {}) {
+  const {
+    xOffset = DEFAULT_POSITION_OFFSET,
+    yOffset = DEFAULT_POSITION_OFFSET
+  } = offsets;
   const [vertical, horizontal] = position2.split("-");
   let expansionDirection;
   if (vertical === "bottom" && horizontal === "right") {
@@ -37294,8 +37306,8 @@ function getPositionStyles(position2 = DEFAULT_POSITION, offset = DEFAULT_POSITI
   return {
     vertical,
     horizontal,
-    verticalValue: offset,
-    horizontalValue: offset,
+    verticalValue: yOffset,
+    horizontalValue: xOffset,
     transformOrigin: `${vertical} ${horizontal}`,
     expansionDirection
   };
@@ -113850,32 +113862,6 @@ const ModernView = ({
                   type: "button",
                   role: "menuitem",
                   className: "modern-menu-item",
-                  "aria-label": "Privacy policy",
-                  tabIndex: 0,
-                  disabled: true,
-                  children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(
-                      "svg",
-                      {
-                        viewBox: "0 0 24 24",
-                        fill: "none",
-                        stroke: "currentColor",
-                        strokeWidth: "2",
-                        strokeLinecap: "round",
-                        "aria-hidden": "true",
-                        children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" })
-                      }
-                    ),
-                    "Privacy policy"
-                  ]
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                "button",
-                {
-                  type: "button",
-                  role: "menuitem",
-                  className: "modern-menu-item",
                   "aria-label": "About",
                   tabIndex: 0,
                   disabled: true,
@@ -125782,6 +125768,10 @@ function buildWidgetConfig(props) {
     showAvatars,
     height,
     width,
+    desktopXOffset,
+    desktopYOffset,
+    mobileXOffset,
+    mobileYOffset,
     messageFontSize,
     messageTextColor,
     allowVoice,
@@ -125805,14 +125795,18 @@ function buildWidgetConfig(props) {
     engagementHookImageHeight,
     popupType
   } = props;
-  const defaultConfigWithDimensions = {
+  const defaultConfigWithLayout = {
     ...defaultWidgetConfig,
     ...width && { width },
-    ...height && { height }
+    ...height && { height },
+    ...desktopXOffset && { desktopXOffset },
+    ...desktopYOffset && { desktopYOffset },
+    ...mobileXOffset && { mobileXOffset },
+    ...mobileYOffset && { mobileYOffset }
   };
   const themeStyles = getThemeStyles(primaryColor);
   const widgetConfig = {
-    ...defaultConfigWithDimensions,
+    ...defaultConfigWithLayout,
     ...primaryColor && { primaryColor },
     ...secondaryColor && { secondaryColor },
     ...showTimestamp !== void 0 && { showTimestamp },
@@ -125890,34 +125884,13 @@ function buildMetaConfig(props) {
   };
   return metaConfig;
 }
-function applyCSSVariables(width, height, primaryColor) {
-  if (width) {
-    document.documentElement.style.setProperty("--chat-widget-width", width);
-  }
-  if (height) {
-    document.documentElement.style.setProperty("--chat-widget-height", height);
-  }
-  if (primaryColor) {
-    const themeStyles = getThemeStyles(primaryColor);
-    if (themeStyles.cssVars) {
-      document.documentElement.style.setProperty(
-        "--chat-widget-primary-color",
-        themeStyles.cssVars.primaryColor
-      );
-      document.documentElement.style.setProperty(
-        "--chat-widget-primary-color-hover",
-        themeStyles.cssVars.primaryColorHover
-      );
-    }
-  }
-}
 function buildConfigs(props) {
   const widgetConfig = buildWidgetConfig(props);
   const metaConfig = buildMetaConfig(props);
   return { widgetConfig, metaConfig };
 }
 const styles = `
-/* Chat Widget CSS Bundle - Generated Thu May  7 13:04:42 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Fri May  8 19:58:28 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -147911,101 +147884,9 @@ video {
 
 /* End of file: voice_ai_bot_widget/style.css */
 `;
-console.log("web-component.tsx: Script start v1.0.41_02_02_2026");
-if (typeof document !== "undefined" && document.documentElement) {
-  const defaultPrimaryColor = defaultWidgetConfig.primaryColor;
-  const defaultPrimaryColorHover = getHoverColor(defaultPrimaryColor);
-  const defaultSecondaryColor = defaultWidgetConfig.secondaryColor;
-  const defaultMessageFontSize = defaultWidgetConfig.messageFontSize;
-  const defaultMessageTextColor = defaultWidgetConfig.messageTextColor;
-  const defaultButtonContentColor = defaultWidgetConfig.buttonContentColor;
-  const defaultWidth = defaultWidgetConfig.width;
-  const defaultHeight = defaultWidgetConfig.height;
-  const defaultEngagementHookImagePath = defaultWidgetConfig.engagementHookImagePath;
-  const defaultEngagementHookImageWidth = defaultWidgetConfig.engagementHookImageWidth;
-  const defaultEngagementHookImageHeight = defaultWidgetConfig.engagementHookImageHeight;
-  if (!document.documentElement.style.getPropertyValue(
-    "--chat-widget-primary-color"
-  )) {
-    document.documentElement.style.setProperty(
-      "--chat-widget-primary-color",
-      defaultPrimaryColor
-    );
-    document.documentElement.style.setProperty(
-      "--chat-widget-primary-color-hover",
-      defaultPrimaryColorHover
-    );
-  }
-  if (!document.documentElement.style.getPropertyValue(
-    "--chat-widget-message-font-size"
-  )) {
-    document.documentElement.style.setProperty(
-      "--chat-widget-message-font-size",
-      defaultMessageFontSize
-    );
-  }
-  if (!document.documentElement.style.getPropertyValue(
-    "--chat-widget-message-text-color"
-  )) {
-    document.documentElement.style.setProperty(
-      "--chat-widget-message-text-color",
-      defaultMessageTextColor
-    );
-  }
-  if (!document.documentElement.style.getPropertyValue(
-    "--chat-widget-button-content-color"
-  )) {
-    document.documentElement.style.setProperty(
-      "--chat-widget-button-content-color",
-      defaultButtonContentColor
-    );
-  }
-  if (!document.documentElement.style.getPropertyValue("--chat-widget-width")) {
-    document.documentElement.style.setProperty(
-      "--chat-widget-width",
-      defaultWidth
-    );
-  }
-  if (!document.documentElement.style.getPropertyValue("--chat-widget-height")) {
-    document.documentElement.style.setProperty(
-      "--chat-widget-height",
-      defaultHeight
-    );
-  }
-  if (!document.documentElement.style.getPropertyValue(
-    "--chat-widget-secondary-color"
-  )) {
-    document.documentElement.style.setProperty(
-      "--chat-widget-secondary-color",
-      defaultSecondaryColor
-    );
-  }
-  if (!document.documentElement.style.getPropertyValue(
-    "--chat-widget-engagement-hook-image-width"
-  )) {
-    document.documentElement.style.setProperty(
-      "--chat-widget-engagement-hook-image-width",
-      defaultEngagementHookImageWidth
-    );
-  }
-  if (!document.documentElement.style.getPropertyValue(
-    "--chat-widget-engagement-hook-image-height"
-  )) {
-    document.documentElement.style.setProperty(
-      "--chat-widget-engagement-hook-image-height",
-      defaultEngagementHookImageHeight
-    );
-  }
-  if (!document.documentElement.getAttribute("data-engagement-hook-image-path")) {
-    document.documentElement.setAttribute(
-      "data-engagement-hook-image-path",
-      defaultEngagementHookImagePath
-    );
-  }
-}
-const WIDGET_STYLE_ID = "chat-widget-root";
-const HOST_STYLE_ID = "spotinfo-chat-host-style";
+const WIDGET_ROOT_ID = "chat-widget-root";
 const Z_INDEX = "2147483647";
+const GLOBAL_WIDGET_KEY = "__spotinfo_chat_widget__";
 const WEB_COMPONENT_PROPS = {
   props: {
     primaryColor: "string",
@@ -148027,6 +147908,10 @@ const WEB_COMPONENT_PROPS = {
     allowVoice: "boolean",
     greetings: "string",
     position: "string",
+    desktopXOffset: "string",
+    desktopYOffset: "string",
+    mobileXOffset: "string",
+    mobileYOffset: "string",
     apiKey: "string",
     userId: "string",
     clientId: "string",
@@ -148071,6 +147956,10 @@ const OBSERVED_ATTRIBUTES = [
   "message-font-size",
   "message-text-color",
   "position",
+  "desktop-x-offset",
+  "desktop-y-offset",
+  "mobile-x-offset",
+  "mobile-y-offset",
   "user-journey",
   "allow-voice",
   "use-whatsapp",
@@ -148104,15 +147993,43 @@ const OBSERVED_ATTRIBUTES = [
   "widget-hidden",
   "data-open"
 ];
+const getConstrainedSize = (value, max) => {
+  const valueNum = parseFloat(value);
+  const maxNum = parseFloat(max);
+  return valueNum > maxNum ? max : value;
+};
+const getConstrainedLogoDimensions = ({
+  rootLogoHeight,
+  rootLogoWidth,
+  rootButtonHeight,
+  rootButtonWidth
+}) => ({
+  height: getConstrainedSize(rootLogoHeight, rootButtonHeight),
+  width: getConstrainedSize(rootLogoWidth, rootButtonWidth)
+});
+const resolveLogoUrl = (path) => {
+  if (!path) return spotinfoLogo;
+  if (path.startsWith("http") || path.startsWith("data:")) return path;
+  return path.startsWith("/") ? path : `/${path}`;
+};
+const getClosedButtonSize = (shape, width, height) => {
+  return {
+    width: shape === "modern" ? "220px" : width,
+    height
+  };
+};
+const getRootBorderRadius = (shape) => {
+  return shape === "circular" ? "50%" : shape === "modern" ? "999px" : "10%";
+};
 const ChatWidgetWrapper = (props = {}) => {
   const [isOpen, setIsOpen] = reactExports.useState(() => {
     if (typeof window === "undefined") return false;
-    const host = document.querySelector("spotinfo-chat");
+    const host = window[GLOBAL_WIDGET_KEY] || null;
     const attr = host == null ? void 0 : host.getAttribute("data-open");
     return attr === "true";
   });
   const getHostElement = () => {
-    return typeof window !== "undefined" ? document.querySelector("spotinfo-chat") : null;
+    return typeof window !== "undefined" ? window[GLOBAL_WIDGET_KEY] || null : null;
   };
   reactExports.useEffect(() => {
     console.log("[ChatWidgetWrapper] MOUNTED");
@@ -148123,8 +148040,8 @@ const ChatWidgetWrapper = (props = {}) => {
   reactExports.useEffect(() => {
     const hostElement = getHostElement();
     if (!hostElement) return;
-    const current = hostElement.getAttribute("data-open");
     const next = isOpen.toString();
+    const current = hostElement.getAttribute("data-open");
     if (current !== next) {
       hostElement.setAttribute("data-open", next);
     }
@@ -148132,9 +148049,7 @@ const ChatWidgetWrapper = (props = {}) => {
   reactExports.useEffect(() => {
     const handleDataOpenChange = (event) => {
       const { isOpen: newIsOpen } = event.detail;
-      if (newIsOpen !== isOpen) {
-        setIsOpen(newIsOpen);
-      }
+      setIsOpen((prev) => prev !== newIsOpen ? newIsOpen : prev);
     };
     const hostElement = getHostElement();
     if (hostElement) {
@@ -148151,16 +148066,9 @@ const ChatWidgetWrapper = (props = {}) => {
         );
       }
     };
-  }, [isOpen]);
+  }, []);
   const handleWidgetToggle = reactExports.useCallback((newIsOpen) => {
-    try {
-      const hostElement = getHostElement();
-      if (hostElement) {
-        hostElement.setAttribute("data-open", newIsOpen.toString());
-      }
-    } catch (error2) {
-      console.error("Error in handleWidgetToggle:", error2);
-    }
+    setIsOpen(newIsOpen);
   }, []);
   const handleOpen = reactExports.useCallback(() => {
     setIsOpen(true);
@@ -148183,14 +148091,11 @@ const ChatWidgetWrapper = (props = {}) => {
       props.chatMetaConfig != null ? JSON.stringify(props.chatMetaConfig) : ""
     ]
   );
-  reactExports.useEffect(() => {
-    applyCSSVariables(props.width, props.height, props.primaryColor);
-  }, [props.width, props.height, props.primaryColor]);
   const rootButtonShape = props.rootButtonShape || "circular";
   return /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Suspense, { fallback: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: "Loading chat..." }), children: /* @__PURE__ */ jsxRuntimeExports.jsx(
     "div",
     {
-      id: WIDGET_STYLE_ID,
+      id: WIDGET_ROOT_ID,
       className: "chat-widget-root",
       "data-open": isOpen.toString(),
       "data-view-type": props.viewType,
@@ -148223,16 +148128,7 @@ const ChatWidgetWrapper = (props = {}) => {
                     rootSubtitle: props.rootSubtitle,
                     logo: props.rootButtonLogo
                   }
-                ) : /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  ChatIcon,
-                  {
-                    logo: props.rootButtonLogo,
-                    rootButtonHeight: props.rootButtonHeight,
-                    rootButtonWidth: props.rootButtonWidth,
-                    rootLogoHeight: props.rootLogoHeight,
-                    rootLogoWidth: props.rootLogoWidth
-                  }
-                )
+                ) : /* @__PURE__ */ jsxRuntimeExports.jsx(ChatIcon, { logo: props.rootButtonLogo })
               }
             ),
             /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -148249,26 +148145,9 @@ const ChatWidgetWrapper = (props = {}) => {
     }
   ) });
 };
-const ChatIcon = ({
-  logo,
-  rootButtonHeight,
-  rootButtonWidth,
-  rootLogoHeight,
-  rootLogoWidth
-}) => {
-  const getLogoUrl = (path) => {
-    if (!path) return spotinfoLogo;
-    if (path === void 0) return spotinfoLogo;
-    if (path.startsWith("http") || path.startsWith("data:")) return path;
-    return path.startsWith("/") ? path : `/${path}`;
-  };
-  const logoUrl = getLogoUrl(logo);
+const ChatIcon = ({ logo }) => {
+  const logoUrl = resolveLogoUrl(logo);
   const [imgError, setImgError] = reactExports.useState(false);
-  const finalLogoHeight = rootLogoHeight || rootButtonHeight;
-  const finalLogoWidth = rootLogoWidth || rootButtonWidth;
-  const heightValue = parseFloat(finalLogoHeight);
-  const widthValue = parseFloat(finalLogoWidth);
-  const sizeUnit = finalLogoHeight.replace(/[0-9.]/g, "") || "px";
   const displayLogoUrl = imgError && logo && logo !== spotinfoLogo ? spotinfoLogo : logoUrl;
   if (displayLogoUrl) {
     return /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -148277,19 +148156,7 @@ const ChatIcon = ({
         className: "chat-widget-open-icon",
         src: displayLogoUrl,
         alt: "Chat",
-        style: {
-          maxWidth: `${widthValue}${sizeUnit}`,
-          maxHeight: `${heightValue}${sizeUnit}`,
-          width: rootLogoWidth ? `${widthValue}${sizeUnit}` : "auto",
-          height: rootLogoHeight ? `${heightValue}${sizeUnit}` : "auto",
-          objectFit: "contain"
-        },
-        onError: () => {
-          if (logo && logo !== spotinfoLogo && !imgError) {
-            setImgError(true);
-          }
-        },
-        "aria-hidden": "true"
+        onError: () => setImgError(true)
       }
     );
   }
@@ -148297,8 +148164,6 @@ const ChatIcon = ({
     "svg",
     {
       className: "chat-widget-open-icon",
-      width: "24",
-      height: "24",
       fill: "currentColor",
       viewBox: "0 0 24 24",
       "aria-hidden": "true",
@@ -148312,12 +148177,6 @@ const ChatIcon = ({
       )
     }
   );
-};
-const resolveLogoUrl = (path) => {
-  if (!path) return spotinfoLogo;
-  if (path === void 0) return spotinfoLogo;
-  if (path.startsWith("http") || path.startsWith("data:")) return path;
-  return path.startsWith("/") ? path : `/${path}`;
 };
 const ModernOpenButtonContent = ({
   botName,
@@ -148352,262 +148211,41 @@ const ModernOpenButtonContent = ({
 };
 const ChatWidgetAdapter = (props = {}) => /* @__PURE__ */ jsxRuntimeExports.jsx(ChatWidgetWrapper, { ...props });
 const ChatWidgetWebComponent = s$1(ChatWidgetAdapter, WEB_COMPONENT_PROPS);
-const generateGlobalStyles = (width, height, position2 = DEFAULT_POSITION, rootButtonHeight, rootButtonWidth, rootButtonShape = "circular", rootLogoHeight, rootLogoWidth) => {
-  const borderRadius = rootButtonShape === "circular" ? "50%" : rootButtonShape === "modern" ? "999px" : "10%";
-  let finalLogoHeight = rootLogoHeight || rootButtonHeight;
-  let finalLogoWidth = rootLogoWidth || rootButtonWidth;
-  const buttonHeightValue = parseFloat(rootButtonHeight);
-  const buttonWidthValue = parseFloat(rootButtonWidth);
-  const logoHeightValue = finalLogoHeight ? parseFloat(finalLogoHeight) : buttonHeightValue;
-  const logoWidthValue = finalLogoWidth ? parseFloat(finalLogoWidth) : buttonWidthValue;
-  if (logoHeightValue > buttonHeightValue) {
-    finalLogoHeight = rootButtonHeight;
-  }
-  if (logoWidthValue > buttonWidthValue) {
-    finalLogoWidth = rootButtonWidth;
-  }
-  const positionStyles = getPositionStyles(position2);
-  const verticalProp = positionStyles.vertical;
-  const horizontalProp = positionStyles.horizontal;
-  const verticalValue = positionStyles.verticalValue;
-  const horizontalValue = positionStyles.horizontalValue;
-  return `
-  #${WIDGET_STYLE_ID} {
-    all: unset !important;
-    position: fixed !important;
-    display: block !important;
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    isolation: isolate !important;
-    box-sizing: border-box !important;
-    font-family: inherit !important;
-    font-size: inherit !important;
-    line-height: inherit !important;
-    border: none !important;
-    outline: none !important;
-    z-index: ${Z_INDEX} !important;
-    ${verticalProp}: ${verticalValue} !important;
-    ${horizontalProp}: ${horizontalValue} !important;
-    width: ${width} !important;
-    height: ${height} !important;
-    pointer-events: auto !important;
-  }
-
-  #${WIDGET_STYLE_ID} .chat-widget-root {
-    all: unset !important;
-    position: relative !important;
-    display: block !important;
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    pointer-events: auto !important;
-    width: 100% !important;
-    height: 100% !important;
-  }
-
-  #${WIDGET_STYLE_ID} .chat-widget-root[data-view-type="sleek_view"] {
-    height: auto !important;
-    min-height: 60px !important;
-    max-height: 650px !important;
-  }
-
-  #${WIDGET_STYLE_ID} .chat-widget-root[data-open="true"] {
-    pointer-events: auto !important;
-  }
-
-  #${WIDGET_STYLE_ID} .chat-widget-open-button {
-    pointer-events: auto !important;
-    z-index: ${Z_INDEX} !important;
-  }
-
-  spotinfo-chat[data-open="false"] .chat-widget-open-button {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    width: ${rootButtonWidth} !important;
-    height: ${rootButtonHeight} !important;
-    border-radius: ${borderRadius} !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background-color: var(--chat-widget-primary-color) !important;
-    color: white !important;
-    border: none !important;
-    cursor: pointer !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-    transition: all 0.3s ease !important;
-  }
-
-  spotinfo-chat[data-open="false"] .chat-widget-open-button[data-shape="modern"] {
-    width: auto !important;
-    height: 56px !important;
-    border-radius: 999px !important;
-    padding: 0 16px 0 12px !important;
-    gap: 10px !important;
-    // background-color: color-mix(in srgb, var(--chat-widget-secondary-color) 10%, #fff 90%) !important;
-    border: 1.5px solid color-mix(in srgb, var(--chat-widget-secondary-color) 75%, #fff 25%) !important;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10) !important;
-    color: var(--chat-widget-primary-color) !important;
-    flex-direction: row !important;
-    min-width: 200px !important;
-  }
-
-   .chat-widget-modern-avatar {
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50% !important;
-    border: 1.5px solid color-mix(in srgb, var(--chat-widget-secondary-color) 75%, #fff 25%) !important;
-    background-color: color-mix(in srgb, var(--chat-widget-primary-color) 5%, #fff 95%) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 2px !important;
-    font-weight: 500 !important;
-    font-size: 15px !important;
-    color: #fff !important;
-    flex-shrink: 0 !important;
-    position: relative !important;
-  }
-
-  .chat-widget-modern-avatar-image {
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: inherit !important;
-    object-fit: cover !important;
-    display: block !important;
-  }
-
-  .chat-widget-modern-text {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 1px !important;
-  }
-
-  .chat-widget-modern-title {
-    font-weight: 550 !important;
-    font-size: var(--chat-widget-message-font-size) !important;
-    color: var(--chat-widget-primary-color) !important;
-    line-height: 1.2 !important;
-    white-space: nowrap !important;
-  }
-
-  .chat-widget-modern-status {
-    font-size: calc(var(--chat-widget-message-font-size) * 0.86) !important;
-    color: var(--chat-widget-primary-color) !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 4px !important;
-    white-space: nowrap !important;
-  }
-
-  .chat-widget-modern-status::before {
-    content: '' !important;
-    display: inline-block !important;
-    width: 10px !important;
-    height: 10px !important;
-    border-radius: 50% !important;
-    background: var(--color-voice-speaking) !important;
-    flex-shrink: 0 !important;
-  }
-
-  spotinfo-chat[data-open="false"] .chat-widget-open-button[data-shape="modern"]:hover {
-    background-color: color-mix(in srgb, var(--chat-widget-secondary-color) 12%, #fff 88%) !important;
-    border-color: color-mix(in srgb, var(--chat-widget-secondary-color) 90%, #fff 10%) !important;
-    transform: translateY(-1px) scale(1.01) !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
-  }
-
-  spotinfo-chat[data-open="true"] .chat-widget-open-button {
-    position: relative !important;
-  }
-
-  spotinfo-chat[data-open="false"] .chat-widget-open-button:hover {
-    background-color: var(--chat-widget-primary-color-hover) !important;
-    transform: scale(1.1) !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
-  }
-
-  .chat-widget-open-icon {
-    max-width: ${finalLogoWidth} !important;
-    max-height: ${finalLogoHeight} !important;
-    width: auto !important;
-    height: auto !important;
-    object-fit: contain !important;
-    display: block !important;
-    margin: auto !important;
-  }
-
-  spotinfo-chat[widget-hidden="true"] {
-    display: none !important;
-  }
-
-  /* Hide the chat widget container when closed to prevent taking space */
-  spotinfo-chat[data-open="false"] .chat-widget-container,
-  spotinfo-chat[data-open="false"] .chat-widget-container-closed {
-    display: none !important;
-    height: 0 !important;
-    width: 0 !important;
-    overflow: hidden !important;
-    pointer-events: none !important;
-  }
-`;
-};
-const generateShadowStyles = (width, height, primaryColor, primaryColorHover, position2 = DEFAULT_POSITION, rootButtonHeight, rootButtonWidth, rootButtonShape = "circular", rootLogoHeight, rootLogoWidth, messageFontSize, secondaryColor, messageTextColor) => {
-  const borderRadius = rootButtonShape === "circular" ? "50%" : rootButtonShape === "modern" ? "999px" : "10%";
-  const closedButtonWidth = rootButtonShape === "modern" ? "220px" : rootButtonWidth;
-  const closedButtonHeight = rootButtonHeight;
-  let finalLogoHeight = rootLogoHeight || rootButtonHeight;
-  let finalLogoWidth = rootLogoWidth || rootButtonWidth;
-  const buttonHeightValue = parseFloat(rootButtonHeight);
-  const buttonWidthValue = parseFloat(rootButtonWidth);
-  const logoHeightValue = finalLogoHeight ? parseFloat(finalLogoHeight) : buttonHeightValue;
-  const logoWidthValue = finalLogoWidth ? parseFloat(finalLogoWidth) : buttonWidthValue;
-  if (logoHeightValue > buttonHeightValue) {
-    finalLogoHeight = rootButtonHeight;
-  }
-  if (logoWidthValue > buttonWidthValue) {
-    finalLogoWidth = rootButtonWidth;
-  }
-  const positionStyles = getPositionStyles(position2);
-  const verticalProp = positionStyles.vertical;
-  const horizontalProp = positionStyles.horizontal;
-  const verticalValue = positionStyles.verticalValue;
-  const horizontalValue = positionStyles.horizontalValue;
+const generateShadowStyles = (primaryColor, primaryColorHover, messageFontSize, secondaryColor, messageTextColor) => {
   return `
   :host {
-    --chat-widget-width: ${width};
-    --chat-widget-height: ${height};
     --chat-widget-primary-color: ${primaryColor};
     --chat-widget-primary-color-hover: ${primaryColorHover};
     --chat-widget-secondary-color: ${secondaryColor};
     --chat-widget-message-text-color: ${messageTextColor};
     --chat-widget-message-font-size: ${messageFontSize};
+
+    width: var(--chat-widget-width);
+    height: var(--chat-widget-height);
+
+    box-sizing: border-box;
   }
 
   :host([data-open="false"]) {
-    width: ${closedButtonWidth} !important;
-    height: ${closedButtonHeight} !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    pointer-events: auto !important;
-    opacity: 1 !important;
+    width: var(--chat-widget-button-width);
+    height: var(--chat-widget-button-height);
+    min-width: 0;
+    min-height: 0;
+    pointer-events: auto;
+    opacity: 1;
   }
 
   :host([data-open="true"]) {
-    width: ${width} !important;
-    height: ${height} !important;
-    pointer-events: auto !important;
-    opacity: 1 !important;
+    width: var(--chat-widget-width);
+    height: var(--chat-widget-height);
+    pointer-events: auto;
+    opacity: 1;
   }
 
   :host([data-open="true"][view-type="sleek_view"]) {
-    height: auto !important;
-    min-height: 60px !important;
-    max-height: 650px !important;
+    height: auto;
+    min-height: var(--chat-widget-sleek-min-height);
+    max-height: var(--chat-widget-height);
   }
 
   :host([widget-hidden="true"]) {
@@ -148618,9 +148256,9 @@ const generateShadowStyles = (width, height, primaryColor, primaryColorHover, po
   :host([data-open="false"]) .sleek-view {
     display: none !important;
     height: 0 !important;
-    width: 0 !important;
-    overflow: hidden !important;
-    pointer-events: none !important;
+    width: 0;
+    overflow: hidden;
+    pointer-events: none;
   }
 
   /* Hide the chat widget container when closed to prevent taking space */
@@ -148628,224 +148266,150 @@ const generateShadowStyles = (width, height, primaryColor, primaryColorHover, po
   :host([data-open="false"]) .chat-widget-container-closed {
     display: none !important;
     height: 0 !important;
-    width: 0 !important;
-    overflow: hidden !important;
-    pointer-events: none !important;
+    width: 0;
+    overflow: hidden;
+    pointer-events: none;
   }
 
   .chat-widget-root {
-    all: unset !important;
-    position: relative !important;
-    display: block !important;
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    isolation: isolate !important;
-    box-sizing: border-box !important;
-    font-family: inherit !important;
-    font-size: inherit !important;
-    line-height: inherit !important;
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    border: none !important;
-    outline: none !important;
-    pointer-events: auto !important;
-    width: 100% !important;
-    height: 100% !important;
-  }
-
-  .chat-widget-root[data-view-type="sleek_view"] {
-    height: auto !important;
-    min-height: 60px !important;
-    max-height: 650px !important;
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
 
   .chat-widget-root[data-open="true"] {
-    pointer-events: auto !important;
+    pointer-events: auto;
   }
 
   .chat-widget-open-button {
-    pointer-events: auto !important;
-    z-index: ${Z_INDEX} !important;
+    pointer-events: auto;
+    z-index: ${Z_INDEX};
   }
 
   :host([data-open="false"]) .chat-widget-open-button {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    width: ${rootButtonWidth} !important;
-    height: ${rootButtonHeight} !important;
-    border-radius: ${borderRadius} !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background-color: var(--chat-widget-primary-color) !important;
-    color: white !important;
-    border: none !important;
-    cursor: pointer !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-    transition: all 0.3s ease !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: var(--chat-widget-button-width);
+    height: var(--chat-widget-button-height);
+    color: var(--chat-widget-button-content-color);
+    border-radius: var(--root-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--chat-widget-primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
   }
 
   :host([data-open="false"]) .chat-widget-open-button[data-shape="modern"] {
-    width: auto !important;
-    height: 56px !important;
-    border-radius: 999px !important;
-    padding: 0 16px 0 12px !important;
-    gap: 10px !important;
-    background-color: color-mix(in srgb, var(--chat-widget-secondary-color) 10%, #fff 90%) !important;
-    border: 1.5px solid color-mix(in srgb, var(--chat-widget-secondary-color) 75%, #fff 25%) !important;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10) !important;
-    color: var(--chat-widget-primary-color) !important;
-    flex-direction: row !important;
-    justify-content: flex-start !important;
-    min-width: 200px !important;
-    transform: none !important;
+    width: auto;
+    height: var(--chat-widget-modern-button-height);
+    padding: 0 16px 0 12px;
+    gap: 10px;
+    background-color: color-mix(in srgb, var(--chat-widget-secondary-color) 10%, #fff 90%);
+    border: 1.5px solid color-mix(in srgb, var(--chat-widget-secondary-color) 75%, #fff 25%);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    color: var(--chat-widget-primary-color);
+    flex-direction: row;
+    justify-content: flex-start;
+    min-width: 200px;
+    transform: none;
   }
 
   .chat-widget-modern-avatar {
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50% !important;
-    border: 1.5px solid color-mix(in srgb, var(--chat-widget-secondary-color) 75%, #fff 25%) !important;
-    background-color: color-mix(in srgb, var(--chat-widget-primary-color) 5%, #fff 95%) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 2px !important;
-    font-weight: 500 !important;
-    font-size: 15px !important;
-    color: #fff !important;
-    flex-shrink: 0 !important;
-    position: relative !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid color-mix(in srgb, var(--chat-widget-secondary-color) 75%, #fff 25%);
+    background-color: color-mix(in srgb, var(--chat-widget-primary-color) 5%, #fff 95%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+    flex-shrink: 0;
+    position: relative;
   }
 
   .chat-widget-modern-avatar-image {
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: inherit !important;
-    object-fit: cover !important;
-    display: block !important;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+    display: block;
   }
 
   .chat-widget-modern-text {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 1px !important;
-    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    text-align: left;
   }
 
   .chat-widget-modern-title {
-    font-weight: 550 !important;
-    font-size: var(--chat-widget-message-font-size) !important;
-    color: var(--chat-widget-primary-color) !important;
-    line-height: 1.2 !important;
-    white-space: nowrap !important;
+    font-weight: 550;
+    font-size: var(--chat-widget-message-font-size);
+    color: var(--chat-widget-primary-color);
+    line-height: 1.2;
+    white-space: nowrap;
   }
 
   .chat-widget-modern-status {
-    font-size: calc(var(--chat-widget-message-font-size) * 0.86) !important;
-    color: var(--chat-widget-primary-color) !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 4px !important;
-    white-space: nowrap !important;
+    font-size: calc(var(--chat-widget-message-font-size) * 0.86);
+    color: var(--chat-widget-primary-color);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
   }
 
   .chat-widget-modern-status::before {
-    content: '' !important;
-    display: inline-block !important;
-    width: 10px !important;
-    height: 10px !important;
-    border-radius: 50% !important;
-    background: var(--color-voice-speaking) !important;
-    flex-shrink: 0 !important;
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-voice-speaking);
+    flex-shrink: 0;
   }
 
   :host([data-open="false"]) .chat-widget-open-button[data-shape="modern"]:hover {
-    background-color: color-mix(in srgb, var(--chat-widget-secondary-color) 12%, #fff 88%) !important;
-    border-color: color-mix(in srgb, var(--chat-widget-secondary-color) 90%, #fff 10%) !important;
-    transform: translateY(-1px) scale(1.01) !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+    background-color: color-mix(in srgb, var(--chat-widget-secondary-color) 12%, #fff 88%);
+    border-color: color-mix(in srgb, var(--chat-widget-secondary-color) 90%, #fff 10%);
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   }
 
   :host([data-open="true"]) .chat-widget-open-button {
-    position: relative !important;
+    position: relative;
   }
 
   :host([data-open="false"]) .chat-widget-open-button:hover {
-    background-color: var(--chat-widget-primary-color-hover) !important;
-    transform: scale(1.1) !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+    background-color: var(--chat-widget-primary-color-hover);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   }
 
   .chat-widget-open-icon {
-    max-width: ${finalLogoWidth} !important;
-    max-height: ${finalLogoHeight} !important;
-    width: auto !important;
-    height: auto !important;
-    object-fit: contain !important;
-    display: block !important;
-    margin: auto !important;
-  }
-
-  :host {
-    all: unset !important;
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    position: fixed !important;
-    z-index: ${Z_INDEX} !important;
-    display: block !important;
-    ${verticalProp}: ${verticalValue} !important;
-    ${horizontalProp}: ${horizontalValue} !important;
-    width: ${width} !important;
-    height: ${height} !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
+    max-width: var(--chat-widget-logo-width);
+    max-height: var(--chat-widget-logo-height);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: auto;
   }
 
   ${styles}
-`;
-};
-const generateHostStyles = (width, height, position2 = DEFAULT_POSITION, rootButtonHeight, rootButtonWidth, rootButtonShape = "circular") => {
-  const closedButtonWidth = rootButtonShape === "modern" ? "220px" : rootButtonWidth;
-  const closedButtonHeight = rootButtonHeight;
-  const positionStyles = getPositionStyles(position2);
-  const verticalProp = positionStyles.vertical;
-  const horizontalProp = positionStyles.horizontal;
-  const verticalValue = positionStyles.verticalValue;
-  const horizontalValue = positionStyles.horizontalValue;
-  return `
-  spotinfo-chat {
-    position: fixed !important;
-    z-index: ${Z_INDEX} !important;
-    ${verticalProp}: ${verticalValue} !important;
-    ${horizontalProp}: ${horizontalValue} !important;
-    width: ${width} !important;
-    height: ${height} !important;
-  }
-
-  spotinfo-chat[data-open="false"] {
-    width: ${closedButtonWidth} !important;
-    height: ${closedButtonHeight} !important;
-  }
-
-  spotinfo-chat[data-open="true"] {
-    width: ${width} !important;
-    height: ${height} !important;
-  }
-
-  spotinfo-chat[data-open="true"][view-type="sleek_view"] {
-    height: auto !important;
-    min-height: 60px !important;
-    max-height: 650px !important;
-  }
 `;
 };
 class StyledChatWidget extends ChatWidgetWebComponent {
@@ -148855,26 +148419,89 @@ class StyledChatWidget extends ChatWidgetWebComponent {
     __publicField(this, "_generatedClientId", null);
     __publicField(this, "_userIdGenerated", false);
     __publicField(this, "_generatedUserId", null);
-  }
-  // private _dataLayerEventsPushed: boolean = false;
-  connectedCallback() {
-    var _a;
-    console.log("[StyledChatWidget] connectedCallback called", {
-      parentTag: (_a = this.parentNode) == null ? void 0 : _a.nodeName,
-      parentIsBody: this.parentNode === document.body
+    __publicField(this, "_handleViewportResize", () => {
+      this.initializePosition();
     });
-    const existingInstance = document.querySelector("spotinfo-chat");
-    if (existingInstance && existingInstance !== this) {
-      console.warn(
-        "[ChatWidget] Duplicate <spotinfo-chat> instance detected. Removing this duplicate."
-      );
-      this.remove();
-      return;
+    __publicField(this, "attributeHandlers", {
+      "data-open": (value) => {
+        this.handleDataOpenChange(value);
+      },
+      width: (value) => {
+        if (value) {
+          this.setCssVar("--chat-widget-width", value);
+        }
+      },
+      height: (value) => {
+        if (value) {
+          this.setCssVar("--chat-widget-height", value);
+        }
+      },
+      "primary-color": (value) => {
+        if (!value) return;
+        this.setCssVar("--chat-widget-primary-color", value);
+        this.setCssVar("--chat-widget-primary-color-hover", getHoverColor(value));
+      },
+      "secondary-color": (value) => {
+        if (value) {
+          this.setCssVar("--chat-widget-secondary-color", value);
+        }
+      },
+      "message-font-size": (value) => {
+        if (value) {
+          this.setCssVar("--chat-widget-message-font-size", value);
+        }
+      },
+      "message-text-color": (value) => {
+        if (value) {
+          this.setCssVar("--chat-widget-message-text-color", value);
+        }
+      },
+      "root-button-shape": (value) => {
+        const rootBorderRadius = getRootBorderRadius(value);
+        this.setCssVar("--root-border-radius", rootBorderRadius);
+      },
+      position: () => {
+        this.initializePosition();
+      },
+      "desktop-x-offset": () => {
+        this.initializePosition();
+      },
+      "desktop-y-offset": () => {
+        this.initializePosition();
+      },
+      "mobile-x-offset": () => {
+        this.initializePosition();
+      },
+      "mobile-y-offset": () => {
+        this.initializePosition();
+      }
+    });
+  }
+  getAttr(key, fallback2) {
+    return this.getAttribute(key) ?? fallback2 ?? "";
+  }
+  setCssVar(name2, value) {
+    if (value != null) {
+      this.style.setProperty(name2, value);
     }
+  }
+  initializeApiKey() {
     const apiKeyAttr = this.getAttribute("api-key");
     if (apiKeyAttr) {
       this.apiKey = apiKeyAttr;
     }
+  }
+  ensureSingleInstance() {
+    const existingInstance = window[GLOBAL_WIDGET_KEY];
+    if (existingInstance && existingInstance !== this) {
+      console.warn("[ChatWidget] Duplicate widget detected");
+      this.remove();
+      return false;
+    }
+    window[GLOBAL_WIDGET_KEY] = this;
+    return true;
+  }
+  initializeIds() {
     if (!this.hasAttribute("client-id") && !this._instanceIdGenerated) {
       this._generatedClientId = crypto.randomUUID();
       this._instanceIdGenerated = true;
@@ -148901,370 +148528,180 @@ class StyledChatWidget extends ChatWidgetWebComponent {
         this.setAttribute("user-id", this._generatedUserId);
       }
     }
-    if (super.connectedCallback) super.connectedCallback();
-    if (!this.shadowRoot) return;
-    const width = this.getAttribute("width") || defaultWidgetConfig.width;
-    const height = this.getAttribute("height") || defaultWidgetConfig.height;
-    const rootButtonHeight = this.getAttribute("root-button-height") || defaultWidgetConfig.rootButtonHeight;
-    const rootButtonWidth = this.getAttribute("root-button-width") || defaultWidgetConfig.rootButtonWidth;
-    const rootButtonShape = this.getAttribute("root-button-shape") || defaultWidgetConfig.rootButtonShape;
-    const rootLogoHeight = this.getAttribute("root-logo-height") || defaultWidgetConfig.rootLogoHeight;
-    const rootLogoWidth = this.getAttribute("root-logo-width") || defaultWidgetConfig.rootLogoWidth;
-    const primaryColor = this.getAttribute("primary-color") || defaultWidgetConfig.primaryColor;
+  }
+  initializeCssVariables() {
+    const width = this.getAttr("width", defaultWidgetConfig.width);
+    const height = this.getAttr("height", defaultWidgetConfig.height);
+    const rootButtonHeight = this.getAttr(
+      "root-button-height",
+      defaultWidgetConfig.rootButtonHeight
+    );
+    const rootButtonWidth = this.getAttr(
+      "root-button-width",
+      defaultWidgetConfig.rootButtonWidth
+    );
+    const rootButtonShape = this.getAttr(
+      "root-button-shape",
+      defaultWidgetConfig.rootButtonShape
+    );
+    const rootLogoHeight = this.getAttr(
+      "root-logo-height",
+      defaultWidgetConfig.rootLogoHeight
+    );
+    const rootLogoWidth = this.getAttr(
+      "root-logo-width",
+      defaultWidgetConfig.rootLogoWidth
+    );
+    const primaryColor = this.getAttr(
+      "primary-color",
+      defaultWidgetConfig.primaryColor
+    );
+    const secondaryColor = this.getAttr(
+      "secondary-color",
+      defaultWidgetConfig.secondaryColor
+    );
+    const messageFontSize = this.getAttr(
+      "message-font-size",
+      defaultWidgetConfig.messageFontSize
+    );
+    const messageTextColor = this.getAttr(
+      "message-text-color",
+      defaultWidgetConfig.messageTextColor
+    );
+    const buttonContentColor = this.getAttr(
+      "button-content-color",
+      defaultWidgetConfig.buttonContentColor
+    );
     const primaryColorHover = getHoverColor(primaryColor);
-    const secondaryColor = this.getAttribute("secondary-color") || defaultWidgetConfig.secondaryColor;
-    const messageFontSize = this.getAttribute("message-font-size") || defaultWidgetConfig.messageFontSize;
-    const messageTextColor = this.getAttribute("message-text-color") || defaultWidgetConfig.messageTextColor;
-    const buttonContentColor = this.getAttribute("button-content-color") || defaultWidgetConfig.buttonContentColor;
-    const position2 = this.getAttribute("position") || defaultWidgetConfig.position;
-    const positionStyles = getPositionStyles(position2);
-    const engagementHookImagePath = this.getAttribute("engagement-hook-image-path") || defaultWidgetConfig.engagementHookImagePath;
-    const engagementHookImageWidth = this.getAttribute("engagement-hook-image-width") || defaultWidgetConfig.engagementHookImageWidth;
-    const engagementHookImageHeight = this.getAttribute("engagement-hook-image-height") || defaultWidgetConfig.engagementHookImageHeight;
-    document.documentElement.style.setProperty("--chat-widget-width", width);
-    document.documentElement.style.setProperty("--chat-widget-height", height);
-    document.documentElement.style.setProperty(
-      "--chat-widget-primary-color",
-      primaryColor
-    );
-    document.documentElement.style.setProperty(
-      "--chat-widget-primary-color-hover",
-      primaryColorHover
-    );
-    document.documentElement.style.setProperty(
-      "--chat-widget-secondary-color",
-      secondaryColor
-    );
-    document.documentElement.style.setProperty(
-      "--chat-widget-message-font-size",
-      messageFontSize
-    );
-    document.documentElement.style.setProperty(
-      "--chat-widget-message-text-color",
-      messageTextColor
-    );
-    document.documentElement.style.setProperty(
-      "--chat-widget-button-content-color",
-      buttonContentColor
-    );
-    {
-      document.documentElement.style.setProperty(
-        "--chat-widget-engagement-hook-image-width",
-        engagementHookImageWidth
-      );
-    }
-    {
-      document.documentElement.style.setProperty(
-        "--chat-widget-engagement-hook-image-height",
-        engagementHookImageHeight
-      );
-    }
-    {
-      document.documentElement.setAttribute(
-        "data-engagement-hook-image-path",
-        engagementHookImagePath
-      );
-    }
-    this.style.setProperty("--chat-widget-width", width);
-    this.style.setProperty("--chat-widget-height", height);
-    this.style.setProperty("--chat-widget-primary-color", primaryColor);
-    this.style.setProperty(
-      "--chat-widget-primary-color-hover",
-      primaryColorHover
-    );
-    this.style.setProperty("--chat-widget-secondary-color", secondaryColor);
-    this.style.setProperty("--chat-widget-message-font-size", messageFontSize);
-    this.style.setProperty(
-      "--chat-widget-message-text-color",
-      messageTextColor
-    );
-    this.style.setProperty(
-      "--chat-widget-button-content-color",
-      buttonContentColor
-    );
-    const existingStyle = document.getElementById(WIDGET_STYLE_ID);
-    if (existingStyle) existingStyle.remove();
-    const globalStyleTag = document.createElement("style");
-    globalStyleTag.id = WIDGET_STYLE_ID;
-    globalStyleTag.textContent = generateGlobalStyles(
-      width,
-      height,
-      position2,
+    const { width: closedButtonWidth, height: closedButtonHeight } = getClosedButtonSize(rootButtonShape, rootButtonWidth, rootButtonHeight);
+    const rootBorderRadius = getRootBorderRadius(rootButtonShape);
+    const { height: finalLogoHeight, width: finalLogoWidth } = getConstrainedLogoDimensions({
+      rootLogoHeight: rootLogoHeight || rootButtonHeight,
+      rootLogoWidth: rootLogoWidth || rootButtonWidth,
       rootButtonHeight,
-      rootButtonWidth,
-      rootButtonShape,
-      rootLogoHeight,
-      rootLogoWidth
+      rootButtonWidth
+    });
+    this.setCssVar("--chat-widget-width", width);
+    this.setCssVar("--chat-widget-height", height);
+    this.setCssVar("--chat-widget-primary-color", primaryColor);
+    this.setCssVar("--chat-widget-primary-color-hover", primaryColorHover);
+    this.setCssVar("--chat-widget-secondary-color", secondaryColor);
+    this.setCssVar("--chat-widget-message-font-size", messageFontSize);
+    this.setCssVar("--chat-widget-message-text-color", messageTextColor);
+    this.setCssVar("--chat-widget-button-content-color", buttonContentColor);
+    this.setCssVar("--chat-widget-button-width", closedButtonWidth);
+    this.setCssVar("--chat-widget-button-height", closedButtonHeight);
+    this.setCssVar("--chat-widget-modern-button-height", rootButtonHeight);
+    this.setCssVar("--chat-widget-logo-width", finalLogoWidth);
+    this.setCssVar("--chat-widget-logo-height", finalLogoHeight);
+    this.setCssVar("--root-border-radius", rootBorderRadius);
+    this.setCssVar("--chat-widget-sleek-min-height", "60px");
+  }
+  initializeShadowStyles() {
+    if (!this.shadowRoot) return;
+    const primaryColor = this.getAttr(
+      "primary-color",
+      defaultWidgetConfig.primaryColor
     );
-    document.head.appendChild(globalStyleTag);
+    const secondaryColor = this.getAttr(
+      "secondary-color",
+      defaultWidgetConfig.secondaryColor
+    );
+    const messageFontSize = this.getAttr(
+      "message-font-size",
+      defaultWidgetConfig.messageFontSize
+    );
+    const messageTextColor = this.getAttr(
+      "message-text-color",
+      defaultWidgetConfig.messageTextColor
+    );
     const shadowStyleTag = document.createElement("style");
     shadowStyleTag.textContent = generateShadowStyles(
-      width,
-      height,
       primaryColor,
-      primaryColorHover,
-      position2,
-      rootButtonHeight,
-      rootButtonWidth,
-      rootButtonShape,
-      rootLogoHeight,
-      rootLogoWidth,
+      getHoverColor(primaryColor),
       messageFontSize,
       secondaryColor,
       messageTextColor
     );
     this.shadowRoot.appendChild(shadowStyleTag);
-    this.style.setProperty("position", "fixed", "important");
-    this.style.setProperty("z-index", Z_INDEX, "important");
+  }
+  initializePosition() {
+    const position2 = this.getAttr(
+      "position",
+      defaultWidgetConfig.position
+    );
+    const isMobileViewport = typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches;
+    const xOffset = this.getAttr(
+      isMobileViewport ? "mobile-x-offset" : "desktop-x-offset",
+      DEFAULT_POSITION_OFFSET
+    );
+    const yOffset = this.getAttr(
+      isMobileViewport ? "mobile-y-offset" : "desktop-y-offset",
+      DEFAULT_POSITION_OFFSET
+    );
+    const positionStyles = getPositionStyles(position2, {
+      xOffset,
+      yOffset
+    });
     this.style.setProperty(
       positionStyles.vertical,
-      positionStyles.verticalValue,
-      "important"
+      positionStyles.verticalValue
     );
     this.style.setProperty(
       positionStyles.horizontal,
-      positionStyles.horizontalValue,
-      "important"
+      positionStyles.horizontalValue
     );
-    if (positionStyles.vertical === "bottom") {
-      this.style.setProperty("top", "auto", "important");
-    } else {
-      this.style.setProperty("bottom", "auto", "important");
+    this.style.setProperty("position", "fixed");
+    this.style.setProperty("z-index", Z_INDEX);
+    const oppositeVertical = positionStyles.vertical === "bottom" ? "top" : "bottom";
+    const oppositeHorizontal = positionStyles.horizontal === "right" ? "left" : "right";
+    this.style.removeProperty(oppositeVertical);
+    this.style.removeProperty(oppositeHorizontal);
+  }
+  connectedCallback() {
+    var _a, _b;
+    console.log("[StyledChatWidget] connectedCallback called", {
+      parentTag: (_a = this.parentNode) == null ? void 0 : _a.nodeName,
+      parentIsBody: this.parentNode === document.body
+    });
+    const allowed = this.ensureSingleInstance();
+    if (!allowed) {
+      return;
     }
-    if (positionStyles.horizontal === "right") {
-      this.style.setProperty("left", "auto", "important");
-    } else {
-      this.style.setProperty("right", "auto", "important");
-    }
-    const isOpen = this.getAttribute("data-open") === "true";
-    const viewType = this.getAttribute("view-type") || "sleek_view";
+    this.initializeApiKey();
+    this.initializeIds();
+    (_b = super.connectedCallback) == null ? void 0 : _b.call(this);
+    if (!this.shadowRoot) return;
+    this.initializeCssVariables();
+    this.initializeShadowStyles();
+    this.initializePosition();
+    window.addEventListener("resize", this._handleViewportResize);
+    const viewType = this.getAttr("view-type", "sleek_view");
     if (!this.hasAttribute("view-type")) {
       this.setAttribute("view-type", viewType);
     }
-    if (isOpen) {
-      this.style.setProperty("width", width, "important");
-      if (viewType === "sleek_view") {
-        this.style.setProperty("height", "auto", "important");
-        this.style.setProperty("min-height", "60px", "important");
-        this.style.setProperty("max-height", height, "important");
-      } else {
-        this.style.setProperty("height", height, "important");
-      }
-    } else {
-      const closedButtonWidth = rootButtonShape === "modern" ? "220px" : rootButtonWidth;
-      const closedButtonHeight = rootButtonHeight;
-      this.style.setProperty("width", closedButtonWidth, "important");
-      this.style.setProperty("height", closedButtonHeight, "important");
-    }
-    if (!document.getElementById(HOST_STYLE_ID)) {
-      const hostStyle = document.createElement("style");
-      hostStyle.id = HOST_STYLE_ID;
-      hostStyle.textContent = generateHostStyles(
-        width,
-        height,
-        position2,
-        rootButtonHeight,
-        rootButtonWidth,
-        rootButtonShape
-      );
-      document.head.appendChild(hostStyle);
-    }
-    new MutationObserver(() => {
-      const actuallyDetached = !this.isConnected;
-      if (actuallyDetached && document.body) {
-        console.log(
-          "[StyledChatWidget] MutationObserver: widget was detached, re-attaching to body"
-        );
-        document.body.appendChild(this);
-      }
-    }).observe(document.body, { childList: true });
-    window.spotinfoSetButtonVisibility = (visible) => {
-      this.setAttribute("widget-hidden", (!visible).toString());
-    };
-    const ensureSSEConnectionOnLoad = () => {
-      if (typeof window.spotinfoIsSSEConnected === "function" && typeof window.spotinfoEnsureSSEConnection === "function") {
-        const isConnected = window.spotinfoIsSSEConnected();
-        if (!isConnected) {
-          console.log(
-            "[ChatWidget] SSE hook not connected on widget load, ensuring connection..."
-          );
-          window.spotinfoEnsureSSEConnection();
-        }
-      } else {
-        setTimeout(ensureSSEConnectionOnLoad, 500);
-      }
-    };
-    setTimeout(ensureSSEConnectionOnLoad, 1e3);
   }
   disconnectedCallback() {
+    var _a;
+    if (window[GLOBAL_WIDGET_KEY] === this) {
+      delete window[GLOBAL_WIDGET_KEY];
+    }
     const stack = new Error().stack;
     console.log(
       "[StyledChatWidget] disconnectedCallback called – element removed from DOM. Stack:",
       stack
     );
-    if (super.disconnectedCallback) super.disconnectedCallback();
+    window.removeEventListener("resize", this._handleViewportResize);
+    (_a = super.disconnectedCallback) == null ? void 0 : _a.call(this);
   }
   attributeChangedCallback(name2, oldValue, newValue) {
+    var _a, _b, _c;
     if (oldValue === newValue) return;
-    switch (name2) {
-      case "width":
-        if (newValue) {
-          document.documentElement.style.setProperty(
-            "--chat-widget-width",
-            newValue
-          );
-          this.style.setProperty("--chat-widget-width", newValue);
-        }
-        break;
-      case "height":
-        if (newValue) {
-          document.documentElement.style.setProperty(
-            "--chat-widget-height",
-            newValue
-          );
-          this.style.setProperty("--chat-widget-height", newValue);
-        }
-        break;
-      case "root-button-height":
-      case "root-button-width":
-      case "root-button-shape":
-      case "root-logo-height":
-      case "root-logo-width":
-        if (this.shadowRoot) {
-          const width = this.getAttribute("width") || defaultWidgetConfig.width;
-          const height = this.getAttribute("height") || defaultWidgetConfig.height;
-          const rootButtonHeight = this.getAttribute("root-button-height") || defaultWidgetConfig.rootButtonHeight;
-          const rootButtonWidth = this.getAttribute("root-button-width") || defaultWidgetConfig.rootButtonWidth;
-          const rootButtonShape = this.getAttribute("root-button-shape") || defaultWidgetConfig.rootButtonShape;
-          const rootLogoHeight = this.getAttribute("root-logo-height") || defaultWidgetConfig.rootLogoHeight;
-          const rootLogoWidth = this.getAttribute("root-logo-width") || defaultWidgetConfig.rootLogoWidth;
-          const primaryColor = this.getAttribute("primary-color") || defaultWidgetConfig.primaryColor;
-          const primaryColorHover = getHoverColor(primaryColor);
-          const position2 = this.getAttribute("position") || defaultWidgetConfig.position;
-          const messageFontSize = this.getAttribute("message-font-size") || defaultWidgetConfig.messageFontSize;
-          const secondaryColor = this.getAttribute("secondary-color") || defaultWidgetConfig.secondaryColor;
-          const messageTextColor = this.getAttribute("message-text-color") || defaultWidgetConfig.messageTextColor;
-          const existingGlobalStyle = document.getElementById(WIDGET_STYLE_ID);
-          if (existingGlobalStyle) {
-            existingGlobalStyle.textContent = generateGlobalStyles(
-              width,
-              height,
-              position2,
-              rootButtonHeight,
-              rootButtonWidth,
-              rootButtonShape,
-              rootLogoHeight,
-              rootLogoWidth
-            );
-          }
-          const existingShadowStyle = this.shadowRoot.querySelector("style");
-          if (existingShadowStyle) {
-            existingShadowStyle.textContent = generateShadowStyles(
-              width,
-              height,
-              primaryColor,
-              primaryColorHover,
-              position2,
-              rootButtonHeight,
-              rootButtonWidth,
-              rootButtonShape,
-              rootLogoHeight,
-              rootLogoWidth,
-              messageFontSize,
-              secondaryColor,
-              messageTextColor
-            );
-          }
-          const existingHostStyle = document.getElementById(HOST_STYLE_ID);
-          if (existingHostStyle) {
-            existingHostStyle.textContent = generateHostStyles(
-              width,
-              height,
-              position2,
-              rootButtonHeight,
-              rootButtonWidth,
-              rootButtonShape
-            );
-          }
-          if (this.getAttribute("data-open") !== "true") {
-            const closedButtonWidth = rootButtonShape === "modern" ? "220px" : rootButtonWidth;
-            const closedButtonHeight = rootButtonHeight;
-            this.style.setProperty("width", closedButtonWidth, "important");
-            this.style.setProperty("height", closedButtonHeight, "important");
-          }
-        }
-        break;
-      case "primary-color":
-        if (newValue) {
-          document.documentElement.style.setProperty(
-            "--chat-widget-primary-color",
-            newValue
-          );
-          document.documentElement.style.setProperty(
-            "--chat-widget-primary-color-hover",
-            getHoverColor(newValue)
-          );
-          this.style.setProperty("--chat-widget-primary-color", newValue);
-          this.style.setProperty(
-            "--chat-widget-primary-color-hover",
-            getHoverColor(newValue)
-          );
-        }
-        break;
-      case "secondary-color":
-        if (newValue) {
-          document.documentElement.style.setProperty(
-            "--chat-widget-secondary-color",
-            newValue
-          );
-          this.style.setProperty("--chat-widget-secondary-color", newValue);
-        }
-        break;
-      case "message-font-size":
-        if (newValue) {
-          document.documentElement.style.setProperty(
-            "--chat-widget-message-font-size",
-            newValue
-          );
-          this.style.setProperty("--chat-widget-message-font-size", newValue);
-        }
-        break;
-      case "message-text-color":
-        if (newValue) {
-          document.documentElement.style.setProperty(
-            "--chat-widget-message-text-color",
-            newValue
-          );
-          this.style.setProperty("--chat-widget-message-text-color", newValue);
-        }
-        break;
-      case "data-open":
-        this.handleDataOpenChange(newValue);
-        break;
-      case "api-key":
-        if (newValue) this.apiKey = newValue;
-        break;
-    }
-    if (super.attributeChangedCallback) {
-      super.attributeChangedCallback(name2, oldValue, newValue);
-    }
+    (_b = (_a = this.attributeHandlers)[name2]) == null ? void 0 : _b.call(_a, newValue);
+    (_c = super.attributeChangedCallback) == null ? void 0 : _c.call(this, name2, oldValue, newValue);
   }
   handleDataOpenChange(newValue) {
     const isOpen = newValue === "true";
-    const width = this.getAttribute("width") || defaultWidgetConfig.width;
-    const height = this.getAttribute("height") || defaultWidgetConfig.height;
-    const rootButtonHeight = this.getAttribute("root-button-height") || defaultWidgetConfig.rootButtonHeight;
-    const rootButtonWidth = this.getAttribute("root-button-width") || defaultWidgetConfig.rootButtonWidth;
-    const rootButtonShape = this.getAttribute("root-button-shape") || defaultWidgetConfig.rootButtonShape;
-    if (isOpen) {
-      this.style.setProperty("width", width, "important");
-      this.style.setProperty("height", height, "important");
-    } else {
-      const closedButtonWidth = rootButtonShape === "modern" ? "220px" : rootButtonWidth;
-      const closedButtonHeight = rootButtonHeight;
-      this.style.setProperty("width", closedButtonWidth, "important");
-      this.style.setProperty("height", closedButtonHeight, "important");
-    }
     this.dispatchEvent(
       new CustomEvent("dataOpenChange", {
         detail: { isOpen },
