@@ -37975,6 +37975,7 @@ const useAnalytics = ({
           widgetExpansionDirection: getExpansionDirection(position2)
         }
       };
+      enableBackendEventSending();
       trackWidgetLoaded(enhancedLoadProperties);
       initialLoadEventSentRef.current = true;
       widgetLoadSentKeys.add(loadKey);
@@ -38475,7 +38476,7 @@ const MessagePopup = ({
     return null;
   }
 };
-const reportHookDelivery = (metaConfig, hookType) => {
+const reportHookDelivery = (metaConfig, hookType, hookMessage) => {
   if (!metaConfig.hostUrl || !metaConfig.apiKey || !metaConfig.clientId) {
     console.warn(
       "[HookDeliveryService] hook delivery reporting skipped: missing hostUrl, apiKey or clientId"
@@ -38492,6 +38493,7 @@ const reportHookDelivery = (metaConfig, hookType) => {
     body: JSON.stringify({
       client_id: metaConfig.clientId,
       hook_type: hookType,
+      hook_message: hookMessage,
       delivered_time: (/* @__PURE__ */ new Date()).toISOString()
     })
   }).catch((error2) => {
@@ -38521,9 +38523,9 @@ const showMessagePopupUtil = (message, position2, callbacks, userId, messageSour
   console.log("[PopupUtils] Starting to show popup...");
   if (!metaConfig || !messageSource) ;
   else if (messageSource === "proactive_hook" || messageSource === "personalized_hook") {
-    reportHookDelivery(metaConfig, messageSource);
+    reportHookDelivery(metaConfig, messageSource, message.content);
   } else if (messageSource === "sse") {
-    reportHookDelivery(metaConfig, "proactive_hook");
+    reportHookDelivery(metaConfig, "proactive_hook", message.content);
   }
   closeAnyExistingPopup();
   const resolvedPopupType = (appearanceConfig == null ? void 0 : appearanceConfig.popupType) ?? "legacy";
@@ -38867,7 +38869,6 @@ const _PersonalizedHookService = class _PersonalizedHookService {
     );
     this.pollingStopped = false;
     this.poll_counter = 0;
-    enableBackendEventSending();
     const doPoll = async () => {
       console.log(
         "[PersonalizedHookService] Checking if we should continue polling:",
@@ -112602,7 +112603,7 @@ const MicPermissionDialog = ({
               {
                 id: "mic-permission-dialog-title",
                 className: "mic-permission-dialog-title",
-                children: "Microphone is blocked"
+                children: "Grant microphone access to continue call"
               }
             ),
             /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -125889,8 +125890,130 @@ function buildConfigs(props) {
   const metaConfig = buildMetaConfig(props);
   return { widgetConfig, metaConfig };
 }
+const resolveLogoUrl = (path) => {
+  if (!path) return spotinfoLogo;
+  if (path.startsWith("http") || path.startsWith("data:")) return path;
+  return path.startsWith("/") ? path : `/${path}`;
+};
+const LegacyLaunchButton = ({ logo }) => {
+  const logoUrl = resolveLogoUrl(logo);
+  const [imgError, setImgError] = reactExports.useState(false);
+  const displayLogoUrl = imgError && logo && logo !== spotinfoLogo ? spotinfoLogo : logoUrl;
+  if (displayLogoUrl) {
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "img",
+      {
+        className: "chat-widget-open-icon",
+        src: displayLogoUrl,
+        alt: "Chat",
+        onError: () => setImgError(true)
+      }
+    );
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "svg",
+    {
+      className: "chat-widget-open-icon",
+      fill: "currentColor",
+      viewBox: "0 0 24 24",
+      "aria-hidden": "true",
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "path",
+        {
+          fillRule: "evenodd",
+          d: "M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z",
+          clipRule: "evenodd"
+        }
+      )
+    }
+  );
+};
+const ModernLaunchButton = ({
+  botName,
+  rootTitle,
+  rootSubtitle,
+  logo
+}) => {
+  const displayName = (botName == null ? void 0 : botName.trim()) || "Aanya";
+  const displayTitle = (rootTitle == null ? void 0 : rootTitle.trim()) || `Talk to ${displayName}`;
+  const displaySubtitle = (rootSubtitle == null ? void 0 : rootSubtitle.trim()) || "Online · replies in 10s";
+  const nameInitials = displayName.split(" ").filter(Boolean).slice(0, 2).map((part) => {
+    var _a;
+    return ((_a = part[0]) == null ? void 0 : _a.toUpperCase()) || "";
+  }).join("");
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "chat-widget-modern-avatar", "aria-hidden": "true", children: [
+      logo ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "img",
+        {
+          className: "chat-widget-modern-avatar-image",
+          src: resolveLogoUrl(logo),
+          alt: ""
+        }
+      ) : nameInitials || "AI",
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chat-widget-online-dot" })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "chat-widget-modern-text", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chat-widget-modern-title", children: displayTitle }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chat-widget-modern-status", children: displaySubtitle })
+    ] })
+  ] });
+};
+const WidgetLaunchButton = ({
+  isOpen,
+  rootButtonShape,
+  onOpen,
+  botName,
+  rootTitle,
+  rootSubtitle,
+  logo
+}) => {
+  if (isOpen) {
+    return null;
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "button",
+    {
+      className: "chat-widget-open-button",
+      "data-shape": rootButtonShape,
+      "aria-label": "Open chat",
+      tabIndex: 0,
+      onClick: onOpen,
+      onKeyDown: (e2) => {
+        if (e2.key === "Enter" || e2.key === " ") {
+          onOpen();
+        }
+      },
+      children: rootButtonShape === "modern" ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+        ModernLaunchButton,
+        {
+          botName,
+          rootTitle,
+          rootSubtitle,
+          logo
+        }
+      ) : /* @__PURE__ */ jsxRuntimeExports.jsx(LegacyLaunchButton, { logo })
+    }
+  );
+};
+const initializeLaunchButtonCssVars = ({
+  element: element2,
+  rootButtonHeight,
+  rootButtonWidth,
+  rootLogoHeight,
+  rootLogoWidth
+}) => {
+  element2.style.setProperty("--chat-widget-button-width", rootButtonWidth);
+  element2.style.setProperty("--chat-widget-button-height", rootButtonHeight);
+  element2.style.setProperty(
+    "--chat-widget-modern-button-height",
+    rootButtonHeight
+  );
+  element2.style.setProperty("--chat-widget-logo-width", rootLogoWidth);
+  element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
+};
 const styles = `
-/* Chat Widget CSS Bundle - Generated Fri May  8 20:10:41 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Sat May  9 13:21:10 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -130299,6 +130422,306 @@ It has 3 components:
 }
 
 /* End of file: components/css/ChatMessage.css */
+
+/* Start of file: components/css/LaunchButton.css */
+
+/* src/components/css/LaunchButton.css:1 */
+
+.chat-widget-open-button {
+  /* src/components/css/LaunchButton.css:2 */
+  pointer-events: auto;
+  /* src/components/css/LaunchButton.css:3 */
+}
+
+/* src/components/css/LaunchButton.css:5 */
+
+.chat-widget-open-icon {
+  /* src/components/css/LaunchButton.css:6 */
+  max-width: min(var(--chat-widget-logo-width), 100%);
+  /* src/components/css/LaunchButton.css:8 */
+  max-height: min(var(--chat-widget-logo-height), 100%);
+  /* src/components/css/LaunchButton.css:10 */
+  width: auto;
+  /* src/components/css/LaunchButton.css:11 */
+  height: auto;
+  /* src/components/css/LaunchButton.css:13 */
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* src/components/css/LaunchButton.css:14 */
+  display: block;
+  /* src/components/css/LaunchButton.css:15 */
+  margin: auto;
+  /* src/components/css/LaunchButton.css:16 */
+}
+
+/* src/components/css/LaunchButton.css:18 */
+
+:host([data-open='false']) .chat-widget-open-button {
+  /* src/components/css/LaunchButton.css:19 */
+  position: absolute;
+  /* src/components/css/LaunchButton.css:20 */
+  top: 0;
+  /* src/components/css/LaunchButton.css:21 */
+  left: 0;
+  /* src/components/css/LaunchButton.css:22 */
+  right: 0;
+  /* src/components/css/LaunchButton.css:23 */
+  bottom: 0;
+  /* src/components/css/LaunchButton.css:24 */
+  width: var(--chat-widget-button-width);
+  /* src/components/css/LaunchButton.css:25 */
+  height: var(--chat-widget-button-height);
+  /* src/components/css/LaunchButton.css:26 */
+  color: var(--chat-widget-button-content-color);
+  /* src/components/css/LaunchButton.css:27 */
+  display: flex;
+  /* src/components/css/LaunchButton.css:28 */
+  align-items: center;
+  /* src/components/css/LaunchButton.css:29 */
+  justify-content: center;
+  /* src/components/css/LaunchButton.css:30 */
+  background-color: color-mix(
+/* src/components/css/LaunchButton.css:31 */
+    in srgb,
+/* src/components/css/LaunchButton.css:32 */
+    var(--chat-widget-secondary-color) 10%,
+/* src/components/css/LaunchButton.css:33 */
+    #fff 90%
+/* src/components/css/LaunchButton.css:34 */
+  );
+  /* src/components/css/LaunchButton.css:35 */
+  color: var(--chat-widget-primary-color);
+  /* src/components/css/LaunchButton.css:36 */
+  border: 1.5px solid
+/* src/components/css/LaunchButton.css:37 */
+    color-mix(in srgb, var(--chat-widget-secondary-color) 75%, #fff 25%);
+  /* src/components/css/LaunchButton.css:38 */
+  cursor: pointer;
+  /* src/components/css/LaunchButton.css:39 */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  /* src/components/css/LaunchButton.css:40 */
+  transition: all 0.3s ease;
+  /* src/components/css/LaunchButton.css:41 */
+  transform: none;
+  /* src/components/css/LaunchButton.css:42 */
+}
+
+/* src/components/css/LaunchButton.css:44 */
+
+:host([data-open='true']) .chat-widget-open-button {
+  /* src/components/css/LaunchButton.css:45 */
+  position: relative;
+  /* src/components/css/LaunchButton.css:46 */
+}
+
+/* src/components/css/LaunchButton.css:48 */
+
+:host([data-open='false']) .chat-widget-open-button:hover {
+  /* src/components/css/LaunchButton.css:49 */
+  background-color: color-mix(
+/* src/components/css/LaunchButton.css:50 */
+    in srgb,
+/* src/components/css/LaunchButton.css:51 */
+    var(--chat-widget-secondary-color) 12%,
+/* src/components/css/LaunchButton.css:52 */
+    #fff 88%
+/* src/components/css/LaunchButton.css:53 */
+  );
+  /* src/components/css/LaunchButton.css:54 */
+  border-color: color-mix(
+/* src/components/css/LaunchButton.css:55 */
+    in srgb,
+/* src/components/css/LaunchButton.css:56 */
+    var(--chat-widget-secondary-color) 90%,
+/* src/components/css/LaunchButton.css:57 */
+    #fff 10%
+/* src/components/css/LaunchButton.css:58 */
+  );
+  /* src/components/css/LaunchButton.css:59 */
+  transform: translateY(-1px) scale(1.05);
+  /* src/components/css/LaunchButton.css:60 */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  /* src/components/css/LaunchButton.css:61 */
+}
+
+/* src/components/css/LaunchButton.css:63 */
+
+:host([data-open='false']) .chat-widget-open-button[data-shape='circular'] {
+  /* src/components/css/LaunchButton.css:64 */
+  border-radius: 50%;
+  /* src/components/css/LaunchButton.css:65 */
+}
+
+/* src/components/css/LaunchButton.css:67 */
+
+:host([data-open='false']) .chat-widget-open-button[data-shape='boxed'] {
+  /* src/components/css/LaunchButton.css:68 */
+  border-radius: 10%;
+  /* src/components/css/LaunchButton.css:69 */
+}
+
+/* src/components/css/LaunchButton.css:71 */
+
+:host([data-open='false']) .chat-widget-open-button[data-shape='modern'] {
+  /* src/components/css/LaunchButton.css:72 */
+  /* setting with of button */
+  /* src/components/css/LaunchButton.css:73 */
+  width: 220px;
+  /* src/components/css/LaunchButton.css:74 */
+  /* height: set in .chat-widget-open-button */
+  /* src/components/css/LaunchButton.css:75 */
+  padding: 0 16px 0 12px;
+  /* src/components/css/LaunchButton.css:76 */
+  gap: 10px;
+  /* src/components/css/LaunchButton.css:77 */
+  /* background-color: set in .chat-widget-open-button */
+  /* src/components/css/LaunchButton.css:78 */
+  /* border: set in .chat-widget-open-button */
+  /* src/components/css/LaunchButton.css:79 */
+  /* box-shadow: set in .chat-widget-open-button */
+  /* src/components/css/LaunchButton.css:80 */
+  /* color: set in .chat-widget-open-button */
+  /* src/components/css/LaunchButton.css:81 */
+  border-radius: 999px;
+  /* src/components/css/LaunchButton.css:82 */
+  flex-direction: row;
+  /* src/components/css/LaunchButton.css:83 */
+  justify-content: flex-start;
+  /* src/components/css/LaunchButton.css:84 */
+}
+
+/* src/components/css/LaunchButton.css:86 */
+
+.chat-widget-modern-avatar {
+  /* src/components/css/LaunchButton.css:87 */
+  width: 40px;
+  /* src/components/css/LaunchButton.css:88 */
+  height: 40px;
+  /* src/components/css/LaunchButton.css:89 */
+  border-radius: 50%;
+  /* src/components/css/LaunchButton.css:90 */
+  border: 1.5px solid
+/* src/components/css/LaunchButton.css:91 */
+    color-mix(in srgb, var(--chat-widget-secondary-color) 75%, #fff 25%);
+  /* src/components/css/LaunchButton.css:92 */
+  background-color: color-mix(
+/* src/components/css/LaunchButton.css:93 */
+    in srgb,
+/* src/components/css/LaunchButton.css:94 */
+    var(--chat-widget-primary-color) 5%,
+/* src/components/css/LaunchButton.css:95 */
+    #fff 95%
+/* src/components/css/LaunchButton.css:96 */
+  );
+  /* src/components/css/LaunchButton.css:97 */
+  display: flex;
+  /* src/components/css/LaunchButton.css:98 */
+  align-items: center;
+  /* src/components/css/LaunchButton.css:99 */
+  justify-content: center;
+  /* src/components/css/LaunchButton.css:100 */
+  padding: 2px;
+  /* src/components/css/LaunchButton.css:101 */
+  font-weight: 500;
+  /* src/components/css/LaunchButton.css:102 */
+  font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/LaunchButton.css:103 */
+  color: #fff;
+  /* src/components/css/LaunchButton.css:104 */
+  flex-shrink: 0;
+  /* src/components/css/LaunchButton.css:105 */
+  position: relative;
+  /* src/components/css/LaunchButton.css:106 */
+}
+
+/* src/components/css/LaunchButton.css:108 */
+
+.chat-widget-modern-avatar-image {
+  /* src/components/css/LaunchButton.css:109 */
+  width: 100%;
+  /* src/components/css/LaunchButton.css:110 */
+  height: 100%;
+  /* src/components/css/LaunchButton.css:111 */
+  border-radius: inherit;
+  /* src/components/css/LaunchButton.css:112 */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* src/components/css/LaunchButton.css:113 */
+  display: block;
+  /* src/components/css/LaunchButton.css:114 */
+}
+
+/* src/components/css/LaunchButton.css:116 */
+
+.chat-widget-modern-text {
+  /* src/components/css/LaunchButton.css:117 */
+  display: flex;
+  /* src/components/css/LaunchButton.css:118 */
+  flex-direction: column;
+  /* src/components/css/LaunchButton.css:119 */
+  align-items: flex-start;
+  /* src/components/css/LaunchButton.css:120 */
+  gap: 1px;
+  /* src/components/css/LaunchButton.css:121 */
+  text-align: left;
+  /* src/components/css/LaunchButton.css:122 */
+}
+
+/* src/components/css/LaunchButton.css:124 */
+
+.chat-widget-modern-title {
+  /* src/components/css/LaunchButton.css:125 */
+  font-weight: 550;
+  /* src/components/css/LaunchButton.css:126 */
+  font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/LaunchButton.css:127 */
+  color: var(--chat-widget-primary-color);
+  /* src/components/css/LaunchButton.css:128 */
+  line-height: 1.2;
+  /* src/components/css/LaunchButton.css:129 */
+  white-space: nowrap;
+  /* src/components/css/LaunchButton.css:130 */
+}
+
+/* src/components/css/LaunchButton.css:132 */
+
+.chat-widget-modern-status {
+  /* src/components/css/LaunchButton.css:133 */
+  font-size: calc(var(--chat-widget-message-font-size) * 0.86);
+  /* src/components/css/LaunchButton.css:134 */
+  color: var(--chat-widget-primary-color);
+  /* src/components/css/LaunchButton.css:135 */
+  display: flex;
+  /* src/components/css/LaunchButton.css:136 */
+  align-items: center;
+  /* src/components/css/LaunchButton.css:137 */
+  gap: 4px;
+  /* src/components/css/LaunchButton.css:138 */
+  white-space: nowrap;
+  /* src/components/css/LaunchButton.css:139 */
+}
+
+/* src/components/css/LaunchButton.css:141 */
+
+.chat-widget-modern-status::before {
+  /* src/components/css/LaunchButton.css:142 */
+  content: '';
+  /* src/components/css/LaunchButton.css:143 */
+  display: inline-block;
+  /* src/components/css/LaunchButton.css:144 */
+  width: 10px;
+  /* src/components/css/LaunchButton.css:145 */
+  height: 10px;
+  /* src/components/css/LaunchButton.css:146 */
+  border-radius: 50%;
+  /* src/components/css/LaunchButton.css:147 */
+  background: var(--color-voice-speaking);
+  /* src/components/css/LaunchButton.css:148 */
+  flex-shrink: 0;
+  /* src/components/css/LaunchButton.css:149 */
+}
+
+/* End of file: components/css/LaunchButton.css */
 
 /* Start of file: components/css/MarkdownRenderer.css */
 
@@ -144328,6 +144751,1034 @@ svg.sleek-chat-input-whatsapp-icon:focus {
 
 /* End of file: components/css/variables.css */
 
+/* Start of file: components/css/web-component.css */
+
+/* src/components/css/web-component.css:1 */
+
+/* ================================================
+   CENTRALIZED CSS VARIABLES
+   ================================================
+   This file contains all shared CSS variables used across components.
+   Import this file in components that need these variables.
+   ================================================ */
+
+/* src/components/css/variables.css:8 */
+
+:root {
+  /* ================================================
+     COLORS - ALL COLORS IN ONE PLACE
+     ================================================ */
+  /* src/components/css/variables.css:13 */
+  /* Theme Colors (from chat widget config - use these directly) */
+  /* src/components/css/variables.css:14 */
+  /* --chat-widget-primary-color (defined elsewhere) */
+  /* src/components/css/variables.css:15 */
+  /* --chat-widget-secondary-color (defined elsewhere) */
+  /* src/components/css/variables.css:16 */
+  /* --chat-widget-button-content-color (defined elsewhere) */
+  /* src/components/css/variables.css:17 */
+  /* --chat-widget-message-text-color (defined elsewhere) */
+  /* src/components/css/variables.css:18 */
+  /* --chat-widget-message-font-size (defined elsewhere) */
+  /* src/components/css/variables.css:20 */
+  /* Derived Theme Colors */
+  /* src/components/css/variables.css:21 */
+  /* Primary hover: darker version of primary color (85% primary + 15% black) */
+  /* src/components/css/variables.css:22 */
+  --chat-widget-primary-color-hover: color-mix(
+/* src/components/css/variables.css:23 */
+    in srgb,
+/* src/components/css/variables.css:24 */
+    var(--chat-widget-primary-color) 85%,
+/* src/components/css/variables.css:25 */
+    black
+/* src/components/css/variables.css:26 */
+  );
+  /* src/components/css/variables.css:28 */
+  /* Voice State Colors */
+  /* src/components/css/variables.css:29 */
+  --color-voice-listening: #3b82f6;
+  /* src/components/css/variables.css:30 */
+  --color-voice-speaking: #10b981;
+  /* src/components/css/variables.css:31 */
+  --color-voice-thinking: #f59e0b;
+  /* src/components/css/variables.css:32 */
+  --color-voice-disconnected: #ef4444cb;
+  /* src/components/css/variables.css:33 */
+  --color-voice-connecting: #64748b;
+  /* src/components/css/variables.css:35 */
+  /* Special/Brand Colors */
+  /* src/components/css/variables.css:36 */
+  --color-whatsapp: #1eb655;
+  /* src/components/css/variables.css:38 */
+  /* Opacity Values */
+  /* src/components/css/variables.css:39 */
+  --opacity-disabled: 0.7;
+  /* src/components/css/variables.css:40 */
+  --opacity-hover: 0.8;
+  /* src/components/css/variables.css:41 */
+  --opacity-normal: 1;
+  /* ================================================
+     INPUT AREA VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:47 */
+  /* Input Colors */
+  /* src/components/css/variables.css:49 */
+  --color-input-background: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:50 */
+  --color-input-text: var(--chat-widget-message-text-color);
+  /* src/components/css/variables.css:51 */
+  --color-input-placeholder-text: color-mix(
+/* src/components/css/variables.css:52 */
+    in srgb,
+/* src/components/css/variables.css:53 */
+    var(--color-input-text) 70%,
+/* src/components/css/variables.css:54 */
+    white
+/* src/components/css/variables.css:55 */
+  );
+  /* src/components/css/variables.css:56 */
+  --color-input-placeholder-opacity: 70%;
+  /* src/components/css/variables.css:57 */
+  --color-input-placeholder-opacity-focus: 80%;
+  /* src/components/css/variables.css:59 */
+  /* Input Dimensions */
+  /* src/components/css/variables.css:60 */
+  --input-default-height: 40px;
+  /* src/components/css/variables.css:61 */
+  --input-min-height: 40px;
+  /* src/components/css/variables.css:62 */
+  --input-max-height: 120px;
+  /* src/components/css/variables.css:63 */
+  --input-max-height-tablet: 100px;
+  /* src/components/css/variables.css:64 */
+  --input-max-height-mobile: 80px;
+  /* src/components/css/variables.css:66 */
+  /* Input Line Height */
+  /* src/components/css/variables.css:67 */
+  --input-line-height: 20px;
+  /* src/components/css/variables.css:69 */
+  /* Input Padding */
+  /* src/components/css/variables.css:70 */
+  --input-text-padding-horizontal: 4px;
+  /* src/components/css/variables.css:71 */
+  --input-text-padding-vertical: 0px;
+  /* src/components/css/variables.css:72 */
+  --input-text-padding: 0 var(--input-text-padding-horizontal);
+  /* src/components/css/variables.css:73 */
+  --input-container-padding: 6px 8px;
+  /* src/components/css/variables.css:74 */
+  --input-container-padding-sleek: 4px 4px;
+  /* src/components/css/variables.css:76 */
+  /* Input Font */
+  /* src/components/css/variables.css:77 */
+  --input-font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/variables.css:78 */
+  --input-font-weight: 400;
+  /* src/components/css/variables.css:79 */
+  --input-font-weight-focus: 500;
+  /* src/components/css/variables.css:80 */
+  --input-font-weight-bold: 600;
+  /* ================================================
+     INPUT SCROLLBAR VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:86 */
+  /* Scrollbar Colors */
+  /* src/components/css/variables.css:87 */
+  --color-scrollbar-input-thumb: color-mix(
+/* src/components/css/variables.css:88 */
+    in srgb,
+/* src/components/css/variables.css:89 */
+    var(--chat-widget-primary-color) 75%,
+/* src/components/css/variables.css:90 */
+    transparent
+/* src/components/css/variables.css:91 */
+  );
+  /* src/components/css/variables.css:92 */
+  --color-scrollbar-input-thumb-hover: color-mix(
+/* src/components/css/variables.css:93 */
+    in srgb,
+/* src/components/css/variables.css:94 */
+    var(--chat-widget-primary-color) 90%,
+/* src/components/css/variables.css:95 */
+    transparent
+/* src/components/css/variables.css:96 */
+  );
+  /* src/components/css/variables.css:98 */
+  --color-scrollbar-input-thumb-avatar-view: color-mix(
+/* src/components/css/variables.css:99 */
+    in srgb,
+/* src/components/css/variables.css:100 */
+    var(--chat-widget-secondary-color) 75%,
+/* src/components/css/variables.css:101 */
+    transparent
+/* src/components/css/variables.css:102 */
+  );
+  /* src/components/css/variables.css:103 */
+  --color-scrollbar-input-thumb-hover-avatar-view: color-mix(
+/* src/components/css/variables.css:104 */
+    in srgb,
+/* src/components/css/variables.css:105 */
+    var(--chat-widget-secondary-color) 90%,
+/* src/components/css/variables.css:106 */
+    transparent
+/* src/components/css/variables.css:107 */
+  );
+  /* src/components/css/variables.css:109 */
+  --color-scrollbar-input-track: transparent;
+  /* src/components/css/variables.css:111 */
+  --input-scrollbar-width: thin;
+  /* src/components/css/variables.css:112 */
+  --input-scrollbar-border-radius: 2.5px;
+  /* src/components/css/variables.css:113 */
+  --input-scrollbar-thumb-hover-opacity: var(--opacity-hover);
+  /* ================================================
+     BUTTON VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:119 */
+  /* Button Dimensions */
+  /* src/components/css/variables.css:120 */
+  --button-size-primary: 32px;
+  /* src/components/css/variables.css:121 */
+  --button-padding-primary: 4px;
+  /* src/components/css/variables.css:122 */
+  --button-size-secondary: 24px;
+  /* src/components/css/variables.css:124 */
+  /* Button Colors */
+  /* src/components/css/variables.css:125 */
+  --color-button-background-primary: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:126 */
+  --color-button-background-hover: var(--chat-widget-primary-color-hover);
+  /* src/components/css/variables.css:127 */
+  --color-button-text: var(--chat-widget-button-content-color);
+  /* src/components/css/variables.css:128 */
+  --color-button-fill: var(--chat-widget-button-content-color);
+  /* src/components/css/variables.css:130 */
+  --color-button-disconnect: #ef4444;
+  /* src/components/css/variables.css:132 */
+  /* Button Opacity States */
+  /* src/components/css/variables.css:133 */
+  --button-opacity-normal: var(--opacity-normal);
+  /* src/components/css/variables.css:134 */
+  --button-opacity-hover: var(--opacity-hover);
+  /* src/components/css/variables.css:135 */
+  --button-opacity-disabled: var(--opacity-disabled);
+  /* ================================================
+     ICON VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:141 */
+  /* Icon Sizes */
+  /* src/components/css/variables.css:142 */
+  --button-icon-size-secondary: 16px;
+  /* src/components/css/variables.css:143 */
+  --button-icon-size-primary: 20px;
+  /* src/components/css/variables.css:144 */
+  /* w-5 h-5 equivalent */
+  /* ================================================
+     CHAT MESSAGE CONTAINER SCROLLBAR
+     ================================================ */
+  /* src/components/css/variables.css:150 */
+  --message-scrollbar-width: thin;
+  /* src/components/css/variables.css:151 */
+  --message-scrollbar-width-px: 6px;
+  /* src/components/css/variables.css:152 */
+  --message-scrollbar-border-radius: 3px;
+  /* src/components/css/variables.css:154 */
+  /* Scrollbar Colors */
+  /* src/components/css/variables.css:155 */
+  --color-scrollbar-message-thumb-default: rgb(209 213 219);
+  /* src/components/css/variables.css:156 */
+  --color-scrollbar-message-thumb-hover: rgb(156 163 175);
+  /* src/components/css/variables.css:157 */
+  --color-scrollbar-message-thumb-theme: var(
+/* src/components/css/variables.css:158 */
+    --chat-widget-button-content-color,
+/* src/components/css/variables.css:159 */
+    var(--chat-widget-secondary-color)
+/* src/components/css/variables.css:160 */
+  );
+  /* src/components/css/variables.css:161 */
+  --color-scrollbar-message-thumb-hover-mix: color-mix(
+/* src/components/css/variables.css:162 */
+    in srgb,
+/* src/components/css/variables.css:163 */
+    var(--chat-widget-button-content-color, var(--chat-widget-secondary-color))
+/* src/components/css/variables.css:164 */
+      80%,
+/* src/components/css/variables.css:165 */
+    var(--chat-widget-primary-color)
+/* src/components/css/variables.css:166 */
+  );
+  /* src/components/css/variables.css:167 */
+  --color-scrollbar-message-track: transparent;
+  /* ================================================
+     CHAT MESSAGE
+     ================================================ */
+  /* src/components/css/variables.css:173 */
+  --message-text-color: var(--chat-widget-message-text-color);
+  /* src/components/css/variables.css:174 */
+  --message-font-size: var(--chat-widget-message-font-size);
+  /* ================================================
+     CHAT MESSAGE BUBBLES
+     ================================================ */
+  /* src/components/css/variables.css:180 */
+  --message-bubble-background-color: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:181 */
+  --message-bubble-icon-color: var(--chat-widget-secondary-color);
+  /* ================================================
+     ENGAGEMENT HOOK IMAGE
+     ================================================ */
+  /* src/components/css/variables.css:187 */
+  /* Engagement Hook Image Variables (defined elsewhere via JavaScript) */
+  /* src/components/css/variables.css:188 */
+  /* --chat-widget-engagement-hook-image-width (defined elsewhere) */
+  /* src/components/css/variables.css:189 */
+  /* --chat-widget-engagement-hook-image-height (defined elsewhere) */
+  /* src/components/css/variables.css:191 */
+  --engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);
+  /* src/components/css/variables.css:192 */
+  --engagement-hook-image-height: var(
+/* src/components/css/variables.css:193 */
+    --chat-widget-engagement-hook-image-height
+/* src/components/css/variables.css:194 */
+  );
+  /* ================================================
+     TRANSITION VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:200 */
+  --transition-fast: 0.2s ease;
+  /* src/components/css/variables.css:201 */
+  --transition-normal: all 0.3s ease;
+  /* src/components/css/variables.css:202 */
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* src/components/css/variables.css:203 */
+  --transition-slow-ease: 0.4s ease;
+  /* ================================================
+     BORDER RADIUS VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:209 */
+  --border-radius-small: 2.5px;
+  /* src/components/css/variables.css:210 */
+  --border-radius-medium: 3px;
+  /* src/components/css/variables.css:211 */
+  --border-radius-large: 12px;
+  /* src/components/css/variables.css:212 */
+  --border-radius-xl: 16px;
+  /* src/components/css/variables.css:213 */
+  --border-radius-2xl: 20px;
+  /* src/components/css/variables.css:214 */
+  --border-radius-full: 9999px;
+  /* ================================================
+     SPACING & GAP VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:220 */
+  --spacing-gap-xs: 0.5px;
+  /* src/components/css/variables.css:221 */
+  --spacing-gap-sm: 4px;
+  /* src/components/css/variables.css:222 */
+  --spacing-gap-md: 8px;
+  /* src/components/css/variables.css:223 */
+  --spacing-gap-lg: 12px;
+  /* src/components/css/variables.css:224 */
+  --spacing-gap-xl: 16px;
+  /* ================================================
+     Z-INDEX VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:230 */
+  --z-index-base: 1;
+  /* src/components/css/variables.css:231 */
+  --z-index-elevated: 10;
+  /* src/components/css/variables.css:232 */
+  --z-index-high: 20;
+  /* src/components/css/variables.css:233 */
+  --z-index-maximum: 9999;
+  /* ================================================
+     BORDER VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:239 */
+  --border-width-thin: 1px;
+  /* src/components/css/variables.css:240 */
+  --border-width-medium: 2px;
+  /* src/components/css/variables.css:241 */
+  --border-width-thick: 4px;
+  /* ================================================
+     BOX SHADOW VARIABLES (for consistency)
+     ================================================ */
+  /* src/components/css/variables.css:247 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* src/components/css/variables.css:248 */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:249 */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  /* src/components/css/variables.css:250 */
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  /* ================================================
+     SLEEK VIEW SPECIFIC VARIABLES
+     ================================================ */
+  /* src/components/css/variables.css:256 */
+  /* These are already defined in SleekView.css but should be here for consistency */
+  /* src/components/css/variables.css:257 */
+  --sleek-main-min-height: 0px;
+  /* src/components/css/variables.css:258 */
+  --sleek-border-radius: var(--border-radius-large);
+  /* src/components/css/variables.css:259 */
+  --sleek-main-bg: var(--color-sleek-main-bg);
+  /* src/components/css/variables.css:260 */
+  --sleek-main-border: var(--color-sleek-main-border);
+  /* src/components/css/variables.css:261 */
+  --sleek-main-text-color: var(--color-sleek-main-text);
+  /* src/components/css/variables.css:263 */
+  /* Sleek View Colors */
+  /* src/components/css/variables.css:264 */
+  --color-sleek-main-bg: color-mix(
+/* src/components/css/variables.css:265 */
+    in srgb,
+/* src/components/css/variables.css:266 */
+    var(--chat-widget-primary-color) 10%,
+/* src/components/css/variables.css:267 */
+    white
+/* src/components/css/variables.css:268 */
+  );
+  /* src/components/css/variables.css:269 */
+  --color-sleek-main-border: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:270 */
+  --color-sleek-main-text: var(--chat-widget-message-text-color);
+  /* src/components/css/variables.css:272 */
+  /* Gradient Colors (derived from primary/secondary) */
+  /* src/components/css/variables.css:273 */
+  --color-gradient-1: var(--chat-widget-primary-color);
+  /* src/components/css/variables.css:274 */
+  --color-gradient-2: var(--chat-widget-secondary-color);
+  /* src/components/css/variables.css:275 */
+  --color-gradient-3: color-mix(
+/* src/components/css/variables.css:276 */
+    in srgb,
+/* src/components/css/variables.css:277 */
+    var(--chat-widget-primary-color) 60%,
+/* src/components/css/variables.css:278 */
+    var(--chat-widget-secondary-color)
+/* src/components/css/variables.css:279 */
+  );
+  /* src/components/css/variables.css:280 */
+  --color-gradient-4: color-mix(
+/* src/components/css/variables.css:281 */
+    in srgb,
+/* src/components/css/variables.css:282 */
+    var(--chat-widget-primary-color) 40%,
+/* src/components/css/variables.css:283 */
+    var(--chat-widget-secondary-color)
+/* src/components/css/variables.css:284 */
+  );
+  /* src/components/css/variables.css:285 */
+  --color-accent: color-mix(
+/* src/components/css/variables.css:286 */
+    in srgb,
+/* src/components/css/variables.css:287 */
+    var(--chat-widget-primary-color) 70%,
+/* src/components/css/variables.css:288 */
+    var(--chat-widget-secondary-color)
+/* src/components/css/variables.css:289 */
+  );
+  /* src/components/css/variables.css:290 */
+  --color-glow: color-mix(
+/* src/components/css/variables.css:291 */
+    in srgb,
+/* src/components/css/variables.css:292 */
+    var(--chat-widget-primary-color) 30%,
+/* src/components/css/variables.css:293 */
+    transparent
+/* src/components/css/variables.css:294 */
+  );
+  /* src/components/css/variables.css:296 */
+  /* Legacy Gradient Variables (for backward compatibility) */
+  /* src/components/css/variables.css:297 */
+  --gradient-1: var(--color-gradient-1);
+  /* src/components/css/variables.css:298 */
+  --gradient-2: var(--color-gradient-2);
+  /* src/components/css/variables.css:299 */
+  --gradient-3: var(--color-gradient-3);
+  /* src/components/css/variables.css:300 */
+  --gradient-4: var(--color-gradient-4);
+  /* src/components/css/variables.css:301 */
+  --accent: var(--color-accent);
+  /* src/components/css/variables.css:302 */
+  --glow: var(--color-glow);
+  /* src/components/css/variables.css:304 */
+  /* Legacy Color Aliases (for backward compatibility) */
+  /* src/components/css/variables.css:305 */
+  --whatsapp-color: var(--color-whatsapp);
+  /* src/components/css/variables.css:306 */
+  --gray-200: var(--color-gray-200);
+  /* src/components/css/variables.css:307 */
+  --gray-300: var(--color-gray-300);
+  /* src/components/css/variables.css:308 */
+  --gray-400: var(--color-gray-400);
+  /* src/components/css/variables.css:309 */
+  --gray-500: var(--color-gray-500);
+  /* src/components/css/variables.css:310 */
+  --gray-600: var(--color-gray-600);
+  /* src/components/css/variables.css:311 */
+  --gray-700: var(--color-gray-700);
+  /* src/components/css/variables.css:312 */
+  --gray-800: var(--color-gray-800);
+  /* src/components/css/variables.css:313 */
+  --blue-500: var(--color-blue-500);
+  /* src/components/css/variables.css:314 */
+  --blue-600: var(--color-blue-600);
+  /* src/components/css/variables.css:315 */
+  --slate-700: var(--color-slate-700);
+  /* src/components/css/variables.css:316 */
+  --slate-800: var(--color-slate-800);
+  /* src/components/css/variables.css:318 */
+  /* Gray Scale Colors */
+  /* --color-gray-200: rgb(229, 231, 235);
+  --color-gray-300: rgb(209, 213, 219);
+  --color-gray-400: rgb(156, 163, 175);
+  --color-gray-500: rgb(107, 114, 128);
+  --color-gray-600: rgb(75, 85, 99);
+  --color-gray-700: rgb(51, 65, 85);
+  --color-gray-800: rgb(30, 41, 59); */
+  /* src/components/css/variables.css:327 */
+  /* Blue Colors */
+  /* --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb; */
+  /* src/components/css/variables.css:331 */
+  /* Slate Colors */
+  /* --color-slate-700: rgb(51, 65, 85);
+  --color-slate-800: rgb(30, 41, 59); */
+  /* src/components/css/variables.css:335 */
+  /* Red Colors (for errors, disconnect, etc.) */
+  /* --color-red-50: rgb(254, 242, 242);
+  --color-red-100: rgb(254, 226, 226);
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626; */
+  /* src/components/css/variables.css:341 */
+  /* Green Colors (for success, active states) */
+  /* --color-green-50: rgb(240, 253, 244);
+  --color-green-100: rgb(220, 252, 231);
+  --color-green-500: #10b981;
+  --color-green-600: #059669; */
+  /* src/components/css/variables.css:346 */
+}
+
+/* src/components/css/variables.css:348 */
+
+/* Fallback for browsers that don't support color-mix */
+
+/* src/components/css/variables.css:349 */
+
+@supports not (color: color-mix(in srgb, #000 50%, #fff)) {
+  /* src/components/css/variables.css:350 */
+
+  :root {
+    /* src/components/css/variables.css:351 */
+    /* Derived Theme Colors Fallback */
+    /* src/components/css/variables.css:352 */
+    /* Primary hover: darker version of default primary color #000aaa */
+    /* src/components/css/variables.css:353 */
+    --chat-widget-primary-color-hover: #000991;
+    /* src/components/css/variables.css:354 */
+    /* ~15% darker than #000aaa */
+    /* src/components/css/variables.css:356 */
+    /* Gradient Colors Fallback */
+    /* src/components/css/variables.css:357 */
+    --color-gradient-1: #000aaa;
+    /* src/components/css/variables.css:358 */
+    /* Default primary color */
+    /* src/components/css/variables.css:359 */
+    --color-gradient-2: #6c757d;
+    /* src/components/css/variables.css:360 */
+    /* Default secondary color */
+    /* src/components/css/variables.css:361 */
+    --color-gradient-3: #6c757d;
+    /* src/components/css/variables.css:362 */
+    --color-gradient-4: #6c757d;
+    /* src/components/css/variables.css:363 */
+    --color-accent: #6c757d;
+    /* src/components/css/variables.css:364 */
+    --color-glow: rgba(0, 10, 170, 0.3);
+    /* src/components/css/variables.css:366 */
+    /* Sleek View Colors Fallback */
+    /* src/components/css/variables.css:367 */
+    --color-sleek-main-bg: rgba(0, 10, 170, 0.1);
+    /* src/components/css/variables.css:368 */
+    --color-sleek-main-border: rgba(108, 117, 125, 0.8);
+    /* src/components/css/variables.css:370 */
+    /* Scrollbar Colors Fallback */
+    /* src/components/css/variables.css:371 */
+    --color-scrollbar-input-thumb: rgba(0, 10, 170, 0.6);
+    /* src/components/css/variables.css:372 */
+    --color-scrollbar-input-thumb-hover: rgba(0, 10, 170, 0.85);
+    /* src/components/css/variables.css:374 */
+    /* Legacy aliases */
+    /* src/components/css/variables.css:375 */
+    --gradient-1: var(--color-gradient-1);
+    /* src/components/css/variables.css:376 */
+    --gradient-2: var(--color-gradient-2);
+    /* src/components/css/variables.css:377 */
+    --gradient-3: var(--color-gradient-3);
+    /* src/components/css/variables.css:378 */
+    --gradient-4: var(--color-gradient-4);
+    /* src/components/css/variables.css:379 */
+    --accent: var(--color-accent);
+    /* src/components/css/variables.css:380 */
+    --glow: var(--color-glow);
+    /* src/components/css/variables.css:381 */
+    --sleek-main-bg: var(--color-sleek-main-bg);
+    /* src/components/css/variables.css:382 */
+    --sleek-main-border: var(--color-sleek-main-border);
+    /* src/components/css/variables.css:383 */
+    --input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);
+    /* src/components/css/variables.css:384 */
+    --input-scrollbar-thumb-hover-color: var(
+/* src/components/css/variables.css:385 */
+      --color-scrollbar-input-thumb-hover
+/* src/components/css/variables.css:386 */
+    );
+    /* src/components/css/variables.css:387 */
+  }
+
+  /* src/components/css/variables.css:388 */
+}
+
+/* src/components/css/web-component.css:2 */
+
+/* src/components/css/LaunchButton.css:1 */
+
+.chat-widget-open-button {
+  /* src/components/css/LaunchButton.css:2 */
+  pointer-events: auto;
+  /* src/components/css/LaunchButton.css:3 */
+}
+
+/* src/components/css/LaunchButton.css:5 */
+
+.chat-widget-open-icon {
+  /* src/components/css/LaunchButton.css:6 */
+  max-width: min(var(--chat-widget-logo-width), 100%);
+  /* src/components/css/LaunchButton.css:8 */
+  max-height: min(var(--chat-widget-logo-height), 100%);
+  /* src/components/css/LaunchButton.css:10 */
+  width: auto;
+  /* src/components/css/LaunchButton.css:11 */
+  height: auto;
+  /* src/components/css/LaunchButton.css:13 */
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* src/components/css/LaunchButton.css:14 */
+  display: block;
+  /* src/components/css/LaunchButton.css:15 */
+  margin: auto;
+  /* src/components/css/LaunchButton.css:16 */
+}
+
+/* src/components/css/LaunchButton.css:18 */
+
+:host([data-open='false']) .chat-widget-open-button {
+  /* src/components/css/LaunchButton.css:19 */
+  position: absolute;
+  /* src/components/css/LaunchButton.css:20 */
+  top: 0;
+  /* src/components/css/LaunchButton.css:21 */
+  left: 0;
+  /* src/components/css/LaunchButton.css:22 */
+  right: 0;
+  /* src/components/css/LaunchButton.css:23 */
+  bottom: 0;
+  /* src/components/css/LaunchButton.css:24 */
+  width: var(--chat-widget-button-width);
+  /* src/components/css/LaunchButton.css:25 */
+  height: var(--chat-widget-button-height);
+  /* src/components/css/LaunchButton.css:26 */
+  color: var(--chat-widget-button-content-color);
+  /* src/components/css/LaunchButton.css:27 */
+  display: flex;
+  /* src/components/css/LaunchButton.css:28 */
+  align-items: center;
+  /* src/components/css/LaunchButton.css:29 */
+  justify-content: center;
+  /* src/components/css/LaunchButton.css:30 */
+  background-color: color-mix(
+/* src/components/css/LaunchButton.css:31 */
+    in srgb,
+/* src/components/css/LaunchButton.css:32 */
+    var(--chat-widget-secondary-color) 10%,
+/* src/components/css/LaunchButton.css:33 */
+    #fff 90%
+/* src/components/css/LaunchButton.css:34 */
+  );
+  /* src/components/css/LaunchButton.css:35 */
+  color: var(--chat-widget-primary-color);
+  /* src/components/css/LaunchButton.css:36 */
+  border: 1.5px solid
+/* src/components/css/LaunchButton.css:37 */
+    color-mix(in srgb, var(--chat-widget-secondary-color) 75%, #fff 25%);
+  /* src/components/css/LaunchButton.css:38 */
+  cursor: pointer;
+  /* src/components/css/LaunchButton.css:39 */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  /* src/components/css/LaunchButton.css:40 */
+  transition: all 0.3s ease;
+  /* src/components/css/LaunchButton.css:41 */
+  transform: none;
+  /* src/components/css/LaunchButton.css:42 */
+}
+
+/* src/components/css/LaunchButton.css:44 */
+
+:host([data-open='true']) .chat-widget-open-button {
+  /* src/components/css/LaunchButton.css:45 */
+  position: relative;
+  /* src/components/css/LaunchButton.css:46 */
+}
+
+/* src/components/css/LaunchButton.css:48 */
+
+:host([data-open='false']) .chat-widget-open-button:hover {
+  /* src/components/css/LaunchButton.css:49 */
+  background-color: color-mix(
+/* src/components/css/LaunchButton.css:50 */
+    in srgb,
+/* src/components/css/LaunchButton.css:51 */
+    var(--chat-widget-secondary-color) 12%,
+/* src/components/css/LaunchButton.css:52 */
+    #fff 88%
+/* src/components/css/LaunchButton.css:53 */
+  );
+  /* src/components/css/LaunchButton.css:54 */
+  border-color: color-mix(
+/* src/components/css/LaunchButton.css:55 */
+    in srgb,
+/* src/components/css/LaunchButton.css:56 */
+    var(--chat-widget-secondary-color) 90%,
+/* src/components/css/LaunchButton.css:57 */
+    #fff 10%
+/* src/components/css/LaunchButton.css:58 */
+  );
+  /* src/components/css/LaunchButton.css:59 */
+  transform: translateY(-1px) scale(1.05);
+  /* src/components/css/LaunchButton.css:60 */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  /* src/components/css/LaunchButton.css:61 */
+}
+
+/* src/components/css/LaunchButton.css:63 */
+
+:host([data-open='false']) .chat-widget-open-button[data-shape='circular'] {
+  /* src/components/css/LaunchButton.css:64 */
+  border-radius: 50%;
+  /* src/components/css/LaunchButton.css:65 */
+}
+
+/* src/components/css/LaunchButton.css:67 */
+
+:host([data-open='false']) .chat-widget-open-button[data-shape='boxed'] {
+  /* src/components/css/LaunchButton.css:68 */
+  border-radius: 10%;
+  /* src/components/css/LaunchButton.css:69 */
+}
+
+/* src/components/css/LaunchButton.css:71 */
+
+:host([data-open='false']) .chat-widget-open-button[data-shape='modern'] {
+  /* src/components/css/LaunchButton.css:72 */
+  /* setting with of button */
+  /* src/components/css/LaunchButton.css:73 */
+  width: 220px;
+  /* src/components/css/LaunchButton.css:74 */
+  /* height: set in .chat-widget-open-button */
+  /* src/components/css/LaunchButton.css:75 */
+  padding: 0 16px 0 12px;
+  /* src/components/css/LaunchButton.css:76 */
+  gap: 10px;
+  /* src/components/css/LaunchButton.css:77 */
+  /* background-color: set in .chat-widget-open-button */
+  /* src/components/css/LaunchButton.css:78 */
+  /* border: set in .chat-widget-open-button */
+  /* src/components/css/LaunchButton.css:79 */
+  /* box-shadow: set in .chat-widget-open-button */
+  /* src/components/css/LaunchButton.css:80 */
+  /* color: set in .chat-widget-open-button */
+  /* src/components/css/LaunchButton.css:81 */
+  border-radius: 999px;
+  /* src/components/css/LaunchButton.css:82 */
+  flex-direction: row;
+  /* src/components/css/LaunchButton.css:83 */
+  justify-content: flex-start;
+  /* src/components/css/LaunchButton.css:84 */
+}
+
+/* src/components/css/LaunchButton.css:86 */
+
+.chat-widget-modern-avatar {
+  /* src/components/css/LaunchButton.css:87 */
+  width: 40px;
+  /* src/components/css/LaunchButton.css:88 */
+  height: 40px;
+  /* src/components/css/LaunchButton.css:89 */
+  border-radius: 50%;
+  /* src/components/css/LaunchButton.css:90 */
+  border: 1.5px solid
+/* src/components/css/LaunchButton.css:91 */
+    color-mix(in srgb, var(--chat-widget-secondary-color) 75%, #fff 25%);
+  /* src/components/css/LaunchButton.css:92 */
+  background-color: color-mix(
+/* src/components/css/LaunchButton.css:93 */
+    in srgb,
+/* src/components/css/LaunchButton.css:94 */
+    var(--chat-widget-primary-color) 5%,
+/* src/components/css/LaunchButton.css:95 */
+    #fff 95%
+/* src/components/css/LaunchButton.css:96 */
+  );
+  /* src/components/css/LaunchButton.css:97 */
+  display: flex;
+  /* src/components/css/LaunchButton.css:98 */
+  align-items: center;
+  /* src/components/css/LaunchButton.css:99 */
+  justify-content: center;
+  /* src/components/css/LaunchButton.css:100 */
+  padding: 2px;
+  /* src/components/css/LaunchButton.css:101 */
+  font-weight: 500;
+  /* src/components/css/LaunchButton.css:102 */
+  font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/LaunchButton.css:103 */
+  color: #fff;
+  /* src/components/css/LaunchButton.css:104 */
+  flex-shrink: 0;
+  /* src/components/css/LaunchButton.css:105 */
+  position: relative;
+  /* src/components/css/LaunchButton.css:106 */
+}
+
+/* src/components/css/LaunchButton.css:108 */
+
+.chat-widget-modern-avatar-image {
+  /* src/components/css/LaunchButton.css:109 */
+  width: 100%;
+  /* src/components/css/LaunchButton.css:110 */
+  height: 100%;
+  /* src/components/css/LaunchButton.css:111 */
+  border-radius: inherit;
+  /* src/components/css/LaunchButton.css:112 */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* src/components/css/LaunchButton.css:113 */
+  display: block;
+  /* src/components/css/LaunchButton.css:114 */
+}
+
+/* src/components/css/LaunchButton.css:116 */
+
+.chat-widget-modern-text {
+  /* src/components/css/LaunchButton.css:117 */
+  display: flex;
+  /* src/components/css/LaunchButton.css:118 */
+  flex-direction: column;
+  /* src/components/css/LaunchButton.css:119 */
+  align-items: flex-start;
+  /* src/components/css/LaunchButton.css:120 */
+  gap: 1px;
+  /* src/components/css/LaunchButton.css:121 */
+  text-align: left;
+  /* src/components/css/LaunchButton.css:122 */
+}
+
+/* src/components/css/LaunchButton.css:124 */
+
+.chat-widget-modern-title {
+  /* src/components/css/LaunchButton.css:125 */
+  font-weight: 550;
+  /* src/components/css/LaunchButton.css:126 */
+  font-size: var(--chat-widget-message-font-size);
+  /* src/components/css/LaunchButton.css:127 */
+  color: var(--chat-widget-primary-color);
+  /* src/components/css/LaunchButton.css:128 */
+  line-height: 1.2;
+  /* src/components/css/LaunchButton.css:129 */
+  white-space: nowrap;
+  /* src/components/css/LaunchButton.css:130 */
+}
+
+/* src/components/css/LaunchButton.css:132 */
+
+.chat-widget-modern-status {
+  /* src/components/css/LaunchButton.css:133 */
+  font-size: calc(var(--chat-widget-message-font-size) * 0.86);
+  /* src/components/css/LaunchButton.css:134 */
+  color: var(--chat-widget-primary-color);
+  /* src/components/css/LaunchButton.css:135 */
+  display: flex;
+  /* src/components/css/LaunchButton.css:136 */
+  align-items: center;
+  /* src/components/css/LaunchButton.css:137 */
+  gap: 4px;
+  /* src/components/css/LaunchButton.css:138 */
+  white-space: nowrap;
+  /* src/components/css/LaunchButton.css:139 */
+}
+
+/* src/components/css/LaunchButton.css:141 */
+
+.chat-widget-modern-status::before {
+  /* src/components/css/LaunchButton.css:142 */
+  content: '';
+  /* src/components/css/LaunchButton.css:143 */
+  display: inline-block;
+  /* src/components/css/LaunchButton.css:144 */
+  width: 10px;
+  /* src/components/css/LaunchButton.css:145 */
+  height: 10px;
+  /* src/components/css/LaunchButton.css:146 */
+  border-radius: 50%;
+  /* src/components/css/LaunchButton.css:147 */
+  background: var(--color-voice-speaking);
+  /* src/components/css/LaunchButton.css:148 */
+  flex-shrink: 0;
+  /* src/components/css/LaunchButton.css:149 */
+}
+
+/* src/components/css/web-component.css:4 */
+
+:host {
+  /* src/components/css/web-component.css:5 */
+  width: var(--chat-widget-width);
+  /* src/components/css/web-component.css:6 */
+  height: var(--chat-widget-height);
+  /* src/components/css/web-component.css:8 */
+  box-sizing: border-box;
+  /* src/components/css/web-component.css:9 */
+}
+
+/* src/components/css/web-component.css:11 */
+
+:host([data-open='false']) {
+  /* src/components/css/web-component.css:12 */
+  width: var(--chat-widget-button-width);
+  /* src/components/css/web-component.css:13 */
+  height: var(--chat-widget-button-height);
+  /* src/components/css/web-component.css:14 */
+  min-width: 0;
+  /* src/components/css/web-component.css:15 */
+  min-height: 0;
+  /* src/components/css/web-component.css:16 */
+  pointer-events: auto;
+  /* src/components/css/web-component.css:17 */
+  opacity: 1;
+  /* src/components/css/web-component.css:18 */
+}
+
+/* src/components/css/web-component.css:20 */
+
+/* This is to set widht of parent of root */
+
+/* src/components/css/web-component.css:21 */
+
+:host([data-open='false'][data-launcher-shape='modern']) {
+  /* src/components/css/web-component.css:22 */
+  width: 220px;
+  /* src/components/css/web-component.css:23 */
+}
+
+/* src/components/css/web-component.css:25 */
+
+:host([data-open='true']) {
+  /* src/components/css/web-component.css:26 */
+  width: var(--chat-widget-width);
+  /* src/components/css/web-component.css:27 */
+  height: var(--chat-widget-height);
+  /* src/components/css/web-component.css:28 */
+  pointer-events: auto;
+  /* src/components/css/web-component.css:29 */
+  opacity: 1;
+  /* src/components/css/web-component.css:30 */
+}
+
+/* src/components/css/web-component.css:32 */
+
+:host([data-open='true'][view-type='sleek_view']) {
+  /* src/components/css/web-component.css:33 */
+  height: auto;
+  /* src/components/css/web-component.css:34 */
+  min-height: var(--chat-widget-sleek-min-height);
+  /* src/components/css/web-component.css:35 */
+  max-height: var(--chat-widget-height);
+  /* src/components/css/web-component.css:36 */
+}
+
+/* src/components/css/web-component.css:38 */
+
+:host([widget-hidden='true']) {
+  /* src/components/css/web-component.css:39 */
+  display: none !important;
+  /* src/components/css/web-component.css:40 */
+}
+
+/* src/components/css/web-component.css:42 */
+
+/* Hide the sleek view completely when widget is closed to prevent invisible space */
+
+/* src/components/css/web-component.css:43 */
+
+:host([data-open='false']) .sleek-view {
+  /* src/components/css/web-component.css:44 */
+  display: none !important;
+  /* src/components/css/web-component.css:45 */
+  height: 0 !important;
+  /* src/components/css/web-component.css:46 */
+  width: 0;
+  /* src/components/css/web-component.css:47 */
+  overflow: hidden;
+  /* src/components/css/web-component.css:48 */
+  pointer-events: none;
+  /* src/components/css/web-component.css:49 */
+}
+
+/* src/components/css/web-component.css:51 */
+
+/* Hide the chat widget container when closed to prevent taking space */
+
+/* src/components/css/web-component.css:52 */
+
+:host([data-open='false']) .chat-widget-container,
+/* src/components/css/web-component.css:53 */
+:host([data-open='false']) .chat-widget-container-closed {
+  /* src/components/css/web-component.css:54 */
+  display: none !important;
+  /* src/components/css/web-component.css:55 */
+  height: 0 !important;
+  /* src/components/css/web-component.css:56 */
+  width: 0;
+  /* src/components/css/web-component.css:57 */
+  overflow: hidden;
+  /* src/components/css/web-component.css:58 */
+  pointer-events: none;
+  /* src/components/css/web-component.css:59 */
+}
+
+/* src/components/css/web-component.css:61 */
+
+.chat-widget-root {
+  /* src/components/css/web-component.css:62 */
+  position: relative;
+  /* src/components/css/web-component.css:63 */
+  width: 100%;
+  /* src/components/css/web-component.css:64 */
+  height: 100%;
+  /* src/components/css/web-component.css:65 */
+}
+
+/* src/components/css/web-component.css:67 */
+
+.chat-widget-root[data-open='true'] {
+  /* src/components/css/web-component.css:68 */
+  pointer-events: auto;
+  /* src/components/css/web-component.css:69 */
+}
+
+/* End of file: components/css/web-component.css */
+
 /* Start of file: components/custom_uxs/avatar/HumanAvatar.css */
 
 /* src/components/custom_uxs/avatar/HumanAvatar.css:1 */
@@ -147884,9 +149335,9 @@ video {
 
 /* End of file: voice_ai_bot_widget/style.css */
 `;
+const shadowStyles = ':root{--chat-widget-primary-color-hover: color-mix( in srgb, var(--chat-widget-primary-color) 85%, black );--color-voice-listening: #3b82f6;--color-voice-speaking: #10b981;--color-voice-thinking: #f59e0b;--color-voice-disconnected: #ef4444cb;--color-voice-connecting: #64748b;--color-whatsapp: #1eb655;--opacity-disabled: .7;--opacity-hover: .8;--opacity-normal: 1;--color-input-background: var(--chat-widget-secondary-color);--color-input-text: var(--chat-widget-message-text-color);--color-input-placeholder-text: color-mix( in srgb, var(--color-input-text) 70%, white );--color-input-placeholder-opacity: 70%;--color-input-placeholder-opacity-focus: 80%;--input-default-height: 40px;--input-min-height: 40px;--input-max-height: 120px;--input-max-height-tablet: 100px;--input-max-height-mobile: 80px;--input-line-height: 20px;--input-text-padding-horizontal: 4px;--input-text-padding-vertical: 0px;--input-text-padding: 0 var(--input-text-padding-horizontal);--input-container-padding: 6px 8px;--input-container-padding-sleek: 4px 4px;--input-font-size: var(--chat-widget-message-font-size);--input-font-weight: 400;--input-font-weight-focus: 500;--input-font-weight-bold: 600;--color-scrollbar-input-thumb: color-mix( in srgb, var(--chat-widget-primary-color) 75%, transparent );--color-scrollbar-input-thumb-hover: color-mix( in srgb, var(--chat-widget-primary-color) 90%, transparent );--color-scrollbar-input-thumb-avatar-view: color-mix( in srgb, var(--chat-widget-secondary-color) 75%, transparent );--color-scrollbar-input-thumb-hover-avatar-view: color-mix( in srgb, var(--chat-widget-secondary-color) 90%, transparent );--color-scrollbar-input-track: transparent;--input-scrollbar-width: thin;--input-scrollbar-border-radius: 2.5px;--input-scrollbar-thumb-hover-opacity: var(--opacity-hover);--button-size-primary: 32px;--button-padding-primary: 4px;--button-size-secondary: 24px;--color-button-background-primary: var(--chat-widget-primary-color);--color-button-background-hover: var(--chat-widget-primary-color-hover);--color-button-text: var(--chat-widget-button-content-color);--color-button-fill: var(--chat-widget-button-content-color);--color-button-disconnect: #ef4444;--button-opacity-normal: var(--opacity-normal);--button-opacity-hover: var(--opacity-hover);--button-opacity-disabled: var(--opacity-disabled);--button-icon-size-secondary: 16px;--button-icon-size-primary: 20px;--message-scrollbar-width: thin;--message-scrollbar-width-px: 6px;--message-scrollbar-border-radius: 3px;--color-scrollbar-message-thumb-default: rgb(209 213 219);--color-scrollbar-message-thumb-hover: rgb(156 163 175);--color-scrollbar-message-thumb-theme: var( --chat-widget-button-content-color, var(--chat-widget-secondary-color) );--color-scrollbar-message-thumb-hover-mix: color-mix( in srgb, var(--chat-widget-button-content-color, var(--chat-widget-secondary-color)) 80%, var(--chat-widget-primary-color) );--color-scrollbar-message-track: transparent;--message-text-color: var(--chat-widget-message-text-color);--message-font-size: var(--chat-widget-message-font-size);--message-bubble-background-color: var(--chat-widget-secondary-color);--message-bubble-icon-color: var(--chat-widget-secondary-color);--engagement-hook-image-width: var(--chat-widget-engagement-hook-image-width);--engagement-hook-image-height: var( --chat-widget-engagement-hook-image-height );--transition-fast: .2s ease;--transition-normal: all .3s ease;--transition-slow: .4s cubic-bezier(.4, 0, .2, 1);--transition-slow-ease: .4s ease;--border-radius-small: 2.5px;--border-radius-medium: 3px;--border-radius-large: 12px;--border-radius-xl: 16px;--border-radius-2xl: 20px;--border-radius-full: 9999px;--spacing-gap-xs: .5px;--spacing-gap-sm: 4px;--spacing-gap-md: 8px;--spacing-gap-lg: 12px;--spacing-gap-xl: 16px;--z-index-base: 1;--z-index-elevated: 10;--z-index-high: 20;--z-index-maximum: 9999;--border-width-thin: 1px;--border-width-medium: 2px;--border-width-thick: 4px;--shadow-sm: 0 1px 2px rgba(0, 0, 0, .05);--shadow-md: 0 4px 6px rgba(0, 0, 0, .1);--shadow-lg: 0 10px 15px rgba(0, 0, 0, .1);--shadow-xl: 0 20px 25px rgba(0, 0, 0, .1);--sleek-main-min-height: 0px;--sleek-border-radius: var(--border-radius-large);--sleek-main-bg: var(--color-sleek-main-bg);--sleek-main-border: var(--color-sleek-main-border);--sleek-main-text-color: var(--color-sleek-main-text);--color-sleek-main-bg: color-mix( in srgb, var(--chat-widget-primary-color) 10%, white );--color-sleek-main-border: var(--chat-widget-secondary-color);--color-sleek-main-text: var(--chat-widget-message-text-color);--color-gradient-1: var(--chat-widget-primary-color);--color-gradient-2: var(--chat-widget-secondary-color);--color-gradient-3: color-mix( in srgb, var(--chat-widget-primary-color) 60%, var(--chat-widget-secondary-color) );--color-gradient-4: color-mix( in srgb, var(--chat-widget-primary-color) 40%, var(--chat-widget-secondary-color) );--color-accent: color-mix( in srgb, var(--chat-widget-primary-color) 70%, var(--chat-widget-secondary-color) );--color-glow: color-mix( in srgb, var(--chat-widget-primary-color) 30%, transparent );--gradient-1: var(--color-gradient-1);--gradient-2: var(--color-gradient-2);--gradient-3: var(--color-gradient-3);--gradient-4: var(--color-gradient-4);--accent: var(--color-accent);--glow: var(--color-glow);--whatsapp-color: var(--color-whatsapp);--gray-200: var(--color-gray-200);--gray-300: var(--color-gray-300);--gray-400: var(--color-gray-400);--gray-500: var(--color-gray-500);--gray-600: var(--color-gray-600);--gray-700: var(--color-gray-700);--gray-800: var(--color-gray-800);--blue-500: var(--color-blue-500);--blue-600: var(--color-blue-600);--slate-700: var(--color-slate-700);--slate-800: var(--color-slate-800)}@supports not (color: color-mix(in srgb,#000 50%,#fff)){:root{--chat-widget-primary-color-hover: #000991;--color-gradient-1: #000aaa;--color-gradient-2: #6c757d;--color-gradient-3: #6c757d;--color-gradient-4: #6c757d;--color-accent: #6c757d;--color-glow: rgba(0, 10, 170, .3);--color-sleek-main-bg: rgba(0, 10, 170, .1);--color-sleek-main-border: rgba(108, 117, 125, .8);--color-scrollbar-input-thumb: rgba(0, 10, 170, .6);--color-scrollbar-input-thumb-hover: rgba(0, 10, 170, .85);--gradient-1: var(--color-gradient-1);--gradient-2: var(--color-gradient-2);--gradient-3: var(--color-gradient-3);--gradient-4: var(--color-gradient-4);--accent: var(--color-accent);--glow: var(--color-glow);--sleek-main-bg: var(--color-sleek-main-bg);--sleek-main-border: var(--color-sleek-main-border);--input-scrollbar-thumb-color: var(--color-scrollbar-input-thumb);--input-scrollbar-thumb-hover-color: var( --color-scrollbar-input-thumb-hover )}}.chat-widget-open-button{pointer-events:auto}.chat-widget-open-icon{max-width:min(var(--chat-widget-logo-width),100%);max-height:min(var(--chat-widget-logo-height),100%);width:auto;height:auto;-o-object-fit:contain;object-fit:contain;display:block;margin:auto}:host([data-open="false"]) .chat-widget-open-button{position:absolute;top:0;left:0;right:0;bottom:0;width:var(--chat-widget-button-width);height:var(--chat-widget-button-height);color:var(--chat-widget-button-content-color);display:flex;align-items:center;justify-content:center;background-color:color-mix(in srgb,var(--chat-widget-secondary-color) 10%,#fff 90%);color:var(--chat-widget-primary-color);border:1.5px solid color-mix(in srgb,var(--chat-widget-secondary-color) 75%,#fff 25%);cursor:pointer;box-shadow:0 2px 12px #0000001a;transition:all .3s ease;transform:none}:host([data-open="true"]) .chat-widget-open-button{position:relative}:host([data-open="false"]) .chat-widget-open-button:hover{background-color:color-mix(in srgb,var(--chat-widget-secondary-color) 12%,#fff 88%);border-color:color-mix(in srgb,var(--chat-widget-secondary-color) 90%,#fff 10%);transform:translateY(-1px) scale(1.05);box-shadow:0 4px 14px #0000001f}:host([data-open="false"]) .chat-widget-open-button[data-shape=circular]{border-radius:50%}:host([data-open="false"]) .chat-widget-open-button[data-shape=boxed]{border-radius:10%}:host([data-open="false"]) .chat-widget-open-button[data-shape=modern]{width:220px;padding:0 16px 0 12px;gap:10px;border-radius:999px;flex-direction:row;justify-content:flex-start}.chat-widget-modern-avatar{width:40px;height:40px;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--chat-widget-secondary-color) 75%,#fff 25%);background-color:color-mix(in srgb,var(--chat-widget-primary-color) 5%,#fff 95%);display:flex;align-items:center;justify-content:center;padding:2px;font-weight:500;font-size:var(--chat-widget-message-font-size);color:#fff;flex-shrink:0;position:relative}.chat-widget-modern-avatar-image{width:100%;height:100%;border-radius:inherit;-o-object-fit:cover;object-fit:cover;display:block}.chat-widget-modern-text{display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left}.chat-widget-modern-title{font-weight:550;font-size:var(--chat-widget-message-font-size);color:var(--chat-widget-primary-color);line-height:1.2;white-space:nowrap}.chat-widget-modern-status{font-size:calc(var(--chat-widget-message-font-size) * .86);color:var(--chat-widget-primary-color);display:flex;align-items:center;gap:4px;white-space:nowrap}.chat-widget-modern-status:before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--color-voice-speaking);flex-shrink:0}:host{width:var(--chat-widget-width);height:var(--chat-widget-height);box-sizing:border-box}:host([data-open="false"]){width:var(--chat-widget-button-width);height:var(--chat-widget-button-height);min-width:0;min-height:0;pointer-events:auto;opacity:1}:host([data-open="false"][data-launcher-shape="modern"]){width:220px}:host([data-open="true"]){width:var(--chat-widget-width);height:var(--chat-widget-height);pointer-events:auto;opacity:1}:host([data-open="true"][view-type="sleek_view"]){height:auto;min-height:var(--chat-widget-sleek-min-height);max-height:var(--chat-widget-height)}:host([widget-hidden="true"]){display:none!important}:host([data-open="false"]) .sleek-view{display:none!important;height:0!important;width:0;overflow:hidden;pointer-events:none}:host([data-open="false"]) .chat-widget-container,:host([data-open="false"]) .chat-widget-container-closed{display:none!important;height:0!important;width:0;overflow:hidden;pointer-events:none}.chat-widget-root{position:relative;width:100%;height:100%}.chat-widget-root[data-open=true]{pointer-events:auto}';
 const WIDGET_ROOT_ID = "chat-widget-root";
 const Z_INDEX = "2147483647";
-const GLOBAL_WIDGET_KEY = "__spotinfo_chat_widget__";
 const WEB_COMPONENT_PROPS = {
   props: {
     primaryColor: "string",
@@ -147993,50 +149444,21 @@ const OBSERVED_ATTRIBUTES = [
   "widget-hidden",
   "data-open"
 ];
-const getConstrainedSize = (value, max) => {
-  const valueNum = parseFloat(value);
-  const maxNum = parseFloat(max);
-  return valueNum > maxNum ? max : value;
-};
-const getConstrainedLogoDimensions = ({
-  rootLogoHeight,
-  rootLogoWidth,
-  rootButtonHeight,
-  rootButtonWidth
-}) => ({
-  height: getConstrainedSize(rootLogoHeight, rootButtonHeight),
-  width: getConstrainedSize(rootLogoWidth, rootButtonWidth)
-});
-const resolveLogoUrl = (path) => {
-  if (!path) return spotinfoLogo;
-  if (path.startsWith("http") || path.startsWith("data:")) return path;
-  return path.startsWith("/") ? path : `/${path}`;
-};
-const getClosedButtonSize = (shape, width, height) => {
-  return {
-    width: shape === "modern" ? "220px" : width,
-    height
-  };
-};
-const getRootBorderRadius = (shape) => {
-  return shape === "circular" ? "50%" : shape === "modern" ? "999px" : "10%";
-};
 const ChatWidgetWrapper = (props = {}) => {
   const [isOpen, setIsOpen] = reactExports.useState(() => {
-    if (typeof window === "undefined") return false;
-    const host = window[GLOBAL_WIDGET_KEY] || null;
+    if (typeof document === "undefined") {
+      return false;
+    }
+    const host = document.querySelector("spotinfo-chat");
     const attr = host == null ? void 0 : host.getAttribute("data-open");
     return attr === "true";
   });
   const getHostElement = () => {
-    return typeof window !== "undefined" ? window[GLOBAL_WIDGET_KEY] || null : null;
+    if (typeof document === "undefined") {
+      return null;
+    }
+    return document.querySelector("spotinfo-chat");
   };
-  reactExports.useEffect(() => {
-    console.log("[ChatWidgetWrapper] MOUNTED");
-    return () => {
-      console.log("[ChatWidgetWrapper] UNMOUNTED");
-    };
-  }, []);
   reactExports.useEffect(() => {
     const hostElement = getHostElement();
     if (!hostElement) return;
@@ -148046,27 +149468,6 @@ const ChatWidgetWrapper = (props = {}) => {
       hostElement.setAttribute("data-open", next);
     }
   }, [isOpen]);
-  reactExports.useEffect(() => {
-    const handleDataOpenChange = (event) => {
-      const { isOpen: newIsOpen } = event.detail;
-      setIsOpen((prev) => prev !== newIsOpen ? newIsOpen : prev);
-    };
-    const hostElement = getHostElement();
-    if (hostElement) {
-      hostElement.addEventListener(
-        "dataOpenChange",
-        handleDataOpenChange
-      );
-    }
-    return () => {
-      if (hostElement) {
-        hostElement.removeEventListener(
-          "dataOpenChange",
-          handleDataOpenChange
-        );
-      }
-    };
-  }, []);
   const handleWidgetToggle = reactExports.useCallback((newIsOpen) => {
     setIsOpen(newIsOpen);
   }, []);
@@ -148107,28 +149508,16 @@ const ChatWidgetWrapper = (props = {}) => {
           isWidgetOpen: isOpen,
           onWidgetToggle: handleWidgetToggle,
           children: [
-            !isOpen && /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "button",
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              WidgetLaunchButton,
               {
-                className: "chat-widget-open-button",
-                "data-shape": rootButtonShape,
-                "aria-label": "Open chat",
-                tabIndex: 0,
-                onClick: handleOpen,
-                onKeyDown: (e2) => {
-                  if (e2.key === "Enter" || e2.key === " ") {
-                    handleOpen();
-                  }
-                },
-                children: rootButtonShape === "modern" ? /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  ModernOpenButtonContent,
-                  {
-                    botName: props.botName,
-                    rootTitle: props.rootTitle,
-                    rootSubtitle: props.rootSubtitle,
-                    logo: props.rootButtonLogo
-                  }
-                ) : /* @__PURE__ */ jsxRuntimeExports.jsx(ChatIcon, { logo: props.rootButtonLogo })
+                isOpen,
+                rootButtonShape,
+                onOpen: handleOpen,
+                botName: props.botName,
+                rootTitle: props.rootTitle,
+                rootSubtitle: props.rootSubtitle,
+                logo: props.rootButtonLogo
               }
             ),
             /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -148145,70 +149534,6 @@ const ChatWidgetWrapper = (props = {}) => {
     }
   ) });
 };
-const ChatIcon = ({ logo }) => {
-  const logoUrl = resolveLogoUrl(logo);
-  const [imgError, setImgError] = reactExports.useState(false);
-  const displayLogoUrl = imgError && logo && logo !== spotinfoLogo ? spotinfoLogo : logoUrl;
-  if (displayLogoUrl) {
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      "img",
-      {
-        className: "chat-widget-open-icon",
-        src: displayLogoUrl,
-        alt: "Chat",
-        onError: () => setImgError(true)
-      }
-    );
-  }
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "svg",
-    {
-      className: "chat-widget-open-icon",
-      fill: "currentColor",
-      viewBox: "0 0 24 24",
-      "aria-hidden": "true",
-      children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "path",
-        {
-          fillRule: "evenodd",
-          d: "M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z",
-          clipRule: "evenodd"
-        }
-      )
-    }
-  );
-};
-const ModernOpenButtonContent = ({
-  botName,
-  rootTitle,
-  rootSubtitle,
-  logo
-}) => {
-  const displayName = (botName == null ? void 0 : botName.trim()) || "Aanya";
-  const displayTitle = (rootTitle == null ? void 0 : rootTitle.trim()) || `Talk to ${displayName}`;
-  const displaySubtitle = (rootSubtitle == null ? void 0 : rootSubtitle.trim()) || "Online · replies in 10s";
-  const nameInitials = displayName.split(" ").filter(Boolean).slice(0, 2).map((part) => {
-    var _a;
-    return ((_a = part[0]) == null ? void 0 : _a.toUpperCase()) || "";
-  }).join("");
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "chat-widget-modern-avatar", "aria-hidden": "true", children: [
-      logo ? /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "img",
-        {
-          className: "chat-widget-modern-avatar-image",
-          src: resolveLogoUrl(logo),
-          alt: ""
-        }
-      ) : nameInitials || "AI",
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chat-widget-online-dot" })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "chat-widget-modern-text", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chat-widget-modern-title", children: displayTitle }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chat-widget-modern-status", children: displaySubtitle })
-    ] })
-  ] });
-};
 const ChatWidgetAdapter = (props = {}) => /* @__PURE__ */ jsxRuntimeExports.jsx(ChatWidgetWrapper, { ...props });
 const ChatWidgetWebComponent = s$1(ChatWidgetAdapter, WEB_COMPONENT_PROPS);
 const generateShadowStyles = (primaryColor, primaryColorHover, messageFontSize, secondaryColor, messageTextColor) => {
@@ -148219,212 +149544,51 @@ const generateShadowStyles = (primaryColor, primaryColorHover, messageFontSize, 
     --chat-widget-secondary-color: ${secondaryColor};
     --chat-widget-message-text-color: ${messageTextColor};
     --chat-widget-message-font-size: ${messageFontSize};
-
-    width: var(--chat-widget-width);
-    height: var(--chat-widget-height);
-
-    box-sizing: border-box;
-  }
-
-  :host([data-open="false"]) {
-    width: var(--chat-widget-button-width);
-    height: var(--chat-widget-button-height);
-    min-width: 0;
-    min-height: 0;
-    pointer-events: auto;
-    opacity: 1;
-  }
-
-  :host([data-open="true"]) {
-    width: var(--chat-widget-width);
-    height: var(--chat-widget-height);
-    pointer-events: auto;
-    opacity: 1;
-  }
-
-  :host([data-open="true"][view-type="sleek_view"]) {
-    height: auto;
-    min-height: var(--chat-widget-sleek-min-height);
-    max-height: var(--chat-widget-height);
-  }
-
-  :host([widget-hidden="true"]) {
-    display: none !important;
-  }
-
-  /* Hide the sleek view completely when widget is closed to prevent invisible space */
-  :host([data-open="false"]) .sleek-view {
-    display: none !important;
-    height: 0 !important;
-    width: 0;
-    overflow: hidden;
-    pointer-events: none;
-  }
-
-  /* Hide the chat widget container when closed to prevent taking space */
-  :host([data-open="false"]) .chat-widget-container,
-  :host([data-open="false"]) .chat-widget-container-closed {
-    display: none !important;
-    height: 0 !important;
-    width: 0;
-    overflow: hidden;
-    pointer-events: none;
-  }
-
-  .chat-widget-root {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  .chat-widget-root[data-open="true"] {
-    pointer-events: auto;
   }
 
   .chat-widget-open-button {
-    pointer-events: auto;
     z-index: ${Z_INDEX};
   }
-
-  :host([data-open="false"]) .chat-widget-open-button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: var(--chat-widget-button-width);
-    height: var(--chat-widget-button-height);
-    color: var(--chat-widget-button-content-color);
-    border-radius: var(--root-border-radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--chat-widget-primary-color);
-    color: white;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-  }
-
-  :host([data-open="false"]) .chat-widget-open-button[data-shape="modern"] {
-    width: auto;
-    height: var(--chat-widget-modern-button-height);
-    padding: 0 16px 0 12px;
-    gap: 10px;
-    background-color: color-mix(in srgb, var(--chat-widget-secondary-color) 10%, #fff 90%);
-    border: 1.5px solid color-mix(in srgb, var(--chat-widget-secondary-color) 75%, #fff 25%);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-    color: var(--chat-widget-primary-color);
-    flex-direction: row;
-    justify-content: flex-start;
-    min-width: 200px;
-    transform: none;
-  }
-
-  .chat-widget-modern-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1.5px solid color-mix(in srgb, var(--chat-widget-secondary-color) 75%, #fff 25%);
-    background-color: color-mix(in srgb, var(--chat-widget-primary-color) 5%, #fff 95%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px;
-    font-weight: 500;
-    font-size: 15px;
-    color: #fff;
-    flex-shrink: 0;
-    position: relative;
-  }
-
-  .chat-widget-modern-avatar-image {
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    object-fit: cover;
-    display: block;
-  }
-
-  .chat-widget-modern-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1px;
-    text-align: left;
-  }
-
-  .chat-widget-modern-title {
-    font-weight: 550;
-    font-size: var(--chat-widget-message-font-size);
-    color: var(--chat-widget-primary-color);
-    line-height: 1.2;
-    white-space: nowrap;
-  }
-
-  .chat-widget-modern-status {
-    font-size: calc(var(--chat-widget-message-font-size) * 0.86);
-    color: var(--chat-widget-primary-color);
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    white-space: nowrap;
-  }
-
-  .chat-widget-modern-status::before {
-    content: '';
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--color-voice-speaking);
-    flex-shrink: 0;
-  }
-
-  :host([data-open="false"]) .chat-widget-open-button[data-shape="modern"]:hover {
-    background-color: color-mix(in srgb, var(--chat-widget-secondary-color) 12%, #fff 88%);
-    border-color: color-mix(in srgb, var(--chat-widget-secondary-color) 90%, #fff 10%);
-    transform: translateY(-1px) scale(1.01);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-  }
-
-  :host([data-open="true"]) .chat-widget-open-button {
-    position: relative;
-  }
-
-  :host([data-open="false"]) .chat-widget-open-button:hover {
-    background-color: var(--chat-widget-primary-color-hover);
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  }
-
-  .chat-widget-open-icon {
-    max-width: var(--chat-widget-logo-width);
-    max-height: var(--chat-widget-logo-height);
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: auto;
-  }
-
+  ${shadowStyles}
   ${styles}
 `;
 };
-class StyledChatWidget extends ChatWidgetWebComponent {
+const _StyledChatWidget = class _StyledChatWidget extends ChatWidgetWebComponent {
   constructor() {
     super(...arguments);
     __publicField(this, "_instanceIdGenerated", false);
     __publicField(this, "_generatedClientId", null);
     __publicField(this, "_userIdGenerated", false);
     __publicField(this, "_generatedUserId", null);
+    __publicField(this, "_resizeRaf", null);
     __publicField(this, "_handleViewportResize", () => {
-      this.initializePosition();
+      if (this._resizeRaf) return;
+      this._resizeRaf = requestAnimationFrame(() => {
+        this.initializePosition();
+        this._resizeRaf = null;
+      });
     });
     __publicField(this, "attributeHandlers", {
-      "data-open": (value) => {
-        this.handleDataOpenChange(value);
+      "root-button-width": (value) => {
+        if (value) {
+          this.setCssVar("--chat-widget-button-width", value);
+        }
+      },
+      "root-button-height": (value) => {
+        if (value) {
+          this.setCssVar("--chat-widget-button-height", value);
+          this.setCssVar("--chat-widget-modern-button-height", value);
+        }
+      },
+      "root-logo-width": (value) => {
+        if (value) {
+          this.setCssVar("--chat-widget-logo-width", value);
+        }
+      },
+      "root-logo-height": (value) => {
+        if (value) {
+          this.setCssVar("--chat-widget-logo-height", value);
+        }
       },
       width: (value) => {
         if (value) {
@@ -148455,10 +149619,6 @@ class StyledChatWidget extends ChatWidgetWebComponent {
         if (value) {
           this.setCssVar("--chat-widget-message-text-color", value);
         }
-      },
-      "root-button-shape": (value) => {
-        const rootBorderRadius = getRootBorderRadius(value);
-        this.setCssVar("--root-border-radius", rootBorderRadius);
       },
       position: () => {
         this.initializePosition();
@@ -148492,13 +149652,13 @@ class StyledChatWidget extends ChatWidgetWebComponent {
     }
   }
   ensureSingleInstance() {
-    const existingInstance = window[GLOBAL_WIDGET_KEY];
+    const existingInstance = _StyledChatWidget.activeInstance;
     if (existingInstance && existingInstance !== this) {
       console.warn("[ChatWidget] Duplicate widget detected");
       this.remove();
       return false;
     }
-    window[GLOBAL_WIDGET_KEY] = this;
+    _StyledChatWidget.activeInstance = this;
     return true;
   }
   initializeIds() {
@@ -148540,10 +149700,6 @@ class StyledChatWidget extends ChatWidgetWebComponent {
       "root-button-width",
       defaultWidgetConfig.rootButtonWidth
     );
-    const rootButtonShape = this.getAttr(
-      "root-button-shape",
-      defaultWidgetConfig.rootButtonShape
-    );
     const rootLogoHeight = this.getAttr(
       "root-logo-height",
       defaultWidgetConfig.rootLogoHeight
@@ -148573,13 +149729,12 @@ class StyledChatWidget extends ChatWidgetWebComponent {
       defaultWidgetConfig.buttonContentColor
     );
     const primaryColorHover = getHoverColor(primaryColor);
-    const { width: closedButtonWidth, height: closedButtonHeight } = getClosedButtonSize(rootButtonShape, rootButtonWidth, rootButtonHeight);
-    const rootBorderRadius = getRootBorderRadius(rootButtonShape);
-    const { height: finalLogoHeight, width: finalLogoWidth } = getConstrainedLogoDimensions({
-      rootLogoHeight: rootLogoHeight || rootButtonHeight,
-      rootLogoWidth: rootLogoWidth || rootButtonWidth,
+    initializeLaunchButtonCssVars({
+      element: this,
       rootButtonHeight,
-      rootButtonWidth
+      rootButtonWidth,
+      rootLogoHeight: rootLogoHeight || rootButtonHeight,
+      rootLogoWidth: rootLogoWidth || rootButtonWidth
     });
     this.setCssVar("--chat-widget-width", width);
     this.setCssVar("--chat-widget-height", height);
@@ -148589,16 +149744,14 @@ class StyledChatWidget extends ChatWidgetWebComponent {
     this.setCssVar("--chat-widget-message-font-size", messageFontSize);
     this.setCssVar("--chat-widget-message-text-color", messageTextColor);
     this.setCssVar("--chat-widget-button-content-color", buttonContentColor);
-    this.setCssVar("--chat-widget-button-width", closedButtonWidth);
-    this.setCssVar("--chat-widget-button-height", closedButtonHeight);
-    this.setCssVar("--chat-widget-modern-button-height", rootButtonHeight);
-    this.setCssVar("--chat-widget-logo-width", finalLogoWidth);
-    this.setCssVar("--chat-widget-logo-height", finalLogoHeight);
-    this.setCssVar("--root-border-radius", rootBorderRadius);
     this.setCssVar("--chat-widget-sleek-min-height", "60px");
   }
   initializeShadowStyles() {
     if (!this.shadowRoot) return;
+    const existingStyle = this.shadowRoot.querySelector("[data-widget-styles]");
+    if (existingStyle) {
+      return;
+    }
     const primaryColor = this.getAttr(
       "primary-color",
       defaultWidgetConfig.primaryColor
@@ -148623,6 +149776,7 @@ class StyledChatWidget extends ChatWidgetWebComponent {
       secondaryColor,
       messageTextColor
     );
+    shadowStyleTag.setAttribute("data-widget-styles", "true");
     this.shadowRoot.appendChild(shadowStyleTag);
   }
   initializePosition() {
@@ -148630,7 +149784,7 @@ class StyledChatWidget extends ChatWidgetWebComponent {
       "position",
       defaultWidgetConfig.position
     );
-    const isMobileViewport = typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches;
+    const isMobileViewport = typeof window !== "undefined" && window.matchMedia("(max-width: 1024px)").matches;
     const xOffset = this.getAttr(
       isMobileViewport ? "mobile-x-offset" : "desktop-x-offset",
       isMobileViewport ? defaultWidgetConfig.mobileXOffset : defaultWidgetConfig.desktopXOffset
@@ -148680,11 +149834,16 @@ class StyledChatWidget extends ChatWidgetWebComponent {
     if (!this.hasAttribute("view-type")) {
       this.setAttribute("view-type", viewType);
     }
+    const rootButtonShape = this.getAttr(
+      "root-button-shape",
+      defaultWidgetConfig.rootButtonShape
+    );
+    this.setAttribute("data-launcher-shape", rootButtonShape);
   }
   disconnectedCallback() {
     var _a;
-    if (window[GLOBAL_WIDGET_KEY] === this) {
-      delete window[GLOBAL_WIDGET_KEY];
+    if (_StyledChatWidget.activeInstance === this) {
+      _StyledChatWidget.activeInstance = null;
     }
     const stack = new Error().stack;
     console.log(
@@ -148700,20 +149859,12 @@ class StyledChatWidget extends ChatWidgetWebComponent {
     (_b = (_a = this.attributeHandlers)[name2]) == null ? void 0 : _b.call(_a, newValue);
     (_c = super.attributeChangedCallback) == null ? void 0 : _c.call(this, name2, oldValue, newValue);
   }
-  handleDataOpenChange(newValue) {
-    const isOpen = newValue === "true";
-    this.dispatchEvent(
-      new CustomEvent("dataOpenChange", {
-        detail: { isOpen },
-        bubbles: true,
-        composed: true
-      })
-    );
-  }
   static get observedAttributes() {
     return OBSERVED_ATTRIBUTES;
   }
-}
+};
+__publicField(_StyledChatWidget, "activeInstance", null);
+let StyledChatWidget = _StyledChatWidget;
 customElements.define("spotinfo-chat", StyledChatWidget);
 const _PushHookService = class _PushHookService {
   // Track actual connection state
