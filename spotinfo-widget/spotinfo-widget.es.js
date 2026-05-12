@@ -31744,6 +31744,7 @@ const ROOT_LOGO_WIDTH = "";
 const BOT_NAME = "Aanya";
 const ROOT_TITLE = `Talk to ${BOT_NAME}`;
 const ROOT_SUBTITLE = "Online · replies in 10s";
+const FOOTER_TEXT = "Powered by SpotInfo";
 const VIEW_TYPE = "modern_view";
 const HEIGHT = "600px";
 const WIDTH = "400px";
@@ -31892,6 +31893,7 @@ const defaultWidgetConfig = {
   botName: BOT_NAME,
   rootTitle: ROOT_TITLE,
   rootSubtitle: ROOT_SUBTITLE,
+  footerText: FOOTER_TEXT,
   headerLogo: HEADER_LOGO,
   aiAvatar: AI_AVATAR,
   userAvatar: USER_AVATAR,
@@ -113405,8 +113407,10 @@ const ModernView = ({
     userAvatar,
     showAvatars = true,
     showTimestamp = false,
-    isWidgetOpen
+    isWidgetOpen,
+    footerText
   } = useChatContext();
+  const displayFooterText = (footerText == null ? void 0 : footerText.trim()) || "Powered by SpotInfo";
   const [inputText, setInputText] = reactExports.useState("");
   const [isMenuOpen, setIsMenuOpen] = reactExports.useState(false);
   const textareaRef = reactExports.useRef(null);
@@ -113865,7 +113869,7 @@ const ModernView = ({
                   className: "modern-menu-item",
                   "aria-label": "About",
                   tabIndex: 0,
-                  disabled: true,
+                  onClick: () => window.open("https://spotinfo.ai/", "_blank"),
                   children: [
                     /* @__PURE__ */ jsxRuntimeExports.jsxs(
                       "svg",
@@ -114149,7 +114153,7 @@ const ModernView = ({
           ] })
         }
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "modern-footer", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "modern-footer-copy", children: /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "Powered by SpotInfo" }) }) })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "modern-footer", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "modern-footer-copy", children: /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: displayFooterText }) }) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       LivekitConnection,
@@ -125789,6 +125793,7 @@ function buildWidgetConfig(props) {
     botName,
     rootTitle,
     rootSubtitle,
+    footerText,
     placeholder,
     showDateSeparator,
     engagementHookImagePath,
@@ -125829,6 +125834,7 @@ function buildWidgetConfig(props) {
     ...botName && { botName },
     ...rootTitle && { rootTitle },
     ...rootSubtitle && { rootSubtitle },
+    ...footerText && { footerText },
     ...placeholder && { placeholder },
     ...showDateSeparator !== void 0 && { showDateSeparator },
     ...engagementHookImagePath && { engagementHookImagePath },
@@ -126013,7 +126019,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Sat May  9 13:21:10 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Tue May 12 09:01:24 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -149381,6 +149387,7 @@ const WEB_COMPONENT_PROPS = {
     botName: "string",
     rootTitle: "string",
     rootSubtitle: "string",
+    footerText: "string",
     placeholder: "string",
     showDateSeparator: "boolean",
     engagementHookImagePath: "string",
@@ -149428,6 +149435,7 @@ const OBSERVED_ATTRIBUTES = [
   // only for modern view
   "bot-name",
   "root-subtitle",
+  "footer-text",
   // only for standard view
   "greetings",
   "show-timestamp",
