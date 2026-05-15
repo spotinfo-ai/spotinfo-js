@@ -31776,9 +31776,9 @@ const USER_AVATAR = "https://via.placeholder.com/40";
 const spotinfoLogo = "https://spotinfo.ai/public_images/Spotinfo-White.png";
 const DEFAULT_POSITION = "bottom-right";
 const GREETINGS = defaultGreetings;
-const META_HOST_URL = "https://api.spotinfo.ai";
+const META_HOST_URL = "https://api-uat.spotinfo.ai";
 const META_API_KEY = "";
-const META_VOICE_HOST_URL = "https://voice2.spotinfo.ai";
+const META_VOICE_HOST_URL = "https://voice-uat.spotinfo.ai";
 const META_CLIENT_ID_DEFAULT = "";
 const META_USER_EMAIL = "";
 const META_USER_COMPANY_NAME = "";
@@ -37168,7 +37168,7 @@ const sanitizeProperties = (obj) => {
   }
   return sanitized;
 };
-const base_url = "https://api.spotinfo.ai";
+const base_url = "https://api-uat.spotinfo.ai";
 const user_journey_path = "/api/v1/register_user_journey";
 const backend_event_endpoint = `${base_url}${user_journey_path}`;
 let isCapturePatched = false;
@@ -38597,7 +38597,8 @@ const MessagePopup = ({
     return null;
   }
 };
-const reportHookDelivery = (metaConfig, hookType, hookMessage) => {
+const reportHookDelivery = (metaConfig, hookType, hookMessage, reason) => {
+  var _a;
   if (!metaConfig.hostUrl || !metaConfig.apiKey || !metaConfig.clientId) {
     console.warn(
       "[HookDeliveryService] hook delivery reporting skipped: missing hostUrl, apiKey or clientId"
@@ -38605,6 +38606,8 @@ const reportHookDelivery = (metaConfig, hookType, hookMessage) => {
     return;
   }
   const url = `${metaConfig.hostUrl}/api/v1/hook_delivery_details`;
+  const pageUrl = window.location.href;
+  const pageTitle = ((_a = document.title) == null ? void 0 : _a.trim()) || pageUrl;
   fetch(url, {
     method: "POST",
     headers: {
@@ -38615,13 +38618,39 @@ const reportHookDelivery = (metaConfig, hookType, hookMessage) => {
       client_id: metaConfig.clientId,
       hook_type: hookType,
       hook_message: hookMessage,
-      delivered_time: (/* @__PURE__ */ new Date()).toISOString()
+      delivered_time: (/* @__PURE__ */ new Date()).toISOString(),
+      reason,
+      page_url: pageUrl,
+      page_title: pageTitle
     })
   }).catch((error2) => {
     console.warn(
       "[HookDeliveryService] hook delivery reporting failed:",
       error2
     );
+  });
+};
+const reportHookClick = (metaConfig) => {
+  if (!metaConfig.hostUrl || !metaConfig.apiKey || !metaConfig.clientId) {
+    console.warn(
+      "[HookDeliveryService] hook click reporting skipped: missing hostUrl, apiKey or clientId"
+    );
+    return;
+  }
+  const url = `${metaConfig.hostUrl}/api/v1/hook_delivery_details`;
+  fetch(url, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": metaConfig.apiKey
+    },
+    body: JSON.stringify({
+      client_id: metaConfig.clientId,
+      clicked: true,
+      clicked_time: (/* @__PURE__ */ new Date()).toISOString()
+    })
+  }).catch((error2) => {
+    console.warn("[HookDeliveryService] hook click reporting failed:", error2);
   });
 };
 const DRAG_THRESHOLD = 5;
@@ -38783,13 +38812,13 @@ const closeAnyExistingPopup = () => {
     existingContainer.remove();
   }
 };
-const showMessagePopupUtil = (message, _position, callbacks, userId, messageSource, metaConfig, appearanceConfig) => {
+const showMessagePopupUtil = (message, _position, callbacks, userId, messageSource, metaConfig, appearanceConfig, reason) => {
   console.log("[PopupUtils] Starting to show popup...");
   if (!metaConfig || !messageSource) ;
   else if (messageSource === "proactive_hook" || messageSource === "personalized_hook") {
-    reportHookDelivery(metaConfig, messageSource, message.content);
+    reportHookDelivery(metaConfig, messageSource, message.content, reason);
   } else if (messageSource === "sse") {
-    reportHookDelivery(metaConfig, "proactive_hook", message.content);
+    reportHookDelivery(metaConfig, "proactive_hook", message.content, reason);
   }
   closeAnyExistingPopup();
   const resolvedPopupType = (appearanceConfig == null ? void 0 : appearanceConfig.popupType) ?? "legacy";
@@ -38864,6 +38893,9 @@ const showMessagePopupUtil = (message, _position, callbacks, userId, messageSour
         },
         onOpenWidget: () => {
           console.log("[PopupUtils] Opening widget from popup in sleek view");
+          if (metaConfig) {
+            reportHookClick(metaConfig);
+          }
           cleanupFunction();
           if (userId) {
             const hookDeliveredKey = `spotinfo_hook_delivered_user_${userId}`;
@@ -39071,7 +39103,7 @@ const _PersonalizedHookService = class _PersonalizedHookService {
   isPollingStopped() {
     return this.pollingStopped;
   }
-  showMessagePopup(message) {
+  showMessagePopup(message, reason) {
     console.log("[PersonalizedHookService] Starting to show popup...");
     if (this.popupCleanup) {
       this.popupCleanup();
@@ -39103,7 +39135,8 @@ const _PersonalizedHookService = class _PersonalizedHookService {
       {
         popupType: this.popupType,
         botName: this.botName
-      }
+      },
+      reason
     );
   }
   removeMessagePopup() {
@@ -39182,11 +39215,13 @@ const _PersonalizedHookService = class _PersonalizedHookService {
         if (response.status === 200) {
           const data = await response.json();
           const hookMessage = data.message;
+          const reason = "personalized_hook";
           console.log(
             `[PersonalizedHookService - ${this.metaConfig.userId}] Poll response:`,
             {
               hasMessage: !!hookMessage,
               message: hookMessage,
+              reason,
               status: response.status
             }
           );
@@ -39202,7 +39237,7 @@ const _PersonalizedHookService = class _PersonalizedHookService {
               references: []
             };
             this.addMessageCallback(message);
-            this.showMessagePopup(message);
+            this.showMessagePopup(message, reason);
             this.stopPolling();
             return;
           }
@@ -63801,6 +63836,75 @@ const _VoiceChatService = class _VoiceChatService {
 };
 __publicField(_VoiceChatService, "instance");
 let VoiceChatService = _VoiceChatService;
+const charsPerTick = Number.parseInt("2");
+const tickIntervalMs = Number.parseInt(
+  "20"
+);
+const createStreamingTypewriter = (options) => {
+  let targetText = "";
+  let displayedLength = 0;
+  let isStreamFinished = false;
+  let intervalId = null;
+  let finishResolve = null;
+  const stopLoop = () => {
+    if (intervalId !== null) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+  };
+  const maybeResolveFinish = () => {
+    if (isStreamFinished && displayedLength >= targetText.length && finishResolve) {
+      const resolve = finishResolve;
+      finishResolve = null;
+      stopLoop();
+      resolve();
+    }
+  };
+  const tick = () => {
+    if (displayedLength < targetText.length) {
+      const remaining = targetText.length - displayedLength;
+      const step = Math.min(remaining, charsPerTick);
+      displayedLength += step;
+      options.onUpdate(targetText.slice(0, displayedLength));
+    } else if (isStreamFinished) {
+      options.onUpdate(targetText);
+    }
+    maybeResolveFinish();
+  };
+  const startLoop = () => {
+    if (intervalId !== null) return;
+    intervalId = setInterval(tick, tickIntervalMs);
+  };
+  return {
+    push(chunk) {
+      if (!chunk) return;
+      targetText += chunk;
+      startLoop();
+    },
+    finish() {
+      isStreamFinished = true;
+      if (displayedLength >= targetText.length) {
+        options.onUpdate(targetText);
+        stopLoop();
+        return Promise.resolve();
+      }
+      return new Promise((resolve) => {
+        finishResolve = resolve;
+        startLoop();
+      });
+    },
+    cancel() {
+      isStreamFinished = true;
+      finishResolve = null;
+      stopLoop();
+      targetText = "";
+      displayedLength = 0;
+    },
+    getTargetText() {
+      return targetText;
+    }
+  };
+};
 const ChatContext = reactExports.createContext(
   defaultChatContext
 );
@@ -63830,6 +63934,7 @@ function ChatProvider({
   const scrollToBottomCallbackRef = reactExports.useRef(null);
   const initialAllowVoiceRef = reactExports.useRef(config.allowVoice);
   const proactiveResetForCurrentResponseRef = reactExports.useRef(false);
+  const streamingTypewriterRef = reactExports.useRef(null);
   const lastVoiceBotMessageIdWeResetRef = reactExports.useRef(null);
   const lastVoiceUserMessageIdWeResetRef = reactExports.useRef(null);
   const enableAnalytics = currentMetaConfig.userJourney || ((_a = currentMetaConfig.proactiveEngagement) == null ? void 0 : _a.enabled) === true;
@@ -64126,6 +64231,9 @@ function ChatProvider({
     }
   }, []);
   const stopStreaming = reactExports.useCallback(() => {
+    var _a2;
+    (_a2 = streamingTypewriterRef.current) == null ? void 0 : _a2.cancel();
+    streamingTypewriterRef.current = null;
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
       abortControllerRef.current = null;
@@ -64133,6 +64241,7 @@ function ChatProvider({
     }
   }, []);
   const sendMessage = async (content2) => {
+    var _a2;
     if (content2.trim() === "") return;
     const apiKey = chatMetaConfig.apiKey;
     if (!apiKey || apiKey.trim() === "" || apiKey === "your-api-key-here") {
@@ -64171,25 +64280,33 @@ function ChatProvider({
         abortControllerRef.current.abort();
       }
       abortControllerRef.current = new AbortController();
-      let currentResponse = "";
       let hasError = false;
+      (_a2 = streamingTypewriterRef.current) == null ? void 0 : _a2.cancel();
+      const typewriter = createStreamingTypewriter({
+        onUpdate: updateMessageResponse
+      });
+      streamingTypewriterRef.current = typewriter;
       await conversationService.current.sendMessage(
         content2,
         (chunk) => {
-          currentResponse += chunk;
-          updateMessageResponse(currentResponse);
+          typewriter.push(chunk);
         },
         handleReference,
         (error2) => {
           console.error("Error in conversation:", error2);
           hasError = true;
+          typewriter.cancel();
           setErrorMessage(
             `Failed to get response: ${error2.message || "Unknown error"}`
           );
           setMessages((prev) => prev.filter((msg) => msg.id !== botMessage.id));
         }
       );
-      if (!hasError && currentResponse.trim() === "") {
+      if (!hasError) {
+        await typewriter.finish();
+      }
+      const finalResponse = typewriter.getTargetText();
+      if (!hasError && finalResponse.trim() === "") {
         setErrorMessage(
           "No response received from the server. Please try again."
         );
@@ -64205,11 +64322,13 @@ function ChatProvider({
         );
       }
     } finally {
+      streamingTypewriterRef.current = null;
       setIsLoading(false);
       abortControllerRef.current = null;
     }
   };
   const startConversation = async () => {
+    var _a2;
     try {
       setIsLoading(true);
       proactiveResetForCurrentResponseRef.current = false;
@@ -64217,21 +64336,27 @@ function ChatProvider({
         abortControllerRef.current.abort();
       }
       abortControllerRef.current = new AbortController();
-      let currentResponse = "";
+      (_a2 = streamingTypewriterRef.current) == null ? void 0 : _a2.cancel();
+      const typewriter = createStreamingTypewriter({
+        onUpdate: updateMessageResponse
+      });
+      streamingTypewriterRef.current = typewriter;
       await conversationService.current.startConversation(
         (chunk) => {
-          currentResponse += chunk;
-          updateMessageResponse(currentResponse);
+          typewriter.push(chunk);
         },
         handleReference,
         (error2) => {
           console.error("Error starting conversation:", error2);
-          updateMessageResponse(currentResponse, true);
+          typewriter.cancel();
+          updateMessageResponse(typewriter.getTargetText(), true);
         }
       );
+      await typewriter.finish();
     } catch (error2) {
       console.error("Failed to start conversation:", error2);
     } finally {
+      streamingTypewriterRef.current = null;
       setIsLoading(false);
       abortControllerRef.current = null;
     }
@@ -126294,7 +126419,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Thu May 14 10:16:14 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Fri May 15 18:43:36 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -150568,7 +150693,11 @@ const _PushHookService = class _PushHookService {
                   const messageContent = (_b = data.data) == null ? void 0 : _b.message;
                   const clientId2 = data.client_id;
                   if (clientId2 === this.metaConfig.clientId && messageContent) {
-                    this.handlePushMessage(messageContent);
+                    this.handlePushMessage(
+                      messageContent,
+                      "merchant_initiated"
+                      /* reason */
+                    );
                   }
                 } catch (error2) {
                   console.error(
@@ -150643,23 +150772,23 @@ const _PushHookService = class _PushHookService {
   /**
    * Handles incoming push message
    */
-  handlePushMessage(messageContent) {
+  handlePushMessage(messageContent, reason) {
     console.log(`[PushHookService] Handling push message:`, messageContent);
     if (this.isWidgetOpenCallback()) {
       console.log(`[PushHookService] Widget is open, closing it first`);
       this.closeWidgetCallback();
       setTimeout(() => {
-        this.showPopup(messageContent, "sse");
+        this.showPopup(messageContent, "sse", reason);
       }, 300);
     } else {
-      this.showPopup(messageContent, "sse");
+      this.showPopup(messageContent, "sse", reason);
     }
   }
   /**
    * Shows the popup with the message.
    * Does not show if a hook is already visible and the user has not acted on it (Open or Dismiss).
    */
-  showPopup(messageContent, source) {
+  showPopup(messageContent, source, reason) {
     if (this.hasPendingHookNotActedOn) {
       console.log(
         "[PushHookService] Not showing new hook – user has not acted on current hook (open or dismiss)."
@@ -150673,7 +150802,6 @@ const _PushHookService = class _PushHookService {
       timestamp: /* @__PURE__ */ new Date(),
       references: []
     };
-    this.addMessageCallback(message);
     if (this.popupCleanup) {
       this.popupCleanup();
       this.popupCleanup = null;
@@ -150691,6 +150819,7 @@ const _PushHookService = class _PushHookService {
           console.log(
             `[PushHookService] Opening widget from popup (source=${source})`
           );
+          this.addMessageCallback(message);
           if (source === "sse" || source === "proactive_hook") {
             this.callPushToLlmApi(message.content);
           }
@@ -150717,7 +150846,8 @@ const _PushHookService = class _PushHookService {
       {
         popupType: this.popupType,
         botName: this.botName
-      }
+      },
+      reason
     );
   }
   showProactiveHook(messageContent, reason) {
@@ -150726,7 +150856,7 @@ const _PushHookService = class _PushHookService {
       console.log("[PushHookService] Skipping proactive hook — widget is open");
       return;
     }
-    this.showPopup(messageContent, "proactive_hook");
+    this.showPopup(messageContent, "proactive_hook", reason);
   }
   /**
    * Schedules a reconnection attempt
