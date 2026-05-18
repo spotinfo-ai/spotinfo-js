@@ -38662,17 +38662,11 @@ const saveDragPosition = (pos) => {
   } catch {
   }
 };
-const loadDragPosition = () => {
+const clearDragPosition = () => {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw);
-    if (typeof (parsed == null ? void 0 : parsed.x) === "number" && typeof (parsed == null ? void 0 : parsed.y) === "number" && isFinite(parsed.x) && isFinite(parsed.y)) {
-      return parsed;
-    }
+    localStorage.removeItem(STORAGE_KEY);
   } catch {
   }
-  return null;
 };
 const clamp$2 = (value, min, max) => Math.max(min, Math.min(max, value));
 const clampToViewport = (pos, elementWidth, elementHeight) => ({
@@ -126419,7 +126413,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Fri May 15 18:41:34 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Mon May 18 13:51:49 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -149966,14 +149960,10 @@ const ChatWidgetWrapper = (props = {}) => {
   const handleClose = reactExports.useCallback(() => {
     setIsOpen(false);
   }, []);
-  const [dragPosition, setDragPosition] = reactExports.useState(
-    () => loadDragPosition()
-  );
   const handleDragPositionChange = reactExports.useCallback((pos) => {
-    setDragPosition(pos);
-    saveDragPosition(pos);
     const host = getHostElement2();
     if (!host) return;
+    host.setAttribute("data-user-positioned", "true");
     host.style.setProperty("top", `${pos.y}px`);
     host.style.setProperty("left", `${pos.x}px`);
     host.style.removeProperty("bottom");
@@ -150017,7 +150007,6 @@ const ChatWidgetWrapper = (props = {}) => {
                 rootButtonShape,
                 onOpen: handleOpen,
                 onDragPositionChange: handleDragPositionChange,
-                dragPosition,
                 botName: props.botName,
                 rootTitle: props.rootTitle,
                 rootSubtitle: props.rootSubtitle,
@@ -150159,6 +150148,10 @@ const _StyledChatWidget = class _StyledChatWidget extends ChatWidgetWebComponent
    * the corrected coordinates. Called on every resize event.
    */
   clampCurrentPosition() {
+    if (!this.hasAttribute("data-user-positioned")) {
+      this.initializePosition();
+      return;
+    }
     const rect = this.getBoundingClientRect();
     const dims = getButtonDimensions();
     const currentPos = { x: rect.left, y: rect.top };
@@ -150374,14 +150367,8 @@ ${declarations}
     this.shadowRoot.appendChild(shadowStyleTag);
   }
   initializePosition() {
-    const savedPos = loadDragPosition();
-    if (savedPos) {
-      const dims = getButtonDimensions();
-      const clamped = clampToViewport(savedPos, dims.width, dims.height);
-      this.applyCoordinatePosition(clamped);
-      saveDragPosition(clamped);
-      return;
-    }
+    this.removeAttribute("data-user-positioned");
+    clearDragPosition();
     const position2 = this.getAttr(
       "position",
       defaultWidgetConfig.position
@@ -150413,14 +150400,8 @@ ${declarations}
     const oppositeHorizontal = positionStyles.horizontal === "right" ? "left" : "right";
     this.style.removeProperty(oppositeVertical);
     this.style.removeProperty(oppositeHorizontal);
-    requestAnimationFrame(() => {
-      const dims = getButtonDimensions();
-      const rect = this.getBoundingClientRect();
-      const computedPos = { x: rect.left, y: rect.top };
-      const clamped = clampToViewport(computedPos, dims.width, dims.height);
-      this.applyCoordinatePosition(clamped);
-      saveDragPosition(clamped);
-    });
+    this.style.removeProperty("top");
+    this.style.removeProperty("left");
   }
   connectedCallback() {
     var _a, _b;
@@ -150439,6 +150420,11 @@ ${declarations}
     this.initializeCssVariables();
     this.initializeShadowStyles();
     this.initializePosition();
+    requestAnimationFrame(() => {
+      if (!this.hasAttribute("data-user-positioned")) {
+        this.initializePosition();
+      }
+    });
     window.addEventListener("resize", this._handleViewportResize);
     const viewType = this.getAttr("view-type", "sleek_view");
     if (!this.hasAttribute("view-type")) {
