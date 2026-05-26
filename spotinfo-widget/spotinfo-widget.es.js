@@ -112826,7 +112826,6 @@ function ForceMicEnable({
   }, [room, connectionState, isMuted, componentName]);
   return null;
 }
-const getUserIdFromPhoneNumber = (phoneNumber) => phoneNumber.replace(/\D/g, "");
 const callPerson = async ({
   chatMetaConfig,
   phoneNumber
@@ -112835,7 +112834,7 @@ const callPerson = async ({
   if (!(chatMetaConfig == null ? void 0 : chatMetaConfig.clientId) || !chatMetaConfig.voiceHostUrl || !chatMetaConfig.apiKey || !phoneNumber) {
     return false;
   }
-  const userId = ((_a = chatMetaConfig.userAttributes) == null ? void 0 : _a.user_id) || chatMetaConfig.userId || getUserIdFromPhoneNumber(phoneNumber);
+  const userId = ((_a = chatMetaConfig.userAttributes) == null ? void 0 : _a.user_id) || chatMetaConfig.userId;
   const apiUrl = `${chatMetaConfig.voiceHostUrl}/create-call`;
   try {
     const response = await fetch(apiUrl, {
@@ -126851,7 +126850,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Tue May 26 08:51:48 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Tue May 26 11:17:04 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
