@@ -15185,12 +15185,12 @@ function requireReactDom_development() {
         }
       }
       var ReactCurrentBatchConfig = ReactSharedInternals.ReactCurrentBatchConfig;
-      var _enabled = true;
+      var _enabled2 = true;
       function setEnabled(enabled) {
-        _enabled = !!enabled;
+        _enabled2 = !!enabled;
       }
       function isEnabled() {
-        return _enabled;
+        return _enabled2;
       }
       function createEventListenerWrapperWithPriority(targetContainer, domEventName, eventSystemFlags) {
         var eventPriority = getEventPriority(domEventName);
@@ -15234,7 +15234,7 @@ function requireReactDom_development() {
         }
       }
       function dispatchEvent(domEventName, eventSystemFlags, targetContainer, nativeEvent) {
-        if (!_enabled) {
+        if (!_enabled2) {
           return;
         }
         {
@@ -37796,6 +37796,107 @@ const _ProactiveEngagementEngine = class _ProactiveEngagementEngine {
 };
 __publicField(_ProactiveEngagementEngine, "instance", null);
 let ProactiveEngagementEngine = _ProactiveEngagementEngine;
+const BASE_URL = "https://api.spotinfo.ai";
+const WIDGET_EVENT_ENDPOINT = `${BASE_URL}/api/v1/register_widget_event`;
+const getPageContext = () => {
+  var _a, _b;
+  return {
+    $current_url: window.location.href,
+    $screen_height: (_a = window.screen) == null ? void 0 : _a.height,
+    $screen_width: (_b = window.screen) == null ? void 0 : _b.width,
+    $viewport_height: window.innerHeight,
+    $viewport_width: window.innerWidth
+  };
+};
+const _handleDelegatedTrack = (event) => {
+  const raw = event.target;
+  if (!raw) return;
+  const target = raw.closest("[data-track]");
+  if (!target) return;
+  const eventName = target.getAttribute("data-track");
+  if (!(eventName == null ? void 0 : eventName.trim())) return;
+  let props = {};
+  const propsAttr = target.getAttribute("data-track-props");
+  if (propsAttr) {
+    try {
+      props = JSON.parse(propsAttr);
+    } catch {
+    }
+  }
+  captureWidgetEvent(eventName, props);
+};
+const _attach = (root2) => {
+  root2.addEventListener("click", _handleDelegatedTrack, true);
+};
+const _detach = (root2) => {
+  root2.removeEventListener("click", _handleDelegatedTrack, true);
+};
+let _shadowRoot = null;
+let _enabled = false;
+let _collectionApiKey = null;
+let _clientId = null;
+let _distinctId = null;
+let _widgetLoadedSent = false;
+const setWidgetShadowRoot = (root2) => {
+  if (_shadowRoot === root2) return;
+  if (_shadowRoot && _enabled) _detach(_shadowRoot);
+  _shadowRoot = root2;
+  if (_enabled && _shadowRoot) _attach(_shadowRoot);
+};
+const initAndEnableWidgetAutocapture = (collectionApiKey, distinctId, clientId) => {
+  if (!collectionApiKey || collectionApiKey.trim() === "") {
+    console.warn("[WidgetTracking] No collection API key — skipping init.");
+    return;
+  }
+  _collectionApiKey = collectionApiKey;
+  _distinctId = distinctId;
+  _clientId = clientId;
+  if (!_widgetLoadedSent) {
+    captureWidgetEvent("widget_loaded", {
+      $referrer: document.referrer || void 0
+    });
+    _widgetLoadedSent = true;
+  }
+  if (_enabled) return;
+  _enabled = true;
+  if (_shadowRoot) _attach(_shadowRoot);
+};
+const disableWidgetAutocapture = () => {
+  if (!_enabled) return;
+  _enabled = false;
+  if (_shadowRoot) _detach(_shadowRoot);
+};
+const captureWidgetEvent = (eventName, properties = {}) => {
+  if (!_collectionApiKey || !WIDGET_EVENT_ENDPOINT) return;
+  const sanitized = sanitizeProperties({
+    ...properties,
+    ...getPageContext(),
+    timestamp: (/* @__PURE__ */ new Date()).toISOString()
+  });
+  fetch(WIDGET_EVENT_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Api-Key": _collectionApiKey
+    },
+    body: JSON.stringify({
+      event: eventName,
+      properties: sanitized,
+      client_id: _clientId,
+      user_id: _distinctId,
+      type: "event"
+    })
+  }).catch((err) => console.error("[WidgetTracking] Failed to send event:", err));
+  if (_shadowRoot == null ? void 0 : _shadowRoot.host) {
+    _shadowRoot.host.dispatchEvent(
+      new CustomEvent("spotinfo:widget-event", {
+        bubbles: true,
+        composed: true,
+        detail: { event: eventName, properties: sanitized }
+      })
+    );
+  }
+};
 let globalListenersInitialized = false;
 let activeHookInstances = 0;
 let textSelectionHandlerRef = null;
@@ -38043,6 +38144,14 @@ const useAnalytics = ({
       }
     }
   }, [properties, distinctId, clientId, enableAnalytics]);
+  reactExports.useEffect(() => {
+    if (!collectionApiKey || collectionApiKey.trim() === "") return;
+    if (!distinctId) return;
+    initAndEnableWidgetAutocapture(collectionApiKey, distinctId, clientId);
+    return () => {
+      disableWidgetAutocapture();
+    };
+  }, [collectionApiKey, distinctId, clientId]);
   reactExports.useEffect(() => {
     if (!enableAnalytics) return () => {
     };
@@ -114381,6 +114490,9 @@ const ModernView = ({
   const handleVoiceNudgeClick = () => {
     void handleEnterVoiceMode();
   };
+  const handleVoiceInputBtnClick = () => {
+    void handleEnterVoiceMode();
+  };
   const handleVoiceNudgeKeyDown = (e2) => {
     if (e2.key === "Enter" || e2.key === " ") {
       e2.preventDefault();
@@ -114592,11 +114704,14 @@ const ModernView = ({
                 "button",
                 {
                   type: "button",
+                  id: "widget-new-chat-btn",
                   role: "menuitem",
                   onClick: handleSelectNewChat,
                   className: "modern-menu-item",
                   "aria-label": "Start new conversation",
                   tabIndex: 0,
+                  "data-track": "start_new_chat",
+                  "data-track-props": '{"element_id":"widget-new-chat-btn"}',
                   children: [
                     /* @__PURE__ */ jsxRuntimeExports.jsx(ForwardRef$3, { className: "w-4 h-4", "aria-hidden": "true" }),
                     "Start a new chat"
@@ -114646,6 +114761,9 @@ const ModernView = ({
               "aria-label": "Close chat",
               title: "Close",
               tabIndex: 0,
+              id: "widget-close-btn",
+              "data-track": "widget_closed",
+              "data-track-props": '{"close_source":"close_button","element_id":"widget-close-btn"}',
               children: /* @__PURE__ */ jsxRuntimeExports.jsx(ForwardRef$2, {})
             }
           )
@@ -114661,11 +114779,14 @@ const ModernView = ({
           "button",
           {
             type: "button",
+            id: "widget-voice-start-btn",
             onClick: handleVoiceNudgeClick,
             onKeyDown: handleVoiceNudgeKeyDown,
             className: "modern-voice-try-btn",
             "aria-label": "Talk to me",
             tabIndex: 0,
+            "data-track": "voice_start",
+            "data-track-props": '{"element_id":"widget-voice-start-btn"}',
             children: "Talk to me →"
           }
         )
@@ -114804,11 +114925,18 @@ const ModernView = ({
                 "button",
                 {
                   type: "button",
+                  id: "widget-voice-end-btn",
                   onClick: handleStopCall,
                   onKeyDown: handleStopCallKeyDown,
                   className: "modern-voice-btn modern-voice-stop-btn",
                   "aria-label": "End call",
                   tabIndex: 0,
+                  "data-track": "voice_end",
+                  "data-track-props": JSON.stringify({
+                    end_source: "stop_call_button",
+                    element_id: "widget-voice-end-btn",
+                    agent_state: agentState
+                  }),
                   children: /* @__PURE__ */ jsxRuntimeExports.jsx(
                     "svg",
                     {
@@ -114874,12 +115002,20 @@ const ModernView = ({
                   "button",
                   {
                     type: "button",
-                    onClick: handleEnterVoiceMode,
-                    onKeyDown: handleEnterVoiceMode,
+                    id: "widget-voice-input-btn",
+                    onClick: handleVoiceInputBtnClick,
+                    onKeyDown: (e2) => {
+                      if (e2.key === "Enter" || e2.key === " ") {
+                        e2.preventDefault();
+                        handleVoiceInputBtnClick();
+                      }
+                    },
                     className: "modern-input-btn modern-input-btn",
                     "aria-label": "Use Voice",
                     title: "Use Voice",
                     tabIndex: 0,
+                    "data-track": "voice_start",
+                    "data-track-props": '{"element_id":"widget-voice-input-btn"}',
                     children: /* @__PURE__ */ jsxRuntimeExports.jsx(
                       AudioLines,
                       {
@@ -114894,6 +115030,7 @@ const ModernView = ({
                   "button",
                   {
                     type: "button",
+                    id: "widget-send-btn",
                     onClick: handleSendMessage,
                     onKeyDown: handleSendKeyDown,
                     className: "modern-input-btn modern-input-btn",
@@ -114901,6 +115038,8 @@ const ModernView = ({
                     title: "Send Message",
                     tabIndex: 0,
                     disabled: !canSend,
+                    "data-track": "send_message",
+                    "data-track-props": '{"element_id":"widget-send-btn"}',
                     children: /* @__PURE__ */ jsxRuntimeExports.jsx(
                       "svg",
                       {
@@ -126792,6 +126931,7 @@ const WidgetLaunchButton = ({
   reactExports.useEffect(() => subscribeToMobileViewportChange(setIsMobileViewport), []);
   const handleClick = reactExports.useCallback(() => {
     if (wasDragged()) return;
+    captureWidgetEvent("widget_open", { open_source: "launch_button" });
     onOpen();
   }, [wasDragged, onOpen]);
   if (isOpen) {
@@ -126809,6 +126949,7 @@ const WidgetLaunchButton = ({
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
     "button",
     {
+      id: "widget-launch-btn",
       className: "chat-widget-open-button",
       "data-shape": shape,
       style: launchButtonStyles,
@@ -126818,7 +126959,7 @@ const WidgetLaunchButton = ({
       onPointerDown: handlePointerDown,
       onKeyDown: (e2) => {
         if (e2.key === "Enter" || e2.key === " ") {
-          onOpen();
+          handleClick();
         }
       },
       children: shape === "boxed-pill" || shape === "circular-pill" ? /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -126850,7 +126991,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Tue May 26 11:17:04 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Tue Jun  2 11:36:33 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -152716,6 +152857,7 @@ ${declarations}
     this.initializeCssVariables();
     this.initializeShadowStyles();
     this.initializePosition();
+    setWidgetShadowRoot(this.shadowRoot);
     requestAnimationFrame(() => {
       if (!this.hasAttribute("data-user-positioned")) {
         this.initializePosition();
@@ -152741,6 +152883,7 @@ ${declarations}
       stack
     );
     window.removeEventListener("resize", this._handleViewportResize);
+    setWidgetShadowRoot(null);
     (_b = super.disconnectedCallback) == null ? void 0 : _b.call(this);
   }
   attributeChangedCallback(name2, oldValue, newValue) {
