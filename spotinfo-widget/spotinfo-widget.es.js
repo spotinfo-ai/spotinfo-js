@@ -112989,6 +112989,13 @@ const PhoneNumberDialog = ({
   const [phoneError, setPhoneError] = reactExports.useState("");
   reactExports.useEffect(() => {
     if (!open) return;
+    captureWidgetEvent("phone_number_dialog_opened", {});
+    return () => {
+      captureWidgetEvent("phone_number_dialog_closed", {});
+    };
+  }, [open]);
+  reactExports.useEffect(() => {
+    if (!open) return;
     setPhoneNumber("");
     setPhoneError("");
     const focusTimer = setTimeout(() => {
@@ -113126,11 +113133,14 @@ const PhoneNumberDialog = ({
               "button",
               {
                 type: "button",
+                id: "widget-phone-call-btn",
                 className: "phone-number-dialog-btn phone-number-dialog-btn-primary",
                 onClick: () => {
                   void handlePhoneSubmit();
                 },
                 tabIndex: 0,
+                "data-track": "phone_number_dialog_start_phone_call",
+                "data-track-props": '{"element_id":"widget-phone-call-btn"}',
                 children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { size: 14, "aria-hidden": "true" }),
                   "Call this number"
@@ -113377,6 +113387,13 @@ const MicPermissionDialog = ({
     }, 50);
     return () => clearTimeout(focusTimer);
   }, [isPhoneDialogOpen, open]);
+  reactExports.useEffect(() => {
+    if (!open) return;
+    captureWidgetEvent("mic_permission_dialog_opened", {});
+    return () => {
+      captureWidgetEvent("mic_permission_dialog_closed", {});
+    };
+  }, [open]);
   if (!open) return null;
   const handleOverlayClick = () => {
     onClose();
@@ -113462,9 +113479,12 @@ const MicPermissionDialog = ({
                   {
                     ref: tryAgainBtnRef,
                     type: "button",
+                    id: "widget-mic-try-again-btn",
                     className: "mic-permission-dialog-btn mic-permission-dialog-btn-primary",
                     onClick: handleTryAgain,
                     tabIndex: 0,
+                    "data-track": "mic_permission_try_again",
+                    "data-track-props": '{"element_id":"widget-mic-try-again-btn"}',
                     children: tryAgainText
                   }
                 ),
@@ -113473,9 +113493,12 @@ const MicPermissionDialog = ({
                     "button",
                     {
                       type: "button",
+                      id: "widget-mic-text-chat-btn",
                       className: "mic-permission-dialog-btn mic-permission-dialog-btn-secondary",
                       onClick: onClose,
                       tabIndex: 0,
+                      "data-track": "mic_permission_channel_text_chat",
+                      "data-track-props": '{"element_id":"widget-mic-text-chat-btn"}',
                       children: [
                         /* @__PURE__ */ jsxRuntimeExports.jsx(MessagesSquare, { size: 13, "aria-hidden": "true" }),
                         "Text Chat"
@@ -113486,9 +113509,12 @@ const MicPermissionDialog = ({
                     "button",
                     {
                       type: "button",
+                      id: "widget-mic-whatsapp-btn",
                       className: "mic-permission-dialog-btn mic-permission-dialog-btn-secondary",
                       onClick: handleContinueWhatsapp,
                       tabIndex: 0,
+                      "data-track": "mic_permission_channel_whatsapp",
+                      "data-track-props": '{"element_id":"widget-mic-whatsapp-btn"}',
                       children: [
                         /* @__PURE__ */ jsxRuntimeExports.jsx(
                           "svg",
@@ -113513,9 +113539,12 @@ const MicPermissionDialog = ({
                     "button",
                     {
                       type: "button",
+                      id: "widget-mic-telephony-btn",
                       className: "mic-permission-dialog-btn mic-permission-dialog-btn-secondary",
                       onClick: () => setIsPhoneDialogOpen(true),
                       tabIndex: 0,
+                      "data-track": "mic_permission_channel_telephony",
+                      "data-track-props": '{"element_id":"widget-mic-telephony-btn"}',
                       children: [
                         /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { size: 13, "aria-hidden": "true" }),
                         "Call me"
@@ -114785,7 +114814,7 @@ const ModernView = ({
             className: "modern-voice-try-btn",
             "aria-label": "Talk to me",
             tabIndex: 0,
-            "data-track": "voice_start",
+            "data-track": "floating_pill_channel_voice",
             "data-track-props": '{"element_id":"widget-voice-start-btn"}',
             children: "Talk to me →"
           }
@@ -114970,12 +114999,15 @@ const ModernView = ({
                   "button",
                   {
                     type: "button",
+                    id: "widget-input-whatsapp-btn",
                     onClick: handleWhatsappClick,
                     onKeyDown: handleWhatsappKeyDown,
                     className: "modern-input-btn modern-input-btn-whatsapp",
                     "aria-label": "Continue on WhatsApp",
                     title: "Continue on WhatsApp",
                     tabIndex: 0,
+                    "data-track": "input_area_channel_whatsapp",
+                    "data-track-props": '{"element_id":"widget-input-whatsapp-btn"}',
                     children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { viewBox: "0 0 32 32", "aria-hidden": "true", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
                       "path",
                       {
@@ -114989,12 +115021,15 @@ const ModernView = ({
                   "button",
                   {
                     type: "button",
+                    id: "widget-input-telephony-btn",
                     onClick: handleTelephonyClick,
                     onKeyDown: handleTelephonyKeyDown,
                     className: "modern-input-btn modern-input-btn-telephony",
                     "aria-label": "Request a phone call",
                     title: "Request a phone call",
                     tabIndex: 0,
+                    "data-track": "input_area_channel_telephony",
+                    "data-track-props": '{"element_id":"widget-input-telephony-btn"}',
                     children: /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { "aria-hidden": "true", fill: "currentColor" })
                   }
                 ),
@@ -115014,7 +115049,7 @@ const ModernView = ({
                     "aria-label": "Use Voice",
                     title: "Use Voice",
                     tabIndex: 0,
-                    "data-track": "voice_start",
+                    "data-track": "input_area_channel_voice",
                     "data-track-props": '{"element_id":"widget-voice-input-btn"}',
                     children: /* @__PURE__ */ jsxRuntimeExports.jsx(
                       AudioLines,
@@ -115038,7 +115073,7 @@ const ModernView = ({
                     title: "Send Message",
                     tabIndex: 0,
                     disabled: !canSend,
-                    "data-track": "send_message",
+                    "data-track": "input_area_send_message",
                     "data-track-props": '{"element_id":"widget-send-btn"}',
                     children: /* @__PURE__ */ jsxRuntimeExports.jsx(
                       "svg",
@@ -126991,7 +127026,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Tue Jun  2 11:36:33 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Wed Jun  3 12:13:29 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
