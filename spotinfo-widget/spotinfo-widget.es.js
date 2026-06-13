@@ -31727,6 +31727,8 @@ const PLACEHOLDER = "Type your message or click on mic button to talk ...";
 const USE_VOICE = true;
 const USE_WHATSAPP = true;
 const USE_TELEPHONY = false;
+const AUTO_INITIATE = true;
+const AUTO_INITIATE_TIME = 5;
 const WHATSAPP_GREETING = "Hi ! I'd like to continue our conversation here.";
 const VIEW_TYPE = "modern_view";
 const ROOT_BUTTON_HEIGHT = "48px";
@@ -31896,6 +31898,8 @@ const defaultWidgetConfig = {
   animations: ANIMATIONS,
   useWhatsapp: USE_WHATSAPP,
   useTelephony: USE_TELEPHONY,
+  autoInitiate: AUTO_INITIATE,
+  autoInitiateTime: AUTO_INITIATE_TIME,
   whatsappGreeting: WHATSAPP_GREETING,
   engagementHookImagePath: ENGAGEMENT_HOOK_IMAGE_PATH,
   engagementHookImageWidth: ENGAGEMENT_HOOK_IMAGE_WIDTH,
@@ -114267,6 +114271,19 @@ const getInitial = (name2) => {
   const trimmed = (name2 || "").trim();
   return trimmed.length > 0 ? trimmed.charAt(0).toUpperCase() : "A";
 };
+const hasGrantedMicrophonePermission = async () => {
+  if (typeof navigator === "undefined" || !navigator.permissions || typeof navigator.permissions.query !== "function") {
+    return false;
+  }
+  try {
+    const permission = await navigator.permissions.query({
+      name: "microphone"
+    });
+    return permission.state === "granted";
+  } catch {
+    return false;
+  }
+};
 const ModernView = ({
   onNewChat,
   onClose,
@@ -114295,6 +114312,8 @@ const ModernView = ({
     chatMetaConfig,
     useWhatsapp,
     useTelephony,
+    autoInitiate,
+    autoInitiateTime,
     whatsappGreeting,
     botName,
     aiAvatar,
@@ -114302,6 +114321,7 @@ const ModernView = ({
     showAvatars = true,
     showTimestamp = false,
     isWidgetOpen,
+    setWidgetOpen,
     footerText
   } = useChatContext();
   const displayFooterText = footerText == null ? void 0 : footerText.trim();
@@ -114315,6 +114335,10 @@ const ModernView = ({
   const menuWrapperRef = reactExports.useRef(null);
   const previousMessagesLengthRef = reactExports.useRef(messages.length);
   const previousIsLoadingRef = reactExports.useRef(false);
+  const autoInitiateTriggeredRef = reactExports.useRef(false);
+  const autoInitiatePendingOpenRef = reactExports.useRef(false);
+  const isWidgetOpenRef = reactExports.useRef(isWidgetOpen);
+  const isVoiceModeRef = reactExports.useRef(isVoiceMode);
   const [headerLogoErrored, setHeaderLogoErrored] = reactExports.useState(false);
   const [aiAvatarErrored, setAiAvatarErrored] = reactExports.useState(false);
   const [userAvatarErrored, setUserAvatarErrored] = reactExports.useState(false);
@@ -114346,6 +114370,12 @@ const ModernView = ({
   const hasInputText = inputText.trim().length > 0;
   const canSend = hasInputText && !isLoading;
   reactExports.useEffect(() => subscribeToMobileViewportChange(setIsMobileViewport), []);
+  reactExports.useEffect(() => {
+    isWidgetOpenRef.current = isWidgetOpen;
+  }, [isWidgetOpen]);
+  reactExports.useEffect(() => {
+    isVoiceModeRef.current = isVoiceMode;
+  }, [isVoiceMode]);
   reactExports.useEffect(() => {
     const previousLength = previousMessagesLengthRef.current;
     const currentLength = messages.length;
@@ -114445,19 +114475,47 @@ const ModernView = ({
     }
   };
   const handleEnterVoiceMode = async () => {
-    if (isVoiceMode) return;
-    await requestMicAccess(() => {
+    if (isVoiceModeRef.current) return false;
+    return requestMicAccess(() => {
       setInputText("");
       if (textareaRef.current) {
         textareaRef.current.value = "";
         textareaRef.current.style.height = "auto";
       }
-      if (!isVoiceMode) {
+      if (!isVoiceModeRef.current) {
         setIsVoiceMode(true);
         handleMicButton();
       }
     });
   };
+  reactExports.useEffect(() => {
+    if (!autoInitiate || !allowVoice) return;
+    const delayMs = Math.max(0, autoInitiateTime) * 1e3;
+    const timer = window.setTimeout(() => {
+      if (autoInitiateTriggeredRef.current) return;
+      if (isWidgetOpenRef.current) return;
+      if (isVoiceModeRef.current) return;
+      autoInitiateTriggeredRef.current = true;
+      void (async () => {
+        const hasMicPermission = await hasGrantedMicrophonePermission();
+        if (!hasMicPermission) return;
+        autoInitiatePendingOpenRef.current = true;
+        const startedVoiceSession = await handleEnterVoiceMode();
+        if (!startedVoiceSession) {
+          autoInitiatePendingOpenRef.current = false;
+        }
+      })();
+    }, delayMs);
+    return () => window.clearTimeout(timer);
+  }, [autoInitiate, autoInitiateTime, allowVoice]);
+  reactExports.useEffect(() => {
+    if (!autoInitiatePendingOpenRef.current) return;
+    if (agentState !== "speaking") return;
+    autoInitiatePendingOpenRef.current = false;
+    if (!isWidgetOpenRef.current) {
+      setWidgetOpen(true);
+    }
+  }, [agentState, setWidgetOpen]);
   const handleMicToggle = () => {
     if (isConnecting) return;
     if (isVoiceMode && isConnected) {
@@ -126748,6 +126806,8 @@ function buildWidgetConfig(props) {
     viewType,
     useWhatsapp,
     useTelephony,
+    autoInitiate,
+    autoInitiateTime,
     whatsappPhoneNumber,
     whatsappGreeting,
     headerTitle,
@@ -126794,6 +126854,8 @@ function buildWidgetConfig(props) {
     ...viewType && { viewType },
     ...useWhatsapp !== void 0 && { useWhatsapp },
     ...useTelephony !== void 0 && { useTelephony },
+    ...autoInitiate !== void 0 && { autoInitiate },
+    ...autoInitiateTime !== void 0 && { autoInitiateTime },
     ...whatsappPhoneNumber && { whatsappPhoneNumber },
     ...whatsappGreeting && { whatsappGreeting },
     ...headerTitle && { headerTitle },
@@ -127026,7 +127088,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Wed Jun  3 12:13:29 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Sat Jun 13 11:49:29 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -152225,6 +152287,8 @@ const WEB_COMPONENT_PROPS = {
     viewType: "string",
     useWhatsapp: "boolean",
     useTelephony: "boolean",
+    autoInitiate: "boolean",
+    autoInitiateTime: "number",
     whatsappPhoneNumber: "string",
     whatsappGreeting: "string",
     headerTitle: "string",
@@ -152275,6 +152339,8 @@ const OBSERVED_ATTRIBUTES = [
   "allow-voice",
   "use-whatsapp",
   "use-telephony",
+  "auto-initiate",
+  "auto-initiate-time",
   "whatsapp-phone-number",
   "whatsapp-greeting",
   "placeholder",
@@ -152361,6 +152427,8 @@ const ChatWidgetWrapper = (props = {}) => {
       props.popupType,
       props.useWhatsapp,
       props.useTelephony,
+      props.autoInitiate,
+      props.autoInitiateTime,
       props.whatsappGreeting,
       props.botName,
       props.fontFamily,
