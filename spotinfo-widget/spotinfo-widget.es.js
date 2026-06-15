@@ -32161,6 +32161,9 @@ class ConversationService {
       console.log(response);
       throw new Error("Failed to fetch chat history");
     }
+    if (response.status === 204) {
+      return [];
+    }
     const response_json = await response.json();
     try {
       const normalizedMessages = [];
@@ -64049,6 +64052,9 @@ function ChatProvider({
   const abortControllerRef = reactExports.useRef(null);
   const roomPreloadAttemptedRef = reactExports.useRef(false);
   const scrollToBottomCallbackRef = reactExports.useRef(null);
+  const sendMessageRef = reactExports.useRef(
+    null
+  );
   const initialAllowVoiceRef = reactExports.useRef(config.allowVoice);
   const proactiveResetForCurrentResponseRef = reactExports.useRef(false);
   const streamingTypewriterRef = reactExports.useRef(null);
@@ -64157,6 +64163,10 @@ function ChatProvider({
     onWidgetToggle(true);
     console.log("openWidgetInSleekView: widget opened in sleek view");
   }, [onWidgetToggle]);
+  const sendMessageFromPushHook = reactExports.useCallback((content2) => {
+    if (!sendMessageRef.current) return;
+    void sendMessageRef.current(content2);
+  }, []);
   reactExports.useEffect(() => {
     setCurrentConfig(config);
   }, [config]);
@@ -64209,6 +64219,7 @@ function ChatProvider({
         pushServiceInstance = PushHookService2.getInstance({
           metaConfig: currentMetaConfig,
           addMessage: internalAddMessage,
+          sendMessage: sendMessageFromPushHook,
           openWidget: openWidgetAndStopPolling,
           closeWidget: () => onWidgetToggle(false),
           isWidgetOpen: () => isWidgetOpen,
@@ -64284,6 +64295,7 @@ function ChatProvider({
     isWidgetOpen,
     internalAddMessage,
     openWidgetAndStopPolling,
+    sendMessageFromPushHook,
     onWidgetToggle,
     config.position,
     config.popupType,
@@ -64450,6 +64462,7 @@ function ChatProvider({
       abortControllerRef.current = null;
     }
   };
+  sendMessageRef.current = sendMessage;
   const startConversation = async () => {
     var _a2;
     try {
@@ -64582,6 +64595,7 @@ function ChatProvider({
       try {
         if (!currentMetaConfig.userId || !currentMetaConfig.apiKey) return;
         const normalizedMessages = await conversationService.current.fetchChatHistory();
+        console.log("normalizedMessages = ", normalizedMessages);
         setMessages(normalizedMessages);
       } catch (error2) {
         console.error("Failed to load chat history:", error2);
@@ -114334,6 +114348,7 @@ const ModernView = ({
   const scrollContainerRef = reactExports.useRef(null);
   const menuWrapperRef = reactExports.useRef(null);
   const previousMessagesLengthRef = reactExports.useRef(messages.length);
+  const userMessagesLengthRef = reactExports.useRef(messages.length);
   const previousIsLoadingRef = reactExports.useRef(false);
   const autoInitiateTriggeredRef = reactExports.useRef(false);
   const autoInitiatePendingOpenRef = reactExports.useRef(false);
@@ -114379,10 +114394,14 @@ const ModernView = ({
   reactExports.useEffect(() => {
     const previousLength = previousMessagesLengthRef.current;
     const currentLength = messages.length;
+    console.log("messages =", messages);
     if (previousLength > 0 && currentLength === 0 && isVoiceMode) {
       setIsVoiceMode(false);
     }
     previousMessagesLengthRef.current = currentLength;
+    userMessagesLengthRef.current = messages.filter(
+      (message) => message.sender === "user"
+    ).length;
   }, [messages.length, isVoiceMode, setIsVoiceMode]);
   const [voiceModeFrozenCount, setVoiceModeFrozenCount] = reactExports.useState(null);
   reactExports.useEffect(() => {
@@ -114474,6 +114493,12 @@ const ModernView = ({
       handleSendMessage();
     }
   };
+  const handleSendKeyDown = (e2) => {
+    if (e2.key === "Enter" || e2.key === " ") {
+      e2.preventDefault();
+      handleSendMessage();
+    }
+  };
   const handleEnterVoiceMode = async () => {
     if (isVoiceModeRef.current) return false;
     return requestMicAccess(() => {
@@ -114495,6 +114520,7 @@ const ModernView = ({
       if (autoInitiateTriggeredRef.current) return;
       if (isWidgetOpenRef.current) return;
       if (isVoiceModeRef.current) return;
+      if (userMessagesLengthRef.current >= 1) return;
       autoInitiateTriggeredRef.current = true;
       void (async () => {
         const hasMicPermission = await hasGrantedMicrophonePermission();
@@ -114510,7 +114536,7 @@ const ModernView = ({
   }, [autoInitiate, autoInitiateTime, allowVoice]);
   reactExports.useEffect(() => {
     if (!autoInitiatePendingOpenRef.current) return;
-    if (agentState !== "speaking") return;
+    if (agentState !== "speaking" && agentState !== "listening") return;
     autoInitiatePendingOpenRef.current = false;
     if (!isWidgetOpenRef.current) {
       setWidgetOpen(true);
@@ -114566,12 +114592,6 @@ const ModernView = ({
     if (e2.key === "Enter" || e2.key === " ") {
       e2.preventDefault();
       handleCloseClick();
-    }
-  };
-  const handleSendKeyDown = (e2) => {
-    if (e2.key === "Enter" || e2.key === " ") {
-      e2.preventDefault();
-      handleSendMessage();
     }
   };
   const handleVoiceNudgeClick = () => {
@@ -127088,7 +127108,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Sat Jun 13 11:49:29 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Mon Jun 15 20:33:15 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -153017,6 +153037,7 @@ const _PushHookService = class _PushHookService {
   constructor({
     metaConfig,
     addMessage,
+    sendMessage,
     openWidget,
     closeWidget,
     isWidgetOpen,
@@ -153028,6 +153049,7 @@ const _PushHookService = class _PushHookService {
   }) {
     __publicField(this, "metaConfig");
     __publicField(this, "addMessageCallback");
+    __publicField(this, "sendMessageCallback");
     __publicField(this, "openWidgetCallback");
     __publicField(this, "closeWidgetCallback");
     __publicField(this, "isWidgetOpenCallback");
@@ -153053,6 +153075,7 @@ const _PushHookService = class _PushHookService {
     __publicField(this, "isConnected", false);
     this.metaConfig = metaConfig;
     this.addMessageCallback = addMessage;
+    this.sendMessageCallback = sendMessage;
     this.openWidgetCallback = openWidget;
     this.closeWidgetCallback = closeWidget;
     this.isWidgetOpenCallback = isWidgetOpen;
@@ -153277,28 +153300,32 @@ const _PushHookService = class _PushHookService {
    * Fire-and-forget: notify backend that user opened widget from SSE popup (push message to LLM).
    * Called when user clicks the popup message to open the widget.
    */
-  callPushToLlmApi(messageContent) {
-    if (!this.metaConfig.hostUrl || !this.metaConfig.clientId || !this.metaConfig.apiKey) {
-      console.warn(
-        "[PushHookService] push_to_llm skipped: missing hostUrl, clientId or apiKey"
-      );
-      return;
-    }
-    const url = `${this.metaConfig.hostUrl}/api/v1/custom_hook/push_to_llm/`;
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": this.metaConfig.apiKey
-      },
-      body: JSON.stringify({
-        client_id: this.metaConfig.clientId,
-        message: messageContent
-      })
-    }).catch((err) => {
-      console.warn("[PushHookService] push_to_llm request failed:", err);
-    });
-  }
+  // private callPushToLlmApi(messageContent: string): void {
+  //   if (
+  //     !this.metaConfig.hostUrl ||
+  //     !this.metaConfig.clientId ||
+  //     !this.metaConfig.apiKey
+  //   ) {
+  //     console.warn(
+  //       '[PushHookService] push_to_llm skipped: missing hostUrl, clientId or apiKey'
+  //     );
+  //     return;
+  //   }
+  //   const url = `${this.metaConfig.hostUrl}/api/v1/custom_hook/push_to_llm/`;
+  //   fetch(url, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'x-api-key': this.metaConfig.apiKey,
+  //     },
+  //     body: JSON.stringify({
+  //       client_id: this.metaConfig.clientId,
+  //       message: messageContent,
+  //     }),
+  //   }).catch(err => {
+  //     console.warn('[PushHookService] push_to_llm request failed:', err);
+  //   });
+  // }
   /**
    * Handles incoming push message
    */
@@ -153349,11 +153376,13 @@ const _PushHookService = class _PushHookService {
           console.log(
             `[PushHookService] Opening widget from popup (source=${source})`
           );
-          this.addMessageCallback(message);
           if (source === "sse" || source === "proactive_hook") {
-            this.callPushToLlmApi(message.content);
+            this.openWidgetCallback();
+            void this.sendMessageCallback("HOOK: " + message.content);
+          } else {
+            this.addMessageCallback(message);
+            this.openWidgetCallback();
           }
-          this.openWidgetCallback();
           if (this.popupCleanup) {
             this.popupCleanup();
             this.popupCleanup = null;
