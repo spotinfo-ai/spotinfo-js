@@ -39046,7 +39046,7 @@ const _PersonalizedHookService = class _PersonalizedHookService {
   constructor({
     metaConfig,
     openWidget,
-    addMessage,
+    // addMessage,
     sendMessage,
     position: position2 = DEFAULT_POSITION,
     popupType = "legacy",
@@ -39054,7 +39054,7 @@ const _PersonalizedHookService = class _PersonalizedHookService {
     showPopupPrimaryBtn = true
   }) {
     __publicField(this, "metaConfig");
-    __publicField(this, "addMessageCallback");
+    // private addMessageCallback: (message: Message) => void;
     __publicField(this, "sendMessageCallback");
     __publicField(this, "openWidgetCallback");
     __publicField(this, "pollingInterval", null);
@@ -39074,7 +39074,6 @@ const _PersonalizedHookService = class _PersonalizedHookService {
     __publicField(this, "botName", "Aanya");
     __publicField(this, "showPopupPrimaryBtn", true);
     this.metaConfig = metaConfig;
-    this.addMessageCallback = addMessage;
     this.sendMessageCallback = sendMessage;
     this.openWidgetCallback = openWidget;
     this.position = position2;
@@ -39348,11 +39347,11 @@ const _PersonalizedHookService = class _PersonalizedHookService {
             const message = {
               id: crypto.randomUUID(),
               content: hookMessage,
-              sender: "bot",
+              // sender: 'bot',
+              sender: "user",
               timestamp: /* @__PURE__ */ new Date(),
               references: []
             };
-            this.addMessageCallback(message);
             this.showMessagePopup(message, reason);
             this.stopPolling();
             return;
@@ -127111,7 +127110,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Thu Jun 18 18:24:45 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Thu Jun 18 18:48:27 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
