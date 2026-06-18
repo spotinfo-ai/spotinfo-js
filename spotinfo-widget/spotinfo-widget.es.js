@@ -37238,10 +37238,7 @@ const initPostHog = (postHogApiKey, clientId, distinctId, collectionApiKey) => {
   if (!isCapturePatched && typeof sa.capture === "function") {
     const originalCapture = sa.capture.bind(sa);
     sa.capture = function(event, properties = {}, options = {}) {
-      console.log("[DATA_SECURITY] event = ", event);
-      console.log("[DATA_SECURITY] properties = ", properties);
       const cleanedProps = sanitizeProperties(properties);
-      console.log("[DATA_SECURITY] cleanedProps = ", cleanedProps);
       const sessionUTM = getSessionUTM();
       const enhancedProperties = {
         ...cleanedProps,
@@ -39005,7 +39002,7 @@ const showMessagePopupUtil = (message, _position, callbacks, userId, messageSour
           }
         },
         onOpenWidget: () => {
-          console.log("[PopupUtils] Opening widget from popup in sleek view");
+          console.log("[PopupUtils] Opening widget from popup");
           if (metaConfig) {
             reportHookClick(metaConfig);
           }
@@ -39023,11 +39020,6 @@ const showMessagePopupUtil = (message, _position, callbacks, userId, messageSour
       messageId: message.id,
       messageContent: message.content,
       ...messageSource && { messageSource }
-    });
-    console.log("[PopupUtils] Popup shown:", {
-      messageId: message.id,
-      containerId: container.id,
-      containerExists: !!document.getElementById("spotinfo-message-popup")
     });
     return cleanupFunction;
   } catch (error2) {
@@ -39055,6 +39047,7 @@ const _PersonalizedHookService = class _PersonalizedHookService {
     metaConfig,
     openWidget,
     addMessage,
+    sendMessage,
     position: position2 = DEFAULT_POSITION,
     popupType = "legacy",
     botName = "Aanya",
@@ -39062,6 +39055,7 @@ const _PersonalizedHookService = class _PersonalizedHookService {
   }) {
     __publicField(this, "metaConfig");
     __publicField(this, "addMessageCallback");
+    __publicField(this, "sendMessageCallback");
     __publicField(this, "openWidgetCallback");
     __publicField(this, "pollingInterval", null);
     __publicField(this, "initialDelayTimeout", null);
@@ -39081,6 +39075,7 @@ const _PersonalizedHookService = class _PersonalizedHookService {
     __publicField(this, "showPopupPrimaryBtn", true);
     this.metaConfig = metaConfig;
     this.addMessageCallback = addMessage;
+    this.sendMessageCallback = sendMessage;
     this.openWidgetCallback = openWidget;
     this.position = position2;
     this.popupType = popupType;
@@ -39242,6 +39237,7 @@ const _PersonalizedHookService = class _PersonalizedHookService {
         onOpenWidget: () => {
           console.log("[PersonalizedHookService] Opening widget from popup");
           this.openWidgetCallback();
+          void this.sendMessageCallback("HOOK: " + message.content);
           if (this.popupCleanup) {
             this.popupCleanup();
             this.popupCleanup = null;
@@ -64165,7 +64161,13 @@ function ChatProvider({
   }, [onWidgetToggle]);
   const sendMessageFromPushHook = reactExports.useCallback((content2) => {
     if (!sendMessageRef.current) return;
-    void sendMessageRef.current(content2);
+    const message = content2.startsWith("HOOK:") ? content2.substring(5).trim() : content2;
+    void sendMessageRef.current(message);
+  }, []);
+  const sendMessageFromPersonalizedHook = reactExports.useCallback((content2) => {
+    if (!sendMessageRef.current) return;
+    const message = content2.startsWith("HOOK:") ? content2.substring(5).trim() : content2;
+    void sendMessageRef.current(message);
   }, []);
   reactExports.useEffect(() => {
     setCurrentConfig(config);
@@ -64181,6 +64183,7 @@ function ChatProvider({
           metaConfig: currentMetaConfig,
           openWidget: openWidgetAndStopPolling,
           addMessage: internalAddMessage,
+          sendMessage: sendMessageFromPersonalizedHook,
           position: config.position,
           popupType: config.popupType,
           botName: config.botName,
@@ -127108,7 +127111,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Mon Jun 15 20:33:15 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Thu Jun 18 18:24:45 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -153036,7 +153039,7 @@ const _PushHookService = class _PushHookService {
   // Track actual connection state
   constructor({
     metaConfig,
-    addMessage,
+    // addMessage,
     sendMessage,
     openWidget,
     closeWidget,
@@ -153048,7 +153051,7 @@ const _PushHookService = class _PushHookService {
     onHookActedOn
   }) {
     __publicField(this, "metaConfig");
-    __publicField(this, "addMessageCallback");
+    // private addMessageCallback: (message: Message) => void;
     __publicField(this, "sendMessageCallback");
     __publicField(this, "openWidgetCallback");
     __publicField(this, "closeWidgetCallback");
@@ -153074,7 +153077,6 @@ const _PushHookService = class _PushHookService {
     __publicField(this, "isConnecting", false);
     __publicField(this, "isConnected", false);
     this.metaConfig = metaConfig;
-    this.addMessageCallback = addMessage;
     this.sendMessageCallback = sendMessage;
     this.openWidgetCallback = openWidget;
     this.closeWidgetCallback = closeWidget;
@@ -153355,7 +153357,8 @@ const _PushHookService = class _PushHookService {
     const message = {
       id: crypto.randomUUID(),
       content: messageContent,
-      sender: "bot",
+      // sender: 'bot',
+      sender: "user",
       timestamp: /* @__PURE__ */ new Date(),
       references: []
     };
@@ -153380,7 +153383,7 @@ const _PushHookService = class _PushHookService {
             this.openWidgetCallback();
             void this.sendMessageCallback("HOOK: " + message.content);
           } else {
-            this.addMessageCallback(message);
+            void this.sendMessageCallback("HOOK: " + message.content);
             this.openWidgetCallback();
           }
           if (this.popupCleanup) {
