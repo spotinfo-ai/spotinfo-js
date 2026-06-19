@@ -103042,9 +103042,11 @@ const getDisplayUrl = (url) => {
   }
 };
 const convertBareUrlsToMarkdownLinks = (rawContent) => {
-  const parts = rawContent.split(/(```[\s\S]*?```)/g);
+  const parts = rawContent.split(/(```[\s\S]*?```|\[[^\]]*\]\([^)]*\))/g);
   return parts.map((part) => {
-    if (part.startsWith("```") && part.endsWith("```")) {
+    const isCodeBlock = part.startsWith("```") && part.endsWith("```");
+    const isMarkdownLink = part.startsWith("[") && /\]\([^)]*\)$/.test(part);
+    if (isCodeBlock || isMarkdownLink) {
       return part;
     }
     return part.replace(BARE_URL_REGEX, (_match, prefix, url) => {
@@ -103097,17 +103099,22 @@ const MarkdownRenderer = ({
               ) : /* @__PURE__ */ jsxRuntimeExports.jsx("code", { className: "markdown-inline-code", children });
             },
             pre: ({ children }) => /* @__PURE__ */ jsxRuntimeExports.jsx("pre", { className: "markdown-code-block", children }),
-            a: ({ href }) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "a",
-              {
-                href,
-                target: "_blank",
-                rel: "noopener noreferrer",
-                className: "markdown-link",
-                "aria-label": `Open link ${href ?? ""}`,
-                title: href,
-                children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "markdown-link-label", children: getShortLinkLabel(href) })
-              }
+            a: ({ href }) => (
+              // Render links as buttons with a short CTA label (e.g. "Open
+              // Link") instead of the raw URL/anchor text; the full URL is
+              // still available via the `title` attribute and aria-label.
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "a",
+                {
+                  href,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  className: "markdown-link",
+                  "aria-label": `Open link ${href ?? ""}`,
+                  title: href,
+                  children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "markdown-link-label", children: getShortLinkLabel(href) })
+                }
+              )
             ),
             blockquote: ({ children }) => /* @__PURE__ */ jsxRuntimeExports.jsx("blockquote", { className: "markdown-blockquote", children }),
             h1: ({ children }) => /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "markdown-heading-1", children }),
@@ -127110,7 +127117,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Thu Jun 18 18:48:27 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Fri Jun 19 12:56:20 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
