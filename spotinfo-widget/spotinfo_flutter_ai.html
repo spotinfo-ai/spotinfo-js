@@ -31,43 +31,109 @@
         window.spotinfoConfigFromFlutter = window.spotinfoConfigFromFlutter || {};
 
         function applyConfigToWidget(widgetElement, config) {
+            const finalConfig = {
+                // Core
+                'user-journey': false,
+                'allow-voice': true,
+                'use-whatsapp': false,
+                'whatsapp-greeting': "Let's continue our interaction here.",
+                'use-telephony': false,
+                'auto-initiate': false,
+
+                // Colors & Typography
+                'primary-color': '#3641db',
+                'secondary-color': '#E9E6FF',
+                'message-text-color': '#000000',
+                'button-content-color': '#ffffff',
+                'root-border-color': '#3641db',
+                'root-text-color': '#3641db',
+                'font-family': 'Inter',
+                'message-font-size': '14px',
+                'bot-name': 'Revy',
+
+                // Launcher Button
+                'root-button-height': '48px',
+                'root-button-width': '48px',
+                'root-button-shape': 'circular-pill',
+                'root-button-shape-mobile': 'circular',
+                'root-button-logo': 'https://spotinfo.ai/public_images/Spotinfo-White.png',
+                'root-logo-height': '40px',
+                'root-logo-width': '40px',
+                'desktop-x-offset': '20px',
+                'desktop-y-offset': '20px',
+                'mobile-x-offset': '4vw',
+                'mobile-y-offset': '8vh',
+                'root-title': 'Ask Revy',
+                'root-subtitle': 'Online · replies in 10s',
+
+                // Main Widget
+                'view-type': 'modern_view',
+                'width': '400px',
+                'height': '600px',
+                'placeholder': 'Type your question here...',
+                'header-logo': 'https://spotinfo.ai/public_images/Spotinfo-White.png',
+                'show-timestamp': true,
+                'show-date-separator': true,
+                'show-avatars': true,
+                'ai-avatar': 'https://spotinfo.ai/public_images/Spotinfo-White.png',
+                'footer-text': 'Powered by SpotInfo',
+
+                // Popup
+                'popup-type': 'modern',
+                'show-popup-primary-btn': false,
+
+                // Debug / Misc
+                'show-client-id': true,
+
+                // Merchant config overrides defaults
+                ...config,
+            };
+
             const setAttr = (attrName, value) => {
                 if (value !== undefined && value !== null) {
-                    const finalValue = (typeof value === 'boolean') ? String(value) : value;
-                    widgetElement.setAttribute(attrName, finalValue);
+                    widgetElement.setAttribute(
+                        attrName,
+                        typeof value === 'boolean' ? String(value) : value
+                    );
                 }
             };
 
-            setAttr('api-key', config['api-key']);
-            setAttr('root-button-height', config['root-button-height']);
-            setAttr('root-button-width', config['root-button-width']);
-            setAttr('root-button-shape', config['root-button-shape']);
-            setAttr('root-button-logo', config['root-button-logo']);
-            setAttr('root-logo-height', config['root-logo-height']);
-            setAttr('root-logo-width', config['root-logo-width']);
-            setAttr('view-type', config['view-type']);
-            setAttr('width', config['width']);
-            setAttr('height', config['height']);
-            setAttr('primary-color', config['primary-color']);
-            setAttr('secondary-color', config['secondary-color']);
-            setAttr('message-text-color', config['message-text-color']);
-            setAttr('button-content-color', config['button-content-color']);
-            setAttr('message-font-size', config['message-font-size']);
-            setAttr('placeholder', config['placeholder']);
-            setAttr('user-journey', config['user-journey']);
-            setAttr('allow-voice', config['allow-voice']);
+            Object.entries(finalConfig).forEach(([key, value]) => {
+                if (key !== 'proactive-engagement') {
+                    setAttr(key, value);
+                }
+            });
 
-            if (config['proactive-engagement']) {
-                const paConfig = typeof config['proactive-engagement'] === 'string' ? config['proactive-engagement'] : JSON.stringify(config['proactive-engagement']);
+            if (finalConfig['proactive-engagement']) {
+                const paConfig =
+                    typeof finalConfig['proactive-engagement'] === 'string'
+                        ? finalConfig['proactive-engagement']
+                        : JSON.stringify(finalConfig['proactive-engagement']);
+
                 widgetElement.setAttribute('proactive-engagement', paConfig);
             }
         }
 
         window.initSpotinfoWidget = function (configFromFlutter) {
+            console.log("=== initSpotinfoWidget called ===");
+            console.log("configFromFlutter", configFromFlutter);
+
             Object.assign(window.spotinfoConfigFromFlutter, configFromFlutter);
+
+            console.log(
+                "mergedConfig",
+                window.spotinfoConfigFromFlutter
+            );
+
             var widget = document.querySelector('spotinfo-chat');
+
+            console.log("widget found?", !!widget);
+
             if (widget) {
-                applyConfigToWidget(widget, window.spotinfoConfigFromFlutter);
+                applyConfigToWidget(
+                    widget,
+                    window.spotinfoConfigFromFlutter
+                );
             }
         };
 
