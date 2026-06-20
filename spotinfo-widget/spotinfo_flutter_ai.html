@@ -25,6 +25,11 @@
     </style>
 </head>
 
+
+widget.setAttribute('api-key', 'siak3wln44brn5bb2exf'); // mandatory - get from API Keys page
+// widget.setAttribute('user-id', 'akshat_2026_06_20_2'); // mandatory - get from API Keys page
+
+
 <body>
 
     <script>
@@ -32,6 +37,8 @@
 
         function applyConfigToWidget(widgetElement, config) {
             const finalConfig = {
+                'api-key': '<your api key>',
+
                 // Core
                 'user-journey': false,
                 'allow-voice': true,
