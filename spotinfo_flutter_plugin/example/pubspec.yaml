@@ -20,7 +20,7 @@ dependencies:
   spotinfo_flutter_plugin:
     git:
       url: https://github.com/spotinfo-ai/spotinfo-js.git
-      ref: v2.0.0
+      ref: main
       path: spotinfo_flutter_plugin
 
   # The following adds the Cupertino Icons font to your application.

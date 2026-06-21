@@ -23,24 +23,26 @@ flutter pub get
 import 'package:spotinfo_flutter_plugin/spotinfo_flutter_plugin.dart';
 
 SpotinfoWidget(
-    apiKey: "YOUR_API_KEY",
-    userJourney: false,
-    allowVoice: false,
-    useWhatsapp: false,
-)
-```
+    apiKey: 'YOUR_API_KEY', // mandatory
+    userId: 'YOUR_USER_ID', // optional
 
-## Full example
-```bash
-SpotinfoWidget(
-    apiKey: "YOUR_API_KEY",
-    viewType: "sleek_view",
+    // Core
+    userJourney: false,
+    allowVoice: false, // set to true if you want to give voice option
+    useWhatsapp: false,
+    whatsappGreeting: "Let's continue our interaction here.",
+    useTelephony: false, // option for users to call Agent on Phone
+    autoInitiate: false, // If true, agent will start voice chat automatically after autoInitiateTime seconds
+
+    // Colors & Typography
     primaryColor: '#3641db',
     secondaryColor: '#E9E6FF',
-    placeholder: "Ask me anything...",
-    userJourney: false,
-    allowVoice: false,
-    useWhatsapp: false,
+    messageTextColor: '#000000',
+    buttonContentColor: '#ffffff',
+    botName: 'Riya',
+
+    // Chat History
+    showClientId: true,
 )
 ```
 
@@ -48,24 +50,58 @@ SpotinfoWidget(
 ```bash
 SpotinfoWidget(
     apiKey: 'YOUR_API_KEY', // mandatory
-    rootButtonShape: "circular", // Optional
-    rootButtonHeight: "72px", // Optional
-    rootButtonWidth: "72px", // Optional
-    rootButtonLogo: 'https://spotinfo.ai/public_images/Spotinfo-White.svg', // Optional
-    rootLogoHeight: "64px", // Optional
-    rootLogoWidth: "64px", // Optional
-    viewType: "sleek_view", // Optional
-    widgetWidth: "150px", // Optional
-    widgetHeight: "300px", // Optional
-    primaryColor: '#3641db', // Optional
-    secondaryColor: '#E9E6FF', // Optional
-    messageTextColor: '#000000', // Optional
-    buttonContentColor: '#ffffff', // Optional
-    messageFontSize: '14px', // Optional
-    placeholder: 'Ask me anything ...', // Optional
-    userJourney: false, // keep false for app
+    userId: 'YOUR_USER_ID', // optional
+
+    // Core
+    userJourney: false,
     allowVoice: false, // set to true if you want to give voice option
     useWhatsapp: false,
+    whatsappGreeting: "Let's continue our interaction here.",
+    useTelephony: false, // option for users to call Agent on Phone
+    autoInitiate: false, // If true, agent will start voice chat automatically after autoInitiateTime seconds
+    autoInitiateTime: 5,
+
+    // Colors & Typography
+    primaryColor: '#3641db',
+    secondaryColor: '#E9E6FF',
+    messageTextColor: '#000000',
+    buttonContentColor: '#ffffff',
+    fontFamily: 'Inter',
+    messageFontSize: '14px',
+    botName: 'Riya',
+
+    // Launcher Button
+    rootButtonHeight: '48px',
+    rootButtonWidth: '48px',
+    rootButtonShape: 'circular-pill', // circular-pill | boxed-pill | circular | boxed
+    rootButtonShapeMobile: 'circular-pill', // circular-pill | boxed-pill | circular | boxed
+    rootButtonLogo: 'https://spotinfo.ai/public_images/female agent.png',
+    rootLogoHeight: '40px',
+    rootLogoWidth: '40px',
+    rootBorderColor: '#3641db',
+    rootTextColor: '#3641db',
+    desktopXOffset: '20px',
+    desktopYOffset: '20px',
+    mobileXOffset: '-40vw',
+    mobileYOffset: '-80vh',
+    rootTitle: 'Ask Riya',
+    rootSubtitle: 'Online · replies in 10s',
+
+    // Main Widget
+    widgetWidth: '400px',
+    widgetHeight: '600px',
+    placeholder: 'Type your question here...',
+    headerLogo: 'https://spotinfo.ai/public_images/female agent.png',
+    showTimestamp: true,
+    showDateSeparator: true,
+    showAvatars: true,
+    aiAvatar: 'https://spotinfo.ai/public_images/Spotinfo-White.png',
+
+    // Popup
+    showPopupPrimaryBtn: false,
+
+    // Chat History
+    showClientId: true,
 )
 ```
 
