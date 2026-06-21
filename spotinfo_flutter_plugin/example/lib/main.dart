@@ -81,10 +81,8 @@ class MyApp extends StatelessWidget {
                 showDateSeparator: true,
                 showAvatars: true,
                 aiAvatar: 'https://spotinfo.ai/public_images/Spotinfo-White.png',
-                footerText: 'Powered by SpotInfo',
 
                 // Popup
-                popupType: 'modern',
                 showPopupPrimaryBtn: false,
 
                 // Chat History
