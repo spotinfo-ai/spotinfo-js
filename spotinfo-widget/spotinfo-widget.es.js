@@ -39087,6 +39087,7 @@ const removeMessagePopupUtil = () => {
     window.spotinfoSetButtonVisibility(true);
   }
 };
+const generateUuid = () => v4();
 const _PersonalizedHookService = class _PersonalizedHookService {
   constructor({
     metaConfig,
@@ -39390,7 +39391,7 @@ const _PersonalizedHookService = class _PersonalizedHookService {
               `[PersonalizedHookService - ${this.metaConfig.userId}] Received hook message, showing popup`
             );
             const message = {
-              id: crypto.randomUUID(),
+              id: generateUuid(),
               content: hookMessage,
               // sender: 'bot',
               sender: "user",
@@ -64353,7 +64354,7 @@ function ChatProvider({
   const sendJourneyEvent = reactExports.useCallback(async (journeyPageVisit) => {
     if (!conversationService.current) return;
     const journeyMessage = {
-      id: crypto.randomUUID(),
+      id: generateUuid(),
       content: JSON.stringify(journeyPageVisit),
       // Send PageVisit as stringified JSON
       sender: "web-journey",
@@ -64435,7 +64436,7 @@ function ChatProvider({
       setIsLoading(true);
       setErrorMessage(null);
       const userMessage = {
-        id: crypto.randomUUID(),
+        id: generateUuid(),
         content: content2,
         sender: "user",
         timestamp: /* @__PURE__ */ new Date(),
@@ -64452,7 +64453,7 @@ function ChatProvider({
         return;
       }
       const botMessage = {
-        id: crypto.randomUUID(),
+        id: generateUuid(),
         content: "",
         sender: "bot",
         timestamp: /* @__PURE__ */ new Date(),
@@ -64610,7 +64611,7 @@ function ChatProvider({
       }
       if (!isSleekView) {
         const separatorMessage = {
-          id: crypto.randomUUID(),
+          id: generateUuid(),
           content: separatorText,
           sender: "bot",
           timestamp: /* @__PURE__ */ new Date(),
@@ -64625,7 +64626,7 @@ function ChatProvider({
     setIsSessionLoading(true);
     prepareSessionTransition("--- New conversation started ---");
     disconnectVoiceForClientSwitch();
-    const newClientId = crypto.randomUUID();
+    const newClientId = generateUuid();
     void (async () => {
       try {
         await conversationService.current.initiateNewChat(
@@ -111536,7 +111537,8 @@ const UseTranscriber = () => {
       const isAgent = participant.isAgent || false;
       for (const segment of segments) {
         if (!segment || typeof segment.text !== "string") continue;
-        const segmentId = segment.id || `segment_${crypto.randomUUID()}`;
+        const segmentId = segment.id || `segment_${generateUuid()};
+      } `;
         const normalizedSegmentFullText = normalizeText(segment.text);
         const isSegmentFinal = segment.final || false;
         const previousUtteranceData = previousUtterancesRef.current[segmentId];
@@ -111554,7 +111556,7 @@ const UseTranscriber = () => {
         }
         let messageIdForThisTurn;
         if (isNewSegment) {
-          messageIdForThisTurn = crypto.randomUUID();
+          messageIdForThisTurn = generateUuid();
         } else {
           messageIdForThisTurn = previousUtteranceData.messageId;
         }
@@ -113099,7 +113101,7 @@ const callPerson = async ({
       },
       body: JSON.stringify({
         client_id: chatMetaConfig.clientId,
-        conversation_id: crypto.randomUUID(),
+        conversation_id: generateUuid(),
         customer_number: phoneNumber,
         client: "web_widget",
         user_attributes: {
@@ -127078,7 +127080,7 @@ function resolveUserId(propUserId) {
       );
       setCookie(COOKIE_USER_ID_KEY, resolvedUserId, COOKIE_EXPIRATION_MINUTES);
     } else {
-      resolvedUserId = crypto.randomUUID();
+      resolvedUserId = generateUuid();
       console.log(`[UserIdManager] Generated new userId: ${resolvedUserId}`);
       setCookie(COOKIE_USER_ID_KEY, resolvedUserId, COOKIE_EXPIRATION_MINUTES);
     }
@@ -127274,7 +127276,7 @@ function buildMetaConfig(props) {
   const metaConfig = {
     ...defaultMetaConfig,
     ...meta,
-    clientId: meta.clientId || crypto.randomUUID(),
+    clientId: meta.clientId || generateUuid(),
     apiKey: meta.apiKey || defaultMetaConfig.apiKey,
     userJourney: meta.userJourney ?? defaultMetaConfig.userJourney,
     userAttributes: {
@@ -127450,7 +127452,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Sat Jun 20 14:58:45 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Sun Jun 21 10:21:43 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -153698,6 +153700,7 @@ const OBSERVED_ATTRIBUTES = [
   "root-button-height",
   "root-button-width",
   "root-button-shape",
+  "root-button-shape-mobile",
   "root-button-logo",
   "root-logo-height",
   "root-logo-width",
@@ -154118,7 +154121,7 @@ ${declarations}
   }
   initializeIds() {
     if (!this.hasAttribute("client-id") && !this._instanceIdGenerated) {
-      this._generatedClientId = crypto.randomUUID();
+      this._generatedClientId = generateUuid();
       this._instanceIdGenerated = true;
       if (this._generatedClientId) {
         this.setAttribute("client-id", this._generatedClientId);
@@ -154129,7 +154132,7 @@ ${declarations}
       if (userIdFromCookie) {
         this._generatedUserId = userIdFromCookie;
       } else {
-        this._generatedUserId = crypto.randomUUID();
+        this._generatedUserId = generateUuid();
         if (this._generatedUserId) {
           setCookie(
             COOKIE_USER_ID_KEY,
@@ -154712,7 +154715,7 @@ const _PushHookService = class _PushHookService {
       return;
     }
     const message = {
-      id: crypto.randomUUID(),
+      id: generateUuid(),
       content: messageContent,
       // sender: 'bot',
       sender: "user",

@@ -33,6 +33,7 @@
         function applyConfigToWidget(widgetElement, config) {
             const finalConfig = {
                 'api-key': '<your api key>',
+                'user-id': '<user-id>',
 
                 // Core
                 'user-journey': false,
@@ -41,14 +42,13 @@
                 'whatsapp-greeting': "Let's continue our interaction here.",
                 'use-telephony': false,
                 'auto-initiate': false,
+                'auto-initiate-time': 5,
 
                 // Colors & Typography
                 'primary-color': '#3641db',
                 'secondary-color': '#E9E6FF',
                 'message-text-color': '#000000',
                 'button-content-color': '#ffffff',
-                'root-border-color': '#3641db',
-                'root-text-color': '#3641db',
                 'font-family': 'Inter',
                 'message-font-size': '14px',
                 'bot-name': 'Revy',
@@ -61,6 +61,8 @@
                 'root-button-logo': 'https://spotinfo.ai/public_images/Spotinfo-White.png',
                 'root-logo-height': '40px',
                 'root-logo-width': '40px',
+                'root-border-color': '#3641db',
+                'root-text-color': '#3641db',
                 'desktop-x-offset': '20px',
                 'desktop-y-offset': '20px',
                 'mobile-x-offset': '4vw',
@@ -114,6 +116,7 @@
 
                 widgetElement.setAttribute('proactive-engagement', paConfig);
             }
+            console.log("final config = ", finalConfig)
         }
 
         window.initSpotinfoWidget = function (configFromFlutter) {
@@ -153,6 +156,10 @@
         // This ensures your Worker's versioning and caching logic is applied.
         const umdScriptUrl = 'https://www.spotinfo.ai/js/spotinfo-widget.umd.js';
 
+        // Local File
+        // const umdScriptUrl = 'spotinfo-widget.umd.js';
+
+
         loadScript(umdScriptUrl)
             .then(() => {
                 console.log('spotinfo-widget.umd.js loaded via Worker.');
@@ -187,7 +194,6 @@
         document.addEventListener('DOMContentLoaded', startObserver);
 
     </script>
-
     <spotinfo-chat></spotinfo-chat>
 
 </body>
