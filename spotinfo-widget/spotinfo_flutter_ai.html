@@ -32,8 +32,9 @@
 
         function applyConfigToWidget(widgetElement, config) {
             const finalConfig = {
-                'api-key': '<your api key>',
-                'user-id': '<user-id>',
+                // 'api-key': '<your api key>',
+                // 'user-id': '<user-id>',
+                // widget does not updated value of api keys and thus we pass <your api key> is uncommented. Same for user-id
 
                 // Core
                 'user-journey': false,
@@ -154,10 +155,10 @@
         }
 
         // This ensures your Worker's versioning and caching logic is applied.
-        const umdScriptUrl = 'https://www.spotinfo.ai/js/spotinfo-widget.umd.js';
+        // const umdScriptUrl = 'https://www.spotinfo.ai/js/spotinfo-widget.umd.js';
 
         // Local File
-        // const umdScriptUrl = 'spotinfo-widget.umd.js';
+        const umdScriptUrl = 'spotinfo-widget.umd.js';
 
 
         loadScript(umdScriptUrl)

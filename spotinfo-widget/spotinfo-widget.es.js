@@ -127452,7 +127452,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Sun Jun 21 10:21:43 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Sun Jun 21 12:57:45 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
