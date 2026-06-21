@@ -31999,11 +31999,315 @@ function v4(options, buf, offset) {
   rnds[8] = rnds[8] & 63 | 128;
   return unsafeStringify(rnds);
 }
+const generateUuid = () => v4();
+const isPlaceholderCredential = (value) => {
+  if (!(value == null ? void 0 : value.trim())) return true;
+  const normalized = value.trim().toLowerCase().replace(/[<>]/g, "");
+  return normalized === "your-api-key-here" || normalized === "your_api_key" || normalized === "you_api_key" || normalized === "your_user_id" || normalized === "your-user-id";
+};
+function getCookie(name2) {
+  if (typeof document === "undefined") {
+    return null;
+  }
+  const nameEQ = name2 + "=";
+  const ca = document.cookie.split(";");
+  for (let i2 = 0; i2 < ca.length; i2++) {
+    let c2 = ca[i2];
+    while (c2.charAt(0) === " ") c2 = c2.substring(1, c2.length);
+    if (c2.indexOf(nameEQ) === 0) return c2.substring(nameEQ.length, c2.length);
+  }
+  return null;
+}
+function setCookie$1(name2, value, minutes) {
+  if (typeof document === "undefined") {
+    return;
+  }
+  let expires = "";
+  {
+    const date = /* @__PURE__ */ new Date();
+    date.setTime(date.getTime() + minutes * 60 * 1e3);
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name2 + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+}
+function resolveUserId(propUserId) {
+  let resolvedUserId;
+  const normalizedPropUserId = propUserId && typeof propUserId === "string" && !isPlaceholderCredential(propUserId) ? propUserId.trim() : void 0;
+  if (normalizedPropUserId) {
+    resolvedUserId = normalizedPropUserId;
+    console.log(`[UserIdManager] Using userId from props: ${resolvedUserId}`);
+    const userIdFromCookie = getCookie(COOKIE_USER_ID_KEY);
+    if (userIdFromCookie !== resolvedUserId) {
+      setCookie$1(COOKIE_USER_ID_KEY, resolvedUserId, COOKIE_EXPIRATION_MINUTES);
+    } else if (userIdFromCookie) {
+      setCookie$1(COOKIE_USER_ID_KEY, resolvedUserId, COOKIE_EXPIRATION_MINUTES);
+    }
+  } else {
+    const userIdFromCookie = getCookie(COOKIE_USER_ID_KEY);
+    if (userIdFromCookie) {
+      resolvedUserId = userIdFromCookie;
+      console.log(
+        `[UserIdManager] Using userId from cookie: ${resolvedUserId}`
+      );
+      setCookie$1(COOKIE_USER_ID_KEY, resolvedUserId, COOKIE_EXPIRATION_MINUTES);
+    } else {
+      resolvedUserId = generateUuid();
+      console.log(`[UserIdManager] Generated new userId: ${resolvedUserId}`);
+      setCookie$1(COOKIE_USER_ID_KEY, resolvedUserId, COOKIE_EXPIRATION_MINUTES);
+    }
+  }
+  return resolvedUserId;
+}
+const DEFAULT_POSITION_OFFSET = "20px";
+function getPositionStyles(position2 = DEFAULT_POSITION, offsets = {}) {
+  const {
+    xOffset = DEFAULT_POSITION_OFFSET,
+    yOffset = DEFAULT_POSITION_OFFSET
+  } = offsets;
+  const [vertical, horizontal] = position2.split("-");
+  let expansionDirection;
+  if (vertical === "bottom" && horizontal === "right") {
+    expansionDirection = "up-left";
+  } else if (vertical === "bottom" && horizontal === "left") {
+    expansionDirection = "up-right";
+  } else if (vertical === "top" && horizontal === "right") {
+    expansionDirection = "down-left";
+  } else {
+    expansionDirection = "down-right";
+  }
+  return {
+    vertical,
+    horizontal,
+    verticalValue: yOffset,
+    horizontalValue: xOffset,
+    transformOrigin: `${vertical} ${horizontal}`,
+    expansionDirection
+  };
+}
+function getExpansionDirection(position2 = DEFAULT_POSITION) {
+  return getPositionStyles(position2).expansionDirection;
+}
+function getPositionCSSClass(position2 = DEFAULT_POSITION) {
+  return `position-${position2}`;
+}
+function getHoverColor(hexColor) {
+  if (hexColor.startsWith("rgb")) {
+    const rgbMatch = hexColor.match(/\d+/g);
+    if (rgbMatch && rgbMatch.length >= 3) {
+      const r2 = Math.max(0, parseInt(rgbMatch[0]) - 25);
+      const g2 = Math.max(0, parseInt(rgbMatch[1]) - 25);
+      const b2 = Math.max(0, parseInt(rgbMatch[2]) - 25);
+      return `rgb(${r2}, ${g2}, ${b2})`;
+    }
+  }
+  const hex2 = hexColor.replace("#", "");
+  if (hex2.length === 3) {
+    const r2 = Math.max(0, parseInt(hex2[0] + hex2[0], 16) - 25);
+    const g2 = Math.max(0, parseInt(hex2[1] + hex2[1], 16) - 25);
+    const b2 = Math.max(0, parseInt(hex2[2] + hex2[2], 16) - 25);
+    return `#${r2.toString(16).padStart(2, "0")}${g2.toString(16).padStart(2, "0")}${b2.toString(16).padStart(2, "0")}`;
+  } else if (hex2.length === 6) {
+    const r2 = Math.max(0, parseInt(hex2.slice(0, 2), 16) - 25);
+    const g2 = Math.max(0, parseInt(hex2.slice(2, 4), 16) - 25);
+    const b2 = Math.max(0, parseInt(hex2.slice(4, 6), 16) - 25);
+    return `#${r2.toString(16).padStart(2, "0")}${g2.toString(16).padStart(2, "0")}${b2.toString(16).padStart(2, "0")}`;
+  }
+  return "#4f46e5";
+}
+function getThemeStyles(color2) {
+  if (!color2) return {};
+  const hoverColor = getHoverColor(color2);
+  return {
+    header: {
+      backgroundColor: color2,
+      // borderBottom: `1px solid ${color}`,
+      color: "#ffffff"
+    },
+    buttonStyles: {
+      primary: { backgroundColor: color2 }
+    },
+    cssVars: {
+      primaryColor: color2,
+      primaryColorHover: hoverColor
+    }
+  };
+}
+const invalidfontFamilyPattern = /[,;{}<>\\\n\r]/;
+const resolvefontFamily = (fontFamily) => {
+  const [defaultfontFamily, ...defaultfontFamilyFallbackParts] = defaultWidgetConfig.fontFamily.split(",");
+  const fallbackfontFamily = defaultfontFamilyFallbackParts.join(",").trim();
+  const resolvedfontFamily = (fontFamily == null ? void 0 : fontFamily.trim()) || defaultfontFamily.trim();
+  const fontFamilyStack = fallbackfontFamily ? `${resolvedfontFamily}, ${fallbackfontFamily}` : resolvedfontFamily;
+  if (invalidfontFamilyPattern.test(resolvedfontFamily)) {
+    return defaultWidgetConfig.fontFamily;
+  }
+  if (typeof CSS !== "undefined" && typeof CSS.supports === "function" && !CSS.supports("font-family", fontFamilyStack)) {
+    return defaultWidgetConfig.fontFamily;
+  }
+  return fontFamilyStack;
+};
+function buildWidgetConfig(props) {
+  var _a, _b;
+  const {
+    primaryColor,
+    secondaryColor,
+    showTimestamp,
+    showClientId,
+    aiAvatar,
+    userAvatar,
+    showAvatars,
+    height,
+    width,
+    desktopXOffset,
+    desktopYOffset,
+    mobileXOffset,
+    mobileYOffset,
+    fontFamily,
+    messageFontSize,
+    messageTextColor,
+    allowVoice,
+    greetings,
+    position: position2,
+    showTranscription,
+    viewType,
+    useWhatsapp,
+    useTelephony,
+    autoInitiate,
+    autoInitiateTime,
+    whatsappPhoneNumber,
+    whatsappGreeting,
+    headerTitle,
+    headerSubtitle,
+    headerLogo,
+    botName,
+    rootBorderColor,
+    rootTextColor,
+    rootTitle,
+    rootSubtitle,
+    footerText,
+    placeholder,
+    showDateSeparator,
+    engagementHookImagePath,
+    engagementHookImageWidth,
+    engagementHookImageHeight,
+    popupType,
+    showPopupPrimaryBtn
+  } = props;
+  const defaultConfigWithLayout = {
+    ...defaultWidgetConfig,
+    ...width && { width },
+    ...height && { height },
+    ...desktopXOffset && { desktopXOffset },
+    ...desktopYOffset && { desktopYOffset },
+    ...mobileXOffset && { mobileXOffset },
+    ...mobileYOffset && { mobileYOffset }
+  };
+  const themeStyles = getThemeStyles(primaryColor);
+  const widgetConfig = {
+    ...defaultConfigWithLayout,
+    ...primaryColor && { primaryColor },
+    ...secondaryColor && { secondaryColor },
+    ...showTimestamp !== void 0 && { showTimestamp },
+    ...showClientId !== void 0 && { showClientId },
+    ...aiAvatar && { aiAvatar },
+    ...userAvatar && { userAvatar },
+    ...showAvatars !== void 0 && { showAvatars },
+    ...fontFamily && { fontFamily: resolvefontFamily(fontFamily) },
+    ...messageFontSize && { messageFontSize },
+    ...messageTextColor && { messageTextColor },
+    ...allowVoice !== void 0 && { allowVoice },
+    ...position2 && { position: position2 },
+    ...showTranscription !== void 0 && { showTranscription },
+    ...viewType && { viewType },
+    ...useWhatsapp !== void 0 && { useWhatsapp },
+    ...useTelephony !== void 0 && { useTelephony },
+    ...autoInitiate !== void 0 && { autoInitiate },
+    ...autoInitiateTime !== void 0 && { autoInitiateTime },
+    ...whatsappPhoneNumber && { whatsappPhoneNumber },
+    ...whatsappGreeting && { whatsappGreeting },
+    ...headerTitle && { headerTitle },
+    ...headerSubtitle && { headerSubtitle },
+    ...headerLogo && { headerLogo },
+    ...botName && { botName },
+    ...rootBorderColor && { rootBorderColor },
+    ...rootTextColor && { rootTextColor },
+    ...rootTitle && { rootTitle },
+    ...rootSubtitle && { rootSubtitle },
+    ...footerText && { footerText },
+    ...placeholder && { placeholder },
+    ...showDateSeparator !== void 0 && { showDateSeparator },
+    ...engagementHookImagePath && { engagementHookImagePath },
+    ...engagementHookImageWidth && { engagementHookImageWidth },
+    ...engagementHookImageHeight && { engagementHookImageHeight },
+    ...popupType && { popupType },
+    ...showPopupPrimaryBtn !== void 0 && { showPopupPrimaryBtn },
+    greetings,
+    // Use custom greetings or do not use
+    // Apply custom styles with primary color theming
+    customStyles: {
+      ...defaultWidgetConfig.customStyles || {},
+      ...primaryColor && themeStyles.header && {
+        header: {
+          ...((_a = defaultWidgetConfig.customStyles) == null ? void 0 : _a.header) || {},
+          ...themeStyles.header
+        }
+      }
+    },
+    // Apply button styles with primary color
+    buttonStyles: {
+      ...defaultWidgetConfig.buttonStyles || {},
+      ...primaryColor && themeStyles.buttonStyles && {
+        primary: {
+          ...((_b = defaultWidgetConfig.buttonStyles) == null ? void 0 : _b.primary) || {},
+          ...themeStyles.buttonStyles.primary
+        }
+      }
+    }
+  };
+  return widgetConfig;
+}
+function buildMetaConfig(props) {
+  var _a, _b, _c, _d, _e2;
+  const toCredential = (value) => isPlaceholderCredential(value) ? void 0 : value == null ? void 0 : value.trim();
+  const sanitizedApiKey = toCredential(props.apiKey) ?? toCredential((_a = props.chatMetaConfig) == null ? void 0 : _a.apiKey);
+  const sanitizedUserId = toCredential(props.userId) ?? toCredential((_b = props.chatMetaConfig) == null ? void 0 : _b.userId);
+  const meta = {
+    ...props.chatMetaConfig || {},
+    apiKey: sanitizedApiKey,
+    userJourney: props.userJourney ?? ((_c = props.chatMetaConfig) == null ? void 0 : _c.userJourney),
+    userId: sanitizedUserId,
+    clientId: props.clientId ?? ((_d = props.chatMetaConfig) == null ? void 0 : _d.clientId)
+  };
+  const resolvedUserId = resolveUserId(meta.userId);
+  const metaConfig = {
+    ...defaultMetaConfig,
+    ...meta,
+    clientId: meta.clientId || generateUuid(),
+    apiKey: meta.apiKey || defaultMetaConfig.apiKey,
+    userId: resolvedUserId,
+    userJourney: meta.userJourney ?? defaultMetaConfig.userJourney,
+    userAttributes: {
+      ...defaultMetaConfig.userAttributes,
+      ...meta.userAttributes || {},
+      user_id: resolvedUserId,
+      email: ((_e2 = meta.userAttributes) == null ? void 0 : _e2.email) || ""
+    }
+  };
+  return metaConfig;
+}
+function buildConfigs(props) {
+  const widgetConfig = buildWidgetConfig(props);
+  const metaConfig = buildMetaConfig(props);
+  return { widgetConfig, metaConfig };
+}
 class ConversationService {
   constructor(config) {
     __publicField(this, "config");
     __publicField(this, "currentConversationId", null);
     __publicField(this, "abortController", null);
+    this.config = config;
+  }
+  updateConfig(config) {
     this.config = config;
   }
   createRequest(query, senderType) {
@@ -37328,38 +37632,6 @@ const enableBackendEventSending = () => {
 const disableBackendEventSending = () => {
   shouldSendEventsToBackend = false;
 };
-const DEFAULT_POSITION_OFFSET = "20px";
-function getPositionStyles(position2 = DEFAULT_POSITION, offsets = {}) {
-  const {
-    xOffset = DEFAULT_POSITION_OFFSET,
-    yOffset = DEFAULT_POSITION_OFFSET
-  } = offsets;
-  const [vertical, horizontal] = position2.split("-");
-  let expansionDirection;
-  if (vertical === "bottom" && horizontal === "right") {
-    expansionDirection = "up-left";
-  } else if (vertical === "bottom" && horizontal === "left") {
-    expansionDirection = "up-right";
-  } else if (vertical === "top" && horizontal === "right") {
-    expansionDirection = "down-left";
-  } else {
-    expansionDirection = "down-right";
-  }
-  return {
-    vertical,
-    horizontal,
-    verticalValue: yOffset,
-    horizontalValue: xOffset,
-    transformOrigin: `${vertical} ${horizontal}`,
-    expansionDirection
-  };
-}
-function getExpansionDirection(position2 = DEFAULT_POSITION) {
-  return getPositionStyles(position2).expansionDirection;
-}
-function getPositionCSSClass(position2 = DEFAULT_POSITION) {
-  return `position-${position2}`;
-}
 const getClientIP = async () => {
   try {
     const response = await fetch("https://api.ipify.org?format=json");
@@ -38061,7 +38333,7 @@ const getRootDomain = () => {
   }
   return parts.slice(-2).join(".");
 };
-const setCookie$1 = (name2, value, minutes) => {
+const setCookie = (name2, value, minutes) => {
   let expires = "";
   {
     const date = /* @__PURE__ */ new Date();
@@ -38425,7 +38697,7 @@ const useAnalytics = ({
   const identifyUser = (newUserId) => {
     const userIdCookieName = "spotinfo_user_id";
     const cookieExpiryMinutes = 30;
-    setCookie$1(userIdCookieName, newUserId, cookieExpiryMinutes);
+    setCookie(userIdCookieName, newUserId, cookieExpiryMinutes);
   };
   const resetAnalytics = () => {
     sa.reset();
@@ -39087,7 +39359,6 @@ const removeMessagePopupUtil = () => {
     window.spotinfoSetButtonVisibility(true);
   }
 };
-const generateUuid = () => v4();
 const _PersonalizedHookService = class _PersonalizedHookService {
   constructor({
     metaConfig,
@@ -64092,7 +64363,7 @@ function ChatProvider({
     new ConversationService(currentMetaConfig)
   );
   const abortControllerRef = reactExports.useRef(null);
-  const roomPreloadAttemptedRef = reactExports.useRef(false);
+  const preloadedApiKeyRef = reactExports.useRef(null);
   const scrollToBottomCallbackRef = reactExports.useRef(null);
   const sendMessageRef = reactExports.useRef(
     null
@@ -64142,7 +64413,7 @@ function ChatProvider({
   }, [currentMetaConfig.userJourney]);
   reactExports.useEffect(() => {
     const apiKey = currentMetaConfig.apiKey;
-    if (!apiKey || apiKey.trim() === "" || apiKey === "your-api-key-here") {
+    if (isPlaceholderCredential(apiKey)) {
       const errorMsg = "API key is missing or invalid. Please provide a valid API key to use the chat widget.";
       console.error("[ChatWidget Error]:", errorMsg);
       setHasApiKeyError(true);
@@ -64153,33 +64424,32 @@ function ChatProvider({
     }
   }, [currentMetaConfig.apiKey]);
   reactExports.useEffect(() => {
-    if (currentMetaConfig.apiKey && currentMetaConfig.apiKey.trim() !== "" && currentMetaConfig.apiKey !== "your-api-key-here" && !roomPreloadAttemptedRef.current) {
-      roomPreloadAttemptedRef.current = true;
-      if (currentConfig.allowVoice) {
-        const voiceService = VoiceChatService.getInstance(currentMetaConfig);
-        const existingDetails = voiceService.getCurrentConnectionDetails();
-        if (!existingDetails) {
-          voiceService.createRoom().catch((error2) => {
-            console.error(
-              "ChatContext: Failed to preload room creation:",
-              error2
-            );
-            if (voiceService.isRoomCreationFailed()) {
-              setIsRoomCreationFailed(true);
-              console.log("🚀 Room creation failed, falling back to ensureRAG");
-              conversationService.current.ensureRAG();
-            }
-            roomPreloadAttemptedRef.current = false;
-          });
-        } else {
-          console.log("🚀 Room already exists, skipping preload");
-        }
-      } else {
-        console.log("🚀 Calling ensureRAG on widget load (allowVoice=false)");
-        conversationService.current.ensureRAG();
-      }
+    const apiKey = currentMetaConfig.apiKey;
+    if (isPlaceholderCredential(apiKey) || preloadedApiKeyRef.current === apiKey) {
+      return;
     }
-  }, [currentMetaConfig.apiKey, currentConfig.allowVoice]);
+    preloadedApiKeyRef.current = apiKey;
+    if (currentConfig.allowVoice) {
+      const voiceService = VoiceChatService.getInstance(currentMetaConfig);
+      const existingDetails = voiceService.getCurrentConnectionDetails();
+      if (!existingDetails) {
+        voiceService.createRoom().catch((error2) => {
+          console.error("ChatContext: Failed to preload room creation:", error2);
+          if (voiceService.isRoomCreationFailed()) {
+            setIsRoomCreationFailed(true);
+            console.log("🚀 Room creation failed, falling back to ensureRAG");
+            conversationService.current.ensureRAG();
+          }
+          preloadedApiKeyRef.current = null;
+        });
+      } else {
+        console.log("🚀 Room already exists, skipping preload");
+      }
+    } else {
+      console.log("🚀 Calling ensureRAG on widget load (allowVoice=false)");
+      conversationService.current.ensureRAG();
+    }
+  }, [currentMetaConfig, currentConfig.allowVoice]);
   reactExports.useEffect(() => {
     if (currentConfig.allowVoice) {
       const voiceService = VoiceChatService.getInstance(currentMetaConfig);
@@ -64221,6 +64491,15 @@ function ChatProvider({
   reactExports.useEffect(() => {
     setCurrentMetaConfig(chatMetaConfig);
   }, [chatMetaConfig]);
+  reactExports.useEffect(() => {
+    conversationService.current.updateConfig(currentMetaConfig);
+    try {
+      VoiceChatService.getInstance(currentMetaConfig).updateConfig(
+        currentMetaConfig
+      );
+    } catch {
+    }
+  }, [currentMetaConfig]);
   reactExports.useEffect(() => {
     const hasValidConfig = currentMetaConfig.clientId && currentMetaConfig.hostUrl && currentMetaConfig.apiKey;
     if (hasValidConfig && currentMetaConfig.userJourney) {
@@ -64427,8 +64706,8 @@ function ChatProvider({
   const sendMessage = async (content2) => {
     var _a2;
     if (content2.trim() === "") return;
-    const apiKey = chatMetaConfig.apiKey;
-    if (!apiKey || apiKey.trim() === "" || apiKey === "your-api-key-here") {
+    const apiKey = currentMetaConfig.apiKey;
+    if (isPlaceholderCredential(apiKey)) {
       setErrorMessage("Cannot send message: API key is missing or invalid.");
       return;
     }
@@ -64685,7 +64964,9 @@ function ChatProvider({
   );
   reactExports.useEffect(() => {
     const loadChatHistory = async () => {
-      if (!currentMetaConfig.userId || !currentMetaConfig.apiKey) return;
+      if (!currentMetaConfig.userId || isPlaceholderCredential(currentMetaConfig.apiKey)) {
+        return;
+      }
       setIsSessionLoading(true);
       try {
         const normalizedMessages = await conversationService.current.fetchChatHistory();
@@ -127035,264 +127316,6 @@ function ChatWidget({ isOpen, onClose }) {
     }
   );
 }
-function getCookie(name2) {
-  if (typeof document === "undefined") {
-    return null;
-  }
-  const nameEQ = name2 + "=";
-  const ca = document.cookie.split(";");
-  for (let i2 = 0; i2 < ca.length; i2++) {
-    let c2 = ca[i2];
-    while (c2.charAt(0) === " ") c2 = c2.substring(1, c2.length);
-    if (c2.indexOf(nameEQ) === 0) return c2.substring(nameEQ.length, c2.length);
-  }
-  return null;
-}
-function setCookie(name2, value, minutes) {
-  if (typeof document === "undefined") {
-    return;
-  }
-  let expires = "";
-  {
-    const date = /* @__PURE__ */ new Date();
-    date.setTime(date.getTime() + minutes * 60 * 1e3);
-    expires = "; expires=" + date.toUTCString();
-  }
-  document.cookie = name2 + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
-}
-function resolveUserId(propUserId) {
-  let resolvedUserId;
-  if (propUserId && typeof propUserId === "string" && propUserId.trim() !== "") {
-    resolvedUserId = propUserId;
-    console.log(`[UserIdManager] Using userId from props: ${resolvedUserId}`);
-    const userIdFromCookie = getCookie(COOKIE_USER_ID_KEY);
-    if (userIdFromCookie !== resolvedUserId) {
-      setCookie(COOKIE_USER_ID_KEY, resolvedUserId, COOKIE_EXPIRATION_MINUTES);
-    } else if (userIdFromCookie) {
-      setCookie(COOKIE_USER_ID_KEY, resolvedUserId, COOKIE_EXPIRATION_MINUTES);
-    }
-  } else {
-    const userIdFromCookie = getCookie(COOKIE_USER_ID_KEY);
-    if (userIdFromCookie) {
-      resolvedUserId = userIdFromCookie;
-      console.log(
-        `[UserIdManager] Using userId from cookie: ${resolvedUserId}`
-      );
-      setCookie(COOKIE_USER_ID_KEY, resolvedUserId, COOKIE_EXPIRATION_MINUTES);
-    } else {
-      resolvedUserId = generateUuid();
-      console.log(`[UserIdManager] Generated new userId: ${resolvedUserId}`);
-      setCookie(COOKIE_USER_ID_KEY, resolvedUserId, COOKIE_EXPIRATION_MINUTES);
-    }
-  }
-  return resolvedUserId;
-}
-function getHoverColor(hexColor) {
-  if (hexColor.startsWith("rgb")) {
-    const rgbMatch = hexColor.match(/\d+/g);
-    if (rgbMatch && rgbMatch.length >= 3) {
-      const r2 = Math.max(0, parseInt(rgbMatch[0]) - 25);
-      const g2 = Math.max(0, parseInt(rgbMatch[1]) - 25);
-      const b2 = Math.max(0, parseInt(rgbMatch[2]) - 25);
-      return `rgb(${r2}, ${g2}, ${b2})`;
-    }
-  }
-  const hex2 = hexColor.replace("#", "");
-  if (hex2.length === 3) {
-    const r2 = Math.max(0, parseInt(hex2[0] + hex2[0], 16) - 25);
-    const g2 = Math.max(0, parseInt(hex2[1] + hex2[1], 16) - 25);
-    const b2 = Math.max(0, parseInt(hex2[2] + hex2[2], 16) - 25);
-    return `#${r2.toString(16).padStart(2, "0")}${g2.toString(16).padStart(2, "0")}${b2.toString(16).padStart(2, "0")}`;
-  } else if (hex2.length === 6) {
-    const r2 = Math.max(0, parseInt(hex2.slice(0, 2), 16) - 25);
-    const g2 = Math.max(0, parseInt(hex2.slice(2, 4), 16) - 25);
-    const b2 = Math.max(0, parseInt(hex2.slice(4, 6), 16) - 25);
-    return `#${r2.toString(16).padStart(2, "0")}${g2.toString(16).padStart(2, "0")}${b2.toString(16).padStart(2, "0")}`;
-  }
-  return "#4f46e5";
-}
-function getThemeStyles(color2) {
-  if (!color2) return {};
-  const hoverColor = getHoverColor(color2);
-  return {
-    header: {
-      backgroundColor: color2,
-      // borderBottom: `1px solid ${color}`,
-      color: "#ffffff"
-    },
-    buttonStyles: {
-      primary: { backgroundColor: color2 }
-    },
-    cssVars: {
-      primaryColor: color2,
-      primaryColorHover: hoverColor
-    }
-  };
-}
-const invalidfontFamilyPattern = /[,;{}<>\\\n\r]/;
-const resolvefontFamily = (fontFamily) => {
-  const [defaultfontFamily, ...defaultfontFamilyFallbackParts] = defaultWidgetConfig.fontFamily.split(",");
-  const fallbackfontFamily = defaultfontFamilyFallbackParts.join(",").trim();
-  const resolvedfontFamily = (fontFamily == null ? void 0 : fontFamily.trim()) || defaultfontFamily.trim();
-  const fontFamilyStack = fallbackfontFamily ? `${resolvedfontFamily}, ${fallbackfontFamily}` : resolvedfontFamily;
-  if (invalidfontFamilyPattern.test(resolvedfontFamily)) {
-    return defaultWidgetConfig.fontFamily;
-  }
-  if (typeof CSS !== "undefined" && typeof CSS.supports === "function" && !CSS.supports("font-family", fontFamilyStack)) {
-    return defaultWidgetConfig.fontFamily;
-  }
-  return fontFamilyStack;
-};
-function buildWidgetConfig(props) {
-  var _a, _b;
-  const {
-    primaryColor,
-    secondaryColor,
-    showTimestamp,
-    showClientId,
-    aiAvatar,
-    userAvatar,
-    showAvatars,
-    height,
-    width,
-    desktopXOffset,
-    desktopYOffset,
-    mobileXOffset,
-    mobileYOffset,
-    fontFamily,
-    messageFontSize,
-    messageTextColor,
-    allowVoice,
-    greetings,
-    position: position2,
-    showTranscription,
-    viewType,
-    useWhatsapp,
-    useTelephony,
-    autoInitiate,
-    autoInitiateTime,
-    whatsappPhoneNumber,
-    whatsappGreeting,
-    headerTitle,
-    headerSubtitle,
-    headerLogo,
-    botName,
-    rootBorderColor,
-    rootTextColor,
-    rootTitle,
-    rootSubtitle,
-    footerText,
-    placeholder,
-    showDateSeparator,
-    engagementHookImagePath,
-    engagementHookImageWidth,
-    engagementHookImageHeight,
-    popupType,
-    showPopupPrimaryBtn
-  } = props;
-  const defaultConfigWithLayout = {
-    ...defaultWidgetConfig,
-    ...width && { width },
-    ...height && { height },
-    ...desktopXOffset && { desktopXOffset },
-    ...desktopYOffset && { desktopYOffset },
-    ...mobileXOffset && { mobileXOffset },
-    ...mobileYOffset && { mobileYOffset }
-  };
-  const themeStyles = getThemeStyles(primaryColor);
-  const widgetConfig = {
-    ...defaultConfigWithLayout,
-    ...primaryColor && { primaryColor },
-    ...secondaryColor && { secondaryColor },
-    ...showTimestamp !== void 0 && { showTimestamp },
-    ...showClientId !== void 0 && { showClientId },
-    ...aiAvatar && { aiAvatar },
-    ...userAvatar && { userAvatar },
-    ...showAvatars !== void 0 && { showAvatars },
-    ...fontFamily && { fontFamily: resolvefontFamily(fontFamily) },
-    ...messageFontSize && { messageFontSize },
-    ...messageTextColor && { messageTextColor },
-    ...allowVoice !== void 0 && { allowVoice },
-    ...position2 && { position: position2 },
-    ...showTranscription !== void 0 && { showTranscription },
-    ...viewType && { viewType },
-    ...useWhatsapp !== void 0 && { useWhatsapp },
-    ...useTelephony !== void 0 && { useTelephony },
-    ...autoInitiate !== void 0 && { autoInitiate },
-    ...autoInitiateTime !== void 0 && { autoInitiateTime },
-    ...whatsappPhoneNumber && { whatsappPhoneNumber },
-    ...whatsappGreeting && { whatsappGreeting },
-    ...headerTitle && { headerTitle },
-    ...headerSubtitle && { headerSubtitle },
-    ...headerLogo && { headerLogo },
-    ...botName && { botName },
-    ...rootBorderColor && { rootBorderColor },
-    ...rootTextColor && { rootTextColor },
-    ...rootTitle && { rootTitle },
-    ...rootSubtitle && { rootSubtitle },
-    ...footerText && { footerText },
-    ...placeholder && { placeholder },
-    ...showDateSeparator !== void 0 && { showDateSeparator },
-    ...engagementHookImagePath && { engagementHookImagePath },
-    ...engagementHookImageWidth && { engagementHookImageWidth },
-    ...engagementHookImageHeight && { engagementHookImageHeight },
-    ...popupType && { popupType },
-    ...showPopupPrimaryBtn !== void 0 && { showPopupPrimaryBtn },
-    greetings,
-    // Use custom greetings or do not use
-    // Apply custom styles with primary color theming
-    customStyles: {
-      ...defaultWidgetConfig.customStyles || {},
-      ...primaryColor && themeStyles.header && {
-        header: {
-          ...((_a = defaultWidgetConfig.customStyles) == null ? void 0 : _a.header) || {},
-          ...themeStyles.header
-        }
-      }
-    },
-    // Apply button styles with primary color
-    buttonStyles: {
-      ...defaultWidgetConfig.buttonStyles || {},
-      ...primaryColor && themeStyles.buttonStyles && {
-        primary: {
-          ...((_b = defaultWidgetConfig.buttonStyles) == null ? void 0 : _b.primary) || {},
-          ...themeStyles.buttonStyles.primary
-        }
-      }
-    }
-  };
-  return widgetConfig;
-}
-function buildMetaConfig(props) {
-  var _a, _b, _c, _d, _e2;
-  const meta = {
-    ...props.chatMetaConfig || {},
-    apiKey: props.apiKey ?? ((_a = props.chatMetaConfig) == null ? void 0 : _a.apiKey),
-    userJourney: props.userJourney ?? ((_b = props.chatMetaConfig) == null ? void 0 : _b.userJourney),
-    userId: props.userId ?? ((_c = props.chatMetaConfig) == null ? void 0 : _c.userId),
-    clientId: props.clientId ?? ((_d = props.chatMetaConfig) == null ? void 0 : _d.clientId)
-  };
-  const resolvedUserId = resolveUserId(meta.userId);
-  const metaConfig = {
-    ...defaultMetaConfig,
-    ...meta,
-    clientId: meta.clientId || generateUuid(),
-    apiKey: meta.apiKey || defaultMetaConfig.apiKey,
-    userJourney: meta.userJourney ?? defaultMetaConfig.userJourney,
-    userAttributes: {
-      ...defaultMetaConfig.userAttributes,
-      ...meta.userAttributes || {},
-      user_id: resolvedUserId,
-      email: ((_e2 = meta.userAttributes) == null ? void 0 : _e2.email) || ""
-    }
-  };
-  return metaConfig;
-}
-function buildConfigs(props) {
-  const widgetConfig = buildWidgetConfig(props);
-  const metaConfig = buildMetaConfig(props);
-  return { widgetConfig, metaConfig };
-}
 const resolveLogoUrl = (path) => {
   if (!path) return spotinfoLogo;
   if (path.startsWith("http") || path.startsWith("data:")) return path;
@@ -127452,7 +127475,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Sun Jun 21 12:57:45 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Sun Jun 21 13:36:25 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -154016,6 +154039,15 @@ const _StyledChatWidget = class _StyledChatWidget extends ChatWidgetWebComponent
       },
       "mobile-y-offset": () => {
         this.initializePosition();
+      },
+      "api-key": (value) => {
+        this.syncCredentialProp("apiKey", value);
+      },
+      "user-id": (value) => {
+        this.syncCredentialProp("userId", value);
+        if (value && !isPlaceholderCredential(value)) {
+          setCookie$1(COOKIE_USER_ID_KEY, value, COOKIE_EXPIRATION_MINUTES);
+        }
       }
     });
   }
@@ -154105,9 +154137,19 @@ ${declarations}
   }
   initializeApiKey() {
     const apiKeyAttr = this.getAttribute("api-key");
-    if (apiKeyAttr) {
+    if (apiKeyAttr && !isPlaceholderCredential(apiKeyAttr)) {
       this.apiKey = apiKeyAttr;
     }
+  }
+  syncCredentialProp(propName, value) {
+    if (!value) {
+      return;
+    }
+    const isValidValue = !isPlaceholderCredential(value);
+    if (!isValidValue) {
+      return;
+    }
+    this[propName] = value;
   }
   ensureSingleInstance() {
     const existingInstance = _StyledChatWidget.activeInstance;
@@ -154127,24 +154169,32 @@ ${declarations}
         this.setAttribute("client-id", this._generatedClientId);
       }
     }
-    if (!this.hasAttribute("user-id") && !this._userIdGenerated) {
-      const userIdFromCookie = getCookie(COOKIE_USER_ID_KEY);
-      if (userIdFromCookie) {
-        this._generatedUserId = userIdFromCookie;
-      } else {
-        this._generatedUserId = generateUuid();
-        if (this._generatedUserId) {
-          setCookie(
-            COOKIE_USER_ID_KEY,
-            this._generatedUserId,
-            COOKIE_EXPIRATION_MINUTES
-          );
-        }
-      }
-      this._userIdGenerated = true;
+    this.ensureDefaultUserId();
+  }
+  ensureDefaultUserId() {
+    if (this._userIdGenerated) {
+      return;
+    }
+    const userIdAttr = this.getAttribute("user-id");
+    if (userIdAttr && !isPlaceholderCredential(userIdAttr)) {
+      return;
+    }
+    const userIdFromCookie = getCookie(COOKIE_USER_ID_KEY);
+    if (userIdFromCookie) {
+      this._generatedUserId = userIdFromCookie;
+    } else {
+      this._generatedUserId = generateUuid();
       if (this._generatedUserId) {
-        this.setAttribute("user-id", this._generatedUserId);
+        setCookie$1(
+          COOKIE_USER_ID_KEY,
+          this._generatedUserId,
+          COOKIE_EXPIRATION_MINUTES
+        );
       }
+    }
+    this._userIdGenerated = true;
+    if (this._generatedUserId) {
+      this.setAttribute("user-id", this._generatedUserId);
     }
   }
   initializeCssVariables() {
