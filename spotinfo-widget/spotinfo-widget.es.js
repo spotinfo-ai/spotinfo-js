@@ -31766,7 +31766,7 @@ const DEFAULT_POSITION = "bottom-right";
 const GREETINGS = defaultGreetings;
 const META_HOST_URL = "https://api.spotinfo.ai";
 const META_API_KEY = "";
-const META_VOICE_HOST_URL = "https://voice2.spotinfo.ai";
+const META_VOICE_HOST_URL = "https://voice.spotinfo.ai";
 const META_CLIENT_ID_DEFAULT = "";
 const META_USER_EMAIL = "";
 const META_USER_COMPANY_NAME = "";
@@ -127635,7 +127635,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Wed Jun 24 16:09:10 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Sat Jun 27 00:18:23 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
