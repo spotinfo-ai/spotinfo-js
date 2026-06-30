@@ -31728,7 +31728,7 @@ const USE_VOICE = true;
 const USE_WHATSAPP = true;
 const USE_TELEPHONY = false;
 const AUTO_INITIATE = true;
-const AUTO_INITIATE_TIME = 5;
+const AUTO_INITIATE_TIME = 10;
 const WHATSAPP_GREETING = "Hi ! I'd like to continue our conversation here.";
 const VIEW_TYPE = "modern_view";
 const ROOT_BUTTON_HEIGHT = "48px";
@@ -127635,7 +127635,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Sat Jun 27 00:18:23 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Tue Jun 30 08:33:58 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
