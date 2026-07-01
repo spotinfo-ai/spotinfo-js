@@ -31780,7 +31780,7 @@ const META_TWEAKS = {
 const META_USER_DETAILS = {};
 const META_IS_SOURCE_REQUIRED = true;
 const META_IS_TRACE_ENABLED = false;
-const META_USER_JOURNEY = false;
+const META_USER_JOURNEY = true;
 const META_PROACTIVE_ENGAGEMENT = {
   enabled: false
 };
@@ -114752,6 +114752,11 @@ const SleekView = ({
     )
   ] });
 };
+const resolveLogoUrl = (path) => {
+  if (!path) return spotinfoLogo;
+  if (path.startsWith("http") || path.startsWith("data:")) return path;
+  return path.startsWith("/") ? path : `/${path}`;
+};
 const formatSessionDate = (isoDate) => {
   const parsedDate = new Date(isoDate);
   if (Number.isNaN(parsedDate.getTime())) return isoDate;
@@ -114762,25 +114767,6 @@ const formatSessionDate = (isoDate) => {
     hour: "numeric",
     minute: "2-digit"
   });
-};
-const NEW_CHAT_SEPARATOR = "--- New conversation started ---";
-const REVIVED_CHAT_SEPARATOR = "--- Conversation Revived ---";
-const getInitial = (name2) => {
-  const trimmed = (name2 || "").trim();
-  return trimmed.length > 0 ? trimmed.charAt(0).toUpperCase() : "A";
-};
-const hasGrantedMicrophonePermission = async () => {
-  if (typeof navigator === "undefined" || !navigator.permissions || typeof navigator.permissions.query !== "function") {
-    return false;
-  }
-  try {
-    const permission = await navigator.permissions.query({
-      name: "microphone"
-    });
-    return permission.state === "granted";
-  } catch {
-    return false;
-  }
 };
 const ModernView = ({
   onNewChat,
@@ -114833,6 +114819,8 @@ const ModernView = ({
     showPopupPrimaryBtn,
     voiceModePlainBackground
   } = useChatContext();
+  const NEW_CHAT_SEPARATOR = "--- New conversation started ---";
+  const REVIVED_CHAT_SEPARATOR = "--- Conversation Revived ---";
   const displayFooterText = footerText == null ? void 0 : footerText.trim();
   const displayClientId = ((_a = chatMetaConfig == null ? void 0 : chatMetaConfig.clientId) == null ? void 0 : _a.trim()) || "";
   const [inputText, setInputText] = reactExports.useState("");
@@ -114860,6 +114848,23 @@ const ModernView = ({
   const [aiAvatarErrored, setAiAvatarErrored] = reactExports.useState(false);
   const [userAvatarErrored, setUserAvatarErrored] = reactExports.useState(false);
   const { requestMicAccess } = useMicPermission();
+  const getInitial = (name2) => {
+    const trimmed = (name2 || "").trim();
+    return trimmed.length > 0 ? trimmed.charAt(0).toUpperCase() : "A";
+  };
+  const hasGrantedMicrophonePermission = async () => {
+    if (typeof navigator === "undefined" || !navigator.permissions || typeof navigator.permissions.query !== "function") {
+      return false;
+    }
+    try {
+      const permission = await navigator.permissions.query({
+        name: "microphone"
+      });
+      return permission.state === "granted";
+    } catch {
+      return false;
+    }
+  };
   const isConnected = Boolean(
     connectionDetails && agentState !== "disconnected"
   );
@@ -114880,14 +114885,9 @@ const ModernView = ({
     if (isMuted) return "Microphone muted";
     return "Listening… speak now";
   }, [agentState, isMuted]);
-  const getLogoUrl = (path) => {
-    if (!path) return spotinfoLogo;
-    if (path.startsWith("http") || path.startsWith("data:")) return path;
-    return path.startsWith("/") ? path : `/${path}`;
-  };
-  const headerLogoUrl = getLogoUrl(headerLogo);
-  const aiAvatarLogoUrl = getLogoUrl(aiAvatar);
-  const userAvatarLogoUrl = getLogoUrl(userAvatar);
+  const headerLogoUrl = resolveLogoUrl(headerLogo);
+  const aiAvatarLogoUrl = resolveLogoUrl(aiAvatar);
+  const userAvatarLogoUrl = resolveLogoUrl(userAvatar);
   const hasInputText = inputText.trim().length > 0;
   const canSend = hasInputText && !isLoading && !isSessionLoading;
   reactExports.useEffect(() => subscribeToMobileViewportChange(setIsMobileViewport), []);
@@ -115062,6 +115062,10 @@ const ModernView = ({
       }
       console.log("No mic permission, falling back to text mode");
       if (!chatMetaConfig) return;
+      if (chatMetaConfig.userJourney === true) {
+        console.log("User Journey Hooks are enabled. Skip static hook");
+        return;
+      }
       const trimmedInitialMessage = initialMessage == null ? void 0 : initialMessage.trim();
       if (!trimmedInitialMessage) {
         autoInitiateTriggeredRef.current = true;
@@ -127476,11 +127480,6 @@ function ChatWidget({ isOpen, onClose }) {
     }
   );
 }
-const resolveLogoUrl = (path) => {
-  if (!path) return spotinfoLogo;
-  if (path.startsWith("http") || path.startsWith("data:")) return path;
-  return path.startsWith("/") ? path : `/${path}`;
-};
 const LegacyLaunchButton = ({ logo }) => {
   const logoUrl = resolveLogoUrl(logo);
   const [imgError, setImgError] = reactExports.useState(false);
@@ -127635,7 +127634,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Tue Jun 30 08:33:58 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Wed Jul  1 19:01:09 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
