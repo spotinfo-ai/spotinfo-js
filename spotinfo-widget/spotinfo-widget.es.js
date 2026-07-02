@@ -31780,7 +31780,7 @@ const META_TWEAKS = {
 const META_USER_DETAILS = {};
 const META_IS_SOURCE_REQUIRED = true;
 const META_IS_TRACE_ENABLED = false;
-const META_USER_JOURNEY = true;
+const META_USER_JOURNEY = false;
 const META_PROACTIVE_ENGAGEMENT = {
   enabled: false
 };
@@ -115048,7 +115048,13 @@ const ModernView = ({
     if (autoInitiateTriggeredRef.current) return;
     if (isWidgetOpenRef.current) return;
     if (isVoiceModeRef.current) return;
-    if (userMessagesLengthRef.current >= 1) return;
+    if (userMessagesLengthRef.current >= 1) {
+      captureWidgetEvent("widget_open_skipped", {
+        source: "auto_initiate user_has_messages",
+        messages
+      });
+      return;
+    }
     void (async () => {
       const hasMicPermission = await hasGrantedMicrophonePermission();
       if (hasMicPermission) {
@@ -127634,7 +127640,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Wed Jul  1 19:01:09 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Thu Jul  2 12:39:47 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
