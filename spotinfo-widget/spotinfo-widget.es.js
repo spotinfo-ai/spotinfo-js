@@ -31941,11 +31941,9 @@ const defaultChatContext = {
   },
   sendVoiceMessage: async () => {
   },
-  startConversation: async () => {
-  },
   startNewChat: () => {
   },
-  fetchUserChatSessions: async () => [],
+  fetchUserChats: async () => [],
   reviveChatSession: async () => {
   },
   stopStreaming: () => {
@@ -32332,68 +32330,6 @@ class ConversationService {
       output_type: "stream"
     };
   }
-  async startConversation(onChunk, onReference, onError) {
-    var _a;
-    try {
-      if (this.abortController) {
-        this.abortController.abort();
-      }
-      this.abortController = new AbortController();
-      const apiUrl = `${this.config.hostUrl}/api/v1/sse/conversations`;
-      console.log("Making API call:", {
-        url: apiUrl,
-        hostUrl: this.config.hostUrl,
-        apiKey: this.config.apiKey ? "***" : void 0,
-        method: "POST"
-      });
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-api-key": this.config.apiKey
-        },
-        body: JSON.stringify(this.createRequest()),
-        signal: this.abortController.signal
-      });
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const reader = (_a = response.body) == null ? void 0 : _a.getReader();
-      if (!reader) {
-        throw new Error("Failed to get response reader");
-      }
-      const decoder = new TextDecoder();
-      let buffer = "";
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        buffer += decoder.decode(value, { stream: true });
-        const lines = buffer.split("\n");
-        buffer = lines.pop() || "";
-        for (const line of lines) {
-          if (line.startsWith("data: ")) {
-            try {
-              const data = JSON.parse(line.slice(6));
-              if (data.type === "chunk") {
-                onChunk(data.content);
-              } else if (data.type === "reference") {
-                onReference(data.content);
-              }
-            } catch (error2) {
-              console.error("Error parsing SSE data:", error2);
-              onError(error2);
-            }
-          }
-        }
-      }
-    } catch (error2) {
-      if (error2 instanceof Error && error2.name === "AbortError") {
-        console.log("Conversation aborted");
-        return;
-      }
-      onError(error2);
-    }
-  }
   async sendMessage(message, onChunk, onReference, onError, senderType = "user") {
     var _a;
     try {
@@ -32460,9 +32396,12 @@ class ConversationService {
     this.currentConversationId = null;
   }
   async fetchChatHistory() {
+    const emptyResult = {
+      messages: [],
+      chatMappingId: null
+    };
     const params = new URLSearchParams({
       user_id: this.config.userId ?? "",
-      // client_id: this.config.clientId ?? '',
       is_active: "true"
     });
     const fetchHistoryUrl = `${this.config.hostUrl}/api/v1/chat-history/op-history/?${params.toString()}`;
@@ -32471,7 +32410,6 @@ class ConversationService {
       headers: {
         "Content-Type": "application/json",
         "x-api-key": this.config.apiKey
-        // 'Authorization': `Bearer ${authToken}`,
       }
     });
     if (!response.ok) {
@@ -32479,9 +32417,10 @@ class ConversationService {
       throw new Error("Failed to fetch chat history");
     }
     if (response.status === 204) {
-      return [];
+      return emptyResult;
     }
     const response_json = await response.json();
+    const chatMappingId = typeof response_json.chat_mapping_id === "number" ? response_json.chat_mapping_id : null;
     try {
       const normalizedMessages = [];
       const extractRole = (item) => {
@@ -32549,7 +32488,8 @@ class ConversationService {
             sender,
             timestamp: rawTs ? new Date(rawTs * 1e3) : /* @__PURE__ */ new Date(),
             mode: extractMode(item),
-            references: Array.isArray(item.references) ? item.references : []
+            references: Array.isArray(item.references) ? item.references : [],
+            ...chatMappingId != null && { chatMappingId }
           };
           normalizedMessages.push(message);
         });
@@ -32557,13 +32497,13 @@ class ConversationService {
       normalizedMessages.sort(
         (a2, b2) => new Date(a2.timestamp).getTime() - new Date(b2.timestamp).getTime()
       );
-      return normalizedMessages;
+      return { messages: normalizedMessages, chatMappingId };
     } catch (e2) {
       console.error("Failed to normalize chat history:", e2);
-      return [];
+      return emptyResult;
     }
   }
-  async fetchUserSessions(page = 1, pageSize = 10) {
+  async fetchUserChats(page = 1, pageSize = 10) {
     var _a;
     const merchantSharedUserId = ((_a = this.config.userAttributes) == null ? void 0 : _a.user_id) ?? "";
     const params = new URLSearchParams({
@@ -32571,7 +32511,7 @@ class ConversationService {
       page_size: String(pageSize),
       merchant_shared_user_id: merchantSharedUserId
     });
-    const apiUrl = `${this.config.hostUrl}/api/v1/chat-history/user-sessions?${params.toString()}`;
+    const apiUrl = `${this.config.hostUrl}/api/v1/chat-history/user-chats?${params.toString()}`;
     const response = await fetch(apiUrl, {
       method: "GET",
       headers: {
@@ -32580,15 +32520,15 @@ class ConversationService {
       }
     });
     if (!response.ok) {
-      throw new Error(`Failed to fetch user sessions: ${response.status}`);
+      throw new Error(`Failed to fetch user chats: ${response.status}`);
     }
     return await response.json();
   }
-  async reviveExistingChat(oldClientId, reviveClientId) {
+  async reviveExistingChat(oldClientId, reviveChatMappingId) {
     const apiUrl = `${this.config.hostUrl}/api/v1/chat-history/revive-existing-chat/`;
     const payload = {
       old_client_id: oldClientId,
-      revive_client_id: reviveClientId
+      revive_chat_mapping_id: reviveChatMappingId
     };
     const response = await fetch(apiUrl, {
       method: "POST",
@@ -32619,12 +32559,6 @@ class ConversationService {
     }
     try {
       const result = await response.json();
-      console.log("🎯 initiateNewChat response attributes:");
-      if (result) {
-        Object.keys(result).forEach((key) => {
-          console.log(`  ${key}:`, result[key]);
-        });
-      }
       return result;
     } catch {
       return null;
@@ -64394,6 +64328,13 @@ function ChatProvider({
   const streamingTypewriterRef = reactExports.useRef(null);
   const lastVoiceBotMessageIdWeResetRef = reactExports.useRef(null);
   const lastVoiceUserMessageIdWeResetRef = reactExports.useRef(null);
+  const currentChatMappingIdRef = reactExports.useRef(null);
+  const setCurrentChatMappingId = reactExports.useCallback(
+    (chatMappingId) => {
+      currentChatMappingIdRef.current = chatMappingId;
+    },
+    []
+  );
   const enableAnalytics = currentMetaConfig.userJourney || ((_a = currentMetaConfig.proactiveEngagement) == null ? void 0 : _a.enabled) === true;
   const instanceIdRef = reactExports.useRef(null);
   if (instanceIdRef.current === null) {
@@ -64772,12 +64713,14 @@ function ChatProvider({
     try {
       setIsLoading(true);
       setErrorMessage(null);
+      const chatMappingId = currentChatMappingIdRef.current ?? void 0;
       const userMessage = {
         id: generateUuid(),
         content: content2,
         sender: "user",
         timestamp: /* @__PURE__ */ new Date(),
-        references: []
+        references: [],
+        ...chatMappingId != null && { chatMappingId }
       };
       setMessages((prev) => [...prev, userMessage]);
       proactiveResetForCurrentResponseRef.current = false;
@@ -64794,7 +64737,8 @@ function ChatProvider({
         content: "",
         sender: "bot",
         timestamp: /* @__PURE__ */ new Date(),
-        references: []
+        references: [],
+        ...chatMappingId != null && { chatMappingId }
       };
       setMessages((prev) => [...prev, botMessage]);
       if (abortControllerRef.current) {
@@ -64849,40 +64793,6 @@ function ChatProvider({
     }
   };
   sendMessageRef.current = sendMessage;
-  const startConversation = async () => {
-    var _a2;
-    try {
-      setIsLoading(true);
-      proactiveResetForCurrentResponseRef.current = false;
-      if (abortControllerRef.current) {
-        abortControllerRef.current.abort();
-      }
-      abortControllerRef.current = new AbortController();
-      (_a2 = streamingTypewriterRef.current) == null ? void 0 : _a2.cancel();
-      const typewriter = createStreamingTypewriter({
-        onUpdate: updateMessageResponse
-      });
-      streamingTypewriterRef.current = typewriter;
-      await conversationService.current.startConversation(
-        (chunk) => {
-          typewriter.push(chunk);
-        },
-        handleReference,
-        (error2) => {
-          console.error("Error starting conversation:", error2);
-          typewriter.cancel();
-          updateMessageResponse(typewriter.getTargetText(), true);
-        }
-      );
-      await typewriter.finish();
-    } catch (error2) {
-      console.error("Failed to start conversation:", error2);
-    } finally {
-      streamingTypewriterRef.current = null;
-      setIsLoading(false);
-      abortControllerRef.current = null;
-    }
-  };
   const setTranscriptionMessages = (updatedMessages) => {
     var _a2;
     const lastMsg = updatedMessages.length > 0 ? updatedMessages[updatedMessages.length - 1] : null;
@@ -64964,12 +64874,16 @@ function ChatProvider({
     prepareSessionTransition("--- New conversation started ---");
     disconnectVoiceForClientSwitch();
     const newClientId = generateUuid();
+    setCurrentChatMappingId(null);
     void (async () => {
       try {
-        await conversationService.current.initiateNewChat(
+        const result = await conversationService.current.initiateNewChat(
           currentMetaConfig.clientId,
           newClientId
         );
+        if ((result == null ? void 0 : result.chat_mapping_id) != null) {
+          setCurrentChatMappingId(result.chat_mapping_id);
+        }
       } catch (error2) {
         console.error("Failed to create new chat id on backend:", error2);
       } finally {
@@ -64981,11 +64895,12 @@ function ChatProvider({
     applyNewClientId,
     currentMetaConfig.clientId,
     disconnectVoiceForClientSwitch,
-    prepareSessionTransition
+    prepareSessionTransition,
+    setCurrentChatMappingId
   ]);
-  const fetchUserChatSessions = reactExports.useCallback(
+  const fetchUserChats = reactExports.useCallback(
     async (page = 1, pageSize = 10) => {
-      const response = await conversationService.current.fetchUserSessions(
+      const response = await conversationService.current.fetchUserChats(
         page,
         pageSize
       );
@@ -64994,18 +64909,21 @@ function ChatProvider({
     []
   );
   const reviveChatSession = reactExports.useCallback(
-    async (reviveClientId) => {
+    async (chatMappingId) => {
       setIsSessionLoading(true);
       prepareSessionTransition("--- Conversation Revived ---");
       disconnectVoiceForClientSwitch();
       try {
         const reviveResult = await conversationService.current.reviveExistingChat(
           currentMetaConfig.clientId,
-          reviveClientId
+          chatMappingId
         );
         applyNewClientId(reviveResult.revive_client_id);
-        const normalizedMessages = await conversationService.current.fetchChatHistory();
-        setMessages((prev) => [...prev, ...normalizedMessages]);
+        const historyResult = await conversationService.current.fetchChatHistory();
+        if (historyResult.chatMappingId != null) {
+          setCurrentChatMappingId(historyResult.chatMappingId);
+        }
+        setMessages((prev) => [...prev, ...historyResult.messages]);
       } catch (error2) {
         console.error("Failed to revive chat session:", error2);
         setErrorMessage("Failed to load chat history. Please try again.");
@@ -65017,7 +64935,8 @@ function ChatProvider({
       applyNewClientId,
       currentMetaConfig.clientId,
       disconnectVoiceForClientSwitch,
-      prepareSessionTransition
+      prepareSessionTransition,
+      setCurrentChatMappingId
     ]
   );
   reactExports.useEffect(() => {
@@ -65027,8 +64946,11 @@ function ChatProvider({
       }
       setIsSessionLoading(true);
       try {
-        const normalizedMessages = await conversationService.current.fetchChatHistory();
-        setMessages(normalizedMessages);
+        const historyResult = await conversationService.current.fetchChatHistory();
+        if (historyResult.chatMappingId != null) {
+          setCurrentChatMappingId(historyResult.chatMappingId);
+        }
+        setMessages(historyResult.messages);
       } catch (error2) {
         console.error("Failed to load chat history:", error2);
       } finally {
@@ -65039,7 +64961,8 @@ function ChatProvider({
   }, [
     currentMetaConfig.userId,
     currentMetaConfig.apiKey,
-    currentMetaConfig.hostUrl
+    currentMetaConfig.hostUrl,
+    setCurrentChatMappingId
   ]);
   const scrollToBottom = reactExports.useCallback(() => {
     if (scrollToBottomCallbackRef.current) {
@@ -65064,9 +64987,8 @@ function ChatProvider({
     //   await sendMessage(content);
     // },
     // initializeVoiceChat,
-    startConversation,
     startNewChat,
-    fetchUserChatSessions,
+    fetchUserChats,
     reviveChatSession,
     stopStreaming,
     setTranscriptionMessages,
@@ -103707,14 +103629,6 @@ function MessageBubble({ message }) {
                   ),
                   children: formatTimestamp(message.timestamp)
                 }
-              ),
-              message.audioUrl && /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "audio",
-                {
-                  src: message.audioUrl,
-                  controls: true,
-                  className: "chat-message-audio"
-                }
               )
             ]
           }
@@ -114786,7 +114700,6 @@ const ModernView = ({
   setAgentAudioLevel,
   setLocalAudioLevel
 }) => {
-  var _a;
   const {
     headerLogo,
     messages,
@@ -114810,7 +114723,7 @@ const ModernView = ({
     isWidgetOpen,
     setWidgetOpen,
     footerText,
-    fetchUserChatSessions,
+    fetchUserChats,
     reviveChatSession,
     initialMessage,
     isInitialMessageLoaded,
@@ -114822,11 +114735,10 @@ const ModernView = ({
   const NEW_CHAT_SEPARATOR = "--- New conversation started ---";
   const REVIVED_CHAT_SEPARATOR = "--- Conversation Revived ---";
   const displayFooterText = footerText == null ? void 0 : footerText.trim();
-  const displayClientId = ((_a = chatMetaConfig == null ? void 0 : chatMetaConfig.clientId) == null ? void 0 : _a.trim()) || "";
   const [inputText, setInputText] = reactExports.useState("");
   const [isMenuOpen, setIsMenuOpen] = reactExports.useState(false);
   const [menuView, setMenuView] = reactExports.useState("main");
-  const [chatSessions, setChatSessions] = reactExports.useState([]);
+  const [userChats, setUserChats] = reactExports.useState([]);
   const [isChatHistoryLoading, setIsChatHistoryLoading] = reactExports.useState(false);
   const [chatHistoryError, setChatHistoryError] = reactExports.useState(null);
   const [isPhoneDialogOpen, setIsPhoneDialogOpen] = reactExports.useState(false);
@@ -115176,11 +115088,11 @@ const ModernView = ({
     setChatHistoryError(null);
     setIsChatHistoryLoading(true);
     try {
-      const sessions = await fetchUserChatSessions(1, 10);
-      setChatSessions(sessions);
+      const chats = await fetchUserChats(1, 10);
+      setUserChats(chats);
     } catch {
       setChatHistoryError("Failed to load chat history.");
-      setChatSessions([]);
+      setUserChats([]);
     } finally {
       setIsChatHistoryLoading(false);
     }
@@ -115201,15 +115113,15 @@ const ModernView = ({
       handleBackToMenu();
     }
   };
-  const handleSelectChatSession = async (clientId) => {
+  const handleSelectChatSession = async (chatMappingId) => {
     setIsMenuOpen(false);
     setMenuView("main");
-    await reviveChatSession(clientId);
+    await reviveChatSession(chatMappingId);
   };
-  const handleSelectChatSessionKeyDown = (e2, clientId) => {
+  const handleSelectChatSessionKeyDown = (e2, chatMappingId) => {
     if (e2.key === "Enter" || e2.key === " ") {
       e2.preventDefault();
-      void handleSelectChatSession(clientId);
+      void handleSelectChatSession(chatMappingId);
     }
   };
   const handleCloseClick = () => {
@@ -115307,8 +115219,8 @@ const ModernView = ({
       return true;
     });
     return visibleMessages.map((message) => {
-      var _a2, _b;
-      if ((_a2 = message.content) == null ? void 0 : _a2.includes(NEW_CHAT_SEPARATOR)) {
+      var _a, _b;
+      if ((_a = message.content) == null ? void 0 : _a.includes(NEW_CHAT_SEPARATOR)) {
         return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "modern-msg-separator", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "modern-msg-separator-text", children: "New conversation started" }) }, message.id);
       }
       if ((_b = message.content) == null ? void 0 : _b.includes(REVIVED_CHAT_SEPARATOR)) {
@@ -115382,12 +115294,12 @@ const ModernView = ({
                   ]
                 }
               ),
-              !isUser && showClientId && displayClientId && /* @__PURE__ */ jsxRuntimeExports.jsx(
+              !isUser && showClientId && message.chatMappingId != null && /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "div",
                 {
                   className: "modern-msg-client-id",
-                  "aria-label": `Client ID ${displayClientId}`,
-                  children: displayClientId
+                  "aria-label": `ID ${message.chatMappingId}`,
+                  children: message.chatMappingId
                 }
               ),
               showTimestamp && message.timestamp && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "modern-msg-timestamp", children: formatTimestamp(new Date(message.timestamp)) })
@@ -115584,26 +115496,26 @@ const ModernView = ({
                       children: chatHistoryError
                     }
                   ),
-                  !isChatHistoryLoading && !chatHistoryError && chatSessions.length === 0 && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "modern-menu-history-status", children: "No previous chats found." }),
-                  !isChatHistoryLoading && !chatHistoryError && chatSessions.map((session) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  !isChatHistoryLoading && !chatHistoryError && userChats.length === 0 && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "modern-menu-history-status", children: "No previous chats found." }),
+                  !isChatHistoryLoading && !chatHistoryError && userChats.map((chat) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
                     "button",
                     {
                       type: "button",
                       role: "menuitem",
                       className: "modern-menu-history-item",
-                      "aria-label": `Open chat ${session.client_id} from ${formatSessionDate(session.updated_at)}`,
+                      "aria-label": `Open chat ${chat.chat_mapping_id} from ${formatSessionDate(chat.updated_at)}`,
                       tabIndex: 0,
-                      onClick: () => void handleSelectChatSession(session.client_id),
+                      onClick: () => void handleSelectChatSession(chat.chat_mapping_id),
                       onKeyDown: (e2) => handleSelectChatSessionKeyDown(
                         e2,
-                        session.client_id
+                        chat.chat_mapping_id
                       ),
                       children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "modern-menu-history-client-id", children: session.client_id }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "modern-menu-history-date", children: formatSessionDate(session.updated_at) })
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "modern-menu-history-client-id", children: chat.chat_mapping_id }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "modern-menu-history-date", children: formatSessionDate(chat.updated_at) })
                       ]
                     },
-                    session.session_id
+                    chat.chat_mapping_id
                   ))
                 ] })
               }
@@ -127640,7 +127552,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Thu Jul  2 12:39:47 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Sat Jul  4 17:39:48 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
