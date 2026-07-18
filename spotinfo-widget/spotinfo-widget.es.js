@@ -31966,7 +31966,8 @@ const defaultChatContext = {
   setScrollToBottomCallback: () => {
   },
   initialMessage: null,
-  isInitialMessageLoaded: false
+  isInitialMessageLoaded: false,
+  serverVoiceInitiateNonce: 0
 };
 let getRandomValues;
 const rnds8 = new Uint8Array(16);
@@ -64314,6 +64315,7 @@ function ChatProvider({
   const [isRoomCreationFailed, setIsRoomCreationFailed] = reactExports.useState(false);
   const [initialMessage, setInitialMessage] = reactExports.useState(null);
   const [isInitialMessageLoaded, setIsInitialMessageLoaded] = reactExports.useState(false);
+  const [serverVoiceInitiateNonce, setServerVoiceInitiateNonce] = reactExports.useState(0);
   const conversationService = reactExports.useRef(
     new ConversationService(currentMetaConfig)
   );
@@ -64554,7 +64556,8 @@ function ChatProvider({
           popupType: config.popupType,
           botName: config.botName,
           showPopupPrimaryBtn: config.showPopupPrimaryBtn,
-          onHookActedOn: () => ProactiveEngagementEngine.resetForNewPage()
+          onHookActedOn: () => ProactiveEngagementEngine.resetForNewPage(),
+          onServerVoiceInitiate: () => setServerVoiceInitiateNonce((prev) => prev + 1)
         });
         pushServiceInstance.updateConfig(
           currentMetaConfig,
@@ -65008,6 +65011,7 @@ function ChatProvider({
     setScrollToBottomCallback,
     initialMessage,
     isInitialMessageLoaded,
+    serverVoiceInitiateNonce,
     ...currentConfig
     // Use current config instead of original config
     // setShowTranscription,
@@ -114730,7 +114734,8 @@ const ModernView = ({
     position: position2,
     popupType,
     showPopupPrimaryBtn,
-    voiceModePlainBackground
+    voiceModePlainBackground,
+    serverVoiceInitiateNonce
   } = useChatContext();
   const NEW_CHAT_SEPARATOR = "--- New conversation started ---";
   const REVIVED_CHAT_SEPARATOR = "--- Conversation Revived ---";
@@ -115040,6 +115045,17 @@ const ModernView = ({
       setWidgetOpen(true);
     }
   }, [agentState, setWidgetOpen]);
+  const lastHandledVoiceInitiateNonceRef = reactExports.useRef(0);
+  reactExports.useEffect(() => {
+    if (!allowVoice) return;
+    if (serverVoiceInitiateNonce === 0) return;
+    if (lastHandledVoiceInitiateNonceRef.current === serverVoiceInitiateNonce)
+      return;
+    lastHandledVoiceInitiateNonceRef.current = serverVoiceInitiateNonce;
+    captureWidgetEvent("widget_open", { open_source: "server_voice_initiate" });
+    setWidgetOpen(true);
+    void handleEnterVoiceMode();
+  }, [serverVoiceInitiateNonce, allowVoice]);
   const handleMicToggle = () => {
     if (isConnecting) return;
     if (isVoiceMode && isConnected) {
@@ -127552,7 +127568,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Sat Jul  4 17:39:48 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Sat Jul 18 17:03:56 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -154899,6 +154915,7 @@ __publicField(_StyledChatWidget, "activeInstance", null);
 __publicField(_StyledChatWidget, "THEME_STYLE_TAG_ID", "spotinfo-chat-theme-vars");
 let StyledChatWidget = _StyledChatWidget;
 customElements.define("spotinfo-chat", StyledChatWidget);
+const VOICE_INITIATE_MESSAGE = "INITIATE";
 const _PushHookService = class _PushHookService {
   // Track actual connection state
   constructor({
@@ -154912,7 +154929,8 @@ const _PushHookService = class _PushHookService {
     popupType = "legacy",
     botName = "Aanya",
     showPopupPrimaryBtn = true,
-    onHookActedOn
+    onHookActedOn,
+    onServerVoiceInitiate
   }) {
     __publicField(this, "metaConfig");
     // private addMessageCallback: (message: Message) => void;
@@ -154923,6 +154941,7 @@ const _PushHookService = class _PushHookService {
     /** Synced from ChatContext via setWidgetOpenState — callback from getInstance is only set once. */
     __publicField(this, "widgetOpenRef", false);
     __publicField(this, "onHookActedOnCallback");
+    __publicField(this, "onServerVoiceInitiateCallback");
     // private eventSource: EventSource | null = null;
     __publicField(this, "position");
     __publicField(this, "popupCleanup", null);
@@ -154947,6 +154966,7 @@ const _PushHookService = class _PushHookService {
     this.isWidgetOpenCallback = isWidgetOpen;
     this.widgetOpenRef = isWidgetOpen();
     this.onHookActedOnCallback = onHookActedOn;
+    this.onServerVoiceInitiateCallback = onServerVoiceInitiate;
     this.position = position2;
     this.popupType = popupType;
     this.botName = botName;
@@ -155112,11 +155132,21 @@ const _PushHookService = class _PushHookService {
                   const messageContent = (_b = data.data) == null ? void 0 : _b.message;
                   const clientId2 = data.client_id;
                   if (clientId2 === this.metaConfig.clientId && messageContent) {
-                    this.handlePushMessage(
-                      messageContent,
-                      "merchant_initiated"
-                      /* reason */
-                    );
+                    if (messageContent.trim() === VOICE_INITIATE_MESSAGE) {
+                      if (this.onServerVoiceInitiateCallback) {
+                        this.onServerVoiceInitiateCallback();
+                      } else {
+                        console.warn(
+                          "[PushHookService] Received INITIATE but no handler is registered"
+                        );
+                      }
+                    } else {
+                      this.handlePushMessage(
+                        messageContent,
+                        "merchant_initiated"
+                        /* reason */
+                      );
+                    }
                   }
                 } catch (error2) {
                   console.error(
