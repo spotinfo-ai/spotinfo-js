@@ -31966,8 +31966,7 @@ const defaultChatContext = {
   setScrollToBottomCallback: () => {
   },
   initialMessage: null,
-  isInitialMessageLoaded: false,
-  serverVoiceInitiateNonce: 0
+  isInitialMessageLoaded: false
 };
 let getRandomValues;
 const rnds8 = new Uint8Array(16);
@@ -32792,7 +32791,7 @@ function st(t2, i2, e2, r2) {
   var { capture: s2 = false, passive: n2 = true } = null != r2 ? r2 : {};
   null == t2 || t2.addEventListener(i2, e2, { capture: s2, passive: n2 });
 }
-var nt$1 = "$people_distinct_id", ot = "__alias", at = "__timers", lt$2 = "$autocapture_disabled_server_side", ut$1 = "$heatmaps_enabled_server_side", ht$1 = "$exception_capture_enabled_server_side", dt$2 = "$error_tracking_suppression_rules", vt$1 = "$web_vitals_enabled_server_side", ct = "$dead_clicks_enabled_server_side", ft$1 = "$web_vitals_allowed_metrics", pt$2 = "$session_recording_enabled_server_side", gt$2 = "$console_log_recording_enabled_server_side", _t$1 = "$session_recording_network_payload_capture", mt$1 = "$session_recording_masking", bt$1 = "$session_recording_canvas_recording", yt = "$replay_sample_rate", wt = "$replay_minimum_duration", St = "$replay_script_config", $t$1 = "$sesid", kt$1 = "$session_is_sampled", xt = "$session_recording_url_trigger_activated_session", Et = "$session_recording_event_trigger_activated_session", It = "$enabled_feature_flags", Pt$1 = "$early_access_features", Rt$1 = "$feature_flag_details", Tt$1 = "$stored_person_properties", Mt = "$stored_group_properties", Ct = "$surveys", Ot$1 = "$surveys_activated", Ft$1 = "$flag_call_reported", At$1 = "$user_state", Dt = "$client_session_props", Lt$2 = "$capture_rate_limit", Nt = "$initial_campaign_params", jt$1 = "$initial_referrer_info", zt = "$initial_person_info", Ut = "$epp", qt = "__POSTHOG_TOOLBAR__", Bt = "$posthog_cookieless", Ht = [nt$1, ot, "__cmpns", at, pt$2, ut$1, $t$1, It, dt$2, At$1, Pt$1, Rt$1, Mt, Tt$1, Ct, Ft$1, Dt, Lt$2, Nt, jt$1, Ut, zt];
+var nt$1 = "$people_distinct_id", ot = "__alias", at = "__timers", lt$2 = "$autocapture_disabled_server_side", ut$1 = "$heatmaps_enabled_server_side", ht$1 = "$exception_capture_enabled_server_side", dt$2 = "$error_tracking_suppression_rules", vt$2 = "$web_vitals_enabled_server_side", ct = "$dead_clicks_enabled_server_side", ft$1 = "$web_vitals_allowed_metrics", pt$2 = "$session_recording_enabled_server_side", gt$2 = "$console_log_recording_enabled_server_side", _t$1 = "$session_recording_network_payload_capture", mt$1 = "$session_recording_masking", bt$1 = "$session_recording_canvas_recording", yt = "$replay_sample_rate", wt = "$replay_minimum_duration", St = "$replay_script_config", $t$1 = "$sesid", kt$1 = "$session_is_sampled", xt = "$session_recording_url_trigger_activated_session", Et = "$session_recording_event_trigger_activated_session", It = "$enabled_feature_flags", Pt$1 = "$early_access_features", Rt$1 = "$feature_flag_details", Tt$1 = "$stored_person_properties", Mt = "$stored_group_properties", Ct = "$surveys", Ot$1 = "$surveys_activated", Ft$1 = "$flag_call_reported", At$1 = "$user_state", Dt = "$client_session_props", Lt$2 = "$capture_rate_limit", Nt = "$initial_campaign_params", jt$1 = "$initial_referrer_info", zt = "$initial_person_info", Ut = "$epp", qt = "__POSTHOG_TOOLBAR__", Bt = "$posthog_cookieless", Ht = [nt$1, ot, "__cmpns", at, pt$2, ut$1, $t$1, It, dt$2, At$1, Pt$1, Rt$1, Mt, Tt$1, Ct, Ft$1, Dt, Lt$2, Nt, jt$1, Ut, zt];
 function Wt$2(t2) {
   return t2 instanceof Element && (t2.id === qt || !(null == t2.closest || !t2.closest(".toolbar-global-fade-container")));
 }
@@ -34760,7 +34759,7 @@ let Es$1 = class Es {
     }, this.V = () => {
       var t3, i3, e2, r2, s2 = v.__PosthogExtensions__;
       R$1(s2) || R$1(s2.postHogWebVitalsCallbacks) || ({ onLCP: t3, onCLS: i3, onFCP: e2, onINP: r2 } = s2.postHogWebVitalsCallbacks), t3 && i3 && e2 && r2 ? (this.allowedMetrics.indexOf("LCP") > -1 && t3(this.Wi.bind(this)), this.allowedMetrics.indexOf("CLS") > -1 && i3(this.Wi.bind(this)), this.allowedMetrics.indexOf("FCP") > -1 && e2(this.Wi.bind(this)), this.allowedMetrics.indexOf("INP") > -1 && r2(this.Wi.bind(this)), this.i = true) : ks.error("web vitals callbacks not loaded - not starting");
-    }, this._instance = t2, this.qi = !(null == (i2 = this._instance.persistence) || !i2.props[vt$1]), this.startIfEnabled();
+    }, this._instance = t2, this.qi = !(null == (i2 = this._instance.persistence) || !i2.props[vt$2]), this.startIfEnabled();
   }
   get allowedMetrics() {
     var t2, i2, e2 = I$1(this._instance.config.capture_performance) ? null == (t2 = this._instance.config.capture_performance) ? void 0 : t2.web_vitals_allowed_metrics : void 0;
@@ -34784,7 +34783,7 @@ let Es$1 = class Es {
   }
   onRemoteConfig(t2) {
     var i2 = I$1(t2.capturePerformance) && !!t2.capturePerformance.web_vitals, e2 = I$1(t2.capturePerformance) ? t2.capturePerformance.web_vitals_allowed_metrics : void 0;
-    this._instance.persistence && (this._instance.persistence.register({ [vt$1]: i2 }), this._instance.persistence.register({ [ft$1]: e2 })), this.qi = i2, this.startIfEnabled();
+    this._instance.persistence && (this._instance.persistence.register({ [vt$2]: i2 }), this._instance.persistence.register({ [ft$1]: e2 })), this.qi = i2, this.startIfEnabled();
   }
   G(t2) {
     var i2, e2;
@@ -35157,7 +35156,7 @@ function to(i2, e2) {
   }(d);
   return V(Z({ $os: l2, $os_version: u2, $browser: Dn(d, navigator.vendor), $device: zn(d), $device_type: (s2 = d, n2 = zn(s2), n2 === Ks || n2 === Vs || "Kobo" === n2 || "Kindle Fire" === n2 || n2 === En ? Js : n2 === pn$1 || n2 === _n || n2 === gn$1 || n2 === $n$1 ? "Console" : n2 === Xs ? "Wearable" : n2 ? Hs : "Desktop"), $timezone: Qn(), $timezone_offset: Zn() }), { $current_url: ki(null == a ? void 0 : a.href, o2, Hn), $host: null == a ? void 0 : a.host, $pathname: null == a ? void 0 : a.pathname, $raw_user_agent: d.length > 1e3 ? d.substring(0, 997) + "..." : d, $browser_version: Nn$1(d, navigator.vendor), $browser_language: Vn(), $browser_language_prefix: (r2 = Vn(), "string" == typeof r2 ? r2.split("-")[0] : void 0), $screen_height: null == t ? void 0 : t.screen.height, $screen_width: null == t ? void 0 : t.screen.width, $viewport_height: null == t ? void 0 : t.innerHeight, $viewport_width: null == t ? void 0 : t.innerWidth, $lib: "web", $lib_version: c.LIB_VERSION, $insert_id: Math.random().toString(36).substring(2, 10) + Math.random().toString(36).substring(2, 10), $time: Date.now() / 1e3 });
 }
-var io = z("[FeatureFlags]"), eo = "$active_feature_flags", ro = "$override_feature_flags", so = "$feature_flag_payloads", no = "$override_feature_flag_payloads", oo = "$feature_flag_request_id", ao = (t2) => {
+var io$1 = z("[FeatureFlags]"), eo = "$active_feature_flags", ro = "$override_feature_flags", so = "$feature_flag_payloads", no = "$override_feature_flag_payloads", oo = "$feature_flag_request_id", ao = (t2) => {
   var i2 = {};
   for (var [e2, r2] of Y$1(t2 || {})) r2 && (i2[e2] = r2);
   return i2;
@@ -35172,7 +35171,7 @@ var io = z("[FeatureFlags]"), eo = "$active_feature_flags", ro = "$override_feat
   }).map((t3) => {
     var e2;
     return [t3, null == (e2 = i2[t3].metadata) ? void 0 : e2.payload];
-  }))) : io.warn("Using an older version of the feature flags endpoint. Please upgrade your PostHog server to the latest version"), t2;
+  }))) : io$1.warn("Using an older version of the feature flags endpoint. Please upgrade your PostHog server to the latest version"), t2;
 }, uo = function(t2) {
   return t2.FeatureFlags = "feature_flags", t2.Recordings = "recordings", t2;
 }({});
@@ -35202,19 +35201,19 @@ class ho {
       if (h2 !== (null == l2 ? void 0 : l2.enabled) && (c2.original_enabled = null == l2 ? void 0 : l2.enabled), d2 !== (null == l2 ? void 0 : l2.variant) && (c2.original_variant = null == l2 ? void 0 : l2.variant), v2) c2.metadata = B$2({}, null == l2 ? void 0 : l2.metadata, { payload: v2, original_payload: null == l2 || null == (a2 = l2.metadata) ? void 0 : a2.payload });
       r2[n2] = c2;
     }
-    return this.le || (io.warn(" Overriding feature flag details!", { flagDetails: t2, overriddenPayloads: e2, finalDetails: r2 }), this.le = true), r2;
+    return this.le || (io$1.warn(" Overriding feature flag details!", { flagDetails: t2, overriddenPayloads: e2, finalDetails: r2 }), this.le = true), r2;
   }
   getFlagVariants() {
     var t2 = this._instance.get_property(It), i2 = this._instance.get_property(ro);
     if (!i2) return t2 || {};
     for (var e2 = V({}, t2), r2 = Object.keys(i2), s2 = 0; s2 < r2.length; s2++) e2[r2[s2]] = i2[r2[s2]];
-    return this.le || (io.warn(" Overriding feature flags!", { enabledFlags: t2, overriddenFlags: i2, finalFlags: e2 }), this.le = true), e2;
+    return this.le || (io$1.warn(" Overriding feature flags!", { enabledFlags: t2, overriddenFlags: i2, finalFlags: e2 }), this.le = true), e2;
   }
   getFlagPayloads() {
     var t2 = this._instance.get_property(so), i2 = this._instance.get_property(no);
     if (!i2) return t2 || {};
     for (var e2 = V({}, t2 || {}), r2 = Object.keys(i2), s2 = 0; s2 < r2.length; s2++) e2[r2[s2]] = i2[r2[s2]];
-    return this.le || (io.warn(" Overriding feature flag payloads!", { flagPayloads: t2, overriddenPayloads: i2, finalPayloads: e2 }), this.le = true), e2;
+    return this.le || (io$1.warn(" Overriding feature flag payloads!", { flagPayloads: t2, overriddenPayloads: i2, finalPayloads: e2 }), this.le = true), e2;
   }
   reloadFeatureFlags() {
     this.de || this._instance.config.advanced_disable_feature_flags || this.pe || (this.pe = setTimeout(() => {
@@ -35243,7 +35242,7 @@ class ho {
       r2 && (e2.timezone = Qn()), this.he = true, this._instance.me({ method: "POST", url: o2, data: e2, compression: this._instance.config.disable_compression ? void 0 : g.Base64, timeout: this._instance.config.feature_flag_request_timeout_ms, callback: (t3) => {
         var i3, r3, s3 = true;
         (200 === t3.statusCode && (this.ve || (this.$anon_distinct_id = void 0), s3 = false), this.he = false, this.ce) || (this.ce = true, this._instance.be(null !== (r3 = t3.json) && void 0 !== r3 ? r3 : {}));
-        if (!e2.disable_flags || this.ve) if (this.fe = !s3, t3.json && null != (i3 = t3.json.quotaLimited) && i3.includes(uo.FeatureFlags)) io.warn("You have hit your feature flags quota limit, and will not be able to load feature flags until the quota is reset.  Please visit https://posthog.com/docs/billing/limits-alerts to learn more.");
+        if (!e2.disable_flags || this.ve) if (this.fe = !s3, t3.json && null != (i3 = t3.json.quotaLimited) && i3.includes(uo.FeatureFlags)) io$1.warn("You have hit your feature flags quota limit, and will not be able to load feature flags until the quota is reset.  Please visit https://posthog.com/docs/billing/limits-alerts to learn more.");
         else {
           var n3;
           if (!e2.disable_flags) this.receivedFeatureFlags(null !== (n3 = t3.json) && void 0 !== n3 ? n3 : {}, s3);
@@ -35266,7 +35265,7 @@ class ho {
       }
       return e2;
     }
-    io.warn('getFeatureFlag for key "' + t2 + `" failed. Feature flags didn't load in time.`);
+    io$1.warn('getFeatureFlag for key "' + t2 + `" failed. Feature flags didn't load in time.`);
   }
   getFeatureFlagDetails(t2) {
     return this.getFlagsWithDetails()[t2];
@@ -35283,7 +35282,7 @@ class ho {
   }
   isFeatureEnabled(t2, i2) {
     if (void 0 === i2 && (i2 = {}), this.ue || this.getFlags() && this.getFlags().length > 0) return !!this.getFeatureFlag(t2, i2);
-    io.warn('isFeatureEnabled for key "' + t2 + `" failed. Feature flags didn't load in time.`);
+    io$1.warn('isFeatureEnabled for key "' + t2 + `" failed. Feature flags didn't load in time.`);
   }
   addFeatureFlagsHandler(t2) {
     this.featureFlagEventHandlers.push(t2);
@@ -35301,7 +35300,7 @@ class ho {
         if (a2) {
           var u2 = t3.requestId;
           if (x(a2)) {
-            io.warn("v1 of the feature flags endpoint is deprecated. Please use the latest version.");
+            io$1.warn("v1 of the feature flags endpoint is deprecated. Please use the latest version.");
             var h2 = {};
             if (a2) for (var d2 = 0; d2 < a2.length; d2++) h2[a2[d2]] = true;
             i3 && i3.register({ [eo]: a2, [It]: h2 });
@@ -35314,10 +35313,10 @@ class ho {
     }
   }
   override(t2, i2) {
-    void 0 === i2 && (i2 = false), io.warn("override is deprecated. Please use overrideFeatureFlags instead."), this.overrideFeatureFlags({ flags: t2, suppressWarning: i2 });
+    void 0 === i2 && (i2 = false), io$1.warn("override is deprecated. Please use overrideFeatureFlags instead."), this.overrideFeatureFlags({ flags: t2, suppressWarning: i2 });
   }
   overrideFeatureFlags(t2) {
-    if (!this._instance.__loaded || !this._instance.persistence) return io.uninitializedWarning("posthog.featureFlags.overrideFeatureFlags");
+    if (!this._instance.__loaded || !this._instance.persistence) return io$1.uninitializedWarning("posthog.featureFlags.overrideFeatureFlags");
     if (false === t2) return this._instance.persistence.unregister(ro), this._instance.persistence.unregister(no), void this.ye();
     if (t2 && "object" == typeof t2 && ("flags" in t2 || "payloads" in t2)) {
       var i2, e2 = t2;
@@ -62107,11 +62106,11 @@ var Rr = {
 }, ht = function() {
   return typeof Symbol == "function" && Symbol.observable || "@@observable";
 }();
-function vt(e2) {
+function vt$1(e2) {
   return e2;
 }
 function $r(e2) {
-  return e2.length === 0 ? vt : e2.length === 1 ? e2[0] : function(n2) {
+  return e2.length === 0 ? vt$1 : e2.length === 1 ? e2[0] : function(n2) {
     return e2.reduce(function(r2, i2) {
       return i2(r2);
     }, n2);
@@ -62800,7 +62799,7 @@ function gt$1(e2, t2, n2) {
   }));
 }
 function mi(e2) {
-  return gt$1(vt, e2);
+  return gt$1(vt$1, e2);
 }
 function bi2() {
   return mi(1);
@@ -62974,6 +62973,11 @@ function Jo(e2) {
   return ge(e2, RoomEvent.ConnectionStateChanged).pipe(
     P(([t2]) => t2),
     R(e2.state)
+  );
+}
+function io(e2) {
+  return ce(e2, RoomEvent.AudioPlaybackStatusChanged).pipe(
+    P((n2) => ({ canPlayAudio: n2.canPlaybackAudio }))
   );
 }
 function ye(e2, ...t2) {
@@ -63344,6 +63348,17 @@ function b(e2, n2, t2 = true) {
     return () => c2.unsubscribe();
   }, [e2, t2]), a2;
 }
+function vt(e2) {
+  const n2 = Ws(e2), t2 = reactExports.useCallback(async () => {
+    await n2.startAudio();
+  }, [n2]), a2 = reactExports.useMemo(
+    () => io(n2),
+    [n2]
+  ), { canPlayAudio: s2 } = b(a2, {
+    canPlayAudio: n2.canPlaybackAudio
+  });
+  return { canPlayAudio: s2, startAudio: t2 };
+}
 function O(e2) {
   const n2 = Ws(e2), t2 = reactExports.useMemo(() => Jo(n2), [n2]);
   return b(t2, n2.state);
@@ -63712,6 +63727,25 @@ const queryMicrophonePermission = async () => {
     return "unknown";
   }
 };
+const hasGrantedMicrophonePermission = async () => {
+  const state = await queryMicrophonePermission();
+  return state === "granted";
+};
+const unlockBrowserAudioPlayback = () => {
+  if (typeof window === "undefined") return;
+  try {
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextClass) return;
+    const ctx = new AudioContextClass();
+    void ctx.resume();
+    const buffer = ctx.createBuffer(1, 1, 22050);
+    const source = ctx.createBufferSource();
+    source.buffer = buffer;
+    source.connect(ctx.destination);
+    source.start(0);
+  } catch {
+  }
+};
 const showBlockedPermissionToast = () => {
   toast.error(
     "Microphone is blocked for this site. Click the lock / tune icon in your browser address bar → Site settings → Microphone → Allow, then click the mic button again.",
@@ -63751,7 +63785,7 @@ const ensureMicrophoneAccess = async (options = {}) => {
     const name2 = (err == null ? void 0 : err.name) || "";
     if (name2 === "NotAllowedError" || name2 === "PermissionDeniedError") {
       const postState = await queryMicrophonePermission();
-      const treatAsBlocked = postState === "denied" || options.isRetry === true;
+      const treatAsBlocked = postState === "denied" || options.isRetry === true || options.treatDismissAsBlocked === true;
       if (treatAsBlocked) {
         reportBlocked();
       } else {
@@ -63776,15 +63810,23 @@ const ensureMicrophoneAccess = async (options = {}) => {
     return false;
   }
 };
-const MuteAudioToggle = ({ isMuted }) => {
+const MuteAudioToggle = ({
+  isMuted,
+  onMicCaptureFailed
+}) => {
   const room = Oo();
   const connectionState = O();
   reactExports.useEffect(() => {
     if (room && room.localParticipant && connectionState === "connected") {
       const newMicEnabled = !isMuted;
-      room.localParticipant.setMicrophoneEnabled(newMicEnabled);
+      room.localParticipant.setMicrophoneEnabled(newMicEnabled).catch((err) => {
+        console.error("[MuteAudioToggle] Failed to set mic enabled", err);
+        if (newMicEnabled) {
+          onMicCaptureFailed == null ? void 0 : onMicCaptureFailed();
+        }
+      });
     }
-  }, [isMuted, room, connectionState]);
+  }, [isMuted, room, connectionState, onMicCaptureFailed]);
   return null;
 };
 function getVoiceStateMessage(state, isMuted = false) {
@@ -63841,16 +63883,28 @@ function useVoiceChat(chatMetaConfig, onSwitchToText) {
   const [voiceLoading, setVoiceLoading] = reactExports.useState(false);
   const [connectionDetails, setConnectionDetails] = reactExports.useState();
   const [isMicActiveAndListening, setIsMicActiveAndListening] = reactExports.useState(false);
+  const [pendingMicPrompt, setPendingMicPrompt] = reactExports.useState(false);
   const connectingRef = reactExports.useRef(false);
   const userMutedRef = reactExports.useRef(false);
+  const micCaptureAllowedRef = reactExports.useRef(false);
+  const pendingMicAfterFirstTurnRef = reactExports.useRef(false);
+  const hadAgentSpeakingRef = reactExports.useRef(false);
+  const previousVoiceStateRef = reactExports.useRef("disconnected");
+  const resetDeferredMicState = reactExports.useCallback(() => {
+    pendingMicAfterFirstTurnRef.current = false;
+    hadAgentSpeakingRef.current = false;
+    micCaptureAllowedRef.current = false;
+    setPendingMicPrompt(false);
+  }, []);
   const handleHibernation = reactExports.useCallback(() => {
     console.log("[useVoiceChat] handleHibernation called");
     setIsMuted(true);
     setVoiceState("hibernating");
     setVoiceLoading(false);
+    resetDeferredMicState();
     userMutedRef.current = false;
     onSwitchToText();
-  }, [onSwitchToText, voiceState, isMuted, connectionDetails]);
+  }, [onSwitchToText, resetDeferredMicState]);
   const handleFullDisconnect = reactExports.useCallback(() => {
     setConnectionDetails(void 0);
     setIsMuted(false);
@@ -63859,9 +63913,10 @@ function useVoiceChat(chatMetaConfig, onSwitchToText) {
     setIsMicActiveAndListening(false);
     connectingRef.current = false;
     userMutedRef.current = false;
+    resetDeferredMicState();
     onSwitchToText();
-  }, [onSwitchToText, voiceState, connectionDetails]);
-  const handleConnect = async () => {
+  }, [onSwitchToText, resetDeferredMicState]);
+  const handleConnect = reactExports.useCallback(async () => {
     if (connectingRef.current) {
       console.log("[useVoiceChat] Connection already in progress, skipping");
       return;
@@ -63889,7 +63944,61 @@ function useVoiceChat(chatMetaConfig, onSwitchToText) {
     } finally {
       connectingRef.current = false;
     }
-  };
+  }, [chatMetaConfig, handleHibernation]);
+  const enableMicAfterPermission = reactExports.useCallback(() => {
+    micCaptureAllowedRef.current = true;
+    pendingMicAfterFirstTurnRef.current = false;
+    hadAgentSpeakingRef.current = false;
+    setPendingMicPrompt(false);
+    setIsMuted(false);
+    userMutedRef.current = false;
+    setIsMicActiveAndListening(true);
+  }, []);
+  const handleMicCaptureFailed = reactExports.useCallback(() => {
+    micCaptureAllowedRef.current = false;
+    setIsMuted(true);
+    userMutedRef.current = true;
+    setPendingMicPrompt(true);
+  }, []);
+  const clearPendingMicPrompt = reactExports.useCallback(() => {
+    pendingMicAfterFirstTurnRef.current = false;
+    hadAgentSpeakingRef.current = false;
+    setPendingMicPrompt(false);
+  }, []);
+  const startVoiceSession = reactExports.useCallback(async () => {
+    unlockBrowserAudioPlayback();
+    const hasMic = await hasGrantedMicrophonePermission();
+    try {
+      if (!connectionDetails && !connectingRef.current) {
+        await handleConnect();
+      }
+      if (voiceState === "hibernating") {
+        setVoiceState("listening");
+      }
+      setIsMicActiveAndListening(true);
+      if (hasMic) {
+        micCaptureAllowedRef.current = true;
+        pendingMicAfterFirstTurnRef.current = false;
+        hadAgentSpeakingRef.current = false;
+        setPendingMicPrompt(false);
+        setIsMuted(false);
+        userMutedRef.current = false;
+        return true;
+      }
+      micCaptureAllowedRef.current = false;
+      pendingMicAfterFirstTurnRef.current = true;
+      hadAgentSpeakingRef.current = false;
+      setPendingMicPrompt(false);
+      setIsMuted(true);
+      userMutedRef.current = true;
+      return true;
+    } catch (error2) {
+      console.error("[useVoiceChat] startVoiceSession failed:", error2);
+      setIsMicActiveAndListening(false);
+      resetDeferredMicState();
+      return false;
+    }
+  }, [connectionDetails, voiceState, handleConnect, resetDeferredMicState]);
   const handleStateChange = reactExports.useCallback(
     (state) => {
       if (voiceState === "hibernating") {
@@ -63901,7 +64010,17 @@ function useVoiceChat(chatMetaConfig, onSwitchToText) {
           return;
         }
       }
+      previousVoiceStateRef.current = state;
       setVoiceState(state);
+      if (pendingMicAfterFirstTurnRef.current) {
+        if (state === "speaking") {
+          hadAgentSpeakingRef.current = true;
+        }
+        if (hadAgentSpeakingRef.current && state === "listening") {
+          pendingMicAfterFirstTurnRef.current = false;
+          setPendingMicPrompt(true);
+        }
+      }
       if (state === "connecting") {
         setVoiceLoading(true);
         return;
@@ -63909,7 +64028,7 @@ function useVoiceChat(chatMetaConfig, onSwitchToText) {
       if (state === "listening" || state === "disconnected" || state === "thinking" || state === "speaking") {
         setVoiceLoading(false);
         if (state === "listening") {
-          if (!userMutedRef.current) {
+          if (micCaptureAllowedRef.current && !userMutedRef.current) {
             setIsMuted(false);
           }
           setIsMicActiveAndListening(true);
@@ -63917,37 +64036,42 @@ function useVoiceChat(chatMetaConfig, onSwitchToText) {
         if (state === "disconnected") {
           connectingRef.current = false;
           userMutedRef.current = false;
+          resetDeferredMicState();
         }
       }
     },
-    [voiceState, chatMetaConfig]
+    [voiceState, chatMetaConfig, resetDeferredMicState]
   );
   const handleMicButton = async () => {
     if (!connectionDetails && !connectingRef.current) {
-      try {
-        await handleConnect();
-        setIsMicActiveAndListening(true);
-        setIsMuted(false);
-        userMutedRef.current = false;
-        return;
-      } catch (error2) {
-        console.error(
-          "[useVoiceChat] Failed to connect in handleMicButton:",
-          error2
-        );
-        setIsMicActiveAndListening(false);
-        return;
-      }
+      await startVoiceSession();
+      return;
     }
     if (voiceState === "hibernating") {
-      setIsMuted(false);
-      setVoiceState("listening");
+      const hasMic = await hasGrantedMicrophonePermission();
       setIsMicActiveAndListening(true);
-      userMutedRef.current = false;
+      if (hasMic || micCaptureAllowedRef.current) {
+        micCaptureAllowedRef.current = true;
+        setIsMuted(false);
+        userMutedRef.current = false;
+        setVoiceState("listening");
+      } else {
+        setIsMuted(true);
+        userMutedRef.current = true;
+        pendingMicAfterFirstTurnRef.current = true;
+        hadAgentSpeakingRef.current = false;
+        setVoiceState("listening");
+      }
       console.log(
         "useVoiceChat: Successfully woke from hibernation - states updated"
       );
-    } else if (isMicActiveAndListening) {
+      return;
+    }
+    if (isMicActiveAndListening) {
+      if (!micCaptureAllowedRef.current && isMuted) {
+        setPendingMicPrompt(true);
+        return;
+      }
       setIsMuted((prev) => {
         const newMutedState = !prev;
         userMutedRef.current = newMutedState;
@@ -63957,11 +64081,15 @@ function useVoiceChat(chatMetaConfig, onSwitchToText) {
         );
         return newMutedState;
       });
-    } else {
+      return;
+    }
+    if (micCaptureAllowedRef.current) {
       setIsMicActiveAndListening(true);
       setIsMuted(false);
       userMutedRef.current = false;
+      return;
     }
+    await startVoiceSession();
   };
   reactExports.useEffect(() => {
     if (isMicActiveAndListening && !connectionDetails && !connectingRef.current && voiceState !== "disconnected") {
@@ -63995,10 +64123,12 @@ function useVoiceChat(chatMetaConfig, onSwitchToText) {
     connectingRef.current = false;
     setConnectionDetails(void 0);
     setVoiceState("disconnected");
+    previousVoiceStateRef.current = "disconnected";
     setIsMicActiveAndListening(false);
     setIsMuted(true);
     userMutedRef.current = false;
-  }, [chatMetaConfig.clientId]);
+    resetDeferredMicState();
+  }, [chatMetaConfig.clientId, resetDeferredMicState]);
   return {
     voiceState,
     isMuted,
@@ -64007,6 +64137,11 @@ function useVoiceChat(chatMetaConfig, onSwitchToText) {
     connectionDetails,
     isMicActiveAndListening,
     setIsMicActiveAndListening,
+    pendingMicPrompt,
+    enableMicAfterPermission,
+    handleMicCaptureFailed,
+    clearPendingMicPrompt,
+    startVoiceSession,
     handleHibernation,
     handleFullDisconnect,
     handleStateChange,
@@ -64315,7 +64450,6 @@ function ChatProvider({
   const [isRoomCreationFailed, setIsRoomCreationFailed] = reactExports.useState(false);
   const [initialMessage, setInitialMessage] = reactExports.useState(null);
   const [isInitialMessageLoaded, setIsInitialMessageLoaded] = reactExports.useState(false);
-  const [serverVoiceInitiateNonce, setServerVoiceInitiateNonce] = reactExports.useState(0);
   const conversationService = reactExports.useRef(
     new ConversationService(currentMetaConfig)
   );
@@ -64556,8 +64690,7 @@ function ChatProvider({
           popupType: config.popupType,
           botName: config.botName,
           showPopupPrimaryBtn: config.showPopupPrimaryBtn,
-          onHookActedOn: () => ProactiveEngagementEngine.resetForNewPage(),
-          onServerVoiceInitiate: () => setServerVoiceInitiateNonce((prev) => prev + 1)
+          onHookActedOn: () => ProactiveEngagementEngine.resetForNewPage()
         });
         pushServiceInstance.updateConfig(
           currentMetaConfig,
@@ -65011,7 +65144,6 @@ function ChatProvider({
     setScrollToBottomCallback,
     initialMessage,
     isInitialMessageLoaded,
-    serverVoiceInitiateNonce,
     ...currentConfig
     // Use current config instead of original config
     // setShowTranscription,
@@ -113213,13 +113345,32 @@ const AvatarTextRMSInput = ({
   }, [room]);
   return null;
 };
+const START_AUDIO_BUTTON_STYLE = {
+  position: "absolute",
+  zIndex: 60,
+  left: "50%",
+  bottom: "96px",
+  transform: "translateX(-50%)",
+  margin: 0,
+  padding: "10px 16px",
+  border: "none",
+  borderRadius: "999px",
+  background: "#111827",
+  color: "#ffffff",
+  fontSize: "13px",
+  fontWeight: 600,
+  lineHeight: 1.2,
+  cursor: "pointer",
+  boxShadow: "0 8px 24px rgba(0, 0, 0, 0.25)",
+  whiteSpace: "nowrap"
+};
 function LivekitConnection(props) {
   const {
     isMicActiveAndListening,
     connectionDetails,
     isMuted,
     handleStateChange,
-    handleDisconnect,
+    onMicCaptureFailed,
     componentName = "LivekitConnection",
     setAgentAudioLevel,
     setLocalAudioLevel,
@@ -113232,21 +113383,20 @@ function LivekitConnection(props) {
     );
     return null;
   }
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { display: "none" }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     Q,
     {
       token: connectionDetails.participantToken,
       serverUrl: connectionDetails.serverUrl,
       connect: true,
-      audio: true,
+      audio: false,
       video: false,
       onMediaDeviceFailure: (error2) => {
         console.error(`${componentName}: Media device error:`, error2);
-        toast.error("Microphone access failed. Please check permissions.");
-        console.log(
-          `${componentName}: Calling handleDisconnect due to media device failure`
+        toast.error(
+          "Microphone access failed. You can still hear the agent; grant mic access to speak."
         );
-        handleDisconnect();
+        onMicCaptureFailed == null ? void 0 : onMicCaptureFailed();
       },
       onConnected: () => {
         handleStateChange("initializing");
@@ -113261,10 +113411,25 @@ function LivekitConnection(props) {
       },
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(TranscriptionHandler, {}),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(MuteAudioToggle, { isMuted }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(ForceMicEnable, { isMuted, componentName }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          MuteAudioToggle,
+          {
+            isMuted,
+            onMicCaptureFailed
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          ForceMicEnable,
+          {
+            isMuted,
+            componentName,
+            onMicCaptureFailed
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(EnsureRoomAudioPlayback, { componentName }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(VoiceVisualizerSection, { onStateChange: handleStateChange }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(Ra, {}),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(StartAgentAudioButton, { isMuted }),
         setAgentAudioLevel && setLocalAudioLevel && isMicActiveAndListening && /* @__PURE__ */ jsxRuntimeExports.jsx(
           AudioLevelUpdater,
           {
@@ -113314,7 +113479,44 @@ function LivekitConnection(props) {
       ]
     },
     connectionDetails.roomName
-  ) });
+  );
+}
+function StartAgentAudioButton({ isMuted }) {
+  const { startAudio } = vt();
+  const [dismissedAfterUnmute, setDismissedAfterUnmute] = reactExports.useState(false);
+  reactExports.useEffect(() => {
+    if (isMuted || dismissedAfterUnmute) return;
+    unlockBrowserAudioPlayback();
+    void startAudio().catch((err) => {
+      console.warn("[StartAgentAudioButton] startAudio on unmute failed:", err);
+    });
+    setDismissedAfterUnmute(true);
+  }, [isMuted, dismissedAfterUnmute, startAudio]);
+  if (dismissedAfterUnmute || !isMuted) return null;
+  const handleClick = () => {
+    unlockBrowserAudioPlayback();
+    void startAudio().catch((err) => {
+      console.warn("[StartAgentAudioButton] startAudio failed:", err);
+    });
+  };
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      handleClick();
+    }
+  };
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "button",
+    {
+      type: "button",
+      onClick: handleClick,
+      onKeyDown: handleKeyDown,
+      style: START_AUDIO_BUTTON_STYLE,
+      "aria-label": "Unmute to interact with the agent",
+      tabIndex: 0,
+      children: "Unmute to interact with the agent"
+    }
+  );
 }
 function VoiceVisualizerSection({
   onStateChange
@@ -113327,7 +113529,8 @@ function VoiceVisualizerSection({
 }
 function ForceMicEnable({
   isMuted,
-  componentName
+  componentName,
+  onMicCaptureFailed
 }) {
   const room = Oo();
   const connectionState = O();
@@ -113337,8 +113540,37 @@ function ForceMicEnable({
     const shouldEnable = !isMuted;
     room.localParticipant.setMicrophoneEnabled(shouldEnable).catch((err) => {
       console.error(`${componentName}: Failed to set mic enabled`, err);
+      if (shouldEnable) {
+        onMicCaptureFailed == null ? void 0 : onMicCaptureFailed();
+      }
     });
-  }, [room, connectionState, isMuted, componentName]);
+  }, [room, connectionState, isMuted, componentName, onMicCaptureFailed]);
+  return null;
+}
+function EnsureRoomAudioPlayback({ componentName }) {
+  const room = Oo();
+  const connectionState = O();
+  reactExports.useEffect(() => {
+    if (!room || connectionState !== "connected") return;
+    const tryStart = (reason) => {
+      void room.startAudio().catch((err) => {
+        console.warn(
+          `${componentName}: room.startAudio failed (${reason}):`,
+          err
+        );
+      });
+    };
+    tryStart("connected");
+    const handleTrackSubscribed = (track) => {
+      if (track.kind === Track.Kind.Audio) {
+        tryStart("remote-audio-subscribed");
+      }
+    };
+    room.on(RoomEvent.TrackSubscribed, handleTrackSubscribed);
+    return () => {
+      room.off(RoomEvent.TrackSubscribed, handleTrackSubscribed);
+    };
+  }, [room, connectionState, componentName]);
   return null;
 }
 const callPerson = async ({
@@ -113986,22 +114218,65 @@ const useMicPermission = () => {
   }
   return ctx;
 };
+const useDeferredMicPermissionPrompt = ({
+  pendingMicPrompt,
+  onGranted,
+  onClosedWithoutGrant,
+  onPromptStarted
+}) => {
+  const { requestMicAccess } = useMicPermission();
+  const onGrantedRef = reactExports.useRef(onGranted);
+  const onClosedRef = reactExports.useRef(onClosedWithoutGrant);
+  const onPromptStartedRef = reactExports.useRef(onPromptStarted);
+  const requestInFlightRef = reactExports.useRef(false);
+  reactExports.useEffect(() => {
+    onGrantedRef.current = onGranted;
+  }, [onGranted]);
+  reactExports.useEffect(() => {
+    onClosedRef.current = onClosedWithoutGrant;
+  }, [onClosedWithoutGrant]);
+  reactExports.useEffect(() => {
+    onPromptStartedRef.current = onPromptStarted;
+  }, [onPromptStarted]);
+  reactExports.useEffect(() => {
+    var _a;
+    if (!pendingMicPrompt || requestInFlightRef.current) return;
+    requestInFlightRef.current = true;
+    (_a = onPromptStartedRef.current) == null ? void 0 : _a.call(onPromptStartedRef);
+    void (async () => {
+      try {
+        await requestMicAccess(() => onGrantedRef.current(), {
+          treatDismissAsBlocked: true,
+          onClosedWithoutGrant: () => onClosedRef.current()
+        });
+      } finally {
+        requestInFlightRef.current = false;
+      }
+    })();
+  }, [pendingMicPrompt, requestMicAccess]);
+};
 const MicPermissionProvider = ({
   children
 }) => {
   const [showDialog, setShowDialog] = reactExports.useState(false);
   const [retryStatus, setRetryStatus] = reactExports.useState("idle");
   const lastOnGrantedRef = reactExports.useRef(null);
+  const onClosedWithoutGrantRef = reactExports.useRef(null);
+  const grantedThisRequestRef = reactExports.useRef(false);
+  const treatDismissAsBlockedRef = reactExports.useRef(false);
   const performMicRequest = reactExports.useCallback(
     async (onGranted, isRetry) => {
       lastOnGrantedRef.current = onGranted;
       const granted = await ensureMicrophoneAccess({
         onBlocked: () => setShowDialog(true),
-        isRetry
+        isRetry,
+        treatDismissAsBlocked: treatDismissAsBlockedRef.current
       });
       if (granted) {
+        grantedThisRequestRef.current = true;
         setShowDialog(false);
         setRetryStatus("idle");
+        onClosedWithoutGrantRef.current = null;
         onGranted();
       }
       return granted;
@@ -114009,8 +114284,11 @@ const MicPermissionProvider = ({
     []
   );
   const requestMicAccess = reactExports.useCallback(
-    (onGranted) => {
+    (onGranted, options) => {
       setRetryStatus("idle");
+      grantedThisRequestRef.current = false;
+      treatDismissAsBlockedRef.current = (options == null ? void 0 : options.treatDismissAsBlocked) === true;
+      onClosedWithoutGrantRef.current = (options == null ? void 0 : options.onClosedWithoutGrant) ?? null;
       return performMicRequest(onGranted, false);
     },
     [performMicRequest]
@@ -114019,6 +114297,11 @@ const MicPermissionProvider = ({
     setShowDialog(false);
     setRetryStatus("idle");
     lastOnGrantedRef.current = null;
+    const onClosed = onClosedWithoutGrantRef.current;
+    onClosedWithoutGrantRef.current = null;
+    if (!grantedThisRequestRef.current) {
+      onClosed == null ? void 0 : onClosed();
+    }
   }, []);
   const handleTryAgain = reactExports.useCallback(async () => {
     const onGranted = lastOnGrantedRef.current;
@@ -114059,6 +114342,11 @@ function ChatInput({
   handleDisconnect,
   handleStateChange,
   handleMicButton,
+  startVoiceSession,
+  pendingMicPrompt = false,
+  enableMicAfterPermission,
+  handleMicCaptureFailed,
+  clearPendingMicPrompt,
   hideActivityBars = false,
   setAgentAudioLevel,
   setLocalAudioLevel,
@@ -114070,16 +114358,26 @@ function ChatInput({
 }) {
   const [inputText, setInputText] = reactExports.useState("");
   const { allowVoice, viewType } = useChatContext();
-  const { requestMicAccess } = useMicPermission();
+  const handleMicPermissionClosedWithoutGrant = () => {
+    clearPendingMicPrompt == null ? void 0 : clearPendingMicPrompt();
+    setIsVoiceMode == null ? void 0 : setIsVoiceMode(false);
+    handleDisconnect == null ? void 0 : handleDisconnect();
+  };
+  useDeferredMicPermissionPrompt({
+    pendingMicPrompt,
+    onGranted: () => enableMicAfterPermission == null ? void 0 : enableMicAfterPermission(),
+    onClosedWithoutGrant: handleMicPermissionClosedWithoutGrant,
+    onPromptStarted: () => clearPendingMicPrompt == null ? void 0 : clearPendingMicPrompt()
+  });
   const handleVoiceToggle = () => {
-    void requestMicAccess(() => {
-      if (onMicButtonClick) {
-        onMicButtonClick();
-      }
-      if (onVoiceToggle) {
-        onVoiceToggle();
-      }
-    });
+    if (startVoiceSession) {
+      void startVoiceSession();
+    } else if (onMicButtonClick) {
+      onMicButtonClick();
+    }
+    if (onVoiceToggle) {
+      onVoiceToggle();
+    }
   };
   const handleTextToggle = () => {
     if (setIsVoiceMode) {
@@ -114143,6 +114441,7 @@ function ChatInput({
                 }),
                 handleDisconnect: handleDisconnect || (() => {
                 }),
+                onMicCaptureFailed: handleMicCaptureFailed,
                 componentName: "ChatInput",
                 setAgentAudioLevel,
                 setLocalAudioLevel,
@@ -114169,6 +114468,12 @@ const SleekView = ({
   handleStateChange,
   handleMicButton,
   handleHibernation,
+  handleFullDisconnect,
+  startVoiceSession,
+  pendingMicPrompt,
+  enableMicAfterPermission,
+  handleMicCaptureFailed,
+  clearPendingMicPrompt,
   isVoiceMode,
   setIsVoiceMode,
   agentAudioLevel,
@@ -114199,7 +114504,17 @@ const SleekView = ({
   const previousIsLoadingRef = reactExports.useRef(false);
   const previousMessagesLengthRef = reactExports.useRef(0);
   const previousIsWidgetOpenRef = reactExports.useRef(isWidgetOpen);
-  const { requestMicAccess } = useMicPermission();
+  const handleMicPermissionClosedWithoutGrant = () => {
+    clearPendingMicPrompt();
+    setIsVoiceMode(false);
+    handleFullDisconnect();
+  };
+  useDeferredMicPermissionPrompt({
+    pendingMicPrompt,
+    onGranted: enableMicAfterPermission,
+    onClosedWithoutGrant: handleMicPermissionClosedWithoutGrant,
+    onPromptStarted: clearPendingMicPrompt
+  });
   const isConnected = Boolean(
     connectionDetails && agentState !== "disconnected"
   );
@@ -114375,14 +114690,12 @@ const SleekView = ({
       handleMicButton();
       return;
     }
-    void requestMicAccess(() => {
-      setInputText("");
-      if (textareaRef.current) {
-        textareaRef.current.textContent = "";
-      }
-      setIsVoiceMode(true);
-      handleMicButton();
-    });
+    setInputText("");
+    if (textareaRef.current) {
+      textareaRef.current.textContent = "";
+    }
+    setIsVoiceMode(true);
+    void startVoiceSession();
   };
   const handleMenuToggle = () => {
     setIsMenuOpen((prev) => !prev);
@@ -114663,6 +114976,7 @@ const SleekView = ({
         isMuted,
         handleStateChange,
         handleDisconnect,
+        onMicCaptureFailed: handleMicCaptureFailed,
         componentName: "SleekView",
         setAgentAudioLevel,
         setLocalAudioLevel
@@ -114697,6 +115011,11 @@ const ModernView = ({
   handleStateChange,
   handleMicButton,
   handleFullDisconnect,
+  startVoiceSession,
+  pendingMicPrompt,
+  enableMicAfterPermission,
+  handleMicCaptureFailed,
+  clearPendingMicPrompt,
   isVoiceMode,
   setIsVoiceMode,
   agentAudioLevel,
@@ -114731,11 +115050,7 @@ const ModernView = ({
     reviveChatSession,
     initialMessage,
     isInitialMessageLoaded,
-    position: position2,
-    popupType,
-    showPopupPrimaryBtn,
-    voiceModePlainBackground,
-    serverVoiceInitiateNonce
+    voiceModePlainBackground
   } = useChatContext();
   const NEW_CHAT_SEPARATOR = "--- New conversation started ---";
   const REVIVED_CHAT_SEPARATOR = "--- Conversation Revived ---";
@@ -114757,30 +115072,26 @@ const ModernView = ({
   const previousIsLoadingRef = reactExports.useRef(false);
   const autoInitiateTriggeredRef = reactExports.useRef(false);
   const autoInitiatePendingOpenRef = reactExports.useRef(false);
-  const autoInitiateHookPopupCleanupRef = reactExports.useRef(null);
   const [autoInitiateDelayElapsed, setAutoInitiateDelayElapsed] = reactExports.useState(false);
   const isWidgetOpenRef = reactExports.useRef(isWidgetOpen);
   const isVoiceModeRef = reactExports.useRef(isVoiceMode);
   const [headerLogoErrored, setHeaderLogoErrored] = reactExports.useState(false);
   const [aiAvatarErrored, setAiAvatarErrored] = reactExports.useState(false);
   const [userAvatarErrored, setUserAvatarErrored] = reactExports.useState(false);
-  const { requestMicAccess } = useMicPermission();
+  const handleMicPermissionClosedWithoutGrant = () => {
+    clearPendingMicPrompt();
+    setIsVoiceMode(false);
+    handleFullDisconnect();
+  };
+  useDeferredMicPermissionPrompt({
+    pendingMicPrompt,
+    onGranted: enableMicAfterPermission,
+    onClosedWithoutGrant: handleMicPermissionClosedWithoutGrant,
+    onPromptStarted: clearPendingMicPrompt
+  });
   const getInitial = (name2) => {
     const trimmed = (name2 || "").trim();
     return trimmed.length > 0 ? trimmed.charAt(0).toUpperCase() : "A";
-  };
-  const hasGrantedMicrophonePermission = async () => {
-    if (typeof navigator === "undefined" || !navigator.permissions || typeof navigator.permissions.query !== "function") {
-      return false;
-    }
-    try {
-      const permission = await navigator.permissions.query({
-        name: "microphone"
-      });
-      return permission.state === "granted";
-    } catch {
-      return false;
-    }
   };
   const isConnected = Boolean(
     connectionDetails && agentState !== "disconnected"
@@ -114935,17 +115246,16 @@ const ModernView = ({
   };
   const handleEnterVoiceMode = async () => {
     if (isVoiceModeRef.current) return false;
-    return requestMicAccess(() => {
-      setInputText("");
-      if (textareaRef.current) {
-        textareaRef.current.value = "";
-        textareaRef.current.style.height = "auto";
-      }
-      if (!isVoiceModeRef.current) {
-        setIsVoiceMode(true);
-        handleMicButton();
-      }
-    });
+    setInputText("");
+    if (textareaRef.current) {
+      textareaRef.current.value = "";
+      textareaRef.current.style.height = "auto";
+    }
+    if (!isVoiceModeRef.current) {
+      setIsVoiceMode(true);
+      return startVoiceSession();
+    }
+    return false;
   };
   reactExports.useEffect(() => {
     if (!isInitialMessageLoaded) {
@@ -114973,65 +115283,11 @@ const ModernView = ({
       return;
     }
     void (async () => {
-      const hasMicPermission = await hasGrantedMicrophonePermission();
-      if (hasMicPermission) {
-        autoInitiateTriggeredRef.current = true;
-        autoInitiatePendingOpenRef.current = true;
-        const startedVoiceSession = await handleEnterVoiceMode();
-        if (!startedVoiceSession) {
-          autoInitiatePendingOpenRef.current = false;
-        }
-        return;
-      }
-      console.log("No mic permission, falling back to text mode");
-      if (!chatMetaConfig) return;
-      if (chatMetaConfig.userJourney === true) {
-        console.log("User Journey Hooks are enabled. Skip static hook");
-        return;
-      }
-      const trimmedInitialMessage = initialMessage == null ? void 0 : initialMessage.trim();
-      if (!trimmedInitialMessage) {
-        autoInitiateTriggeredRef.current = true;
-        return;
-      }
       autoInitiateTriggeredRef.current = true;
-      try {
-        const hookMessage = {
-          id: generateUuid(),
-          content: trimmedInitialMessage,
-          sender: "user",
-          mode: "text",
-          timestamp: /* @__PURE__ */ new Date(),
-          references: []
-        };
-        if (autoInitiateHookPopupCleanupRef.current) {
-          autoInitiateHookPopupCleanupRef.current();
-        }
-        autoInitiateHookPopupCleanupRef.current = showMessagePopupUtil(
-          hookMessage,
-          position2,
-          {
-            onOpenWidget: () => {
-              captureWidgetEvent("widget_open", {
-                open_source: "auto_initiate_hook"
-              });
-              setWidgetOpen(true);
-              void sendMessage("Hi");
-              autoInitiateHookPopupCleanupRef.current = null;
-            }
-          },
-          chatMetaConfig.userId,
-          "proactive_hook",
-          chatMetaConfig,
-          {
-            popupType,
-            botName,
-            showPopupPrimaryBtn
-          },
-          "auto_initiate_no_mic_permission"
-        );
-      } catch (error2) {
-        console.error("[ModernView] Failed to show auto-initiate hook:", error2);
+      autoInitiatePendingOpenRef.current = true;
+      const startedVoiceSession = await handleEnterVoiceMode();
+      if (!startedVoiceSession) {
+        autoInitiatePendingOpenRef.current = false;
         autoInitiateTriggeredRef.current = false;
       }
     })();
@@ -115045,17 +115301,6 @@ const ModernView = ({
       setWidgetOpen(true);
     }
   }, [agentState, setWidgetOpen]);
-  const lastHandledVoiceInitiateNonceRef = reactExports.useRef(0);
-  reactExports.useEffect(() => {
-    if (!allowVoice) return;
-    if (serverVoiceInitiateNonce === 0) return;
-    if (lastHandledVoiceInitiateNonceRef.current === serverVoiceInitiateNonce)
-      return;
-    lastHandledVoiceInitiateNonceRef.current = serverVoiceInitiateNonce;
-    captureWidgetEvent("widget_open", { open_source: "server_voice_initiate" });
-    setWidgetOpen(true);
-    void handleEnterVoiceMode();
-  }, [serverVoiceInitiateNonce, allowVoice]);
   const handleMicToggle = () => {
     if (isConnecting) return;
     if (isVoiceMode && isConnected) {
@@ -115901,6 +116146,7 @@ const ModernView = ({
         isMuted,
         handleStateChange,
         handleDisconnect,
+        onMicCaptureFailed: handleMicCaptureFailed,
         componentName: "ModernView",
         setAgentAudioLevel,
         setLocalAudioLevel
@@ -126867,6 +127113,11 @@ function VoiceAlternateView({
   handleFullDisconnect,
   handleStateChange,
   handleMicButton,
+  startVoiceSession,
+  pendingMicPrompt,
+  enableMicAfterPermission,
+  handleMicCaptureFailed,
+  clearPendingMicPrompt,
   isVoiceMode,
   setIsVoiceMode,
   agentAudioLevel,
@@ -126875,7 +127126,17 @@ function VoiceAlternateView({
   setLocalAudioLevel
 }) {
   const { allowVoice = true } = useChatContext();
-  const { requestMicAccess } = useMicPermission();
+  const handleMicPermissionClosedWithoutGrant = () => {
+    clearPendingMicPrompt();
+    setIsVoiceMode(false);
+    handleFullDisconnect();
+  };
+  useDeferredMicPermissionPrompt({
+    pendingMicPrompt,
+    onGranted: enableMicAfterPermission,
+    onClosedWithoutGrant: handleMicPermissionClosedWithoutGrant,
+    onPromptStarted: clearPendingMicPrompt
+  });
   const headRef = reactExports.useRef(null);
   const agentAudioLevelRef = reactExports.useRef(agentAudioLevel);
   agentAudioLevelRef.current = agentAudioLevel;
@@ -127074,11 +127335,9 @@ function VoiceAlternateView({
       onVoiceToggle();
       return;
     }
-    void requestMicAccess(() => {
-      setIsVoiceMode(true);
-      handleMicButton();
-      onVoiceToggle();
-    });
+    setIsVoiceMode(true);
+    void startVoiceSession();
+    onVoiceToggle();
   };
   const handlePrimaryMicKeyDown = (e2) => {
     if (e2.key === "Enter" || e2.key === " ") {
@@ -127198,6 +127457,7 @@ function VoiceAlternateView({
         handleStateChange: handleStateChange || (() => {
         }),
         handleDisconnect: handleFullDisconnect,
+        onMicCaptureFailed: handleMicCaptureFailed,
         componentName: "VoiceAlternateView",
         setAgentAudioLevel,
         setLocalAudioLevel,
@@ -127228,6 +127488,11 @@ function ChatWidget({ isOpen, onClose }) {
     voiceLoading,
     connectionDetails,
     isMicActiveAndListening,
+    pendingMicPrompt,
+    enableMicAfterPermission,
+    handleMicCaptureFailed,
+    clearPendingMicPrompt,
+    startVoiceSession,
     handleHibernation,
     handleFullDisconnect,
     handleStateChange,
@@ -127327,6 +127592,12 @@ function ChatWidget({ isOpen, onClose }) {
             handleStateChange,
             handleMicButton,
             handleHibernation,
+            startVoiceSession,
+            pendingMicPrompt,
+            enableMicAfterPermission,
+            handleMicCaptureFailed,
+            clearPendingMicPrompt,
+            handleFullDisconnect,
             isVoiceMode,
             setIsVoiceMode,
             agentAudioLevel,
@@ -127349,6 +127620,11 @@ function ChatWidget({ isOpen, onClose }) {
             handleMicButton,
             handleHibernation,
             handleFullDisconnect,
+            startVoiceSession,
+            pendingMicPrompt,
+            enableMicAfterPermission,
+            handleMicCaptureFailed,
+            clearPendingMicPrompt,
             isVoiceMode,
             setIsVoiceMode,
             agentAudioLevel,
@@ -127370,6 +127646,11 @@ function ChatWidget({ isOpen, onClose }) {
             handleFullDisconnect,
             handleStateChange,
             handleMicButton,
+            startVoiceSession,
+            pendingMicPrompt,
+            enableMicAfterPermission,
+            handleMicCaptureFailed,
+            clearPendingMicPrompt,
             isVoiceMode,
             setIsVoiceMode,
             agentAudioLevel,
@@ -127403,6 +127684,11 @@ function ChatWidget({ isOpen, onClose }) {
               handleDisconnect: handleFullDisconnect,
               handleStateChange,
               handleMicButton,
+              startVoiceSession,
+              pendingMicPrompt,
+              enableMicAfterPermission,
+              handleMicCaptureFailed,
+              clearPendingMicPrompt,
               agentAudioLevel,
               localAudioLevel,
               setAgentAudioLevel,
@@ -127568,7 +127854,7 @@ const initializeLaunchButtonCssVars = ({
   element2.style.setProperty("--chat-widget-logo-height", rootLogoHeight);
 };
 const styles = `
-/* Chat Widget CSS Bundle - Generated Sat Jul 18 17:03:56 IST 2026 */
+/* Chat Widget CSS Bundle - Generated Sun Jul 26 09:17:44 IST 2026 */
 
 /* Start of file: components/css/ChatBot.css */
 
@@ -154915,7 +155201,6 @@ __publicField(_StyledChatWidget, "activeInstance", null);
 __publicField(_StyledChatWidget, "THEME_STYLE_TAG_ID", "spotinfo-chat-theme-vars");
 let StyledChatWidget = _StyledChatWidget;
 customElements.define("spotinfo-chat", StyledChatWidget);
-const VOICE_INITIATE_MESSAGE = "INITIATE";
 const _PushHookService = class _PushHookService {
   // Track actual connection state
   constructor({
@@ -154929,8 +155214,7 @@ const _PushHookService = class _PushHookService {
     popupType = "legacy",
     botName = "Aanya",
     showPopupPrimaryBtn = true,
-    onHookActedOn,
-    onServerVoiceInitiate
+    onHookActedOn
   }) {
     __publicField(this, "metaConfig");
     // private addMessageCallback: (message: Message) => void;
@@ -154941,7 +155225,6 @@ const _PushHookService = class _PushHookService {
     /** Synced from ChatContext via setWidgetOpenState — callback from getInstance is only set once. */
     __publicField(this, "widgetOpenRef", false);
     __publicField(this, "onHookActedOnCallback");
-    __publicField(this, "onServerVoiceInitiateCallback");
     // private eventSource: EventSource | null = null;
     __publicField(this, "position");
     __publicField(this, "popupCleanup", null);
@@ -154966,7 +155249,6 @@ const _PushHookService = class _PushHookService {
     this.isWidgetOpenCallback = isWidgetOpen;
     this.widgetOpenRef = isWidgetOpen();
     this.onHookActedOnCallback = onHookActedOn;
-    this.onServerVoiceInitiateCallback = onServerVoiceInitiate;
     this.position = position2;
     this.popupType = popupType;
     this.botName = botName;
@@ -155132,21 +155414,11 @@ const _PushHookService = class _PushHookService {
                   const messageContent = (_b = data.data) == null ? void 0 : _b.message;
                   const clientId2 = data.client_id;
                   if (clientId2 === this.metaConfig.clientId && messageContent) {
-                    if (messageContent.trim() === VOICE_INITIATE_MESSAGE) {
-                      if (this.onServerVoiceInitiateCallback) {
-                        this.onServerVoiceInitiateCallback();
-                      } else {
-                        console.warn(
-                          "[PushHookService] Received INITIATE but no handler is registered"
-                        );
-                      }
-                    } else {
-                      this.handlePushMessage(
-                        messageContent,
-                        "merchant_initiated"
-                        /* reason */
-                      );
-                    }
+                    this.handlePushMessage(
+                      messageContent,
+                      "merchant_initiated"
+                      /* reason */
+                    );
                   }
                 } catch (error2) {
                   console.error(
